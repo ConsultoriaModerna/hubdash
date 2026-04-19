@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-04-20T00:16:53",
-  "fetch_seconds": 77.7,
+  "generated_at": "2026-04-20T00:17:29",
+  "fetch_seconds": 80.4,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
-    "enriched_gp": 2614,
+    "enriched_gp": 2640,
     "avg_score_companies": 53.0,
     "avg_score_contacts": 47.3
   },
   "scores": {
     "companies": {
       "0-29": 6249,
-      "30-49": 28522,
-      "50-69": 23841,
-      "70-89": 15458,
-      "90-100": 565
+      "30-49": 28519,
+      "50-69": 23837,
+      "70-89": 15457,
+      "90-100": 573
     },
     "contacts": {
       "0-29": 12777,
@@ -27,8 +27,8 @@
   "pipeline": {
     "total": 74635,
     "with_place_id": 22877,
-    "phase_a_pending": 20214,
-    "enriched": 2614,
+    "phase_a_pending": 20187,
+    "enriched": 2640,
     "phase_b_pending": 51758
   },
   "cities": [
@@ -40,7 +40,7 @@
     {
       "city": "Madrid",
       "total": 5875,
-      "enriched": 604
+      "enriched": 629
     },
     {
       "city": "Valencia",
@@ -60,7 +60,7 @@
     {
       "city": "Otras",
       "total": 57214,
-      "enriched": 1177
+      "enriched": 1178
     }
   ],
   "mountain": {
@@ -90,9 +90,9 @@
       [
         83,
         1436,
-        1805,
-        2424,
-        127
+        1800,
+        2420,
+        136
       ],
       [
         22,
@@ -117,10 +117,10 @@
       ],
       [
         5712,
-        23839,
-        18679,
-        8904,
-        80
+        23836,
+        18680,
+        8907,
+        79
       ]
     ],
     "contacts": [
