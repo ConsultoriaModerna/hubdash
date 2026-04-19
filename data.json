@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-19T20:16:33",
-  "fetch_seconds": 29.7,
+  "generated_at": "2026-04-19T20:53:10",
+  "fetch_seconds": 69.4,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
@@ -173,6 +173,5187 @@
     "email": 38255,
     "phone": 38635,
     "total": 69858
+  },
+  "bubbles": [
+    {
+      "n": "Arenas de Barcelona Gran Via",
+      "r": 4.2,
+      "rv": 70158,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Wizink Center",
+      "r": 4.6,
+      "rv": 67483,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Bara del Salamanca",
+      "r": 4.0,
+      "rv": 30380,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Bar el Brillante",
+      "r": 3.6,
+      "rv": 25761,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Churrería Chocolateria 1902",
+      "r": 4.2,
+      "rv": 19471,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Arabia Cafe-Restaurant",
+      "r": 4.8,
+      "rv": 17442,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Mirablau",
+      "r": 4.4,
+      "rv": 17037,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Ocaña",
+      "r": 4.6,
+      "rv": 15626,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "El Corte Ingl√©s",
+      "r": 4.2,
+      "rv": 14702,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Holding Moritz",
+      "r": 4.3,
+      "rv": 14002,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 4,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Taller de Tapas Rambla de les Flors",
+      "r": 4.5,
+      "rv": 13692,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Lolita",
+      "r": 4.5,
+      "rv": 12840,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Selva",
+      "r": 4.7,
+      "rv": 12776,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Gusto 34933236575",
+      "r": 4.7,
+      "rv": 12259,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Ceviche 103",
+      "r": 4.7,
+      "rv": 12107,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 5,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Arrosseria las Arenas",
+      "r": 4.6,
+      "rv": 11883,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Pepe y Pepa",
+      "r": 4.5,
+      "rv": 11815,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Flax & Kale Passage",
+      "r": 4.3,
+      "rv": 11513,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Running Sushi in Market",
+      "r": 4.6,
+      "rv": 10956,
+      "s": 92,
+      "c": "Other",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Casa Lucio",
+      "r": 4.2,
+      "rv": 10745,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Taverna el Glop",
+      "r": 4.5,
+      "rv": 10657,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Tasqueta de Blai",
+      "r": 4.5,
+      "rv": 10520,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Grupo Tapa Tapa",
+      "r": 4.5,
+      "rv": 10498,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Shôko Barcelona Restaurant & Lounge Club",
+      "r": 3.7,
+      "rv": 10387,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Makamaka",
+      "r": 4.5,
+      "rv": 10382,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Sushiaoi",
+      "r": 4.6,
+      "rv": 9825,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "B-ONE Palau de Mar",
+      "r": 4.4,
+      "rv": 9766,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Fenicia",
+      "r": 4.7,
+      "rv": 9603,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Ovella Negra",
+      "r": 4.2,
+      "rv": 9499,
+      "s": 80,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Paz 19 By Sensi Tapas Bar",
+      "r": 4.7,
+      "rv": 9458,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Superchulo Fuencarral",
+      "r": 4.4,
+      "rv": 9202,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Botafumeiro",
+      "r": 4.4,
+      "rv": 9125,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$$$"
+    },
+    {
+      "n": "Barraca",
+      "r": 4.2,
+      "rv": 9014,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Café Comercial",
+      "r": 4.1,
+      "rv": 8831,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Opium Barcelona",
+      "r": 3.5,
+      "rv": 8445,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$$"
+    },
+    {
+      "n": "Restaurante Bivio",
+      "r": 4.6,
+      "rv": 8267,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Arrocería Marina Ventura",
+      "r": 4.5,
+      "rv": 8244,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Arume",
+      "r": 4.7,
+      "rv": 8202,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Zenith Brunch & Cocktails - Valverde",
+      "r": 4.6,
+      "rv": 8067,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Bar Cañete",
+      "r": 4.6,
+      "rv": 7863,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "La Foga",
+      "r": 4.5,
+      "rv": 7843,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Le Romane",
+      "r": 4.7,
+      "rv": 7823,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "El Rey de la Gamba 1",
+      "r": 4.2,
+      "rv": 7580,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Grill Restaurante - Steak house",
+      "r": 4.7,
+      "rv": 7548,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Chilango's Taqueria Barcelona",
+      "r": 4.7,
+      "rv": 7510,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Xup Xup Restaurant",
+      "r": 4.5,
+      "rv": 7441,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 4,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Micu Maku - Mediterranean Restaurant in ",
+      "r": 4.7,
+      "rv": 7310,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Sitarilla",
+      "r": 4.6,
+      "rv": 7245,
+      "s": 40,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Bar el Velódromo",
+      "r": 4.1,
+      "rv": 7236,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Tío Papelón",
+      "r": 4.6,
+      "rv": 7142,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Flax & Kale",
+      "r": 4.4,
+      "rv": 7087,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Murivecchi",
+      "r": 4.3,
+      "rv": 7059,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Norah Coffee & Brunch - Speciality Coffe",
+      "r": 4.8,
+      "rv": 6938,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Can Culleretes",
+      "r": 4.3,
+      "rv": 6598,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Casa Revuelta",
+      "r": 4.4,
+      "rv": 6563,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Tapas La Bona Sort",
+      "r": 4.4,
+      "rv": 6557,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Rossini",
+      "r": 4.3,
+      "rv": 6454,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Can Cortada",
+      "r": 4.3,
+      "rv": 6399,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "La Marea",
+      "r": 4.7,
+      "rv": 6356,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Turuleca Peru",
+      "r": 4.6,
+      "rv": 6326,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Bodegas Rosell",
+      "r": 4.3,
+      "rv": 6258,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Marina Bay - Lounge Bar Restaurante - Pa",
+      "r": 4.0,
+      "rv": 6164,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Monchos Iniciativas 2000 S.L.",
+      "r": 4.0,
+      "rv": 6164,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Café del Rey",
+      "r": 4.2,
+      "rv": 6160,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Ornella Velázquez",
+      "r": 4.6,
+      "rv": 6109,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Bodega Joan",
+      "r": 4.3,
+      "rv": 6090,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Xup Xup",
+      "r": 4.3,
+      "rv": 6055,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Ovejas Negras Tapas",
+      "r": 4.4,
+      "rv": 5978,
+      "s": 100,
+      "c": "Sevilla",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Paco Meralgo Restaurante",
+      "r": 4.5,
+      "rv": 5930,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Rosa Negra Barcelona",
+      "r": 4.4,
+      "rv": 5926,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Bellebuon",
+      "r": 4.8,
+      "rv": 5922,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Mesón del Champiñón",
+      "r": 4.4,
+      "rv": 5916,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Pizzeria Napoletana Pummarola",
+      "r": 4.6,
+      "rv": 5863,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Burritos",
+      "r": 4.8,
+      "rv": 5852,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Grupo Abrassame",
+      "r": 4.3,
+      "rv": 5830,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Lilo Brunch Specialty Coffee",
+      "r": 4.8,
+      "rv": 5812,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Waffle",
+      "r": 4.9,
+      "rv": 5781,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Patron",
+      "r": 4.0,
+      "rv": 5776,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Submarino",
+      "r": 4.0,
+      "rv": 5704,
+      "s": 80,
+      "c": "València",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Jenkin's - Corts Valencianes",
+      "r": 4.4,
+      "rv": 5623,
+      "s": 82,
+      "c": "Other",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Palau Alameda",
+      "r": 4.1,
+      "rv": 5567,
+      "s": 95,
+      "c": "València",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Odiseo",
+      "r": 4.2,
+      "rv": 5511,
+      "s": 100,
+      "c": "Murcia",
+      "ct": 2,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "La Bodega de la Alfalfa",
+      "r": 4.4,
+      "rv": 5468,
+      "s": 80,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Sushi Kory Valencia",
+      "r": 4.2,
+      "rv": 5224,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Güerita Mexicana",
+      "r": 4.7,
+      "rv": 5193,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Balmesina",
+      "r": 4.6,
+      "rv": 5192,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante San Marco Santa Cruz",
+      "r": 4.5,
+      "rv": 5148,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Las Delicias del Carmelo",
+      "r": 4.3,
+      "rv": 5139,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Meli del Tubo",
+      "r": 4.5,
+      "rv": 5138,
+      "s": 87,
+      "c": "Other",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Labarra Westside",
+      "r": 4.0,
+      "rv": 5110,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Portomarín",
+      "r": 4.1,
+      "rv": 5099,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "La Triunfal",
+      "r": 4.5,
+      "rv": 5098,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Rita Sibarita",
+      "r": 4.2,
+      "rv": 4991,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Bar Quimet D'Horta",
+      "r": 4.4,
+      "rv": 4887,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Tuscania Food & Wine",
+      "r": 4.7,
+      "rv": 4835,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Recasens",
+      "r": 4.3,
+      "rv": 4822,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Grupo Mussol",
+      "r": 4.0,
+      "rv": 4814,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "9 Reinas Barcelona",
+      "r": 4.6,
+      "rv": 4765,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Boca Grande",
+      "r": 4.1,
+      "rv": 4754,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "The Chipiron",
+      "r": 3.9,
+      "rv": 4752,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Casa Rafols",
+      "r": 4.4,
+      "rv": 4740,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Blai 9",
+      "r": 4.3,
+      "rv": 4736,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Sonora Sport Tavern",
+      "r": 4.1,
+      "rv": 4729,
+      "s": 80,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Terraza Miro",
+      "r": 4.7,
+      "rv": 4714,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Honest Greens",
+      "r": 4.4,
+      "rv": 4652,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 14,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Prensa Burger üçî - Sagasta",
+      "r": 4.7,
+      "rv": 4651,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Nikkei 103",
+      "r": 4.6,
+      "rv": 4641,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$$"
+    },
+    {
+      "n": "Mesón Txistu",
+      "r": 4.5,
+      "rv": 4622,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$$"
+    },
+    {
+      "n": "La Mar Salada",
+      "r": 4.3,
+      "rv": 4608,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 4,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Cdlc Barcelona",
+      "r": 4.1,
+      "rv": 4584,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "N√úa Smart Restaurant",
+      "r": 4.4,
+      "rv": 4566,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Cervecería Santa Bárbara",
+      "r": 3.3,
+      "rv": 4551,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neg",
+      "pl": "$$"
+    },
+    {
+      "n": "Cafetería Magerit",
+      "r": 4.3,
+      "rv": 4535,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Mirabe",
+      "r": 4.5,
+      "rv": 4529,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Takumi Ramen Barcelona Balmes",
+      "r": 4.5,
+      "rv": 4486,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Sports Bar Italian Food - Av. Diagonal",
+      "r": 4.7,
+      "rv": 4448,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Boa-Bao",
+      "r": 4.5,
+      "rv": 4438,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Al Solito Posto",
+      "r": 4.4,
+      "rv": 4435,
+      "s": 85,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Beefcious S.L",
+      "r": 4.5,
+      "rv": 4395,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Surf House Barcelona",
+      "r": 4.3,
+      "rv": 4383,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 4,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Europa Cafe",
+      "r": 4.0,
+      "rv": 4360,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Hideout Burger",
+      "r": 4.6,
+      "rv": 4325,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Biercab",
+      "r": 4.6,
+      "rv": 4318,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Marula",
+      "r": 3.9,
+      "rv": 4289,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Flaherty's Irish Pub Barcelona",
+      "r": 4.3,
+      "rv": 4287,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Sakana Restaurante",
+      "r": 4.9,
+      "rv": 4266,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Grupo la Mafia",
+      "r": 4.3,
+      "rv": 4254,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 11,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Tablao Flamenco el Palacio Andaluz",
+      "r": 4.5,
+      "rv": 4233,
+      "s": 85,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "La Morenilla | Casa de Antojos",
+      "r": 3.9,
+      "rv": 4233,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante la Suegra",
+      "r": 4.1,
+      "rv": 4188,
+      "s": 80,
+      "c": "CASCADE",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Tapas",
+      "r": 4.2,
+      "rv": 4149,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Malacatín",
+      "r": 4.3,
+      "rv": 4141,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Tablao Flamenco Cordobes Barcelona",
+      "r": 4.7,
+      "rv": 4130,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Taberna los Gallos",
+      "r": 4.1,
+      "rv": 4114,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Taberna Real Restaurante",
+      "r": 3.5,
+      "rv": 4083,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Posada de la Villa",
+      "r": 4.5,
+      "rv": 4046,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "El Manolo",
+      "r": 4.1,
+      "rv": 4027,
+      "s": 80,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Chéri",
+      "r": 4.1,
+      "rv": 3984,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Fellina Restaurante",
+      "r": 4.1,
+      "rv": 3977,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante H83",
+      "r": 4.3,
+      "rv": 3955,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Viva Burger",
+      "r": 4.4,
+      "rv": 3911,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Cafetería Nebraska",
+      "r": 4.3,
+      "rv": 3903,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "El Manaba",
+      "r": 4.2,
+      "rv": 3891,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Viure Sense Dormir",
+      "r": 3.7,
+      "rv": 3890,
+      "s": 80,
+      "c": "València",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Kibuka",
+      "r": 4.4,
+      "rv": 3830,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 5,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Cachitos Rambla",
+      "r": 4.0,
+      "rv": 3820,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "La Cantina",
+      "r": 4.4,
+      "rv": 3819,
+      "s": 95,
+      "c": "-",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "All You Can Eat",
+      "r": 3.8,
+      "rv": 3811,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Lamiak Cava Baja",
+      "r": 4.5,
+      "rv": 3806,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Barraca",
+      "r": 3.9,
+      "rv": 3795,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Argentinisimo",
+      "r": 4.7,
+      "rv": 3780,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Nao Borraset",
+      "r": 4.0,
+      "rv": 3695,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Taqueria | Passatge de Font",
+      "r": 4.5,
+      "rv": 3694,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Salambo",
+      "r": 4.3,
+      "rv": 3692,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Ninja Ramen",
+      "r": 4.3,
+      "rv": 3691,
+      "s": 85,
+      "c": "Las Rozas",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Disfrutar",
+      "r": 4.8,
+      "rv": 3671,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$$$"
+    },
+    {
+      "n": "Out of India",
+      "r": 4.6,
+      "rv": 3666,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Buenos Aires Grill Restaurant Eixample",
+      "r": 4.5,
+      "rv": 3661,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Centfocs",
+      "r": 4.2,
+      "rv": 3624,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Foc",
+      "r": 4.5,
+      "rv": 3620,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Puerta de Atocha",
+      "r": 3.3,
+      "rv": 3619,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Taberna la Descubierta",
+      "r": 4.2,
+      "rv": 3613,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurant Fuji",
+      "r": 4.3,
+      "rv": 3605,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Federal Cafe",
+      "r": 4.0,
+      "rv": 3604,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 5,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Udon Tibidabo",
+      "r": 4.5,
+      "rv": 3592,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 8,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Tejeringo's Coffee",
+      "r": 4.1,
+      "rv": 3576,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neg",
+      "pl": "PRIC"
+    },
+    {
+      "n": "√äbac",
+      "r": 4.4,
+      "rv": 3574,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Pizza Barceloneta Kitchen",
+      "r": 4.9,
+      "rv": 3566,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Frescco Casp",
+      "r": 4.0,
+      "rv": 3553,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurante Lasal del Varador",
+      "r": 4.3,
+      "rv": 3553,
+      "s": 100,
+      "c": "Mataró",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Cazorla Restaurantes",
+      "r": 4.3,
+      "rv": 3547,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "El Lacón",
+      "r": 4.3,
+      "rv": 3546,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Billy Brunch",
+      "r": 4.8,
+      "rv": 3540,
+      "s": 88,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Casa de Tapas Cañota",
+      "r": 4.2,
+      "rv": 3501,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Maitea Taberna Sl",
+      "r": 4.3,
+      "rv": 3496,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Burguesa Tuset",
+      "r": 4.3,
+      "rv": 3487,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "L’ Amfora Barcelona",
+      "r": 4.2,
+      "rv": 3478,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Caravelle",
+      "r": 4.7,
+      "rv": 3467,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Briciola",
+      "r": 4.4,
+      "rv": 3467,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Casa Cuesta",
+      "r": 3.8,
+      "rv": 3434,
+      "s": 85,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Metric Market",
+      "r": 4.1,
+      "rv": 3433,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Can Ros",
+      "r": 4.4,
+      "rv": 3423,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Veggie Garden",
+      "r": 4.4,
+      "rv": 3419,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "L'Alian√ßa del Poble Nou Casino",
+      "r": 4.2,
+      "rv": 3415,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Abirradero",
+      "r": 4.3,
+      "rv": 3410,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Orgaz",
+      "r": 4.5,
+      "rv": 3357,
+      "s": 95,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Quickgold Barcelona (Diagonal 335) - Com",
+      "r": 5.0,
+      "rv": 3351,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Restaurante Sol Soler",
+      "r": 4.1,
+      "rv": 3348,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurant Barcelonamilano",
+      "r": 4.4,
+      "rv": 3342,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "El Xalet de Montjuïc",
+      "r": 4.1,
+      "rv": 3341,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Carlota Akaneya",
+      "r": 4.7,
+      "rv": 3341,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Taco Alto",
+      "r": 4.2,
+      "rv": 3327,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Las Piletas Restaurante",
+      "r": 4.2,
+      "rv": 3325,
+      "s": 73,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Churrería-Chocolatería las Farolas",
+      "r": 4.1,
+      "rv": 3320,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Alcaravea Gaztambide",
+      "r": 4.6,
+      "rv": 3316,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Palau de Mar",
+      "r": 4.2,
+      "rv": 3314,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Farga",
+      "r": 4.2,
+      "rv": 3307,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Cervecería Alemana",
+      "r": 3.9,
+      "rv": 3276,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Jefferson",
+      "r": 4.2,
+      "rv": 3237,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurant Casa Carmen Paseo de Gracia",
+      "r": 4.0,
+      "rv": 3231,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 5,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurants Casa Saragossa",
+      "r": 2.1,
+      "rv": 3229,
+      "s": 40,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neg",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Everest Tandoori",
+      "r": 4.6,
+      "rv": 3193,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Sushisom Zaragoza la Torre Outlet",
+      "r": 4.1,
+      "rv": 3188,
+      "s": 80,
+      "c": "Terrassa",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Zaka Restaurante",
+      "r": 4.3,
+      "rv": 3179,
+      "s": 85,
+      "c": "Kalamazoo",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Monroe",
+      "r": 4.3,
+      "rv": 3174,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Tasca y Brasa",
+      "r": 4.1,
+      "rv": 3174,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Frankie Gallo Cha Cha Cha",
+      "r": 4.4,
+      "rv": 3172,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "SA Brisa Restaurante en el Retiro",
+      "r": 4.5,
+      "rv": 3157,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Restaurante Cobatillas",
+      "r": 4.4,
+      "rv": 3083,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Porca",
+      "r": 4.5,
+      "rv": 3082,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 4,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Mammamia",
+      "r": 4.4,
+      "rv": 3075,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Can Mano",
+      "r": 4.3,
+      "rv": 3062,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Sentinel",
+      "r": 4.3,
+      "rv": 3057,
+      "s": 100,
+      "c": "Zaragoza",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Cafetería Restaurante el Corte Inglés",
+      "r": 3.9,
+      "rv": 3055,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Leche de Tigre",
+      "r": 4.6,
+      "rv": 3052,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Restaurante Marina Alta 5 - Terraza Bar",
+      "r": 4.2,
+      "rv": 3049,
+      "s": 85,
+      "c": "València",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Cal Pep",
+      "r": 4.4,
+      "rv": 3028,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Restaurante Kyoto",
+      "r": 4.4,
+      "rv": 3019,
+      "s": 100,
+      "c": "Las Rozas",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Cervecería L'Europe",
+      "r": 4.4,
+      "rv": 3006,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "El Tablo Carmen",
+      "r": 4.7,
+      "rv": 3006,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Macchina Pasta Bar",
+      "r": 4.5,
+      "rv": 3000,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurante la Gloria",
+      "r": 3.5,
+      "rv": 2990,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": ""
+    },
+    {
+      "n": "Sidrería el Llagar",
+      "r": 4.0,
+      "rv": 2969,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Patacon Tostao",
+      "r": 4.2,
+      "rv": 2962,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Santamasa Sarrià",
+      "r": 4.2,
+      "rv": 2892,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurant Charrito",
+      "r": 4.3,
+      "rv": 2874,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Tasquería",
+      "r": 4.6,
+      "rv": 2871,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Bellillo Pizzeria Napoletana",
+      "r": 4.4,
+      "rv": 2867,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Nueva Marquesa",
+      "r": 4.6,
+      "rv": 2865,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Casa Jaime",
+      "r": 4.2,
+      "rv": 2835,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Kurz&Gut la Maquinista",
+      "r": 3.8,
+      "rv": 2831,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 6,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Piazze d'Italia",
+      "r": 4.6,
+      "rv": 2829,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Barbillón Oyster",
+      "r": 4.4,
+      "rv": 2828,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Alba Granados | Carnes a la Brasa en Bar",
+      "r": 4.3,
+      "rv": 2823,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Antic Cafe Espanyol",
+      "r": 4.1,
+      "rv": 2818,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Alt Heidelberg",
+      "r": 4.1,
+      "rv": 2809,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Plenti",
+      "r": 4.6,
+      "rv": 2804,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Vegetalia Born - Restaurante vegetariano",
+      "r": 4.4,
+      "rv": 2793,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Momo",
+      "r": 4.4,
+      "rv": 2787,
+      "s": 90,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "L' Olla de Si Chuan",
+      "r": 4.1,
+      "rv": 2786,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Vuelve Carolina",
+      "r": 4.1,
+      "rv": 2781,
+      "s": 100,
+      "c": "València",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Nabucco Tiramisu",
+      "r": 4.3,
+      "rv": 2766,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Santagustina",
+      "r": 4.4,
+      "rv": 2764,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Contrapunto les Arts",
+      "r": 3.9,
+      "rv": 2759,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "El Argentino",
+      "r": 4.1,
+      "rv": 2756,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Madre Lievito Laboratorio",
+      "r": 4.2,
+      "rv": 2752,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Vic Braseria",
+      "r": 4.5,
+      "rv": 2751,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "La Bodega D'En Rafel",
+      "r": 4.5,
+      "rv": 2750,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Ventorrillo el Chato",
+      "r": 4.6,
+      "rv": 2750,
+      "s": 85,
+      "c": "Cádiz",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Rabipelao Gótico",
+      "r": 4.4,
+      "rv": 2749,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "La Gavina",
+      "r": 3.8,
+      "rv": 2741,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "La Vietnamita Gràcia",
+      "r": 4.3,
+      "rv": 2730,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Veltins Arena",
+      "r": 4.1,
+      "rv": 2721,
+      "s": 100,
+      "c": "Zaragoza",
+      "ct": 2,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Terra Mia",
+      "r": 4.5,
+      "rv": 2714,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Vinopremier",
+      "r": 4.5,
+      "rv": 2708,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Mònica",
+      "r": 3.9,
+      "rv": 2701,
+      "s": 95,
+      "c": "Palamós",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurante el Porvenir",
+      "r": 4.4,
+      "rv": 2700,
+      "s": 90,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "L'Olive",
+      "r": 4.6,
+      "rv": 2695,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Vrutal",
+      "r": 4.7,
+      "rv": 2672,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Esquinita de Blai",
+      "r": 4.3,
+      "rv": 2665,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Ajoblanco Tapas Restaurante Cocktail Bar",
+      "r": 4.3,
+      "rv": 2661,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Hidden Coffee Roasters - les Corts",
+      "r": 4.5,
+      "rv": 2658,
+      "s": 73,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Taberna de Angel Sierra",
+      "r": 4.3,
+      "rv": 2634,
+      "s": 80,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Cafetería Cervecería la Villa",
+      "r": 4.1,
+      "rv": 2631,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Sucursal Aceitera",
+      "r": 4.2,
+      "rv": 2630,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Big Al's - Real American Burgers - Barce",
+      "r": 4.4,
+      "rv": 2629,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "√åstor Gastro-Place",
+      "r": 4.9,
+      "rv": 2620,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Buenas Migas Sant Pere",
+      "r": 4.2,
+      "rv": 2620,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "El Velázquez 17 - Restaurante",
+      "r": 4.5,
+      "rv": 2620,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "En Ville",
+      "r": 4.4,
+      "rv": 2603,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Elche",
+      "r": 4.0,
+      "rv": 2603,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Quillo Bar",
+      "r": 4.0,
+      "rv": 2590,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Kimchi Mama",
+      "r": 4.8,
+      "rv": 2588,
+      "s": 80,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Warehouse@thehclub",
+      "r": 4.0,
+      "rv": 2585,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Taberna Andaluza la Gloria",
+      "r": 3.6,
+      "rv": 2581,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Restaurante Depikofino",
+      "r": 4.3,
+      "rv": 2555,
+      "s": 85,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Sanissimo Principe Pío Vegan",
+      "r": 4.7,
+      "rv": 2554,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Vespa Burger Bar",
+      "r": 4.5,
+      "rv": 2544,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Bar-Restaurante Muy Buenas",
+      "r": 4.5,
+      "rv": 2529,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Taberna Sol y Sombra",
+      "r": 4.3,
+      "rv": 2526,
+      "s": 85,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Pentxo",
+      "r": 4.3,
+      "rv": 2522,
+      "s": 80,
+      "c": "Bilbao",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "El Rebost D'Hostafrancs",
+      "r": 4.3,
+      "rv": 2522,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurante O'Caldiño",
+      "r": 4.2,
+      "rv": 2521,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Ristorante Mediterrani",
+      "r": 4.4,
+      "rv": 2517,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Quintoelemento",
+      "r": 4.4,
+      "rv": 2508,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Txokoa Barcelona",
+      "r": 4.4,
+      "rv": 2508,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurant Parrilla Alfonsina",
+      "r": 4.6,
+      "rv": 2507,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Amordmadre",
+      "r": 4.5,
+      "rv": 2499,
+      "s": 92,
+      "c": "Other",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Villa Verbena",
+      "r": 4.0,
+      "rv": 2497,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Taquería del Alamillo",
+      "r": 4.2,
+      "rv": 2497,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Zoko Retiro - Restaurante en el Retiro",
+      "r": 4.1,
+      "rv": 2493,
+      "s": 95,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Venganza de Malinche Valencia",
+      "r": 4.2,
+      "rv": 2490,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante la Vegana de Madrid",
+      "r": 4.1,
+      "rv": 2483,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurant L'Aliança del Poble Nou",
+      "r": 4.0,
+      "rv": 2483,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Quinto Pino",
+      "r": 3.9,
+      "rv": 2467,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Arrocería Restaurante la Casa de Valenci",
+      "r": 4.1,
+      "rv": 2459,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Biocenter",
+      "r": 4.4,
+      "rv": 2449,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Ukai Eixample",
+      "r": 3.8,
+      "rv": 2436,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "La Adelita Botanero",
+      "r": 4.1,
+      "rv": 2435,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante la Gloria",
+      "r": 4.1,
+      "rv": 2424,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Pizzaria Grosso",
+      "r": 4.4,
+      "rv": 2422,
+      "s": 40,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Birras&Tapas",
+      "r": 4.2,
+      "rv": 2421,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Picasso",
+      "r": 4.1,
+      "rv": 2412,
+      "s": 95,
+      "c": "Málaga",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Eatmytrip - Brunch & Bakery Barcelona",
+      "r": 4.5,
+      "rv": 2411,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "The Famous Bar Restaurant",
+      "r": 4.7,
+      "rv": 2395,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Japonés Ii",
+      "r": 3.5,
+      "rv": 2390,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Oxid la Tertulia",
+      "r": 4.3,
+      "rv": 2386,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Viva Madrid",
+      "r": 4.5,
+      "rv": 2382,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Hotel Roma Reial",
+      "r": 3.7,
+      "rv": 2369,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neg",
+      "pl": ""
+    },
+    {
+      "n": "Bocca di Bonifacio",
+      "r": 4.4,
+      "rv": 2366,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Meson Restaurante As Fontes",
+      "r": 4.3,
+      "rv": 2356,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Cervecería Huracán",
+      "r": 4.2,
+      "rv": 2354,
+      "s": 75,
+      "c": "New York",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Venta el Gato",
+      "r": 4.3,
+      "rv": 2352,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Ristobottega",
+      "r": 4.6,
+      "rv": 2352,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Pastelería la Mallorquina - Velázquez",
+      "r": 4.2,
+      "rv": 2343,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Almunia",
+      "r": 4.7,
+      "rv": 2333,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Taberna Copas y Tapas",
+      "r": 3.5,
+      "rv": 2320,
+      "s": 40,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Cadaqués Barcelona",
+      "r": 4.3,
+      "rv": 2318,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Lemongrass Explanada",
+      "r": 4.2,
+      "rv": 2313,
+      "s": 100,
+      "c": "Valencia",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Tyris On Tap",
+      "r": 4.4,
+      "rv": 2309,
+      "s": 80,
+      "c": "Riba-roja de Túria",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Llagar la Llobera",
+      "r": 4.1,
+      "rv": 2300,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Yuso",
+      "r": 4.4,
+      "rv": 2295,
+      "s": 85,
+      "c": "Valencia",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Hotel Hesperia Murcia Centro",
+      "r": 4.3,
+      "rv": 2282,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Restaurante Casa Pedro",
+      "r": 4.5,
+      "rv": 2276,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Roda",
+      "r": 4.3,
+      "rv": 2269,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Casa Juaco",
+      "r": 3.8,
+      "rv": 2267,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neg",
+      "pl": "$$"
+    },
+    {
+      "n": "Picnic Restaurant",
+      "r": 4.4,
+      "rv": 2264,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Triki Trac",
+      "r": 4.4,
+      "rv": 2252,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Cafe del Gallery",
+      "r": 4.4,
+      "rv": 2248,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Chill Bar",
+      "r": 4.4,
+      "rv": 2243,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Pizzeria Ristorante Piccolo Diavolo",
+      "r": 4.4,
+      "rv": 2242,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "El Meson de Fuencarral",
+      "r": 4.3,
+      "rv": 2227,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Xemei",
+      "r": 4.4,
+      "rv": 2217,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 4,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Sushiko",
+      "r": 4.2,
+      "rv": 2213,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Ben Tips",
+      "r": 4.0,
+      "rv": 2206,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Els Porxos",
+      "r": 4.3,
+      "rv": 2199,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Restaurante Rocalla",
+      "r": 4.5,
+      "rv": 2198,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Casa Angela",
+      "r": 4.2,
+      "rv": 2178,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "El Corte Ingl√©s",
+      "r": 4.3,
+      "rv": 2166,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Central Park Barcelona",
+      "r": 4.0,
+      "rv": 2159,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Tio Joe",
+      "r": 4.5,
+      "rv": 2153,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Trini",
+      "r": 4.2,
+      "rv": 2140,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Don Cammillo e Peppone",
+      "r": 3.7,
+      "rv": 2132,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Gallina Bianca",
+      "r": 4.4,
+      "rv": 2128,
+      "s": 100,
+      "c": "Sevilla",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante la Quinta del Pardo",
+      "r": 3.5,
+      "rv": 2120,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Vlue Arribar",
+      "r": 3.6,
+      "rv": 2112,
+      "s": 85,
+      "c": "València",
+      "ct": 0,
+      "se": "Neg",
+      "pl": "PRIC"
+    },
+    {
+      "n": "NORI SUSHI Putxet",
+      "r": 4.7,
+      "rv": 2112,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "A la Broaster",
+      "r": 3.8,
+      "rv": 2106,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante el Gallo Campo de las Nacion",
+      "r": 4.2,
+      "rv": 2103,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Flash-Flash",
+      "r": 4.2,
+      "rv": 2102,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Benzina",
+      "r": 4.6,
+      "rv": 2093,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Osteria Bravissimo",
+      "r": 4.7,
+      "rv": 2066,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Bro Room",
+      "r": 4.3,
+      "rv": 2061,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Sylkar",
+      "r": 4.2,
+      "rv": 2053,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Can Xurrades",
+      "r": 4.5,
+      "rv": 2047,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Santa Burg",
+      "r": 4.3,
+      "rv": 2045,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Terraza del Claris",
+      "r": 4.4,
+      "rv": 2035,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Mamma Italia",
+      "r": 4.7,
+      "rv": 2035,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "La Divina Comedia",
+      "r": 4.1,
+      "rv": 2033,
+      "s": 40,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante el Pastoret Valencia",
+      "r": 4.4,
+      "rv": 2030,
+      "s": 80,
+      "c": "London",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Peso Neto Taberna-Jatetxea",
+      "r": 4.4,
+      "rv": 2029,
+      "s": 80,
+      "c": "Bilbo",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Zerain Restaurante Asador - Sidrería Vas",
+      "r": 4.4,
+      "rv": 2025,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "La Colosal",
+      "r": 4.3,
+      "rv": 2013,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Churrería Chocolatería Xix Century",
+      "r": 4.5,
+      "rv": 2010,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Mercato Ballaró",
+      "r": 4.5,
+      "rv": 2003,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Bella Napoli",
+      "r": 4.2,
+      "rv": 1999,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Casa Andreea: Arrocería y Mariscos",
+      "r": 4.2,
+      "rv": 1999,
+      "s": 80,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Cantina Machito",
+      "r": 4.3,
+      "rv": 1998,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Silan",
+      "r": 4.6,
+      "rv": 1994,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Pizzeria Il Bocconcino Valen",
+      "r": 4.6,
+      "rv": 1991,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Picanteria de L'Escribà",
+      "r": 4.5,
+      "rv": 1986,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Panishop",
+      "r": 4.1,
+      "rv": 1974,
+      "s": 100,
+      "c": "Zaragoza",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Sms Delícies",
+      "r": 4.4,
+      "rv": 1968,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Can Sole",
+      "r": 4.3,
+      "rv": 1967,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Bar Mut",
+      "r": 4.1,
+      "rv": 1958,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Las Mañanitas",
+      "r": 4.3,
+      "rv": 1942,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Cecconi's Barcelona",
+      "r": 4.4,
+      "rv": 1942,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "La Jabata",
+      "r": 4.6,
+      "rv": 1941,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Poetas Andaluces Ii",
+      "r": 4.6,
+      "rv": 1940,
+      "s": 92,
+      "c": "Other",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Cadaqués Restaurant",
+      "r": 2.0,
+      "rv": 1938,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neg",
+      "pl": "$$"
+    },
+    {
+      "n": "Vietnam Restaurant",
+      "r": 4.5,
+      "rv": 1937,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Firo Tast Restaurant",
+      "r": 4.1,
+      "rv": 1927,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Maramaia",
+      "r": 4.7,
+      "rv": 1923,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Playa de Lavapiés",
+      "r": 4.0,
+      "rv": 1921,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "N9u Restaurant",
+      "r": 4.1,
+      "rv": 1919,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Egeo Suvlakería Griega, Malasaña",
+      "r": 4.5,
+      "rv": 1916,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurante Espurnes",
+      "r": 4.7,
+      "rv": 1912,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Louise Se Va",
+      "r": 4.5,
+      "rv": 1910,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurante China Crown",
+      "r": 4.5,
+      "rv": 1903,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "La Mar Bella",
+      "r": 3.9,
+      "rv": 1901,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurant Lounge My Way",
+      "r": 4.6,
+      "rv": 1866,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Subway",
+      "r": 3.9,
+      "rv": 1865,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 3,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Braseria Cal Ramon",
+      "r": 4.3,
+      "rv": 1864,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Kuletos",
+      "r": 4.3,
+      "rv": 1855,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante los Cuevas",
+      "r": 4.5,
+      "rv": 1852,
+      "s": 85,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Arrayanes",
+      "r": 4.6,
+      "rv": 1851,
+      "s": 100,
+      "c": "Granada",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurant Dos Cuiners",
+      "r": 4.6,
+      "rv": 1834,
+      "s": 100,
+      "c": "Mataró",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurant Marisma Barceloneta",
+      "r": 4.0,
+      "rv": 1831,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Pilla",
+      "r": 4.3,
+      "rv": 1831,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Taberna Almazara",
+      "r": 4.2,
+      "rv": 1830,
+      "s": 80,
+      "c": "London",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante el Giraldillo Sevilla",
+      "r": 4.2,
+      "rv": 1830,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Shoronpo",
+      "r": 4.7,
+      "rv": 1812,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "La Antigualla",
+      "r": 3.6,
+      "rv": 1808,
+      "s": 40,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Tapas y Mas",
+      "r": 4.2,
+      "rv": 1800,
+      "s": 40,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Barra Alta",
+      "r": 4.7,
+      "rv": 1795,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Asador el Molinón",
+      "r": 4.4,
+      "rv": 1794,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Nipon Sushi Sake Bar",
+      "r": 4.5,
+      "rv": 1792,
+      "s": 100,
+      "c": "Mataró",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Portonovo Silvestre",
+      "r": 4.2,
+      "rv": 1790,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Batea Churrianera",
+      "r": 4.0,
+      "rv": 1787,
+      "s": 90,
+      "c": "Malaga",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante la Giralda - Tu Rincón de An",
+      "r": 4.3,
+      "rv": 1785,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "La Pecera del Pool",
+      "r": 4.3,
+      "rv": 1782,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": ""
+    },
+    {
+      "n": "La Cerveseria",
+      "r": 3.0,
+      "rv": 1782,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neg",
+      "pl": "$"
+    },
+    {
+      "n": "Restaurante Fathe Pur",
+      "r": 4.4,
+      "rv": 1777,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Tarin's Restaurante",
+      "r": 3.5,
+      "rv": 1775,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Marinela Jatetxea",
+      "r": 4.2,
+      "rv": 1772,
+      "s": 85,
+      "c": "Bilbao",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "P√ñtstot - Gluten Free / Sin Gluten",
+      "r": 4.5,
+      "rv": 1771,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Jai Alai",
+      "r": 4.4,
+      "rv": 1768,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Grums Hotel & Spa",
+      "r": 4.1,
+      "rv": 1759,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": ""
+    },
+    {
+      "n": "Cervecería Santa Ana",
+      "r": 3.6,
+      "rv": 1756,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Sapama",
+      "r": 4.0,
+      "rv": 1749,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Tiki Taco",
+      "r": 4.2,
+      "rv": 1749,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Belbo Candela",
+      "r": 4.3,
+      "rv": 1745,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 2,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Venus Delicatessen Barcelona",
+      "r": 4.4,
+      "rv": 1745,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Lalanda",
+      "r": 4.3,
+      "rv": 1743,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Souvenir",
+      "r": 4.4,
+      "rv": 1740,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Tras Os Montes",
+      "r": 4.7,
+      "rv": 1740,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Yaho Alta Murcia",
+      "r": 4.1,
+      "rv": 1729,
+      "s": 80,
+      "c": "CASCADE",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Caza Juan",
+      "r": 4.6,
+      "rv": 1729,
+      "s": 85,
+      "c": "Valdezorras",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Chez Coco",
+      "r": 4.2,
+      "rv": 1728,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Bienmesabe Vergara",
+      "r": 4.2,
+      "rv": 1719,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante L'Albufera",
+      "r": 4.4,
+      "rv": 1716,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Ribs CC Lagoh Sevilla",
+      "r": 4.5,
+      "rv": 1707,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neg",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Casa Rafael (Papa Erig)",
+      "r": 4.5,
+      "rv": 1706,
+      "s": 85,
+      "c": "Benalmádena",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Torikey",
+      "r": 4.7,
+      "rv": 1704,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "The Botilleria Coffee East",
+      "r": 3.9,
+      "rv": 1699,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Orellana House",
+      "r": 4.4,
+      "rv": 1694,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Gula Sana",
+      "r": 4.3,
+      "rv": 1685,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Giulietta Cafü | Pastisseria, Restaurant",
+      "r": 4.4,
+      "rv": 1683,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Trocadero Estepona",
+      "r": 4.4,
+      "rv": 1682,
+      "s": 100,
+      "c": "Estepona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Margarita Blue",
+      "r": 4.4,
+      "rv": 1679,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Santa Clara Restaurant",
+      "r": 4.2,
+      "rv": 1679,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neg",
+      "pl": "$$$"
+    },
+    {
+      "n": "Restaurante Spaguetteria Circus",
+      "r": 4.1,
+      "rv": 1679,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Tgb",
+      "r": 3.7,
+      "rv": 1672,
+      "s": 85,
+      "c": "Roma",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Salero",
+      "r": 4.5,
+      "rv": 1665,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Taberna las Meninas",
+      "r": 4.3,
+      "rv": 1665,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Jamón Jamón",
+      "r": 4.6,
+      "rv": 1660,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "My Bar",
+      "r": 4.4,
+      "rv": 1658,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Ramen Kagura Atocha",
+      "r": 4.4,
+      "rv": 1657,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurant Port Vell",
+      "r": 3.8,
+      "rv": 1635,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neg",
+      "pl": "$$"
+    },
+    {
+      "n": "Dos Pebrots",
+      "r": 4.5,
+      "rv": 1634,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Cocina Hermanos Torres",
+      "r": 4.7,
+      "rv": 1630,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 6,
+      "se": "Pos",
+      "pl": "$$$$"
+    },
+    {
+      "n": "Casa Fonzo",
+      "r": 4.4,
+      "rv": 1629,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "A Tu Bola",
+      "r": 4.7,
+      "rv": 1624,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Xino Mandarino",
+      "r": 4.4,
+      "rv": 1622,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Kenko",
+      "r": 4.1,
+      "rv": 1619,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "La Tropa",
+      "r": 4.2,
+      "rv": 1619,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante la Locanda di Andrea",
+      "r": 4.5,
+      "rv": 1618,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Taberna Ilustrada el Capricho",
+      "r": 4.2,
+      "rv": 1614,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Azul",
+      "r": 4.2,
+      "rv": 1614,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Viblioteca",
+      "r": 4.6,
+      "rv": 1612,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Monster Sushi Aribau",
+      "r": 4.8,
+      "rv": 1612,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Can Punyetes",
+      "r": 4.3,
+      "rv": 1607,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Almagro Café And Bar Restaurante",
+      "r": 4.1,
+      "rv": 1606,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Trujillo Burger Estefanita",
+      "r": 4.5,
+      "rv": 1602,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Petit Comitè",
+      "r": 4.4,
+      "rv": 1602,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Stella Nova",
+      "r": 4.5,
+      "rv": 1601,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Colmado Lalola",
+      "r": 4.4,
+      "rv": 1600,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Gorria",
+      "r": 4.6,
+      "rv": 1600,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Riko's",
+      "r": 4.2,
+      "rv": 1599,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Neg",
+      "pl": ""
+    },
+    {
+      "n": "Kebab House",
+      "r": 4.1,
+      "rv": 1599,
+      "s": 95,
+      "c": "Alicante",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Mont Bar",
+      "r": 4.5,
+      "rv": 1596,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$"
+    },
+    {
+      "n": "Oneocean Club",
+      "r": 4.3,
+      "rv": 1596,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "√òlgod Brewpub",
+      "r": 4.5,
+      "rv": 1590,
+      "s": 73,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Bar Restaurante Guixot",
+      "r": 4.7,
+      "rv": 1588,
+      "s": 80,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Sanabria Restaurante",
+      "r": 4.0,
+      "rv": 1588,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Carmen GastroBar Gin Club",
+      "r": 4.3,
+      "rv": 1582,
+      "s": 100,
+      "c": "Badajoz",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "La Paloma",
+      "r": 4.4,
+      "rv": 1581,
+      "s": 90,
+      "c": "Madrid",
+      "ct": 5,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Papadam",
+      "r": 4.6,
+      "rv": 1576,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "El Trébol 1983 Pizzas y Empanadas Argent",
+      "r": 4.4,
+      "rv": 1575,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Al Jaima de Abou Khalil Ÿöÿ∑ÿπÿö Ÿñÿ®ÿüÿ",
+      "r": 4.6,
+      "rv": 1572,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Tasca la Ultramarina",
+      "r": 4.6,
+      "rv": 1572,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": ""
+    },
+    {
+      "n": "Cervecería Cruz Blanca",
+      "r": 4.1,
+      "rv": 1570,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Ramen House Barcelona",
+      "r": 4.3,
+      "rv": 1567,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "√äsia Amb Gr√†cia",
+      "r": 4.3,
+      "rv": 1562,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Karakala",
+      "r": 4.6,
+      "rv": 1560,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Marchica Shawarma",
+      "r": 4.4,
+      "rv": 1554,
+      "s": 95,
+      "c": "CASCADE",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "El Menjador de la Beckett",
+      "r": 4.3,
+      "rv": 1545,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Korean Restaurant Kamasot",
+      "r": 4.5,
+      "rv": 1545,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "Restaurante Tajo Bajo",
+      "r": 4.4,
+      "rv": 1535,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Venta el Gallo",
+      "r": 4.5,
+      "rv": 1535,
+      "s": 67,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Ruda Café",
+      "r": 4.6,
+      "rv": 1531,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Paraiso Oriental",
+      "r": 4.2,
+      "rv": 1530,
+      "s": 85,
+      "c": "Barcelona",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Meson Asador la Esquina",
+      "r": 4.1,
+      "rv": 1526,
+      "s": 52,
+      "c": "Other",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Restaurante Pals",
+      "r": 4.0,
+      "rv": 1517,
+      "s": 72,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "China Té",
+      "r": 4.3,
+      "rv": 1495,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$"
+    },
+    {
+      "n": "Aránzazu",
+      "r": 4.2,
+      "rv": 1495,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$"
+    },
+    {
+      "n": "Yamadori",
+      "r": 4.5,
+      "rv": 1495,
+      "s": 100,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$$"
+    },
+    {
+      "n": "El Rincón de Vespok",
+      "r": 4.3,
+      "rv": 1493,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$"
+    },
+    {
+      "n": "4 Latas Muntaner",
+      "r": 3.8,
+      "rv": 1492,
+      "s": 77,
+      "c": "Other",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "PRIC"
+    },
+    {
+      "n": "Avocado",
+      "r": 4.5,
+      "rv": 1490,
+      "s": 95,
+      "c": "Barcelona",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$"
+    }
+  ],
+  "services": {
+    "dine_in": 764,
+    "delivery": 390,
+    "takeout": 582,
+    "reservable": 646,
+    "serves_breakfast": 296,
+    "serves_lunch": 666,
+    "serves_dinner": 663,
+    "serves_brunch": 340,
+    "serves_beer": 717,
+    "serves_wine": 697,
+    "serves_vegetarian": 254,
+    "outdoor_seating": 448,
+    "live_music": 64,
+    "good_for_children": 472,
+    "good_for_groups": 525,
+    "good_for_sports": 51
+  },
+  "field_completeness": {
+    "companies": {
+      "name": 74622,
+      "phone": 45642,
+      "domain": 35418,
+      "website": 35467,
+      "city": 48355,
+      "address": 66931,
+      "industry": 34407,
+      "google_place_id": 22877,
+      "gp__rating_count": 2080,
+      "gp__sentiment": 2088,
+      "num_associated_contacts": 74635,
+      "description": 26647,
+      "country": 73833
+    },
+    "contacts": {
+      "email": 38255,
+      "mobilephone": 18579,
+      "firstname": 66334,
+      "lastname": 16948,
+      "phone": 38635,
+      "company": 45479,
+      "city": 32463,
+      "jobtitle": 3260,
+      "lifecyclestage": 69858,
+      "associatedcompanyid": 41400,
+      "country": 16683
+    },
+    "companies_total": 74635,
+    "contacts_total": 69858
+  },
+  "contact_matrix": [
+    [
+      0,
+      1,
+      1,
+      9
+    ],
+    [
+      0,
+      1,
+      0,
+      10
+    ],
+    [
+      0,
+      0,
+      1,
+      1603
+    ],
+    [
+      0,
+      0,
+      0,
+      11155
+    ],
+    [
+      1,
+      1,
+      1,
+      53
+    ],
+    [
+      1,
+      1,
+      0,
+      214
+    ],
+    [
+      1,
+      0,
+      1,
+      9476
+    ],
+    [
+      1,
+      0,
+      0,
+      15779
+    ],
+    [
+      2,
+      1,
+      1,
+      4397
+    ],
+    [
+      2,
+      1,
+      0,
+      4425
+    ],
+    [
+      2,
+      0,
+      1,
+      12774
+    ],
+    [
+      2,
+      0,
+      0,
+      19
+    ],
+    [
+      3,
+      1,
+      1,
+      9470
+    ],
+    [
+      3,
+      1,
+      0,
+      1
+    ],
+    [
+      3,
+      0,
+      1,
+      473
+    ],
+    [
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      1,
+      1,
+      0
+    ],
+    [
+      4,
+      1,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      1,
+      0
+    ],
+    [
+      4,
+      0,
+      0,
+      0
+    ]
+  ],
+  "ratings_dist": {
+    "<3": 59,
+    "3-3.5": 62,
+    "3.5-4": 274,
+    "4-4.5": 955,
+    "4.5-5": 730
   },
   "budget": {
     "config": {
