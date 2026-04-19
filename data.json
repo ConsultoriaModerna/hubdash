@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-19T20:53:10",
-  "fetch_seconds": 69.4,
+  "generated_at": "2026-04-19T23:22:09",
+  "fetch_seconds": 58.7,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
-    "enriched_gp": 2080,
+    "enriched_gp": 2097,
     "avg_score_companies": 52.9,
     "avg_score_contacts": 47.3
   },
@@ -13,8 +13,8 @@
       "0-29": 6249,
       "30-49": 28640,
       "50-69": 23852,
-      "70-89": 15419,
-      "90-100": 475
+      "70-89": 15414,
+      "90-100": 480
     },
     "contacts": {
       "0-29": 12777,
@@ -27,8 +27,8 @@
   "pipeline": {
     "total": 74635,
     "with_place_id": 22877,
-    "phase_a_pending": 20780,
-    "enriched": 2080,
+    "phase_a_pending": 20763,
+    "enriched": 2097,
     "phase_b_pending": 51758
   },
   "cities": [
@@ -40,7 +40,7 @@
     {
       "city": "Madrid",
       "total": 5805,
-      "enriched": 206
+      "enriched": 223
     },
     {
       "city": "Valencia",
@@ -91,8 +91,8 @@
         83,
         1436,
         1807,
-        2441,
-        38
+        2436,
+        43
       ],
       [
         22,
@@ -183,7 +183,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Centro comercial",
+      "la": 41.3763,
+      "ln": 2.1494,
+      "ta": 3.7,
+      "rg": null
     },
     {
       "n": "Wizink Center",
@@ -193,7 +199,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4239,
+      "ln": -3.6718,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Bara del Salamanca",
@@ -203,7 +215,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Marisquería",
+      "la": 41.3786,
+      "ln": 2.1912,
+      "ta": 3.6,
+      "rg": 4.0
     },
     {
       "n": "Bar el Brillante",
@@ -213,7 +231,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4086,
+      "ln": -3.6928,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Churrería Chocolateria 1902",
@@ -223,7 +247,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Tienda de postres",
+      "la": 40.4175,
+      "ln": -3.707,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Arabia Cafe-Restaurant",
@@ -233,7 +263,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Restaurante libanés",
+      "la": 41.3796,
+      "ln": 2.1763,
+      "ta": 3.5,
+      "rg": 4.9
     },
     {
       "n": "Mirablau",
@@ -243,7 +279,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.416,
+      "ln": 2.1319,
+      "ta": 3.9,
+      "rg": 4.2
     },
     {
       "n": "Ocaña",
@@ -253,7 +295,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3798,
+      "ln": 2.1757,
+      "ta": 3.8,
+      "rg": 4.4
     },
     {
       "n": "El Corte Ingl√©s",
@@ -263,7 +311,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 39.4797,
+      "ln": -0.3897,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Holding Moritz",
@@ -273,7 +327,13 @@
       "c": "Barcelona",
       "ct": 4,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Fábrica de cerveza",
+      "la": 41.3827,
+      "ln": 2.1634,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taller de Tapas Rambla de les Flors",
@@ -283,7 +343,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3904,
+      "ln": 2.164,
+      "ta": 4.0,
+      "rg": 4.3
     },
     {
       "n": "La Lolita",
@@ -293,7 +359,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante halal",
+      "la": 41.389,
+      "ln": 2.1658,
+      "ta": 3.6,
+      "rg": 4.5
     },
     {
       "n": "La Selva",
@@ -303,7 +375,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.4087,
+      "ln": 2.1735,
+      "ta": 4.5,
+      "rg": 4.7
     },
     {
       "n": "Gusto 34933236575",
@@ -313,7 +391,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 41.3883,
+      "ln": 2.1509,
+      "ta": 4.5,
+      "rg": 4.6
     },
     {
       "n": "Ceviche 103",
@@ -323,7 +407,13 @@
       "c": "Barcelona",
       "ct": 5,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante peruano",
+      "la": 41.3937,
+      "ln": 2.1509,
+      "ta": 4.0,
+      "rg": 4.6
     },
     {
       "n": "Arrosseria las Arenas",
@@ -333,7 +423,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3764,
+      "ln": 2.1501,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Pepe y Pepa",
@@ -343,7 +439,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 36.7223,
+      "ln": -4.4206,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Flax & Kale Passage",
@@ -353,7 +455,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de brunch",
+      "la": 41.3852,
+      "ln": 2.1655,
+      "ta": 4.3,
+      "rg": 4.2
     },
     {
       "n": "Running Sushi in Market",
@@ -363,7 +471,13 @@
       "c": "Other",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4801,
+      "ln": -3.7082,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Casa Lucio",
@@ -373,7 +487,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4121,
+      "ln": -3.7096,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taverna el Glop",
@@ -383,7 +503,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.4049,
+      "ln": 2.1595,
+      "ta": 4.2,
+      "rg": 4.4
     },
     {
       "n": "La Tasqueta de Blai",
@@ -393,7 +519,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 41.3732,
+      "ln": 2.1654,
+      "ta": 4.5,
+      "rg": 4.5
     },
     {
       "n": "Grupo Tapa Tapa",
@@ -403,7 +535,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4149,
+      "ln": -3.7012,
+      "ta": 3.3,
+      "rg": 3.5
     },
     {
       "n": "Shôko Barcelona Restaurant & Lounge Club",
@@ -413,7 +551,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 41.3855,
+      "ln": 2.197,
+      "ta": 3.8,
+      "rg": 3.7
     },
     {
       "n": "Makamaka",
@@ -423,7 +567,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3757,
+      "ln": 2.1886,
+      "ta": 4.3,
+      "rg": 4.4
     },
     {
       "n": "Sushiaoi",
@@ -433,7 +583,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4258,
+      "ln": -3.6828,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "B-ONE Palau de Mar",
@@ -443,7 +599,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3806,
+      "ln": 2.1855,
+      "ta": 3.9,
+      "rg": 4.3
     },
     {
       "n": "Fenicia",
@@ -453,7 +615,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante libanés",
+      "la": 41.3767,
+      "ln": 2.1365,
+      "ta": 4.5,
+      "rg": 4.7
     },
     {
       "n": "Ovella Negra",
@@ -463,7 +631,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3959,
+      "ln": 2.1903,
+      "ta": 4.0,
+      "rg": 4.2
     },
     {
       "n": "Paz 19 By Sensi Tapas Bar",
@@ -473,7 +647,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante especializado en t",
+      "la": 41.3803,
+      "ln": 2.1799,
+      "ta": 4.5,
+      "rg": 4.6
     },
     {
       "n": "Superchulo Fuencarral",
@@ -483,7 +663,13 @@
       "c": "Madrid",
       "ct": 2,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4253,
+      "ln": -3.7008,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Botafumeiro",
@@ -493,7 +679,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$$$"
+      "pl": "$$$$",
+      "tc": "Pricing",
+      "tp": "Marisquería",
+      "la": 41.4005,
+      "ln": 2.1547,
+      "ta": 4.2,
+      "rg": 4.3
     },
     {
       "n": "Barraca",
@@ -503,7 +695,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 41.3935,
+      "ln": 2.2054,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Café Comercial",
@@ -513,7 +711,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4287,
+      "ln": -3.702,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Opium Barcelona",
@@ -523,7 +727,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Club nocturno",
+      "la": 41.3853,
+      "ln": 2.1968,
+      "ta": 3.3,
+      "rg": 3.4
     },
     {
       "n": "Restaurante Bivio",
@@ -533,7 +743,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 41.3766,
+      "ln": 2.189,
+      "ta": 4.3,
+      "rg": 4.5
     },
     {
       "n": "Arrocería Marina Ventura",
@@ -543,7 +759,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante coreano",
+      "la": 40.4154,
+      "ln": -3.6989,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Arume",
@@ -553,7 +775,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.379,
+      "ln": 2.166,
+      "ta": 4.6,
+      "rg": 4.7
     },
     {
       "n": "Zenith Brunch & Cocktails - Valverde",
@@ -563,7 +791,13 @@
       "c": "Madrid",
       "ct": 2,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4224,
+      "ln": -3.7016,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Bar Cañete",
@@ -573,7 +807,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3792,
+      "ln": 2.1731,
+      "ta": 4.5,
+      "rg": null
     },
     {
       "n": "La Foga",
@@ -583,7 +823,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3931,
+      "ln": 2.1784,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Le Romane",
@@ -593,7 +839,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3888,
+      "ln": 2.1564,
+      "ta": 4.9,
+      "rg": 4.7
     },
     {
       "n": "El Rey de la Gamba 1",
@@ -603,7 +855,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3772,
+      "ln": 2.1887,
+      "ta": 3.4,
+      "rg": 4.0
     },
     {
       "n": "Grill Restaurante - Steak house",
@@ -613,7 +871,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3837,
+      "ln": 2.1773,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Chilango's Taqueria Barcelona",
@@ -623,7 +887,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mexicano",
+      "la": 41.3758,
+      "ln": 2.171,
+      "ta": 4.5,
+      "rg": 4.7
     },
     {
       "n": "Xup Xup Restaurant",
@@ -633,7 +903,13 @@
       "c": "Barcelona",
       "ct": 4,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3821,
+      "ln": 2.1943,
+      "ta": 3.8,
+      "rg": 4.2
     },
     {
       "n": "Micu Maku - Mediterranean Restaurant in ",
@@ -643,7 +919,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3868,
+      "ln": 2.1617,
+      "ta": 4.7,
+      "rg": null
     },
     {
       "n": "La Sitarilla",
@@ -653,7 +935,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 37.1734,
+      "ln": -3.6036,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Bar el Velódromo",
@@ -663,7 +951,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 41.3935,
+      "ln": 2.1501,
+      "ta": null,
+      "rg": 4.1
     },
     {
       "n": "Tío Papelón",
@@ -673,7 +967,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.4027,
+      "ln": 2.1716,
+      "ta": 4.3,
+      "rg": 4.6
     },
     {
       "n": "Flax & Kale",
@@ -683,7 +983,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante vegetariano",
+      "la": 41.3851,
+      "ln": 2.168,
+      "ta": 4.4,
+      "rg": 4.3
     },
     {
       "n": "Murivecchi",
@@ -693,7 +999,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 41.3873,
+      "ln": 2.1827,
+      "ta": 4.2,
+      "rg": 4.3
     },
     {
       "n": "Norah Coffee & Brunch - Speciality Coffe",
@@ -703,7 +1015,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 40.4254,
+      "ln": -3.6788,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Can Culleretes",
@@ -713,7 +1031,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3813,
+      "ln": 2.1745,
+      "ta": 3.8,
+      "rg": 4.2
     },
     {
       "n": "Casa Revuelta",
@@ -723,7 +1047,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Taberna",
+      "la": 40.4139,
+      "ln": -3.7079,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Tapas La Bona Sort",
@@ -733,7 +1063,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3862,
+      "ln": 2.1801,
+      "ta": 3.6,
+      "rg": 4.2
     },
     {
       "n": "Rossini",
@@ -743,7 +1079,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 41.3799,
+      "ln": 2.1759,
+      "ta": 4.3,
+      "rg": 4.3
     },
     {
       "n": "Can Cortada",
@@ -753,7 +1095,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 41.4366,
+      "ln": 2.1528,
+      "ta": 4.3,
+      "rg": 4.3
     },
     {
       "n": "La Marea",
@@ -763,7 +1111,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 41.4017,
+      "ln": 2.2109,
+      "ta": 4.3,
+      "rg": 4.7
     },
     {
       "n": "La Turuleca Peru",
@@ -773,7 +1127,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante peruano",
+      "la": 41.3761,
+      "ln": 2.125,
+      "ta": 4.0,
+      "rg": 4.4
     },
     {
       "n": "Bodegas Rosell",
@@ -783,7 +1143,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4038,
+      "ln": -3.6909,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Marina Bay - Lounge Bar Restaurante - Pa",
@@ -793,7 +1159,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3864,
+      "ln": 2.1975,
+      "ta": 4.0,
+      "rg": 4.0
     },
     {
       "n": "Monchos Iniciativas 2000 S.L.",
@@ -803,7 +1175,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3864,
+      "ln": 2.1975,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Café del Rey",
@@ -813,7 +1191,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar restaurante",
+      "la": 40.4222,
+      "ln": -3.7189,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Ornella Velázquez",
@@ -823,7 +1207,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante italiano",
+      "la": 40.4234,
+      "ln": -3.684,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Bodega Joan",
@@ -833,7 +1223,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar restaurante",
+      "la": 41.3917,
+      "ln": 2.1555,
+      "ta": 4.1,
+      "rg": 4.2
     },
     {
       "n": "Xup Xup",
@@ -843,7 +1239,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3796,
+      "ln": 2.1928,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Ovejas Negras Tapas",
@@ -853,7 +1255,29 @@
       "c": "Sevilla",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 37.3876,
+      "ln": -5.9937,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Kilómetros de Pizza -",
+      "r": 4.4,
+      "rv": 5935,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4541,
+      "ln": -3.6932,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Paco Meralgo Restaurante",
@@ -863,7 +1287,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante especializado en t",
+      "la": 41.3916,
+      "ln": 2.1525,
+      "ta": 4.4,
+      "rg": null
     },
     {
       "n": "Rosa Negra Barcelona",
@@ -873,7 +1303,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mexicano",
+      "la": 41.382,
+      "ln": 2.1689,
+      "ta": 4.1,
+      "rg": 4.2
     },
     {
       "n": "Bellebuon",
@@ -883,7 +1319,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 41.4116,
+      "ln": 2.173,
+      "ta": 4.8,
+      "rg": 4.8
     },
     {
       "n": "Mesón del Champiñón",
@@ -893,7 +1335,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Cold Food",
+      "tp": "Restaurante",
+      "la": 40.415,
+      "ln": -3.7082,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Pizzeria Napoletana Pummarola",
@@ -903,7 +1351,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3775,
+      "ln": 2.1642,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Burritos",
@@ -913,7 +1367,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mexicano",
+      "la": 39.4686,
+      "ln": -0.3759,
+      "ta": null,
+      "rg": 5.0
     },
     {
       "n": "Grupo Abrassame",
@@ -923,7 +1383,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3764,
+      "ln": 2.1489,
+      "ta": 3.8,
+      "rg": 4.2
     },
     {
       "n": "Lilo Brunch Specialty Coffee",
@@ -933,7 +1399,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de brunch",
+      "la": 41.3874,
+      "ln": 2.1627,
+      "ta": 4.6,
+      "rg": 4.8
     },
     {
       "n": "Waffle",
@@ -943,7 +1415,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de brunch",
+      "la": 41.385,
+      "ln": 2.15,
+      "ta": 4.3,
+      "rg": 4.7
     },
     {
       "n": "Patron",
@@ -953,7 +1431,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3955,
+      "ln": 2.1488,
+      "ta": 3.8,
+      "rg": 4.0
     },
     {
       "n": "Restaurante Submarino",
@@ -963,7 +1447,13 @@
       "c": "València",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4531,
+      "ln": -0.3472,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Jenkin's - Corts Valencianes",
@@ -973,7 +1463,13 @@
       "c": "Other",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4912,
+      "ln": -0.3992,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Palau Alameda",
@@ -983,7 +1479,13 @@
       "c": "València",
       "ct": 1,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 39.4726,
+      "ln": -0.3628,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Odiseo",
@@ -993,7 +1495,13 @@
       "c": "Murcia",
       "ct": 2,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 38.0235,
+      "ln": -1.1417,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Bodega de la Alfalfa",
@@ -1003,7 +1511,13 @@
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Disorganized",
+      "tp": "",
+      "la": 37.39,
+      "ln": -5.9904,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sushi Kory Valencia",
@@ -1013,7 +1527,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4683,
+      "ln": -0.3765,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Güerita Mexicana",
@@ -1023,7 +1543,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mexicano",
+      "la": 41.388,
+      "ln": 2.1511,
+      "ta": 4.5,
+      "rg": 5.0
     },
     {
       "n": "La Balmesina",
@@ -1033,7 +1559,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Pizzería",
+      "la": 41.3971,
+      "ln": 2.1522,
+      "ta": 4.2,
+      "rg": 4.6
     },
     {
       "n": "Restaurante San Marco Santa Cruz",
@@ -1043,7 +1575,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.3861,
+      "ln": -5.99,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Las Delicias del Carmelo",
@@ -1053,7 +1591,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 41.4183,
+      "ln": 2.1576,
+      "ta": 4.2,
+      "rg": 4.3
     },
     {
       "n": "Meli del Tubo",
@@ -1063,7 +1607,13 @@
       "c": "Other",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.6534,
+      "ln": -0.8803,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Labarra Westside",
@@ -1073,7 +1623,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante especializado en t",
+      "la": 41.3904,
+      "ln": 2.148,
+      "ta": 3.6,
+      "rg": null
     },
     {
       "n": "Portomarín",
@@ -1083,7 +1639,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4081,
+      "ln": -3.7008,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Triunfal",
@@ -1093,7 +1655,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3918,
+      "ln": 2.1801,
+      "ta": 4.1,
+      "rg": 4.5
     },
     {
       "n": "Rita Sibarita",
@@ -1103,7 +1671,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.5014,
+      "ln": -3.7073,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Bar Quimet D'Horta",
@@ -1113,7 +1687,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 41.4307,
+      "ln": 2.1608,
+      "ta": 3.9,
+      "rg": null
     },
     {
       "n": "Tuscania Food & Wine",
@@ -1123,7 +1703,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.4041,
+      "ln": 2.1765,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Recasens",
@@ -1133,7 +1719,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.4024,
+      "ln": 2.1997,
+      "ta": 3.8,
+      "rg": 4.3
     },
     {
       "n": "Grupo Mussol",
@@ -1143,7 +1735,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 41.376,
+      "ln": 2.1491,
+      "ta": 4.1,
+      "rg": 4.2
     },
     {
       "n": "9 Reinas Barcelona",
@@ -1153,7 +1751,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante argentino",
+      "la": 41.394,
+      "ln": 2.1649,
+      "ta": 4.5,
+      "rg": 4.6
     },
     {
       "n": "Boca Grande",
@@ -1163,7 +1767,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3945,
+      "ln": 2.1598,
+      "ta": 3.8,
+      "rg": 4.1
     },
     {
       "n": "The Chipiron",
@@ -1173,7 +1783,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 41.3749,
+      "ln": 2.1821,
+      "ta": 3.3,
+      "rg": 3.8
     },
     {
       "n": "Casa Rafols",
@@ -1183,7 +1799,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3912,
+      "ln": 2.1792,
+      "ta": 4.5,
+      "rg": null
     },
     {
       "n": "Blai 9",
@@ -1193,7 +1815,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 41.3731,
+      "ln": 2.1658,
+      "ta": 4.3,
+      "rg": 4.4
     },
     {
       "n": "Sonora Sport Tavern",
@@ -1203,7 +1831,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "",
+      "la": 41.3979,
+      "ln": 2.19,
+      "ta": 3.6,
+      "rg": 4.0
     },
     {
       "n": "La Terraza Miro",
@@ -1213,7 +1847,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3774,
+      "ln": 2.1461,
+      "ta": 4.7,
+      "rg": 4.7
     },
     {
       "n": "Honest Greens",
@@ -1223,7 +1863,13 @@
       "c": "Barcelona",
       "ct": 14,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4286,
+      "ln": -3.6876,
+      "ta": 4.1,
+      "rg": 4.5
     },
     {
       "n": "La Prensa Burger üçî - Sagasta",
@@ -1233,7 +1879,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Hamburguesería",
+      "la": 40.4284,
+      "ln": -3.7,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Nikkei 103",
@@ -1243,7 +1895,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 41.3875,
+      "ln": 2.1604,
+      "ta": 3.9,
+      "rg": 4.5
     },
     {
       "n": "Mesón Txistu",
@@ -1253,7 +1911,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$$"
+      "pl": "$$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante vasco",
+      "la": 40.4627,
+      "ln": -3.6939,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Mar Salada",
@@ -1263,7 +1927,13 @@
       "c": "Barcelona",
       "ct": 4,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3768,
+      "ln": 2.1891,
+      "ta": 4.1,
+      "rg": 4.3
     },
     {
       "n": "Cdlc Barcelona",
@@ -1273,7 +1943,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.385,
+      "ln": 2.1963,
+      "ta": 4.1,
+      "rg": 4.2
     },
     {
       "n": "N√úa Smart Restaurant",
@@ -1283,7 +1959,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.403,
+      "ln": 2.1522,
+      "ta": 3.5,
+      "rg": 5.0
     },
     {
       "n": "Cervecería Santa Bárbara",
@@ -1293,7 +1975,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neg",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Hygiene",
+      "tp": "Bar",
+      "la": 40.4269,
+      "ln": -3.696,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cafetería Magerit",
@@ -1303,7 +1991,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4156,
+      "ln": -3.7082,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Mirabe",
@@ -1313,7 +2007,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.4164,
+      "ln": 2.1325,
+      "ta": null,
+      "rg": 4.4
     },
     {
       "n": "Takumi Ramen Barcelona Balmes",
@@ -1323,7 +2023,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3896,
+      "ln": 2.1619,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sports Bar Italian Food - Av. Diagonal",
@@ -1333,7 +2039,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 41.4051,
+      "ln": 2.1739,
+      "ta": 4.1,
+      "rg": 4.5
     },
     {
       "n": "Boa-Bao",
@@ -1343,7 +2055,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3885,
+      "ln": 2.1612,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Al Solito Posto",
@@ -1353,7 +2071,13 @@
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.3972,
+      "ln": -5.9945,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Beefcious S.L",
@@ -1363,7 +2087,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Hamburguesería",
+      "la": 40.5119,
+      "ln": -3.6703,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Surf House Barcelona",
@@ -1373,7 +2103,13 @@
       "c": "Barcelona",
       "ct": 4,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3775,
+      "ln": 2.1906,
+      "ta": 4.2,
+      "rg": 4.3
     },
     {
       "n": "Europa Cafe",
@@ -1383,7 +2119,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Cafetería",
+      "la": 41.393,
+      "ln": 2.1468,
+      "ta": 3.6,
+      "rg": 4.0
     },
     {
       "n": "Hideout Burger",
@@ -1393,7 +2135,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Hamburguesería",
+      "la": 41.3869,
+      "ln": 2.1602,
+      "ta": 4.6,
+      "rg": 4.6
     },
     {
       "n": "Biercab",
@@ -1403,7 +2151,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 41.3862,
+      "ln": 2.1598,
+      "ta": 4.4,
+      "rg": 4.6
     },
     {
       "n": "La Marula",
@@ -1413,7 +2167,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 41.6451,
+      "ln": -0.8792,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Flaherty's Irish Pub Barcelona",
@@ -1423,7 +2183,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Pub irlandés",
+      "la": 41.3784,
+      "ln": 2.1768,
+      "ta": 4.0,
+      "rg": 4.3
     },
     {
       "n": "Sakana Restaurante",
@@ -1433,7 +2199,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4315,
+      "ln": -3.7159,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Grupo la Mafia",
@@ -1443,7 +2215,13 @@
       "c": "Madrid",
       "ct": 11,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 36.7212,
+      "ln": -4.4226,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Tablao Flamenco el Palacio Andaluz",
@@ -1453,7 +2231,13 @@
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 37.4053,
+      "ln": -6.0,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Morenilla | Casa de Antojos",
@@ -1463,7 +2247,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4306,
+      "ln": -3.6944,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante la Suegra",
@@ -1473,7 +2263,13 @@
       "c": "CASCADE",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.3866,
+      "ln": -3.7401,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Tapas",
@@ -1483,7 +2279,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4148,
+      "ln": -3.7037,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Malacatín",
@@ -1493,7 +2295,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4103,
+      "ln": -3.7077,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Tablao Flamenco Cordobes Barcelona",
@@ -1503,7 +2311,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Teatro",
+      "la": 41.3789,
+      "ln": 2.1747,
+      "ta": 3.6,
+      "rg": 4.3
     },
     {
       "n": "Taberna los Gallos",
@@ -1513,7 +2327,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 40.4235,
+      "ln": -3.6863,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taberna Real Restaurante",
@@ -1523,7 +2343,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 40.418,
+      "ln": -3.709,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Posada de la Villa",
@@ -1533,7 +2359,13 @@
       "c": "Madrid",
       "ct": 2,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4131,
+      "ln": -3.7085,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "El Manolo",
@@ -1543,7 +2375,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar restaurante",
+      "la": 41.4149,
+      "ln": 2.1946,
+      "ta": 3.6,
+      "rg": 4.1
     },
     {
       "n": "Chéri",
@@ -1553,7 +2391,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3945,
+      "ln": 2.1537,
+      "ta": 3.8,
+      "rg": 4.1
     },
     {
       "n": "Fellina Restaurante",
@@ -1563,7 +2407,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante italiano",
+      "la": 40.4308,
+      "ln": -3.6943,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante H83",
@@ -1573,7 +2423,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.406,
+      "ln": 2.174,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Viva Burger",
@@ -1583,7 +2439,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4125,
+      "ln": -3.7119,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cafetería Nebraska",
@@ -1593,7 +2455,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de comida rápida",
+      "la": 40.461,
+      "ln": -3.6984,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "El Manaba",
@@ -1603,7 +2471,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3878,
+      "ln": 2.1605,
+      "ta": 3.5,
+      "rg": 4.1
     },
     {
       "n": "Viure Sense Dormir",
@@ -1613,7 +2487,13 @@
       "c": "València",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 39.4647,
+      "ln": -0.3236,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Kibuka",
@@ -1623,7 +2503,13 @@
       "c": "Barcelona",
       "ct": 5,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante japonés",
+      "la": 41.3997,
+      "ln": 2.1572,
+      "ta": 4.0,
+      "rg": 4.3
     },
     {
       "n": "Cachitos Rambla",
@@ -1633,7 +2519,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3895,
+      "ln": 2.1654,
+      "ta": 3.9,
+      "rg": null
     },
     {
       "n": "La Cantina",
@@ -1643,7 +2535,13 @@
       "c": "-",
       "ct": 3,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4593,
+      "ln": -3.6957,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "All You Can Eat",
@@ -1653,7 +2551,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Buffet libre",
+      "la": 40.4176,
+      "ln": -3.7035,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Lamiak Cava Baja",
@@ -1663,7 +2567,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4119,
+      "ln": -3.7104,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Barraca",
@@ -1673,7 +2583,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3791,
+      "ln": 2.1919,
+      "ta": 3.7,
+      "rg": null
     },
     {
       "n": "Argentinisimo",
@@ -1683,7 +2599,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante argentino",
+      "la": 41.3855,
+      "ln": 2.159,
+      "ta": 4.7,
+      "rg": 4.5
     },
     {
       "n": "Nao Borraset",
@@ -1693,7 +2615,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4224,
+      "ln": -0.341,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Taqueria | Passatge de Font",
@@ -1703,7 +2631,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mexicano",
+      "la": 41.4024,
+      "ln": 2.1756,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Salambo",
@@ -1713,7 +2647,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.4045,
+      "ln": 2.1577,
+      "ta": 3.9,
+      "rg": 4.3
     },
     {
       "n": "Ninja Ramen",
@@ -1723,7 +2663,13 @@
       "c": "Las Rozas",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4265,
+      "ln": -3.701,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Disfrutar",
@@ -1733,7 +2679,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$$$"
+      "pl": "$$$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante de alta cocina",
+      "la": 41.3878,
+      "ln": 2.1532,
+      "ta": 4.7,
+      "rg": 4.8
     },
     {
       "n": "Out of India",
@@ -1743,7 +2695,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante indio",
+      "la": 41.379,
+      "ln": 2.1431,
+      "ta": 4.5,
+      "rg": 4.6
     },
     {
       "n": "Buenos Aires Grill Restaurant Eixample",
@@ -1753,7 +2711,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante argentino",
+      "la": 41.3894,
+      "ln": 2.1587,
+      "ta": 4.6,
+      "rg": 4.5
     },
     {
       "n": "Centfocs",
@@ -1763,7 +2727,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.387,
+      "ln": 2.166,
+      "ta": 3.7,
+      "rg": 4.1
     },
     {
       "n": "Foc",
@@ -1773,7 +2743,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante latinoamericano",
+      "la": 41.3761,
+      "ln": 2.1892,
+      "ta": 4.4,
+      "rg": 4.4
     },
     {
       "n": "Puerta de Atocha",
@@ -1783,7 +2759,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 40.4061,
+      "ln": -3.6922,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taberna la Descubierta",
@@ -1793,7 +2775,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4152,
+      "ln": -3.7026,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurant Fuji",
@@ -1803,7 +2791,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4725,
+      "ln": -0.3676,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Federal Cafe",
@@ -1813,7 +2807,13 @@
       "c": "Madrid",
       "ct": 5,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de brunch",
+      "la": 41.3769,
+      "ln": 2.1628,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Udon Tibidabo",
@@ -1823,7 +2823,13 @@
       "c": "Barcelona",
       "ct": 8,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3764,
+      "ln": 2.1496,
+      "ta": 4.1,
+      "rg": null
     },
     {
       "n": "Tejeringo's Coffee",
@@ -1833,7 +2839,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neg",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 36.7231,
+      "ln": -4.4208,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "√äbac",
@@ -1843,7 +2855,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de alta cocina",
+      "la": 41.4106,
+      "ln": 2.1364,
+      "ta": 4.3,
+      "rg": 4.3
     },
     {
       "n": "Pizza Barceloneta Kitchen",
@@ -1853,7 +2871,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3806,
+      "ln": 2.1883,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Frescco Casp",
@@ -1863,7 +2887,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Buffet libre",
+      "la": 40.4176,
+      "ln": -3.7085,
+      "ta": 3.6,
+      "rg": 3.5
     },
     {
       "n": "Restaurante Lasal del Varador",
@@ -1873,7 +2903,13 @@
       "c": "Mataró",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.5346,
+      "ln": 2.448,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cazorla Restaurantes",
@@ -1883,7 +2919,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4564,
+      "ln": -3.6919,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "El Lacón",
@@ -1893,7 +2935,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4151,
+      "ln": -3.6993,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Billy Brunch",
@@ -1903,7 +2951,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de brunch",
+      "la": 41.3871,
+      "ln": 2.1592,
+      "ta": 4.8,
+      "rg": 4.8
     },
     {
       "n": "Casa de Tapas Cañota",
@@ -1913,7 +2967,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante especializado en t",
+      "la": 41.3741,
+      "ln": 2.1547,
+      "ta": 4.0,
+      "rg": null
     },
     {
       "n": "Maitea Taberna Sl",
@@ -1923,7 +2983,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Taberna",
+      "la": 41.391,
+      "ln": 2.1511,
+      "ta": 4.3,
+      "rg": 4.3
     },
     {
       "n": "La Burguesa Tuset",
@@ -1933,7 +2999,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Hamburguesería",
+      "la": 41.4401,
+      "ln": 2.1987,
+      "ta": null,
+      "rg": 4.2
     },
     {
       "n": "L’ Amfora Barcelona",
@@ -1943,7 +3015,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante coreano",
+      "la": 41.3753,
+      "ln": 2.1536,
+      "ta": null,
+      "rg": 4.2
     },
     {
       "n": "Caravelle",
@@ -1953,7 +3031,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 41.3823,
+      "ln": 2.1688,
+      "ta": 4.4,
+      "rg": 4.6
     },
     {
       "n": "La Briciola",
@@ -1963,7 +3047,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 41.3738,
+      "ln": 2.1365,
+      "ta": 4.1,
+      "rg": 4.4
     },
     {
       "n": "Restaurante Casa Cuesta",
@@ -1973,7 +3063,13 @@
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.386,
+      "ln": -6.0044,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Metric Market",
@@ -1983,7 +3079,29 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 41.3916,
+      "ln": 2.1416,
+      "ta": 3.9,
+      "rg": null
+    },
+    {
+      "n": "Cereal Hunters Carrer del Consell",
+      "r": 4.2,
+      "rv": 3433,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Cafetería",
+      "la": 40.4273,
+      "ln": -3.6988,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Can Ros",
@@ -1993,7 +3111,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3773,
+      "ln": 2.1894,
+      "ta": 4.0,
+      "rg": 4.9
     },
     {
       "n": "Veggie Garden",
@@ -2003,7 +3127,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante indio",
+      "la": 41.3868,
+      "ln": 2.1653,
+      "ta": 3.9,
+      "rg": 4.4
     },
     {
       "n": "L'Alian√ßa del Poble Nou Casino",
@@ -2013,7 +3143,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "Centro cultural",
+      "la": 41.3999,
+      "ln": 2.2033,
+      "ta": 3.2,
+      "rg": 4.0
     },
     {
       "n": "Abirradero",
@@ -2023,7 +3159,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante especializado en t",
+      "la": 41.3742,
+      "ln": 2.1686,
+      "ta": 4.4,
+      "rg": 4.8
     },
     {
       "n": "Orgaz",
@@ -2033,7 +3175,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4543,
+      "ln": -3.6221,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Quickgold Barcelona (Diagonal 335) - Com",
@@ -2043,7 +3191,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Servicios",
+      "la": 41.3985,
+      "ln": 2.1683,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Sol Soler",
@@ -2053,7 +3207,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 41.4015,
+      "ln": 2.1563,
+      "ta": 4.1,
+      "rg": 4.1
     },
     {
       "n": "Restaurant Barcelonamilano",
@@ -2063,7 +3223,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3911,
+      "ln": 2.1492,
+      "ta": 4.1,
+      "rg": 4.3
     },
     {
       "n": "El Xalet de Montjuïc",
@@ -2073,7 +3239,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3692,
+      "ln": 2.1642,
+      "ta": 3.6,
+      "rg": 4.1
     },
     {
       "n": "Carlota Akaneya",
@@ -2083,7 +3255,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante japonés",
+      "la": 41.3824,
+      "ln": 2.1686,
+      "ta": 4.6,
+      "rg": 4.7
     },
     {
       "n": "Taco Alto",
@@ -2093,7 +3271,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Cold Food",
+      "tp": "Restaurante mexicano",
+      "la": 41.3897,
+      "ln": 2.181,
+      "ta": 4.3,
+      "rg": 4.0
     },
     {
       "n": "Las Piletas Restaurante",
@@ -2103,7 +3287,13 @@
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 37.3895,
+      "ln": -6.0011,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Churrería-Chocolatería las Farolas",
@@ -2113,7 +3303,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Tienda de postres",
+      "la": 40.4163,
+      "ln": -3.7061,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Alcaravea Gaztambide",
@@ -2123,7 +3319,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 40.4382,
+      "ln": -3.7152,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Palau de Mar",
@@ -2133,7 +3335,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3806,
+      "ln": 2.1858,
+      "ta": 3.4,
+      "rg": null
     },
     {
       "n": "Farga",
@@ -2143,7 +3351,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3959,
+      "ln": 2.1581,
+      "ta": 3.0,
+      "rg": null
     },
     {
       "n": "Cervecería Alemana",
@@ -2153,7 +3367,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 40.4145,
+      "ln": -3.7003,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Jefferson",
@@ -2163,7 +3383,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 41.3945,
+      "ln": 2.2066,
+      "ta": 4.7,
+      "rg": null
     },
     {
       "n": "Restaurant Casa Carmen Paseo de Gracia",
@@ -2173,7 +3399,13 @@
       "c": "Barcelona",
       "ct": 5,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.3683,
+      "ln": -3.598,
+      "ta": 3.8,
+      "rg": 3.7
     },
     {
       "n": "Restaurants Casa Saragossa",
@@ -2183,7 +3415,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neg",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4769,
+      "ln": -0.3242,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Everest Tandoori",
@@ -2193,7 +3431,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4642,
+      "ln": -3.6495,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sushisom Zaragoza la Torre Outlet",
@@ -2203,7 +3447,13 @@
       "c": "Terrassa",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 41.6771,
+      "ln": -0.9531,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Zaka Restaurante",
@@ -2213,7 +3463,13 @@
       "c": "Kalamazoo",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 43.2599,
+      "ln": -2.9423,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Monroe",
@@ -2223,7 +3479,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "",
+      "tp": "Restaurante",
+      "la": 41.3787,
+      "ln": 2.1707,
+      "ta": 4.0,
+      "rg": 4.3
     },
     {
       "n": "Tasca y Brasa",
@@ -2233,7 +3495,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4719,
+      "ln": -0.3257,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Frankie Gallo Cha Cha Cha",
@@ -2243,7 +3511,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante italiano",
+      "la": 41.3785,
+      "ln": 2.1725,
+      "ta": 4.1,
+      "rg": 4.4
     },
     {
       "n": "SA Brisa Restaurante en el Retiro",
@@ -2253,7 +3527,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 40.4202,
+      "ln": -3.6792,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Cobatillas",
@@ -2263,7 +3543,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 38.0549,
+      "ln": -1.0821,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Porca",
@@ -2273,7 +3559,13 @@
       "c": "Barcelona",
       "ct": 4,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Hamburguesería",
+      "la": 41.373,
+      "ln": 2.1707,
+      "ta": 4.2,
+      "rg": 4.4
     },
     {
       "n": "Mammamia",
@@ -2283,7 +3575,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 41.4027,
+      "ln": 2.2001,
+      "ta": 4.5,
+      "rg": 4.4
     },
     {
       "n": "Can Mano",
@@ -2293,7 +3591,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Marisquería",
+      "la": 41.3777,
+      "ln": 2.1907,
+      "ta": 4.5,
+      "rg": 4.4
     },
     {
       "n": "Sentinel",
@@ -2303,7 +3607,13 @@
       "c": "Zaragoza",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.6714,
+      "ln": -0.8841,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cafetería Restaurante el Corte Inglés",
@@ -2313,7 +3623,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Cafetería",
+      "la": 39.4713,
+      "ln": -0.3712,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Leche de Tigre",
@@ -2323,7 +3639,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Pricing",
+      "tp": "Restaurante peruano",
+      "la": 41.394,
+      "ln": 2.1476,
+      "ta": 3.6,
+      "rg": null
     },
     {
       "n": "Restaurante Marina Alta 5 - Terraza Bar",
@@ -2333,7 +3655,13 @@
       "c": "València",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4906,
+      "ln": -0.4021,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cal Pep",
@@ -2343,7 +3671,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante especializado en t",
+      "la": 41.384,
+      "ln": 2.1834,
+      "ta": 4.2,
+      "rg": 4.3
     },
     {
       "n": "Restaurante Kyoto",
@@ -2353,7 +3687,13 @@
       "c": "Las Rozas",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4899,
+      "ln": -0.3628,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cervecería L'Europe",
@@ -2363,7 +3703,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 40.4306,
+      "ln": -3.7019,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "El Tablo Carmen",
@@ -2373,7 +3719,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Wait Time",
+      "tp": "Teatro",
+      "la": 41.3692,
+      "ln": 2.1467,
+      "ta": 4.0,
+      "rg": null
     },
     {
       "n": "Macchina Pasta Bar",
@@ -2383,7 +3735,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante italiano",
+      "la": 41.3801,
+      "ln": 2.1768,
+      "ta": 4.4,
+      "rg": 4.4
     },
     {
       "n": "Restaurante la Gloria",
@@ -2393,7 +3751,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": ""
+      "pl": "",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4081,
+      "ln": -3.6897,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sidrería el Llagar",
@@ -2403,7 +3767,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4451,
+      "ln": -3.611,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Patacon Tostao",
@@ -2413,7 +3783,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4633,
+      "ln": -0.3839,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Santamasa Sarrià",
@@ -2423,7 +3799,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 41.3997,
+      "ln": 2.1216,
+      "ta": 4.0,
+      "rg": 4.2
     },
     {
       "n": "Restaurant Charrito",
@@ -2433,7 +3815,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3884,
+      "ln": 2.1641,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Tasquería",
@@ -2443,7 +3831,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante de alta cocina",
+      "la": 40.4454,
+      "ln": -3.6956,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Bellillo Pizzeria Napoletana",
@@ -2453,7 +3847,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Disorganized",
+      "tp": "Restaurante italiano",
+      "la": 41.3879,
+      "ln": 2.1619,
+      "ta": 4.2,
+      "rg": 4.4
     },
     {
       "n": "La Nueva Marquesa",
@@ -2463,7 +3863,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3775,
+      "ln": 2.1193,
+      "ta": 4.5,
+      "rg": 4.6
     },
     {
       "n": "Casa Jaime",
@@ -2473,7 +3879,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3859,
+      "ln": 2.1591,
+      "ta": 4.0,
+      "rg": 4.2
     },
     {
       "n": "Kurz&Gut la Maquinista",
@@ -2483,7 +3895,13 @@
       "c": "Barcelona",
       "ct": 6,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.4408,
+      "ln": 2.1986,
+      "ta": 3.3,
+      "rg": null
     },
     {
       "n": "Piazze d'Italia",
@@ -2493,7 +3911,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 41.3869,
+      "ln": 2.157,
+      "ta": 4.6,
+      "rg": 4.5
     },
     {
       "n": "Barbillón Oyster",
@@ -2503,7 +3927,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4675,
+      "ln": -3.7945,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Alba Granados | Carnes a la Brasa en Bar",
@@ -2513,7 +3943,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3905,
+      "ln": 2.159,
+      "ta": 3.9,
+      "rg": 4.2
     },
     {
       "n": "Antic Cafe Espanyol",
@@ -2523,7 +3959,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3751,
+      "ln": 2.1694,
+      "ta": 3.6,
+      "rg": 3.9
     },
     {
       "n": "Alt Heidelberg",
@@ -2533,7 +3975,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante alemán",
+      "la": 41.3863,
+      "ln": 2.1652,
+      "ta": 3.5,
+      "rg": 4.9
     },
     {
       "n": "Plenti",
@@ -2543,7 +3991,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.413,
+      "ln": -3.6902,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Vegetalia Born - Restaurante vegetariano",
@@ -2553,7 +4007,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante vegetariano",
+      "la": 41.3836,
+      "ln": 2.1826,
+      "ta": 4.5,
+      "rg": 4.4
     },
     {
       "n": "Momo",
@@ -2563,7 +4023,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3803,
+      "ln": 2.1793,
+      "ta": 4.4,
+      "rg": 4.4
     },
     {
       "n": "L' Olla de Si Chuan",
@@ -2573,7 +4039,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3885,
+      "ln": 2.1603,
+      "ta": 3.8,
+      "rg": 4.1
     },
     {
       "n": "Vuelve Carolina",
@@ -2583,7 +4055,13 @@
       "c": "València",
       "ct": 1,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4696,
+      "ln": -0.3745,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Nabucco Tiramisu",
@@ -2593,7 +4071,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.4005,
+      "ln": 2.1577,
+      "ta": 4.1,
+      "rg": 4.3
     },
     {
       "n": "Santagustina",
@@ -2603,7 +4087,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3882,
+      "ln": 2.1806,
+      "ta": 4.2,
+      "rg": 4.3
     },
     {
       "n": "Restaurante Contrapunto les Arts",
@@ -2613,7 +4103,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4576,
+      "ln": -0.3552,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "El Argentino",
@@ -2623,7 +4119,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante argentino",
+      "la": 41.3885,
+      "ln": 2.1602,
+      "ta": 4.0,
+      "rg": null
     },
     {
       "n": "Madre Lievito Laboratorio",
@@ -2633,7 +4135,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 41.3976,
+      "ln": 2.2032,
+      "ta": 4.3,
+      "rg": 4.2
     },
     {
       "n": "Vic Braseria",
@@ -2643,7 +4151,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3972,
+      "ln": 2.1795,
+      "ta": 4.5,
+      "rg": 4.5
     },
     {
       "n": "La Bodega D'En Rafel",
@@ -2653,7 +4167,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 41.3773,
+      "ln": 2.1616,
+      "ta": 4.2,
+      "rg": 4.5
     },
     {
       "n": "Ventorrillo el Chato",
@@ -2663,7 +4183,13 @@
       "c": "Cádiz",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "",
+      "tp": "",
+      "la": 36.4801,
+      "ln": -6.2622,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Rabipelao Gótico",
@@ -2673,7 +4199,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante latinoamericano",
+      "la": 41.4038,
+      "ln": 2.1598,
+      "ta": 4.6,
+      "rg": 4.3
     },
     {
       "n": "La Gavina",
@@ -2683,7 +4215,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3806,
+      "ln": 2.1855,
+      "ta": 3.6,
+      "rg": 3.8
     },
     {
       "n": "La Vietnamita Gràcia",
@@ -2693,7 +4231,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante vietnamita",
+      "la": 41.4008,
+      "ln": 2.1591,
+      "ta": 4.0,
+      "rg": null
     },
     {
       "n": "Veltins Arena",
@@ -2703,7 +4247,13 @@
       "c": "Zaragoza",
       "ct": 2,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "",
+      "la": 41.66,
+      "ln": -0.8967,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Terra Mia",
@@ -2713,7 +4263,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 41.4163,
+      "ln": 2.1575,
+      "ta": 4.6,
+      "rg": 4.5
     },
     {
       "n": "Vinopremier",
@@ -2723,7 +4279,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 40.4311,
+      "ln": -3.6716,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Mònica",
@@ -2733,7 +4295,13 @@
       "c": "Palamós",
       "ct": 2,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.8485,
+      "ln": 3.1288,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante el Porvenir",
@@ -2743,7 +4311,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Cold Food",
+      "tp": "",
+      "la": 41.3869,
+      "ln": 2.1535,
+      "ta": 4.3,
+      "rg": 4.6
     },
     {
       "n": "L'Olive",
@@ -2753,7 +4327,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3891,
+      "ln": 2.1627,
+      "ta": 4.1,
+      "rg": 4.5
     },
     {
       "n": "Vrutal",
@@ -2763,7 +4343,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante vegano",
+      "la": 41.3984,
+      "ln": 2.2051,
+      "ta": 4.9,
+      "rg": 4.7
     },
     {
       "n": "La Esquinita de Blai",
@@ -2773,7 +4359,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 41.3734,
+      "ln": 2.1654,
+      "ta": 4.2,
+      "rg": 4.2
     },
     {
       "n": "Ajoblanco Tapas Restaurante Cocktail Bar",
@@ -2783,7 +4375,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.396,
+      "ln": 2.1521,
+      "ta": 4.0,
+      "rg": 4.0
     },
     {
       "n": "Hidden Coffee Roasters - les Corts",
@@ -2793,7 +4391,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Cafetería",
+      "la": 41.3883,
+      "ln": 2.1359,
+      "ta": 4.5,
+      "rg": 4.5
     },
     {
       "n": "Taberna de Angel Sierra",
@@ -2803,7 +4407,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.423,
+      "ln": -3.6974,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cafetería Cervecería la Villa",
@@ -2813,7 +4423,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.3818,
+      "ln": -3.6325,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sucursal Aceitera",
@@ -2823,7 +4439,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar restaurante",
+      "la": 41.3772,
+      "ln": 2.1632,
+      "ta": 3.7,
+      "rg": 4.2
     },
     {
       "n": "Big Al's - Real American Burgers - Barce",
@@ -2833,7 +4455,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante americano",
+      "la": 41.3894,
+      "ln": 2.1501,
+      "ta": 4.5,
+      "rg": 4.4
     },
     {
       "n": "√åstor Gastro-Place",
@@ -2843,7 +4471,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4127,
+      "ln": -3.7096,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Buenas Migas Sant Pere",
@@ -2853,7 +4487,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante de comida rápida",
+      "la": 41.3853,
+      "ln": 2.1633,
+      "ta": 4.0,
+      "rg": null
     },
     {
       "n": "El Velázquez 17 - Restaurante",
@@ -2863,7 +4503,13 @@
       "c": "Madrid",
       "ct": 2,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.423,
+      "ln": -3.6845,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "En Ville",
@@ -2873,7 +4519,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3829,
+      "ln": 2.1686,
+      "ta": 4.5,
+      "rg": 4.5
     },
     {
       "n": "Elche",
@@ -2883,7 +4535,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante coreano",
+      "la": 41.3739,
+      "ln": 2.1691,
+      "ta": 3.8,
+      "rg": 4.0
     },
     {
       "n": "Quillo Bar",
@@ -2893,7 +4551,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Bar",
+      "la": 41.3891,
+      "ln": 2.1796,
+      "ta": 3.6,
+      "rg": 4.0
     },
     {
       "n": "Kimchi Mama",
@@ -2903,7 +4567,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "",
+      "tp": "Restaurante coreano",
+      "la": 41.376,
+      "ln": 2.1434,
+      "ta": 4.8,
+      "rg": 4.8
     },
     {
       "n": "Warehouse@thehclub",
@@ -2913,7 +4583,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 40.4376,
+      "ln": -3.6867,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taberna Andaluza la Gloria",
@@ -2923,7 +4599,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 36.7221,
+      "ln": -4.4183,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Depikofino",
@@ -2933,7 +4615,13 @@
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 37.3842,
+      "ln": -5.9787,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sanissimo Principe Pío Vegan",
@@ -2943,7 +4631,29 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante vegano",
+      "la": 40.4228,
+      "ln": -3.7233,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Bareto Atocha",
+      "r": 4.1,
+      "rv": 2553,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 40.4091,
+      "ln": -3.6925,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Vespa Burger Bar",
@@ -2953,7 +4663,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Hamburguesería",
+      "la": 41.402,
+      "ln": 2.1572,
+      "ta": 4.2,
+      "rg": 4.4
     },
     {
       "n": "Bar-Restaurante Muy Buenas",
@@ -2963,7 +4679,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3809,
+      "ln": 2.1681,
+      "ta": 4.3,
+      "rg": 4.4
     },
     {
       "n": "Taberna Sol y Sombra",
@@ -2973,7 +4695,13 @@
       "c": "Sevilla",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.3891,
+      "ln": -6.0099,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Pentxo",
@@ -2983,7 +4711,13 @@
       "c": "Bilbao",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 43.2566,
+      "ln": -2.9241,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "El Rebost D'Hostafrancs",
@@ -2993,7 +4727,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3768,
+      "ln": 2.1456,
+      "ta": 4.5,
+      "rg": 4.3
     },
     {
       "n": "Restaurante O'Caldiño",
@@ -3003,7 +4743,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4286,
+      "ln": -3.6849,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Ristorante Mediterrani",
@@ -3013,7 +4759,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.4082,
+      "ln": 2.2162,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Quintoelemento",
@@ -3023,7 +4775,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 40.4097,
+      "ln": -3.693,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Txokoa Barcelona",
@@ -3033,7 +4791,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3901,
+      "ln": 2.1388,
+      "ta": 4.2,
+      "rg": 4.4
     },
     {
       "n": "Restaurant Parrilla Alfonsina",
@@ -3043,7 +4807,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante argentino",
+      "la": 41.397,
+      "ln": 2.1757,
+      "ta": 4.6,
+      "rg": 4.6
     },
     {
       "n": "Restaurante Amordmadre",
@@ -3053,7 +4823,13 @@
       "c": "Other",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.3746,
+      "ln": -3.6265,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Villa Verbena",
@@ -3063,7 +4839,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4199,
+      "ln": -3.7339,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taquería del Alamillo",
@@ -3073,7 +4855,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mexicano",
+      "la": 40.4137,
+      "ln": -3.7125,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Zoko Retiro - Restaurante en el Retiro",
@@ -3083,7 +4871,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4189,
+      "ln": -3.6788,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Venganza de Malinche Valencia",
@@ -3093,7 +4887,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4665,
+      "ln": -0.3638,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante la Vegana de Madrid",
@@ -3103,7 +4903,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4573,
+      "ln": -3.6514,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurant L'Aliança del Poble Nou",
@@ -3113,7 +4919,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3997,
+      "ln": 2.2033,
+      "ta": 3.2,
+      "rg": 4.0
     },
     {
       "n": "Quinto Pino",
@@ -3123,7 +4935,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.4012,
+      "ln": 2.123,
+      "ta": 3.1,
+      "rg": 3.8
     },
     {
       "n": "Arrocería Restaurante la Casa de Valenci",
@@ -3133,7 +4951,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 40.4299,
+      "ln": -3.7224,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Biocenter",
@@ -3143,7 +4967,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante vegetariano",
+      "la": 41.3825,
+      "ln": 2.1694,
+      "ta": 4.1,
+      "rg": 4.4
     },
     {
       "n": "Ukai Eixample",
@@ -3153,7 +4983,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante peruano",
+      "la": 40.3971,
+      "ln": -3.6652,
+      "ta": 4.1,
+      "rg": 3.6
     },
     {
       "n": "La Adelita Botanero",
@@ -3163,7 +4999,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3886,
+      "ln": 2.157,
+      "ta": 4.0,
+      "rg": 4.1
     },
     {
       "n": "Restaurante la Gloria",
@@ -3173,7 +5015,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$$$",
+      "tc": "Pricing",
+      "tp": "",
+      "la": 37.1754,
+      "ln": -3.6003,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Pizzaria Grosso",
@@ -3183,7 +5031,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 39.4682,
+      "ln": -0.3748,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Birras&Tapas",
@@ -3193,7 +5047,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 41.3772,
+      "ln": 2.1385,
+      "ta": 3.6,
+      "rg": 4.1
     },
     {
       "n": "Picasso",
@@ -3203,7 +5063,13 @@
       "c": "Málaga",
       "ct": 3,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 36.7226,
+      "ln": -4.3958,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Eatmytrip - Brunch & Bakery Barcelona",
@@ -3213,7 +5079,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de brunch",
+      "la": 40.413,
+      "ln": -3.7134,
+      "ta": 4.6,
+      "rg": 4.9
     },
     {
       "n": "The Famous Bar Restaurant",
@@ -3223,7 +5095,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 41.4055,
+      "ln": 2.1751,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Japonés Ii",
@@ -3233,7 +5111,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante japonés",
+      "la": 38.0311,
+      "ln": -1.1471,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Oxid la Tertulia",
@@ -3243,7 +5127,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3888,
+      "ln": 2.14,
+      "ta": 3.3,
+      "rg": 4.3
     },
     {
       "n": "Viva Madrid",
@@ -3253,7 +5143,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4152,
+      "ln": -3.6998,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Hotel Roma Reial",
@@ -3263,7 +5159,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neg",
-      "pl": ""
+      "pl": "",
+      "tc": "Hygiene",
+      "tp": "Hotel",
+      "la": 41.3801,
+      "ln": 2.1759,
+      "ta": 3.8,
+      "rg": null
     },
     {
       "n": "Bocca di Bonifacio",
@@ -3273,7 +5175,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar restaurante",
+      "la": 41.4056,
+      "ln": 2.1709,
+      "ta": 4.3,
+      "rg": 4.3
     },
     {
       "n": "Meson Restaurante As Fontes",
@@ -3283,7 +5191,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4043,
+      "ln": -3.6908,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cervecería Huracán",
@@ -3293,7 +5207,13 @@
       "c": "New York",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 37.3457,
+      "ln": -5.9782,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Venta el Gato",
@@ -3303,7 +5223,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 36.7234,
+      "ln": -4.3364,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Ristobottega",
@@ -3313,7 +5239,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 36.7203,
+      "ln": -4.4187,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Pastelería la Mallorquina - Velázquez",
@@ -3323,7 +5255,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Pastelería",
+      "la": 40.4263,
+      "ln": -3.6843,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Almunia",
@@ -3333,7 +5271,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4723,
+      "ln": -0.3716,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taberna Copas y Tapas",
@@ -3343,7 +5287,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 36.7216,
+      "ln": -4.4203,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Cadaqués Barcelona",
@@ -3353,7 +5303,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 40.4238,
+      "ln": -3.683,
+      "ta": 4.4,
+      "rg": 4.4
     },
     {
       "n": "Lemongrass Explanada",
@@ -3363,7 +5319,13 @@
       "c": "Valencia",
       "ct": 1,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4684,
+      "ln": -0.3757,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Tyris On Tap",
@@ -3373,7 +5335,13 @@
       "c": "Riba-roja de Túria",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4749,
+      "ln": -0.379,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Llagar la Llobera",
@@ -3383,7 +5351,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4316,
+      "ln": -3.6998,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Yuso",
@@ -3393,7 +5367,13 @@
       "c": "Valencia",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4786,
+      "ln": -0.3774,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Hotel Hesperia Murcia Centro",
@@ -3403,7 +5383,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Hygiene",
+      "tp": "Hotel",
+      "la": 37.9843,
+      "ln": -1.1313,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Casa Pedro",
@@ -3413,7 +5399,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4975,
+      "ln": -3.6871,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Roda",
@@ -3423,7 +5415,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3999,
+      "ln": 2.2025,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Casa Juaco",
@@ -3433,7 +5431,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neg",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.4477,
+      "ln": 2.1427,
+      "ta": 2.9,
+      "rg": null
     },
     {
       "n": "Picnic Restaurant",
@@ -3443,7 +5447,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante de brunch",
+      "la": 41.3886,
+      "ln": 2.1816,
+      "ta": 4.3,
+      "rg": null
     },
     {
       "n": "Triki Trac",
@@ -3453,7 +5463,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 41.3815,
+      "ln": 2.1414,
+      "ta": 4.3,
+      "rg": 4.4
     },
     {
       "n": "Cafe del Gallery",
@@ -3463,7 +5479,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Hotel",
+      "la": 41.3951,
+      "ln": 2.1592,
+      "ta": 4.5,
+      "rg": null
     },
     {
       "n": "Chill Bar",
@@ -3473,7 +5495,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar restaurante",
+      "la": 41.4024,
+      "ln": 2.1718,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Pizzeria Ristorante Piccolo Diavolo",
@@ -3483,7 +5511,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4114,
+      "ln": -3.6956,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "El Meson de Fuencarral",
@@ -3493,7 +5527,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.5291,
+      "ln": -3.6935,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Xemei",
@@ -3503,7 +5543,13 @@
       "c": "Barcelona",
       "ct": 4,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante italiano",
+      "la": 41.3714,
+      "ln": 2.1608,
+      "ta": 4.1,
+      "rg": 4.4
     },
     {
       "n": "Sushiko",
@@ -3513,7 +5559,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3926,
+      "ln": 2.1458,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Ben Tips",
@@ -3523,7 +5575,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 41.4112,
+      "ln": 2.1453,
+      "ta": 4.0,
+      "rg": 4.0
     },
     {
       "n": "Els Porxos",
@@ -3533,7 +5591,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.403,
+      "ln": 2.1751,
+      "ta": 4.4,
+      "rg": 4.3
     },
     {
       "n": "Restaurante Rocalla",
@@ -3543,7 +5607,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 39.4554,
+      "ln": -0.3583,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Casa Angela",
@@ -3553,7 +5623,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 41.4034,
+      "ln": 2.1729,
+      "ta": 4.1,
+      "rg": 4.2
     },
     {
       "n": "El Corte Ingl√©s",
@@ -3563,7 +5639,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 39.485,
+      "ln": -0.3971,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Central Park Barcelona",
@@ -3573,7 +5655,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3898,
+      "ln": 2.1223,
+      "ta": 3.9,
+      "rg": 4.0
     },
     {
       "n": "Tio Joe",
@@ -3583,7 +5671,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3964,
+      "ln": 2.155,
+      "ta": 4.5,
+      "rg": 4.5
     },
     {
       "n": "La Trini",
@@ -3593,7 +5687,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 41.4039,
+      "ln": 2.1569,
+      "ta": 3.7,
+      "rg": 4.0
     },
     {
       "n": "Restaurante Don Cammillo e Peppone",
@@ -3603,7 +5703,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 37.3837,
+      "ln": -6.0002,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Gallina Bianca",
@@ -3613,7 +5719,13 @@
       "c": "Sevilla",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.3861,
+      "ln": -5.9869,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante la Quinta del Pardo",
@@ -3623,7 +5735,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.5026,
+      "ln": -3.7392,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Vlue Arribar",
@@ -3633,7 +5751,13 @@
       "c": "València",
       "ct": 0,
       "se": "Neg",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Hygiene",
+      "tp": "",
+      "la": 39.4617,
+      "ln": -0.3221,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "NORI SUSHI Putxet",
@@ -3643,7 +5767,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante japonés",
+      "la": 41.4058,
+      "ln": 2.1445,
+      "ta": 4.8,
+      "rg": 4.8
     },
     {
       "n": "A la Broaster",
@@ -3653,7 +5783,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 39.4873,
+      "ln": -0.3868,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante el Gallo Campo de las Nacion",
@@ -3663,7 +5799,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4568,
+      "ln": -3.6189,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Flash-Flash",
@@ -3673,7 +5815,29 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Cold Food",
+      "tp": "Tienda de alimentación",
+      "la": 41.3966,
+      "ln": 2.1523,
+      "ta": 3.6,
+      "rg": 4.3
+    },
+    {
+      "n": "Flamenco la Quimera",
+      "r": 4.5,
+      "rv": 2097,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "",
+      "tc": "Pricing",
+      "tp": "Teatro",
+      "la": 40.4146,
+      "ln": -3.7079,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Benzina",
@@ -3683,7 +5847,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante italiano",
+      "la": 41.3762,
+      "ln": 2.1628,
+      "ta": 4.7,
+      "rg": 4.6
     },
     {
       "n": "Restaurante Osteria Bravissimo",
@@ -3693,7 +5863,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 40.4294,
+      "ln": -3.7219,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Bro Room",
@@ -3703,7 +5879,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Hamburguesería",
+      "la": 41.4072,
+      "ln": 2.1738,
+      "ta": 4.4,
+      "rg": 4.3
     },
     {
       "n": "Sylkar",
@@ -3713,7 +5895,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4407,
+      "ln": -3.6974,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Can Xurrades",
@@ -3723,7 +5911,29 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de alta cocina",
+      "la": 41.392,
+      "ln": 2.1503,
+      "ta": 4.5,
+      "rg": null
+    },
+    {
+      "n": "Barril de Goya",
+      "r": 4.3,
+      "rv": 2047,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Marisquería",
+      "la": 40.4244,
+      "ln": -3.6728,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Santa Burg",
@@ -3733,7 +5943,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Hamburguesería",
+      "la": 41.3797,
+      "ln": 2.1368,
+      "ta": 3.8,
+      "rg": 4.2
     },
     {
       "n": "La Terraza del Claris",
@@ -3743,7 +5959,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Hotel",
+      "la": 41.3944,
+      "ln": 2.1653,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Mamma Italia",
@@ -3753,7 +5975,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Pizzería",
+      "la": 41.3765,
+      "ln": 2.1234,
+      "ta": 4.5,
+      "rg": 4.7
     },
     {
       "n": "La Divina Comedia",
@@ -3763,7 +5991,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4653,
+      "ln": -0.3232,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante el Pastoret Valencia",
@@ -3773,7 +6007,13 @@
       "c": "London",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.446,
+      "ln": -0.3589,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Peso Neto Taberna-Jatetxea",
@@ -3783,7 +6023,13 @@
       "c": "Bilbo",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 43.2549,
+      "ln": -2.9252,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Zerain Restaurante Asador - Sidrería Vas",
@@ -3793,7 +6039,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante vasco",
+      "la": 40.4141,
+      "ln": -3.6975,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Colosal",
@@ -3803,7 +6055,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante especializado en t",
+      "la": 41.3888,
+      "ln": 2.1663,
+      "ta": 4.2,
+      "rg": 4.2
     },
     {
       "n": "Churrería Chocolatería Xix Century",
@@ -3813,7 +6071,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Tienda de postres",
+      "la": 40.387,
+      "ln": -3.64,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Mercato Ballaró",
@@ -3823,7 +6087,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante italiano",
+      "la": 40.4311,
+      "ln": -3.6969,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Bella Napoli",
@@ -3833,7 +6103,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante italiano",
+      "la": 41.3851,
+      "ln": 2.1568,
+      "ta": 4.5,
+      "rg": 4.1
     },
     {
       "n": "Casa Andreea: Arrocería y Mariscos",
@@ -3843,7 +6119,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4476,
+      "ln": -3.6641,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cantina Machito",
@@ -3853,7 +6135,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mexicano",
+      "la": 41.4043,
+      "ln": 2.1579,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Silan",
@@ -3863,7 +6151,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina de Orien",
+      "la": 41.3907,
+      "ln": 2.1588,
+      "ta": 4.6,
+      "rg": 4.5
     },
     {
       "n": "Restaurante Pizzeria Il Bocconcino Valen",
@@ -3873,7 +6167,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4762,
+      "ln": -0.381,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Picanteria de L'Escribà",
@@ -3883,7 +6183,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de fusión",
+      "la": 41.4021,
+      "ln": 2.2021,
+      "ta": 4.0,
+      "rg": 4.5
     },
     {
       "n": "Panishop",
@@ -3893,7 +6199,13 @@
       "c": "Zaragoza",
       "ct": 3,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4765,
+      "ln": -3.7166,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sms Delícies",
@@ -3903,7 +6215,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Hygiene",
+      "tp": "Restaurante",
+      "la": 41.4033,
+      "ln": 2.1542,
+      "ta": 4.5,
+      "rg": 4.3
     },
     {
       "n": "Can Sole",
@@ -3913,7 +6231,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3789,
+      "ln": 2.1884,
+      "ta": 4.0,
+      "rg": 4.2
     },
     {
       "n": "Bar Mut",
@@ -3923,7 +6247,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de alta cocina",
+      "la": 41.3973,
+      "ln": 2.1613,
+      "ta": 4.0,
+      "rg": null
     },
     {
       "n": "Las Mañanitas",
@@ -3933,7 +6263,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "",
+      "tp": "Restaurante mexicano",
+      "la": 40.443,
+      "ln": -3.7038,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cecconi's Barcelona",
@@ -3943,7 +6279,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante italiano",
+      "la": 41.3785,
+      "ln": 2.1794,
+      "ta": 4.3,
+      "rg": 4.5
     },
     {
       "n": "La Jabata",
@@ -3953,7 +6295,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3757,
+      "ln": 2.1667,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Poetas Andaluces Ii",
@@ -3963,7 +6311,13 @@
       "c": "Other",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 37.1731,
+      "ln": -3.6066,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cadaqués Restaurant",
@@ -3973,7 +6327,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neg",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 41.4005,
+      "ln": 2.1574,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Vietnam Restaurant",
@@ -3983,7 +6343,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.414,
+      "ln": -3.7011,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Firo Tast Restaurant",
@@ -3993,7 +6359,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.4106,
+      "ln": 2.1741,
+      "ta": 4.1,
+      "rg": 4.0
     },
     {
       "n": "Maramaia",
@@ -4003,7 +6375,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3992,
+      "ln": 2.1546,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Playa de Lavapiés",
@@ -4013,7 +6391,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante especializado en t",
+      "la": 40.4083,
+      "ln": -3.6994,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "N9u Restaurant",
@@ -4023,7 +6407,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.419,
+      "ln": 2.0971,
+      "ta": 3.1,
+      "rg": 4.1
     },
     {
       "n": "Egeo Suvlakería Griega, Malasaña",
@@ -4033,7 +6423,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4232,
+      "ln": -3.7024,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Espurnes",
@@ -4043,7 +6439,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 39.4727,
+      "ln": -0.3755,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Louise Se Va",
@@ -4053,7 +6455,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Cold Food",
+      "tp": "Bar",
+      "la": 41.43,
+      "ln": 2.1617,
+      "ta": 4.3,
+      "rg": 4.5
     },
     {
       "n": "Restaurante China Crown",
@@ -4063,7 +6471,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4291,
+      "ln": -3.6864,
+      "ta": 4.2,
+      "rg": 4.2
     },
     {
       "n": "La Mar Bella",
@@ -4073,7 +6487,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3985,
+      "ln": 2.2044,
+      "ta": 3.1,
+      "rg": 3.8
     },
     {
       "n": "Restaurant Lounge My Way",
@@ -4083,7 +6503,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3808,
+      "ln": 2.1753,
+      "ta": 4.5,
+      "rg": 4.5
     },
     {
       "n": "Subway",
@@ -4093,7 +6519,13 @@
       "c": "Madrid",
       "ct": 3,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4183,
+      "ln": -3.703,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Braseria Cal Ramon",
@@ -4103,7 +6535,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.4106,
+      "ln": 2.1745,
+      "ta": 4.1,
+      "rg": 4.2
     },
     {
       "n": "Kuletos",
@@ -4113,7 +6551,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 41.3986,
+      "ln": 2.2038,
+      "ta": null,
+      "rg": 4.3
     },
     {
       "n": "Restaurante los Cuevas",
@@ -4123,7 +6567,13 @@
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.3795,
+      "ln": -6.0005,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Arrayanes",
@@ -4133,7 +6583,13 @@
       "c": "Granada",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 37.1782,
+      "ln": -3.5969,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurant Dos Cuiners",
@@ -4143,7 +6599,13 @@
       "c": "Mataró",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.5387,
+      "ln": 2.4439,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurant Marisma Barceloneta",
@@ -4153,7 +6615,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3802,
+      "ln": 2.1894,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Pilla",
@@ -4163,7 +6631,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4285,
+      "ln": -3.6952,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taberna Almazara",
@@ -4173,7 +6647,13 @@
       "c": "London",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.3712,
+      "ln": -5.956,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante el Giraldillo Sevilla",
@@ -4183,7 +6663,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.3862,
+      "ln": -5.9917,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Shoronpo",
@@ -4193,7 +6679,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3975,
+      "ln": 2.1556,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Antigualla",
@@ -4203,7 +6695,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 37.1773,
+      "ln": -3.5975,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Tapas y Mas",
@@ -4213,7 +6711,29 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4787,
+      "ln": -0.4032,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Bar Restaurante Ponzano",
+      "r": 3.9,
+      "rv": 1798,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar restaurante",
+      "la": 40.4376,
+      "ln": -3.6992,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Barra Alta",
@@ -4223,7 +6743,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3997,
+      "ln": 2.1506,
+      "ta": 4.4,
+      "rg": 4.7
     },
     {
       "n": "Asador el Molinón",
@@ -4233,7 +6759,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4217,
+      "ln": -3.722,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Nipon Sushi Sake Bar",
@@ -4243,7 +6775,13 @@
       "c": "Mataró",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante japonés",
+      "la": 41.5374,
+      "ln": 2.4401,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Portonovo Silvestre",
@@ -4253,7 +6791,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.375,
+      "ln": 2.1471,
+      "ta": 4.0,
+      "rg": null
     },
     {
       "n": "La Batea Churrianera",
@@ -4263,7 +6807,13 @@
       "c": "Malaga",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 36.6585,
+      "ln": -4.4888,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante la Giralda - Tu Rincón de An",
@@ -4273,7 +6823,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4233,
+      "ln": -3.6866,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Pecera del Pool",
@@ -4283,7 +6839,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Polideportivo",
+      "la": 41.3826,
+      "ln": 2.1509,
+      "ta": null,
+      "rg": 4.3
     },
     {
       "n": "La Cerveseria",
@@ -4293,7 +6855,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neg",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 41.4028,
+      "ln": 2.1583,
+      "ta": 3.2,
+      "rg": null
     },
     {
       "n": "Restaurante Fathe Pur",
@@ -4303,7 +6871,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.418,
+      "ln": -3.6735,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Tarin's Restaurante",
@@ -4313,7 +6887,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4766,
+      "ln": -0.3769,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Marinela Jatetxea",
@@ -4323,7 +6903,13 @@
       "c": "Bilbao",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 43.2599,
+      "ln": -2.9393,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "P√ñtstot - Gluten Free / Sin Gluten",
@@ -4333,7 +6919,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3887,
+      "ln": 2.1582,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Jai Alai",
@@ -4343,7 +6935,29 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4464,
+      "ln": -3.6896,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Ostras Pedrín Chamberí",
+      "r": 4.3,
+      "rv": 1765,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar restaurante de ostras",
+      "la": 40.4318,
+      "ln": -3.7022,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Grums Hotel & Spa",
@@ -4353,7 +6967,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": ""
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Hotel",
+      "la": 41.3728,
+      "ln": 2.1721,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cervecería Santa Ana",
@@ -4363,7 +6983,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 40.4144,
+      "ln": -3.7009,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sapama",
@@ -4373,7 +6999,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4407,
+      "ln": -3.6424,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Tiki Taco",
@@ -4383,7 +7015,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4277,
+      "ln": -3.7144,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Belbo Candela",
@@ -4393,7 +7031,13 @@
       "c": "Barcelona",
       "ct": 2,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3877,
+      "ln": 2.1683,
+      "ta": 3.5,
+      "rg": 4.0
     },
     {
       "n": "Venus Delicatessen Barcelona",
@@ -4403,7 +7047,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3807,
+      "ln": 2.1779,
+      "ta": 3.8,
+      "rg": 4.0
     },
     {
       "n": "Lalanda",
@@ -4413,7 +7063,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4582,
+      "ln": -3.6745,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Souvenir",
@@ -4423,7 +7079,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3902,
+      "ln": 2.1602,
+      "ta": 4.1,
+      "rg": 4.4
     },
     {
       "n": "Restaurante Tras Os Montes",
@@ -4433,7 +7095,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4912,
+      "ln": -3.722,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Yaho Alta Murcia",
@@ -4443,7 +7111,13 @@
       "c": "CASCADE",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 37.9887,
+      "ln": -1.135,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Caza Juan",
@@ -4453,7 +7127,13 @@
       "c": "Valdezorras",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 37.4292,
+      "ln": -5.9247,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Chez Coco",
@@ -4463,7 +7143,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante francés",
+      "la": 41.3932,
+      "ln": 2.1473,
+      "ta": 3.9,
+      "rg": 4.1
     },
     {
       "n": "Bienmesabe Vergara",
@@ -4473,7 +7159,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4292,
+      "ln": -3.68,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante L'Albufera",
@@ -4483,7 +7175,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4618,
+      "ln": -3.692,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Ribs CC Lagoh Sevilla",
@@ -4493,7 +7191,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neg",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.3436,
+      "ln": -5.9884,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Casa Rafael (Papa Erig)",
@@ -4503,7 +7207,13 @@
       "c": "Benalmádena",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 36.5983,
+      "ln": -4.5324,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Torikey",
@@ -4513,7 +7223,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.441,
+      "ln": -3.7004,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "The Botilleria Coffee East",
@@ -4523,7 +7239,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4179,
+      "ln": -3.7112,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Orellana House",
@@ -4533,7 +7255,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 40.4266,
+      "ln": -3.6955,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Gula Sana",
@@ -4543,7 +7271,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Pricing",
+      "tp": "Panadería",
+      "la": 41.3855,
+      "ln": 2.1604,
+      "ta": 4.5,
+      "rg": 4.3
     },
     {
       "n": "Giulietta Cafü | Pastisseria, Restaurant",
@@ -4553,7 +7287,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Cafetería",
+      "la": 41.3986,
+      "ln": 2.1824,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Trocadero Estepona",
@@ -4563,7 +7303,13 @@
       "c": "Estepona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante",
+      "la": 36.4281,
+      "ln": -5.1286,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Margarita Blue",
@@ -4573,7 +7319,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Restaurante mexicano",
+      "la": 41.3779,
+      "ln": 2.1784,
+      "ta": 4.3,
+      "rg": 4.3
     },
     {
       "n": "Santa Clara Restaurant",
@@ -4583,7 +7335,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neg",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3895,
+      "ln": 2.1216,
+      "ta": 3.8,
+      "rg": null
     },
     {
       "n": "Restaurante Spaguetteria Circus",
@@ -4593,7 +7351,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 36.7157,
+      "ln": -4.4631,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Tgb",
@@ -4603,7 +7367,13 @@
       "c": "Roma",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4795,
+      "ln": -3.7075,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Salero",
@@ -4613,7 +7383,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.4006,
+      "ln": 2.1603,
+      "ta": 4.0,
+      "rg": 4.4
     },
     {
       "n": "Restaurante Taberna las Meninas",
@@ -4623,7 +7399,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 39.4717,
+      "ln": -0.3755,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Jamón Jamón",
@@ -4633,7 +7415,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 39.4759,
+      "ln": -0.3801,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "My Bar",
@@ -4643,7 +7431,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Pub irlandés",
+      "la": 41.3806,
+      "ln": 2.1746,
+      "ta": 4.3,
+      "rg": 4.4
     },
     {
       "n": "Ramen Kagura Atocha",
@@ -4653,7 +7447,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 40.4052,
+      "ln": -3.6973,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurant Port Vell",
@@ -4663,7 +7463,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neg",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 41.3798,
+      "ln": 2.1877,
+      "ta": 3.4,
+      "rg": 3.8
     },
     {
       "n": "Dos Pebrots",
@@ -4673,7 +7479,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mediterráneo",
+      "la": 41.3828,
+      "ln": 2.1684,
+      "ta": 4.1,
+      "rg": 4.3
     },
     {
       "n": "Cocina Hermanos Torres",
@@ -4683,7 +7495,13 @@
       "c": "Barcelona",
       "ct": 6,
       "se": "Pos",
-      "pl": "$$$$"
+      "pl": "$$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de alta cocina",
+      "la": 41.3865,
+      "ln": 2.1401,
+      "ta": 4.5,
+      "rg": 4.6
     },
     {
       "n": "Casa Fonzo",
@@ -4693,7 +7511,13 @@
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4417,
+      "ln": -3.6989,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "A Tu Bola",
@@ -4703,7 +7527,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3801,
+      "ln": 2.169,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Xino Mandarino",
@@ -4713,7 +7543,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante chino",
+      "la": 41.3847,
+      "ln": 2.1592,
+      "ta": 3.7,
+      "rg": 4.4
     },
     {
       "n": "Kenko",
@@ -4723,7 +7559,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante peruano",
+      "la": 41.388,
+      "ln": 2.1444,
+      "ta": 3.1,
+      "rg": 3.9
     },
     {
       "n": "La Tropa",
@@ -4733,7 +7575,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Hamburguesería",
+      "la": 41.4338,
+      "ln": 2.1895,
+      "ta": 3.6,
+      "rg": 3.9
     },
     {
       "n": "Restaurante la Locanda di Andrea",
@@ -4743,7 +7591,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "",
+      "la": 37.3977,
+      "ln": -5.9914,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Taberna Ilustrada el Capricho",
@@ -4753,7 +7607,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4204,
+      "ln": -3.6777,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Azul",
@@ -4763,7 +7623,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 41.4112,
+      "ln": 2.1785,
+      "ta": 4.3,
+      "rg": 4.4
     },
     {
       "n": "Viblioteca",
@@ -4773,7 +7639,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Vinoteca",
+      "la": 41.4034,
+      "ln": 2.1568,
+      "ta": 4.3,
+      "rg": 4.5
     },
     {
       "n": "Monster Sushi Aribau",
@@ -4783,7 +7655,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "Pricing",
+      "tp": "Restaurante de sushi",
+      "la": 41.3858,
+      "ln": 2.1625,
+      "ta": 4.6,
+      "rg": 4.8
     },
     {
       "n": "Can Punyetes",
@@ -4793,7 +7671,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3987,
+      "ln": 2.1597,
+      "ta": 3.7,
+      "rg": 4.1
     },
     {
       "n": "Almagro Café And Bar Restaurante",
@@ -4803,7 +7687,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4286,
+      "ln": -3.6944,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Trujillo Burger Estefanita",
@@ -4813,7 +7703,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.3424,
+      "ln": -3.6742,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Petit Comitè",
@@ -4823,7 +7719,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 41.3944,
+      "ln": 2.16,
+      "ta": 4.1,
+      "rg": 4.3
     },
     {
       "n": "Stella Nova",
@@ -4833,7 +7735,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 41.4052,
+      "ln": 2.1747,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Colmado Lalola",
@@ -4843,7 +7751,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 39.4751,
+      "ln": -0.3757,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Gorria",
@@ -4853,7 +7767,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante vasco",
+      "la": 41.3988,
+      "ln": 2.178,
+      "ta": 4.4,
+      "rg": 4.5
     },
     {
       "n": "Riko's",
@@ -4863,7 +7783,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Neg",
-      "pl": ""
+      "pl": "",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 41.3751,
+      "ln": 2.1274,
+      "ta": 2.7,
+      "rg": 4.0
     },
     {
       "n": "Kebab House",
@@ -4873,7 +7799,13 @@
       "c": "Alicante",
       "ct": 2,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 40.433,
+      "ln": -3.7174,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Mont Bar",
@@ -4883,7 +7815,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$$"
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de alta cocina",
+      "la": 41.3862,
+      "ln": 2.1617,
+      "ta": null,
+      "rg": 4.3
     },
     {
       "n": "Oneocean Club",
@@ -4893,7 +7831,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3799,
+      "ln": 2.1869,
+      "ta": 4.0,
+      "rg": 4.3
     },
     {
       "n": "√òlgod Brewpub",
@@ -4903,7 +7847,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Cervecería artesanal",
+      "la": 41.3801,
+      "ln": 2.1692,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Bar Restaurante Guixot",
@@ -4913,7 +7863,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 41.3785,
+      "ln": 2.1677,
+      "ta": 4.5,
+      "rg": 4.6
     },
     {
       "n": "Sanabria Restaurante",
@@ -4923,7 +7879,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.4092,
+      "ln": -3.694,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Carmen GastroBar Gin Club",
@@ -4933,7 +7895,13 @@
       "c": "Badajoz",
       "ct": 1,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 38.8791,
+      "ln": -6.9699,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Paloma",
@@ -4943,7 +7911,13 @@
       "c": "Madrid",
       "ct": 5,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 40.41,
+      "ln": -3.7093,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Papadam",
@@ -4953,7 +7927,13 @@
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 41.3757,
+      "ln": 2.1669,
+      "ta": 4.5,
+      "rg": 4.6
     },
     {
       "n": "El Trébol 1983 Pizzas y Empanadas Argent",
@@ -4963,7 +7943,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Pizzería",
+      "la": 40.4162,
+      "ln": -3.7007,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Al Jaima de Abou Khalil Ÿöÿ∑ÿπÿö Ÿñÿ®ÿüÿ",
@@ -4973,7 +7959,13 @@
       "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante libanés",
+      "la": 41.3895,
+      "ln": 2.1593,
+      "ta": 4.7,
+      "rg": null
     },
     {
       "n": "Tasca la Ultramarina",
@@ -4983,7 +7975,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": ""
+      "pl": "",
+      "tc": "",
+      "tp": "",
+      "la": 41.6501,
+      "ln": -0.9171,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Cervecería Cruz Blanca",
@@ -4993,7 +7991,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar restaurante",
+      "la": 40.4261,
+      "ln": -3.6967,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Ramen House Barcelona",
@@ -5003,7 +8007,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 41.3814,
+      "ln": 2.1616,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "√äsia Amb Gr√†cia",
@@ -5013,7 +8023,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Neu",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "Restaurante asiático",
+      "la": 41.4043,
+      "ln": 2.156,
+      "ta": 4.2,
+      "rg": 4.3
     },
     {
       "n": "Karakala",
@@ -5023,7 +8039,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante libanés",
+      "la": 41.4028,
+      "ln": 2.1566,
+      "ta": 4.4,
+      "rg": 4.6
     },
     {
       "n": "Marchica Shawarma",
@@ -5033,7 +8055,13 @@
       "c": "CASCADE",
       "ct": 1,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$",
+      "tc": "",
+      "tp": "",
+      "la": 37.1793,
+      "ln": -3.5986,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "El Menjador de la Beckett",
@@ -5043,7 +8071,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Bar restaurante",
+      "la": 41.4047,
+      "ln": 2.1994,
+      "ta": 3.7,
+      "rg": 4.3
     },
     {
       "n": "Korean Restaurant Kamasot",
@@ -5053,7 +8087,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$$"
+      "pl": "$$",
+      "tc": "",
+      "tp": "Restaurante coreano",
+      "la": 41.3989,
+      "ln": 2.1759,
+      "ta": 4.2,
+      "rg": 4.5
     },
     {
       "n": "Restaurante Tajo Bajo",
@@ -5063,7 +8103,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 41.6563,
+      "ln": -0.8796,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Venta el Gallo",
@@ -5073,7 +8119,13 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
+      "pl": "$$",
+      "tc": "",
+      "tp": "",
+      "la": 37.1819,
+      "ln": -3.584,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Ruda Café",
@@ -5083,7 +8135,13 @@
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "",
+      "tp": "Cafetería",
+      "la": 40.4104,
+      "ln": -3.708,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Paraiso Oriental",
@@ -5093,7 +8151,13 @@
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
-      "pl": "$"
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante asiático",
+      "la": 41.4295,
+      "ln": 2.1587,
+      "ta": 4.0,
+      "rg": 4.2
     },
     {
       "n": "Meson Asador la Esquina",
@@ -5103,95 +8167,31 @@
       "c": "Other",
       "ct": 0,
       "se": "Pos",
-      "pl": "PRIC"
-    },
-    {
-      "n": "Restaurante Pals",
-      "r": 4.0,
-      "rv": 1517,
-      "s": 72,
-      "c": "Other",
-      "ct": 0,
-      "se": "Neu",
-      "pl": "PRIC"
-    },
-    {
-      "n": "China Té",
-      "r": 4.3,
-      "rv": 1495,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Neu",
-      "pl": "$"
-    },
-    {
-      "n": "Aránzazu",
-      "r": 4.2,
-      "rv": 1495,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$"
-    },
-    {
-      "n": "Yamadori",
-      "r": 4.5,
-      "rv": 1495,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$$$"
-    },
-    {
-      "n": "El Rincón de Vespok",
-      "r": 4.3,
-      "rv": 1493,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$"
-    },
-    {
-      "n": "4 Latas Muntaner",
-      "r": 3.8,
-      "rv": 1492,
-      "s": 77,
-      "c": "Other",
-      "ct": 0,
-      "se": "Neu",
-      "pl": "PRIC"
-    },
-    {
-      "n": "Avocado",
-      "r": 4.5,
-      "rv": 1490,
-      "s": 95,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$"
+      "pl": "$",
+      "tc": "Wait Time",
+      "tp": "",
+      "la": 37.427,
+      "ln": -5.9759,
+      "ta": null,
+      "rg": null
     }
   ],
   "services": {
-    "dine_in": 764,
-    "delivery": 390,
-    "takeout": 582,
-    "reservable": 646,
-    "serves_breakfast": 296,
-    "serves_lunch": 666,
-    "serves_dinner": 663,
-    "serves_brunch": 340,
-    "serves_beer": 717,
-    "serves_wine": 697,
-    "serves_vegetarian": 254,
-    "outdoor_seating": 448,
-    "live_music": 64,
-    "good_for_children": 472,
-    "good_for_groups": 525,
+    "dine_in": 781,
+    "delivery": 397,
+    "takeout": 596,
+    "reservable": 660,
+    "serves_breakfast": 302,
+    "serves_lunch": 679,
+    "serves_dinner": 676,
+    "serves_brunch": 348,
+    "serves_beer": 731,
+    "serves_wine": 709,
+    "serves_vegetarian": 256,
+    "outdoor_seating": 454,
+    "live_music": 65,
+    "good_for_children": 479,
+    "good_for_groups": 535,
     "good_for_sports": 51
   },
   "field_completeness": {
@@ -5204,8 +8204,8 @@
       "address": 66931,
       "industry": 34407,
       "google_place_id": 22877,
-      "gp__rating_count": 2080,
-      "gp__sentiment": 2088,
+      "gp__rating_count": 2097,
+      "gp__sentiment": 2107,
       "num_associated_contacts": 74635,
       "description": 26647,
       "country": 73833
@@ -5351,9 +8351,21 @@
   "ratings_dist": {
     "<3": 59,
     "3-3.5": 62,
-    "3.5-4": 274,
-    "4-4.5": 955,
-    "4.5-5": 730
+    "3.5-4": 275,
+    "4-4.5": 967,
+    "4.5-5": 734
+  },
+  "sentiment_dist": {
+    "Positive": 1550,
+    "Neutral": 415,
+    "Negative": 142
+  },
+  "price_dist": {
+    "Free": 0,
+    "$": 402,
+    "$$": 249,
+    "$$$": 27,
+    "$$$$": 3
   },
   "budget": {
     "config": {
@@ -5362,26 +8374,26 @@
     },
     "months": {
       "2026-04": {
-        "place_details": 190,
+        "place_details": 217,
         "text_search": 0,
-        "cost": 4.37,
+        "cost": 4.991,
         "daily": {
           "2026-04-19": {
-            "pd": 190,
+            "pd": 217,
             "ts": 0,
-            "cost": 4.37
+            "cost": 4.991
           }
         }
       }
     }
   },
   "enrichment": {
-    "total_enriched_a": 173,
+    "total_enriched_a": 200,
     "total_enriched_b": 0,
     "total_not_found": 17,
     "total_errors": 0,
-    "last_run": "2026-04-19T18:00:55.630513",
-    "runs": 4
+    "last_run": "2026-04-19T22:00:46.093879",
+    "runs": 5
   },
-  "log_tail": "[2026-04-19 14:32:44] Batch: 40 (budget allows 107)\n[2026-04-19 14:32:45] Fetched 40 companies\n[2026-04-19 14:32:54]   10/40: 10 enriched\n[2026-04-19 14:32:57]   Place Details HTTP 404 (ChIJG5E5eh4pQg0RSP_wHqpe1ag)\n[2026-04-19 14:33:02]   20/40: 19 enriched\n[2026-04-19 14:33:13]   30/40: 29 enriched\n[2026-04-19 14:33:22]   40/40: 39 enriched\n[2026-04-19 14:33:22] Backup: phaseA_20260419_143322.jsonl\n[2026-04-19 14:33:22] Phase A: 39 enriched, 1 not found, 0 errors\n[2026-04-19 14:33:22] API: 40 PD + 0 TS = $0.92 | Month: $3.45\n[2026-04-19 14:33:22] === Run finished ===\n[2026-04-19 18:00:11] === Enrichment run started (dry_run=False) ===\n[2026-04-19 18:00:11] Phase A pending: 20812\n[2026-04-19 18:00:11] Phase: A\n[2026-04-19 18:00:11] Batch: 40 (budget allows 67)\n[2026-04-19 18:00:13] Fetched 40 companies\n[2026-04-19 18:00:23]   10/40: 10 enriched\n[2026-04-19 18:00:34]   20/40: 20 enriched\n[2026-04-19 18:00:39]   Place Details HTTP 404 (ChIJPR6QkNAvQg0R0VXnM1SauMo)\n[2026-04-19 18:00:44]   30/40: 29 enriched\n[2026-04-19 18:00:55]   40/40: 39 enriched\n[2026-04-19 18:00:55] Backup: phaseA_20260419_180055.jsonl\n[2026-04-19 18:00:55] Phase A: 39 enriched, 1 not found, 0 errors\n[2026-04-19 18:00:55] API: 40 PD + 0 TS = $0.92 | Month: $4.37\n[2026-04-19 18:00:55] === Run finished ==="
+  "log_tail": "[2026-04-19 18:00:11] Phase A pending: 20812\n[2026-04-19 18:00:11] Phase: A\n[2026-04-19 18:00:11] Batch: 40 (budget allows 67)\n[2026-04-19 18:00:13] Fetched 40 companies\n[2026-04-19 18:00:23]   10/40: 10 enriched\n[2026-04-19 18:00:34]   20/40: 20 enriched\n[2026-04-19 18:00:39]   Place Details HTTP 404 (ChIJPR6QkNAvQg0R0VXnM1SauMo)\n[2026-04-19 18:00:44]   30/40: 29 enriched\n[2026-04-19 18:00:55]   40/40: 39 enriched\n[2026-04-19 18:00:55] Backup: phaseA_20260419_180055.jsonl\n[2026-04-19 18:00:55] Phase A: 39 enriched, 1 not found, 0 errors\n[2026-04-19 18:00:55] API: 40 PD + 0 TS = $0.92 | Month: $4.37\n[2026-04-19 18:00:55] === Run finished ===\n[2026-04-19 22:00:04] === Enrichment run started (dry_run=False) ===\n[2026-04-19 22:00:04] Phase A pending: 20780\n[2026-04-19 22:00:04] Phase: A\n[2026-04-19 22:00:04] Batch: 27 (budget allows 27)\n[2026-04-19 22:00:06] Fetched 27 companies\n[2026-04-19 22:00:27]   10/27: 10 enriched\n[2026-04-19 22:00:38]   20/27: 20 enriched\n[2026-04-19 22:00:46] Backup: phaseA_20260419_220046.jsonl\n[2026-04-19 22:00:46] Phase A: 27 enriched, 0 not found, 0 errors\n[2026-04-19 22:00:46] API: 27 PD + 0 TS = $0.62 | Month: $4.99\n[2026-04-19 22:00:46] === Run finished ===\n[2026-04-19 22:00:46] Syncing HubDash..."
 }

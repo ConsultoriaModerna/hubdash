@@ -163,6 +163,29 @@ svg text { fill: var(--muted); font-size: 11px; }
   </div>
 
   <div class="panel">
+    <div class="panel-title">Opportunity Matrix — Rating × Contacts</div>
+    <svg id="chart-opportunity" width="100%" height="300"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Sentiment × Complaints — CX Intelligence</div>
+    <svg id="chart-sentiment" width="100%" height="300"></svg>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Price × Quality — Hidden Gems</div>
+    <svg id="chart-price-quality" width="100%" height="300"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Rating Delta — Google vs TripAdvisor</div>
+    <svg id="chart-rating-delta" width="100%" height="300"></svg>
+  </div>
+
+  <div class="panel panel-full">
+    <div class="panel-title">Geographic Constellation — Spatial Intelligence</div>
+    <svg id="chart-geo" width="100%" height="450"></svg>
+  </div>
+
+  <div class="panel">
     <div class="panel-title">Field Completeness — Companies</div>
     <svg id="chart-fields-co" width="100%" height="300"></svg>
   </div>
@@ -467,9 +490,296 @@ function drawServices(d) {
   });
 }
 
+// ─── Chart 1: Opportunity Matrix ──────────────────────────────────────────
+function drawOpportunityMatrix(d) {
+  if (!d.bubbles || !d.bubbles.length) return;
+  const svg = d3.select('#chart-opportunity'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 300;
+  const m = {top: 30, right: 20, bottom: 40, left: 90};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+
+  const rBands = [['<3',0,3],['3-3.5',3,3.5],['3.5-4',3.5,4],['4-4.5',4,4.5],['4.5-5',4.5,5.1]];
+  const cBands = [['0 contacts',0,0],['1-3',1,3],['4-10',4,10],['10+',11,9999]];
+  const rLabels = rBands.map(b=>b[0]), cLabels = cBands.map(b=>b[0]);
+
+  // Cross-tabulate
+  const matrix = cLabels.map(() => rLabels.map(() => 0));
+  d.bubbles.forEach(b => {
+    const ri = rBands.findIndex(([,lo,hi]) => b.r >= lo && b.r < hi);
+    const ci = cBands.findIndex(([,lo,hi]) => b.ct >= lo && b.ct <= hi);
+    if (ri >= 0 && ci >= 0) matrix[ci][ri]++;
+  });
+  const maxVal = Math.max(1, ...matrix.flat());
+
+  const x = d3.scaleBand().domain(rLabels).range([0, w]).padding(0.08);
+  const y = d3.scaleBand().domain(cLabels).range([0, h]).padding(0.08);
+  const color = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, maxVal]);
+
+  cLabels.forEach((cl, ci) => {
+    rLabels.forEach((rl, ri) => {
+      const val = matrix[ci][ri];
+      const isGold = ri >= 3 && ci === 0 && val > 0; // high rating + 0 contacts
+      g.append('rect').attr('x', x(rl)).attr('y', y(cl))
+        .attr('width', x.bandwidth()).attr('height', y.bandwidth())
+        .attr('fill', val > 0 ? color(val) : '#161b22').attr('rx', 4)
+        .attr('stroke', isGold ? '#d29922' : 'none').attr('stroke-width', isGold ? 3 : 0)
+        .on('mousemove', evt => showTip(evt, `<b>Rating ${rl} / ${cl}</b><br>${val} companies${isGold ? '<br>⭐ Untapped opportunity!' : ''}`))
+        .on('mouseleave', hideTip);
+      if (val > 0) {
+        g.append('text').attr('x', x(rl) + x.bandwidth()/2).attr('y', y(cl) + y.bandwidth()/2)
+          .attr('text-anchor','middle').attr('dominant-baseline','middle')
+          .text(val).attr('fill', val > maxVal*0.6 ? '#000' : C.text).style('font-size','12px').style('font-weight','700');
+      }
+    });
+  });
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.append('g').call(d3.axisLeft(y)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  svg.append('text').attr('x',W/2).attr('y',16).attr('text-anchor','middle')
+    .text('⭐ Gold border = high rating + 0 contacts = prospecting targets').attr('fill',C.yellow).style('font-size','10px');
+}
+
+// ─── Chart 2: Sentiment × Complaints ─────────────────────────────────────
+function drawSentimentComplaints(d) {
+  if (!d.bubbles || !d.bubbles.length) return;
+  const svg = d3.select('#chart-sentiment'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 300;
+  const m = {top: 20, right: 20, bottom: 50, left: 80};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+
+  const sentiments = ['Pos','Neu','Neg'];
+  const sentLabels = {'Pos':'Positive','Neu':'Neutral','Neg':'Negative'};
+  const complaints = ['Wait Time','Cold Food','Slow Service','Pricing','Hygiene','Disorganized',''];
+  const compLabels = {'Wait Time':'Wait','Cold Food':'Cold','Slow Service':'Slow','Pricing':'Price','Hygiene':'Hygiene','Disorganized':'Disorg','':'None'};
+  const compColors = {'Wait Time':C.orange,'Cold Food':C.blue,'Slow Service':C.yellow,'Pricing':C.red,'Hygiene':C.purple,'Disorganized':C.teal,'':C.muted};
+
+  // Cross-tabulate
+  const data = sentiments.map(s => {
+    const row = {sentiment: sentLabels[s]};
+    complaints.forEach(c => {
+      row[c] = d.bubbles.filter(b => (b.se||'') === s && (b.tc||'') === c).length;
+    });
+    return row;
+  });
+
+  const stack = d3.stack().keys(complaints)(data);
+  const maxVal = d3.max(data, d => complaints.reduce((s,c) => s + d[c], 0));
+
+  const x = d3.scaleLinear().domain([0, maxVal * 1.1]).range([0, w]);
+  const y = d3.scaleBand().domain(sentiments.map(s => sentLabels[s])).range([0, h]).padding(0.3);
+
+  stack.forEach(layer => {
+    const key = layer.key;
+    g.selectAll('.bar-'+key.replace(/\s/g,'')).data(layer).enter().append('rect')
+      .attr('x', d => x(d[0])).attr('y', d => y(d.data.sentiment))
+      .attr('width', d => x(d[1]) - x(d[0])).attr('height', y.bandwidth())
+      .attr('fill', compColors[key]).attr('rx', 2).attr('opacity', 0.85)
+      .on('mousemove', (evt, dd) => showTip(evt, `<b>${dd.data.sentiment}</b><br>${compLabels[key]}: ${dd[1]-dd[0]}`))
+      .on('mouseleave', hideTip);
+  });
+  g.append('g').call(d3.axisLeft(y)).selectAll('text').attr('fill',C.muted).style('font-size','11px');
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5)).selectAll('text').attr('fill',C.muted);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  // Legend
+  const leg = svg.append('g').attr('transform',`translate(${m.left},${H-15})`);
+  const legItems = complaints.filter(c => c);
+  legItems.forEach((c, i) => {
+    const lx = i * (w / legItems.length);
+    leg.append('rect').attr('x',lx).attr('width',8).attr('height',8).attr('fill',compColors[c]).attr('rx',2);
+    leg.append('text').attr('x',lx+11).attr('y',7).text(compLabels[c]).attr('fill',C.muted).style('font-size','9px');
+  });
+}
+
+// ─── Chart 3: Price × Quality ────────────────────────────────────────────
+function drawPriceQuality(d) {
+  if (!d.bubbles || !d.bubbles.length) return;
+  const svg = d3.select('#chart-price-quality'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 300;
+  const m = {top: 20, right: 20, bottom: 40, left: 45};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+
+  const priceOrder = ['$','$$','$$$','$$$$'];
+  const data = d.bubbles.filter(b => b.pl && priceOrder.includes(b.pl));
+  if (data.length < 5) { g.append('text').attr('x',w/2).attr('y',h/2).attr('text-anchor','middle').text('Not enough price data').attr('fill',C.muted); return; }
+
+  const cityColors = {Barcelona:C.blue,Madrid:C.purple,Valencia:C.orange,Sevilla:C.yellow,Bilbao:C.teal};
+  const maxRv = Math.max(...data.map(b => b.rv));
+
+  const x = d3.scaleBand().domain(priceOrder).range([0, w]).padding(0.1);
+  const y = d3.scaleLinear().domain([2, 5]).range([h, 0]);
+
+  // Grid lines
+  [2.5,3,3.5,4,4.5,5].forEach(v => {
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(v)).attr('y2',y(v)).attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+
+  // Jitter seed from name hash
+  const hash = s => { let h=0; for(let i=0;i<s.length;i++) h=((h<<5)-h)+s.charCodeAt(i); return h; };
+  data.forEach(b => {
+    const jitter = ((hash(b.n) % 100) / 100 - 0.5) * x.bandwidth() * 0.7;
+    const cx = x(b.pl) + x.bandwidth()/2 + jitter;
+    const cy = y(b.r);
+    const r = 3 + Math.sqrt(b.rv / maxRv) * 12;
+    g.append('circle').attr('cx',cx).attr('cy',cy).attr('r',r)
+      .attr('fill', cityColors[b.c] || C.muted).attr('opacity', 0.6).attr('stroke', cityColors[b.c] || C.muted).attr('stroke-width', 0.5)
+      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>⭐ ${b.r} | ${b.pl} | ${b.rv.toLocaleString()} reviews<br>${b.c}`))
+      .on('mouseleave', hideTip);
+  });
+
+  // Median lines per price bracket
+  priceOrder.forEach(pl => {
+    const group = data.filter(b => b.pl === pl);
+    if (group.length > 2) {
+      const med = d3.median(group, b => b.r);
+      g.append('line').attr('x1',x(pl)+5).attr('x2',x(pl)+x.bandwidth()-5)
+        .attr('y1',y(med)).attr('y2',y(med)).attr('stroke',C.text).attr('stroke-width',2).attr('stroke-dasharray','4,3');
+    }
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x)).selectAll('text').attr('fill',C.muted).style('font-size','12px');
+  g.append('g').call(d3.axisLeft(y).ticks(6)).selectAll('text').attr('fill',C.muted);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+}
+
+// ─── Chart 4: Geographic Constellation ───────────────────────────────────
+function drawGeoConstellation(d) {
+  if (!d.bubbles) return;
+  const geo = d.bubbles.filter(b => b.la != null && b.ln != null);
+  if (geo.length < 10) return;
+  const svg = d3.select('#chart-geo'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 450;
+  const m = {top: 20, right: 30, bottom: 40, left: 50};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+
+  const lnExtent = d3.extent(geo, b => b.ln);
+  const laExtent = d3.extent(geo, b => b.la);
+  // Preserve aspect ratio
+  const lnRange = lnExtent[1] - lnExtent[0] || 1;
+  const laRange = laExtent[1] - laExtent[0] || 1;
+  const ratio = laRange / lnRange;
+  let xRange = w, yRange = h;
+  if (ratio > h/w) { xRange = h / ratio; } else { yRange = w * ratio; }
+  const xOff = (w - xRange) / 2, yOff = (h - yRange) / 2;
+
+  const x = d3.scaleLinear().domain([lnExtent[0]-0.02, lnExtent[1]+0.02]).range([xOff, xOff + xRange]);
+  const y = d3.scaleLinear().domain([laExtent[0]-0.02, laExtent[1]+0.02]).range([yOff + yRange, yOff]); // inverted
+  const colorScale = d3.scaleSequential(d3.interpolateRdYlGn).domain([2, 5]);
+  const maxRv = Math.max(...geo.map(b => b.rv));
+
+  // Sort so small dots render on top
+  geo.sort((a,b) => b.rv - a.rv);
+
+  geo.forEach(b => {
+    const r = 3 + Math.sqrt(b.rv / maxRv) * 10;
+    g.append('circle').attr('cx', x(b.ln)).attr('cy', y(b.la)).attr('r', r)
+      .attr('fill', colorScale(b.r)).attr('opacity', 0.7)
+      .attr('stroke', '#0d1117').attr('stroke-width', 0.5)
+      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>⭐ ${b.r} | ${b.rv.toLocaleString()} reviews<br>${b.c} (${b.la.toFixed(3)}, ${b.ln.toFixed(3)})`))
+      .on('mouseleave', hideTip);
+  });
+
+  // City labels (centroid of each city cluster)
+  const cityGroups = d3.group(geo, b => b.c);
+  cityGroups.forEach((bubs, city) => {
+    if (bubs.length < 3 || city === 'Other') return;
+    const cx = d3.mean(bubs, b => x(b.ln));
+    const cy = d3.mean(bubs, b => y(b.la));
+    g.append('text').attr('x', cx).attr('y', cy - 15).attr('text-anchor','middle')
+      .text(city).attr('fill', C.text).style('font-size','11px').style('font-weight','600')
+      .attr('opacity', 0.8);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(6).tickFormat(d=>d.toFixed(1)+'°'))
+    .selectAll('text').attr('fill',C.muted).style('font-size','9px');
+  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d=>d.toFixed(1)+'°'))
+    .selectAll('text').attr('fill',C.muted).style('font-size','9px');
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  // Color legend
+  const legW = 120;
+  const leg = svg.append('g').attr('transform',`translate(${W-legW-20},${m.top})`);
+  const defs = svg.append('defs');
+  const grad = defs.append('linearGradient').attr('id','geoGrad');
+  grad.append('stop').attr('offset','0%').attr('stop-color',colorScale(2));
+  grad.append('stop').attr('offset','50%').attr('stop-color',colorScale(3.5));
+  grad.append('stop').attr('offset','100%').attr('stop-color',colorScale(5));
+  leg.append('rect').attr('width',legW).attr('height',10).attr('fill','url(#geoGrad)').attr('rx',3);
+  leg.append('text').attr('y',22).text('2.0').attr('fill',C.muted).style('font-size','9px');
+  leg.append('text').attr('x',legW).attr('y',22).attr('text-anchor','end').text('5.0 ⭐').attr('fill',C.muted).style('font-size','9px');
+}
+
+// ─── Chart 5: Cross-Platform Rating Delta ────────────────────────────────
+function drawRatingDelta(d) {
+  if (!d.bubbles) return;
+  const data = d.bubbles.filter(b => b.ta != null && b.r != null);
+  const svg = d3.select('#chart-rating-delta'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 300;
+  const m = {top: 20, right: 20, bottom: 40, left: 45};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+
+  if (data.length < 10) {
+    g.append('text').attr('x',w/2).attr('y',h/2).attr('text-anchor','middle')
+      .text(`Not enough cross-platform data (${data.length} companies)`).attr('fill',C.muted).style('font-size','12px');
+    return;
+  }
+
+  const x = d3.scaleLinear().domain([2, 5]).range([0, w]);
+  const y = d3.scaleLinear().domain([2, 5]).range([h, 0]);
+  const maxRv = Math.max(...data.map(b => b.rv));
+
+  // Grid
+  [2.5,3,3.5,4,4.5,5].forEach(v => {
+    g.append('line').attr('x1',x(v)).attr('x2',x(v)).attr('y1',0).attr('y2',h).attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(v)).attr('y2',y(v)).attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+
+  // Diagonal line (agreement)
+  g.append('line').attr('x1',x(2)).attr('y1',y(2)).attr('x2',x(5)).attr('y2',y(5))
+    .attr('stroke',C.muted).attr('stroke-width',2).attr('stroke-dasharray','6,4');
+  g.append('text').attr('x',x(4.7)).attr('y',y(4.85)).text('Agreement').attr('fill',C.muted).style('font-size','9px');
+
+  // Dots
+  let above = 0, below = 0, onLine = 0;
+  data.forEach(b => {
+    const delta = b.ta - b.r;
+    const color = Math.abs(delta) < 0.2 ? C.muted : delta > 0 ? C.orange : C.blue;
+    if (delta > 0.2) above++; else if (delta < -0.2) below++; else onLine++;
+    const r = 3 + Math.sqrt(b.rv / maxRv) * 8;
+    g.append('circle').attr('cx',x(b.r)).attr('cy',y(b.ta)).attr('r',r)
+      .attr('fill',color).attr('opacity',0.65).attr('stroke',color).attr('stroke-width',0.5)
+      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>Google: ${b.r} | TA: ${b.ta}<br>Delta: ${delta>0?'+':''}${delta.toFixed(1)} | ${b.rv.toLocaleString()} reviews`))
+      .on('mouseleave', hideTip);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(6)).selectAll('text').attr('fill',C.muted);
+  g.append('g').call(d3.axisLeft(y).ticks(6)).selectAll('text').attr('fill',C.muted);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  svg.append('text').attr('x',W/2).attr('y',H-5).attr('text-anchor','middle')
+    .text('Google Rating →').attr('fill',C.muted).style('font-size','10px');
+  svg.append('text').attr('x',12).attr('y',H/2).attr('text-anchor','middle').attr('transform',`rotate(-90,12,${H/2})`)
+    .text('TripAdvisor Rating →').attr('fill',C.muted).style('font-size','10px');
+
+  // Stats
+  svg.append('text').attr('x',W-20).attr('y',16).attr('text-anchor','end')
+    .text(`${above} overrated on TA | ${below} underrated | ${onLine} agree`).attr('fill',C.dim).style('font-size','9px');
+}
+
 function updateAll(d) {
   updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d);
   drawRatings(d); drawFieldCompleteness(d); drawServices(d); drawBudget(d);
+  drawOpportunityMatrix(d); drawSentimentComplaints(d); drawPriceQuality(d);
+  drawGeoConstellation(d); drawRatingDelta(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
   if (window.bubbleReady) window.updateBubbles(d);
@@ -521,7 +831,7 @@ function initMountain() {
   const dl = new THREE.DirectionalLight(0xffffff, 0.8); dl.position.set(10,15,10); scene.add(dl);
   const grid = new THREE.GridHelper(12,12,0x21262d,0x21262d); grid.position.set(2.5,-0.01,2.5); scene.add(grid);
   ['BCN','MAD','VAL','SEV','BIL','Otras'].forEach((c,i)=>{const s=makeLabel(c);s.position.set(-0.8,-0.3,i);scene.add(s);});
-  ['0-29','30-49','50-69','70-89','90+'].forEach((b,i)=>{const s=makeLabel(b);s.position.set(i,-0.3,5.8);scene.add(s);});
+  ['0-29','30-49','50-69','70-89','90+'].forEach((b,i)=>{const s=makeLabel(b);s.position.set(i+0.5,-0.3,6.2);scene.add(s);});
   window.mountainReady = true;
   if (window.DATA) window.updateMountain(window.DATA);
   animate();
@@ -564,7 +874,7 @@ window.updateMountain = function(d) {
   const pos=geo.attributes.position;
   const colors=new Float32Array(pos.count*3);
   for(let i=0;i<pos.count;i++){
-    const fx=(pos.getX(i)/5)*(matrix[0].length-1);
+    const fx=((pos.getX(i)+2.5)/5)*(matrix[0].length-1);
     const fz=((pos.getZ(i)+3)/6)*(matrix.length-1);
     const h=logScale(bilinearInterp(matrix,fx,fz));
     pos.setY(i,h*6);
@@ -614,7 +924,7 @@ function initBubbles() {
   bControls = new OrbitControls(bCamera, bRenderer.domElement);
   bControls.enableDamping = true; bControls.dampingFactor = 0.05;
   bControls.minDistance = 3; bControls.maxDistance = 50;
-  bControls.target.set(5, 3, 5);
+  bControls.target.set(5, 2.5, 5);
   bScene.add(new THREE.AmbientLight(0xffffff, 0.6));
   const dl = new THREE.DirectionalLight(0xffffff, 0.7); dl.position.set(15, 20, 10); bScene.add(dl);
 
@@ -721,7 +1031,7 @@ window.updateBubbles = function(d) {
     const x = ((b.r - 2) / 3) * 10;
     const y = (b.s / 100) * 8;
     const z = logRv(b.rv) * 10;
-    const size = 0.08 + Math.min(b.ct, 50) / 50 * 0.25; // size by contacts
+    const size = 0.15 + logRv(b.rv) * 0.25; // size by reviews, all visible
     mesh.position.set(x, y, z);
     mesh.scale.setScalar(size);
     mesh.userData = b;
@@ -769,7 +1079,7 @@ function initContact4D() {
   c4Controls = new OrbitControls(c4Camera, c4Renderer.domElement);
   c4Controls.enableDamping = true; c4Controls.dampingFactor = 0.05;
   c4Controls.minDistance = 4; c4Controls.maxDistance = 30;
-  c4Controls.target.set(3, 1.5, 1);
+  c4Controls.target.set(3, 0, 1);
   c4Scene.add(new THREE.AmbientLight(0xffffff, 0.5));
   const dl = new THREE.DirectionalLight(0xffffff, 0.8); dl.position.set(10, 15, 10); c4Scene.add(dl);
 
@@ -782,7 +1092,7 @@ function initContact4D() {
   const scoreLbls = ['0-29','30-49','50-69','70-89','90+'];
   scoreLbls.forEach((l, i) => {
     const s = makeBubbleLabel(l);
-    s.position.set(i * 1.5 + 0.5, -0.4, 2.8);
+    s.position.set(i * 1.5 + 0.5, -0.6, 3.2);
     s.scale.set(1.2, 0.3, 1);
     c4Scene.add(s);
   });
@@ -791,8 +1101,8 @@ function initContact4D() {
   combos.forEach((l, i) => {
     const s = makeBubbleLabel(l);
     const z = [0, 0.8, 1.6, 2.4][i];
-    s.position.set(-1, -0.4, z);
-    s.scale.set(2, 0.3, 1);
+    s.position.set(-1.5, -0.6, z);
+    s.scale.set(1.8, 0.3, 1);
     c4Scene.add(s);
   });
 
