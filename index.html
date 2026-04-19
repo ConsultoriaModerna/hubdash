@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HubDash — CRM Health Monitor</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160/examples/jsm/"
+  }
+}
+</script>
+<style>
+:root {
+  --bg: #0d1117; --card: #161b22; --border: #30363d; --grid: #21262d;
+  --text: #e6edf3; --muted: #8b949e; --dim: #484f58;
+  --red: #f85149; --orange: #f0883e; --yellow: #d29922;
+  --green: #3fb950; --cyan: #39d353; --blue: #58a6ff; --purple: #bc8cff;
+  --teal: #2ea043;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--bg); color: var(--text); min-height: 100vh;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 24px; border-bottom: 1px solid var(--border);
+}
+.header h1 { font-size: 20px; font-weight: 700; }
+.header h1 span { color: var(--blue); }
+.header-right { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
+.btn {
+  background: var(--card); border: 1px solid var(--border); color: var(--text);
+  padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 12px;
+  transition: border-color 0.2s;
+}
+.btn:hover { border-color: var(--blue); }
+.btn.active { border-color: var(--green); color: var(--green); }
+
+.dashboard {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; padding: 16px 24px; max-width: 1600px; margin: 0 auto;
+}
+.kpi-row {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+}
+.kpi-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px; text-align: center;
+}
+.kpi-value { font-size: 28px; font-weight: 700; margin: 4px 0; }
+.kpi-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.kpi-sub { font-size: 11px; color: var(--dim); margin-top: 4px; }
+
+.panel {
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px; min-height: 300px;
+}
+.panel-title {
+  font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 12px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.panel-full { grid-column: 1 / -1; }
+.mountain-controls { display: flex; gap: 8px; margin-bottom: 8px; }
+
+svg text { fill: var(--muted); font-size: 11px; }
+.tooltip {
+  position: fixed; background: #1c2128; border: 1px solid var(--border);
+  border-radius: 6px; padding: 8px 12px; font-size: 12px; pointer-events: none;
+  z-index: 100; color: var(--text); display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.log-panel {
+  background: #0d1117; border: 1px solid var(--border); border-radius: 6px;
+  padding: 10px; font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 11px; color: var(--muted); max-height: 250px;
+  overflow-y: auto; white-space: pre-wrap; line-height: 1.6;
+}
+#mountain-canvas { width: 100%; height: 400px; border-radius: 6px; cursor: grab; }
+#mountain-canvas:active { cursor: grabbing; }
+.sync-badge {
+  display: inline-block; background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 2px 10px; font-size: 10px; color: var(--dim);
+}
+@media (max-width: 900px) {
+  .dashboard { grid-template-columns: 1fr; }
+  .kpi-row { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1><span>Hub</span>Dash <small style="font-size:11px;color:var(--dim);font-weight:400">v0.1.0</small></h1>
+  <div class="header-right">
+    <span class="sync-badge" id="sync-time">Loading...</span>
+    <button class="btn" onclick="loadData()">Reload</button>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="kpi-label">Companies</div><div class="kpi-value" id="kpi-companies">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Contacts</div><div class="kpi-value" id="kpi-contacts">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Enriched (GP)</div><div class="kpi-value" id="kpi-enriched" style="color:var(--green)">—</div><div class="kpi-sub" id="kpi-enriched-pct"></div></div>
+    <div class="kpi-card"><div class="kpi-label">Avg Data Score</div><div class="kpi-value" id="kpi-scores">—</div><div class="kpi-sub">Companies / Contacts</div></div>
+    <div class="kpi-card"><div class="kpi-label">Budget (Month)</div><div class="kpi-value" id="kpi-budget" style="color:var(--yellow)">—</div><div class="kpi-sub" id="kpi-budget-sub"></div></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Data Score Distribution</div>
+    <svg id="chart-scores" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Enrichment Pipeline</div>
+    <svg id="chart-pipeline" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Companies por Ciudad</div>
+    <svg id="chart-cities" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Contact Assets</div>
+    <svg id="chart-assets" width="100%" height="260"></svg>
+  </div>
+
+  <div class="panel panel-full">
+    <div class="panel-title">CRM Mountain — City x Score x Volume</div>
+    <div class="mountain-controls">
+      <button class="btn active" id="mtn-co" onclick="setMountainMode('companies')">Companies</button>
+      <button class="btn" id="mtn-ct" onclick="setMountainMode('contacts')">Contacts</button>
+    </div>
+    <canvas id="mountain-canvas"></canvas>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Budget Tracker</div>
+    <svg id="chart-budget" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Enrichment Log</div>
+    <div class="log-panel" id="log-panel">Synced data — no live log on web version.</div>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const C = {
+  red: '#f85149', orange: '#f0883e', yellow: '#d29922',
+  green: '#3fb950', cyan: '#39d353', blue: '#58a6ff',
+  purple: '#bc8cff', teal: '#2ea043', muted: '#8b949e',
+  text: '#e6edf3', card: '#161b22', border: '#30363d', grid: '#21262d',
+};
+const SCORE_COLORS = [C.red, C.orange, C.yellow, C.green, C.cyan];
+const BUCKET_LABELS = ['0-29', '30-49', '50-69', '70-89', '90-100'];
+
+window.DATA = null;
+const tooltip = d3.select('#tooltip');
+function showTip(evt, html) { tooltip.html(html).style('display','block').style('left',(evt.clientX+12)+'px').style('top',(evt.clientY-10)+'px'); }
+function hideTip() { tooltip.style('display','none'); }
+function fmt(n) { return n != null ? n.toLocaleString('es-ES') : '—'; }
+
+function updateKPIs(d) {
+  document.getElementById('kpi-companies').textContent = fmt(d.summary.companies_total);
+  document.getElementById('kpi-contacts').textContent = fmt(d.summary.contacts_total);
+  document.getElementById('kpi-enriched').textContent = fmt(d.summary.enriched_gp);
+  const pct = d.summary.companies_total ? (d.summary.enriched_gp / d.summary.companies_total * 100).toFixed(1) : 0;
+  document.getElementById('kpi-enriched-pct').textContent = pct + '% del total';
+  document.getElementById('kpi-scores').innerHTML =
+    `<span style="color:${C.blue}">${d.summary.avg_score_companies}</span> / <span style="color:${C.purple}">${d.summary.avg_score_contacts}</span>`;
+  const budget = d.budget || {};
+  const months = budget.months || {};
+  const mkeys = Object.keys(months);
+  const mdata = mkeys.length ? months[mkeys[mkeys.length - 1]] : {};
+  const spent = mdata.cost || 0;
+  const limit = budget.config?.monthly_limit || 20;
+  document.getElementById('kpi-budget').textContent = `€${spent.toFixed(2)}`;
+  document.getElementById('kpi-budget-sub').textContent = `de €${limit} limite`;
+}
+
+function drawScores(d) {
+  const svg = d3.select('#chart-scores'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const m = {top: 20, right: 20, bottom: 40, left: 55};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+  const coVals = BUCKET_LABELS.map(k => d.scores.companies[k] || 0);
+  const ctVals = BUCKET_LABELS.map(k => d.scores.contacts[k] || 0);
+  const maxVal = d3.max([...coVals, ...ctVals]);
+  const x = d3.scaleBand().domain(BUCKET_LABELS).range([0, w]).padding(0.3);
+  const y = d3.scaleLinear().domain([0, maxVal * 1.1]).range([h, 0]);
+  const barW = x.bandwidth() / 2 - 2;
+  g.selectAll('.grid').data(y.ticks(5)).enter().append('line')
+    .attr('x1',0).attr('x2',w).attr('y1',d=>y(d)).attr('y2',d=>y(d)).attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  g.selectAll('.bar-co').data(coVals).enter().append('rect')
+    .attr('x',(d,i)=>x(BUCKET_LABELS[i])).attr('y',d=>y(d)).attr('width',barW).attr('height',d=>h-y(d))
+    .attr('fill',(d,i)=>SCORE_COLORS[i]).attr('opacity',0.9).attr('rx',3)
+    .on('mousemove',(evt,d)=>{const i=coVals.indexOf(d);showTip(evt,`<b>Companies ${BUCKET_LABELS[i]}</b><br>${fmt(d)}`);}).on('mouseleave',hideTip);
+  g.selectAll('.bar-ct').data(ctVals).enter().append('rect')
+    .attr('x',(d,i)=>x(BUCKET_LABELS[i])+barW+4).attr('y',d=>y(d)).attr('width',barW).attr('height',d=>h-y(d))
+    .attr('fill',(d,i)=>SCORE_COLORS[i]).attr('opacity',0.5).attr('rx',3)
+    .on('mousemove',(evt,d)=>{const i=ctVals.indexOf(d);showTip(evt,`<b>Contacts ${BUCKET_LABELS[i]}</b><br>${fmt(d)}`);}).on('mouseleave',hideTip);
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('~s'))).selectAll('text').attr('fill',C.muted);
+  const leg = svg.append('g').attr('transform',`translate(${m.left+10},12)`);
+  leg.append('rect').attr('width',10).attr('height',10).attr('fill',C.blue).attr('rx',2);
+  leg.append('text').attr('x',14).attr('y',9).text('Companies').attr('fill',C.muted).style('font-size','10px');
+  leg.append('rect').attr('x',90).attr('width',10).attr('height',10).attr('fill',C.purple).attr('opacity',0.5).attr('rx',2);
+  leg.append('text').attr('x',104).attr('y',9).text('Contacts').attr('fill',C.muted).style('font-size','10px');
+}
+
+function drawPipeline(d) {
+  const svg = d3.select('#chart-pipeline'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const m = {top:10, right:80, bottom:10, left:110};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+  const p = d.pipeline;
+  const items = [
+    {label:'Total Companies',val:p.total,color:C.muted},
+    {label:'Con place_id',val:p.with_place_id,color:C.blue},
+    {label:'Phase A Pend.',val:p.phase_a_pending,color:C.orange},
+    {label:'Enriched (GP)',val:p.enriched,color:C.green},
+    {label:'Phase B Pend.',val:p.phase_b_pending,color:C.purple},
+  ];
+  const maxVal = d3.max(items,d=>d.val);
+  const x = d3.scaleLinear().domain([0,maxVal]).range([0,w]);
+  const y = d3.scaleBand().domain(items.map(d=>d.label)).range([0,h]).padding(0.35);
+  g.selectAll('.bar').data(items).enter().append('rect')
+    .attr('x',0).attr('y',d=>y(d.label)).attr('width',d=>x(d.val)).attr('height',y.bandwidth())
+    .attr('fill',d=>d.color).attr('opacity',0.8).attr('rx',4)
+    .on('mousemove',(evt,d)=>showTip(evt,`<b>${d.label}</b><br>${fmt(d.val)}`)).on('mouseleave',hideTip);
+  g.selectAll('.label').data(items).enter().append('text')
+    .attr('x',-8).attr('y',d=>y(d.label)+y.bandwidth()/2).attr('text-anchor','end').attr('dominant-baseline','middle')
+    .text(d=>d.label).attr('fill',C.muted).style('font-size','11px');
+  g.selectAll('.val').data(items).enter().append('text')
+    .attr('x',d=>x(d.val)+6).attr('y',d=>y(d.label)+y.bandwidth()/2).attr('dominant-baseline','middle')
+    .text(d=>fmt(d.val)).attr('fill',C.text).style('font-size','11px').style('font-weight','600');
+}
+
+function drawCities(d) {
+  const svg = d3.select('#chart-cities'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const radius = Math.min(W,H)/2 - 30;
+  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
+  const cityColors = [C.blue,C.purple,C.orange,C.yellow,C.teal,C.muted];
+  const pie = d3.pie().value(d=>d.total).sort(null);
+  const arc = d3.arc().innerRadius(radius*0.55).outerRadius(radius);
+  const arcH = d3.arc().innerRadius(radius*0.55).outerRadius(radius+6);
+  const arcs = g.selectAll('.arc').data(pie(d.cities)).enter().append('g');
+  arcs.append('path').attr('d',arc).attr('fill',(d,i)=>cityColors[i%6]).attr('stroke','#161b22').attr('stroke-width',2)
+    .on('mousemove',function(evt,dd){d3.select(this).transition().duration(100).attr('d',arcH);showTip(evt,`<b>${dd.data.city}</b><br>${fmt(dd.data.total)} total<br>${fmt(dd.data.enriched)} enriched`);})
+    .on('mouseleave',function(){d3.select(this).transition().duration(200).attr('d',arc);hideTip();});
+  const total = d3.sum(d.cities,c=>c.total);
+  g.append('text').attr('text-anchor','middle').attr('dy','-0.3em').text(fmt(total)).attr('fill',C.text).style('font-size','18px').style('font-weight','700');
+  g.append('text').attr('text-anchor','middle').attr('dy','1.2em').text('companies').attr('fill',C.muted).style('font-size','11px');
+  const leg = svg.append('g').attr('transform',`translate(${W-120},20)`);
+  d.cities.forEach((c,i)=>{leg.append('rect').attr('y',i*18).attr('width',10).attr('height',10).attr('fill',cityColors[i]).attr('rx',2);leg.append('text').attr('x',14).attr('y',i*18+9).text(c.city).attr('fill',C.muted).style('font-size','10px');});
+}
+
+function drawAssets(d) {
+  const svg = d3.select('#chart-assets'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const m = {top:10, right:100, bottom:10, left:100};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+  const a = d.contact_assets;
+  const items = [{label:'Mobile/WhatsApp',val:a.mobile,color:C.green},{label:'Email',val:a.email,color:C.blue},{label:'Telefono fijo',val:a.phone,color:C.orange},{label:'Total Contacts',val:a.total,color:C.muted}];
+  const x = d3.scaleLinear().domain([0,a.total]).range([0,w]);
+  const y = d3.scaleBand().domain(items.map(d=>d.label)).range([0,h]).padding(0.35);
+  g.selectAll('.bar').data(items).enter().append('rect').attr('x',0).attr('y',d=>y(d.label)).attr('width',d=>x(d.val)).attr('height',y.bandwidth()).attr('fill',d=>d.color).attr('opacity',0.8).attr('rx',4)
+    .on('mousemove',(evt,d)=>{showTip(evt,`<b>${d.label}</b><br>${fmt(d.val)} (${(d.val/a.total*100).toFixed(1)}%)`);}).on('mouseleave',hideTip);
+  g.selectAll('.label').data(items).enter().append('text').attr('x',-8).attr('y',d=>y(d.label)+y.bandwidth()/2).attr('text-anchor','end').attr('dominant-baseline','middle').text(d=>d.label).attr('fill',C.muted).style('font-size','11px');
+  g.selectAll('.val').data(items).enter().append('text').attr('x',d=>x(d.val)+6).attr('y',d=>y(d.label)+y.bandwidth()/2).attr('dominant-baseline','middle')
+    .text(d=>`${fmt(d.val)} (${(d.val/a.total*100).toFixed(0)}%)`).attr('fill',C.text).style('font-size','11px').style('font-weight','600');
+}
+
+function drawBudget(d) {
+  const svg = d3.select('#chart-budget'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2+30})`);
+  const radius = Math.min(W,H)/2 - 40;
+  const budget = d.budget || {};
+  const months = budget.months || {};
+  const mkeys = Object.keys(months);
+  const mdata = mkeys.length ? months[mkeys[mkeys.length-1]] : {};
+  const monthSpent = mdata.cost || 0;
+  const monthLimit = budget.config?.monthly_limit || 20;
+  const monthPct = Math.min(monthSpent/monthLimit,1);
+  const arcM = d3.arc().innerRadius(radius-18).outerRadius(radius).startAngle(-Math.PI/2);
+  g.append('path').datum({endAngle:Math.PI/2}).attr('d',arcM).attr('fill',C.grid);
+  const mc = monthPct<0.6?C.green:monthPct<0.85?C.yellow:C.red;
+  g.append('path').datum({endAngle:-Math.PI/2+Math.PI*monthPct}).attr('d',arcM).attr('fill',mc);
+  g.append('text').attr('text-anchor','middle').attr('dy','-1.5em').text(`€${monthSpent.toFixed(2)}`).attr('fill',C.text).style('font-size','22px').style('font-weight','700');
+  g.append('text').attr('text-anchor','middle').attr('dy','0em').text(`de €${monthLimit} mes`).attr('fill',C.muted).style('font-size','12px');
+  const pd = mdata.place_details||0, ts = mdata.text_search||0;
+  g.append('text').attr('text-anchor','middle').attr('dy','1.8em').text(`${pd} PD + ${ts} TS calls`).attr('fill',C.dim).style('font-size','11px');
+  const st = d.enrichment || {};
+  svg.append('text').attr('x',W/2).attr('y',H-10).attr('text-anchor','middle')
+    .text(`Runs: ${st.runs||0} | Enriched: ${st.total_enriched_a||0} A + ${st.total_enriched_b||0} B | Not found: ${st.total_not_found||0}`)
+    .attr('fill',C.dim).style('font-size','10px');
+}
+
+function updateAll(d) {
+  updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d); drawBudget(d);
+  document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
+  if (window.mountainReady) window.updateMountain(d);
+}
+
+async function loadData() {
+  try {
+    // Try local API first (for localhost:8086), fall back to static data.json
+    let resp;
+    try { resp = await fetch('/api/data', {signal: AbortSignal.timeout(2000)}); } catch(e) {}
+    if (!resp || !resp.ok) resp = await fetch('data.json');
+    window.DATA = await resp.json();
+    updateAll(window.DATA);
+    const ts = window.DATA.generated_at ? new Date(window.DATA.generated_at).toLocaleString('es-ES') : 'now';
+    document.getElementById('sync-time').textContent = 'Synced: ' + ts;
+  } catch(e) {
+    document.getElementById('sync-time').textContent = 'Error: ' + e.message;
+  }
+}
+
+loadData();
+window.addEventListener('resize', () => { if (window.DATA) updateAll(window.DATA); });
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const canvas = document.getElementById('mountain-canvas');
+let scene, camera, renderer, controls, surfaceMesh, wireframeMesh;
+let mountainMode = 'companies';
+window.mountainReady = false;
+
+function initMountain() {
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x0d1117);
+  renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  resizeRenderer();
+  camera = new THREE.PerspectiveCamera(45, canvas.clientWidth/canvas.clientHeight, 0.1, 100);
+  camera.position.set(10, 8, 12);
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; controls.dampingFactor = 0.05;
+  controls.minDistance = 5; controls.maxDistance = 35;
+  controls.maxPolarAngle = Math.PI / 2.1;
+  controls.target.set(2.5, 0, 3);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+  const dl = new THREE.DirectionalLight(0xffffff, 0.8); dl.position.set(10,15,10); scene.add(dl);
+  const grid = new THREE.GridHelper(12,12,0x21262d,0x21262d); grid.position.set(2.5,-0.01,2.5); scene.add(grid);
+  ['BCN','MAD','VAL','SEV','BIL','Otras'].forEach((c,i)=>{const s=makeLabel(c);s.position.set(-0.8,-0.3,i);scene.add(s);});
+  ['0-29','30-49','50-69','70-89','90+'].forEach((b,i)=>{const s=makeLabel(b);s.position.set(i,-0.3,5.8);scene.add(s);});
+  window.mountainReady = true;
+  if (window.DATA) window.updateMountain(window.DATA);
+  animate();
+}
+
+function makeLabel(text) {
+  const c2 = document.createElement('canvas'); c2.width=128; c2.height=32;
+  const ctx = c2.getContext('2d'); ctx.fillStyle='#8b949e';
+  ctx.font='bold 16px -apple-system,sans-serif'; ctx.textAlign='center'; ctx.fillText(text,64,22);
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c2),transparent:true}));
+  s.scale.set(1.2,0.3,1); return s;
+}
+
+function heightToColor(h) {
+  const c = new THREE.Color();
+  if(h<0.25) c.setRGB(0.1,0.2+h*2,0.5+h*2);
+  else if(h<0.5) c.setRGB(0.1,0.5+(h-0.25)*2,0.8-(h-0.25)*2);
+  else if(h<0.75) c.setRGB((h-0.5)*4,0.8,0.2);
+  else c.setRGB(1,0.8-(h-0.75)*3,0.1);
+  return c;
+}
+
+function bilinearInterp(matrix,fx,fy) {
+  const rows=matrix.length, cols=matrix[0].length;
+  const x=Math.max(0,Math.min(fx,cols-1)), y=Math.max(0,Math.min(fy,rows-1));
+  const x0=Math.floor(x),x1=Math.min(x0+1,cols-1),y0=Math.floor(y),y1=Math.min(y0+1,rows-1);
+  const tx=x-x0,ty=y-y0;
+  return (1-tx)*(1-ty)*matrix[y0][x0]+tx*(1-ty)*matrix[y0][x1]+(1-tx)*ty*matrix[y1][x0]+tx*ty*matrix[y1][x1];
+}
+
+window.updateMountain = function(d) {
+  if(!d.mountain) return;
+  const matrix = mountainMode==='companies' ? d.mountain.companies : d.mountain.contacts;
+  if(!matrix||!matrix.length) return;
+  if(surfaceMesh){scene.remove(surfaceMesh);surfaceMesh.geometry.dispose();surfaceMesh.material.dispose();}
+  if(wireframeMesh){scene.remove(wireframeMesh);wireframeMesh.geometry.dispose();wireframeMesh.material.dispose();}
+  const maxVal=Math.max(1,...matrix.flat());
+  const logScale=v=>v>0?Math.log10(v+1)/Math.log10(maxVal+1):0;
+  const geo=new THREE.PlaneGeometry(5,6,20,24); geo.rotateX(-Math.PI/2);
+  const pos=geo.attributes.position;
+  const colors=new Float32Array(pos.count*3);
+  for(let i=0;i<pos.count;i++){
+    const fx=(pos.getX(i)/5)*(matrix[0].length-1);
+    const fz=((pos.getZ(i)+3)/6)*(matrix.length-1);
+    const h=logScale(bilinearInterp(matrix,fx,fz));
+    pos.setY(i,h*6);
+    const c=heightToColor(h); colors[i*3]=c.r;colors[i*3+1]=c.g;colors[i*3+2]=c.b;
+  }
+  geo.setAttribute('color',new THREE.BufferAttribute(colors,3));
+  geo.computeVertexNormals(); geo.translate(2.5,0,2.5);
+  surfaceMesh=new THREE.Mesh(geo,new THREE.MeshPhongMaterial({vertexColors:true,side:THREE.DoubleSide,transparent:true,opacity:0.88,shininess:30}));
+  scene.add(surfaceMesh);
+  wireframeMesh=new THREE.LineSegments(new THREE.WireframeGeometry(geo),new THREE.LineBasicMaterial({color:0x30363d,transparent:true,opacity:0.25}));
+  scene.add(wireframeMesh);
+};
+
+window.setMountainMode = function(mode) {
+  mountainMode = mode;
+  document.getElementById('mtn-co').classList.toggle('active',mode==='companies');
+  document.getElementById('mtn-ct').classList.toggle('active',mode==='contacts');
+  if(window.DATA) window.updateMountain(window.DATA);
+};
+
+function resizeRenderer(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);if(camera){camera.aspect=w/h;camera.updateProjectionMatrix();}}
+function animate(){requestAnimationFrame(animate);controls.update();renderer.render(scene,camera);}
+window.addEventListener('resize',resizeRenderer);
+initMountain();
+</script>
+</body>
+</html>
