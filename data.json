@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-19T23:22:09",
-  "fetch_seconds": 58.7,
+  "generated_at": "2026-04-20T00:05:44",
+  "fetch_seconds": 67.7,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
-    "enriched_gp": 2097,
+    "enriched_gp": 2122,
     "avg_score_companies": 52.9,
     "avg_score_contacts": 47.3
   },
@@ -12,9 +12,9 @@
     "companies": {
       "0-29": 6249,
       "30-49": 28640,
-      "50-69": 23852,
-      "70-89": 15414,
-      "90-100": 480
+      "50-69": 23850,
+      "70-89": 15410,
+      "90-100": 486
     },
     "contacts": {
       "0-29": 12777,
@@ -27,8 +27,8 @@
   "pipeline": {
     "total": 74635,
     "with_place_id": 22877,
-    "phase_a_pending": 20763,
-    "enriched": 2097,
+    "phase_a_pending": 20736,
+    "enriched": 2122,
     "phase_b_pending": 51758
   },
   "cities": [
@@ -40,7 +40,7 @@
     {
       "city": "Madrid",
       "total": 5805,
-      "enriched": 223
+      "enriched": 253
     },
     {
       "city": "Valencia",
@@ -60,7 +60,7 @@
     {
       "city": "Otras",
       "total": 57371,
-      "enriched": 1134
+      "enriched": 1129
     }
   ],
   "mountain": {
@@ -90,9 +90,9 @@
       [
         83,
         1436,
-        1807,
-        2436,
-        43
+        1805,
+        2431,
+        50
       ],
       [
         22,
@@ -119,8 +119,8 @@
         5712,
         23957,
         18732,
-        8890,
-        80
+        8891,
+        79
       ]
     ],
     "contacts": [
@@ -256,6 +256,22 @@
       "rg": null
     },
     {
+      "n": "Centro Comercial las Rosas",
+      "r": 4.0,
+      "rv": 18507,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Centro comercial",
+      "la": 40.4187,
+      "ln": -3.621,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Arabia Cafe-Restaurant",
       "r": 4.8,
       "rv": 17442,
@@ -316,6 +332,22 @@
       "tp": "",
       "la": 39.4797,
       "ln": -0.3897,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Casa Mingo",
+      "r": 4.1,
+      "rv": 14193,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 40.425,
+      "ln": -3.7253,
       "ta": null,
       "rg": null
     },
@@ -448,6 +480,22 @@
       "rg": null
     },
     {
+      "n": "Gran Vía de Hortaleza Shopping Mall",
+      "r": 4.2,
+      "rv": 11729,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "",
+      "tc": "",
+      "tp": "Centro comercial",
+      "la": 40.4696,
+      "ln": -3.641,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Flax & Kale Passage",
       "r": 4.3,
       "rv": 11513,
@@ -574,6 +622,22 @@
       "ln": 2.1886,
       "ta": 4.3,
       "rg": 4.4
+    },
+    {
+      "n": "Pastelería Mallorca",
+      "r": 4.5,
+      "rv": 9863,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Pastelería",
+      "la": 40.4291,
+      "ln": -3.684,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Sushiaoi",
@@ -1104,6 +1168,22 @@
       "rg": 4.3
     },
     {
+      "n": "Restaurante el √ëeru",
+      "r": 4.4,
+      "rv": 6382,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4165,
+      "ln": -3.7078,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "La Marea",
       "r": 4.7,
       "rv": 6356,
@@ -1456,6 +1536,22 @@
       "rg": null
     },
     {
+      "n": "Rincón Asturiano",
+      "r": 4.2,
+      "rv": 5637,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.404,
+      "ln": -3.6923,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Jenkin's - Corts Valencianes",
       "r": 4.4,
       "rv": 5623,
@@ -1516,6 +1612,22 @@
       "tp": "",
       "la": 37.39,
       "ln": -5.9904,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Caluana",
+      "r": 4.4,
+      "rv": 5339,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4151,
+      "ln": -3.705,
       "ta": null,
       "rg": null
     },
@@ -4320,6 +4432,22 @@
       "rg": 4.6
     },
     {
+      "n": "Cherry Pecas",
+      "r": 4.2,
+      "rv": 2698,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante mexicano",
+      "la": 40.4411,
+      "ln": -3.7153,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "L'Olive",
       "r": 4.6,
       "rv": 2695,
@@ -4350,6 +4478,22 @@
       "ln": 2.2051,
       "ta": 4.9,
       "rg": 4.7
+    },
+    {
+      "n": "Restaurante Rías Bajas",
+      "r": 4.5,
+      "rv": 2668,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4426,
+      "ln": -3.6712,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Esquinita de Blai",
@@ -5568,6 +5712,22 @@
       "rg": null
     },
     {
+      "n": "Restaurante Etíope Nuria",
+      "r": 4.6,
+      "rv": 2207,
+      "s": 80,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante etíope",
+      "la": 40.4287,
+      "ln": -3.7031,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Ben Tips",
       "r": 4.0,
       "rv": 2206,
@@ -6044,6 +6204,22 @@
       "tp": "Restaurante vasco",
       "la": 40.4141,
       "ln": -3.6975,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "La Doña",
+      "r": 4.1,
+      "rv": 2015,
+      "s": 80,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Cafetería",
+      "la": 40.426,
+      "ln": -3.7072,
       "ta": null,
       "rg": null
     },
@@ -7536,6 +7712,22 @@
       "rg": null
     },
     {
+      "n": "Campanoli de Ponzano",
+      "r": 4.4,
+      "rv": 1623,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Bar",
+      "la": 40.4459,
+      "ln": -3.6986,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Xino Mandarino",
       "r": 4.4,
       "rv": 1622,
@@ -7888,6 +8080,22 @@
       "rg": null
     },
     {
+      "n": "Casa Julian de Tolosa",
+      "r": 4.3,
+      "rv": 1586,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante vasco",
+      "la": 40.4128,
+      "ln": -3.7088,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Carmen GastroBar Gin Club",
       "r": 4.3,
       "rv": 1582,
@@ -7966,233 +8174,25 @@
       "ln": 2.1593,
       "ta": 4.7,
       "rg": null
-    },
-    {
-      "n": "Tasca la Ultramarina",
-      "r": 4.6,
-      "rv": 1572,
-      "s": 77,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "",
-      "tc": "",
-      "tp": "",
-      "la": 41.6501,
-      "ln": -0.9171,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Cervecería Cruz Blanca",
-      "r": 4.1,
-      "rv": 1570,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Neu",
-      "pl": "$",
-      "tc": "Pricing",
-      "tp": "Bar restaurante",
-      "la": 40.4261,
-      "ln": -3.6967,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Ramen House Barcelona",
-      "r": 4.3,
-      "rv": 1567,
-      "s": 67,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "",
-      "tp": "",
-      "la": 41.3814,
-      "ln": 2.1616,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "√äsia Amb Gr√†cia",
-      "r": 4.3,
-      "rv": 1562,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Neu",
-      "pl": "$",
-      "tc": "Wait Time",
-      "tp": "Restaurante asiático",
-      "la": 41.4043,
-      "ln": 2.156,
-      "ta": 4.2,
-      "rg": 4.3
-    },
-    {
-      "n": "Karakala",
-      "r": 4.6,
-      "rv": 1560,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "Slow Service",
-      "tp": "Restaurante libanés",
-      "la": 41.4028,
-      "ln": 2.1566,
-      "ta": 4.4,
-      "rg": 4.6
-    },
-    {
-      "n": "Marchica Shawarma",
-      "r": 4.4,
-      "rv": 1554,
-      "s": 95,
-      "c": "CASCADE",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "",
-      "tp": "",
-      "la": 37.1793,
-      "ln": -3.5986,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "El Menjador de la Beckett",
-      "r": 4.3,
-      "rv": 1545,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Pricing",
-      "tp": "Bar restaurante",
-      "la": 41.4047,
-      "ln": 2.1994,
-      "ta": 3.7,
-      "rg": 4.3
-    },
-    {
-      "n": "Korean Restaurant Kamasot",
-      "r": 4.5,
-      "rv": 1545,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "",
-      "tp": "Restaurante coreano",
-      "la": 41.3989,
-      "ln": 2.1759,
-      "ta": 4.2,
-      "rg": 4.5
-    },
-    {
-      "n": "Restaurante Tajo Bajo",
-      "r": 4.4,
-      "rv": 1535,
-      "s": 67,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "",
-      "tp": "",
-      "la": 41.6563,
-      "ln": -0.8796,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Venta el Gallo",
-      "r": 4.5,
-      "rv": 1535,
-      "s": 67,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "",
-      "tp": "",
-      "la": 37.1819,
-      "ln": -3.584,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Ruda Café",
-      "r": 4.6,
-      "rv": 1531,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "",
-      "tp": "Cafetería",
-      "la": 40.4104,
-      "ln": -3.708,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Paraiso Oriental",
-      "r": 4.2,
-      "rv": 1530,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "Pricing",
-      "tp": "Restaurante asiático",
-      "la": 41.4295,
-      "ln": 2.1587,
-      "ta": 4.0,
-      "rg": 4.2
-    },
-    {
-      "n": "Meson Asador la Esquina",
-      "r": 4.1,
-      "rv": 1526,
-      "s": 52,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "Wait Time",
-      "tp": "",
-      "la": 37.427,
-      "ln": -5.9759,
-      "ta": null,
-      "rg": null
     }
   ],
   "services": {
-    "dine_in": 781,
-    "delivery": 397,
-    "takeout": 596,
-    "reservable": 660,
-    "serves_breakfast": 302,
-    "serves_lunch": 679,
-    "serves_dinner": 676,
-    "serves_brunch": 348,
-    "serves_beer": 731,
-    "serves_wine": 709,
-    "serves_vegetarian": 256,
-    "outdoor_seating": 454,
-    "live_music": 65,
-    "good_for_children": 479,
-    "good_for_groups": 535,
-    "good_for_sports": 51
+    "dine_in": 805,
+    "delivery": 408,
+    "takeout": 614,
+    "reservable": 676,
+    "serves_breakfast": 310,
+    "serves_lunch": 700,
+    "serves_dinner": 695,
+    "serves_brunch": 359,
+    "serves_beer": 754,
+    "serves_wine": 731,
+    "serves_vegetarian": 260,
+    "outdoor_seating": 467,
+    "live_music": 66,
+    "good_for_children": 491,
+    "good_for_groups": 553,
+    "good_for_sports": 55
   },
   "field_completeness": {
     "companies": {
@@ -8204,8 +8204,8 @@
       "address": 66931,
       "industry": 34407,
       "google_place_id": 22877,
-      "gp__rating_count": 2097,
-      "gp__sentiment": 2107,
+      "gp__rating_count": 2127,
+      "gp__sentiment": 2137,
       "num_associated_contacts": 74635,
       "description": 26647,
       "country": 73833
@@ -8349,16 +8349,16 @@
     ]
   ],
   "ratings_dist": {
-    "<3": 59,
-    "3-3.5": 62,
-    "3.5-4": 275,
-    "4-4.5": 967,
-    "4.5-5": 734
+    "<3": 60,
+    "3-3.5": 63,
+    "3.5-4": 280,
+    "4-4.5": 984,
+    "4.5-5": 740
   },
   "sentiment_dist": {
-    "Positive": 1550,
-    "Neutral": 415,
-    "Negative": 142
+    "Positive": 1568,
+    "Neutral": 424,
+    "Negative": 145
   },
   "price_dist": {
     "Free": 0,
@@ -8374,26 +8374,31 @@
     },
     "months": {
       "2026-04": {
-        "place_details": 217,
+        "place_details": 257,
         "text_search": 0,
-        "cost": 4.991,
+        "cost": 5.911,
         "daily": {
           "2026-04-19": {
             "pd": 217,
             "ts": 0,
             "cost": 4.991
+          },
+          "2026-04-20": {
+            "pd": 40,
+            "ts": 0,
+            "cost": 0.92
           }
         }
       }
     }
   },
   "enrichment": {
-    "total_enriched_a": 200,
+    "total_enriched_a": 240,
     "total_enriched_b": 0,
     "total_not_found": 17,
     "total_errors": 0,
-    "last_run": "2026-04-19T22:00:46.093879",
-    "runs": 5
+    "last_run": "2026-04-20T00:04:35.997037",
+    "runs": 6
   },
   "log_tail": "[2026-04-19 18:00:11] Phase A pending: 20812\n[2026-04-19 18:00:11] Phase: A\n[2026-04-19 18:00:11] Batch: 40 (budget allows 67)\n[2026-04-19 18:00:13] Fetched 40 companies\n[2026-04-19 18:00:23]   10/40: 10 enriched\n[2026-04-19 18:00:34]   20/40: 20 enriched\n[2026-04-19 18:00:39]   Place Details HTTP 404 (ChIJPR6QkNAvQg0R0VXnM1SauMo)\n[2026-04-19 18:00:44]   30/40: 29 enriched\n[2026-04-19 18:00:55]   40/40: 39 enriched\n[2026-04-19 18:00:55] Backup: phaseA_20260419_180055.jsonl\n[2026-04-19 18:00:55] Phase A: 39 enriched, 1 not found, 0 errors\n[2026-04-19 18:00:55] API: 40 PD + 0 TS = $0.92 | Month: $4.37\n[2026-04-19 18:00:55] === Run finished ===\n[2026-04-19 22:00:04] === Enrichment run started (dry_run=False) ===\n[2026-04-19 22:00:04] Phase A pending: 20780\n[2026-04-19 22:00:04] Phase: A\n[2026-04-19 22:00:04] Batch: 27 (budget allows 27)\n[2026-04-19 22:00:06] Fetched 27 companies\n[2026-04-19 22:00:27]   10/27: 10 enriched\n[2026-04-19 22:00:38]   20/27: 20 enriched\n[2026-04-19 22:00:46] Backup: phaseA_20260419_220046.jsonl\n[2026-04-19 22:00:46] Phase A: 27 enriched, 0 not found, 0 errors\n[2026-04-19 22:00:46] API: 27 PD + 0 TS = $0.62 | Month: $4.99\n[2026-04-19 22:00:46] === Run finished ===\n[2026-04-19 22:00:46] Syncing HubDash..."
 }
