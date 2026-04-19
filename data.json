@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-04-20T00:10:42",
-  "fetch_seconds": 111.5,
+  "generated_at": "2026-04-20T00:11:05",
+  "fetch_seconds": 128.3,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
-    "enriched_gp": 2278,
+    "enriched_gp": 2281,
     "avg_score_companies": 52.9,
     "avg_score_contacts": 47.3
   },
   "scores": {
     "companies": {
       "0-29": 6249,
-      "30-49": 28612,
-      "50-69": 23849,
-      "70-89": 15415,
+      "30-49": 28609,
+      "50-69": 23850,
+      "70-89": 15417,
       "90-100": 510
     },
     "contacts": {
@@ -27,8 +27,8 @@
   "pipeline": {
     "total": 74635,
     "with_place_id": 22877,
-    "phase_a_pending": 20572,
-    "enriched": 2278,
+    "phase_a_pending": 20570,
+    "enriched": 2281,
     "phase_b_pending": 51758
   },
   "cities": [
@@ -60,7 +60,7 @@
     {
       "city": "Otras",
       "total": 57326,
-      "enriched": 1142
+      "enriched": 1145
     }
   ],
   "mountain": {
@@ -117,9 +117,9 @@
       ],
       [
         5712,
-        23929,
-        18712,
-        8893,
+        23926,
+        18713,
+        8895,
         80
       ]
     ],
@@ -1984,6 +1984,22 @@
       "rg": 4.5
     },
     {
+      "n": "Casa Alberto",
+      "r": 4.4,
+      "rv": 5071,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4138,
+      "ln": -3.7002,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Rita Sibarita",
       "r": 4.2,
       "rv": 4991,
@@ -3021,6 +3037,22 @@
       "la": 41.3791,
       "ln": 2.1919,
       "ta": 3.7,
+      "rg": null
+    },
+    {
+      "n": "Fismuler",
+      "r": 4.4,
+      "rv": 3781,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4282,
+      "ln": -3.6974,
+      "ta": null,
       "rg": null
     },
     {
@@ -4384,6 +4416,22 @@
       "rg": 4.6
     },
     {
+      "n": "Misión Café",
+      "r": 4.4,
+      "rv": 2850,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Cafetería",
+      "la": 40.4242,
+      "ln": -3.7088,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Casa Jaime",
       "r": 4.2,
       "rv": 2835,
@@ -4784,6 +4832,22 @@
       "rg": null
     },
     {
+      "n": "Oishii Ramen Street",
+      "r": 4.0,
+      "rv": 2728,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante especializado en r",
+      "la": 40.4209,
+      "ln": -3.7055,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "La Mamona Chamberí 🍴",
       "r": 4.0,
       "rv": 2721,
@@ -4892,6 +4956,22 @@
       "tp": "Restaurante mexicano",
       "la": 40.4411,
       "ln": -3.7153,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "L‚äôentrecote Café de París",
+      "r": 4.3,
+      "rv": 2698,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante francés",
+      "la": 40.4218,
+      "ln": -3.6867,
       "ta": null,
       "rg": null
     },
@@ -5036,6 +5116,38 @@
       "tp": "Pizzería",
       "la": 40.4354,
       "ln": -3.7176,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "La Lupita",
+      "r": 4.2,
+      "rv": 2643,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mexicano",
+      "la": 40.4226,
+      "ln": -3.6855,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Bumpgreen | Restaurante Barrio Salamanca",
+      "r": 4.3,
+      "rv": 2636,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Neu",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante mediterráneo",
+      "la": 40.4288,
+      "ln": -3.6913,
       "ta": null,
       "rg": null
     },
@@ -6480,6 +6592,22 @@
       "rg": null
     },
     {
+      "n": "Camino",
+      "r": 4.3,
+      "rv": 2113,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4505,
+      "ln": -3.688,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Vlue Arribar",
       "r": 3.6,
       "rv": 2112,
@@ -6560,6 +6688,22 @@
       "rg": 4.3
     },
     {
+      "n": "Pui's Thai Tapas",
+      "r": 4.3,
+      "rv": 2101,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante tailandés",
+      "la": 40.4045,
+      "ln": -3.6966,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Flamenco la Quimera",
       "r": 4.5,
       "rv": 2097,
@@ -6590,6 +6734,22 @@
       "ln": 2.1628,
       "ta": 4.7,
       "rg": 4.6
+    },
+    {
+      "n": "El Asador de Enrique",
+      "r": 4.1,
+      "rv": 2073,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.3485,
+      "ln": -3.7019,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Restaurante Osteria Bravissimo",
@@ -8014,185 +8174,25 @@
       "ln": -1.135,
       "ta": null,
       "rg": null
-    },
-    {
-      "n": "Restaurante Caza Juan",
-      "r": 4.6,
-      "rv": 1729,
-      "s": 85,
-      "c": "Valdezorras",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "",
-      "tp": "",
-      "la": 37.4292,
-      "ln": -5.9247,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Chez Coco",
-      "r": 4.2,
-      "rv": 1728,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante francés",
-      "la": 41.3932,
-      "ln": 2.1473,
-      "ta": 3.9,
-      "rg": 4.1
-    },
-    {
-      "n": "Bienmesabe Vergara",
-      "r": 4.2,
-      "rv": 1719,
-      "s": 100,
-      "c": "Madrid",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante",
-      "la": 40.4292,
-      "ln": -3.68,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Restaurante L'Albufera",
-      "r": 4.4,
-      "rv": 1716,
-      "s": 77,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$$",
-      "tc": "",
-      "tp": "",
-      "la": 40.4618,
-      "ln": -3.692,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Ribs CC Lagoh Sevilla",
-      "r": 4.5,
-      "rv": 1707,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Neg",
-      "pl": "$$",
-      "tc": "Wait Time",
-      "tp": "",
-      "la": 37.3436,
-      "ln": -5.9884,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Casa Rafael (Papa Erig)",
-      "r": 4.5,
-      "rv": 1706,
-      "s": 85,
-      "c": "Benalmádena",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Pricing",
-      "tp": "Restaurante",
-      "la": 36.5983,
-      "ln": -4.5324,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Restaurante Torikey",
-      "r": 4.7,
-      "rv": 1704,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "",
-      "tp": "",
-      "la": 40.441,
-      "ln": -3.7004,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "The Botilleria Coffee East",
-      "r": 3.9,
-      "rv": 1699,
-      "s": 77,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "Wait Time",
-      "tp": "",
-      "la": 40.4179,
-      "ln": -3.7112,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Orellana House",
-      "r": 4.4,
-      "rv": 1694,
-      "s": 77,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "",
-      "tc": "",
-      "tp": "",
-      "la": 40.4266,
-      "ln": -3.6955,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Gula Sana",
-      "r": 4.3,
-      "rv": 1685,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "",
-      "tc": "Pricing",
-      "tp": "Panadería",
-      "la": 41.3855,
-      "ln": 2.1604,
-      "ta": 4.5,
-      "rg": 4.3
     }
   ],
   "services": {
-    "dine_in": 949,
-    "delivery": 478,
-    "takeout": 735,
-    "reservable": 796,
-    "serves_breakfast": 371,
-    "serves_lunch": 833,
-    "serves_dinner": 817,
-    "serves_brunch": 424,
-    "serves_beer": 893,
-    "serves_wine": 860,
-    "serves_vegetarian": 289,
-    "outdoor_seating": 545,
-    "live_music": 74,
-    "good_for_children": 583,
-    "good_for_groups": 657,
-    "good_for_sports": 67
+    "dine_in": 976,
+    "delivery": 495,
+    "takeout": 755,
+    "reservable": 821,
+    "serves_breakfast": 381,
+    "serves_lunch": 861,
+    "serves_dinner": 844,
+    "serves_brunch": 438,
+    "serves_beer": 924,
+    "serves_wine": 890,
+    "serves_vegetarian": 296,
+    "outdoor_seating": 562,
+    "live_music": 76,
+    "good_for_children": 594,
+    "good_for_groups": 682,
+    "good_for_sports": 70
   },
   "field_completeness": {
     "companies": {
@@ -8202,10 +8202,10 @@
       "website": 35471,
       "city": 48412,
       "address": 66931,
-      "industry": 34407,
+      "industry": 34413,
       "google_place_id": 22877,
-      "gp__rating_count": 2299,
-      "gp__sentiment": 2314,
+      "gp__rating_count": 2336,
+      "gp__sentiment": 2351,
       "num_associated_contacts": 74635,
       "description": 26647,
       "country": 73833
@@ -8351,14 +8351,14 @@
   "ratings_dist": {
     "<3": 62,
     "3-3.5": 65,
-    "3.5-4": 305,
-    "4-4.5": 1088,
-    "4.5-5": 806
+    "3.5-4": 306,
+    "4-4.5": 1103,
+    "4.5-5": 813
   },
   "sentiment_dist": {
-    "Positive": 1730,
-    "Neutral": 451,
-    "Negative": 159
+    "Positive": 1749,
+    "Neutral": 454,
+    "Negative": 161
   },
   "price_dist": {
     "Free": 0,
