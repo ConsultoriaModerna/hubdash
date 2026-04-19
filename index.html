@@ -82,8 +82,13 @@ svg text { fill: var(--muted); font-size: 11px; }
   font-size: 11px; color: var(--muted); max-height: 250px;
   overflow-y: auto; white-space: pre-wrap; line-height: 1.6;
 }
-#mountain-canvas { width: 100%; height: 400px; border-radius: 6px; cursor: grab; }
-#mountain-canvas:active { cursor: grabbing; }
+#mountain-canvas, #bubble-canvas, #contact4d-canvas {
+  width: 100%; height: 400px; border-radius: 6px; cursor: grab;
+}
+#mountain-canvas:active, #bubble-canvas:active, #contact4d-canvas:active { cursor: grabbing; }
+.heatmap-cell { stroke: var(--bg); stroke-width: 1; }
+.radar-axis { stroke: var(--grid); stroke-width: 1; }
+.radar-polygon { fill-opacity: 0.15; stroke-width: 2; }
 .sync-badge {
   display: inline-block; background: var(--card); border: 1px solid var(--border);
   border-radius: 12px; padding: 2px 10px; font-size: 10px; color: var(--dim);
@@ -138,11 +143,44 @@ svg text { fill: var(--muted); font-size: 11px; }
     <canvas id="mountain-canvas"></canvas>
   </div>
 
+  <div class="panel panel-full">
+    <div class="panel-title">Bubble Universe — 500 Enriched Companies (Rating × Reviews × Score)</div>
+    <div class="mountain-controls">
+      <button class="btn active" id="bub-rating" onclick="setBubbleColor('rating')">Color: Rating</button>
+      <button class="btn" id="bub-city" onclick="setBubbleColor('city')">Color: City</button>
+      <button class="btn" id="bub-score" onclick="setBubbleColor('score')">Color: Score</button>
+    </div>
+    <canvas id="bubble-canvas"></canvas>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Rating Distribution (Enriched)</div>
+    <svg id="chart-ratings" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Contact 4D — Score × Mobile × Email</div>
+    <canvas id="contact4d-canvas"></canvas>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Field Completeness — Companies</div>
+    <svg id="chart-fields-co" width="100%" height="300"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Field Completeness — Contacts</div>
+    <svg id="chart-fields-ct" width="100%" height="300"></svg>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Service Capabilities (Enriched)</div>
+    <svg id="chart-services" width="100%" height="320"></svg>
+  </div>
   <div class="panel">
     <div class="panel-title">Budget Tracker</div>
     <svg id="chart-budget" width="100%" height="260"></svg>
   </div>
-  <div class="panel">
+
+  <div class="panel panel-full" style="min-height:auto">
     <div class="panel-title">Enrichment Log</div>
     <div class="log-panel" id="log-panel">Synced data — no live log on web version.</div>
   </div>
@@ -313,10 +351,129 @@ function drawBudget(d) {
     .attr('fill',C.dim).style('font-size','10px');
 }
 
+function drawRatings(d) {
+  if (!d.ratings_dist) return;
+  const svg = d3.select('#chart-ratings'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const m = {top: 20, right: 20, bottom: 40, left: 55};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+  const labels = Object.keys(d.ratings_dist);
+  const vals = labels.map(k => d.ratings_dist[k]);
+  const colors = [C.red, C.orange, C.yellow, C.green, C.cyan];
+  const x = d3.scaleBand().domain(labels).range([0, w]).padding(0.25);
+  const y = d3.scaleLinear().domain([0, d3.max(vals) * 1.15]).range([h, 0]);
+  g.selectAll('.grid').data(y.ticks(5)).enter().append('line')
+    .attr('x1',0).attr('x2',w).attr('y1',d=>y(d)).attr('y2',d=>y(d)).attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  g.selectAll('.bar').data(vals).enter().append('rect')
+    .attr('x',(d,i) => x(labels[i])).attr('y', d => y(d)).attr('width', x.bandwidth()).attr('height', d => h - y(d))
+    .attr('fill',(d,i) => colors[i]).attr('rx', 4).attr('opacity', 0.85)
+    .on('mousemove',(evt,d) => { const i = vals.indexOf(d); showTip(evt, `<b>Rating ${labels[i]}</b><br>${fmt(d)} companies`); })
+    .on('mouseleave', hideTip);
+  g.selectAll('.val').data(vals).enter().append('text')
+    .attr('x',(d,i) => x(labels[i]) + x.bandwidth()/2).attr('y', d => y(d) - 5)
+    .attr('text-anchor','middle').text(d => fmt(d)).attr('fill',C.text).style('font-size','11px').style('font-weight','600');
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('~s'))).selectAll('text').attr('fill',C.muted);
+  const total = d3.sum(vals);
+  svg.append('text').attr('x', W - 10).attr('y', 14).attr('text-anchor','end')
+    .text(`${fmt(total)} enriched`).attr('fill',C.muted).style('font-size','10px');
+}
+
+function drawFieldCompleteness(d) {
+  if (!d.field_completeness) return;
+  const fc = d.field_completeness;
+  drawFieldBars('#chart-fields-co', fc.companies, fc.companies_total, 'Companies', C.blue);
+  drawFieldBars('#chart-fields-ct', fc.contacts, fc.contacts_total, 'Contacts', C.purple);
+}
+
+function drawFieldBars(selector, fields, total, label, color) {
+  const svg = d3.select(selector); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 300;
+  const m = {top: 10, right: 90, bottom: 10, left: 130};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+  const sorted = Object.entries(fields).sort((a,b) => b[1] - a[1]);
+  const names = sorted.map(d => d[0]);
+  const vals = sorted.map(d => d[1]);
+  const x = d3.scaleLinear().domain([0, total]).range([0, w]);
+  const y = d3.scaleBand().domain(names).range([0, h]).padding(0.2);
+  // Background bars (total)
+  g.selectAll('.bg').data(names).enter().append('rect')
+    .attr('x',0).attr('y',d => y(d)).attr('width', w).attr('height', y.bandwidth())
+    .attr('fill', C.grid).attr('rx', 3);
+  // Value bars
+  g.selectAll('.bar').data(sorted).enter().append('rect')
+    .attr('x',0).attr('y',d => y(d[0])).attr('width', d => x(d[1])).attr('height', y.bandwidth())
+    .attr('fill', color).attr('opacity', 0.75).attr('rx', 3)
+    .on('mousemove',(evt,d) => showTip(evt, `<b>${d[0]}</b><br>${fmt(d[1])} / ${fmt(total)} (${(d[1]/total*100).toFixed(1)}%)`))
+    .on('mouseleave', hideTip);
+  // Labels
+  g.selectAll('.label').data(names).enter().append('text')
+    .attr('x', -6).attr('y', d => y(d) + y.bandwidth()/2).attr('text-anchor','end').attr('dominant-baseline','middle')
+    .text(d => d).attr('fill', C.muted).style('font-size', '10px');
+  // Percentages
+  g.selectAll('.pct').data(sorted).enter().append('text')
+    .attr('x', d => x(d[1]) + 5).attr('y', d => y(d[0]) + y.bandwidth()/2).attr('dominant-baseline','middle')
+    .text(d => `${(d[1]/total*100).toFixed(0)}%`).attr('fill', C.text).style('font-size', '10px').style('font-weight', '600');
+}
+
+function drawServices(d) {
+  if (!d.services) return;
+  const svg = d3.select('#chart-services'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const cx = W / 2, cy = H / 2;
+  const radius = Math.min(W, H) / 2 - 50;
+  const g = svg.append('g').attr('transform', `translate(${cx},${cy})`);
+  const entries = Object.entries(d.services).sort((a,b) => b[1] - a[1]);
+  const labels = entries.map(e => e[0].replace(/_/g, ' '));
+  const vals = entries.map(e => e[1]);
+  const maxVal = d3.max(vals);
+  const n = labels.length;
+  const angleSlice = Math.PI * 2 / n;
+  // Grid circles
+  [0.25, 0.5, 0.75, 1].forEach(pct => {
+    g.append('circle').attr('r', radius * pct)
+      .attr('fill','none').attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+  // Axes
+  labels.forEach((l, i) => {
+    const angle = angleSlice * i - Math.PI / 2;
+    const x2 = Math.cos(angle) * radius;
+    const y2 = Math.sin(angle) * radius;
+    g.append('line').attr('x1',0).attr('y1',0).attr('x2',x2).attr('y2',y2).attr('class','radar-axis');
+    const lx = Math.cos(angle) * (radius + 18);
+    const ly = Math.sin(angle) * (radius + 18);
+    g.append('text').attr('x',lx).attr('y',ly).attr('text-anchor','middle').attr('dominant-baseline','middle')
+      .text(l).attr('fill',C.muted).style('font-size','8px');
+  });
+  // Polygon
+  const line = d3.lineRadial().angle((d,i) => angleSlice * i - Math.PI / 2)
+    .radius(d => (d / maxVal) * radius).curve(d3.curveLinearClosed);
+  g.append('path').datum(vals).attr('d', line)
+    .attr('class','radar-polygon').attr('fill',C.green).attr('stroke',C.green);
+  // Dots
+  vals.forEach((v, i) => {
+    const angle = angleSlice * i - Math.PI / 2;
+    const r = (v / maxVal) * radius;
+    g.append('circle').attr('cx', Math.cos(angle)*r).attr('cy', Math.sin(angle)*r).attr('r', 4)
+      .attr('fill', C.green).attr('stroke', C.card).attr('stroke-width', 2)
+      .on('mousemove', evt => showTip(evt, `<b>${labels[i]}</b><br>${fmt(v)} companies`))
+      .on('mouseleave', hideTip);
+  });
+}
+
 function updateAll(d) {
-  updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d); drawBudget(d);
+  updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d);
+  drawRatings(d); drawFieldCompleteness(d); drawServices(d); drawBudget(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
+  if (window.bubbleReady) window.updateBubbles(d);
+  if (window.contact4dReady) window.updateContact4D(d);
 }
 
 async function loadData() {
@@ -432,6 +589,287 @@ function resizeRenderer(){const w=canvas.clientWidth,h=canvas.clientHeight;rende
 function animate(){requestAnimationFrame(animate);controls.update();renderer.render(scene,camera);}
 window.addEventListener('resize',resizeRenderer);
 initMountain();
+</script>
+
+<!-- Bubble Universe & Contact 4D Grid -->
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ─── Bubble Universe ─────────────────────────────────────────────────────
+const bubCanvas = document.getElementById('bubble-canvas');
+let bScene, bCamera, bRenderer, bControls, bubbleMeshes = [];
+let bubbleColorMode = 'rating';
+const CITY_COLORS = {Barcelona:'#58a6ff',Madrid:'#bc8cff',Valencia:'#f0883e',Sevilla:'#d29922',Bilbao:'#2ea043',Other:'#8b949e'};
+window.bubbleReady = false;
+
+function initBubbles() {
+  bScene = new THREE.Scene();
+  bScene.background = new THREE.Color(0x0d1117);
+  bRenderer = new THREE.WebGLRenderer({ canvas: bubCanvas, antialias: true });
+  bRenderer.setPixelRatio(window.devicePixelRatio);
+  resizeBubbleRenderer();
+  bCamera = new THREE.PerspectiveCamera(50, bubCanvas.clientWidth / bubCanvas.clientHeight, 0.1, 200);
+  bCamera.position.set(12, 8, 12);
+  bControls = new OrbitControls(bCamera, bRenderer.domElement);
+  bControls.enableDamping = true; bControls.dampingFactor = 0.05;
+  bControls.minDistance = 3; bControls.maxDistance = 50;
+  bControls.target.set(5, 3, 5);
+  bScene.add(new THREE.AmbientLight(0xffffff, 0.6));
+  const dl = new THREE.DirectionalLight(0xffffff, 0.7); dl.position.set(15, 20, 10); bScene.add(dl);
+
+  // Axis labels
+  const axLabels = [
+    {t:'Rating →', pos:[10,-.5,0]}, {t:'Reviews →', pos:[0,-.5,10]}, {t:'↑ Score', pos:[-.5,8,0]}
+  ];
+  axLabels.forEach(({t, pos}) => {
+    const s = makeBubbleLabel(t);
+    s.position.set(...pos);
+    bScene.add(s);
+  });
+  // Grid floor
+  const grid = new THREE.GridHelper(10, 10, 0x21262d, 0x21262d);
+  grid.position.set(5, 0, 5);
+  bScene.add(grid);
+
+  window.bubbleReady = true;
+  if (window.DATA) window.updateBubbles(window.DATA);
+  animateBubbles();
+}
+
+function makeBubbleLabel(text) {
+  const c2 = document.createElement('canvas'); c2.width = 256; c2.height = 48;
+  const ctx = c2.getContext('2d');
+  ctx.fillStyle = '#8b949e';
+  ctx.font = 'bold 14px -apple-system,sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(text, 128, 32);
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c2), transparent: true }));
+  s.scale.set(2.5, 0.5, 1);
+  return s;
+}
+
+// Raycaster for tooltip
+const bRaycaster = new THREE.Raycaster();
+const bMouse = new THREE.Vector2();
+let hoveredBubble = null;
+
+bubCanvas.addEventListener('mousemove', (evt) => {
+  const rect = bubCanvas.getBoundingClientRect();
+  bMouse.x = ((evt.clientX - rect.left) / rect.width) * 2 - 1;
+  bMouse.y = -((evt.clientY - rect.top) / rect.height) * 2 + 1;
+  bRaycaster.setFromCamera(bMouse, bCamera);
+  const intersects = bRaycaster.intersectObjects(bubbleMeshes);
+  if (intersects.length > 0) {
+    const mesh = intersects[0].object;
+    const bd = mesh.userData;
+    const tip = document.getElementById('tooltip');
+    tip.innerHTML = `<b>${bd.n}</b><br>⭐ ${bd.r} (${bd.rv.toLocaleString()} reviews)<br>Score: ${bd.s} | ${bd.c}<br>Contacts: ${bd.ct} | ${bd.se || '—'}`;
+    tip.style.display = 'block';
+    tip.style.left = (evt.clientX + 12) + 'px';
+    tip.style.top = (evt.clientY - 10) + 'px';
+    if (hoveredBubble && hoveredBubble !== mesh) hoveredBubble.material.emissive.setHex(0x000000);
+    mesh.material.emissive.setHex(0x333333);
+    hoveredBubble = mesh;
+  } else {
+    if (hoveredBubble) { hoveredBubble.material.emissive.setHex(0x000000); hoveredBubble = null; }
+    document.getElementById('tooltip').style.display = 'none';
+  }
+});
+bubCanvas.addEventListener('mouseleave', () => {
+  if (hoveredBubble) { hoveredBubble.material.emissive.setHex(0x000000); hoveredBubble = null; }
+  document.getElementById('tooltip').style.display = 'none';
+});
+
+function getBubbleColor(b) {
+  if (bubbleColorMode === 'city') {
+    return new THREE.Color(CITY_COLORS[b.c] || CITY_COLORS.Other);
+  } else if (bubbleColorMode === 'score') {
+    const t = b.s / 100;
+    const c = new THREE.Color();
+    if (t < 0.3) c.setRGB(0.97, 0.32, 0.29);       // red
+    else if (t < 0.5) c.setRGB(0.94, 0.53, 0.24);   // orange
+    else if (t < 0.7) c.setRGB(0.82, 0.6, 0.13);    // yellow
+    else if (t < 0.9) c.setRGB(0.25, 0.73, 0.31);   // green
+    else c.setRGB(0.22, 0.83, 0.33);                 // cyan
+    return c;
+  } else { // rating
+    const t = (b.r - 2) / 3; // 2.0 → 0, 5.0 → 1
+    const c = new THREE.Color();
+    if (t < 0.33) c.lerpColors(new THREE.Color(0xf85149), new THREE.Color(0xf0883e), t / 0.33);
+    else if (t < 0.66) c.lerpColors(new THREE.Color(0xf0883e), new THREE.Color(0xd29922), (t - 0.33) / 0.33);
+    else c.lerpColors(new THREE.Color(0xd29922), new THREE.Color(0x39d353), (t - 0.66) / 0.34);
+    return c;
+  }
+}
+
+window.updateBubbles = function(d) {
+  if (!d.bubbles || !d.bubbles.length) return;
+  // Remove old
+  bubbleMeshes.forEach(m => { bScene.remove(m); m.geometry.dispose(); m.material.dispose(); });
+  bubbleMeshes = [];
+
+  const maxRv = Math.max(...d.bubbles.map(b => b.rv));
+  const logRv = v => v > 0 ? Math.log10(v + 1) / Math.log10(maxRv + 1) : 0;
+  const geo = new THREE.SphereGeometry(1, 16, 12);
+
+  d.bubbles.forEach(b => {
+    const color = getBubbleColor(b);
+    const mat = new THREE.MeshPhongMaterial({ color, transparent: true, opacity: 0.75, shininess: 60 });
+    const mesh = new THREE.Mesh(geo, mat);
+    // X: rating (2-5 → 0-10), Y: score (0-100 → 0-8), Z: reviews (log)
+    const x = ((b.r - 2) / 3) * 10;
+    const y = (b.s / 100) * 8;
+    const z = logRv(b.rv) * 10;
+    const size = 0.08 + Math.min(b.ct, 50) / 50 * 0.25; // size by contacts
+    mesh.position.set(x, y, z);
+    mesh.scale.setScalar(size);
+    mesh.userData = b;
+    bScene.add(mesh);
+    bubbleMeshes.push(mesh);
+  });
+};
+
+window.setBubbleColor = function(mode) {
+  bubbleColorMode = mode;
+  ['rating','city','score'].forEach(m => {
+    document.getElementById('bub-' + m).classList.toggle('active', m === mode);
+  });
+  if (window.DATA) window.updateBubbles(window.DATA);
+};
+
+function resizeBubbleRenderer() {
+  const w = bubCanvas.clientWidth, h = bubCanvas.clientHeight;
+  bRenderer.setSize(w, h, false);
+  if (bCamera) { bCamera.aspect = w / h; bCamera.updateProjectionMatrix(); }
+}
+
+function animateBubbles() {
+  requestAnimationFrame(animateBubbles);
+  bControls.update();
+  bRenderer.render(bScene, bCamera);
+}
+
+window.addEventListener('resize', resizeBubbleRenderer);
+initBubbles();
+
+// ─── Contact 4D Grid ─────────────────────────────────────────────────────
+const c4Canvas = document.getElementById('contact4d-canvas');
+let c4Scene, c4Camera, c4Renderer, c4Controls, c4Meshes = [];
+window.contact4dReady = false;
+
+function initContact4D() {
+  c4Scene = new THREE.Scene();
+  c4Scene.background = new THREE.Color(0x0d1117);
+  c4Renderer = new THREE.WebGLRenderer({ canvas: c4Canvas, antialias: true });
+  c4Renderer.setPixelRatio(window.devicePixelRatio);
+  resizeC4Renderer();
+  c4Camera = new THREE.PerspectiveCamera(45, c4Canvas.clientWidth / c4Canvas.clientHeight, 0.1, 100);
+  c4Camera.position.set(10, 8, 10);
+  c4Controls = new OrbitControls(c4Camera, c4Renderer.domElement);
+  c4Controls.enableDamping = true; c4Controls.dampingFactor = 0.05;
+  c4Controls.minDistance = 4; c4Controls.maxDistance = 30;
+  c4Controls.target.set(3, 1.5, 1);
+  c4Scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+  const dl = new THREE.DirectionalLight(0xffffff, 0.8); dl.position.set(10, 15, 10); c4Scene.add(dl);
+
+  // Floor grid
+  const grid = new THREE.GridHelper(8, 8, 0x21262d, 0x21262d);
+  grid.position.set(3, 0, 1);
+  c4Scene.add(grid);
+
+  // Axis labels
+  const scoreLbls = ['0-29','30-49','50-69','70-89','90+'];
+  scoreLbls.forEach((l, i) => {
+    const s = makeBubbleLabel(l);
+    s.position.set(i * 1.5 + 0.5, -0.4, 2.8);
+    s.scale.set(1.2, 0.3, 1);
+    c4Scene.add(s);
+  });
+  // Mobile/Email labels
+  const combos = ['No M / No E','No M / Email','Mobile / No E','Mobile / Email'];
+  combos.forEach((l, i) => {
+    const s = makeBubbleLabel(l);
+    const z = [0, 0.8, 1.6, 2.4][i];
+    s.position.set(-1, -0.4, z);
+    s.scale.set(2, 0.3, 1);
+    c4Scene.add(s);
+  });
+
+  window.contact4dReady = true;
+  if (window.DATA) window.updateContact4D(window.DATA);
+  animateC4();
+}
+
+window.updateContact4D = function(d) {
+  if (!d.contact_matrix || !d.contact_matrix.length) return;
+  // Remove old
+  c4Meshes.forEach(m => { c4Scene.remove(m); m.geometry.dispose(); m.material.dispose(); });
+  c4Meshes = [];
+
+  const maxVal = Math.max(1, ...d.contact_matrix.map(r => r[3]));
+  const logH = v => v > 0 ? Math.log10(v + 1) / Math.log10(maxVal + 1) * 6 : 0.02;
+  const geo = new THREE.BoxGeometry(1, 1, 1);
+
+  // Color mapping: combo index 0=both no (red), 1=email only (orange), 2=mobile only (yellow), 3=both (green)
+  const comboColors = [0xf85149, 0xf0883e, 0xd29922, 0x3fb950];
+
+  d.contact_matrix.forEach(([bi, hasMob, hasEm, cnt]) => {
+    if (cnt === 0) return;
+    const comboIdx = hasMob * 2 + hasEm; // 0=noM_noE, 1=noM_E, 2=M_noE, 3=M_E
+    const h = logH(cnt);
+    const color = comboColors[comboIdx];
+    const mat = new THREE.MeshPhongMaterial({ color, transparent: true, opacity: 0.8 });
+    const mesh = new THREE.Mesh(geo, mat);
+    const x = bi * 1.5 + 0.5;
+    const z = comboIdx * 0.8;
+    mesh.scale.set(0.6, h, 0.5);
+    mesh.position.set(x, h / 2, z);
+    mesh.userData = { score: ['0-29','30-49','50-69','70-89','90-100'][bi], mobile: hasMob, email: hasEm, count: cnt };
+    c4Scene.add(mesh);
+    c4Meshes.push(mesh);
+  });
+};
+
+// Raycaster for 4D tooltip
+const c4Raycaster = new THREE.Raycaster();
+const c4Mouse = new THREE.Vector2();
+
+c4Canvas.addEventListener('mousemove', (evt) => {
+  const rect = c4Canvas.getBoundingClientRect();
+  c4Mouse.x = ((evt.clientX - rect.left) / rect.width) * 2 - 1;
+  c4Mouse.y = -((evt.clientY - rect.top) / rect.height) * 2 + 1;
+  c4Raycaster.setFromCamera(c4Mouse, c4Camera);
+  const intersects = c4Raycaster.intersectObjects(c4Meshes);
+  if (intersects.length > 0) {
+    const ud = intersects[0].object.userData;
+    const tip = document.getElementById('tooltip');
+    tip.innerHTML = `<b>Score ${ud.score}</b><br>Mobile: ${ud.mobile?'Yes':'No'} | Email: ${ud.email?'Yes':'No'}<br>${ud.count.toLocaleString()} contacts`;
+    tip.style.display = 'block';
+    tip.style.left = (evt.clientX + 12) + 'px';
+    tip.style.top = (evt.clientY - 10) + 'px';
+  } else {
+    document.getElementById('tooltip').style.display = 'none';
+  }
+});
+c4Canvas.addEventListener('mouseleave', () => {
+  document.getElementById('tooltip').style.display = 'none';
+});
+
+function resizeC4Renderer() {
+  const w = c4Canvas.clientWidth, h = c4Canvas.clientHeight;
+  c4Renderer.setSize(w, h, false);
+  if (c4Camera) { c4Camera.aspect = w / h; c4Camera.updateProjectionMatrix(); }
+}
+
+function animateC4() {
+  requestAnimationFrame(animateC4);
+  c4Controls.update();
+  c4Renderer.render(c4Scene, c4Camera);
+}
+
+window.addEventListener('resize', resizeC4Renderer);
+initContact4D();
 </script>
 </body>
 </html>
