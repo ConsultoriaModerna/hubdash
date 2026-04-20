@@ -793,108 +793,99 @@ function drawEvolution(d) {
 
   const rect = svg.node().getBoundingClientRect();
   const W = rect.width, H = 380;
-  const m = {t:40, r:70, b:50, l:65};
+  const m = {t:22, r:140, b:40, l:55};
   const w = W - m.l - m.r, h = H - m.t - m.b;
   const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
 
   const data = snaps.map(s => ({
     t: new Date(s.ts.replace(' ','T')),
-    website: s.website || 0,
-    phone: s.phone || 0,
-    domain: s.domain || 0,
-    gp: s.gp_enriched || 0,
-    ws_scraped: s.ws_scraped || 0,
-    ws_emails: s.ws_emails || 0,
-    ws_ig: s.ws_instagram || 0,
+    website: s.website || 0, phone: s.phone || 0, domain: s.domain || 0,
+    gp: s.gp_enriched || 0, ws_scraped: s.ws_scraped || 0,
+    ws_emails: s.ws_emails || 0, ws_ig: s.ws_instagram || 0,
   }));
 
-  // Two groups: baseline (left Y, large) and enrichment (right Y, small)
   const baseline = [
-    {key: 'phone', label: 'Phone', color: '#3fb950', dash: ''},
-    {key: 'website', label: 'Website', color: '#58a6ff', dash: ''},
-    {key: 'domain', label: 'Domain', color: '#bc8cff', dash: '4,3'},
+    {key:'phone', label:'Phone (co)', color:'#3fb950', dash:'6,3'},
+    {key:'website', label:'Website (co)', color:'#58a6ff', dash:'6,3'},
+    {key:'domain', label:'Domain (co)', color:'#bc8cff', dash:'6,3'},
   ];
   const enrichment = [
-    {key: 'gp', label: 'GP Enriched', color: '#f0883e'},
-    {key: 'ws_scraped', label: 'WS Scraped', color: '#d29922'},
-    {key: 'ws_emails', label: 'WS Emails', color: '#f85149'},
-    {key: 'ws_ig', label: 'WS Instagram', color: '#e875c2'},
+    {key:'gp', label:'GP Enriched', color:'#f0883e'},
+    {key:'ws_scraped', label:'WS Scraped', color:'#d29922'},
+    {key:'ws_emails', label:'WS Emails', color:'#f85149'},
+    {key:'ws_ig', label:'WS Instagram', color:'#e875c2'},
   ];
 
   const x = d3.scaleTime().domain(d3.extent(data, d => d.t)).range([0, w]);
-
   const baseMax = d3.max(baseline.flatMap(s => data.map(d => d[s.key])));
   const enrMax = d3.max(enrichment.flatMap(s => data.map(d => d[s.key])));
-  const yL = d3.scaleLinear().domain([0, baseMax * 1.08]).range([h, 0]);
-  const yR = d3.scaleLinear().domain([0, Math.max(enrMax * 1.15, 100)]).range([h, 0]);
+  const yL = d3.scaleLinear().domain([0, baseMax * 1.05]).range([h, 0]);
+  const yR = d3.scaleLinear().domain([0, Math.max(enrMax * 1.2, 200)]).range([h, 0]);
 
-  // Axes
-  g.append('g').attr('transform',`translate(0,${h})`)
-    .call(d3.axisBottom(x).ticks(Math.min(data.length, 8)).tickFormat(d3.timeFormat('%d/%m %H:%M')))
-    .selectAll('text').attr('fill','#8b949e').attr('font-size',10)
-    .attr('transform','rotate(-25)').attr('text-anchor','end');
-
-  g.append('g')
-    .call(d3.axisLeft(yL).ticks(5).tickFormat(d3.format(',.0f')))
-    .selectAll('text').attr('fill','#8b949e').attr('font-size',10);
-  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-50)
-    .attr('text-anchor','middle').attr('fill','#484f58').attr('font-size',10).text('Baseline fields');
-
-  g.append('g').attr('transform',`translate(${w},0)`)
-    .call(d3.axisRight(yR).ticks(6).tickFormat(d3.format(',.0f')))
-    .selectAll('text').attr('fill','#f0883e').attr('font-size',10);
-  g.append('text').attr('transform','rotate(90)').attr('x',h/2).attr('y',-(w+55))
-    .attr('text-anchor','middle').attr('fill','#f0883e').attr('font-size',10).text('Enrichment');
-
-  // Horizontal grid lines (subtle)
-  yL.ticks(5).forEach(tick => {
-    g.append('line').attr('x1',0).attr('x2',w).attr('y1',yL(tick)).attr('y2',yL(tick))
+  // Grid
+  yR.ticks(5).forEach(tick => {
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',yR(tick)).attr('y2',yR(tick))
       .attr('stroke','#21262d').attr('stroke-width',0.5);
   });
 
-  // Draw baseline lines (left Y, thinner, some dashed)
-  baseline.forEach(s => {
+  // X axis — hours
+  g.append('g').attr('transform',`translate(0,${h})`)
+    .call(d3.axisBottom(x).ticks(d3.timeHour.every(4)).tickFormat(d3.timeFormat('%d/%m %Hh')))
+    .selectAll('text').attr('fill','#8b949e').attr('font-size',10);
+  g.selectAll('.domain,.tick line').attr('stroke','#30363d');
+
+  // Left Y (baseline) — minimal
+  g.append('g').call(d3.axisLeft(yL).ticks(4).tickFormat(d => d3.format('.0s')(d)))
+    .selectAll('text').attr('fill','#484f58').attr('font-size',9);
+  g.selectAll('.domain').attr('stroke','#30363d');
+
+  // Right Y (enrichment) — prominent
+  const axR = g.append('g').attr('transform',`translate(${w},0)`)
+    .call(d3.axisRight(yR).ticks(5).tickFormat(d3.format(',')));
+  axR.selectAll('text').attr('fill','#f0883e').attr('font-size',10);
+  axR.selectAll('.domain,.tick line').attr('stroke','#f0883e').attr('opacity',0.3);
+
+  // Baseline — thin dashed lines, labels on right margin
+  baseline.forEach((s, i) => {
     const line = d3.line().x(d => x(d.t)).y(d => yL(d[s.key])).curve(d3.curveMonotoneX);
     g.append('path').datum(data).attr('d', line).attr('fill','none')
-      .attr('stroke', s.color).attr('stroke-width', 1.5).attr('opacity', 0.6)
+      .attr('stroke', s.color).attr('stroke-width', 1.2).attr('opacity', 0.4)
       .attr('stroke-dasharray', s.dash);
-    const last = data[data.length - 1];
-    g.append('text').attr('x', w + 5).attr('y', yL(last[s.key]) + 4)
-      .attr('fill', s.color).attr('font-size', 9).attr('opacity', 0.7)
-      .text(`${s.label} ${d3.format(',')(last[s.key])}`);
+    const last = data[data.length-1];
+    const yPos = yL(last[s.key]);
+    g.append('text').attr('x', w + 6).attr('y', yPos + 4)
+      .attr('fill', s.color).attr('font-size', 9).attr('opacity', 0.5)
+      .text(`${s.label} ${d3.format(',.0f')(last[s.key])}`);
   });
 
-  // Draw enrichment lines (right Y, thicker, prominent)
-  enrichment.forEach(s => {
+  // Enrichment — thick lines, area fill, end labels staggered
+  const labelSlots = []; // avoid label collisions
+  enrichment.forEach((s, i) => {
     const line = d3.line().x(d => x(d.t)).y(d => yR(d[s.key])).curve(d3.curveMonotoneX);
-    // Area fill
+    // Area
     const area = d3.area().x(d => x(d.t)).y0(h).y1(d => yR(d[s.key])).curve(d3.curveMonotoneX);
-    g.append('path').datum(data).attr('d', area).attr('fill', s.color).attr('opacity', 0.06);
+    g.append('path').datum(data).attr('d', area).attr('fill', s.color).attr('opacity', 0.08);
     // Line
     g.append('path').datum(data).attr('d', line).attr('fill','none')
       .attr('stroke', s.color).attr('stroke-width', 2.5);
-    // End dot
-    const last = data[data.length - 1];
-    g.append('circle').attr('cx', x(last.t)).attr('cy', yR(last[s.key]))
-      .attr('r', 5).attr('fill', s.color);
-    // Value label at end
-    g.append('text').attr('x', x(last.t) - 6).attr('y', yR(last[s.key]) - 10)
-      .attr('fill', s.color).attr('font-size', 11).attr('font-weight', 700)
-      .attr('text-anchor', 'end')
+    // Dots at each data point
+    data.forEach(dp => {
+      g.append('circle').attr('cx', x(dp.t)).attr('cy', yR(dp[s.key]))
+        .attr('r', 3).attr('fill', s.color).attr('opacity', 0.7);
+    });
+    // End label — stagger vertically to avoid overlap
+    const last = data[data.length-1];
+    let ly = yR(last[s.key]);
+    // Push apart if too close to another label
+    for (const prev of labelSlots) {
+      if (Math.abs(ly - prev) < 16) ly = prev - 16;
+    }
+    labelSlots.push(ly);
+    // Label on right margin
+    g.append('circle').attr('cx', w + 10).attr('cy', ly).attr('r', 4).attr('fill', s.color);
+    g.append('text').attr('x', w + 18).attr('y', ly + 4)
+      .attr('fill', s.color).attr('font-size', 11).attr('font-weight', 600)
       .text(`${s.label}: ${d3.format(',')(last[s.key])}`);
-  });
-
-  // Legend row at top
-  const all = [...baseline.map(s => ({...s, group:'base'})), ...enrichment.map(s => ({...s, group:'enr'}))];
-  const leg = svg.append('g').attr('transform',`translate(${m.l},12)`);
-  all.forEach((s, i) => {
-    const lx = (i % 7) * (w / 7);
-    const op = s.group === 'base' ? 0.6 : 1;
-    leg.append('line').attr('x1',lx).attr('x2',lx+14).attr('y1',6).attr('y2',6)
-      .attr('stroke',s.color).attr('stroke-width', s.group==='enr'?3:1.5).attr('opacity',op)
-      .attr('stroke-dasharray', s.dash || '');
-    leg.append('text').attr('x',lx+18).attr('y',10)
-      .attr('fill',s.group==='base'?'#8b949e':'#e6edf3').attr('font-size',9).text(s.label);
   });
 }
 
