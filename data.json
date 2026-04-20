@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-20T10:27:03",
-  "fetch_seconds": 73.5,
+  "generated_at": "2026-04-20T11:00:07",
+  "fetch_seconds": 62.1,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
@@ -8207,7 +8207,7 @@
       "gp__rating_count": 2811,
       "gp__sentiment": 2838,
       "num_associated_contacts": 74635,
-      "description": 26707,
+      "description": 26813,
       "country": 73833
     },
     "contacts": {
@@ -8437,6 +8437,30 @@
       "ws_scraped": 763,
       "ws_emails": 261,
       "ws_instagram": 209,
+      "contacts_mobile": 18579,
+      "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-20 10:55",
+      "website": 35501,
+      "phone": 45642,
+      "domain": 35453,
+      "gp_enriched": 2811,
+      "ws_scraped": 2153,
+      "ws_emails": 689,
+      "ws_instagram": 619,
+      "contacts_mobile": 18579,
+      "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-20 11:00",
+      "website": 35501,
+      "phone": 45642,
+      "domain": 35453,
+      "gp_enriched": 2811,
+      "ws_scraped": 2413,
+      "ws_emails": 778,
+      "ws_instagram": 701,
       "contacts_mobile": 18579,
       "contacts_email": 38255
     }
