@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-20T16:55:07",
-  "fetch_seconds": 105.4,
+  "generated_at": "2026-04-20T18:08:07",
+  "fetch_seconds": 76.8,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
@@ -34,33 +34,33 @@
   "cities": [
     {
       "city": "Barcelona",
-      "total": 8701,
-      "enriched": 721
+      "total": 11995,
+      "enriched": 892
     },
     {
       "city": "Madrid",
-      "total": 5905,
-      "enriched": 738
+      "total": 12554,
+      "enriched": 1074
     },
     {
       "city": "Valencia",
-      "total": 1421,
-      "enriched": 79
+      "total": 4466,
+      "enriched": 259
     },
     {
       "city": "Sevilla",
-      "total": 1147,
-      "enriched": 59
+      "total": 3597,
+      "enriched": 154
     },
     {
       "city": "Bilbao",
-      "total": 313,
-      "enriched": 6
+      "total": 846,
+      "enriched": 28
     },
     {
       "city": "Otras",
-      "total": 57148,
-      "enriched": 1208
+      "total": 41177,
+      "enriched": 404
     }
   ],
   "mountain": {
@@ -81,46 +81,46 @@
     ],
     "companies": [
       [
-        421,
-        2931,
-        2242,
-        2760,
+        953,
+        4787,
+        3104,
+        2804,
         347
       ],
       [
-        83,
-        1441,
-        1794,
-        2425,
-        162
+        1055,
+        4747,
+        4027,
+        2560,
+        165
       ],
       [
-        22,
-        187,
-        532,
-        671,
-        9
+        431,
+        1876,
+        1432,
+        717,
+        10
       ],
       [
-        10,
-        98,
-        478,
-        558,
-        3
+        276,
+        1579,
+        1146,
+        592,
+        4
       ],
       [
-        1,
-        34,
-        127,
-        150,
+        51,
+        343,
+        295,
+        156,
         1
       ],
       [
-        5712,
-        23778,
-        18667,
-        8911,
-        80
+        3483,
+        15137,
+        13836,
+        8646,
+        75
       ]
     ],
     "contacts": [
@@ -836,12 +836,12 @@
       "ta": 4.0,
       "rg": 4.6,
       "em": 0,
-      "ig": 0,
+      "ig": 1,
       "fb": 0,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "103 Carrer de Londres",
       "zip": "08036",
       "ph": "+34 932 098 835",
@@ -881,7 +881,7 @@
       "r": 4.5,
       "rv": 11815,
       "s": 52,
-      "c": "Other",
+      "c": "Malaga",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -975,10 +975,10 @@
       "ln": 2.1655,
       "ta": 4.3,
       "rg": 4.2,
-      "em": 0,
+      "em": 1,
       "ig": 0,
       "fb": 0,
-      "bk": 0,
+      "bk": 1,
       "tk": 0,
       "wb": 1,
       "sp": "",
@@ -1049,7 +1049,7 @@
       "r": 4.6,
       "rv": 10956,
       "s": 92,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 1,
       "se": "Pos",
       "pl": "$$",
@@ -1283,13 +1283,13 @@
       "ln": 2.1886,
       "ta": 4.3,
       "rg": 4.4,
-      "em": 0,
-      "ig": 0,
-      "fb": 0,
-      "bk": 0,
-      "tk": 0,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 1,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "76 Passeig de Joan de Borbó",
       "zip": "08039",
       "ph": "+34 932213520",
@@ -1357,7 +1357,7 @@
       "r": 4.6,
       "rv": 9825,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -1861,7 +1861,7 @@
       "r": 4.5,
       "rv": 7843,
       "s": 77,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -1927,13 +1927,13 @@
       "ln": -3.7024,
       "ta": null,
       "rg": null,
-      "em": 0,
-      "ig": 0,
+      "em": 1,
+      "ig": 1,
       "fb": 0,
-      "bk": 0,
+      "bk": 1,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "9 Calle de Cádiz",
       "zip": "28012",
       "ph": "+34 915 235 830",
@@ -2169,7 +2169,7 @@
       "r": 4.6,
       "rv": 7245,
       "s": 40,
-      "c": "Other",
+      "c": "Granada",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -2319,13 +2319,13 @@
       "ln": 2.1827,
       "ta": 4.2,
       "rg": 4.3,
-      "em": 0,
+      "em": 1,
       "ig": 0,
       "fb": 0,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "Wix",
       "addr": "C/ Princesa 59 C/Princesa 59",
       "zip": "8003",
       "ph": "34933152297",
@@ -2365,7 +2365,7 @@
       "r": 4.8,
       "rv": 6938,
       "s": 72,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "",
@@ -2795,13 +2795,13 @@
       "ln": 2.125,
       "ta": 4.0,
       "rg": 4.4,
-      "em": 0,
-      "ig": 0,
-      "fb": 0,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "Carrer d'Arizala, 5 Metro, 08028 Barcelona, Spain",
       "zip": "08028",
       "ph": "935297088",
@@ -3261,7 +3261,7 @@
       "r": 4.6,
       "rv": 5863,
       "s": 52,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -3439,13 +3439,13 @@
       "ln": 2.1488,
       "ta": 3.8,
       "rg": 4.0,
-      "em": 0,
-      "ig": 0,
-      "fb": 0,
-      "bk": 0,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "TRAVESSERA DE GRÀCIA, 44",
       "zip": "08021",
       "ph": "+34 934 146 622",
@@ -3569,7 +3569,7 @@
       "r": 4.4,
       "rv": 5623,
       "s": 82,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 1,
       "se": "Pos",
       "pl": "$$",
@@ -3793,7 +3793,7 @@
       "r": 4.2,
       "rv": 5224,
       "s": 67,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -3877,7 +3877,7 @@
       "r": 4.5,
       "rv": 5148,
       "s": 72,
-      "c": "Other",
+      "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -3933,7 +3933,7 @@
       "r": 4.5,
       "rv": 5138,
       "s": 87,
-      "c": "Other",
+      "c": "Zaragoza",
       "ct": 1,
       "se": "Pos",
       "pl": "$$",
@@ -4185,7 +4185,7 @@
       "r": 4.7,
       "rv": 4835,
       "s": 67,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -4565,7 +4565,7 @@
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "33 Carrer d'Aribau",
       "zip": "08011",
       "ph": "34931536121",
@@ -4857,7 +4857,7 @@
       "r": 4.5,
       "rv": 4486,
       "s": 67,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -5249,7 +5249,7 @@
       "r": 3.9,
       "rv": 4289,
       "s": 72,
-      "c": "Other",
+      "c": "Zaragoza",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -5305,7 +5305,7 @@
       "r": 4.9,
       "rv": 4266,
       "s": 67,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -5417,7 +5417,7 @@
       "r": 3.9,
       "rv": 4233,
       "s": 72,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -5669,7 +5669,7 @@
       "r": 4.2,
       "rv": 4149,
       "s": 52,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -6089,7 +6089,7 @@
       "r": 4.3,
       "rv": 3955,
       "s": 52,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -6425,7 +6425,7 @@
       "r": 4.5,
       "rv": 3806,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -6705,7 +6705,7 @@
       "r": 4.0,
       "rv": 3695,
       "s": 72,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -6957,7 +6957,7 @@
       "r": 3.3,
       "rv": 3619,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -6985,7 +6985,7 @@
       "r": 4.2,
       "rv": 3613,
       "s": 52,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -7013,7 +7013,7 @@
       "r": 4.3,
       "rv": 3605,
       "s": 72,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -7181,7 +7181,7 @@
       "r": 4.1,
       "rv": 3576,
       "s": 77,
-      "c": "Other",
+      "c": "Malaga",
       "ct": 0,
       "se": "Neg",
       "pl": "$",
@@ -7237,7 +7237,7 @@
       "r": 4.9,
       "rv": 3566,
       "s": 77,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -7556,12 +7556,12 @@
       "ta": null,
       "rg": 4.2,
       "em": 0,
-      "ig": 0,
-      "fb": 0,
+      "ig": 1,
+      "fb": 1,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "CL BRUC NUM38 PPP PTA2",
       "zip": "8006",
       "ph": "+34 933 60 81 13",
@@ -7701,7 +7701,7 @@
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "PrestaShop",
       "addr": "19 Carrer d'Olzinelles",
       "zip": "08014",
       "ph": "+34 934 32 19 33",
@@ -8255,13 +8255,13 @@
       "ln": 2.1858,
       "ta": 3.4,
       "rg": null,
-      "em": 0,
-      "ig": 0,
+      "em": 1,
+      "ig": 1,
       "fb": 0,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "1 Plaça de Pau Vila",
       "zip": "08003",
       "ph": "+34 932 21 22 11",
@@ -8497,7 +8497,7 @@
       "r": 2.1,
       "rv": 3229,
       "s": 40,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Neg",
       "pl": "$$",
@@ -8525,7 +8525,7 @@
       "r": 4.6,
       "rv": 3193,
       "s": 67,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -8619,13 +8619,13 @@
       "ln": 2.1707,
       "ta": 4.0,
       "rg": 4.3,
-      "em": 0,
+      "em": 1,
       "ig": 0,
       "fb": 0,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "PLAZA SALVADOR SEGUÍ, 1",
       "zip": "08001",
       "ph": "+34 934 41 94 61",
@@ -8637,7 +8637,7 @@
       "r": 4.1,
       "rv": 3174,
       "s": 72,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -8693,7 +8693,7 @@
       "r": 4.5,
       "rv": 3157,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "",
@@ -8749,7 +8749,7 @@
       "r": 4.4,
       "rv": 3083,
       "s": 77,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -9113,7 +9113,7 @@
       "r": 3.5,
       "rv": 2990,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Neu",
       "pl": "",
@@ -9169,7 +9169,7 @@
       "r": 4.2,
       "rv": 2962,
       "s": 72,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -9253,7 +9253,7 @@
       "r": 4.3,
       "rv": 2874,
       "s": 67,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -9488,12 +9488,12 @@
       "ta": 3.3,
       "rg": null,
       "em": 0,
-      "ig": 0,
-      "fb": 0,
+      "ig": 1,
+      "fb": 1,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "1 Passatge de Bacardí",
       "zip": "08002",
       "ph": "+34 932 59 01 17",
@@ -9645,7 +9645,7 @@
       "r": 4.6,
       "rv": 2804,
       "s": 72,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -9953,7 +9953,7 @@
       "r": 3.9,
       "rv": 2759,
       "s": 72,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -10048,12 +10048,12 @@
       "ta": 4.3,
       "rg": 4.2,
       "em": 0,
-      "ig": 0,
+      "ig": 1,
       "fb": 0,
-      "bk": 0,
+      "bk": 1,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "1 Carrer de la Llacuna",
       "zip": "08005",
       "ph": "+34 936 678 271",
@@ -10989,7 +10989,7 @@
       "r": 4.9,
       "rv": 2620,
       "s": 72,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -11185,7 +11185,7 @@
       "r": 4.0,
       "rv": 2585,
       "s": 72,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -11213,7 +11213,7 @@
       "r": 3.6,
       "rv": 2581,
       "s": 52,
-      "c": "Other",
+      "c": "Malaga",
       "ct": 0,
       "se": "Pos",
       "pl": "",
@@ -11605,7 +11605,7 @@
       "r": 4.4,
       "rv": 2517,
       "s": 72,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -11661,7 +11661,7 @@
       "r": 4.4,
       "rv": 2508,
       "s": 72,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "",
@@ -11773,7 +11773,7 @@
       "r": 4.5,
       "rv": 2499,
       "s": 92,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 1,
       "se": "Pos",
       "pl": "$$",
@@ -11801,7 +11801,7 @@
       "r": 4.0,
       "rv": 2497,
       "s": 72,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "",
@@ -11913,7 +11913,7 @@
       "r": 4.2,
       "rv": 2490,
       "s": 77,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -12176,12 +12176,12 @@
       "ta": 4.1,
       "rg": 4.4,
       "em": 0,
-      "ig": 0,
-      "fb": 0,
+      "ig": 1,
+      "fb": 1,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "WordPress",
       "addr": "CARRER DEL PINTOR FORTUNY, 25",
       "zip": "08001",
       "ph": "+34 933 01 45 83",
@@ -12259,10 +12259,10 @@
       "ln": 2.157,
       "ta": 4.0,
       "rg": 4.1,
-      "em": 0,
-      "ig": 0,
-      "fb": 0,
-      "bk": 0,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
       "tk": 0,
       "wb": 1,
       "sp": "",
@@ -12277,7 +12277,7 @@
       "r": 4.1,
       "rv": 2424,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Neu",
       "pl": "$$$$",
@@ -12305,7 +12305,7 @@
       "r": 4.4,
       "rv": 2422,
       "s": 40,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -12473,7 +12473,7 @@
       "r": 4.7,
       "rv": 2395,
       "s": 52,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -12557,7 +12557,7 @@
       "r": 4.5,
       "rv": 2382,
       "s": 67,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "",
@@ -12669,7 +12669,7 @@
       "r": 4.3,
       "rv": 2356,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -12725,7 +12725,7 @@
       "r": 4.3,
       "rv": 2352,
       "s": 52,
-      "c": "Other",
+      "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -12753,7 +12753,7 @@
       "r": 4.6,
       "rv": 2352,
       "s": 67,
-      "c": "Other",
+      "c": "Malaga",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -12809,7 +12809,7 @@
       "r": 4.7,
       "rv": 2333,
       "s": 72,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -12837,7 +12837,7 @@
       "r": 3.5,
       "rv": 2320,
       "s": 40,
-      "c": "Other",
+      "c": "Malaga",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -12977,7 +12977,7 @@
       "r": 4.1,
       "rv": 2300,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -13089,7 +13089,7 @@
       "r": 4.3,
       "rv": 2269,
       "s": 72,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -13285,7 +13285,7 @@
       "r": 4.4,
       "rv": 2242,
       "s": 77,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -13425,7 +13425,7 @@
       "r": 4.2,
       "rv": 2213,
       "s": 67,
-      "c": "Other",
+      "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -13537,7 +13537,7 @@
       "r": 4.5,
       "rv": 2198,
       "s": 72,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -13733,7 +13733,7 @@
       "r": 3.7,
       "rv": 2132,
       "s": 77,
-      "c": "Other",
+      "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
       "pl": "$$",
@@ -13789,7 +13789,7 @@
       "r": 3.5,
       "rv": 2120,
       "s": 72,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Neu",
       "pl": "$$",
@@ -13929,7 +13929,7 @@
       "r": 3.8,
       "rv": 2106,
       "s": 67,
-      "c": "Other",
+      "c": "Valencia",
       "ct": 0,
       "se": "Pos",
       "pl": "$",
@@ -13985,7 +13985,7 @@
       "r": 4.2,
       "rv": 2103,
       "s": 67,
-      "c": "Other",
+      "c": "Madrid",
       "ct": 0,
       "se": "Pos",
       "pl": "$$$",
@@ -14200,14 +14200,14 @@
       "phone": 45642,
       "domain": 35453,
       "website": 35501,
-      "city": 48840,
+      "city": 70149,
       "address": 66931,
       "industry": 34470,
       "google_place_id": 22877,
       "gp__rating_count": 2811,
       "gp__sentiment": 2838,
       "num_associated_contacts": 74635,
-      "description": 27931,
+      "description": 28140,
       "country": 73833
     },
     "contacts": {
@@ -14475,14 +14475,26 @@
       "ws_instagram": 5954,
       "contacts_mobile": 18579,
       "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-20 18:08",
+      "website": 35501,
+      "phone": 45642,
+      "domain": 35453,
+      "gp_enriched": 2811,
+      "ws_scraped": 22782,
+      "ws_emails": 6656,
+      "ws_instagram": 6924,
+      "contacts_mobile": 18579,
+      "contacts_email": 38255
     }
   ],
   "reachability_funnel": {
     "total": 74635,
     "has_website": 35501,
-    "ws_scraped": 19686,
-    "ws_email_found": 5742,
-    "ws_instagram": 5964,
+    "ws_scraped": 22782,
+    "ws_email_found": 6656,
+    "ws_instagram": 6924,
     "has_phone": 45642,
     "has_contacts": 36319
   },
@@ -14494,17 +14506,17 @@
       "product": "Sistema de agua purificada de proximidad",
       "who_signs": "Propietario / Gerente",
       "timing": "now",
-      "count": 200,
-      "avg_score": 79.7,
+      "count": 211,
+      "avg_score": 80.1,
       "cities": {
-        "Barcelona": 200
+        "Barcelona": 211
       },
       "top_ids": [
         "9921928652",
         "9919857358",
         "9921868533",
         "9919895483",
-        "9921770213"
+        "9921802177"
       ]
     },
     {
@@ -14517,7 +14529,11 @@
       "count": 13,
       "avg_score": 100.0,
       "cities": {
-        "Other": 13
+        "Barcelona": 3,
+        "Madrid": 2,
+        "Valencia": 1,
+        "Sevilla": 1,
+        "Other": 6
       },
       "top_ids": [
         "9919968223",
@@ -14534,15 +14550,15 @@
       "product": "Plataforma de reservas (TheFork, CoverManager)",
       "who_signs": "Gerente / Propietario",
       "timing": "now",
-      "count": 365,
-      "avg_score": 59.4,
+      "count": 359,
+      "avg_score": 59.7,
       "cities": {
-        "Barcelona": 151,
-        "Madrid": 123,
-        "Valencia": 2,
-        "Sevilla": 12,
+        "Barcelona": 157,
+        "Madrid": 143,
+        "Valencia": 13,
+        "Sevilla": 14,
         "Bilbao": 1,
-        "Other": 76
+        "Other": 31
       },
       "top_ids": [
         "9921868533",
@@ -14559,15 +14575,15 @@
       "product": "Gestión de redes sociales, fotografía gastronómica",
       "who_signs": "Propietario / Marketing",
       "timing": "jan_sept",
-      "count": 290,
-      "avg_score": 65.1,
+      "count": 279,
+      "avg_score": 65.0,
       "cities": {
-        "Barcelona": 110,
-        "Madrid": 82,
-        "Valencia": 2,
-        "Sevilla": 10,
+        "Barcelona": 111,
+        "Madrid": 105,
+        "Valencia": 15,
+        "Sevilla": 13,
         "Bilbao": 1,
-        "Other": 85
+        "Other": 34
       },
       "top_ids": [
         "9919895779",
@@ -14589,7 +14605,8 @@
       "cities": {
         "Barcelona": 6,
         "Madrid": 14,
-        "Other": 3
+        "Valencia": 1,
+        "Other": 2
       },
       "top_ids": [
         "9920629988",
@@ -14609,12 +14626,12 @@
       "count": 399,
       "avg_score": 52.4,
       "cities": {
-        "Barcelona": 164,
-        "Madrid": 146,
-        "Valencia": 3,
-        "Sevilla": 12,
+        "Barcelona": 175,
+        "Madrid": 162,
+        "Valencia": 16,
+        "Sevilla": 15,
         "Bilbao": 1,
-        "Other": 73
+        "Other": 30
       },
       "top_ids": [
         "9919895779",
@@ -14631,15 +14648,15 @@
       "product": "TPV moderno (Lightspeed, Square, SumUp)",
       "who_signs": "Propietario / Finanzas",
       "timing": "nov_dec",
-      "count": 264,
-      "avg_score": 23.5,
+      "count": 250,
+      "avg_score": 24.2,
       "cities": {
-        "Barcelona": 112,
-        "Madrid": 68,
-        "Valencia": 2,
-        "Sevilla": 10,
+        "Barcelona": 107,
+        "Madrid": 89,
+        "Valencia": 14,
+        "Sevilla": 12,
         "Bilbao": 1,
-        "Other": 71
+        "Other": 27
       },
       "top_ids": [
         "9922131152",
@@ -14659,11 +14676,11 @@
       "count": 333,
       "avg_score": 62.7,
       "cities": {
-        "Barcelona": 144,
-        "Madrid": 127,
-        "Valencia": 1,
-        "Sevilla": 7,
-        "Other": 54
+        "Barcelona": 152,
+        "Madrid": 139,
+        "Valencia": 9,
+        "Sevilla": 8,
+        "Other": 25
       },
       "top_ids": [
         "9919838921",
@@ -14684,10 +14701,10 @@
       "avg_score": 57.6,
       "cities": {
         "Barcelona": 117,
-        "Madrid": 94,
-        "Valencia": 1,
-        "Sevilla": 9,
-        "Other": 40
+        "Madrid": 104,
+        "Valencia": 9,
+        "Sevilla": 11,
+        "Other": 20
       },
       "top_ids": [
         "9921922770",
@@ -15105,6 +15122,20 @@
         "ct": 1
       },
       {
+        "id": "9921802177",
+        "n": "La Foga",
+        "addr": "Pg. de St. Joan, 32, 08010 Barcelona, Spain",
+        "zip": "",
+        "ph": "935321503",
+        "r": 4.5,
+        "rv": 7843,
+        "s": 77,
+        "wb": 1,
+        "dm": "lafogabcn.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "426858722515",
         "n": "Le Romane",
         "addr": "C/ de Muntaner, 103, Eixample, 08036 Barcelona, España",
@@ -15427,6 +15458,20 @@
         "ct": 0
       },
       {
+        "id": "9922104803",
+        "n": "Pizzeria Napoletana Pummarola",
+        "addr": "Rda. de Sant Pau, 59, 08015 Barcelona, Spain",
+        "zip": "",
+        "ph": "931643460",
+        "r": 4.6,
+        "rv": 5863,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921865692",
         "n": "Burritos",
         "addr": "Ronda de Sant Pere 16 Bajo",
@@ -15578,6 +15623,20 @@
         "wb": 1,
         "dm": "quimethorta.com",
         "tp": "Bar",
+        "ct": 0
+      },
+      {
+        "id": "9919921644",
+        "n": "Tuscania Food & Wine",
+        "addr": "C/ de Mallorca, 434, 08013 Barcelona, Spain",
+        "zip": "",
+        "ph": "935390773",
+        "r": 4.7,
+        "rv": 4835,
+        "s": 67,
+        "wb": 1,
+        "dm": "tuscaniabarcelona.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -15791,6 +15850,20 @@
         "ct": 1
       },
       {
+        "id": "9921801699",
+        "n": "Takumi Ramen Barcelona Balmes",
+        "addr": "C/ de Balmes, 59, 08007 Barcelona, Spain",
+        "zip": "",
+        "ph": "936250814",
+        "r": 4.5,
+        "rv": 4486,
+        "s": 67,
+        "wb": 1,
+        "dm": "carrerbalmes.takumibarcelona.es",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921916403",
         "n": "Sports Bar Italian Food - Av. Diagonal",
         "addr": "Avinguda Diagonal 123",
@@ -15928,6 +16001,20 @@
         "wb": 1,
         "dm": "cherirestaurant.com",
         "tp": "Restaurante mediterráneo",
+        "ct": 0
+      },
+      {
+        "id": "9919911613",
+        "n": "Restaurante H83",
+        "addr": "C/ del Rossell√≥, 449, 08025 Barcelona, Spain",
+        "zip": "",
+        "ph": "933402385",
+        "r": 4.3,
+        "rv": 3955,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -16124,6 +16211,20 @@
         "wb": 1,
         "dm": "abacrestaurant.com",
         "tp": "Restaurante de alta cocina",
+        "ct": 0
+      },
+      {
+        "id": "9919753703",
+        "n": "Pizza Barceloneta Kitchen",
+        "addr": "Carrer de la Maquinista, 12, 08003 Barcelona, Spain",
+        "zip": "",
+        "ph": "935312212",
+        "r": 4.9,
+        "rv": 3566,
+        "s": 77,
+        "wb": 1,
+        "dm": "kitchenbarcelona.es",
+        "tp": "",
         "ct": 0
       },
       {
@@ -16587,6 +16688,20 @@
         "dm": "santamasarestaurant.com",
         "tp": "Restaurante",
         "ct": 1
+      },
+      {
+        "id": "9922041581",
+        "n": "Restaurant Charrito",
+        "addr": "C/ de la Diputaci√≥, 233, 08007 Barcelona, Spain",
+        "zip": "08007",
+        "ph": "934876034",
+        "r": 4.3,
+        "rv": 2874,
+        "s": 67,
+        "wb": 1,
+        "dm": "restaurantecharrito.es",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921938887",
@@ -17107,6 +17222,20 @@
         "ct": 0
       },
       {
+        "id": "9919896294",
+        "n": "Ristorante Mediterrani",
+        "addr": "C/ de Josep Pla, 19, 08019 Barcelona, Spain",
+        "zip": "",
+        "ph": "932503376",
+        "r": 4.4,
+        "rv": 2517,
+        "s": 72,
+        "wb": 1,
+        "dm": "mediterraneoristorante.es",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "426883926249",
         "n": "Txokoa Barcelona",
         "addr": "Carrer de Déu i Mata, 146, Les Corts, 08029 Barcelona, Españ",
@@ -17233,6 +17362,20 @@
         "ct": 0
       },
       {
+        "id": "9919754176",
+        "n": "The Famous Bar Restaurant",
+        "addr": "C/ de Lepant, 293, 08025 Barcelona, Spain",
+        "zip": "",
+        "ph": "931849038",
+        "r": 4.7,
+        "rv": 2395,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9922087359",
         "n": "Oxid la Tertulia",
         "addr": "Carrer de Morales, 15, 08029 Barcelona, Spain",
@@ -17300,6 +17443,20 @@
         "wb": 1,
         "dm": "hesperia.com",
         "tp": "Hotel",
+        "ct": 0
+      },
+      {
+        "id": "9922066674",
+        "n": "La Roda",
+        "addr": "Rambla del Poblenou, 45, 08005 Barcelona, Spain",
+        "zip": "",
+        "ph": "933003138",
+        "r": 4.3,
+        "rv": 2269,
+        "s": 72,
+        "wb": 1,
+        "dm": "larodapoblenou.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -17385,6 +17542,20 @@
         "dm": "xemei.es",
         "tp": "Restaurante italiano",
         "ct": 4
+      },
+      {
+        "id": "9919864783",
+        "n": "Sushiko",
+        "addr": "Av. Diagonal, 477, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "936040690",
+        "r": 4.2,
+        "rv": 2213,
+        "s": 67,
+        "wb": 1,
+        "dm": "sushikobarcelona.es",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921867996",
@@ -17723,6 +17894,20 @@
         "ct": 0
       },
       {
+        "id": "9921947091",
+        "n": "La Jabata",
+        "addr": "Rda. de Sant Pau, 15, 08015 Barcelona, Spain",
+        "zip": "",
+        "ph": "936837955",
+        "r": 4.6,
+        "rv": 1941,
+        "s": 72,
+        "wb": 1,
+        "dm": "lajabata.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921787876",
         "n": "Firo Tast Restaurant",
         "addr": "Av. de Gaud√≠, 83, 08025 Barcelona, Spain",
@@ -17734,6 +17919,20 @@
         "wb": 1,
         "dm": "grupfiro.com",
         "tp": "Restaurante mediterráneo",
+        "ct": 0
+      },
+      {
+        "id": "9921947127",
+        "n": "Maramaia",
+        "addr": "Carrer de Vic, 25, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "931373407",
+        "r": 4.7,
+        "rv": 1923,
+        "s": 67,
+        "wb": 1,
+        "dm": "pedidos.maramaia.es",
+        "tp": "",
         "ct": 0
       },
       {
@@ -17833,6 +18032,34 @@
         "dm": "restaurantekuletos.com",
         "tp": "Restaurante",
         "ct": 1
+      },
+      {
+        "id": "9921801459",
+        "n": "Restaurant Marisma Barceloneta",
+        "addr": "Mercat de la Barcelonata, Pl. del Poeta Bosc√†, 1, 08003 Bar",
+        "zip": "",
+        "ph": "931422011",
+        "r": 4.0,
+        "rv": 1831,
+        "s": 72,
+        "wb": 1,
+        "dm": "marismanass.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922015730",
+        "n": "Shoronpo",
+        "addr": "Carrer del Dr. Rizal, 20, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "931404891",
+        "r": 4.7,
+        "rv": 1812,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9920529353",
@@ -18087,6 +18314,20 @@
         "ct": 6
       },
       {
+        "id": "9919921913",
+        "n": "A Tu Bola",
+        "addr": "Carrer de l'Hospital, 78, 08001 Barcelona, Spain",
+        "zip": "",
+        "ph": "933153244",
+        "r": 4.7,
+        "rv": 1624,
+        "s": 67,
+        "wb": 1,
+        "dm": "atubolarestaurante.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919840704",
         "n": "Xino Mandarino",
         "addr": "C/ de la Diputaci√≥, 167, 08011 Barcelona, Spain",
@@ -18197,6 +18438,20 @@
         "dm": "petitcomite.cat",
         "tp": "Restaurante de cocina española",
         "ct": 3
+      },
+      {
+        "id": "9919921367",
+        "n": "Stella Nova",
+        "addr": "Av. de Gaud√≠, 8, 08025 Barcelona, Spain",
+        "zip": "",
+        "ph": "632982192",
+        "r": 4.5,
+        "rv": 1601,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921770442",
@@ -18325,6 +18580,20 @@
         "ct": 3
       },
       {
+        "id": "9922088135",
+        "n": "Ramen House Barcelona",
+        "addr": "Local 2, C. de Villarroel, 23, 08011 Barcelona, Spain",
+        "zip": "",
+        "ph": "932808847",
+        "r": 4.3,
+        "rv": 1567,
+        "s": 67,
+        "wb": 1,
+        "dm": "ramenhousebcn.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9922006229",
         "n": "√äsia Amb Gr√†cia",
         "addr": "5 Plaça del Diamant",
@@ -18409,6 +18678,20 @@
         "ct": 1
       },
       {
+        "id": "9920618957",
+        "n": "4 Latas Muntaner",
+        "addr": "C/ de Muntaner, 211, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "931893122",
+        "r": 3.8,
+        "rv": 1492,
+        "s": 77,
+        "wb": 1,
+        "dm": "4latas.bar",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919860708",
         "n": "Avocado",
         "addr": "Av. del Paraŀlel",
@@ -18490,6 +18773,20 @@
         "wb": 1,
         "dm": "cantreso.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9919877856",
+        "n": "Marisqueria a Estrela Galega",
+        "addr": "Carrer de Rosalia de Castro, 26, 28, 08025 Barcelona, Spain",
+        "zip": "",
+        "ph": "934355080",
+        "r": 4.5,
+        "rv": 1460,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -18675,6 +18972,20 @@
         "ct": 0
       },
       {
+        "id": "9920617932",
+        "n": "La Mala Vermut & Tapas",
+        "addr": "Carrer del Comte d'Urgell, 146, bajos 2, 08011 Barcelona, Sp",
+        "zip": "",
+        "ph": "936786293",
+        "r": 4.4,
+        "rv": 1395,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919751612",
         "n": "La Dentellière",
         "addr": "Carrer Ample",
@@ -18771,6 +19082,20 @@
         "dm": "robata.es",
         "tp": "Restaurante japonés",
         "ct": 1
+      },
+      {
+        "id": "9919864525",
+        "n": "Teppan-Ya",
+        "addr": "C/ de Lepant, 347, 08025 Barcelona, Spain",
+        "zip": "",
+        "ph": "934464350",
+        "r": 4.3,
+        "rv": 1364,
+        "s": 67,
+        "wb": 1,
+        "dm": "teppan-ya.es",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9920638159",
@@ -18883,6 +19208,20 @@
         "dm": "lanticforn.com",
         "tp": "Restaurante mediterráneo",
         "ct": 1
+      },
+      {
+        "id": "9920618742",
+        "n": "San Shi Rou (Barcelona)",
+        "addr": "Av. de Josep Tarradellas, 118, 08029 Barcelona, Spain",
+        "zip": "",
+        "ph": "934193453",
+        "r": 3.7,
+        "rv": 1324,
+        "s": 67,
+        "wb": 1,
+        "dm": "sanshirou.es",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9919910638",
@@ -19008,6 +19347,34 @@
         "wb": 1,
         "dm": "restauranteguito.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9919753943",
+        "n": "Restaurante Casa Luz",
+        "addr": "Ronda de la Univ., 1, 08007 Barcelona, Spain",
+        "zip": "",
+        "ph": "672376168",
+        "r": 4.2,
+        "rv": 1289,
+        "s": 77,
+        "wb": 1,
+        "dm": "casaluzrestaurante.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922131133",
+        "n": "Ramen Tan Tan",
+        "addr": "C/ del Consell de Cent, 47, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "931787855",
+        "r": 4.7,
+        "rv": 1286,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -19176,6 +19543,20 @@
         "wb": 1,
         "dm": "casamartelo.es",
         "tp": "Restaurante de cocina española",
+        "ct": 0
+      },
+      {
+        "id": "9919877615",
+        "n": "Masaniello Restaurante Pizzeria",
+        "addr": "C/ de Galileu, 1, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "931244912",
+        "r": 4.6,
+        "rv": 1226,
+        "s": 72,
+        "wb": 1,
+        "dm": "restaurantemasaniello.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -19585,6 +19966,20 @@
         "ct": 0
       },
       {
+        "id": "9920617720",
+        "n": "Restaurante Coreano Gayagum",
+        "addr": "Carrer de Sant Gabriel, 2, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "932375324",
+        "r": 4.5,
+        "rv": 1104,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921863121",
         "n": "Bar Bot√†nic - la Sogra del Jardiner",
         "addr": "C/ de Proven√ßa, 125, 08036 Barcelona, Spain",
@@ -19599,6 +19994,20 @@
         "ct": 0
       },
       {
+        "id": "9922104762",
+        "n": "Restaurante Ogura",
+        "addr": "Carrer del Dr. Rizal, 16, 08006 Barcelona, Spain",
+        "zip": "47906",
+        "ph": "936813880",
+        "r": 4.0,
+        "rv": 1099,
+        "s": 72,
+        "wb": 1,
+        "dm": "restauranteogura.eatbu.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920661700",
         "n": "Data Doner Kebab",
         "addr": "Passeig d'Urrutia",
@@ -19610,6 +20019,48 @@
         "wb": 1,
         "dm": "datadonerkebabbarcelona.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9919897049",
+        "n": "Sol de Nit",
+        "addr": "Pla√ßa del Sol, 9, 08012 Barcelona, Spain",
+        "zip": "",
+        "ph": "932373937",
+        "r": 3.6,
+        "rv": 1096,
+        "s": 67,
+        "wb": 1,
+        "dm": "sol-de-nit.eltenedor.rest",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922088678",
+        "n": "Lanto Restaurant",
+        "addr": "C/ de Val√®ncia, 646, 08026 Barcelona, Spain",
+        "zip": "",
+        "ph": "658941131",
+        "r": 4.8,
+        "rv": 1094,
+        "s": 67,
+        "wb": 1,
+        "dm": "lantorestaurant.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922104289",
+        "n": "Rincon Galego",
+        "addr": "Carrer de Pablo Iglesias, 113, 08016 Barcelona, Spain",
+        "zip": "47906",
+        "ph": "933599826",
+        "r": 4.5,
+        "rv": 1091,
+        "s": 72,
+        "wb": 1,
+        "dm": "orincon-galego.eatbu.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -19851,6 +20302,20 @@
         "ct": 1
       },
       {
+        "id": "9919896822",
+        "n": "Restaurant Macao",
+        "addr": "Av. de Josep Tarradellas, 57, 08029 Barcelona, Spain",
+        "zip": "08029",
+        "ph": "934107695",
+        "r": 4.4,
+        "rv": 994,
+        "s": 77,
+        "wb": 1,
+        "dm": "restaurantemacao.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921853882",
         "n": "Upper Lounge Bar - Restaurante Sarrià",
         "addr": "7-21 Passeig de Manuel Girona",
@@ -19988,6 +20453,20 @@
         "wb": 1,
         "dm": "tekefactory.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9920617939",
+        "n": "Pizzeria la Gavina",
+        "addr": "C/ de Ros de Olano, 17, 08012 Barcelona, Spain",
+        "zip": "",
+        "ph": "934157450",
+        "r": 4.2,
+        "rv": 943,
+        "s": 67,
+        "wb": 1,
+        "dm": "pizzerialagavinabcn.blogspot.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -20383,6 +20862,20 @@
         "ct": 0
       },
       {
+        "id": "9922088163",
+        "n": "Seco Taverna Km0",
+        "addr": "Passeig de Montjuïc, 74, 08004 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.5,
+        "rv": 827,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919836887",
         "n": "Creperie les 3 Pommes",
         "addr": "CARRER D'ARAGÓ, 150",
@@ -20481,6 +20974,20 @@
         "ct": 1
       },
       {
+        "id": "9922104282",
+        "n": "La Xarxa Barcelona",
+        "addr": "Plaça de Molina, 2, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "932001348",
+        "r": 4.5,
+        "rv": 792,
+        "s": 72,
+        "wb": 1,
+        "dm": "laxarxabarcelona.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919855587",
         "n": "Moica Burger",
         "addr": "C. de Violant d'Hongria Reina d'Arag√≥, 111, 08028 Barcelona",
@@ -20495,6 +21002,48 @@
         "ct": 0
       },
       {
+        "id": "9922042065",
+        "n": "Santamadre. Restaurant de Tapes. Carns, Peix I Mar",
+        "addr": "Carrer de la Fran√ßa Xica, 25, 08004 Barcelona, Spain",
+        "zip": "",
+        "ph": "934251810",
+        "r": 4.8,
+        "rv": 786,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919911354",
+        "n": "Tapaspuma Bar",
+        "addr": "Gran Via de les Corts Catalanes, 291, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "654789493",
+        "r": 4.5,
+        "rv": 785,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9921801686",
+        "n": "Restaurant Gloria",
+        "addr": "Passatge de Vila i Rosell, 4, BAJO",
+        "zip": "",
+        "ph": "",
+        "r": 4.4,
+        "rv": 784,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920611569",
         "n": "Sushi Shop",
         "addr": "Avenida Diagonal 602",
@@ -20506,6 +21055,20 @@
         "wb": 1,
         "dm": "sushishopconcepcion.com",
         "tp": "Restaurante de sushi",
+        "ct": 0
+      },
+      {
+        "id": "9919921616",
+        "n": "Limbo Barcelona",
+        "addr": "Pla√ßa de Sant Agust√≠, 3, 08001 Barcelona, Spain",
+        "zip": "",
+        "ph": "655884958",
+        "r": 3.7,
+        "rv": 774,
+        "s": 67,
+        "wb": 1,
+        "dm": "limbobarcelona.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -20577,6 +21140,20 @@
         "dm": "brunchandmunch.es",
         "tp": "Restaurante",
         "ct": 1
+      },
+      {
+        "id": "9922088385",
+        "n": "Tayu (Barcelona)",
+        "addr": "Av. de Josep Tarradellas, 139, 08029 Barcelona, Spain",
+        "zip": "",
+        "ph": "934199639",
+        "r": 3.6,
+        "rv": 761,
+        "s": 67,
+        "wb": 1,
+        "dm": "asiaticotayu.wixsite.com",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9919837396",
@@ -20901,6 +21478,48 @@
         "ct": 0
       },
       {
+        "id": "9921801190",
+        "n": "Restaurant la Vida",
+        "addr": "Pg. de Joan de Borb√≥, 31, 08003 Barcelona, Spain",
+        "zip": "",
+        "ph": "931716681",
+        "r": 3.5,
+        "rv": 689,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9921801931",
+        "n": "Trady's Station",
+        "addr": "C/ de Viriat, s n, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "937684853",
+        "r": 4.7,
+        "rv": 685,
+        "s": 77,
+        "wb": 1,
+        "dm": "tradysstation.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9921947329",
+        "n": "Panam75",
+        "addr": "C/ del Consell de Cent, 281, 08011 Barcelona, Spain",
+        "zip": "",
+        "ph": "620460354",
+        "r": 3.6,
+        "rv": 685,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9922104307",
         "n": "Salta Food",
         "addr": "8 Carrer de Maracaibo",
@@ -21041,6 +21660,20 @@
         "ct": 0
       },
       {
+        "id": "9922104542",
+        "n": "Hidalgo",
+        "addr": "C/ de Balmes, 396, 08022 Barcelona, Spain",
+        "zip": "",
+        "ph": "934171196",
+        "r": 4.3,
+        "rv": 668,
+        "s": 67,
+        "wb": 1,
+        "dm": "restauranthidalgobcn.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920526323",
         "n": "Boraz",
         "addr": "C/ de Muntaner, 124, 08036 Barcelona, Spain",
@@ -21108,6 +21741,20 @@
         "wb": 1,
         "dm": "bunsichi.com",
         "tp": "Restaurante japonés",
+        "ct": 0
+      },
+      {
+        "id": "9919878373",
+        "n": "Restaurant Zal",
+        "addr": "Av. Ports d'Europa, 30, 08040 Barcelona, Spain",
+        "zip": "",
+        "ph": "650884547",
+        "r": 3.9,
+        "rv": 655,
+        "s": 72,
+        "wb": 1,
+        "dm": "restaurantezalcentric.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -21307,6 +21954,20 @@
         "ct": 1
       },
       {
+        "id": "9922015481",
+        "n": "La Columna | Restaurant",
+        "addr": "Carrer del Pintor Mir, 13, 08031 Barcelona, Spain",
+        "zip": "",
+        "ph": "652851997",
+        "r": 4.6,
+        "rv": 628,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919857113",
         "n": "Sandwichez",
         "addr": "TRAVESERA DE GRACIA 18 PLANTA BAJA",
@@ -21475,6 +22136,34 @@
         "ct": 0
       },
       {
+        "id": "9920618741",
+        "n": "Saith Kebab - Pizza",
+        "addr": "Carrer del Tur√≥ de la Trinitat, 33, 35, 08033 Barcelona, Sp",
+        "zip": "",
+        "ph": "931256123",
+        "r": 4.6,
+        "rv": 568,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919878635",
+        "n": "Burger Etxekoa",
+        "addr": "Carrer de Santa Am√†lia, 20, 08031 Barcelona, Spain",
+        "zip": "",
+        "ph": "934070243",
+        "r": 3.9,
+        "rv": 567,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921849841",
         "n": "Casa Tomasa",
         "addr": "PAS DE SOTA MURALLA, 3",
@@ -21587,6 +22276,20 @@
         "ct": 0
       },
       {
+        "id": "9921800947",
+        "n": "La Llum del Poblenou",
+        "addr": "Carrer del Taulat, 105, 107, 08005 Barcelona, Spain",
+        "zip": "",
+        "ph": "936339329",
+        "r": 4.6,
+        "rv": 556,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921929449",
         "n": "Bar Galicia",
         "addr": "131 Avinguda del Paral·lel",
@@ -21598,6 +22301,48 @@
         "wb": 1,
         "dm": "bargalicia.com",
         "tp": "Bar restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9919857856",
+        "n": "Restaurante Seven",
+        "addr": "C/ de Balmes, 64, 08007 Barcelona, Spain",
+        "zip": "53780",
+        "ph": "934875216",
+        "r": 3.8,
+        "rv": 551,
+        "s": 72,
+        "wb": 1,
+        "dm": "restauranteseven.negocio.site",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922042358",
+        "n": "Tururuu",
+        "addr": "Carrer d'Enric Casanovas, 94, 08016 Barcelona, Spain",
+        "zip": "47906",
+        "ph": "931749078",
+        "r": 4.2,
+        "rv": 551,
+        "s": 72,
+        "wb": 1,
+        "dm": "tururuu.eatbu.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922067171",
+        "n": "La Nevera",
+        "addr": "C/ de la Mare de Déu de Port, 4, 08038 Barcelona, Spain",
+        "zip": "",
+        "ph": "933488748",
+        "r": 3.8,
+        "rv": 550,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -21629,6 +22374,20 @@
         "ct": 0
       },
       {
+        "id": "9919754184",
+        "n": "Sants Tandoori",
+        "addr": "Carrer de Sants, 109, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "931987643",
+        "r": 3.9,
+        "rv": 532,
+        "s": 67,
+        "wb": 1,
+        "dm": "santstandoori.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920659676",
         "n": "Conesa Beer Barcelona",
         "addr": "Carrer Casanova 62",
@@ -21655,6 +22414,34 @@
         "dm": "lagraellarestaurant.com",
         "tp": "Restaurante",
         "ct": 1
+      },
+      {
+        "id": "9919897070",
+        "n": "Las Tejas Comida .i Pollos Ala Braza Estilo Peruan",
+        "addr": "Carrer de Cal√†bria, 155, 08015 Barcelona, Spain",
+        "zip": "",
+        "ph": "935392890",
+        "r": 4.2,
+        "rv": 530,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919863994",
+        "n": "Matna",
+        "addr": "Av. de Sarri√†, 37, 08029 Barcelona, Spain",
+        "zip": "",
+        "ph": "617022454",
+        "r": 4.7,
+        "rv": 523,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921866180",
@@ -21739,6 +22526,20 @@
         "dm": "gonzalezandco.com",
         "tp": "Restaurante",
         "ct": 3
+      },
+      {
+        "id": "9919753916",
+        "n": "Misto - Cocina Peruana",
+        "addr": "C. de Casanova, 68, 08011 Barcelona, Spain",
+        "zip": "",
+        "ph": "654464978",
+        "r": 4.7,
+        "rv": 510,
+        "s": 67,
+        "wb": 1,
+        "dm": "mistobarcelona.metro.rest",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9919846587",
@@ -21853,6 +22654,20 @@
         "ct": 0
       },
       {
+        "id": "9921801418",
+        "n": "Selene Restaurant",
+        "addr": "Passatge dels Escudellers, 7, 08002 Barcelona, Spain",
+        "zip": "53780",
+        "ph": "936318610",
+        "r": 4.4,
+        "rv": 498,
+        "s": 72,
+        "wb": 1,
+        "dm": "selene-restaurant.negocio.site",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921787636",
         "n": "Taverna Racó de Sants",
         "addr": "CARRER DEL GUADIANA, 6",
@@ -21893,6 +22708,34 @@
         "dm": "vegandthegang.com",
         "tp": "Restaurante de sushi",
         "ct": 1
+      },
+      {
+        "id": "9921801700",
+        "n": "Mucho Cielo y Mucho Mar",
+        "addr": "C/ de Salou, 12, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "631220870",
+        "r": 4.8,
+        "rv": 481,
+        "s": 67,
+        "wb": 1,
+        "dm": "muchocieloymuchomar.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922042612",
+        "n": "Tungu Ramen",
+        "addr": "C/ de St. Antoni Maria Claret, 234, 08025 Barcelona, Spain",
+        "zip": "",
+        "ph": "653680103",
+        "r": 4.6,
+        "rv": 481,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9919850221",
@@ -22007,6 +22850,20 @@
         "ct": 0
       },
       {
+        "id": "9919968452",
+        "n": "Restaurante Chino Gran Siglo",
+        "addr": "Carrer dels Garrofers, 68, 08016 Barcelona, Spain",
+        "zip": "",
+        "ph": "933533194",
+        "r": 3.9,
+        "rv": 460,
+        "s": 72,
+        "wb": 1,
+        "dm": "gransiglomadrid.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9922088907",
         "n": "Restaurante el Noi D'Alcoi",
         "addr": "Carrer Castellnou 37 esquina con carrer de Maria Auxiliadora",
@@ -22047,6 +22904,34 @@
         "dm": "barestaurantejardin.com",
         "tp": "Restaurante",
         "ct": 1
+      },
+      {
+        "id": "9921801709",
+        "n": "Restaurante Hoja Verde",
+        "addr": "Pg. de Sant Antoni, 19, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "933391870",
+        "r": 4.0,
+        "rv": 451,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9921923033",
+        "n": "Turka Kabab",
+        "addr": "Av. de la Mare de D√©u de Montserrat, 25, 08024 Barcelona, S",
+        "zip": "",
+        "ph": "932848402",
+        "r": 4.0,
+        "rv": 449,
+        "s": 72,
+        "wb": 1,
+        "dm": "montserratpizzeria.com",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9920663535",
@@ -22133,6 +23018,20 @@
         "ct": 0
       },
       {
+        "id": "9922042570",
+        "n": "Ta - Tung",
+        "addr": "C. de la Mare de D√©u de la Salut, 75, 08024 Barcelona, Spai",
+        "zip": "",
+        "ph": "932100841",
+        "r": 4.3,
+        "rv": 425,
+        "s": 67,
+        "wb": 1,
+        "dm": "kavlyrestaurant.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921990393",
         "n": "Botánico",
         "addr": "8 Carrer de Maracaibo",
@@ -22144,6 +23043,20 @@
         "wb": 1,
         "dm": "botanico.last.shop",
         "tp": "Tienda de postres",
+        "ct": 0
+      },
+      {
+        "id": "9922104819",
+        "n": "Sas",
+        "addr": "Carrer de Sas, 30, 08030 Barcelona, Spain",
+        "zip": "",
+        "ph": "933458047",
+        "r": 4.4,
+        "rv": 420,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -22161,6 +23074,20 @@
         "ct": 0
       },
       {
+        "id": "9919896043",
+        "n": "Restaurant \"la Boca Aigua\"",
+        "addr": "Carrer del Roser, 34, 08004 Barcelona, Spain",
+        "zip": "",
+        "ph": "633348071",
+        "r": 4.5,
+        "rv": 418,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921821390",
         "n": "Haseeb Doner Kebab",
         "addr": "Carrer del Concili de Trento, 87, 08020 Barcelona, Spain",
@@ -22172,6 +23099,34 @@
         "wb": 1,
         "dm": "haseebdonerkebabbarcelona.com",
         "tp": "Restaurante turco",
+        "ct": 0
+      },
+      {
+        "id": "9922088152",
+        "n": "La Brotxeta",
+        "addr": "Carrer d'Agust√≠ i Mil√†, 59, 08030 Barcelona, Spain",
+        "zip": "53780",
+        "ph": "933115713",
+        "r": 4.4,
+        "rv": 415,
+        "s": 72,
+        "wb": 1,
+        "dm": "restaurant-la-brotxeta.negocio.site",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919864544",
+        "n": "Ternerito Street Food",
+        "addr": "C/ de Mallorca, 437, 08013 Barcelona, Spain",
+        "zip": "",
+        "ph": "936814898",
+        "r": 4.8,
+        "rv": 412,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -22231,6 +23186,20 @@
         "ct": 0
       },
       {
+        "id": "9921946607",
+        "n": "Restaurant Litoral",
+        "addr": "C/ dels Pescadors, 87, 08003 Barcelona, Spain",
+        "zip": "",
+        "ph": "932212209",
+        "r": 4.0,
+        "rv": 392,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920607213",
         "n": "Budy Cafe",
         "addr": "Carrer de Mari√† Cub√≠, 44, 08006 Barcelona, Spain",
@@ -22287,6 +23256,20 @@
         "ct": 0
       },
       {
+        "id": "9919921860",
+        "n": "Tokyo Ramen Takeichi",
+        "addr": "Carrer de Cicer√≥, 9, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "931015556",
+        "r": 4.5,
+        "rv": 385,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919739858",
         "n": "3sentits - Tapes I C√≤ctels Barcelona",
         "addr": "Carrer d'Arizala, 53, 08028 Barcelona, Spain",
@@ -22312,6 +23295,20 @@
         "wb": 1,
         "dm": "jkasianfoods.com",
         "tp": "Supermercado asiático",
+        "ct": 0
+      },
+      {
+        "id": "9919753699",
+        "n": "Restaurant Fish",
+        "addr": "C/ de Balmes, 180, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "634411909",
+        "r": 4.7,
+        "rv": 380,
+        "s": 67,
+        "wb": 1,
+        "dm": "fishrestaurantbarcelona.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -22357,6 +23354,20 @@
         "ct": 0
       },
       {
+        "id": "9919877593",
+        "n": "Nuestra Brasa Garibaldi",
+        "addr": "C. de Viladomat, 267, 08029 Barcelona, Spain",
+        "zip": "",
+        "ph": "680476599",
+        "r": 4.5,
+        "rv": 372,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920636627",
         "n": "Intrigo Pizzeria",
         "addr": "Pg. de la Vall d'Hebron, 60, 08023 Barcelona, Spain",
@@ -22397,6 +23408,20 @@
         "dm": "losteriadelcontadino.es",
         "tp": "Restaurante",
         "ct": 1
+      },
+      {
+        "id": "9919897019",
+        "n": "Magatzem de Ses Illes",
+        "addr": "Carrer de Francisco Giner, 50, 08012 Barcelona, Spain",
+        "zip": "",
+        "ph": "938597525",
+        "r": 4.8,
+        "rv": 364,
+        "s": 67,
+        "wb": 1,
+        "dm": "magatzemsesilles.com",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921824249",
@@ -22455,6 +23480,20 @@
         "ct": 1
       },
       {
+        "id": "9922067427",
+        "n": "Stay Cerveseria",
+        "addr": "Carrer de Malats, 61, 08030 Barcelona, Spain",
+        "zip": "",
+        "ph": "933453550",
+        "r": 4.5,
+        "rv": 356,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920634311",
         "n": "Colmado Gracia",
         "addr": "Travessera de Gràcia",
@@ -22469,6 +23508,62 @@
         "ct": 1
       },
       {
+        "id": "9921947104",
+        "n": "Ribera Coffee",
+        "addr": "Carrer de la Marina, 275, 08025 Barcelona, Spain",
+        "zip": "",
+        "ph": "631030658",
+        "r": 4.4,
+        "rv": 354,
+        "s": 82,
+        "wb": 1,
+        "dm": "riberacoffee.com",
+        "tp": "",
+        "ct": 1
+      },
+      {
+        "id": "9919863996",
+        "n": "Remol Restaurant",
+        "addr": "C/ de Bilbao, 30, 08005 Barcelona, Spain",
+        "zip": "",
+        "ph": "933409398",
+        "r": 4.9,
+        "rv": 351,
+        "s": 67,
+        "wb": 1,
+        "dm": "remolrestaurant.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919877616",
+        "n": "Restaurant Gado Gado",
+        "addr": "C/ de l'Or, 21, 08012 Barcelona, Spain",
+        "zip": "",
+        "ph": "931798558",
+        "r": 4.5,
+        "rv": 348,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919863794",
+        "n": "Les Mil I Una Nits",
+        "addr": "C/ del Rosselló, 354, 08025 Barcelona, Spain",
+        "zip": "08025",
+        "ph": "934765249",
+        "r": 4.5,
+        "rv": 346,
+        "s": 72,
+        "wb": 1,
+        "dm": "syrianlesmiliunanits.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921822166",
         "n": "Marhaba",
         "addr": "Calle Balmes 62",
@@ -22480,6 +23575,20 @@
         "wb": 1,
         "dm": "marhabashisha.com",
         "tp": "Restaurante halal",
+        "ct": 0
+      },
+      {
+        "id": "9922088136",
+        "n": "Restaurant Entrepans Express (Xauarma I Falafel)-H",
+        "addr": "C/ del Clot, 130, 08026 Barcelona, Spain",
+        "zip": "",
+        "ph": "632000278",
+        "r": 4.8,
+        "rv": 344,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -22539,6 +23648,34 @@
         "ct": 0
       },
       {
+        "id": "9922015687",
+        "n": "Restaurant Vicenta",
+        "addr": "Carrer de Riudoms, 34, 08038 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.5,
+        "rv": 338,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922042327",
+        "n": "Pizzeria Espak Doner Kebab",
+        "addr": "Carrer del Torrent de l'Olla, 16, 08012 Barcelona, Spain",
+        "zip": "",
+        "ph": "931920509",
+        "r": 3.7,
+        "rv": 337,
+        "s": 67,
+        "wb": 1,
+        "dm": "junadonerkebabbcn.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921770737",
         "n": "Reserva Ib√ârica Diagonal Comprar Jamón Ibérico - ",
         "addr": "61 Rambla de Catalunya",
@@ -22565,6 +23702,20 @@
         "dm": "garagebeer.co",
         "tp": "Cervecería artesanal",
         "ct": 3
+      },
+      {
+        "id": "9922042564",
+        "n": "Restaurant el Candil",
+        "addr": "C. de Pavia, 76, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "934319853",
+        "r": 4.2,
+        "rv": 330,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921786810",
@@ -22637,6 +23788,48 @@
         "ct": 0
       },
       {
+        "id": "9921801209",
+        "n": "Tumi Cuina Peruana Sants",
+        "addr": "C/ de Gayarre, 8, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "933407815",
+        "r": 4.5,
+        "rv": 313,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9920618172",
+        "n": "Spartan Restaurante",
+        "addr": "Av. Diagonal, 3, 08019 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.4,
+        "rv": 312,
+        "s": 60,
+        "wb": 1,
+        "dm": "spartanrestaurante.es",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9921946355",
+        "n": "Mister Desayuno",
+        "addr": "Av. de Josep Tarradellas, 50, 08029 Barcelona, Spain",
+        "zip": "",
+        "ph": "934196815",
+        "r": 4.3,
+        "rv": 311,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920700651",
         "n": "Arar Sicília - Rostisseria I C√†tering",
         "addr": "C. de Sicilia, 107, 08013 Barcelona, Spain",
@@ -22665,6 +23858,20 @@
         "ct": 1
       },
       {
+        "id": "9919857604",
+        "n": "Restaurante 4hermanos",
+        "addr": "Carrer de la Riera Blanca, 110, 08903 L'Hospitalet de Llobre",
+        "zip": "",
+        "ph": "934213799",
+        "r": 4.7,
+        "rv": 301,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9922008269",
         "n": "Restaurante Abba Mía",
         "addr": "51 Carrer de Berlín",
@@ -22676,6 +23883,20 @@
         "wb": 1,
         "dm": "abbahoteles.com",
         "tp": "Bar restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9919864765",
+        "n": "Restaurante Can Coca",
+        "addr": "Carrer dels Jocs Florals, 78, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "934217727",
+        "r": 4.6,
+        "rv": 300,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -22735,6 +23956,20 @@
         "ct": 1
       },
       {
+        "id": "9919864768",
+        "n": "Pamboli",
+        "addr": "C/ d'Aribau, 111, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "937634826",
+        "r": 4.3,
+        "rv": 294,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921777091",
         "n": "Restaurante Ya du",
         "addr": "C/ de Joaquim Valls, 74, 08016 Barcelona, Spain",
@@ -22777,6 +24012,20 @@
         "ct": 0
       },
       {
+        "id": "9922131136",
+        "n": "Sensato Restaurant",
+        "addr": "Carrer de Septim√†nia, 36, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.9,
+        "rv": 291,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920525769",
         "n": "Cómico-Cómico",
         "addr": "Calle Aribau 87",
@@ -22789,6 +24038,20 @@
         "dm": "comico-comico.com",
         "tp": "Servicios",
         "ct": 1
+      },
+      {
+        "id": "9919753928",
+        "n": "Restaurant Ovo",
+        "addr": "Carrer de Laforja, 25, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "932007708",
+        "r": 4.6,
+        "rv": 288,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921939690",
@@ -22903,6 +24166,34 @@
         "ct": 0
       },
       {
+        "id": "9922104506",
+        "n": "Vendrell",
+        "addr": "C. de Pujades, 234, 08005 Barcelona, Spain",
+        "zip": "",
+        "ph": "935754688",
+        "r": 4.2,
+        "rv": 249,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922088175",
+        "n": "Restaurante Boviscum",
+        "addr": "Carrer Major, 68, 08040 Barcelona, Spain",
+        "zip": "",
+        "ph": "932630073",
+        "r": 4.2,
+        "rv": 248,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919876825",
         "n": "Restaurante Iradier",
         "addr": "C/ de les Escoles Pies, 105, 08017 Barcelona, Spain",
@@ -22914,6 +24205,20 @@
         "wb": 1,
         "dm": "iradierbarcelona.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9919911129",
+        "n": "Restaurant Mi Llajta",
+        "addr": "Carrer de les Moreres, 113, 08820 El Prat de Llobregat, Barc",
+        "zip": "",
+        "ph": "608161053",
+        "r": 4.1,
+        "rv": 245,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -22929,6 +24234,20 @@
         "dm": "lesduesiciliesbcn.com",
         "tp": "Pizzería",
         "ct": 1
+      },
+      {
+        "id": "9921946862",
+        "n": "Nonno Zacca Pizzeria",
+        "addr": "C/ de Par√≠s, 79, 08029 Barcelona, Spain",
+        "zip": "53780",
+        "ph": "",
+        "r": 4.9,
+        "rv": 242,
+        "s": 60,
+        "wb": 1,
+        "dm": "nonno-zacca-pizzeria-bcn.negocio.site",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921992404",
@@ -23015,6 +24334,20 @@
         "ct": 0
       },
       {
+        "id": "9922088680",
+        "n": "S.I.T.I Burger's",
+        "addr": "C/ d'Andrade, 208, 08020 Barcelona, Spain",
+        "zip": "",
+        "ph": "932783053",
+        "r": 4.4,
+        "rv": 233,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920525547",
         "n": "Coocci√ì",
         "addr": "27 Carrer de Morales",
@@ -23040,6 +24373,20 @@
         "wb": 1,
         "dm": "lacentral.com",
         "tp": "Bar",
+        "ct": 0
+      },
+      {
+        "id": "9920618487",
+        "n": "Restaurant Tu I Jo",
+        "addr": "C/ del Maresme, 124, 08019 Barcelona, Spain",
+        "zip": "",
+        "ph": "932662737",
+        "r": 4.3,
+        "rv": 229,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -23085,6 +24432,34 @@
         "ct": 1
       },
       {
+        "id": "9919896564",
+        "n": "Mobster's Barcelona",
+        "addr": "Carrer de Moi√†, 1, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 3.6,
+        "rv": 223,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919878372",
+        "n": "Thats The Way Barcelona",
+        "addr": "C/ d'Enten√ßa, 85, 87, 08015 Barcelona, Spain",
+        "zip": "",
+        "ph": "697971602",
+        "r": 4.2,
+        "rv": 221,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "426834365679",
         "n": "Bar Bosc Barcelona",
         "addr": "Carrer de Roger de Llúria, 102, Eixample, 08037 Barcelona, E",
@@ -23127,6 +24502,20 @@
         "ct": 0
       },
       {
+        "id": "9920617975",
+        "n": "Restaurante la Llesca",
+        "addr": "Carrer de Malats, 24, 08030 Barcelona, Spain",
+        "zip": "",
+        "ph": "933111040",
+        "r": 4.1,
+        "rv": 212,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9922011887",
         "n": "Soc la Pizza",
         "addr": "C/ de Lepant, 339, 08025 Barcelona, Spain",
@@ -23151,6 +24540,20 @@
         "s": 80,
         "wb": 1,
         "dm": "expohotelbarcelona.expohotels.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919921113",
+        "n": "La Cervesera del Poblenou",
+        "addr": "Passatge de Rat√©s, 13, 08018 Barcelona, Spain",
+        "zip": "",
+        "ph": "667091817",
+        "r": 4.8,
+        "rv": 207,
+        "s": 67,
+        "wb": 1,
+        "dm": "lacerveseradelpoblenou.cat",
         "tp": "",
         "ct": 0
       },
@@ -23180,6 +24583,20 @@
         "wb": 1,
         "dm": "teikit.es",
         "tp": "Restaurante de comida para lle",
+        "ct": 0
+      },
+      {
+        "id": "9921801718",
+        "n": "Pollastres a L'Ast",
+        "addr": "C/ de Proven√ßa, 162, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "934523182",
+        "r": 4.0,
+        "rv": 206,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -23267,6 +24684,34 @@
         "ct": 0
       },
       {
+        "id": "9919877839",
+        "n": "Rooftop Elcielo By Sofitel Barcelona",
+        "addr": "Av. del Litoral, 10, 08005 Barcelona, Spain",
+        "zip": "",
+        "ph": "932216565",
+        "r": 4.7,
+        "rv": 187,
+        "s": 77,
+        "wb": 1,
+        "dm": "sofitelbarcelona.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922088897",
+        "n": "Solepin Cafeteria",
+        "addr": "C/ de Muntaner, 407, 08021 Barcelona, Spain",
+        "zip": "",
+        "ph": "931373393",
+        "r": 4.4,
+        "rv": 187,
+        "s": 67,
+        "wb": 1,
+        "dm": "barsolepin.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "426842563833",
         "n": "LA PAPA LAB Obrador & Take Away",
         "addr": "Carrer Gran de Gràcia, 127, Gràcia, 08012 Barcelona, España",
@@ -23295,6 +24740,20 @@
         "ct": 1
       },
       {
+        "id": "9919864259",
+        "n": "Restaurante Tapes Tapas",
+        "addr": "08038 Barcelona, Spain",
+        "zip": "",
+        "ph": "933257746",
+        "r": 3.7,
+        "rv": 182,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921787837",
         "n": "Boston Pizza Numancia",
         "addr": "3 Carrer de Mandri",
@@ -23309,6 +24768,20 @@
         "ct": 0
       },
       {
+        "id": "9921801922",
+        "n": "Restaurante 932431788",
+        "addr": "Carrer de Sants, 141, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "932431788",
+        "r": 4.3,
+        "rv": 179,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919745234",
         "n": "Carnisseria Marsol",
         "addr": "18 Carrer de Loreto",
@@ -23320,6 +24793,20 @@
         "wb": 1,
         "dm": "carnsmarsol.com",
         "tp": "Carnicería",
+        "ct": 0
+      },
+      {
+        "id": "9921922766",
+        "n": "Mojo House - Barcelona, Cocktail & Shisha Hookah L",
+        "addr": "Travessera de Gr√†cia, 40, 08021 Barcelona, Spain",
+        "zip": "",
+        "ph": "936670454",
+        "r": 4.3,
+        "rv": 177,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -23365,6 +24852,20 @@
         "ct": 2
       },
       {
+        "id": "9922066670",
+        "n": "Sabanna Barcelona",
+        "addr": "C/ de Jovellanos, 7, 08001 Barcelona, Spain",
+        "zip": "",
+        "ph": "931162791",
+        "r": 4.2,
+        "rv": 172,
+        "s": 72,
+        "wb": 1,
+        "dm": "sabanna.es",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919742965",
         "n": "Cros Bar",
         "addr": "433 Avinguda Diagonal",
@@ -23377,6 +24878,20 @@
         "dm": "barcros.com",
         "tp": "Restaurante",
         "ct": 1
+      },
+      {
+        "id": "9919857891",
+        "n": "Vegetarium",
+        "addr": "Carrer de Josep Mar√≠a de Sagarra, 08034 Barcelona, Spain",
+        "zip": "",
+        "ph": "931407743",
+        "r": 4.4,
+        "rv": 157,
+        "s": 67,
+        "wb": 1,
+        "dm": "vegetarium.es",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9920662484",
@@ -23407,6 +24922,20 @@
         "ct": 0
       },
       {
+        "id": "9921801176",
+        "n": "Restaurant Wan Wan",
+        "addr": "C/ de Tarragona, 96, 08015 Barcelona, Spain",
+        "zip": "",
+        "ph": "635817913",
+        "r": 4.3,
+        "rv": 155,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921917921",
         "n": "Matos Bar de Vins & Enoteca",
         "addr": "7 Carrer de l'Alcalde Miralles",
@@ -23418,6 +24947,20 @@
         "wb": 1,
         "dm": "vinosdulces.com",
         "tp": "Vinoteca",
+        "ct": 0
+      },
+      {
+        "id": "9919864033",
+        "n": "Restaurant Green Shots",
+        "addr": "C/ de Par√≠s, 201, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "932008825",
+        "r": 4.4,
+        "rv": 151,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -23491,6 +25034,34 @@
         "ct": 0
       },
       {
+        "id": "9919864556",
+        "n": "Standard Pizza",
+        "addr": "C/ de Buenos Aires, 28, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "930251158",
+        "r": 4.3,
+        "rv": 128,
+        "s": 72,
+        "wb": 1,
+        "dm": "standardpizza.es",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922130927",
+        "n": "Rostisseria Ivixa",
+        "addr": "C/ de Ramon Turr√≥, 243, 08005 Barcelona, Spain",
+        "zip": "",
+        "ph": "671476271",
+        "r": 4.5,
+        "rv": 127,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921992148",
         "n": "Bar Salvador",
         "addr": "CARRER DELS CANVIS NOUS, 8",
@@ -23519,6 +25090,20 @@
         "ct": 1
       },
       {
+        "id": "9919857869",
+        "n": "Sol de Baix",
+        "addr": "Carrer de Llu√ß√†, 32, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "659052693",
+        "r": 4.5,
+        "rv": 122,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921857516",
         "n": "Escalope Armando",
         "addr": "Córcega 68",
@@ -23530,6 +25115,20 @@
         "wb": 1,
         "dm": "escalopearmando.com",
         "tp": "Restaurante de comida para lle",
+        "ct": 0
+      },
+      {
+        "id": "9919864791",
+        "n": "Rostisseria Arana",
+        "addr": "Carrer de Sabino Arana, 40, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "607429090",
+        "r": 4.6,
+        "rv": 118,
+        "s": 67,
+        "wb": 1,
+        "dm": "rostisseriarana.es",
+        "tp": "",
         "ct": 0
       },
       {
@@ -23547,6 +25146,20 @@
         "ct": 2
       },
       {
+        "id": "9920618451",
+        "n": "L'Arrosseria com a Casa",
+        "addr": "Carrer de Llull, 198, 08005 Barcelona, Spain",
+        "zip": "53780",
+        "ph": "930312997",
+        "r": 4.0,
+        "rv": 116,
+        "s": 72,
+        "wb": 1,
+        "dm": "larrosseria-com-a-casa.negocio.site",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921998837",
         "n": "La Fabrica (Empanadas Argentinas)",
         "addr": "Calle Call 19",
@@ -23558,6 +25171,34 @@
         "wb": 1,
         "dm": "lafabrica-bcn.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9920617918",
+        "n": "Menjars Anet",
+        "addr": "C/ de Joan Güell, 35, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "933394840",
+        "r": 4.2,
+        "rv": 114,
+        "s": 67,
+        "wb": 1,
+        "dm": "menjarsanet.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9921923011",
+        "n": "Restaurant Folgoso O'Courel",
+        "addr": "Carrer de la Riera Alta, 56, 58, 08001 Barcelona, Spain",
+        "zip": "",
+        "ph": "632196098",
+        "r": 3.8,
+        "rv": 113,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -23617,6 +25258,48 @@
         "ct": 1
       },
       {
+        "id": "9921922791",
+        "n": "Restaurante Bar Mallorca",
+        "addr": "C/ de Mallorca, 662, 08027 Barcelona, Spain",
+        "zip": "",
+        "ph": "932743345",
+        "r": 4.3,
+        "rv": 102,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922016472",
+        "n": "Bar Alexandre",
+        "addr": "Avinguda Meridiana, 416, 08030 Barcelona, Spain",
+        "zip": "",
+        "ph": "933119915",
+        "r": 3.8,
+        "rv": 102,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922104774",
+        "n": "Restaurant Punt G",
+        "addr": "pabell√≥n G 1¬∞, Carrer Major, 08040 Barcelona, Spain",
+        "zip": "",
+        "ph": "935562810",
+        "r": 4.3,
+        "rv": 100,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919742454",
         "n": "El Rebost de Can Peradalta",
         "addr": "Av. de Madrid, 39, 41, 08028 Barcelona, Spain",
@@ -23673,6 +25356,20 @@
         "ct": 0
       },
       {
+        "id": "9919896516",
+        "n": "The Ivory Tapas Bar",
+        "addr": "Carrer del Comte d'Urgell, 258, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "934194498",
+        "r": 4.2,
+        "rv": 91,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9919850737",
         "n": "The Res",
         "addr": "133 Carrer de Mallorca",
@@ -23699,6 +25396,20 @@
         "dm": "eshob.com",
         "tp": "Restaurante mediterráneo",
         "ct": 1
+      },
+      {
+        "id": "9922131162",
+        "n": "Pizza Hot",
+        "addr": "Carrer del Tur√≥ de la Trinitat, 20, L1, 08033 Barcelona, Sp",
+        "zip": "53780",
+        "ph": "661664433",
+        "r": 4.5,
+        "rv": 83,
+        "s": 72,
+        "wb": 1,
+        "dm": "pizza-hot-bar-restaurante.negocio.site",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9922016197",
@@ -23841,6 +25552,20 @@
         "ct": 3
       },
       {
+        "id": "9922066888",
+        "n": "Mashi Cuina",
+        "addr": "Carrer dels Jocs Florals, 129, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "627041776",
+        "r": 4.5,
+        "rv": 66,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921790402",
         "n": "Restaurante-Sidrería \"casa Asturias\"",
         "addr": "Ràfols 17-21 Entrada también por calle Naranjo de Bulnes 1-7",
@@ -23852,6 +25577,20 @@
         "wb": 1,
         "dm": "centroasturianobarcelona.com",
         "tp": "Restaurante de cocina española",
+        "ct": 0
+      },
+      {
+        "id": "9922067387",
+        "n": "Restaurant Bocadillos Casa Li Bar Tapas",
+        "addr": "08030 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.1,
+        "rv": 58,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -23867,6 +25606,20 @@
         "dm": "h10hotels.com",
         "tp": "Restaurante",
         "ct": 1
+      },
+      {
+        "id": "9919911160",
+        "n": "Roca Cerveseria I Tapes",
+        "addr": "C/ de Proven√ßa, 63, 08029 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.0,
+        "rv": 56,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9922000115",
@@ -23953,6 +25706,34 @@
         "ct": 0
       },
       {
+        "id": "9919878625",
+        "n": "Volando Voy",
+        "addr": "Carrer Getseman√≠, 6, 08035 Barcelona, Spain",
+        "zip": "",
+        "ph": "934110775",
+        "r": 3.9,
+        "rv": 49,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922067169",
+        "n": "Tasca Morales",
+        "addr": "Carrer de la Riera Blanca, 14, 08903 L'Hospitalet de Llobreg",
+        "zip": "",
+        "ph": "934409503",
+        "r": 4.2,
+        "rv": 49,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920658408",
         "n": "Abba Mía Restaurante",
         "addr": "51 Carrer de Berlín",
@@ -23964,6 +25745,20 @@
         "wb": 1,
         "dm": "abbamadridhotel.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9922087913",
+        "n": "Raj",
+        "addr": "Rda. de Sant Pau, 52, 08001 Barcelona, Spain",
+        "zip": "47906",
+        "ph": "",
+        "r": 4.2,
+        "rv": 47,
+        "s": 60,
+        "wb": 1,
+        "dm": "raj-bar-restaurant.eatbu.com",
+        "tp": "",
         "ct": 0
       },
       {
@@ -24065,6 +25860,20 @@
         "ct": 0
       },
       {
+        "id": "9919921350",
+        "n": "Tasty Doner Kebab",
+        "addr": "C. Cam√®lies, 30, 08110 Montcada i Reixac, Barcelona, Spain",
+        "zip": "",
+        "ph": "930046236",
+        "r": 3.9,
+        "rv": 37,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921850072",
         "n": "Brusi 47 Gourmet",
         "addr": "Carrer de Brusi",
@@ -24121,6 +25930,20 @@
         "ct": 0
       },
       {
+        "id": "9922104510",
+        "n": "Tolino Restaurante Barcelona Sants",
+        "addr": "Sants, 08014 Barcelona, Spain",
+        "zip": "",
+        "ph": "935616586",
+        "r": 4.9,
+        "rv": 33,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921943275",
         "n": "Ins Escola D'Hoteleria I Turisme de Barcelona  Res",
         "addr": "Carrer del Pintor Alsamora",
@@ -24149,6 +25972,20 @@
         "ct": 0
       },
       {
+        "id": "9922015953",
+        "n": "Super Picnic - les Corts",
+        "addr": "Carrer del Taqu√≠graf Serra, 26, 08029 Barcelona, Spain",
+        "zip": "",
+        "ph": "647794812",
+        "r": 3.7,
+        "rv": 27,
+        "s": 67,
+        "wb": 1,
+        "dm": "superpicnic.es",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921947088",
         "n": "Restaurante Luscofusco",
         "addr": "208 Carrer d'Aragó",
@@ -24159,6 +25996,20 @@
         "s": 85,
         "wb": 1,
         "dm": "exehotels.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919754186",
+        "n": "Wok & Roll",
+        "addr": "C/ de Pere IV, 385, 08020 Barcelona, Spain",
+        "zip": "",
+        "ph": "655389518",
+        "r": 4.8,
+        "rv": 25,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
         "tp": "",
         "ct": 0
       },
@@ -24205,6 +26056,20 @@
         "ct": 0
       },
       {
+        "id": "9922088170",
+        "n": "Restaurant Els Arcs Teteria",
+        "addr": "C. de los Castillejos, 168, 08013 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.5,
+        "rv": 21,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920668884",
         "n": "Restaurant la Taverna",
         "addr": "19 Carrer de la Marina",
@@ -24230,6 +26095,20 @@
         "wb": 1,
         "dm": "labellehuitre.com",
         "tp": "Marisquería",
+        "ct": 0
+      },
+      {
+        "id": "9921923013",
+        "n": "Restaurant Nou",
+        "addr": "C/ de Padilla, 327, 08025 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.4,
+        "rv": 19,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -24261,6 +26140,76 @@
         "ct": 0
       },
       {
+        "id": "9922131398",
+        "n": "Sushi Barcelona - Fusion Sushi",
+        "addr": "C/ de N√†pols, 166, 08013 Barcelona, Spain",
+        "zip": "",
+        "ph": "666007007",
+        "r": 3.7,
+        "rv": 17,
+        "s": 67,
+        "wb": 1,
+        "dm": "fusion-sushi.com",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919896297",
+        "n": "Shake Me",
+        "addr": "Carrer de Tuset, 1, 08006 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.9,
+        "rv": 16,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919857652",
+        "n": "Origen Restaurante",
+        "addr": "C/ de Galileu, 85, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "622424282",
+        "r": 4.6,
+        "rv": 15,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922131189",
+        "n": "Frankfurt el Port Vell",
+        "addr": "C/ de la Mare de Déu de Port, 225, 08038 Barcelona, Spain",
+        "zip": "53780",
+        "ph": "930090534",
+        "r": 4.6,
+        "rv": 15,
+        "s": 72,
+        "wb": 1,
+        "dm": "frankfurt-el-port-vell.negocio.site",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922088185",
+        "n": "Tasty Kebab",
+        "addr": "C/ de Huelva, 106, Local 1, 08020 Barcelona, Spain",
+        "zip": "",
+        "ph": "604225204",
+        "r": 3.5,
+        "rv": 14,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921821385",
         "n": "Buenos Fuegos",
         "addr": "Av. de la Rep√∫blica Argentina, 220, 08023 Barcelona, Spain",
@@ -24272,6 +26221,34 @@
         "wb": 1,
         "dm": "buenosfuegos.com",
         "tp": "Servicio de catering",
+        "ct": 0
+      },
+      {
+        "id": "9922131144",
+        "n": "Umeboshi Sushi",
+        "addr": "C. de Villarroel, 204, Local 4, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "931946048",
+        "r": 4.7,
+        "rv": 13,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919911403",
+        "n": "La Pena Tapas Drinks",
+        "addr": "Carrer dels Cortada, 78, 08035 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.6,
+        "rv": 12,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -24345,6 +26322,20 @@
         "ct": 1
       },
       {
+        "id": "9919896283",
+        "n": "La Cantina del Barrio",
+        "addr": "Carrer de Bartrina, 31, 08030 Barcelona, Spain",
+        "zip": "",
+        "ph": "930080000",
+        "r": 4.3,
+        "rv": 9,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920633282",
         "n": "Dr. Rodrigo Garcia Crespo, Traumatólogo",
         "addr": "CARRER DE JOSEP PLA, 2",
@@ -24356,6 +26347,34 @@
         "wb": 1,
         "dm": "doctoralia.es",
         "tp": "Médico",
+        "ct": 0
+      },
+      {
+        "id": "9919877872",
+        "n": "San Gervasi",
+        "addr": "Pg. de St. Gervasi, 78, 08022 Barcelona, Spain",
+        "zip": "",
+        "ph": "934182298",
+        "r": 4.0,
+        "rv": 8,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919897033",
+        "n": "Restaurante Uno",
+        "addr": "Hotel Meli√° Barcelona, Av. de Sarri√†, 50, 08029 Barcelona,",
+        "zip": "",
+        "ph": "934106060",
+        "r": 4.1,
+        "rv": 8,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -24385,6 +26404,20 @@
         "dm": "panteagroup.club",
         "tp": "Restaurante",
         "ct": 2
+      },
+      {
+        "id": "9922067434",
+        "n": "Tasty",
+        "addr": "Carrer del Capit√† Arenas, 25, 08034 Barcelona, Spain",
+        "zip": "",
+        "ph": "932036707",
+        "r": 3.9,
+        "rv": 7,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
       },
       {
         "id": "9921946586",
@@ -24429,6 +26462,104 @@
         "ct": 0
       },
       {
+        "id": "9919877861",
+        "n": "Toishi",
+        "addr": "Pla√ßa del Bar√≥ de Viver, 5, 08030 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.2,
+        "rv": 5,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919878631",
+        "n": "The Salsas & The Pastas",
+        "addr": "C/ de Londres, 103, 08036 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.0,
+        "rv": 5,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9921801174",
+        "n": "Santamaria",
+        "addr": "C/ d'Arístides Maillol, 12, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 3.8,
+        "rv": 5,
+        "s": 60,
+        "wb": 1,
+        "dm": "tabernasantamaria.es",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922089183",
+        "n": "Hop Hop",
+        "addr": "C. de Casanova, 54, 08011 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 5.0,
+        "rv": 4,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919754482",
+        "n": "Plaza Skarra Mucci",
+        "addr": "Carrer de la Lleialtat, 08001 Barcelona, Spain",
+        "zip": "",
+        "ph": "694446324",
+        "r": 3.7,
+        "rv": 3,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9922105045",
+        "n": "K2 Bocata",
+        "addr": "C/ de Pepe Rubianes, 5, 08003 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 4.0,
+        "rv": 3,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919896264",
+        "n": "Man Ge Restaurant",
+        "addr": "Carrer de la Reina Am√†lia, 28, 08001 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 5.0,
+        "rv": 2,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921857216",
         "n": "Loungebar Putxetsport",
         "addr": "23 Carrer de Marmellà",
@@ -24457,6 +26588,48 @@
         "ct": 0
       },
       {
+        "id": "9919864809",
+        "n": "Restaurante 0813-6035-0873",
+        "addr": "Gran Via de Carles III, 61, 08028 Barcelona, Spain",
+        "zip": "",
+        "ph": "0813-6035-0873",
+        "r": 5.0,
+        "rv": 1,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919878378",
+        "n": "Trabaj",
+        "addr": "C. de los Castillejos, 158, 08013 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 5.0,
+        "rv": 1,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
+        "id": "9919921129",
+        "n": "Rudas Soberania Alimentaria Coop.",
+        "addr": "Pl. d'√Ängel Pesta√±a, 08016 Barcelona, Spain",
+        "zip": "",
+        "ph": "619475684",
+        "r": 5.0,
+        "rv": 1,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9920664043",
         "n": "Dragqueens Lagranmovida",
         "addr": "Rambla de Catalunya, 13, 08007 Barcelona, Spain",
@@ -24468,6 +26641,20 @@
         "wb": 1,
         "dm": "lagranmovida.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9921800942",
+        "n": "Portic Market S.L",
+        "addr": "Pla√ßa de Sant Josep Oriol, 13, 08001 Barcelona, Spain",
+        "zip": "",
+        "ph": "936673539",
+        "r": 5.0,
+        "rv": 1,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       },
       {
@@ -24485,6 +26672,20 @@
         "ct": 1
       },
       {
+        "id": "9921946827",
+        "n": "Ura Restaurant & Lounge",
+        "addr": "33, Pl. de Francesc Maci√†, 6, 7, 08021 Barcelona, Spain",
+        "zip": "",
+        "ph": "",
+        "r": 5.0,
+        "rv": 1,
+        "s": 40,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
+        "ct": 0
+      },
+      {
         "id": "9921994970",
         "n": "Aviram Ricart",
         "addr": "Plaça de la Unió, 25, 08005 Barcelona, Spain",
@@ -24496,6 +26697,20 @@
         "wb": 1,
         "dm": "mercatpoblenou.com",
         "tp": "Restaurante",
+        "ct": 0
+      },
+      {
+        "id": "9922104768",
+        "n": "Shisosuchicocktail",
+        "addr": "C/ de Sant Pau, 08001 Barcelona, Spain",
+        "zip": "",
+        "ph": "611300152",
+        "r": 5.0,
+        "rv": 1,
+        "s": 52,
+        "wb": 0,
+        "dm": "",
+        "tp": "",
         "ct": 0
       }
     ]
@@ -24533,5 +26748,5 @@
     "last_run": "2026-04-20T06:03:22.041582",
     "runs": 11
   },
-  "log_tail": "[2026-04-20 06:02:38]   Place Details HTTP 404 (ChIJbfrtMCUnQg0RE0xyswHh3BA)\n[2026-04-20 06:02:38]   150/197: 147 enriched\n[2026-04-20 06:02:48]   160/197: 157 enriched\n[2026-04-20 06:02:57]   170/197: 167 enriched\n[2026-04-20 06:03:06]   180/197: 177 enriched\n[2026-04-20 06:03:10]   Place Details HTTP 404 (ChIJc7w3LlebYw0RXiTV_VOESRs)\n[2026-04-20 06:03:15]   190/197: 186 enriched\n[2026-04-20 06:03:21]   Place Details HTTP 404 (ChIJG7FVWdRtEg0RU3j_tJJ88iY)\n[2026-04-20 06:03:22] Backup: phaseA_20260420_060322.jsonl\n[2026-04-20 06:03:22] Phase A: 192 enriched, 4 not found, 1 errors\n[2026-04-20 06:03:22] API: 197 PD + 0 TS = $4.53 | Month: $24.54\n[2026-04-20 06:03:22] === Run finished ===\n[2026-04-20 06:03:22] Syncing HubDash...\n[2026-04-20 10:00:05] === Enrichment run started (dry_run=False) ===\n[2026-04-20 10:00:06] Phase A pending: 20018\n[2026-04-20 10:00:06] Phase: A\n[2026-04-20 10:00:06] Budget exhausted for today/month. Skipping.\n[2026-04-20 10:00:06] === Run finished ===\n[2026-04-20 10:00:06] Syncing HubDash...\n[2026-04-20 14:00:06] === Enrichment run started (dry_run=False) ===\n[2026-04-20 14:00:06] Phase A pending: 20018\n[2026-04-20 14:00:06] Phase: A\n[2026-04-20 14:00:06] Budget exhausted for today/month. Skipping.\n[2026-04-20 14:00:06] === Run finished ===\n[2026-04-20 14:00:06] Syncing HubDash..."
+  "log_tail": "[2026-04-20 06:03:21]   Place Details HTTP 404 (ChIJG7FVWdRtEg0RU3j_tJJ88iY)\n[2026-04-20 06:03:22] Backup: phaseA_20260420_060322.jsonl\n[2026-04-20 06:03:22] Phase A: 192 enriched, 4 not found, 1 errors\n[2026-04-20 06:03:22] API: 197 PD + 0 TS = $4.53 | Month: $24.54\n[2026-04-20 06:03:22] === Run finished ===\n[2026-04-20 06:03:22] Syncing HubDash...\n[2026-04-20 10:00:05] === Enrichment run started (dry_run=False) ===\n[2026-04-20 10:00:06] Phase A pending: 20018\n[2026-04-20 10:00:06] Phase: A\n[2026-04-20 10:00:06] Budget exhausted for today/month. Skipping.\n[2026-04-20 10:00:06] === Run finished ===\n[2026-04-20 10:00:06] Syncing HubDash...\n[2026-04-20 14:00:06] === Enrichment run started (dry_run=False) ===\n[2026-04-20 14:00:06] Phase A pending: 20018\n[2026-04-20 14:00:06] Phase: A\n[2026-04-20 14:00:06] Budget exhausted for today/month. Skipping.\n[2026-04-20 14:00:06] === Run finished ===\n[2026-04-20 14:00:06] Syncing HubDash...\n[2026-04-20 18:00:06] === Enrichment run started (dry_run=False) ===\n[2026-04-20 18:00:06] Phase A pending: 20018\n[2026-04-20 18:00:06] Phase: A\n[2026-04-20 18:00:06] Budget exhausted for today/month. Skipping.\n[2026-04-20 18:00:06] === Run finished ===\n[2026-04-20 18:00:06] Budget report published → /Users/nicomegias/Documents/AI/AGENTS/shared/reports/hb_budget.json\n[2026-04-20 18:00:06] Syncing HubDash..."
 }
