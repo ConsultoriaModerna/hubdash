@@ -217,7 +217,39 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title">Reputation Fragmentation — Cross-Platform Variance</div>
     <svg id="chart-reputation-frag" width="100%" height="300"></svg>
   </div>
-  <!-- === END VANGUARD BI === -->
+  <!-- === VANGUARD BI v2 === -->
+  <div class="panel">
+    <div class="panel-title">Review Gravity — Volume vs Rating</div>
+    <svg id="chart-review-gravity" width="100%" height="320"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Complaint × Price — CX by Segment</div>
+    <svg id="chart-complaint-price" width="100%" height="320"></svg>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">City Digital Pulse — Adoption by City</div>
+    <svg id="chart-city-digital" width="100%" height="320"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Sentiment Geography — CX by City</div>
+    <svg id="chart-sentiment-geo" width="100%" height="320"></svg>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">CRM Value Map — Score × Contacts</div>
+    <svg id="chart-crm-value" width="100%" height="320"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Social Stack Effect — Platform Combos × Rating</div>
+    <svg id="chart-social-stack" width="100%" height="320"></svg>
+  </div>
+
+  <div class="panel panel-full">
+    <div class="panel-title">Business Type Landscape</div>
+    <svg id="chart-type-landscape" width="100%" height="350"></svg>
+  </div>
+  <!-- === END VANGUARD BI v2 === -->
 
   <div class="panel panel-full">
     <div class="panel-title">Enrichment Evolution — Field Coverage Over Time</div>
@@ -1260,6 +1292,432 @@ function drawReputationFragmentation(d) {
     .attr('fill',C.dim).attr('font-size',9).text(`${fragData.length} analyzed | avg fragmentation: ${avgFrag}`);
 }
 
+// === VANGUARD BI v2 ===
+
+function drawReviewGravity(d) {
+  const svg = d3.select('#chart-review-gravity'); svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const data = d.bubbles.filter(b => b.rv > 0 && b.r > 0);
+  if (data.length < 10) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:20, r:20, b:40, l:45};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const x = d3.scaleLog().domain([d3.min(data,b=>b.rv)||1, d3.max(data,b=>b.rv)]).range([0,w]).clamp(true);
+  const y = d3.scaleLinear().domain([2,5]).range([h,0]);
+
+  // Regression to mean zone
+  const avgR = d3.mean(data, b => b.r);
+  g.append('rect').attr('x',0).attr('y',y(avgR+0.2)).attr('width',w).attr('height',y(avgR-0.2)-y(avgR+0.2))
+    .attr('fill',C.green).attr('opacity',0.06);
+  g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(avgR)).attr('y2',y(avgR))
+    .attr('stroke',C.green).attr('stroke-dasharray','4,4').attr('opacity',0.3);
+  g.append('text').attr('x',w-5).attr('y',y(avgR)-5).attr('text-anchor','end')
+    .attr('fill',C.green).attr('font-size',9).attr('opacity',0.5).text(`avg ${avgR.toFixed(2)}`);
+
+  // Gravity funnel — as reviews increase, ratings converge
+  const brackets = [[1,50],[50,200],[200,500],[500,2000],[2000,99999]];
+  const bracketStats = brackets.map(([lo,hi]) => {
+    const subset = data.filter(b => b.rv >= lo && b.rv < hi);
+    if (!subset.length) return null;
+    const mean = d3.mean(subset, b => b.r);
+    const std = Math.sqrt(d3.mean(subset, b => Math.pow(b.r - mean, 2)));
+    return {lo, hi, mean, std, cx: x(Math.sqrt(lo*hi)), n: subset.length};
+  }).filter(Boolean);
+
+  // Draw funnel envelope
+  if (bracketStats.length > 1) {
+    const areaUp = d3.line().x(b=>b.cx).y(b=>y(b.mean+b.std)).curve(d3.curveMonotoneX);
+    const areaDn = d3.line().x(b=>b.cx).y(b=>y(b.mean-b.std)).curve(d3.curveMonotoneX);
+    g.append('path').datum(bracketStats).attr('d',areaUp).attr('fill','none').attr('stroke',C.yellow).attr('opacity',0.3).attr('stroke-dasharray','3,3');
+    g.append('path').datum(bracketStats).attr('d',areaDn).attr('fill','none').attr('stroke',C.yellow).attr('opacity',0.3).attr('stroke-dasharray','3,3');
+  }
+
+  // Dots
+  data.sort((a,b) => b.rv - a.rv);
+  const colorScale = d3.scaleLinear().domain([2,3.5,5]).range([C.red,C.yellow,C.green]);
+  data.forEach(b => {
+    g.append('circle').attr('cx',x(b.rv)).attr('cy',y(b.r)).attr('r',3).attr('fill',colorScale(b.r)).attr('opacity',0.6)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${b.n}</b><br>⭐ ${b.r} | ${b.rv.toLocaleString()} reviews<br>${b.c}<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5).tickFormat(d3.format(',.0f')))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.append('g').call(d3.axisLeft(y).ticks(6)).selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Reviews (log scale)');
+  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Rating');
+
+  // Outlier labels
+  const outliers = data.filter(b => b.rv < 50 && (b.r > 4.8 || b.r < 2.5));
+  svg.append('text').attr('x',W-10).attr('y',14).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9).text(`${data.length} companies | Dashed = ±1σ convergence funnel`);
+}
+
+function drawComplaintPrice(d) {
+  const svg = d3.select('#chart-complaint-price'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const data = d.bubbles.filter(b => b.tc && b.pl);
+  if (data.length < 10) {
+    svg.append('text').attr('x','50%').attr('y',160).attr('text-anchor','middle')
+      .attr('fill',C.muted).attr('font-size',13).text('Not enough complaint + price data');
+    return;
+  }
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:20, r:20, b:40, l:90};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const prices = ['$','$$','$$$','$$$$'].filter(p => data.some(b => b.pl === p));
+  const complaints = [...new Set(data.map(b => b.tc))].sort();
+
+  const matrix = complaints.map(() => prices.map(() => 0));
+  data.forEach(b => {
+    const ci = complaints.indexOf(b.tc);
+    const pi = prices.indexOf(b.pl);
+    if (ci >= 0 && pi >= 0) matrix[ci][pi]++;
+  });
+
+  const xScale = d3.scaleBand().domain(prices).range([0,w]).padding(0.06);
+  const yScale = d3.scaleBand().domain(complaints).range([0,h]).padding(0.06);
+  const maxVal = d3.max(matrix.flat()) || 1;
+  const color = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, maxVal]);
+
+  complaints.forEach((comp, ci) => {
+    prices.forEach((price, pi) => {
+      const val = matrix[ci][pi];
+      g.append('rect').attr('x',xScale(price)).attr('y',yScale(comp))
+        .attr('width',xScale.bandwidth()).attr('height',yScale.bandwidth())
+        .attr('fill', val ? color(val) : C.grid).attr('rx',3)
+        .on('mousemove', evt => showTip(evt, `${comp} × ${price}<br><b>${val} companies</b>`))
+        .on('mouseleave', hideTip);
+      if (val > 0) {
+        g.append('text').attr('x',xScale(price)+xScale.bandwidth()/2).attr('y',yScale(comp)+yScale.bandwidth()/2+4)
+          .attr('text-anchor','middle').attr('fill',val>maxVal*0.5?'#000':C.text).attr('font-size',11).attr('font-weight',600)
+          .text(val).style('pointer-events','none');
+      }
+    });
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',11);
+  g.append('g').call(d3.axisLeft(yScale)).selectAll('text').attr('fill',C.muted).attr('font-size',10);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  svg.append('text').attr('x',W-10).attr('y',14).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9).text(`${data.length} with complaint + price data`);
+}
+
+function drawCityDigital(d) {
+  const svg = d3.select('#chart-city-digital'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:15, r:20, b:45, l:80};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const cities = {};
+  d.bubbles.forEach(b => {
+    if (!cities[b.c]) cities[b.c] = {total:0, wb:0, em:0, ig:0, fb:0, bk:0, tk:0};
+    const c = cities[b.c];
+    c.total++;
+    if (b.wb) c.wb++; if (b.em) c.em++; if (b.ig) c.ig++;
+    if (b.fb) c.fb++; if (b.bk) c.bk++; if (b.tk) c.tk++;
+  });
+
+  const items = Object.entries(cities)
+    .map(([name, c]) => ({name, ...c}))
+    .filter(c => c.total >= 5)
+    .sort((a,b) => b.total - a.total)
+    .slice(0, 8);
+
+  if (items.length < 2) return;
+
+  const channels = [
+    {key:'wb', label:'Website', color:C.blue},
+    {key:'em', label:'Email', color:C.green},
+    {key:'ig', label:'Instagram', color:C.purple},
+    {key:'fb', label:'Facebook', color:'#1877F2'},
+    {key:'bk', label:'Booking', color:C.orange},
+    {key:'tk', label:'TikTok', color:C.red},
+  ];
+
+  const yBand = d3.scaleBand().domain(items.map(i=>i.name)).range([0,h]).padding(0.12);
+  const xScale = d3.scaleLinear().domain([0,100]).range([0,w]);
+
+  items.forEach(item => {
+    let xOff = 0;
+    channels.forEach(ch => {
+      const pct = (item[ch.key] / item.total) * 100;
+      const bw = xScale(pct);
+      g.append('rect').attr('x',xOff).attr('y',yBand(item.name)).attr('width',bw).attr('height',yBand.bandwidth())
+        .attr('fill',ch.color).attr('opacity',0.75)
+        .on('mousemove', evt => showTip(evt, `<b>${item.name}</b> — ${ch.label}<br>${item[ch.key]}/${item.total} (${pct.toFixed(0)}%)`))
+        .on('mouseleave', hideTip);
+      xOff += bw;
+    });
+
+    g.append('text').attr('x',-6).attr('y',yBand(item.name)+yBand.bandwidth()/2+4)
+      .attr('text-anchor','end').attr('fill',C.text).attr('font-size',10).text(`${item.name} (${item.total})`);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale).ticks(5).tickFormat(d=>d+'%'))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  // Legend
+  const lg = g.append('g').attr('transform',`translate(0,${h+25})`);
+  channels.forEach((ch, i) => {
+    const xOff = i * (w / channels.length);
+    lg.append('rect').attr('x',xOff).attr('y',-4).attr('width',8).attr('height',8).attr('fill',ch.color).attr('rx',1);
+    lg.append('text').attr('x',xOff+11).attr('y',4).attr('fill',C.muted).attr('font-size',9).text(ch.label);
+  });
+}
+
+function drawSentimentGeo(d) {
+  const svg = d3.select('#chart-sentiment-geo'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:15, r:20, b:40, l:80};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const cities = {};
+  d.bubbles.forEach(b => {
+    if (!b.se) return;
+    if (!cities[b.c]) cities[b.c] = {total:0, Pos:0, Neu:0, Neg:0};
+    cities[b.c].total++;
+    if (b.se === 'Pos') cities[b.c].Pos++;
+    else if (b.se === 'Neu') cities[b.c].Neu++;
+    else if (b.se === 'Neg') cities[b.c].Neg++;
+  });
+
+  const items = Object.entries(cities)
+    .map(([name, c]) => ({name, ...c}))
+    .filter(c => c.total >= 5)
+    .sort((a,b) => b.total - a.total)
+    .slice(0, 8);
+
+  if (items.length < 2) return;
+
+  const sentiments = [
+    {key:'Pos', label:'Positive', color:C.green},
+    {key:'Neu', label:'Neutral', color:C.yellow},
+    {key:'Neg', label:'Negative', color:C.red},
+  ];
+
+  const yBand = d3.scaleBand().domain(items.map(i=>i.name)).range([0,h]).padding(0.12);
+  const xScale = d3.scaleLinear().domain([0,100]).range([0,w]);
+
+  items.forEach(item => {
+    let xOff = 0;
+    sentiments.forEach(s => {
+      const pct = (item[s.key] / item.total) * 100;
+      const bw = xScale(pct);
+      g.append('rect').attr('x',xOff).attr('y',yBand(item.name)).attr('width',bw).attr('height',yBand.bandwidth())
+        .attr('fill',s.color).attr('opacity',0.75)
+        .on('mousemove', evt => showTip(evt, `<b>${item.name}</b> — ${s.label}<br>${item[s.key]}/${item.total} (${pct.toFixed(0)}%)`))
+        .on('mouseleave', hideTip);
+      xOff += bw;
+    });
+
+    // City label + positive % highlight
+    const posPct = ((item.Pos / item.total) * 100).toFixed(0);
+    g.append('text').attr('x',-6).attr('y',yBand(item.name)+yBand.bandwidth()/2+4)
+      .attr('text-anchor','end').attr('fill',C.text).attr('font-size',10).text(`${item.name} (${item.total})`);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale).ticks(5).tickFormat(d=>d+'%'))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  const lg = g.append('g').attr('transform',`translate(${w/2-80},${h+25})`);
+  sentiments.forEach((s, i) => {
+    lg.append('rect').attr('x',i*60).attr('y',-4).attr('width',8).attr('height',8).attr('fill',s.color).attr('rx',1);
+    lg.append('text').attr('x',i*60+11).attr('y',4).attr('fill',C.muted).attr('font-size',9).text(s.label);
+  });
+}
+
+function drawCrmValue(d) {
+  const svg = d3.select('#chart-crm-value'); svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:20, r:20, b:40, l:45};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const maxCt = d3.max(d.bubbles, b => b.ct) || 1;
+  const x = d3.scaleLinear().domain([0, 100]).range([0, w]);
+  const y = d3.scaleLinear().domain([0, Math.min(maxCt, 30)]).range([h, 0]).clamp(true);
+  const maxRv = d3.max(d.bubbles, b => b.rv) || 1;
+
+  // Grid
+  y.ticks(5).forEach(tick => {
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(tick)).attr('y2',y(tick))
+      .attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+
+  // Highlight zones
+  g.append('rect').attr('x',x(70)).attr('y',y(30)).attr('width',x(100)-x(70)).attr('height',y(5)-y(30))
+    .attr('fill',C.green).attr('opacity',0.04);
+  g.append('text').attr('x',x(85)).attr('y',y(25)).attr('text-anchor','middle')
+    .attr('fill',C.green).attr('opacity',0.2).attr('font-size',10).text('HIGH VALUE');
+
+  d.bubbles.forEach(b => {
+    const hasMob = b.ct > 0; // has contacts
+    const r = 2 + Math.sqrt(b.rv / maxRv) * 7;
+    const col = b.ct > 3 ? C.green : b.ct > 0 ? C.yellow : C.red;
+    g.append('circle').attr('cx',x(b.s)).attr('cy',y(Math.min(b.ct,30))).attr('r',r)
+      .attr('fill',col).attr('opacity',0.5)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${b.n}</b><br>Score: ${b.s} | Contacts: ${b.ct}<br>⭐ ${b.r} | ${b.rv.toLocaleString()} reviews<br>${b.c}<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.append('g').call(d3.axisLeft(y).ticks(6)).selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Data Score (0-100)');
+  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Contacts');
+
+  const high = d.bubbles.filter(b => b.s >= 70 && b.ct >= 5).length;
+  const orphan = d.bubbles.filter(b => b.s >= 70 && b.ct === 0).length;
+  svg.append('text').attr('x',W-10).attr('y',14).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9).text(`${high} high-value (score≥70 + 5+ct) | ${orphan} rich data, 0 contacts`);
+}
+
+function drawSocialStack(d) {
+  const svg = d3.select('#chart-social-stack'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:15, r:60, b:40, l:110};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  // Compute social combos
+  const combos = {};
+  d.bubbles.forEach(b => {
+    const parts = [];
+    if (b.ig) parts.push('IG');
+    if (b.fb) parts.push('FB');
+    if (b.tk) parts.push('TK');
+    if (b.bk) parts.push('BK');
+    const key = parts.length ? parts.join('+') : 'None';
+    if (!combos[key]) combos[key] = {sum:0, count:0};
+    combos[key].sum += b.r;
+    combos[key].count++;
+  });
+
+  const items = Object.entries(combos)
+    .map(([name,{sum,count}]) => ({name, avg: sum/count, count}))
+    .filter(d => d.count >= 3)
+    .sort((a,b) => b.count - a.count)
+    .slice(0, 10);
+
+  if (items.length < 2) {
+    svg.append('text').attr('x','50%').attr('y',160).attr('text-anchor','middle')
+      .attr('fill',C.muted).attr('font-size',13).text('Not enough social data yet');
+    return;
+  }
+
+  const yBand = d3.scaleBand().domain(items.map(i=>i.name)).range([0,h]).padding(0.15);
+  const xMax = d3.max(items, i => i.count);
+  const xScale = d3.scaleLinear().domain([0, xMax]).range([0, w]);
+  const colorScale = d3.scaleLinear().domain([3,4,5]).range([C.red,C.yellow,C.green]);
+
+  items.forEach(item => {
+    g.append('rect').attr('x',0).attr('y',yBand(item.name))
+      .attr('width',xScale(item.count)).attr('height',yBand.bandwidth())
+      .attr('fill',colorScale(item.avg)).attr('opacity',0.75).attr('rx',3)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${item.name}</b><br>${item.count} companies<br>Avg rating: ${item.avg.toFixed(2)}★`))
+      .on('mouseleave', hideTip);
+
+    g.append('text').attr('x',-6).attr('y',yBand(item.name)+yBand.bandwidth()/2+4)
+      .attr('text-anchor','end').attr('fill',C.text).attr('font-size',10).text(item.name);
+
+    g.append('text').attr('x',xScale(item.count)+5).attr('y',yBand(item.name)+yBand.bandwidth()/2+4)
+      .attr('fill',C.muted).attr('font-size',10).text(`${item.count} (${item.avg.toFixed(1)}★)`);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale).ticks(5))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Companies (bar color = avg rating)');
+}
+
+function drawTypeLandscape(d) {
+  const svg = d3.select('#chart-type-landscape'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 350;
+  const m = {t:10, r:10, b:10, l:10};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  // Group by primary type
+  const types = {};
+  d.bubbles.forEach(b => {
+    const tp = b.tp || 'Unknown';
+    if (!types[tp]) types[tp] = {sum:0, count:0, rvSum:0};
+    types[tp].sum += b.r;
+    types[tp].count++;
+    types[tp].rvSum += b.rv;
+  });
+
+  const items = Object.entries(types)
+    .map(([name,{sum,count,rvSum}]) => ({name, avg: sum/count, count, avgRv: rvSum/count}))
+    .filter(d => d.count >= 2)
+    .sort((a,b) => b.count - a.count);
+
+  if (items.length < 2) return;
+
+  // Treemap
+  const root = d3.hierarchy({children: items}).sum(d => d.count);
+  d3.treemap().size([w, h]).padding(2).round(true)(root);
+
+  const colorScale = d3.scaleLinear().domain([3, 4, 5]).range([C.red, C.yellow, C.green]);
+
+  root.leaves().forEach(leaf => {
+    const d = leaf.data;
+    const lw = leaf.x1 - leaf.x0, lh = leaf.y1 - leaf.y0;
+    g.append('rect').attr('x',leaf.x0).attr('y',leaf.y0).attr('width',lw).attr('height',lh)
+      .attr('fill',colorScale(d.avg)).attr('opacity',0.7).attr('rx',3).attr('stroke',C.border).attr('stroke-width',0.5)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${d.name}</b><br>${d.count} companies<br>Avg rating: ${d.avg.toFixed(2)}★<br>Avg reviews: ${Math.round(d.avgRv).toLocaleString()}`))
+      .on('mouseleave', hideTip);
+
+    // Only show text if tile is big enough
+    if (lw > 50 && lh > 25) {
+      const fontSize = Math.min(12, Math.max(8, lw / d.name.length * 1.2));
+      g.append('text').attr('x',leaf.x0+4).attr('y',leaf.y0+14)
+        .attr('fill',d.avg > 4.2 ? '#000' : C.text).attr('font-size',fontSize).attr('font-weight',600)
+        .text(d.name.length > lw/6 ? d.name.slice(0, Math.floor(lw/6))+'…' : d.name)
+        .style('pointer-events','none');
+      if (lh > 35) {
+        g.append('text').attr('x',leaf.x0+4).attr('y',leaf.y0+28)
+          .attr('fill',d.avg > 4.2 ? '#000' : C.muted).attr('font-size',9)
+          .text(`${d.count} | ${d.avg.toFixed(1)}★`)
+          .style('pointer-events','none');
+      }
+    }
+  });
+}
+
+// === END VANGUARD BI v2 ===
+
 // === END VANGUARD BI ===
 
 function drawEvolution(d) {
@@ -1378,7 +1836,10 @@ function updateAll(d) {
   drawGeoConstellation(d); drawRatingDelta(d);
   drawTouristTrap(d); drawComplaintGeo(d); drawDigitalMatrix(d);
   drawDarkRestaurant(d); drawReachabilityFunnel(d); drawPlatformStack(d);
-  drawReputationFragmentation(d); drawEvolution(d);
+  drawReputationFragmentation(d);
+  drawReviewGravity(d); drawComplaintPrice(d); drawCityDigital(d);
+  drawSentimentGeo(d); drawCrmValue(d); drawSocialStack(d); drawTypeLandscape(d);
+  drawEvolution(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
   if (window.bubbleReady) window.updateBubbles(d);
