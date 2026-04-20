@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-20T18:08:07",
-  "fetch_seconds": 76.8,
+  "generated_at": "2026-04-20T21:22:06",
+  "fetch_seconds": 80.5,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
@@ -34,22 +34,22 @@
   "cities": [
     {
       "city": "Barcelona",
-      "total": 11995,
+      "total": 12006,
       "enriched": 892
     },
     {
       "city": "Madrid",
-      "total": 12554,
+      "total": 12572,
       "enriched": 1074
     },
     {
       "city": "Valencia",
-      "total": 4466,
+      "total": 4475,
       "enriched": 259
     },
     {
       "city": "Sevilla",
-      "total": 3597,
+      "total": 3598,
       "enriched": 154
     },
     {
@@ -59,7 +59,7 @@
     },
     {
       "city": "Otras",
-      "total": 41177,
+      "total": 41138,
       "enriched": 404
     }
   ],
@@ -81,29 +81,29 @@
     ],
     "companies": [
       [
-        953,
-        4787,
-        3104,
+        954,
+        4795,
+        3106,
         2804,
         347
       ],
       [
         1055,
-        4747,
-        4027,
+        4759,
+        4033,
         2560,
         165
       ],
       [
         431,
-        1876,
-        1432,
+        1882,
+        1435,
         717,
         10
       ],
       [
         276,
-        1579,
+        1580,
         1146,
         592,
         4
@@ -116,37 +116,37 @@
         1
       ],
       [
-        3483,
-        15137,
-        13836,
+        3482,
+        15110,
+        13825,
         8646,
         75
       ]
     ],
     "contacts": [
       [
-        64,
-        417,
-        1763,
+        65,
+        426,
+        1771,
         1390,
         0
       ],
       [
-        97,
-        548,
-        1699,
+        105,
+        571,
+        1715,
         1728,
         0
       ],
       [
-        18,
-        196,
-        307,
+        19,
+        202,
+        310,
         430,
         0
       ],
       [
-        4,
+        6,
         20,
         23,
         1,
@@ -154,15 +154,15 @@
       ],
       [
         0,
-        10,
-        141,
+        12,
+        145,
         227,
         0
       ],
       [
-        12594,
-        24331,
-        17682,
+        12582,
+        24291,
+        17651,
         6168,
         0
       ]
@@ -13407,13 +13407,13 @@
       "ln": 2.1608,
       "ta": 4.1,
       "rg": 4.4,
-      "em": 0,
-      "ig": 0,
+      "em": 1,
+      "ig": 1,
       "fb": 0,
       "bk": 0,
       "tk": 0,
       "wb": 1,
-      "sp": "",
+      "sp": "Squarespace",
       "addr": "Paseo De La Exposicion 85",
       "zip": "8004",
       "ph": "34935335140",
@@ -14200,14 +14200,14 @@
       "phone": 45642,
       "domain": 35453,
       "website": 35501,
-      "city": 70149,
+      "city": 71207,
       "address": 66931,
       "industry": 34470,
       "google_place_id": 22877,
       "gp__rating_count": 2811,
       "gp__sentiment": 2838,
       "num_associated_contacts": 74635,
-      "description": 28140,
+      "description": 28168,
       "country": 73833
     },
     "contacts": {
@@ -14217,7 +14217,7 @@
       "lastname": 16948,
       "phone": 38635,
       "company": 45479,
-      "city": 34038,
+      "city": 34195,
       "jobtitle": 3260,
       "lifecyclestage": 69858,
       "associatedcompanyid": 41400,
@@ -14487,14 +14487,26 @@
       "ws_instagram": 6924,
       "contacts_mobile": 18579,
       "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-20 21:22",
+      "website": 35501,
+      "phone": 45642,
+      "domain": 35453,
+      "gp_enriched": 2811,
+      "ws_scraped": 23195,
+      "ws_emails": 6757,
+      "ws_instagram": 7043,
+      "contacts_mobile": 18579,
+      "contacts_email": 38255
     }
   ],
   "reachability_funnel": {
     "total": 74635,
     "has_website": 35501,
-    "ws_scraped": 22782,
-    "ws_email_found": 6656,
-    "ws_instagram": 6924,
+    "ws_scraped": 23195,
+    "ws_email_found": 6757,
+    "ws_instagram": 7043,
     "has_phone": 45642,
     "has_contacts": 36319
   },
@@ -14551,7 +14563,7 @@
       "who_signs": "Gerente / Propietario",
       "timing": "now",
       "count": 359,
-      "avg_score": 59.7,
+      "avg_score": 59.8,
       "cities": {
         "Barcelona": 157,
         "Madrid": 143,
@@ -14575,10 +14587,10 @@
       "product": "Gestión de redes sociales, fotografía gastronómica",
       "who_signs": "Propietario / Marketing",
       "timing": "jan_sept",
-      "count": 279,
+      "count": 278,
       "avg_score": 65.0,
       "cities": {
-        "Barcelona": 111,
+        "Barcelona": 110,
         "Madrid": 105,
         "Valencia": 15,
         "Sevilla": 13,
@@ -14648,10 +14660,10 @@
       "product": "TPV moderno (Lightspeed, Square, SumUp)",
       "who_signs": "Propietario / Finanzas",
       "timing": "nov_dec",
-      "count": 250,
-      "avg_score": 24.2,
+      "count": 249,
+      "avg_score": 24.3,
       "cities": {
-        "Barcelona": 107,
+        "Barcelona": 106,
         "Madrid": 89,
         "Valencia": 14,
         "Sevilla": 12,
