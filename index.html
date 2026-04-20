@@ -185,6 +185,40 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-geo" width="100%" height="450"></svg>
   </div>
 
+  <!-- === VANGUARD BI CHARTS === -->
+  <div class="panel">
+    <div class="panel-title">Tourist Trap Detector — TA vs Google Divergence</div>
+    <svg id="chart-tourist-trap" width="100%" height="350"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Complaint Microgeography — Spatial CX Patterns</div>
+    <svg id="chart-complaint-geo" width="100%" height="350"></svg>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Digital Maturity × Quality Matrix</div>
+    <svg id="chart-digital-matrix" width="100%" height="320"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Dark Restaurant Index — Hidden Gems vs Leaders</div>
+    <svg id="chart-dark-restaurant" width="100%" height="320"></svg>
+  </div>
+
+  <div class="panel panel-full">
+    <div class="panel-title">Reachability Funnel — Company Digital Pipeline</div>
+    <svg id="chart-reachability" width="100%" height="280"></svg>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Platform Stack × Success</div>
+    <svg id="chart-platform-stack" width="100%" height="320"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Reputation Fragmentation — Cross-Platform Variance</div>
+    <svg id="chart-reputation-frag" width="100%" height="300"></svg>
+  </div>
+  <!-- === END VANGUARD BI === -->
+
   <div class="panel panel-full">
     <div class="panel-title">Enrichment Evolution — Field Coverage Over Time</div>
     <svg id="chart-evolution" width="100%" height="380"></svg>
@@ -780,6 +814,449 @@ function drawRatingDelta(d) {
     .text(`${above} overrated on TA | ${below} underrated | ${onLine} agree`).attr('fill',C.dim).style('font-size','9px');
 }
 
+// === VANGUARD BI CHARTS ===
+
+function computeDigitalScore(b) {
+  return (b.wb||0)*20 + (b.em||0)*15 + (b.ig||0)*20 + (b.fb||0)*10 + (b.bk||0)*20 + (b.tk||0)*15;
+}
+
+function drawTouristTrap(d) {
+  const svg = d3.select('#chart-tourist-trap'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const data = d.bubbles.filter(b => b.la != null && b.ln != null && b.ta != null && b.r != null);
+  if (data.length < 10) {
+    svg.append('text').attr('x','50%').attr('y',175).attr('text-anchor','middle')
+      .attr('fill',C.muted).attr('font-size',13).text('Not enough cross-platform geo data (need 10+, have '+data.length+')');
+    return;
+  }
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 350;
+  const m = {t:25, r:90, b:35, l:50};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const lnE = d3.extent(data, b => b.ln), laE = d3.extent(data, b => b.la);
+  const lnR = (lnE[1]-lnE[0])||1, laR = (laE[1]-laE[0])||1;
+  let xR = w, yR = h;
+  const ratio = laR / lnR;
+  if (ratio > h/w) xR = h / ratio; else yR = w * ratio;
+  const x = d3.scaleLinear().domain([lnE[0]-0.02, lnE[1]+0.02]).range([(w-xR)/2, (w+xR)/2]);
+  const y = d3.scaleLinear().domain([laE[0]-0.02, laE[1]+0.02]).range([(h+yR)/2, (h-yR)/2]);
+
+  const colorScale = d3.scaleLinear().domain([-1.5, 0, 1.5]).range([C.blue, '#484f58', C.orange]);
+  const maxRv = d3.max(data, b => b.rv) || 1;
+
+  // Grid
+  g.append('rect').attr('width',w).attr('height',h).attr('fill','none').attr('stroke',C.border).attr('stroke-width',0.5);
+
+  data.sort((a,b) => b.rv - a.rv);
+  data.forEach(b => {
+    const delta = b.ta - b.r;
+    const r = 3 + Math.sqrt(b.rv / maxRv) * 14;
+    g.append('circle').attr('cx', x(b.ln)).attr('cy', y(b.la)).attr('r', r)
+      .attr('fill', colorScale(delta)).attr('opacity', 0.7).attr('stroke', Math.abs(delta)>1?'#fff':'none').attr('stroke-width',0.5)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${b.n}</b><br>Google: ${b.r} | TA: ${b.ta}<br>` +
+        `Delta: ${delta>0?'+':''}${delta.toFixed(1)} ` +
+        `${delta>0.5?'<span style="color:'+C.orange+'">TOURIST TRAP</span>':''}` +
+        `${delta<-0.5?'<span style="color:'+C.blue+'">HIDDEN GEM</span>':''}` +
+        `<br>${b.c} | ${b.rv.toLocaleString()} reviews`))
+      .on('mouseleave', hideTip);
+  });
+
+  // Axes
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5).tickFormat(d=>d.toFixed(1)+'°'))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.append('g').call(d3.axisLeft(y).ticks(4).tickFormat(d=>d.toFixed(1)+'°'))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  // Legend
+  const lg = g.append('g').attr('transform',`translate(${w+10},${h/2-40})`);
+  const grad = svg.append('defs').append('linearGradient').attr('id','trap-grad').attr('x1',0).attr('y1',1).attr('x2',0).attr('y2',0);
+  grad.append('stop').attr('offset','0%').attr('stop-color',C.blue);
+  grad.append('stop').attr('offset','50%').attr('stop-color','#484f58');
+  grad.append('stop').attr('offset','100%').attr('stop-color',C.orange);
+  lg.append('rect').attr('width',12).attr('height',80).attr('fill','url(#trap-grad)').attr('rx',2);
+  lg.append('text').attr('x',16).attr('y',8).attr('fill',C.orange).attr('font-size',9).text('Tourist Trap');
+  lg.append('text').attr('x',16).attr('y',44).attr('fill',C.muted).attr('font-size',9).text('Neutral');
+  lg.append('text').attr('x',16).attr('y',80).attr('fill',C.blue).attr('font-size',9).text('Hidden Gem');
+
+  // Stats
+  const traps = data.filter(b => b.ta - b.r > 0.5).length;
+  const gems = data.filter(b => b.ta - b.r < -0.5).length;
+  svg.append('text').attr('x',W-10).attr('y',16).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9).text(`${data.length} cross-platform | ${traps} traps | ${gems} gems`);
+}
+
+function drawComplaintGeo(d) {
+  const svg = d3.select('#chart-complaint-geo'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const data = d.bubbles.filter(b => b.la != null && b.ln != null && b.tc);
+  if (data.length < 10) {
+    svg.append('text').attr('x','50%').attr('y',175).attr('text-anchor','middle')
+      .attr('fill',C.muted).attr('font-size',13).text('Not enough geo + complaint data');
+    return;
+  }
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 350;
+  const m = {t:25, r:20, b:45, l:50};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const lnE = d3.extent(data, b => b.ln), laE = d3.extent(data, b => b.la);
+  const lnR = (lnE[1]-lnE[0])||1, laR = (laE[1]-laE[0])||1;
+  let xR = w, yR = h;
+  const ratio = laR / lnR;
+  if (ratio > h/w) xR = h / ratio; else yR = w * ratio;
+  const x = d3.scaleLinear().domain([lnE[0]-0.02, lnE[1]+0.02]).range([(w-xR)/2, (w+xR)/2]);
+  const y = d3.scaleLinear().domain([laE[0]-0.02, laE[1]+0.02]).range([(h+yR)/2, (h-yR)/2]);
+
+  const compColors = {
+    'Wait Time': C.orange, 'Cold Food': C.blue, 'Slow Service': C.yellow,
+    'Pricing': C.red, 'Hygiene': C.purple, 'Disorganized': C.teal,
+  };
+  const maxRv = d3.max(data, b => b.rv) || 1;
+
+  g.append('rect').attr('width',w).attr('height',h).attr('fill','none').attr('stroke',C.border).attr('stroke-width',0.5);
+
+  data.sort((a,b) => b.rv - a.rv);
+  data.forEach(b => {
+    const r = 3 + Math.sqrt(b.rv / maxRv) * 12;
+    g.append('circle').attr('cx', x(b.ln)).attr('cy', y(b.la)).attr('r', r)
+      .attr('fill', compColors[b.tc] || C.muted).attr('opacity', 0.65)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${b.n}</b><br>Complaint: <b>${b.tc}</b><br>${b.c} | Rating: ${b.r} | ${b.rv.toLocaleString()} reviews`))
+      .on('mouseleave', hideTip);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5).tickFormat(d=>d.toFixed(1)+'°'))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.append('g').call(d3.axisLeft(y).ticks(4).tickFormat(d=>d.toFixed(1)+'°'))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  // Legend
+  const complaints = [...new Set(data.map(b => b.tc))];
+  const lg = g.append('g').attr('transform',`translate(5,${h+25})`);
+  complaints.forEach((c, i) => {
+    const xOff = i * (w / complaints.length);
+    lg.append('circle').attr('cx', xOff).attr('cy', 0).attr('r', 4).attr('fill', compColors[c]||C.muted);
+    lg.append('text').attr('x', xOff+7).attr('y', 4).attr('fill',C.muted).attr('font-size',9).text(c);
+  });
+
+  const counts = {};
+  data.forEach(b => { counts[b.tc] = (counts[b.tc]||0) + 1; });
+  const top = Object.entries(counts).sort((a,b) => b[1]-a[1])[0];
+  svg.append('text').attr('x',W-10).attr('y',16).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9).text(`${data.length} mapped | Top: ${top?top[0]:'-'} (${top?top[1]:0})`);
+}
+
+function drawDigitalMatrix(d) {
+  const svg = d3.select('#chart-digital-matrix'); svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:20, r:20, b:40, l:70};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const dBands = [['0',0,1],['1-20',1,21],['21-40',21,41],['41-60',41,61],['61+',61,101]];
+  const rBands = [['<3',0,3],['3-3.5',3,3.5],['3.5-4',3.5,4],['4-4.5',4,4.5],['4.5-5',4.5,5.1]];
+
+  const matrix = rBands.map(() => dBands.map(() => 0));
+  d.bubbles.forEach(b => {
+    const ds = computeDigitalScore(b);
+    const di = dBands.findIndex(([,lo,hi]) => ds >= lo && ds < hi);
+    const ri = rBands.findIndex(([,lo,hi]) => b.r >= lo && b.r < hi);
+    if (di >= 0 && ri >= 0) matrix[ri][di]++;
+  });
+
+  const dLabels = dBands.map(b => b[0]), rLabels = rBands.map(b => b[0]);
+  const xScale = d3.scaleBand().domain(dLabels).range([0,w]).padding(0.06);
+  const yScale = d3.scaleBand().domain(rLabels).range([h,0]).padding(0.06);
+  const maxVal = d3.max(matrix.flat()) || 1;
+  const color = d3.scaleSequential(d3.interpolateViridis).domain([0, maxVal]);
+
+  rLabels.forEach((rl, ri) => {
+    dLabels.forEach((dl, di) => {
+      const val = matrix[ri][di];
+      const isGem = ri >= 3 && di <= 1 && val > 0; // high rating + low digital = hidden gem
+      g.append('rect').attr('x', xScale(dl)).attr('y', yScale(rl))
+        .attr('width', xScale.bandwidth()).attr('height', yScale.bandwidth())
+        .attr('fill', val ? color(val) : C.grid).attr('rx', 3)
+        .attr('stroke', isGem ? '#d29922' : 'none').attr('stroke-width', isGem ? 2.5 : 0)
+        .on('mousemove', evt => showTip(evt,
+          `Rating ${rl} × Digital ${dl}<br><b>${val} companies</b>${isGem ? '<br><span style="color:#d29922">★ HIDDEN GEMS</span>':''}`))
+        .on('mouseleave', hideTip);
+      if (val > 0) {
+        g.append('text').attr('x', xScale(dl) + xScale.bandwidth()/2).attr('y', yScale(rl) + yScale.bandwidth()/2 + 4)
+          .attr('text-anchor','middle').attr('fill', val > maxVal*0.5 ? '#000' : C.text).attr('font-size',11).attr('font-weight',600)
+          .text(val).style('pointer-events','none');
+      }
+    });
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',10);
+  g.append('g').call(d3.axisLeft(yScale))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',10);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Digital Score');
+  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-55).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Google Rating');
+
+  const gems = matrix.slice(3).reduce((s,row) => s + row[0] + row[1], 0);
+  svg.append('text').attr('x',W-10).attr('y',14).attr('text-anchor','end')
+    .attr('fill','#d29922').attr('font-size',9).text(`★ ${gems} hidden gems (high rating, low digital)`);
+}
+
+function drawDarkRestaurant(d) {
+  const svg = d3.select('#chart-dark-restaurant'); svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:20, r:20, b:40, l:45};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const x = d3.scaleLinear().domain([0, 100]).range([0, w]);
+  const y = d3.scaleLinear().domain([2, 5]).range([h, 0]);
+  const maxRv = d3.max(d.bubbles, b => b.rv) || 1;
+
+  // Quadrant dividers
+  const midX = 35, midY = 3.8;
+  g.append('line').attr('x1',x(midX)).attr('x2',x(midX)).attr('y1',0).attr('y2',h)
+    .attr('stroke',C.border).attr('stroke-dasharray','6,4').attr('stroke-width',1);
+  g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(midY)).attr('y2',y(midY))
+    .attr('stroke',C.border).attr('stroke-dasharray','6,4').attr('stroke-width',1);
+
+  // Quadrant labels + counts
+  const qCounts = {hidden:0, leader:0, dead:0, overcomp:0};
+  const qColors = {hidden:C.green, leader:C.blue, dead:C.red, overcomp:C.orange};
+  d.bubbles.forEach(b => {
+    const ds = computeDigitalScore(b);
+    const q = b.r >= midY ? (ds >= midX ? 'leader' : 'hidden') : (ds >= midX ? 'overcomp' : 'dead');
+    qCounts[q]++;
+  });
+
+  const qLabels = [
+    {q:'hidden', label:'Hidden Gems', x:midX/2, y:2.6+((5-midY)/2)+midY, anchor:'middle'},
+    {q:'leader', label:'Leaders', x:midX+((100-midX)/2), y:2.6+((5-midY)/2)+midY, anchor:'middle'},
+    {q:'dead', label:'Dead Weight', x:midX/2, y:2+(midY-2)/2, anchor:'middle'},
+    {q:'overcomp', label:'Overcompensating', x:midX+((100-midX)/2), y:2+(midY-2)/2, anchor:'middle'},
+  ];
+  qLabels.forEach(({q, label, x:qx, y:qy, anchor}) => {
+    g.append('text').attr('x',x(qx)).attr('y',y(qy)).attr('text-anchor',anchor)
+      .attr('fill',qColors[q]).attr('opacity',0.25).attr('font-size',13).attr('font-weight',700).text(label);
+    g.append('text').attr('x',x(qx)).attr('y',y(qy)+16).attr('text-anchor',anchor)
+      .attr('fill',qColors[q]).attr('opacity',0.35).attr('font-size',11).text(`(${qCounts[q]})`);
+  });
+
+  // Dots
+  d.bubbles.forEach(b => {
+    const ds = computeDigitalScore(b);
+    const q = b.r >= midY ? (ds >= midX ? 'leader' : 'hidden') : (ds >= midX ? 'overcomp' : 'dead');
+    const r = 2.5 + Math.sqrt(b.rv / maxRv) * 8;
+    g.append('circle').attr('cx', x(ds)).attr('cy', y(b.r)).attr('r', r)
+      .attr('fill', qColors[q]).attr('opacity', 0.55)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${b.n}</b><br>Digital: ${ds}/100 | Rating: ${b.r}<br>${q.toUpperCase()} | ${b.c} | ${b.rv.toLocaleString()} reviews`))
+      .on('mouseleave', hideTip);
+  });
+
+  // Axes
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.append('g').call(d3.axisLeft(y).ticks(6))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Digital Score (0-100)');
+  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Google Rating');
+}
+
+function drawReachabilityFunnel(d) {
+  const svg = d3.select('#chart-reachability'); svg.selectAll('*').remove();
+  const f = d.reachability_funnel;
+  if (!f) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 280;
+  const m = {t:15, r:100, b:10, l:130};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const items = [
+    {label:'Total Companies', val:f.total, color:C.muted},
+    {label:'Has Phone', val:f.has_phone, color:'#6e7681'},
+    {label:'Has Contacts', val:f.has_contacts, color:C.dim},
+    {label:'Has Website', val:f.has_website, color:C.blue},
+    {label:'Website Scraped', val:f.ws_scraped, color:C.yellow},
+    {label:'Email Found', val:f.ws_email_found, color:C.green},
+    {label:'Has Instagram', val:f.ws_instagram, color:C.purple},
+  ];
+
+  const yBand = d3.scaleBand().domain(items.map((_,i) => i)).range([0, h]).padding(0.15);
+  const xScale = d3.scaleLinear().domain([0, f.total]).range([0, w]);
+
+  items.forEach((item, i) => {
+    const barW = xScale(item.val);
+    const barH = yBand.bandwidth();
+    const yPos = yBand(i);
+
+    // Bar (centered like funnel)
+    const offset = (w - barW) / 2;
+    g.append('rect').attr('x', offset).attr('y', yPos).attr('width', barW).attr('height', barH)
+      .attr('fill', item.color).attr('opacity', 0.7).attr('rx', 3);
+
+    // Label left
+    g.append('text').attr('x', -8).attr('y', yPos + barH/2 + 4).attr('text-anchor','end')
+      .attr('fill', item.color).attr('font-size', 11).attr('font-weight', 500).text(item.label);
+
+    // Value + percentage right
+    const pct = ((item.val / f.total) * 100).toFixed(1);
+    const dropPct = i > 0 ? ((1 - item.val / items[i-1].val) * 100).toFixed(0) : null;
+    g.append('text').attr('x', w/2).attr('y', yPos + barH/2 + 4).attr('text-anchor','middle')
+      .attr('fill', C.text).attr('font-size', 12).attr('font-weight', 600)
+      .text(item.val.toLocaleString());
+    g.append('text').attr('x', w + 8).attr('y', yPos + barH/2 + 4).attr('text-anchor','start')
+      .attr('fill', C.dim).attr('font-size', 10)
+      .text(`${pct}%${dropPct ? ' (↓'+dropPct+'%)' : ''}`);
+  });
+}
+
+function drawPlatformStack(d) {
+  const svg = d3.select('#chart-platform-stack'); svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+
+  const platforms = {};
+  d.bubbles.forEach(b => {
+    const sp = b.sp || '';
+    if (!sp) return;
+    if (!platforms[sp]) platforms[sp] = {sum: 0, count: 0, ratings: []};
+    platforms[sp].sum += b.r;
+    platforms[sp].count++;
+    platforms[sp].ratings.push(b.r);
+  });
+
+  const items = Object.entries(platforms)
+    .map(([name, {sum, count}]) => ({name, avg: sum/count, count}))
+    .filter(d => d.count >= 2)
+    .sort((a,b) => b.count - a.count)
+    .slice(0, 10);
+
+  if (items.length < 2) {
+    svg.append('text').attr('x','50%').attr('y',160).attr('text-anchor','middle')
+      .attr('fill',C.muted).attr('font-size',13).text('Not enough platform data yet (scraping in progress)');
+    return;
+  }
+
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:15, r:80, b:30, l:100};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const yBand = d3.scaleBand().domain(items.map(i => i.name)).range([0, h]).padding(0.2);
+  const xMax = d3.max(items, i => i.count);
+  const xScale = d3.scaleLinear().domain([0, xMax]).range([0, w]);
+  const colorScale = d3.scaleLinear().domain([3, 4, 5]).range([C.red, C.yellow, C.green]);
+
+  items.forEach(item => {
+    g.append('rect').attr('x', 0).attr('y', yBand(item.name))
+      .attr('width', xScale(item.count)).attr('height', yBand.bandwidth())
+      .attr('fill', colorScale(item.avg)).attr('opacity', 0.75).attr('rx', 3)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${item.name}</b><br>${item.count} companies<br>Avg rating: ${item.avg.toFixed(2)}★`))
+      .on('mouseleave', hideTip);
+
+    g.append('text').attr('x', -6).attr('y', yBand(item.name) + yBand.bandwidth()/2 + 4)
+      .attr('text-anchor','end').attr('fill',C.text).attr('font-size',11).text(item.name);
+
+    g.append('text').attr('x', xScale(item.count) + 5).attr('y', yBand(item.name) + yBand.bandwidth()/2 + 4)
+      .attr('fill',C.muted).attr('font-size',10).text(`${item.count} (${item.avg.toFixed(1)}★)`);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale).ticks(5))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  g.append('text').attr('x',w/2).attr('y',h+25).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Companies (bar color = avg rating)');
+}
+
+function drawReputationFragmentation(d) {
+  const svg = d3.select('#chart-reputation-frag'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+
+  const fragData = d.bubbles.map(b => {
+    const ratings = [b.r, b.ta, b.rg].filter(v => v != null && v > 0);
+    if (ratings.length < 2) return null;
+    const mean = ratings.reduce((s,v) => s+v, 0) / ratings.length;
+    const variance = ratings.reduce((s,v) => s + Math.pow(v-mean, 2), 0) / ratings.length;
+    return {name: b.n, frag: Math.sqrt(variance), count: ratings.length, r: b.r};
+  }).filter(Boolean);
+
+  if (fragData.length < 10) {
+    svg.append('text').attr('x','50%').attr('y',150).attr('text-anchor','middle')
+      .attr('fill',C.muted).attr('font-size',13).text(`Need more cross-platform data (have ${fragData.length}, need 10+)`);
+    return;
+  }
+
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 300;
+  const m = {t:25, r:20, b:40, l:45};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const bins = [
+    {label:'0-0.2', lo:0, hi:0.2, color:C.green},
+    {label:'0.2-0.4', lo:0.2, hi:0.4, color:C.cyan},
+    {label:'0.4-0.6', lo:0.4, hi:0.6, color:C.yellow},
+    {label:'0.6-0.8', lo:0.6, hi:0.8, color:C.orange},
+    {label:'0.8+', lo:0.8, hi:99, color:C.red},
+  ];
+
+  bins.forEach(bin => { bin.count = fragData.filter(d => d.frag >= bin.lo && d.frag < bin.hi).length; });
+
+  const xBand = d3.scaleBand().domain(bins.map(b => b.label)).range([0, w]).padding(0.15);
+  const yMax = d3.max(bins, b => b.count) || 1;
+  const yScale = d3.scaleLinear().domain([0, yMax * 1.1]).range([h, 0]);
+
+  // Grid
+  yScale.ticks(4).forEach(tick => {
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',yScale(tick)).attr('y2',yScale(tick))
+      .attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+
+  bins.forEach(bin => {
+    g.append('rect').attr('x', xBand(bin.label)).attr('y', yScale(bin.count))
+      .attr('width', xBand.bandwidth()).attr('height', h - yScale(bin.count))
+      .attr('fill', bin.color).attr('opacity', 0.75).attr('rx', 3)
+      .on('mousemove', evt => showTip(evt,
+        `Fragmentation ${bin.label}<br><b>${bin.count} companies</b><br>${bin.lo < 0.3 ? 'Consistent reputation' : 'Inconsistent across platforms'}`))
+      .on('mouseleave', hideTip);
+
+    if (bin.count > 0) {
+      g.append('text').attr('x', xBand(bin.label) + xBand.bandwidth()/2).attr('y', yScale(bin.count) - 5)
+        .attr('text-anchor','middle').attr('fill', bin.color).attr('font-size', 11).attr('font-weight', 600)
+        .text(bin.count);
+    }
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xBand))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',10);
+  g.append('g').call(d3.axisLeft(yScale).ticks(4))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Rating Std Dev (Google × TA × RG)');
+
+  const avgFrag = (fragData.reduce((s,d) => s+d.frag, 0) / fragData.length).toFixed(2);
+  svg.append('text').attr('x',W-10).attr('y',16).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9).text(`${fragData.length} analyzed | avg fragmentation: ${avgFrag}`);
+}
+
+// === END VANGUARD BI ===
+
 function drawEvolution(d) {
   const svg = d3.select('#chart-evolution');
   svg.selectAll('*').remove();
@@ -893,7 +1370,10 @@ function updateAll(d) {
   updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d);
   drawRatings(d); drawFieldCompleteness(d); drawServices(d); drawBudget(d);
   drawOpportunityMatrix(d); drawSentimentComplaints(d); drawPriceQuality(d);
-  drawGeoConstellation(d); drawRatingDelta(d); drawEvolution(d);
+  drawGeoConstellation(d); drawRatingDelta(d);
+  drawTouristTrap(d); drawComplaintGeo(d); drawDigitalMatrix(d);
+  drawDarkRestaurant(d); drawReachabilityFunnel(d); drawPlatformStack(d);
+  drawReputationFragmentation(d); drawEvolution(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
   if (window.bubbleReady) window.updateBubbles(d);

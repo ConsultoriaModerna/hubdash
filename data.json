@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-20T11:00:07",
-  "fetch_seconds": 62.1,
+  "generated_at": "2026-04-20T11:24:16",
+  "fetch_seconds": 87.3,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
@@ -189,7 +189,14 @@
       "la": 41.3763,
       "ln": 2.1494,
       "ta": 3.7,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Wizink Center",
@@ -205,7 +212,14 @@
       "la": 40.4239,
       "ln": -3.6718,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Centro Comercial Islazul",
@@ -221,7 +235,14 @@
       "la": 40.3637,
       "ln": -3.7375,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Bara del Salamanca",
@@ -237,7 +258,14 @@
       "la": 41.3786,
       "ln": 2.1912,
       "ta": 3.6,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bar el Brillante",
@@ -253,7 +281,14 @@
       "la": 40.4086,
       "ln": -3.6928,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Baldoria Madrid",
@@ -269,7 +304,14 @@
       "la": 40.4295,
       "ln": -3.6709,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Churrería Chocolateria 1902",
@@ -285,7 +327,14 @@
       "la": 40.4175,
       "ln": -3.707,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Centro Comercial las Rosas",
@@ -301,7 +350,14 @@
       "la": 40.4187,
       "ln": -3.621,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Centro Comercial Plaza Aluche",
@@ -317,7 +373,14 @@
       "la": 40.3861,
       "ln": -3.7642,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Arabia Cafe-Restaurant",
@@ -333,7 +396,14 @@
       "la": 41.3796,
       "ln": 2.1763,
       "ta": 3.5,
-      "rg": 4.9
+      "rg": 4.9,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Mirablau",
@@ -349,7 +419,14 @@
       "la": 41.416,
       "ln": 2.1319,
       "ta": 3.9,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Arturo Soria Plaza",
@@ -365,7 +442,14 @@
       "la": 40.45,
       "ln": -3.6508,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ocaña",
@@ -381,7 +465,14 @@
       "la": 41.3798,
       "ln": 2.1757,
       "ta": 3.8,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Labra",
@@ -397,7 +488,14 @@
       "la": 40.4172,
       "ln": -3.7046,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Corte Ingl√©s",
@@ -413,7 +511,14 @@
       "la": 39.4797,
       "ln": -0.3897,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Mingo",
@@ -429,7 +534,14 @@
       "la": 40.425,
       "ln": -3.7253,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Asador el Porteño",
@@ -445,7 +557,14 @@
       "la": 39.4708,
       "ln": -0.3774,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 1,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Holding Moritz",
@@ -461,7 +580,14 @@
       "la": 41.3827,
       "ln": 2.1634,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taller de Tapas Rambla de les Flors",
@@ -477,7 +603,14 @@
       "la": 41.3904,
       "ln": 2.164,
       "ta": 4.0,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Gran Pulpería",
@@ -493,7 +626,14 @@
       "la": 40.4571,
       "ln": -3.6241,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Lolita",
@@ -509,7 +649,14 @@
       "la": 41.389,
       "ln": 2.1658,
       "ta": 3.6,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Selva",
@@ -525,7 +672,14 @@
       "la": 41.4087,
       "ln": 2.1735,
       "ta": 4.5,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Gusto 34933236575",
@@ -541,7 +695,14 @@
       "la": 41.3883,
       "ln": 2.1509,
       "ta": 4.5,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ceviche 103",
@@ -557,7 +718,14 @@
       "la": 41.3937,
       "ln": 2.1509,
       "ta": 4.0,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Arrosseria las Arenas",
@@ -573,7 +741,14 @@
       "la": 41.3764,
       "ln": 2.1501,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Pepe y Pepa",
@@ -589,7 +764,14 @@
       "la": 36.7223,
       "ln": -4.4206,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Gran Vía de Hortaleza Shopping Mall",
@@ -605,7 +787,14 @@
       "la": 40.4696,
       "ln": -3.641,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "The Irish Rover",
@@ -621,7 +810,14 @@
       "la": 40.4548,
       "ln": -3.694,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Flax & Kale Passage",
@@ -637,7 +833,14 @@
       "la": 41.3852,
       "ln": 2.1655,
       "ta": 4.3,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Amazónico",
@@ -653,7 +856,14 @@
       "la": 40.4237,
       "ln": -3.6851,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Filandón",
@@ -669,7 +879,14 @@
       "la": 40.5048,
       "ln": -3.7167,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Running Sushi in Market",
@@ -685,7 +902,14 @@
       "la": 40.4801,
       "ln": -3.7082,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Briochef Burgers Madrid",
@@ -701,7 +925,14 @@
       "la": 40.4226,
       "ln": -3.7217,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Lamucca del Carmen",
@@ -717,7 +948,14 @@
       "la": 40.419,
       "ln": -3.7028,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Lucio",
@@ -733,7 +971,14 @@
       "la": 40.4121,
       "ln": -3.7096,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Taverna el Glop",
@@ -749,7 +994,14 @@
       "la": 41.4049,
       "ln": 2.1595,
       "ta": 4.2,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Tasqueta de Blai",
@@ -765,7 +1017,14 @@
       "la": 41.3732,
       "ln": 2.1654,
       "ta": 4.5,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Grupo Tapa Tapa",
@@ -781,7 +1040,14 @@
       "la": 40.4149,
       "ln": -3.7012,
       "ta": 3.3,
-      "rg": 3.5
+      "rg": 3.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Shôko Barcelona Restaurant & Lounge Club",
@@ -797,7 +1063,14 @@
       "la": 41.3855,
       "ln": 2.197,
       "ta": 3.8,
-      "rg": 3.7
+      "rg": 3.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Makamaka",
@@ -813,7 +1086,14 @@
       "la": 41.3757,
       "ln": 2.1886,
       "ta": 4.3,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Hotel Balneari les Arenes",
@@ -829,7 +1109,14 @@
       "la": 39.4664,
       "ln": -0.3246,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Pastelería Mallorca",
@@ -845,7 +1132,14 @@
       "la": 40.4291,
       "ln": -3.684,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sushiaoi",
@@ -861,7 +1155,14 @@
       "la": 40.4258,
       "ln": -3.6828,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "B-ONE Palau de Mar",
@@ -877,7 +1178,14 @@
       "la": 41.3806,
       "ln": 2.1855,
       "ta": 3.9,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Fenicia",
@@ -893,7 +1201,14 @@
       "la": 41.3767,
       "ln": 2.1365,
       "ta": 4.5,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ovella Negra",
@@ -909,7 +1224,14 @@
       "la": 41.3959,
       "ln": 2.1903,
       "ta": 4.0,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Paz 19 By Sensi Tapas Bar",
@@ -925,7 +1247,14 @@
       "la": 41.3803,
       "ln": 2.1799,
       "ta": 4.5,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Buffet Restaurante Topolino Garden",
@@ -941,7 +1270,14 @@
       "la": 40.4199,
       "ln": -3.7077,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Superchulo Fuencarral",
@@ -957,7 +1293,14 @@
       "la": 40.4253,
       "ln": -3.7008,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Botafumeiro",
@@ -973,7 +1316,14 @@
       "la": 41.4005,
       "ln": 2.1547,
       "ta": 4.2,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Barraca",
@@ -989,7 +1339,14 @@
       "la": 41.3935,
       "ln": 2.2054,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Café Comercial",
@@ -1005,7 +1362,14 @@
       "la": 40.4287,
       "ln": -3.702,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "La Tita Rivera",
@@ -1021,7 +1385,14 @@
       "la": 40.4224,
       "ln": -3.7004,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Opium Barcelona",
@@ -1037,7 +1408,14 @@
       "la": 41.3853,
       "ln": 2.1968,
       "ta": 3.3,
-      "rg": 3.4
+      "rg": 3.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Bivio",
@@ -1053,7 +1431,14 @@
       "la": 41.3766,
       "ln": 2.189,
       "ta": 4.3,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Arrocería Marina Ventura",
@@ -1069,7 +1454,14 @@
       "la": 40.4154,
       "ln": -3.6989,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Restaurante Arume",
@@ -1085,7 +1477,14 @@
       "la": 41.379,
       "ln": 2.166,
       "ta": 4.6,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Zenith Brunch & Cocktails - Valverde",
@@ -1101,7 +1500,14 @@
       "la": 40.4224,
       "ln": -3.7016,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Juana la Loca",
@@ -1117,7 +1523,14 @@
       "la": 40.4218,
       "ln": -3.6903,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bar Cañete",
@@ -1133,7 +1546,14 @@
       "la": 41.3792,
       "ln": 2.1731,
       "ta": 4.5,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "La Foga",
@@ -1149,7 +1569,14 @@
       "la": 41.3931,
       "ln": 2.1784,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Le Romane",
@@ -1165,7 +1592,14 @@
       "la": 41.3888,
       "ln": 2.1564,
       "ta": 4.9,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Negra Tomasa",
@@ -1181,7 +1615,14 @@
       "la": 40.4158,
       "ln": -3.7024,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Asador Casa Juan",
@@ -1197,7 +1638,14 @@
       "la": 40.464,
       "ln": -3.6933,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Rey de la Gamba 1",
@@ -1213,7 +1661,14 @@
       "la": 41.3772,
       "ln": 2.1887,
       "ta": 3.4,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Grill Restaurante - Steak house",
@@ -1229,7 +1684,14 @@
       "la": 41.3837,
       "ln": 2.1773,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Chilango's Taqueria Barcelona",
@@ -1245,7 +1707,14 @@
       "la": 41.3758,
       "ln": 2.171,
       "ta": 4.5,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Urogallo Príncipe Pío",
@@ -1261,7 +1730,14 @@
       "la": 40.4231,
       "ln": -3.7231,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Arrocería el Rek",
@@ -1277,7 +1753,14 @@
       "la": 39.3128,
       "ln": -0.3193,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Xup Xup Restaurant",
@@ -1293,7 +1776,14 @@
       "la": 41.3821,
       "ln": 2.1943,
       "ta": 3.8,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Micu Maku - Mediterranean Restaurant in ",
@@ -1309,7 +1799,14 @@
       "la": 41.3868,
       "ln": 2.1617,
       "ta": 4.7,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Sitarilla",
@@ -1325,7 +1822,14 @@
       "la": 37.1734,
       "ln": -3.6036,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Bar el Velódromo",
@@ -1341,7 +1845,14 @@
       "la": 41.3935,
       "ln": 2.1501,
       "ta": null,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 1,
+      "ig": 0,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "GOIKO",
@@ -1357,7 +1868,14 @@
       "la": 37.3895,
       "ln": -5.9955,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tío Papelón",
@@ -1373,7 +1891,14 @@
       "la": 41.4027,
       "ln": 2.1716,
       "ta": 4.3,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Flax & Kale",
@@ -1389,7 +1914,14 @@
       "la": 41.3851,
       "ln": 2.168,
       "ta": 4.4,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Murivecchi",
@@ -1405,7 +1937,14 @@
       "la": 41.3873,
       "ln": 2.1827,
       "ta": 4.2,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Lateral Fuencarral",
@@ -1421,7 +1960,14 @@
       "la": 40.4233,
       "ln": -3.7011,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Norah Coffee & Brunch - Speciality Coffe",
@@ -1437,7 +1983,14 @@
       "la": 40.4254,
       "ln": -3.6788,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ribeira do Miño",
@@ -1453,7 +2006,14 @@
       "la": 40.4245,
       "ln": -3.7004,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Foster's Hollywood",
@@ -1469,7 +2029,14 @@
       "la": 40.3688,
       "ln": -3.5983,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Hortensia Restaurante & Sidrería",
@@ -1485,7 +2052,14 @@
       "la": 40.4239,
       "ln": -3.7004,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Can Culleretes",
@@ -1501,7 +2075,14 @@
       "la": 41.3813,
       "ln": 2.1745,
       "ta": 3.8,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Rollerie",
@@ -1517,7 +2098,14 @@
       "la": 40.4138,
       "ln": -3.703,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Revuelta",
@@ -1533,7 +2121,14 @@
       "la": 40.4139,
       "ln": -3.7079,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tapas La Bona Sort",
@@ -1549,7 +2144,14 @@
       "la": 41.3862,
       "ln": 2.1801,
       "ta": 3.6,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Asturiano Couzapín",
@@ -1565,7 +2167,14 @@
       "la": 40.4196,
       "ln": -3.6752,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Rossini",
@@ -1581,7 +2190,14 @@
       "la": 41.3799,
       "ln": 2.1759,
       "ta": 4.3,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Can Cortada",
@@ -1597,7 +2213,14 @@
       "la": 41.4366,
       "ln": 2.1528,
       "ta": 4.3,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Museo del Jamon",
@@ -1613,7 +2236,14 @@
       "la": 40.4102,
       "ln": -3.6928,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante el √ëeru",
@@ -1629,7 +2259,14 @@
       "la": 40.4165,
       "ln": -3.7078,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Marea",
@@ -1645,7 +2282,14 @@
       "la": 41.4017,
       "ln": 2.2109,
       "ta": 4.3,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Piscomar By Jhosef Arias",
@@ -1661,7 +2305,14 @@
       "la": 40.4105,
       "ln": -3.7135,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Turuleca Peru",
@@ -1677,7 +2328,14 @@
       "la": 41.3761,
       "ln": 2.125,
       "ta": 4.0,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bodegas Rosell",
@@ -1693,7 +2351,14 @@
       "la": 40.4038,
       "ln": -3.6909,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cruz Blanca de Vallecas",
@@ -1709,7 +2374,14 @@
       "la": 40.3878,
       "ln": -3.665,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Marina Bay - Lounge Bar Restaurante - Pa",
@@ -1725,7 +2397,14 @@
       "la": 41.3864,
       "ln": 2.1975,
       "ta": 4.0,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Monchos Iniciativas 2000 S.L.",
@@ -1741,7 +2420,14 @@
       "la": 41.3864,
       "ln": 2.1975,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Café del Rey",
@@ -1757,7 +2443,14 @@
       "la": 40.4222,
       "ln": -3.7189,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Ornella Velázquez",
@@ -1773,7 +2466,14 @@
       "la": 40.4234,
       "ln": -3.684,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 0,
+      "bk": 1,
+      "tk": 1,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Bodega de los Secretos",
@@ -1789,7 +2489,14 @@
       "la": 40.4107,
       "ln": -3.6947,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Bodega Joan",
@@ -1805,7 +2512,14 @@
       "la": 41.3917,
       "ln": 2.1555,
       "ta": 4.1,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Xup Xup",
@@ -1821,7 +2535,14 @@
       "la": 41.3796,
       "ln": 2.1928,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ovejas Negras Tapas",
@@ -1837,7 +2558,14 @@
       "la": 37.3876,
       "ln": -5.9937,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Bicicleta",
@@ -1853,7 +2581,14 @@
       "la": 40.4238,
       "ln": -3.7022,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Kilómetros de Pizza -",
@@ -1869,7 +2604,14 @@
       "la": 40.4541,
       "ln": -3.6932,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Paco Meralgo Restaurante",
@@ -1885,7 +2627,14 @@
       "la": 41.3916,
       "ln": 2.1525,
       "ta": 4.4,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Rosa Negra Barcelona",
@@ -1901,7 +2650,14 @@
       "la": 41.382,
       "ln": 2.1689,
       "ta": 4.1,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bellebuon",
@@ -1917,7 +2673,14 @@
       "la": 41.4116,
       "ln": 2.173,
       "ta": 4.8,
-      "rg": 4.8
+      "rg": 4.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Mesón del Champiñón",
@@ -1933,7 +2696,14 @@
       "la": 40.415,
       "ln": -3.7082,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Pizzeria Napoletana Pummarola",
@@ -1949,7 +2719,14 @@
       "la": 41.3775,
       "ln": 2.1642,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Burritos",
@@ -1965,7 +2742,14 @@
       "la": 39.4686,
       "ln": -0.3759,
       "ta": null,
-      "rg": 5.0
+      "rg": 5.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Mordida",
@@ -1981,7 +2765,14 @@
       "la": 40.4541,
       "ln": -3.6929,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Grupo Abrassame",
@@ -1997,7 +2788,14 @@
       "la": 41.3764,
       "ln": 2.1489,
       "ta": 3.8,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Lilo Brunch Specialty Coffee",
@@ -2013,7 +2811,14 @@
       "la": 41.3874,
       "ln": 2.1627,
       "ta": 4.6,
-      "rg": 4.8
+      "rg": 4.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Waffle",
@@ -2029,7 +2834,14 @@
       "la": 41.385,
       "ln": 2.15,
       "ta": 4.3,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Patron",
@@ -2045,7 +2857,14 @@
       "la": 41.3955,
       "ln": 2.1488,
       "ta": 3.8,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Submarino",
@@ -2061,7 +2880,14 @@
       "la": 39.4531,
       "ln": -0.3472,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Atenea Sky ✣ Rooftop",
@@ -2077,7 +2903,14 @@
       "la": 39.471,
       "ln": -0.376,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 1,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Rincón Asturiano",
@@ -2093,7 +2926,14 @@
       "la": 40.404,
       "ln": -3.6923,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tandoori Station",
@@ -2109,7 +2949,14 @@
       "la": 40.4298,
       "ln": -3.6709,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Jenkin's - Corts Valencianes",
@@ -2125,7 +2972,14 @@
       "la": 39.4912,
       "ln": -0.3992,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Palau Alameda",
@@ -2141,7 +2995,14 @@
       "la": 39.4726,
       "ln": -0.3628,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Odiseo",
@@ -2157,7 +3018,14 @@
       "la": 38.0235,
       "ln": -1.1417,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Bodega de la Alfalfa",
@@ -2173,7 +3041,14 @@
       "la": 37.39,
       "ln": -5.9904,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante la Catedral",
@@ -2189,7 +3064,14 @@
       "la": 40.4165,
       "ln": -3.7011,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Caluana",
@@ -2205,7 +3087,14 @@
       "la": 40.4151,
       "ln": -3.705,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Mirador el Goloso",
@@ -2221,7 +3110,14 @@
       "la": 40.552,
       "ln": -3.7076,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Frida",
@@ -2237,7 +3133,14 @@
       "la": 40.424,
       "ln": -3.697,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sushi Kory Valencia",
@@ -2253,7 +3156,14 @@
       "la": 39.4683,
       "ln": -0.3765,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Güerita Mexicana",
@@ -2269,7 +3179,14 @@
       "la": 41.388,
       "ln": 2.1511,
       "ta": 4.5,
-      "rg": 5.0
+      "rg": 5.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Balmesina",
@@ -2285,7 +3202,14 @@
       "la": 41.3971,
       "ln": 2.1522,
       "ta": 4.2,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante San Marco Santa Cruz",
@@ -2301,7 +3225,14 @@
       "la": 37.3861,
       "ln": -5.99,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Las Delicias del Carmelo",
@@ -2317,7 +3248,14 @@
       "la": 41.4183,
       "ln": 2.1576,
       "ta": 4.2,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Meli del Tubo",
@@ -2333,7 +3271,14 @@
       "la": 41.6534,
       "ln": -0.8803,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Labarra Westside",
@@ -2349,7 +3294,14 @@
       "la": 41.3904,
       "ln": 2.148,
       "ta": 3.6,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Portomarín",
@@ -2365,7 +3317,14 @@
       "la": 40.4081,
       "ln": -3.7008,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "La Triunfal",
@@ -2381,7 +3340,14 @@
       "la": 41.3918,
       "ln": 2.1801,
       "ta": 4.1,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Alberto",
@@ -2397,7 +3363,14 @@
       "la": 40.4138,
       "ln": -3.7002,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Rita Sibarita",
@@ -2413,7 +3386,14 @@
       "la": 40.5014,
       "ln": -3.7073,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bendita Locura Coffee & Dreams",
@@ -2429,7 +3409,14 @@
       "la": 40.4351,
       "ln": -3.6795,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "A' Napule - Restaurante Pizzería Napolit",
@@ -2445,7 +3432,14 @@
       "la": 39.4697,
       "ln": -0.3563,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bar Quimet D'Horta",
@@ -2461,7 +3455,14 @@
       "la": 41.4307,
       "ln": 2.1608,
       "ta": 3.9,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tuscania Food & Wine",
@@ -2477,7 +3478,14 @@
       "la": 41.4041,
       "ln": 2.1765,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Recasens",
@@ -2493,7 +3501,14 @@
       "la": 41.4024,
       "ln": 2.1997,
       "ta": 3.8,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Grupo Mussol",
@@ -2509,7 +3524,14 @@
       "la": 41.376,
       "ln": 2.1491,
       "ta": 4.1,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "9 Reinas Barcelona",
@@ -2525,7 +3547,14 @@
       "la": 41.394,
       "ln": 2.1649,
       "ta": 4.5,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Boca Grande",
@@ -2541,7 +3570,14 @@
       "la": 41.3945,
       "ln": 2.1598,
       "ta": 3.8,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "The Chipiron",
@@ -2557,7 +3593,14 @@
       "la": 41.3749,
       "ln": 2.1821,
       "ta": 3.3,
-      "rg": 3.8
+      "rg": 3.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Rafols",
@@ -2573,7 +3616,14 @@
       "la": 41.3912,
       "ln": 2.1792,
       "ta": 4.5,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Blai 9",
@@ -2589,7 +3639,14 @@
       "la": 41.3731,
       "ln": 2.1658,
       "ta": 4.3,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sonora Sport Tavern",
@@ -2605,7 +3662,14 @@
       "la": 41.3979,
       "ln": 2.19,
       "ta": 3.6,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Terraza Miro",
@@ -2621,7 +3685,14 @@
       "la": 41.3774,
       "ln": 2.1461,
       "ta": 4.7,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bar Típico Barra de Tapas",
@@ -2637,7 +3708,14 @@
       "la": 37.3837,
       "ln": -6.0052,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Honest Greens",
@@ -2653,7 +3731,14 @@
       "la": 40.4286,
       "ln": -3.6876,
       "ta": 4.1,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Prensa Burger üçî - Sagasta",
@@ -2669,7 +3754,14 @@
       "la": 40.4284,
       "ln": -3.7,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Nikkei 103",
@@ -2685,7 +3777,14 @@
       "la": 41.3875,
       "ln": 2.1604,
       "ta": 3.9,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Taberna Madrid Madriz",
@@ -2701,7 +3800,14 @@
       "la": 40.4262,
       "ln": -3.7014,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Mesón Txistu",
@@ -2717,7 +3823,14 @@
       "la": 40.4627,
       "ln": -3.6939,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "La Mar Salada",
@@ -2733,7 +3846,14 @@
       "la": 41.3768,
       "ln": 2.1891,
       "ta": 4.1,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cdlc Barcelona",
@@ -2749,7 +3869,14 @@
       "la": 41.385,
       "ln": 2.1963,
       "ta": 4.1,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Microteatro por Dinero",
@@ -2765,7 +3892,14 @@
       "la": 40.4215,
       "ln": -3.7041,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "N√úa Smart Restaurant",
@@ -2781,7 +3915,14 @@
       "la": 41.403,
       "ln": 2.1522,
       "ta": 3.5,
-      "rg": 5.0
+      "rg": 5.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cervecería Santa Bárbara",
@@ -2797,7 +3938,14 @@
       "la": 40.4269,
       "ln": -3.696,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Pum Pum Café",
@@ -2813,7 +3961,14 @@
       "la": 40.4081,
       "ln": -3.702,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cafetería Magerit",
@@ -2829,7 +3984,14 @@
       "la": 40.4156,
       "ln": -3.7082,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Mirabe",
@@ -2845,7 +4007,14 @@
       "la": 41.4164,
       "ln": 2.1325,
       "ta": null,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Takumi Ramen Barcelona Balmes",
@@ -2861,7 +4030,14 @@
       "la": 41.3896,
       "ln": 2.1619,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sports Bar Italian Food - Av. Diagonal",
@@ -2877,7 +4053,14 @@
       "la": 41.4051,
       "ln": 2.1739,
       "ta": 4.1,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Boa-Bao",
@@ -2893,7 +4076,14 @@
       "la": 41.3885,
       "ln": 2.1612,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "Squarespace"
     },
     {
       "n": "Al Solito Posto",
@@ -2909,7 +4099,14 @@
       "la": 37.3972,
       "ln": -5.9945,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tatel Madrid",
@@ -2925,7 +4122,14 @@
       "la": 40.4325,
       "ln": -3.6878,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Callao24 By Jhosef Arias",
@@ -2941,7 +4145,14 @@
       "la": 40.4503,
       "ln": -3.6547,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Bobia",
@@ -2957,7 +4168,14 @@
       "la": 40.4113,
       "ln": -3.7077,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Beefcious S.L",
@@ -2973,7 +4191,14 @@
       "la": 40.5119,
       "ln": -3.6703,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Surf House Barcelona",
@@ -2989,7 +4214,14 @@
       "la": 41.3775,
       "ln": 2.1906,
       "ta": 4.2,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Antigüedades Bar de Tapas",
@@ -3005,7 +4237,14 @@
       "la": 37.3873,
       "ln": -5.9928,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Europa Cafe",
@@ -3021,7 +4260,14 @@
       "la": 41.393,
       "ln": 2.1468,
       "ta": 3.6,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Hideout Burger",
@@ -3037,7 +4283,14 @@
       "la": 41.3869,
       "ln": 2.1602,
       "ta": 4.6,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Biercab",
@@ -3053,7 +4306,14 @@
       "la": 41.3862,
       "ln": 2.1598,
       "ta": 4.4,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Pimiento Verde - Quintana",
@@ -3069,7 +4329,14 @@
       "la": 40.4286,
       "ln": -3.7152,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Marula",
@@ -3085,7 +4352,14 @@
       "la": 41.6451,
       "ln": -0.8792,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Flaherty's Irish Pub Barcelona",
@@ -3101,7 +4375,14 @@
       "la": 41.3784,
       "ln": 2.1768,
       "ta": 4.0,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sakana Restaurante",
@@ -3117,7 +4398,14 @@
       "la": 40.4315,
       "ln": -3.7159,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Grupo la Mafia",
@@ -3133,7 +4421,14 @@
       "la": 36.7212,
       "ln": -4.4226,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 1,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Corral de la Morería",
@@ -3149,7 +4444,14 @@
       "la": 40.4127,
       "ln": -3.7142,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tablao Flamenco el Palacio Andaluz",
@@ -3165,7 +4467,14 @@
       "la": 37.4053,
       "ln": -6.0,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Morenilla | Casa de Antojos",
@@ -3181,7 +4490,14 @@
       "la": 40.4306,
       "ln": -3.6944,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Taberna de Chana - Valdebernardo",
@@ -3197,7 +4513,14 @@
       "la": 40.4014,
       "ln": -3.6214,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Patacón Pisao",
@@ -3213,7 +4536,14 @@
       "la": 40.4041,
       "ln": -3.6944,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Murillo Café - Restaurante",
@@ -3229,7 +4559,14 @@
       "la": 40.4131,
       "ln": -3.6913,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Ogrelo",
@@ -3245,7 +4582,14 @@
       "la": 40.4194,
       "ln": -3.6743,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante la Suegra",
@@ -3261,7 +4605,14 @@
       "la": 40.3866,
       "ln": -3.7401,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Peppe Fusco The Italian",
@@ -3277,7 +4628,14 @@
       "la": 40.4322,
       "ln": -3.7041,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Almalibre Açaí House",
@@ -3293,7 +4651,14 @@
       "la": 39.4791,
       "ln": -0.3775,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Bresca",
@@ -3309,7 +4674,14 @@
       "la": 40.4107,
       "ln": -3.6995,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tapas",
@@ -3325,7 +4697,14 @@
       "la": 40.4148,
       "ln": -3.7037,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Malacatín",
@@ -3341,7 +4720,14 @@
       "la": 40.4103,
       "ln": -3.7077,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 1,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Tablao Flamenco Cordobes Barcelona",
@@ -3357,7 +4743,14 @@
       "la": 41.3789,
       "ln": 2.1747,
       "ta": 3.6,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Grama Lounge",
@@ -3373,7 +4766,14 @@
       "la": 40.4155,
       "ln": -3.7017,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna los Gallos",
@@ -3389,7 +4789,14 @@
       "la": 40.4235,
       "ln": -3.6863,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna Real Restaurante",
@@ -3405,7 +4812,14 @@
       "la": 40.418,
       "ln": -3.709,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cardamomo Tablao Flamenco",
@@ -3421,7 +4835,14 @@
       "la": 40.4155,
       "ln": -3.6995,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Posada de la Villa",
@@ -3437,7 +4858,14 @@
       "la": 40.4131,
       "ln": -3.7085,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Alquería el Brosquil",
@@ -3453,7 +4881,14 @@
       "la": 39.4271,
       "ln": -0.3508,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "El Manolo",
@@ -3469,7 +4904,14 @@
       "la": 41.4149,
       "ln": 2.1946,
       "ta": 3.6,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Atípico",
@@ -3485,7 +4927,14 @@
       "la": 41.6453,
       "ln": -0.8824,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Zielou",
@@ -3501,7 +4950,14 @@
       "la": 40.4723,
       "ln": -3.6823,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Chéri",
@@ -3517,7 +4973,14 @@
       "la": 41.3945,
       "ln": 2.1537,
       "ta": 3.8,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Fellina Restaurante",
@@ -3533,7 +4996,14 @@
       "la": 40.4308,
       "ln": -3.6943,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 0,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Alboréa",
@@ -3549,7 +5019,14 @@
       "la": 37.3842,
       "ln": -6.0046,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Restaurante H83",
@@ -3565,7 +5042,14 @@
       "la": 41.406,
       "ln": 2.174,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Taberna la Concha",
@@ -3581,7 +5065,14 @@
       "la": 40.4132,
       "ln": -3.7084,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Viva Burger",
@@ -3597,7 +5088,14 @@
       "la": 40.4125,
       "ln": -3.7119,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cafetería Nebraska",
@@ -3613,7 +5111,14 @@
       "la": 40.461,
       "ln": -3.6984,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 0,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Costello Río",
@@ -3629,7 +5134,14 @@
       "la": 40.3939,
       "ln": -3.6978,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Manaba",
@@ -3645,7 +5157,14 @@
       "la": 41.3878,
       "ln": 2.1605,
       "ta": 3.5,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Viure Sense Dormir",
@@ -3661,7 +5180,14 @@
       "la": 39.4647,
       "ln": -0.3236,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Revoltosa Prado",
@@ -3677,7 +5203,14 @@
       "la": 40.4146,
       "ln": -3.6997,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Kibuka",
@@ -3693,7 +5226,14 @@
       "la": 41.3997,
       "ln": 2.1572,
       "ta": 4.0,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cachitos Rambla",
@@ -3709,7 +5249,14 @@
       "la": 41.3895,
       "ln": 2.1654,
       "ta": 3.9,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "La Cantina",
@@ -3725,7 +5272,14 @@
       "la": 40.4593,
       "ln": -3.6957,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "All You Can Eat",
@@ -3741,7 +5295,14 @@
       "la": 40.4176,
       "ln": -3.7035,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Lamiak Cava Baja",
@@ -3757,7 +5318,14 @@
       "la": 40.4119,
       "ln": -3.7104,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Barraca",
@@ -3773,7 +5341,14 @@
       "la": 41.3791,
       "ln": 2.1919,
       "ta": 3.7,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Fismuler",
@@ -3789,7 +5364,14 @@
       "la": 40.4282,
       "ln": -3.6974,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Argentinisimo",
@@ -3805,7 +5387,14 @@
       "la": 41.3855,
       "ln": 2.159,
       "ta": 4.7,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "New York Burger, C. San Germán 5",
@@ -3821,7 +5410,14 @@
       "la": 40.456,
       "ln": -3.6929,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Opium Club",
@@ -3837,7 +5433,14 @@
       "la": 40.4379,
       "ln": -3.6922,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante-Taberna Parrilla Asador Vasc",
@@ -3853,7 +5456,14 @@
       "la": 40.4156,
       "ln": -3.7027,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Queen Burger San Modesto",
@@ -3869,7 +5479,14 @@
       "la": 40.4856,
       "ln": -3.692,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Hummuseria",
@@ -3885,7 +5502,14 @@
       "la": 40.4234,
       "ln": -3.7,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Agustín & Company Bar de Tapas",
@@ -3901,7 +5525,14 @@
       "la": 37.3895,
       "ln": -5.9932,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Nao Borraset",
@@ -3917,7 +5548,14 @@
       "la": 39.4224,
       "ln": -0.341,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Taqueria | Passatge de Font",
@@ -3933,7 +5571,14 @@
       "la": 41.4024,
       "ln": 2.1756,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Salambo",
@@ -3949,7 +5594,14 @@
       "la": 41.4045,
       "ln": 2.1577,
       "ta": 3.9,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ninja Ramen",
@@ -3965,7 +5617,14 @@
       "la": 40.4265,
       "ln": -3.701,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Disfrutar",
@@ -3981,7 +5640,14 @@
       "la": 41.3878,
       "ln": 2.1532,
       "ta": 4.7,
-      "rg": 4.8
+      "rg": 4.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Out of India",
@@ -3997,7 +5663,14 @@
       "la": 41.379,
       "ln": 2.1431,
       "ta": 4.5,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Buenos Aires Grill Restaurant Eixample",
@@ -4013,7 +5686,14 @@
       "la": 41.3894,
       "ln": 2.1587,
       "ta": 4.6,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Centfocs",
@@ -4029,7 +5709,14 @@
       "la": 41.387,
       "ln": 2.166,
       "ta": 3.7,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Foc",
@@ -4045,7 +5732,14 @@
       "la": 41.3761,
       "ln": 2.1892,
       "ta": 4.4,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Puerta de Atocha",
@@ -4061,7 +5755,14 @@
       "la": 40.4061,
       "ln": -3.6922,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna la Descubierta",
@@ -4077,7 +5778,14 @@
       "la": 40.4152,
       "ln": -3.7026,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Restaurant Fuji",
@@ -4093,7 +5801,14 @@
       "la": 39.4725,
       "ln": -0.3676,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Federal Cafe",
@@ -4109,7 +5824,14 @@
       "la": 41.3769,
       "ln": 2.1628,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "Squarespace"
     },
     {
       "n": "Udon Tibidabo",
@@ -4125,7 +5847,14 @@
       "la": 41.3764,
       "ln": 2.1496,
       "ta": 4.1,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Burnout Burgers",
@@ -4141,7 +5870,14 @@
       "la": 40.4325,
       "ln": -3.7037,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Massart - Goya",
@@ -4157,7 +5893,14 @@
       "la": 40.4227,
       "ln": -3.679,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Bodega de los Reyes",
@@ -4173,7 +5916,14 @@
       "la": 40.4243,
       "ln": -3.7092,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tejeringo's Coffee",
@@ -4189,7 +5939,14 @@
       "la": 36.7231,
       "ln": -4.4208,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "√äbac",
@@ -4205,7 +5962,14 @@
       "la": 41.4106,
       "ln": 2.1364,
       "ta": 4.3,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Pizza Barceloneta Kitchen",
@@ -4221,7 +5985,14 @@
       "la": 41.3806,
       "ln": 2.1883,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Frescco Casp",
@@ -4237,7 +6008,14 @@
       "la": 40.4176,
       "ln": -3.7085,
       "ta": 3.6,
-      "rg": 3.5
+      "rg": 3.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Lasal del Varador",
@@ -4253,7 +6031,14 @@
       "la": 41.5346,
       "ln": 2.448,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cazorla Restaurantes",
@@ -4269,7 +6054,14 @@
       "la": 40.4564,
       "ln": -3.6919,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Lacón",
@@ -4285,7 +6077,14 @@
       "la": 40.4151,
       "ln": -3.6993,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bar Sidi",
@@ -4301,7 +6100,14 @@
       "la": 40.4238,
       "ln": -3.7021,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Billy Brunch",
@@ -4317,7 +6123,14 @@
       "la": 41.3871,
       "ln": 2.1592,
       "ta": 4.8,
-      "rg": 4.8
+      "rg": 4.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Lalina Bravas y Tapas la Latina - Gluten",
@@ -4333,7 +6146,14 @@
       "la": 40.4115,
       "ln": -3.7089,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa de Tapas Cañota",
@@ -4349,7 +6169,14 @@
       "la": 41.3741,
       "ln": 2.1547,
       "ta": 4.0,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Maitea Taberna Sl",
@@ -4365,7 +6192,14 @@
       "la": 41.391,
       "ln": 2.1511,
       "ta": 4.3,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Oviedo",
@@ -4381,7 +6215,14 @@
       "la": 40.3978,
       "ln": -3.7063,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Burguesa Tuset",
@@ -4397,7 +6238,14 @@
       "la": 41.4401,
       "ln": 2.1987,
       "ta": null,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "L’ Amfora Barcelona",
@@ -4413,7 +6261,14 @@
       "la": 41.3753,
       "ln": 2.1536,
       "ta": null,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 1,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Sibuya Urban Sushi Bar Gijón",
@@ -4429,7 +6284,14 @@
       "la": 36.5061,
       "ln": -6.2783,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Mercado Barceló",
@@ -4445,7 +6307,14 @@
       "la": 40.4268,
       "ln": -3.6989,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Caravelle",
@@ -4461,7 +6330,14 @@
       "la": 41.3823,
       "ln": 2.1688,
       "ta": 4.4,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "Squarespace"
     },
     {
       "n": "La Briciola",
@@ -4477,7 +6353,14 @@
       "la": 41.3738,
       "ln": 2.1365,
       "ta": 4.1,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Casa Cuesta",
@@ -4493,7 +6376,14 @@
       "la": 37.386,
       "ln": -6.0044,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Metric Market",
@@ -4509,7 +6399,14 @@
       "la": 41.3916,
       "ln": 2.1416,
       "ta": 3.9,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cereal Hunters Carrer del Consell",
@@ -4525,7 +6422,14 @@
       "la": 40.4273,
       "ln": -3.6988,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Can Ros",
@@ -4541,7 +6445,14 @@
       "la": 41.3773,
       "ln": 2.1894,
       "ta": 4.0,
-      "rg": 4.9
+      "rg": 4.9,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Veggie Garden",
@@ -4557,7 +6468,14 @@
       "la": 41.3868,
       "ln": 2.1653,
       "ta": 3.9,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "L'Alian√ßa del Poble Nou Casino",
@@ -4573,7 +6491,14 @@
       "la": 41.3999,
       "ln": 2.2033,
       "ta": 3.2,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Abirradero",
@@ -4589,7 +6514,14 @@
       "la": 41.3742,
       "ln": 2.1686,
       "ta": 4.4,
-      "rg": 4.8
+      "rg": 4.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Salvaje",
@@ -4605,7 +6537,14 @@
       "la": 40.4282,
       "ln": -3.6832,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Orgaz",
@@ -4621,7 +6560,14 @@
       "la": 40.4543,
       "ln": -3.6221,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Quickgold Barcelona (Diagonal 335) - Com",
@@ -4637,7 +6583,14 @@
       "la": 41.3985,
       "ln": 2.1683,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Sol Soler",
@@ -4653,7 +6606,14 @@
       "la": 41.4015,
       "ln": 2.1563,
       "ta": 4.1,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurant Barcelonamilano",
@@ -4669,7 +6629,14 @@
       "la": 41.3911,
       "ln": 2.1492,
       "ta": 4.1,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Xalet de Montjuïc",
@@ -4685,7 +6652,14 @@
       "la": 41.3692,
       "ln": 2.1642,
       "ta": 3.6,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Carlota Akaneya",
@@ -4701,7 +6675,14 @@
       "la": 41.3824,
       "ln": 2.1686,
       "ta": 4.6,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante la Montería",
@@ -4717,7 +6698,14 @@
       "la": 40.4203,
       "ln": -3.6775,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taco Alto",
@@ -4733,7 +6721,14 @@
       "la": 41.3897,
       "ln": 2.181,
       "ta": 4.3,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Las Piletas Restaurante",
@@ -4749,7 +6744,14 @@
       "la": 37.3895,
       "ln": -6.0011,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Churrería-Chocolatería las Farolas",
@@ -4765,7 +6767,14 @@
       "la": 40.4163,
       "ln": -3.7061,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Alcaravea Gaztambide",
@@ -4781,7 +6790,14 @@
       "la": 40.4382,
       "ln": -3.7152,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Palau de Mar",
@@ -4797,7 +6813,14 @@
       "la": 41.3806,
       "ln": 2.1858,
       "ta": 3.4,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Farga",
@@ -4813,7 +6836,14 @@
       "la": 41.3959,
       "ln": 2.1581,
       "ta": 3.0,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cervecería Alemana",
@@ -4829,7 +6859,14 @@
       "la": 40.4145,
       "ln": -3.7003,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Arca de Noé",
@@ -4845,7 +6882,14 @@
       "la": 40.4877,
       "ln": -3.6508,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Bovia del Viso",
@@ -4861,7 +6905,14 @@
       "la": 40.3732,
       "ln": -3.7647,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Lhardy Restaurante",
@@ -4877,7 +6928,14 @@
       "la": 40.4166,
       "ln": -3.7014,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Asador Wok Âíå",
@@ -4893,7 +6951,14 @@
       "la": 39.4841,
       "ln": -0.3954,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Jefferson",
@@ -4909,7 +6974,14 @@
       "la": 41.3945,
       "ln": 2.2066,
       "ta": 4.7,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurant Casa Carmen Paseo de Gracia",
@@ -4925,7 +6997,14 @@
       "la": 40.3683,
       "ln": -3.598,
       "ta": 3.8,
-      "rg": 3.7
+      "rg": 3.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurants Casa Saragossa",
@@ -4941,7 +7020,14 @@
       "la": 39.4769,
       "ln": -0.3242,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Restaurante Everest Tandoori",
@@ -4957,7 +7043,14 @@
       "la": 40.4642,
       "ln": -3.6495,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sushisom Zaragoza la Torre Outlet",
@@ -4973,7 +7066,14 @@
       "la": 41.6771,
       "ln": -0.9531,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Zaka Restaurante",
@@ -4989,7 +7089,14 @@
       "la": 43.2599,
       "ln": -2.9423,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Monroe",
@@ -5005,7 +7112,14 @@
       "la": 41.3787,
       "ln": 2.1707,
       "ta": 4.0,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tasca y Brasa",
@@ -5021,7 +7135,14 @@
       "la": 39.4719,
       "ln": -0.3257,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Frankie Gallo Cha Cha Cha",
@@ -5037,7 +7158,14 @@
       "la": 41.3785,
       "ln": 2.1725,
       "ta": 4.1,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "SA Brisa Restaurante en el Retiro",
@@ -5053,7 +7181,14 @@
       "la": 40.4202,
       "ln": -3.6792,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Malontina",
@@ -5069,7 +7204,14 @@
       "la": 40.4118,
       "ln": -3.6954,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Cobatillas",
@@ -5085,7 +7227,14 @@
       "la": 38.0549,
       "ln": -1.0821,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Porca",
@@ -5101,7 +7250,14 @@
       "la": 41.373,
       "ln": 2.1707,
       "ta": 4.2,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Mammamia",
@@ -5117,7 +7273,14 @@
       "la": 41.4027,
       "ln": 2.2001,
       "ta": 4.5,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Can Mano",
@@ -5133,7 +7296,14 @@
       "la": 41.3777,
       "ln": 2.1907,
       "ta": 4.5,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sentinel",
@@ -5149,7 +7319,14 @@
       "la": 41.6714,
       "ln": -0.8841,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cafetería Restaurante el Corte Inglés",
@@ -5165,7 +7342,14 @@
       "la": 39.4713,
       "ln": -0.3712,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Leche de Tigre",
@@ -5181,7 +7365,14 @@
       "la": 41.394,
       "ln": 2.1476,
       "ta": 3.6,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Marina Alta 5 - Terraza Bar",
@@ -5197,7 +7388,14 @@
       "la": 39.4906,
       "ln": -0.4021,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cal Pep",
@@ -5213,7 +7411,14 @@
       "la": 41.384,
       "ln": 2.1834,
       "ta": 4.2,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Kyoto",
@@ -5229,7 +7434,14 @@
       "la": 39.4899,
       "ln": -0.3628,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cervecería L'Europe",
@@ -5245,7 +7457,14 @@
       "la": 40.4306,
       "ln": -3.7019,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 0,
+      "fb": 1,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "El Tablo Carmen",
@@ -5261,7 +7480,14 @@
       "la": 41.3692,
       "ln": 2.1467,
       "ta": 4.0,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Macchina Pasta Bar",
@@ -5277,7 +7503,14 @@
       "la": 41.3801,
       "ln": 2.1768,
       "ta": 4.4,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante la Gloria",
@@ -5293,7 +7526,14 @@
       "la": 40.4081,
       "ln": -3.6897,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sidrería el Llagar",
@@ -5309,7 +7549,14 @@
       "la": 40.4451,
       "ln": -3.611,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Patacon Tostao",
@@ -5325,7 +7572,14 @@
       "la": 39.4633,
       "ln": -0.3839,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante el Olvido",
@@ -5341,7 +7595,14 @@
       "la": 40.4605,
       "ln": -3.6869,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Santamasa Sarrià",
@@ -5357,7 +7618,14 @@
       "la": 41.3997,
       "ln": 2.1216,
       "ta": 4.0,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurant Charrito",
@@ -5373,7 +7641,14 @@
       "la": 41.3884,
       "ln": 2.1641,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Taberna del Capit√ån Alatriste",
@@ -5389,7 +7664,14 @@
       "la": 40.4129,
       "ln": -3.7083,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Tasquería",
@@ -5405,7 +7687,14 @@
       "la": 40.4454,
       "ln": -3.6956,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Bellillo Pizzeria Napoletana",
@@ -5421,7 +7710,14 @@
       "la": 41.3879,
       "ln": 2.1619,
       "ta": 4.2,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Nueva Marquesa",
@@ -5437,7 +7733,14 @@
       "la": 41.3775,
       "ln": 2.1193,
       "ta": 4.5,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Casa de la Cerveza",
@@ -5453,7 +7756,14 @@
       "la": 40.4322,
       "ln": -3.6733,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Misión Café",
@@ -5469,7 +7779,14 @@
       "la": 40.4242,
       "ln": -3.7088,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Jaime",
@@ -5485,7 +7802,14 @@
       "la": 41.3859,
       "ln": 2.1591,
       "ta": 4.0,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Kurz&Gut la Maquinista",
@@ -5501,7 +7825,14 @@
       "la": 41.4408,
       "ln": 2.1986,
       "ta": 3.3,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Piazze d'Italia",
@@ -5517,7 +7848,14 @@
       "la": 41.3869,
       "ln": 2.157,
       "ta": 4.6,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Barbillón Oyster",
@@ -5533,7 +7871,14 @@
       "la": 40.4675,
       "ln": -3.7945,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Alba Granados | Carnes a la Brasa en Bar",
@@ -5549,7 +7894,14 @@
       "la": 41.3905,
       "ln": 2.159,
       "ta": 3.9,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Antic Cafe Espanyol",
@@ -5565,7 +7917,14 @@
       "la": 41.3751,
       "ln": 2.1694,
       "ta": 3.6,
-      "rg": 3.9
+      "rg": 3.9,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Alt Heidelberg",
@@ -5581,7 +7940,14 @@
       "la": 41.3863,
       "ln": 2.1652,
       "ta": 3.5,
-      "rg": 4.9
+      "rg": 4.9,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Plenti",
@@ -5597,7 +7963,14 @@
       "la": 40.413,
       "ln": -3.6902,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tuk Tuk Asian Street Food Goya",
@@ -5613,7 +7986,14 @@
       "la": 40.4262,
       "ln": -3.6729,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Chifa Doromari",
@@ -5629,7 +8009,14 @@
       "la": 40.3848,
       "ln": -3.6698,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Vegetalia Born - Restaurante vegetariano",
@@ -5645,7 +8032,14 @@
       "la": 41.3836,
       "ln": 2.1826,
       "ta": 4.5,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Momo",
@@ -5661,7 +8055,14 @@
       "la": 41.3803,
       "ln": 2.1793,
       "ta": 4.4,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "L' Olla de Si Chuan",
@@ -5677,7 +8078,14 @@
       "la": 41.3885,
       "ln": 2.1603,
       "ta": 3.8,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Vuelve Carolina",
@@ -5693,7 +8101,14 @@
       "la": 39.4696,
       "ln": -0.3745,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Teatro Off la Latina",
@@ -5709,7 +8124,14 @@
       "la": 40.412,
       "ln": -3.712,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Nabucco Tiramisu",
@@ -5725,7 +8147,14 @@
       "la": 41.4005,
       "ln": 2.1577,
       "ta": 4.1,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Santagustina",
@@ -5741,7 +8170,14 @@
       "la": 41.3882,
       "ln": 2.1806,
       "ta": 4.2,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Majaderitos Cafe",
@@ -5757,7 +8193,14 @@
       "la": 40.4158,
       "ln": -3.7026,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Contrapunto les Arts",
@@ -5773,7 +8216,14 @@
       "la": 39.4576,
       "ln": -0.3552,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ÿöÿ∑ÿπÿö Ÿ≥ÿàÿñÿäÿøÿäÿ±",
@@ -5789,7 +8239,14 @@
       "la": 40.452,
       "ln": -3.6677,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Argentino",
@@ -5805,7 +8262,14 @@
       "la": 41.3885,
       "ln": 2.1602,
       "ta": 4.0,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Madre Lievito Laboratorio",
@@ -5821,7 +8285,14 @@
       "la": 41.3976,
       "ln": 2.2032,
       "ta": 4.3,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Vic Braseria",
@@ -5837,7 +8308,14 @@
       "la": 41.3972,
       "ln": 2.1795,
       "ta": 4.5,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Bodega D'En Rafel",
@@ -5853,7 +8331,14 @@
       "la": 41.3773,
       "ln": 2.1616,
       "ta": 4.2,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ventorrillo el Chato",
@@ -5869,7 +8354,14 @@
       "la": 36.4801,
       "ln": -6.2622,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Rabipelao Gótico",
@@ -5885,7 +8377,14 @@
       "la": 41.4038,
       "ln": 2.1598,
       "ta": 4.6,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Gran Barril",
@@ -5901,7 +8400,14 @@
       "la": 40.4248,
       "ln": -3.673,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Gavina",
@@ -5917,7 +8423,14 @@
       "la": 41.3806,
       "ln": 2.1855,
       "ta": 3.6,
-      "rg": 3.8
+      "rg": 3.8,
+      "em": 1,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Restaurante Vegetariano Artemisa - Huert",
@@ -5933,7 +8446,14 @@
       "la": 40.416,
       "ln": -3.6989,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Vietnamita Gràcia",
@@ -5949,7 +8469,14 @@
       "la": 41.4008,
       "ln": 2.1591,
       "ta": 4.0,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Oishii Ramen Street",
@@ -5965,7 +8492,14 @@
       "la": 40.4209,
       "ln": -3.7055,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Mamona Chamberí 🍴",
@@ -5981,7 +8515,14 @@
       "la": 40.4376,
       "ln": -3.6996,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Veltins Arena",
@@ -5997,7 +8538,14 @@
       "la": 41.66,
       "ln": -0.8967,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Terra Mia",
@@ -6013,7 +8561,14 @@
       "la": 41.4163,
       "ln": 2.1575,
       "ta": 4.6,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Vinopremier",
@@ -6029,7 +8584,14 @@
       "la": 40.4311,
       "ln": -3.6716,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Vinoteca Devinums",
@@ -6045,7 +8607,14 @@
       "la": 40.3821,
       "ln": -3.7482,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Mònica",
@@ -6061,7 +8630,14 @@
       "la": 41.8485,
       "ln": 3.1288,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante el Porvenir",
@@ -6077,7 +8653,14 @@
       "la": 41.3869,
       "ln": 2.1535,
       "ta": 4.3,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cherry Pecas",
@@ -6093,7 +8676,14 @@
       "la": 40.4411,
       "ln": -3.7153,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "L‚äôentrecote Café de París",
@@ -6109,7 +8699,14 @@
       "la": 40.4218,
       "ln": -3.6867,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "L'Olive",
@@ -6125,7 +8722,14 @@
       "la": 41.3891,
       "ln": 2.1627,
       "ta": 4.1,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Vrutal",
@@ -6141,7 +8745,14 @@
       "la": 41.3984,
       "ln": 2.2051,
       "ta": 4.9,
-      "rg": 4.7
+      "rg": 4.7,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Rías Bajas",
@@ -6157,7 +8768,14 @@
       "la": 40.4426,
       "ln": -3.6712,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Esquinita de Blai",
@@ -6173,7 +8791,14 @@
       "la": 41.3734,
       "ln": 2.1654,
       "ta": 4.2,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna Antonio Sánchez - 1787 - la Tabe",
@@ -6189,7 +8814,14 @@
       "la": 40.4111,
       "ln": -3.7048,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ajoblanco Tapas Restaurante Cocktail Bar",
@@ -6205,7 +8837,14 @@
       "la": 41.396,
       "ln": 2.1521,
       "ta": 4.0,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 1,
+      "ig": 1,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Hidden Coffee Roasters - les Corts",
@@ -6221,7 +8860,14 @@
       "la": 41.3883,
       "ln": 2.1359,
       "ta": 4.5,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Sitio",
@@ -6237,7 +8883,14 @@
       "la": 40.4354,
       "ln": -3.7176,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Lupita",
@@ -6253,7 +8906,14 @@
       "la": 40.4226,
       "ln": -3.6855,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bumpgreen | Restaurante Barrio Salamanca",
@@ -6269,7 +8929,14 @@
       "la": 40.4288,
       "ln": -3.6913,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna de Angel Sierra",
@@ -6285,7 +8952,14 @@
       "la": 40.423,
       "ln": -3.6974,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa de Asturias",
@@ -6301,7 +8975,14 @@
       "la": 40.4081,
       "ln": -3.6998,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cafetería Cervecería la Villa",
@@ -6317,7 +8998,14 @@
       "la": 40.3818,
       "ln": -3.6325,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sucursal Aceitera",
@@ -6333,7 +9021,14 @@
       "la": 41.3772,
       "ln": 2.1632,
       "ta": 3.7,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Big Al's - Real American Burgers - Barce",
@@ -6349,7 +9044,14 @@
       "la": 41.3894,
       "ln": 2.1501,
       "ta": 4.5,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "√åstor Gastro-Place",
@@ -6365,7 +9067,14 @@
       "la": 40.4127,
       "ln": -3.7096,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Buenas Migas Sant Pere",
@@ -6381,7 +9090,14 @@
       "la": 41.3853,
       "ln": 2.1633,
       "ta": 4.0,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Velázquez 17 - Restaurante",
@@ -6397,7 +9113,14 @@
       "la": 40.423,
       "ln": -3.6845,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "En Ville",
@@ -6413,7 +9136,14 @@
       "la": 41.3829,
       "ln": 2.1686,
       "ta": 4.5,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Elche",
@@ -6429,7 +9159,14 @@
       "la": 41.3739,
       "ln": 2.1691,
       "ta": 3.8,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Quillo Bar",
@@ -6445,7 +9182,14 @@
       "la": 41.3891,
       "ln": 2.1796,
       "ta": 3.6,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Kimchi Mama",
@@ -6461,7 +9205,14 @@
       "la": 41.376,
       "ln": 2.1434,
       "ta": 4.8,
-      "rg": 4.8
+      "rg": 4.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Warehouse@thehclub",
@@ -6477,7 +9228,14 @@
       "la": 40.4376,
       "ln": -3.6867,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna Andaluza la Gloria",
@@ -6493,7 +9251,14 @@
       "la": 36.7221,
       "ln": -4.4183,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Cine de Verano de la Bombilla: Fescinal",
@@ -6509,7 +9274,14 @@
       "la": 40.4267,
       "ln": -3.7263,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Depikofino",
@@ -6525,7 +9297,14 @@
       "la": 37.3842,
       "ln": -5.9787,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sanissimo Principe Pío Vegan",
@@ -6541,7 +9320,14 @@
       "la": 40.4228,
       "ln": -3.7233,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bareto Atocha",
@@ -6557,7 +9343,14 @@
       "la": 40.4091,
       "ln": -3.6925,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Vespa Burger Bar",
@@ -6573,7 +9366,14 @@
       "la": 41.402,
       "ln": 2.1572,
       "ta": 4.2,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Sotero",
@@ -6589,7 +9389,14 @@
       "la": 40.464,
       "ln": -3.692,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Pimiento Verde",
@@ -6605,7 +9412,14 @@
       "la": 40.424,
       "ln": -3.6814,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bar-Restaurante Muy Buenas",
@@ -6621,7 +9435,14 @@
       "la": 41.3809,
       "ln": 2.1681,
       "ta": 4.3,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Paipái",
@@ -6637,7 +9458,14 @@
       "la": 40.4602,
       "ln": -3.6761,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna Sol y Sombra",
@@ -6653,7 +9481,14 @@
       "la": 37.3891,
       "ln": -6.0099,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Pentxo",
@@ -6669,7 +9504,14 @@
       "la": 43.2566,
       "ln": -2.9241,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Rebost D'Hostafrancs",
@@ -6685,7 +9527,14 @@
       "la": 41.3768,
       "ln": 2.1456,
       "ta": 4.5,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante O'Caldiño",
@@ -6701,7 +9550,14 @@
       "la": 40.4286,
       "ln": -3.6849,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ristorante Mediterrani",
@@ -6717,7 +9573,14 @@
       "la": 41.4082,
       "ln": 2.2162,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taramara",
@@ -6733,7 +9596,14 @@
       "la": 40.4539,
       "ln": -3.6218,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Quintoelemento",
@@ -6749,7 +9619,14 @@
       "la": 40.4097,
       "ln": -3.693,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Txokoa Barcelona",
@@ -6765,7 +9642,14 @@
       "la": 41.3901,
       "ln": 2.1388,
       "ta": 4.2,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurant Parrilla Alfonsina",
@@ -6781,7 +9665,14 @@
       "la": 41.397,
       "ln": 2.1757,
       "ta": 4.6,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Asador Puerta Bisagra",
@@ -6797,7 +9688,14 @@
       "la": 40.4018,
       "ln": -3.6598,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Amordmadre",
@@ -6813,7 +9711,14 @@
       "la": 40.3746,
       "ln": -3.6265,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Villa Verbena",
@@ -6829,7 +9734,14 @@
       "la": 40.4199,
       "ln": -3.7339,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taquería del Alamillo",
@@ -6845,7 +9757,14 @@
       "la": 40.4137,
       "ln": -3.7125,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Los Arroces de Segis",
@@ -6861,7 +9780,14 @@
       "la": 40.4639,
       "ln": -3.6934,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Zoko Retiro - Restaurante en el Retiro",
@@ -6877,7 +9803,14 @@
       "la": 40.4189,
       "ln": -3.6788,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Venganza de Malinche Valencia",
@@ -6893,7 +9826,14 @@
       "la": 39.4665,
       "ln": -0.3638,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante la Vegana de Madrid",
@@ -6909,7 +9849,14 @@
       "la": 40.4573,
       "ln": -3.6514,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurant L'Aliança del Poble Nou",
@@ -6925,7 +9872,14 @@
       "la": 41.3997,
       "ln": 2.2033,
       "ta": 3.2,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Fogg Bar Birras & Burgers",
@@ -6941,7 +9895,14 @@
       "la": 40.4081,
       "ln": -3.6765,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ecocentro",
@@ -6957,7 +9918,14 @@
       "la": 40.443,
       "ln": -3.7049,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Quinto Pino",
@@ -6973,7 +9941,14 @@
       "la": 41.4012,
       "ln": 2.123,
       "ta": 3.1,
-      "rg": 3.8
+      "rg": 3.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Qchara de Pachi",
@@ -6989,7 +9964,14 @@
       "la": 40.4617,
       "ln": -3.6915,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Arrocería Restaurante la Casa de Valenci",
@@ -7005,7 +9987,14 @@
       "la": 40.4299,
       "ln": -3.7224,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 0,
+      "fb": 0,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Creperie Easycrep",
@@ -7021,7 +10010,14 @@
       "la": 40.4269,
       "ln": -3.7193,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Biocenter",
@@ -7037,7 +10033,14 @@
       "la": 41.3825,
       "ln": 2.1694,
       "ta": 4.1,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Lambuzo",
@@ -7053,7 +10056,14 @@
       "la": 40.4188,
       "ln": -3.7081,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ukai Eixample",
@@ -7069,7 +10079,14 @@
       "la": 40.3971,
       "ln": -3.6652,
       "ta": 4.1,
-      "rg": 3.6
+      "rg": 3.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Adelita Botanero",
@@ -7085,7 +10102,14 @@
       "la": 41.3886,
       "ln": 2.157,
       "ta": 4.0,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante la Gloria",
@@ -7101,7 +10125,14 @@
       "la": 37.1754,
       "ln": -3.6003,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Pizzaria Grosso",
@@ -7117,7 +10148,14 @@
       "la": 39.4682,
       "ln": -0.3748,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Birras&Tapas",
@@ -7133,7 +10171,14 @@
       "la": 41.3772,
       "ln": 2.1385,
       "ta": 3.6,
-      "rg": 4.1
+      "rg": 4.1,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna de la Daniela - Goya",
@@ -7149,7 +10194,14 @@
       "la": 40.4263,
       "ln": -3.6787,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Picasso",
@@ -7165,7 +10217,14 @@
       "la": 36.7226,
       "ln": -4.3958,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Eatmytrip - Brunch & Bakery Barcelona",
@@ -7181,7 +10240,14 @@
       "la": 40.413,
       "ln": -3.7134,
       "ta": 4.6,
-      "rg": 4.9
+      "rg": 4.9,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Arrocería da Gusto",
@@ -7197,7 +10263,14 @@
       "la": 40.3736,
       "ln": -3.727,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "The Famous Bar Restaurant",
@@ -7213,7 +10286,14 @@
       "la": 41.4055,
       "ln": 2.1751,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Restaurante Japonés Ii",
@@ -7229,7 +10309,14 @@
       "la": 38.0311,
       "ln": -1.1471,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Oxid la Tertulia",
@@ -7245,7 +10332,14 @@
       "la": 41.3888,
       "ln": 2.14,
       "ta": 3.3,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Viva Madrid",
@@ -7261,7 +10355,14 @@
       "la": 40.4152,
       "ln": -3.6998,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Hotel Roma Reial",
@@ -7277,7 +10378,14 @@
       "la": 41.3801,
       "ln": 2.1759,
       "ta": 3.8,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Bar Málaga",
@@ -7293,7 +10401,14 @@
       "la": 36.7212,
       "ln": -4.4214,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Bocca di Bonifacio",
@@ -7309,7 +10424,14 @@
       "la": 41.4056,
       "ln": 2.1709,
       "ta": 4.3,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Meson Restaurante As Fontes",
@@ -7325,7 +10447,14 @@
       "la": 40.4043,
       "ln": -3.6908,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cervecería Huracán",
@@ -7341,7 +10470,14 @@
       "la": 37.3457,
       "ln": -5.9782,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Venta el Gato",
@@ -7357,7 +10493,14 @@
       "la": 36.7234,
       "ln": -4.3364,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "La Ristobottega",
@@ -7373,7 +10516,14 @@
       "la": 36.7203,
       "ln": -4.4187,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Pastelería la Mallorquina - Velázquez",
@@ -7389,7 +10539,14 @@
       "la": 40.4263,
       "ln": -3.6843,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Restaurante Almunia",
@@ -7405,7 +10562,14 @@
       "la": 39.4723,
       "ln": -0.3716,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Taberna Copas y Tapas",
@@ -7421,7 +10585,14 @@
       "la": 36.7216,
       "ln": -4.4203,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 0,
+      "sp": ""
     },
     {
       "n": "Restaurante Cadaqués Barcelona",
@@ -7437,7 +10608,14 @@
       "la": 40.4238,
       "ln": -3.683,
       "ta": 4.4,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Lemongrass Explanada",
@@ -7453,7 +10631,14 @@
       "la": 39.4684,
       "ln": -0.3757,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tyris On Tap",
@@ -7469,7 +10654,14 @@
       "la": 39.4749,
       "ln": -0.379,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante el Valle",
@@ -7485,7 +10677,14 @@
       "la": 40.4036,
       "ln": -3.6994,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Llagar la Llobera",
@@ -7501,7 +10700,14 @@
       "la": 40.4316,
       "ln": -3.6998,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Yuso",
@@ -7517,7 +10723,14 @@
       "la": 39.4786,
       "ln": -0.3774,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Hotel Hesperia Murcia Centro",
@@ -7533,7 +10746,14 @@
       "la": 37.9843,
       "ln": -1.1313,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Casa Pedro",
@@ -7549,7 +10769,14 @@
       "la": 40.4975,
       "ln": -3.6871,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Roda",
@@ -7565,7 +10792,14 @@
       "la": 41.3999,
       "ln": 2.2025,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Juaco",
@@ -7581,7 +10815,14 @@
       "la": 41.4477,
       "ln": 2.1427,
       "ta": 2.9,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 1,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Picnic Restaurant",
@@ -7597,7 +10838,14 @@
       "la": 41.3886,
       "ln": 2.1816,
       "ta": 4.3,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Unica Madrid",
@@ -7613,7 +10861,14 @@
       "la": 40.421,
       "ln": -3.6854,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Triki Trac",
@@ -7629,7 +10884,14 @@
       "la": 41.3815,
       "ln": 2.1414,
       "ta": 4.3,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Cafe del Gallery",
@@ -7645,7 +10907,14 @@
       "la": 41.3951,
       "ln": 2.1592,
       "ta": 4.5,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Chill Bar",
@@ -7661,7 +10930,14 @@
       "la": 41.4024,
       "ln": 2.1718,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Pizzeria Ristorante Piccolo Diavolo",
@@ -7677,7 +10953,14 @@
       "la": 40.4114,
       "ln": -3.6956,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Tragantía Restaurant",
@@ -7693,7 +10976,14 @@
       "la": 40.4512,
       "ln": -3.6772,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Meson de Fuencarral",
@@ -7709,7 +10999,14 @@
       "la": 40.5291,
       "ln": -3.6935,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 1,
+      "ig": 1,
+      "fb": 1,
+      "bk": 1,
+      "tk": 0,
+      "wb": 1,
+      "sp": "WordPress"
     },
     {
       "n": "Bacira",
@@ -7725,7 +11022,14 @@
       "la": 40.4338,
       "ln": -3.6991,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Xemei",
@@ -7741,7 +11045,14 @@
       "la": 41.3714,
       "ln": 2.1608,
       "ta": 4.1,
-      "rg": 4.4
+      "rg": 4.4,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Sushiko",
@@ -7757,7 +11068,14 @@
       "la": 41.3926,
       "ln": 2.1458,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Etíope Nuria",
@@ -7773,7 +11091,14 @@
       "la": 40.4287,
       "ln": -3.7031,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Ben Tips",
@@ -7789,7 +11114,14 @@
       "la": 41.4112,
       "ln": 2.1453,
       "ta": 4.0,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Els Porxos",
@@ -7805,7 +11137,14 @@
       "la": 41.403,
       "ln": 2.1751,
       "ta": 4.4,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Rocalla",
@@ -7821,7 +11160,14 @@
       "la": 39.4554,
       "ln": -0.3583,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Shapla Indian Restaurant",
@@ -7837,7 +11183,14 @@
       "la": 40.4098,
       "ln": -3.7024,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Casa Angela",
@@ -7853,7 +11206,14 @@
       "la": 41.4034,
       "ln": 2.1729,
       "ta": 4.1,
-      "rg": 4.2
+      "rg": 4.2,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Corte Ingl√©s",
@@ -7869,7 +11229,14 @@
       "la": 39.485,
       "ln": -0.3971,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Central Park Barcelona",
@@ -7885,7 +11252,14 @@
       "la": 41.3898,
       "ln": 2.1223,
       "ta": 3.9,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Tio Joe",
@@ -7901,7 +11275,14 @@
       "la": 41.3964,
       "ln": 2.155,
       "ta": 4.5,
-      "rg": 4.5
+      "rg": 4.5,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Trini",
@@ -7917,7 +11298,14 @@
       "la": 41.4039,
       "ln": 2.1569,
       "ta": 3.7,
-      "rg": 4.0
+      "rg": 4.0,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante Don Cammillo e Peppone",
@@ -7933,7 +11321,14 @@
       "la": 37.3837,
       "ln": -6.0002,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "La Gallina Bianca",
@@ -7949,7 +11344,14 @@
       "la": 37.3861,
       "ln": -5.9869,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante la Quinta del Pardo",
@@ -7965,7 +11367,14 @@
       "la": 40.5026,
       "ln": -3.7392,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Chaparrito",
@@ -7981,7 +11390,14 @@
       "la": 40.4155,
       "ln": -3.6989,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Camino",
@@ -7997,7 +11413,14 @@
       "la": 40.4505,
       "ln": -3.688,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Vlue Arribar",
@@ -8013,7 +11436,14 @@
       "la": 39.4617,
       "ln": -0.3221,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "NORI SUSHI Putxet",
@@ -8029,7 +11459,14 @@
       "la": 41.4058,
       "ln": 2.1445,
       "ta": 4.8,
-      "rg": 4.8
+      "rg": 4.8,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "A la Broaster",
@@ -8045,7 +11482,14 @@
       "la": 39.4873,
       "ln": -0.3868,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Kulto",
@@ -8061,7 +11505,14 @@
       "la": 40.4182,
       "ln": -3.6781,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Restaurante el Gallo Campo de las Nacion",
@@ -8077,7 +11528,14 @@
       "la": 40.4568,
       "ln": -3.6189,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Flash-Flash",
@@ -8093,7 +11551,14 @@
       "la": 41.3966,
       "ln": 2.1523,
       "ta": 3.6,
-      "rg": 4.3
+      "rg": 4.3,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Pui's Thai Tapas",
@@ -8109,7 +11574,14 @@
       "la": 40.4045,
       "ln": -3.6966,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Flamenco la Quimera",
@@ -8125,7 +11597,14 @@
       "la": 40.4146,
       "ln": -3.7079,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "Benzina",
@@ -8141,7 +11620,14 @@
       "la": 41.3762,
       "ln": 2.1628,
       "ta": 4.7,
-      "rg": 4.6
+      "rg": 4.6,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Asador de Enrique",
@@ -8157,7 +11643,14 @@
       "la": 40.3485,
       "ln": -3.7019,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     },
     {
       "n": "El Bund Restaurante",
@@ -8173,7 +11666,14 @@
       "la": 40.4567,
       "ln": -3.6585,
       "ta": null,
-      "rg": null
+      "rg": null,
+      "em": 0,
+      "ig": 0,
+      "fb": 0,
+      "bk": 0,
+      "tk": 0,
+      "wb": 1,
+      "sp": ""
     }
   ],
   "services": {
@@ -8207,7 +11707,7 @@
       "gp__rating_count": 2811,
       "gp__sentiment": 2838,
       "num_associated_contacts": 74635,
-      "description": 26813,
+      "description": 26898,
       "country": 73833
     },
     "contacts": {
@@ -8465,6 +11965,15 @@
       "contacts_email": 38255
     }
   ],
+  "reachability_funnel": {
+    "total": 74635,
+    "has_website": 35501,
+    "ws_scraped": 3736,
+    "ws_email_found": 1158,
+    "ws_instagram": 1074,
+    "has_phone": 45642,
+    "has_contacts": 36319
+  },
   "budget": {
     "config": {
       "monthly_limit": 20.01,
