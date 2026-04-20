@@ -239,6 +239,16 @@ svg text { fill: var(--muted); font-size: 11px; }
     <canvas id="mountain-canvas"></canvas>
   </div>
 
+  <div class="panel">
+    <div class="panel-title">Contact 4D — Score × Mobile × Email</div>
+    <canvas id="contact4d-canvas"></canvas>
+  </div>
+  </div><!-- end CRM tab -->
+
+  <!-- ═══ TAB: BUSINESS INTEL ═══ -->
+  <div class="tab-content" data-tab="bi">
+
+  <!-- ── Overview ── -->
   <div class="panel panel-full">
     <div class="panel-title">Bubble Universe — 500 Enriched Companies (Rating × Reviews × Score)</div>
     <div class="mountain-controls">
@@ -249,42 +259,39 @@ svg text { fill: var(--muted); font-size: 11px; }
     <canvas id="bubble-canvas"></canvas>
   </div>
 
+  <!-- ── Quality & Ratings ── -->
+  <div class="section-divider"><span>Quality & Ratings</span></div>
   <div class="panel">
     <div class="panel-title">Rating Distribution (Enriched)</div>
     <svg id="chart-ratings" width="100%" height="260"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Contact 4D — Score × Mobile × Email</div>
-    <canvas id="contact4d-canvas"></canvas>
-  </div>
-  </div><!-- end CRM tab -->
-
-  <!-- ═══ TAB: BUSINESS INTEL ═══ -->
-  <div class="tab-content" data-tab="bi">
-  <div class="panel">
     <div class="panel-title">Opportunity Matrix — Rating × Contacts</div>
     <svg id="chart-opportunity" width="100%" height="300"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Sentiment × Complaints — CX Intelligence</div>
-    <svg id="chart-sentiment" width="100%" height="300"></svg>
+    <div class="panel-title">Review Gravity — Volume vs Rating</div>
+    <svg id="chart-review-gravity" width="100%" height="320"></svg>
   </div>
-
   <div class="panel">
-    <div class="panel-title">Price × Quality — Hidden Gems</div>
-    <svg id="chart-price-quality" width="100%" height="300"></svg>
+    <div class="panel-title">Reputation Fragmentation — Cross-Platform Variance</div>
+    <svg id="chart-reputation-frag" width="100%" height="300"></svg>
   </div>
   <div class="panel">
     <div class="panel-title">Rating Delta — Google vs TripAdvisor</div>
     <svg id="chart-rating-delta" width="100%" height="300"></svg>
   </div>
+  <div class="panel">
+    <div class="panel-title">Price × Quality — Hidden Gems</div>
+    <svg id="chart-price-quality" width="100%" height="300"></svg>
+  </div>
 
+  <!-- ── Geographic Intelligence ── -->
+  <div class="section-divider"><span>Geographic Intelligence</span></div>
   <div class="panel panel-full">
     <div class="panel-title">Geographic Constellation — Spatial Intelligence</div>
     <svg id="chart-geo" width="100%" height="450"></svg>
   </div>
-
-  <!-- === VANGUARD BI CHARTS === -->
   <div class="panel">
     <div class="panel-title">Tourist Trap Detector — TA vs Google Divergence</div>
     <svg id="chart-tourist-trap" width="100%" height="350"></svg>
@@ -293,7 +300,17 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title">Complaint Microgeography — Spatial CX Patterns</div>
     <svg id="chart-complaint-geo" width="100%" height="350"></svg>
   </div>
+  <div class="panel">
+    <div class="panel-title">Price Geography — Spatial Pricing</div>
+    <svg id="chart-price-geo" width="100%" height="350"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Sentiment Geography — CX by City</div>
+    <svg id="chart-sentiment-geo" width="100%" height="320"></svg>
+  </div>
 
+  <!-- ── Digital Presence ── -->
+  <div class="section-divider"><span>Digital Presence</span></div>
   <div class="panel">
     <div class="panel-title">Digital Maturity × Quality Matrix</div>
     <svg id="chart-digital-matrix" width="100%" height="320"></svg>
@@ -302,81 +319,68 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title">Dark Restaurant Index — Hidden Gems vs Leaders</div>
     <svg id="chart-dark-restaurant" width="100%" height="320"></svg>
   </div>
-
   <div class="panel panel-full">
     <div class="panel-title">Reachability Funnel — Company Digital Pipeline</div>
     <svg id="chart-reachability" width="100%" height="280"></svg>
   </div>
-
   <div class="panel">
     <div class="panel-title">Platform Stack × Success</div>
     <svg id="chart-platform-stack" width="100%" height="320"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Reputation Fragmentation — Cross-Platform Variance</div>
-    <svg id="chart-reputation-frag" width="100%" height="300"></svg>
-  </div>
-  <!-- === VANGUARD BI v2 === -->
-  <div class="panel">
-    <div class="panel-title">Review Gravity — Volume vs Rating</div>
-    <svg id="chart-review-gravity" width="100%" height="320"></svg>
-  </div>
-  <div class="panel">
-    <div class="panel-title">Complaint × Price — CX by Segment</div>
-    <svg id="chart-complaint-price" width="100%" height="320"></svg>
-  </div>
-
-  <div class="panel">
     <div class="panel-title">City Digital Pulse — Adoption by City</div>
     <svg id="chart-city-digital" width="100%" height="320"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Sentiment Geography — CX by City</div>
-    <svg id="chart-sentiment-geo" width="100%" height="320"></svg>
-  </div>
-
-  <div class="panel">
-    <div class="panel-title">CRM Value Map — Score × Contacts</div>
-    <svg id="chart-crm-value" width="100%" height="320"></svg>
+    <div class="panel-title">The Instagram Effect — Social Presence vs Quality</div>
+    <svg id="chart-ig-effect" width="100%" height="350"></svg>
   </div>
   <div class="panel">
     <div class="panel-title">Social Stack Effect — Platform Combos × Rating</div>
     <svg id="chart-social-stack" width="100%" height="320"></svg>
   </div>
 
-  <div class="panel panel-full">
-    <div class="panel-title">Business Type Landscape</div>
-    <svg id="chart-type-landscape" width="100%" height="350"></svg>
-  </div>
-  <!-- === VANGUARD BI v3 === -->
+  <!-- ── Customer Experience ── -->
+  <div class="section-divider"><span>Customer Experience</span></div>
   <div class="panel">
-    <div class="panel-title">Price Geography — Spatial Pricing</div>
-    <svg id="chart-price-geo" width="100%" height="350"></svg>
+    <div class="panel-title">Sentiment × Complaints — CX Intelligence</div>
+    <svg id="chart-sentiment" width="100%" height="300"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">The Instagram Effect — Social Presence vs Quality</div>
-    <svg id="chart-ig-effect" width="100%" height="350"></svg>
+    <div class="panel-title">Complaint × Price — CX by Segment</div>
+    <svg id="chart-complaint-price" width="100%" height="320"></svg>
   </div>
 
+  <!-- ── CRM Analytics ── -->
+  <div class="section-divider"><span>CRM Analytics</span></div>
+  <div class="panel">
+    <div class="panel-title">CRM Value Map — Score × Contacts</div>
+    <svg id="chart-crm-value" width="100%" height="320"></svg>
+  </div>
   <div class="panel">
     <div class="panel-title">Contact Power Law — CRM Concentration</div>
     <svg id="chart-power-law" width="100%" height="320"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title">Business Type Landscape</div>
+    <svg id="chart-type-landscape" width="100%" height="350"></svg>
   </div>
   <div class="panel">
     <div class="panel-title">Review Velocity by Type</div>
     <svg id="chart-review-velocity" width="100%" height="320"></svg>
   </div>
 
+  <!-- ── Correlation & Evolution ── -->
+  <div class="section-divider"><span>Correlation & Evolution</span></div>
   <div class="panel panel-full">
     <div class="panel-title">Cross-Signal Correlation Matrix</div>
     <svg id="chart-correlation" width="100%" height="400"></svg>
   </div>
-  <!-- === END VANGUARD BI v3 === -->
-
   <div class="panel panel-full">
     <div class="panel-title">Enrichment Evolution — Field Coverage Over Time</div>
     <svg id="chart-evolution" width="100%" height="380"></svg>
   </div>
+
   </div><!-- end BI tab -->
 
   <!-- ═══ TAB: SALES INTEL ═══ -->
@@ -619,7 +623,7 @@ function drawCities(d) {
   const W = rect.width, H = 260;
   const radius = Math.min(W,H)/2 - 30;
   const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
-  const cityColors = [C.blue,C.purple,C.orange,C.yellow,C.teal,C.muted];
+  const cityColors = [C.blue,'#e875c2',C.orange,'#ffc83d','#7ee787',C.muted];
   const pie = d3.pie().value(d=>d.total).sort(null);
   const arc = d3.arc().innerRadius(radius*0.55).outerRadius(radius);
   const arcH = d3.arc().innerRadius(radius*0.55).outerRadius(radius+6);
@@ -863,7 +867,7 @@ function drawSentimentComplaints(d) {
   const sentLabels = {'Pos':'Positive','Neu':'Neutral','Neg':'Negative'};
   const complaints = ['Wait Time','Cold Food','Slow Service','Pricing','Hygiene','Disorganized',''];
   const compLabels = {'Wait Time':'Wait','Cold Food':'Cold','Slow Service':'Slow','Pricing':'Price','Hygiene':'Hygiene','Disorganized':'Disorg','':'None'};
-  const compColors = {'Wait Time':C.orange,'Cold Food':C.blue,'Slow Service':C.yellow,'Pricing':C.red,'Hygiene':C.purple,'Disorganized':C.teal,'':C.muted};
+  const compColors = {'Wait Time':'#b57b4a','Cold Food':'#4a7ab5','Slow Service':'#8b6914','Pricing':'#b54a4a','Hygiene':'#7b4ab5','Disorganized':'#4ab57b','':C.muted};
 
   // Cross-tabulate
   const data = sentiments.map(s => {
@@ -917,7 +921,7 @@ function drawPriceQuality(d) {
   const data = d.bubbles.filter(b => b.pl && priceOrder.includes(b.pl));
   if (data.length < 5) { g.append('text').attr('x',w/2).attr('y',h/2).attr('text-anchor','middle').text('Not enough price data').attr('fill',C.muted); return; }
 
-  const cityColors = {Barcelona:C.blue,Madrid:C.purple,Valencia:C.orange,Sevilla:C.yellow,Bilbao:C.teal};
+  const cityColors = {Barcelona:C.blue,Madrid:'#e875c2',Valencia:C.orange,Sevilla:'#ffc83d',Bilbao:'#7ee787'};
   const maxRv = Math.max(...data.map(b => b.rv));
 
   const x = d3.scaleBand().domain(priceOrder).range([0, w]).padding(0.1);
@@ -1182,8 +1186,8 @@ function drawComplaintGeo(d) {
   const y = d3.scaleLinear().domain([laE[0]-0.02, laE[1]+0.02]).range([(h+yR)/2, (h-yR)/2]);
 
   const compColors = {
-    'Wait Time': C.orange, 'Cold Food': C.blue, 'Slow Service': C.yellow,
-    'Pricing': C.red, 'Hygiene': C.purple, 'Disorganized': C.teal,
+    'Wait Time': '#b57b4a', 'Cold Food': '#4a7ab5', 'Slow Service': '#8b6914',
+    'Pricing': '#b54a4a', 'Hygiene': '#7b4ab5', 'Disorganized': '#4ab57b',
   };
   const maxRv = d3.max(data, b => b.rv) || 1;
 
@@ -1365,7 +1369,7 @@ function drawReachabilityFunnel(d) {
     {label:'Has Website', val:f.has_website, color:C.blue},
     {label:'Website Scraped', val:f.ws_scraped, color:C.yellow},
     {label:'Email Found', val:f.ws_email_found, color:C.green},
-    {label:'Has Instagram', val:f.ws_instagram, color:C.purple},
+    {label:'Has Instagram', val:f.ws_instagram, color:'#e1306c'},
   ];
 
   const yBand = d3.scaleBand().domain(items.map((_,i) => i)).range([0, h]).padding(0.15);
@@ -1681,7 +1685,7 @@ function drawCityDigital(d) {
   const channels = [
     {key:'wb', label:'Website', color:C.blue},
     {key:'em', label:'Email', color:C.green},
-    {key:'ig', label:'Instagram', color:C.purple},
+    {key:'ig', label:'Instagram', color:'#e1306c'},
     {key:'fb', label:'Facebook', color:'#1877F2'},
     {key:'bk', label:'Booking', color:C.orange},
     {key:'tk', label:'TikTok', color:C.red},
@@ -2031,7 +2035,7 @@ function drawIgEffect(d) {
 
   // Compare: with IG vs without, with Booking vs without
   const pairs = [
-    {key:'ig', label:'Instagram', color:C.purple},
+    {key:'ig', label:'Instagram', color:'#e1306c'},
     {key:'bk', label:'Booking Widget', color:C.orange},
     {key:'em', label:'Email Found', color:C.green},
     {key:'fb', label:'Facebook', color:'#1877F2'},
@@ -2790,22 +2794,30 @@ function drawOppHeatmap(d) {
 
 function updateCRM(d) {
   updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d);
-  drawRatings(d); drawFieldCompleteness(d); drawServices(d); drawBudget(d);
+  drawFieldCompleteness(d); drawServices(d); drawBudget(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
-  if (window.bubbleReady) window.updateBubbles(d);
   if (window.contact4dReady) window.updateContact4D(d);
 }
 function updateBI(d) {
-  drawOpportunityMatrix(d); drawSentimentComplaints(d); drawPriceQuality(d);
-  drawGeoConstellation(d); drawRatingDelta(d);
-  drawTouristTrap(d); drawComplaintGeo(d); drawDigitalMatrix(d);
-  drawDarkRestaurant(d); drawReachabilityFunnel(d); drawPlatformStack(d);
-  drawReputationFragmentation(d);
-  drawReviewGravity(d); drawComplaintPrice(d); drawCityDigital(d);
-  drawSentimentGeo(d); drawCrmValue(d); drawSocialStack(d); drawTypeLandscape(d);
-  drawPriceGeo(d); drawIgEffect(d); drawPowerLaw(d); drawReviewVelocity(d); drawCorrelation(d);
-  drawEvolution(d);
+  // Overview — lazy init bubble universe (needs visible canvas for sizing)
+  if (!window.bubbleReady) initBubbles();
+  if (window.bubbleReady) window.updateBubbles(d);
+  // Quality & Ratings
+  drawRatings(d); drawOpportunityMatrix(d); drawReviewGravity(d);
+  drawReputationFragmentation(d); drawRatingDelta(d); drawPriceQuality(d);
+  // Geographic Intelligence
+  drawGeoConstellation(d); drawTouristTrap(d); drawComplaintGeo(d);
+  drawPriceGeo(d); drawSentimentGeo(d);
+  // Digital Presence
+  drawDigitalMatrix(d); drawDarkRestaurant(d); drawReachabilityFunnel(d);
+  drawPlatformStack(d); drawCityDigital(d); drawIgEffect(d); drawSocialStack(d);
+  // Customer Experience
+  drawSentimentComplaints(d); drawComplaintPrice(d);
+  // CRM Analytics
+  drawCrmValue(d); drawPowerLaw(d); drawTypeLandscape(d); drawReviewVelocity(d);
+  // Correlation & Evolution
+  drawCorrelation(d); drawEvolution(d);
 }
 function updateSales(d) {
   updatePmfKPIs(d); drawPmfCards(d); drawOppHeatmap(d);
@@ -2951,7 +2963,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const bubCanvas = document.getElementById('bubble-canvas');
 let bScene, bCamera, bRenderer, bControls, bubbleMeshes = [];
 let bubbleColorMode = 'rating';
-const CITY_COLORS = {Barcelona:'#58a6ff',Madrid:'#bc8cff',Valencia:'#f0883e',Sevilla:'#d29922',Bilbao:'#2ea043',Other:'#8b949e'};
+const CITY_COLORS = {Barcelona:'#58a6ff',Madrid:'#e875c2',Valencia:'#f0883e',Sevilla:'#ffc83d',Bilbao:'#7ee787',Other:'#8b949e'};
 window.bubbleReady = false;
 
 function initBubbles() {
@@ -3110,8 +3122,8 @@ function animateBubbles() {
   bRenderer.render(bScene, bCamera);
 }
 
-window.addEventListener('resize', resizeBubbleRenderer);
-initBubbles();
+window.addEventListener('resize', () => { if (window.bubbleReady) resizeBubbleRenderer(); });
+// initBubbles() deferred to first BI tab visit (canvas needs visible size)
 
 // ─── Contact 4D Grid ─────────────────────────────────────────────────────
 const c4Canvas = document.getElementById('contact4d-canvas');
