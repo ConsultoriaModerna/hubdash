@@ -187,7 +187,7 @@ svg text { fill: var(--muted); font-size: 11px; }
 
   <div class="panel panel-full">
     <div class="panel-title">Enrichment Evolution — Field Coverage Over Time</div>
-    <svg id="chart-evolution" width="100%" height="300"></svg>
+    <svg id="chart-evolution" width="100%" height="380"></svg>
   </div>
 
   <div class="panel">
@@ -785,19 +785,18 @@ function drawEvolution(d) {
   svg.selectAll('*').remove();
   const snaps = d.snapshots || [];
   if (snaps.length < 2) {
-    svg.append('text').attr('x','50%').attr('y',150).attr('text-anchor','middle')
+    svg.append('text').attr('x','50%').attr('y',190).attr('text-anchor','middle')
       .attr('fill','#8b949e').attr('font-size',14)
       .text('Collecting data points... chart appears after 2+ sync cycles.');
     return;
   }
 
   const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 300;
-  const m = {t:30, r:20, b:50, l:60};
+  const W = rect.width, H = 380;
+  const m = {t:40, r:70, b:50, l:65};
   const w = W - m.l - m.r, h = H - m.t - m.b;
   const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
 
-  // Parse timestamps
   const data = snaps.map(s => ({
     t: new Date(s.ts.replace(' ','T')),
     website: s.website || 0,
@@ -809,62 +808,93 @@ function drawEvolution(d) {
     ws_ig: s.ws_instagram || 0,
   }));
 
-  const series = [
-    {key: 'website', label: 'Website', color: '#58a6ff'},
-    {key: 'phone', label: 'Phone', color: '#3fb950'},
-    {key: 'domain', label: 'Domain', color: '#bc8cff'},
+  // Two groups: baseline (left Y, large) and enrichment (right Y, small)
+  const baseline = [
+    {key: 'phone', label: 'Phone', color: '#3fb950', dash: ''},
+    {key: 'website', label: 'Website', color: '#58a6ff', dash: ''},
+    {key: 'domain', label: 'Domain', color: '#bc8cff', dash: '4,3'},
+  ];
+  const enrichment = [
     {key: 'gp', label: 'GP Enriched', color: '#f0883e'},
     {key: 'ws_scraped', label: 'WS Scraped', color: '#d29922'},
     {key: 'ws_emails', label: 'WS Emails', color: '#f85149'},
     {key: 'ws_ig', label: 'WS Instagram', color: '#e875c2'},
   ];
 
-  const x = d3.scaleTime()
-    .domain(d3.extent(data, d => d.t))
-    .range([0, w]);
+  const x = d3.scaleTime().domain(d3.extent(data, d => d.t)).range([0, w]);
 
-  const allVals = series.flatMap(s => data.map(d => d[s.key]));
-  const y = d3.scaleLinear()
-    .domain([0, d3.max(allVals) * 1.1])
-    .range([h, 0]);
+  const baseMax = d3.max(baseline.flatMap(s => data.map(d => d[s.key])));
+  const enrMax = d3.max(enrichment.flatMap(s => data.map(d => d[s.key])));
+  const yL = d3.scaleLinear().domain([0, baseMax * 1.08]).range([h, 0]);
+  const yR = d3.scaleLinear().domain([0, Math.max(enrMax * 1.15, 100)]).range([h, 0]);
 
-  // Grid
+  // Axes
   g.append('g').attr('transform',`translate(0,${h})`)
     .call(d3.axisBottom(x).ticks(Math.min(data.length, 8)).tickFormat(d3.timeFormat('%d/%m %H:%M')))
     .selectAll('text').attr('fill','#8b949e').attr('font-size',10)
-    .attr('transform','rotate(-30)').attr('text-anchor','end');
-  g.append('g')
-    .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(',')))
-    .selectAll('text').attr('fill','#8b949e');
+    .attr('transform','rotate(-25)').attr('text-anchor','end');
 
-  // Lines
-  series.forEach(s => {
-    const line = d3.line().x(d => x(d.t)).y(d => y(d[s.key]))
-      .curve(d3.curveMonotoneX);
-    g.append('path').datum(data)
-      .attr('d', line).attr('fill','none')
-      .attr('stroke', s.color).attr('stroke-width', 2);
+  g.append('g')
+    .call(d3.axisLeft(yL).ticks(5).tickFormat(d3.format(',.0f')))
+    .selectAll('text').attr('fill','#8b949e').attr('font-size',10);
+  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-50)
+    .attr('text-anchor','middle').attr('fill','#484f58').attr('font-size',10).text('Baseline fields');
+
+  g.append('g').attr('transform',`translate(${w},0)`)
+    .call(d3.axisRight(yR).ticks(6).tickFormat(d3.format(',.0f')))
+    .selectAll('text').attr('fill','#f0883e').attr('font-size',10);
+  g.append('text').attr('transform','rotate(90)').attr('x',h/2).attr('y',-(w+55))
+    .attr('text-anchor','middle').attr('fill','#f0883e').attr('font-size',10).text('Enrichment');
+
+  // Horizontal grid lines (subtle)
+  yL.ticks(5).forEach(tick => {
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',yL(tick)).attr('y2',yL(tick))
+      .attr('stroke','#21262d').attr('stroke-width',0.5);
+  });
+
+  // Draw baseline lines (left Y, thinner, some dashed)
+  baseline.forEach(s => {
+    const line = d3.line().x(d => x(d.t)).y(d => yL(d[s.key])).curve(d3.curveMonotoneX);
+    g.append('path').datum(data).attr('d', line).attr('fill','none')
+      .attr('stroke', s.color).attr('stroke-width', 1.5).attr('opacity', 0.6)
+      .attr('stroke-dasharray', s.dash);
+    const last = data[data.length - 1];
+    g.append('text').attr('x', w + 5).attr('y', yL(last[s.key]) + 4)
+      .attr('fill', s.color).attr('font-size', 9).attr('opacity', 0.7)
+      .text(`${s.label} ${d3.format(',')(last[s.key])}`);
+  });
+
+  // Draw enrichment lines (right Y, thicker, prominent)
+  enrichment.forEach(s => {
+    const line = d3.line().x(d => x(d.t)).y(d => yR(d[s.key])).curve(d3.curveMonotoneX);
+    // Area fill
+    const area = d3.area().x(d => x(d.t)).y0(h).y1(d => yR(d[s.key])).curve(d3.curveMonotoneX);
+    g.append('path').datum(data).attr('d', area).attr('fill', s.color).attr('opacity', 0.06);
+    // Line
+    g.append('path').datum(data).attr('d', line).attr('fill','none')
+      .attr('stroke', s.color).attr('stroke-width', 2.5);
     // End dot
     const last = data[data.length - 1];
-    g.append('circle')
-      .attr('cx', x(last.t)).attr('cy', y(last[s.key]))
-      .attr('r', 4).attr('fill', s.color);
-    // End label
-    g.append('text')
-      .attr('x', x(last.t) - 8).attr('y', y(last[s.key]) - 8)
-      .attr('fill', s.color).attr('font-size', 10).attr('text-anchor', 'end')
+    g.append('circle').attr('cx', x(last.t)).attr('cy', yR(last[s.key]))
+      .attr('r', 5).attr('fill', s.color);
+    // Value label at end
+    g.append('text').attr('x', x(last.t) - 6).attr('y', yR(last[s.key]) - 10)
+      .attr('fill', s.color).attr('font-size', 11).attr('font-weight', 700)
+      .attr('text-anchor', 'end')
       .text(`${s.label}: ${d3.format(',')(last[s.key])}`);
   });
 
-  // Legend at top
-  const leg = svg.append('g').attr('transform',`translate(${m.l},10)`);
-  series.forEach((s, i) => {
-    const lx = (i % 4) * (w / 4);
-    const ly = Math.floor(i / 4) * 14;
-    leg.append('rect').attr('x',lx).attr('y',ly).attr('width',10).attr('height',10)
-      .attr('fill',s.color).attr('rx',2);
-    leg.append('text').attr('x',lx+14).attr('y',ly+9)
-      .attr('fill','#8b949e').attr('font-size',10).text(s.label);
+  // Legend row at top
+  const all = [...baseline.map(s => ({...s, group:'base'})), ...enrichment.map(s => ({...s, group:'enr'}))];
+  const leg = svg.append('g').attr('transform',`translate(${m.l},12)`);
+  all.forEach((s, i) => {
+    const lx = (i % 7) * (w / 7);
+    const op = s.group === 'base' ? 0.6 : 1;
+    leg.append('line').attr('x1',lx).attr('x2',lx+14).attr('y1',6).attr('y2',6)
+      .attr('stroke',s.color).attr('stroke-width', s.group==='enr'?3:1.5).attr('opacity',op)
+      .attr('stroke-dasharray', s.dash || '');
+    leg.append('text').attr('x',lx+18).attr('y',10)
+      .attr('fill',s.group==='base'?'#8b949e':'#e6edf3').attr('font-size',9).text(s.label);
   });
 }
 
