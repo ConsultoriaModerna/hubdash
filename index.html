@@ -261,6 +261,11 @@ const SCORE_COLORS = [C.red, C.orange, C.yellow, C.green, C.cyan];
 const BUCKET_LABELS = ['0-29', '30-49', '50-69', '70-89', '90-100'];
 
 window.DATA = null;
+const HS_PORTAL = '139994805';
+const HS_BASE_URL = `https://app-eu1.hubspot.com/contacts/${HS_PORTAL}`;
+function hsUrl(type, id) { return `${HS_BASE_URL}/${type}/${id}`; }
+function openHs(b) { if (b && b.id) window.open(hsUrl('company', b.id), '_blank'); }
+
 const tooltip = d3.select('#tooltip');
 function showTip(evt, html) { tooltip.html(html).style('display','block').style('left',(evt.clientX+12)+'px').style('top',(evt.clientY-10)+'px'); }
 function hideTip() { tooltip.style('display','none'); }
@@ -668,8 +673,8 @@ function drawPriceQuality(d) {
     const r = 3 + Math.sqrt(b.rv / maxRv) * 12;
     g.append('circle').attr('cx',cx).attr('cy',cy).attr('r',r)
       .attr('fill', cityColors[b.c] || C.muted).attr('opacity', 0.6).attr('stroke', cityColors[b.c] || C.muted).attr('stroke-width', 0.5)
-      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>⭐ ${b.r} | ${b.pl} | ${b.rv.toLocaleString()} reviews<br>${b.c}`))
-      .on('mouseleave', hideTip);
+      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>⭐ ${b.r} | ${b.pl} | ${b.rv.toLocaleString()} reviews<br>${b.c}<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
   });
 
   // Median lines per price bracket
@@ -722,8 +727,8 @@ function drawGeoConstellation(d) {
     g.append('circle').attr('cx', x(b.ln)).attr('cy', y(b.la)).attr('r', r)
       .attr('fill', colorScale(b.r)).attr('opacity', 0.7)
       .attr('stroke', '#0d1117').attr('stroke-width', 0.5)
-      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>⭐ ${b.r} | ${b.rv.toLocaleString()} reviews<br>${b.c} (${b.la.toFixed(3)}, ${b.ln.toFixed(3)})`))
-      .on('mouseleave', hideTip);
+      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>⭐ ${b.r} | ${b.rv.toLocaleString()} reviews<br>${b.c} (${b.la.toFixed(3)}, ${b.ln.toFixed(3)})<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
   });
 
   // City labels (centroid of each city cluster)
@@ -797,8 +802,8 @@ function drawRatingDelta(d) {
     const r = 3 + Math.sqrt(b.rv / maxRv) * 8;
     g.append('circle').attr('cx',x(b.r)).attr('cy',y(b.ta)).attr('r',r)
       .attr('fill',color).attr('opacity',0.65).attr('stroke',color).attr('stroke-width',0.5)
-      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>Google: ${b.r} | TA: ${b.ta}<br>Delta: ${delta>0?'+':''}${delta.toFixed(1)} | ${b.rv.toLocaleString()} reviews`))
-      .on('mouseleave', hideTip);
+      .on('mousemove', evt => showTip(evt, `<b>${b.n}</b><br>Google: ${b.r} | TA: ${b.ta}<br>Delta: ${delta>0?'+':''}${delta.toFixed(1)} | ${b.rv.toLocaleString()} reviews<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
   });
 
   g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(6)).selectAll('text').attr('fill',C.muted);
@@ -860,8 +865,8 @@ function drawTouristTrap(d) {
         `Delta: ${delta>0?'+':''}${delta.toFixed(1)} ` +
         `${delta>0.5?'<span style="color:'+C.orange+'">TOURIST TRAP</span>':''}` +
         `${delta<-0.5?'<span style="color:'+C.blue+'">HIDDEN GEM</span>':''}` +
-        `<br>${b.c} | ${b.rv.toLocaleString()} reviews`))
-      .on('mouseleave', hideTip);
+        `<br>${b.c} | ${b.rv.toLocaleString()} reviews<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
   });
 
   // Axes
@@ -926,8 +931,8 @@ function drawComplaintGeo(d) {
     g.append('circle').attr('cx', x(b.ln)).attr('cy', y(b.la)).attr('r', r)
       .attr('fill', compColors[b.tc] || C.muted).attr('opacity', 0.65)
       .on('mousemove', evt => showTip(evt,
-        `<b>${b.n}</b><br>Complaint: <b>${b.tc}</b><br>${b.c} | Rating: ${b.r} | ${b.rv.toLocaleString()} reviews`))
-      .on('mouseleave', hideTip);
+        `<b>${b.n}</b><br>Complaint: <b>${b.tc}</b><br>${b.c} | Rating: ${b.r} | ${b.rv.toLocaleString()} reviews<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
   });
 
   g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5).tickFormat(d=>d.toFixed(1)+'°'))
@@ -1061,8 +1066,8 @@ function drawDarkRestaurant(d) {
     g.append('circle').attr('cx', x(ds)).attr('cy', y(b.r)).attr('r', r)
       .attr('fill', qColors[q]).attr('opacity', 0.55)
       .on('mousemove', evt => showTip(evt,
-        `<b>${b.n}</b><br>Digital: ${ds}/100 | Rating: ${b.r}<br>${q.toUpperCase()} | ${b.c} | ${b.rv.toLocaleString()} reviews`))
-      .on('mouseleave', hideTip);
+        `<b>${b.n}</b><br>Digital: ${ds}/100 | Rating: ${b.r}<br>${q.toUpperCase()} | ${b.c} | ${b.rv.toLocaleString()} reviews<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
   });
 
   // Axes
@@ -1568,7 +1573,7 @@ bubCanvas.addEventListener('mousemove', (evt) => {
     const mesh = intersects[0].object;
     const bd = mesh.userData;
     const tip = document.getElementById('tooltip');
-    tip.innerHTML = `<b>${bd.n}</b><br>⭐ ${bd.r} (${bd.rv.toLocaleString()} reviews)<br>Score: ${bd.s} | ${bd.c}<br>Contacts: ${bd.ct} | ${bd.se || '—'}`;
+    tip.innerHTML = `<b>${bd.n}</b><br>⭐ ${bd.r} (${bd.rv.toLocaleString()} reviews)<br>Score: ${bd.s} | ${bd.c}<br>Contacts: ${bd.ct} | ${bd.se || '—'}<br><span style="color:#484f58;font-size:10px">Click → HubSpot</span>`;
     tip.style.display = 'block';
     tip.style.left = (evt.clientX + 12) + 'px';
     tip.style.top = (evt.clientY - 10) + 'px';
@@ -1584,6 +1589,15 @@ bubCanvas.addEventListener('mouseleave', () => {
   if (hoveredBubble) { hoveredBubble.material.emissive.setHex(0x000000); hoveredBubble = null; }
   document.getElementById('tooltip').style.display = 'none';
 });
+bubCanvas.addEventListener('click', (evt) => {
+  const rect = bubCanvas.getBoundingClientRect();
+  bMouse.x = ((evt.clientX - rect.left) / rect.width) * 2 - 1;
+  bMouse.y = -((evt.clientY - rect.top) / rect.height) * 2 + 1;
+  bRaycaster.setFromCamera(bMouse, bCamera);
+  const intersects = bRaycaster.intersectObjects(bubbleMeshes);
+  if (intersects.length > 0) openHs(intersects[0].object.userData);
+});
+bubCanvas.style.cursor = 'pointer';
 
 function getBubbleColor(b) {
   if (bubbleColorMode === 'city') {
