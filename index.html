@@ -82,6 +82,25 @@ svg text { fill: var(--muted); font-size: 11px; }
   font-size: 11px; color: var(--muted); max-height: 250px;
   overflow-y: auto; white-space: pre-wrap; line-height: 1.6;
 }
+#drilldown { display:none; animation: fadeIn 0.2s ease; }
+#drilldown.active { display:block; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(-10px)} to{opacity:1;transform:translateY(0)} }
+#drilldown .dd-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+#drilldown .dd-title { font-size:14px; font-weight:600; color:var(--text); }
+#drilldown .dd-count { font-size:12px; color:var(--muted); margin-left:8px; }
+#drilldown .dd-close { background:none; border:1px solid var(--border); color:var(--muted);
+  border-radius:4px; padding:4px 12px; cursor:pointer; font-size:12px; }
+#drilldown .dd-close:hover { background:var(--border); color:var(--text); }
+#drilldown table { width:100%; border-collapse:collapse; font-size:12px; }
+#drilldown th { text-align:left; color:var(--muted); font-weight:500; padding:6px 8px;
+  border-bottom:1px solid var(--border); font-size:11px; text-transform:uppercase; letter-spacing:0.3px; }
+#drilldown td { padding:5px 8px; border-bottom:1px solid #1c2128; color:var(--text); }
+#drilldown tr:hover td { background:#1c2128; }
+#drilldown .dd-name { color:var(--blue); cursor:pointer; text-decoration:none; }
+#drilldown .dd-name:hover { text-decoration:underline; }
+#drilldown .dd-body { max-height:400px; overflow-y:auto; }
+#drilldown .dd-tag { display:inline-block; padding:1px 6px; border-radius:3px; font-size:10px; margin-left:4px; }
+.seg-click { cursor:pointer; } .seg-click:hover { opacity:0.85; }
 #mountain-canvas, #bubble-canvas, #contact4d-canvas {
   width: 100%; height: 400px; border-radius: 6px; cursor: grab;
 }
@@ -280,6 +299,14 @@ svg text { fill: var(--muted); font-size: 11px; }
   </div>
 </div>
 
+<div class="panel panel-full" id="drilldown">
+  <div class="dd-header">
+    <div><span class="dd-title" id="dd-title"></span><span class="dd-count" id="dd-count"></span></div>
+    <button class="dd-close" onclick="hideDrillDown()">✕ Close</button>
+  </div>
+  <div class="dd-body" id="dd-body"></div>
+</div>
+
 <div class="tooltip" id="tooltip"></div>
 
 <script>
@@ -302,6 +329,33 @@ const tooltip = d3.select('#tooltip');
 function showTip(evt, html) { tooltip.html(html).style('display','block').style('left',(evt.clientX+12)+'px').style('top',(evt.clientY-10)+'px'); }
 function hideTip() { tooltip.style('display','none'); }
 function fmt(n) { return n != null ? n.toLocaleString('es-ES') : '—'; }
+
+function showDrillDown(title, filterFn) {
+  const dd = document.getElementById('drilldown');
+  const items = (window.DATA?.bubbles || []).filter(filterFn).sort((a,b) => b.rv - a.rv);
+  document.getElementById('dd-title').textContent = title;
+  document.getElementById('dd-count').textContent = `${items.length} companies`;
+
+  const sentColors = {Pos:'#3fb950', Neu:'#d29922', Neg:'#f85149'};
+  let html = `<table><thead><tr>
+    <th>Name</th><th>⭐</th><th>Reviews</th><th>City</th><th>Score</th><th>Contacts</th><th>Sentiment</th><th>Price</th>
+  </tr></thead><tbody>`;
+  items.forEach(b => {
+    const url = hsUrl('company', b.id);
+    const se = b.se ? `<span class="dd-tag" style="background:${sentColors[b.se]||'#484f58'}22;color:${sentColors[b.se]||'#8b949e'}">${b.se}</span>` : '—';
+    html += `<tr>
+      <td><a class="dd-name" href="${url}" target="_blank">${b.n}</a></td>
+      <td>${b.r}</td><td>${b.rv.toLocaleString()}</td><td>${b.c}</td>
+      <td>${b.s}</td><td>${b.ct}</td><td>${se}</td><td>${b.pl||'—'}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  if (!items.length) html = '<p style="color:#8b949e;text-align:center;padding:20px">No companies match this filter in the enriched dataset (top 500)</p>';
+  document.getElementById('dd-body').innerHTML = html;
+  dd.classList.add('active');
+  dd.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function hideDrillDown() { document.getElementById('drilldown').classList.remove('active'); }
 
 function updateKPIs(d) {
   document.getElementById('kpi-companies').textContent = fmt(d.summary.companies_total);
@@ -339,7 +393,8 @@ function drawScores(d) {
   g.selectAll('.bar-co').data(coVals).enter().append('rect')
     .attr('x',(d,i)=>x(BUCKET_LABELS[i])).attr('y',d=>y(d)).attr('width',barW).attr('height',d=>h-y(d))
     .attr('fill',(d,i)=>SCORE_COLORS[i]).attr('opacity',0.9).attr('rx',3)
-    .on('mousemove',(evt,d)=>{const i=coVals.indexOf(d);showTip(evt,`<b>Companies ${BUCKET_LABELS[i]}</b><br>${fmt(d)}`);}).on('mouseleave',hideTip);
+    .on('mousemove',(evt,d)=>{const i=coVals.indexOf(d);showTip(evt,`<b>Companies ${BUCKET_LABELS[i]}</b><br>${fmt(d)}<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`);}).on('mouseleave',hideTip)
+    .on('click',(evt,d)=>{const i=coVals.indexOf(d);const ranges=[[0,30],[30,50],[50,70],[70,90],[90,101]];const[lo,hi]=ranges[i];showDrillDown(`Score ${BUCKET_LABELS[i]} — Companies`,b=>b.s>=lo&&b.s<hi);}).attr('class','seg-click');
   g.selectAll('.bar-ct').data(ctVals).enter().append('rect')
     .attr('x',(d,i)=>x(BUCKET_LABELS[i])+barW+4).attr('y',d=>y(d)).attr('width',barW).attr('height',d=>h-y(d))
     .attr('fill',(d,i)=>SCORE_COLORS[i]).attr('opacity',0.5).attr('rx',3)
@@ -396,8 +451,9 @@ function drawCities(d) {
   const arcH = d3.arc().innerRadius(radius*0.55).outerRadius(radius+6);
   const arcs = g.selectAll('.arc').data(pie(d.cities)).enter().append('g');
   arcs.append('path').attr('d',arc).attr('fill',(d,i)=>cityColors[i%6]).attr('stroke','#161b22').attr('stroke-width',2)
-    .on('mousemove',function(evt,dd){d3.select(this).transition().duration(100).attr('d',arcH);showTip(evt,`<b>${dd.data.city}</b><br>${fmt(dd.data.total)} total<br>${fmt(dd.data.enriched)} enriched`);})
-    .on('mouseleave',function(){d3.select(this).transition().duration(200).attr('d',arc);hideTip();});
+    .on('mousemove',function(evt,dd){d3.select(this).transition().duration(100).attr('d',arcH);showTip(evt,`<b>${dd.data.city}</b><br>${fmt(dd.data.total)} total<br>${fmt(dd.data.enriched)} enriched<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`);})
+    .on('mouseleave',function(){d3.select(this).transition().duration(200).attr('d',arc);hideTip();})
+    .on('click',function(evt,dd){showDrillDown(`City: ${dd.data.city}`,b=>b.c===dd.data.city||(dd.data.city==='Otras'&&!['Barcelona','Madrid','Valencia','Sevilla','Bilbao'].includes(b.c)));}).attr('class','seg-click');
   const total = d3.sum(d.cities,c=>c.total);
   g.append('text').attr('text-anchor','middle').attr('dy','-0.3em').text(fmt(total)).attr('fill',C.text).style('font-size','18px').style('font-weight','700');
   g.append('text').attr('text-anchor','middle').attr('dy','1.2em').text('companies').attr('fill',C.muted).style('font-size','11px');
@@ -468,8 +524,9 @@ function drawRatings(d) {
   g.selectAll('.bar').data(vals).enter().append('rect')
     .attr('x',(d,i) => x(labels[i])).attr('y', d => y(d)).attr('width', x.bandwidth()).attr('height', d => h - y(d))
     .attr('fill',(d,i) => colors[i]).attr('rx', 4).attr('opacity', 0.85)
-    .on('mousemove',(evt,d) => { const i = vals.indexOf(d); showTip(evt, `<b>Rating ${labels[i]}</b><br>${fmt(d)} companies`); })
-    .on('mouseleave', hideTip);
+    .on('mousemove',(evt,d) => { const i = vals.indexOf(d); showTip(evt, `<b>Rating ${labels[i]}</b><br>${fmt(d)} companies<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`); })
+    .on('mouseleave', hideTip)
+    .on('click',(evt,d) => { const i=vals.indexOf(d);const ranges=[[0,3],[3,3.5],[3.5,4],[4,4.5],[4.5,5.1]];const[lo,hi]=ranges[i];showDrillDown(`Rating ${labels[i]}`,b=>b.r>=lo&&b.r<hi); }).attr('class','seg-click');
   g.selectAll('.val').data(vals).enter().append('text')
     .attr('x',(d,i) => x(labels[i]) + x.bandwidth()/2).attr('y', d => y(d) - 5)
     .attr('text-anchor','middle').text(d => fmt(d)).attr('fill',C.text).style('font-size','11px').style('font-weight','600');
@@ -601,8 +658,9 @@ function drawOpportunityMatrix(d) {
         .attr('width', x.bandwidth()).attr('height', y.bandwidth())
         .attr('fill', val > 0 ? color(val) : '#161b22').attr('rx', 4)
         .attr('stroke', isGold ? '#d29922' : 'none').attr('stroke-width', isGold ? 3 : 0)
-        .on('mousemove', evt => showTip(evt, `<b>Rating ${rl} / ${cl}</b><br>${val} companies${isGold ? '<br>⭐ Untapped opportunity!' : ''}`))
-        .on('mouseleave', hideTip);
+        .on('mousemove', evt => showTip(evt, `<b>Rating ${rl} / ${cl}</b><br>${val} companies${isGold ? '<br>⭐ Untapped opportunity!' : ''}<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+        .on('mouseleave', hideTip)
+        .on('click', () => { const [,rlo,rhi]=rBands[ri]; const [,clo,chi]=cBands[ci]; showDrillDown(`Rating ${rl} / ${cl}`, b=>b.r>=rlo&&b.r<rhi&&b.ct>=clo&&b.ct<=chi); }).attr('class','seg-click');
       if (val > 0) {
         g.append('text').attr('x', x(rl) + x.bandwidth()/2).attr('y', y(cl) + y.bandwidth()/2)
           .attr('text-anchor','middle').attr('dominant-baseline','middle')
@@ -1024,8 +1082,9 @@ function drawDigitalMatrix(d) {
         .attr('fill', val ? color(val) : C.grid).attr('rx', 3)
         .attr('stroke', isGem ? '#d29922' : 'none').attr('stroke-width', isGem ? 2.5 : 0)
         .on('mousemove', evt => showTip(evt,
-          `Rating ${rl} × Digital ${dl}<br><b>${val} companies</b>${isGem ? '<br><span style="color:#d29922">★ HIDDEN GEMS</span>':''}`))
-        .on('mouseleave', hideTip);
+          `Rating ${rl} × Digital ${dl}<br><b>${val} companies</b>${isGem ? '<br><span style="color:#d29922">★ HIDDEN GEMS</span>':''}<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+        .on('mouseleave', hideTip)
+        .on('click', () => { const [,dlo,dhi]=dBands[di]; const [,rlo,rhi]=rBands[ri]; showDrillDown(`Rating ${rl} × Digital ${dl}`, b=>{const ds=computeDigitalScore(b);return ds>=dlo&&ds<dhi&&b.r>=rlo&&b.r<rhi;}); }).attr('class','seg-click');
       if (val > 0) {
         g.append('text').attr('x', xScale(dl) + xScale.bandwidth()/2).attr('y', yScale(rl) + yScale.bandwidth()/2 + 4)
           .attr('text-anchor','middle').attr('fill', val > maxVal*0.5 ? '#000' : C.text).attr('font-size',11).attr('font-weight',600)
@@ -1085,9 +1144,11 @@ function drawDarkRestaurant(d) {
   ];
   qLabels.forEach(({q, label, x:qx, y:qy, anchor}) => {
     g.append('text').attr('x',x(qx)).attr('y',y(qy)).attr('text-anchor',anchor)
-      .attr('fill',qColors[q]).attr('opacity',0.25).attr('font-size',13).attr('font-weight',700).text(label);
+      .attr('fill',qColors[q]).attr('opacity',0.25).attr('font-size',13).attr('font-weight',700).text(label)
+      .style('cursor','pointer').on('click', () => showDrillDown(`Dark Index: ${label}`, b=>{const ds=computeDigitalScore(b);return b.r>=midY?(ds>=midX?q==='leader':q==='hidden'):(ds>=midX?q==='overcomp':q==='dead');}));
     g.append('text').attr('x',x(qx)).attr('y',y(qy)+16).attr('text-anchor',anchor)
-      .attr('fill',qColors[q]).attr('opacity',0.35).attr('font-size',11).text(`(${qCounts[q]})`);
+      .attr('fill',qColors[q]).attr('opacity',0.35).attr('font-size',11).text(`(${qCounts[q]})`)
+      .style('cursor','pointer').on('click', () => showDrillDown(`Dark Index: ${label}`, b=>{const ds=computeDigitalScore(b);return b.r>=midY?(ds>=midX?q==='leader':q==='hidden'):(ds>=midX?q==='overcomp':q==='dead');}));
   });
 
   // Dots
@@ -1204,8 +1265,9 @@ function drawPlatformStack(d) {
       .attr('width', xScale(item.count)).attr('height', yBand.bandwidth())
       .attr('fill', colorScale(item.avg)).attr('opacity', 0.75).attr('rx', 3)
       .on('mousemove', evt => showTip(evt,
-        `<b>${item.name}</b><br>${item.count} companies<br>Avg rating: ${item.avg.toFixed(2)}★`))
-      .on('mouseleave', hideTip);
+        `<b>${item.name}</b><br>${item.count} companies<br>Avg rating: ${item.avg.toFixed(2)}★<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+      .on('mouseleave', hideTip)
+      .on('click', () => showDrillDown(`Platform: ${item.name}`, b=>b.sp===item.name)).attr('class','seg-click');
 
     g.append('text').attr('x', -6).attr('y', yBand(item.name) + yBand.bandwidth()/2 + 4)
       .attr('text-anchor','end').attr('fill',C.text).attr('font-size',11).text(item.name);
@@ -1269,8 +1331,9 @@ function drawReputationFragmentation(d) {
       .attr('width', xBand.bandwidth()).attr('height', h - yScale(bin.count))
       .attr('fill', bin.color).attr('opacity', 0.75).attr('rx', 3)
       .on('mousemove', evt => showTip(evt,
-        `Fragmentation ${bin.label}<br><b>${bin.count} companies</b><br>${bin.lo < 0.3 ? 'Consistent reputation' : 'Inconsistent across platforms'}`))
-      .on('mouseleave', hideTip);
+        `Fragmentation ${bin.label}<br><b>${bin.count} companies</b><br>${bin.lo < 0.3 ? 'Consistent reputation' : 'Inconsistent across platforms'}<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+      .on('mouseleave', hideTip)
+      .on('click', () => { const lo=bin.lo,hi=bin.hi; showDrillDown(`Fragmentation ${bin.label}`, b => { const rats=[b.r,b.ta,b.rg].filter(v=>v!=null&&v>0); if(rats.length<2)return false; const mn=rats.reduce((s,v)=>s+v,0)/rats.length; const f=Math.sqrt(rats.reduce((s,v)=>s+Math.pow(v-mn,2),0)/rats.length); return f>=lo&&f<hi; }); }).attr('class','seg-click');
 
     if (bin.count > 0) {
       g.append('text').attr('x', xBand(bin.label) + xBand.bandwidth()/2).attr('y', yScale(bin.count) - 5)
@@ -1395,8 +1458,9 @@ function drawComplaintPrice(d) {
       g.append('rect').attr('x',xScale(price)).attr('y',yScale(comp))
         .attr('width',xScale.bandwidth()).attr('height',yScale.bandwidth())
         .attr('fill', val ? color(val) : C.grid).attr('rx',3)
-        .on('mousemove', evt => showTip(evt, `${comp} × ${price}<br><b>${val} companies</b>`))
-        .on('mouseleave', hideTip);
+        .on('mousemove', evt => showTip(evt, `${comp} × ${price}<br><b>${val} companies</b><br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+        .on('mouseleave', hideTip)
+        .on('click', () => showDrillDown(`${comp} × ${price}`, b=>b.tc===comp&&b.pl===price)).attr('class','seg-click');
       if (val > 0) {
         g.append('text').attr('x',xScale(price)+xScale.bandwidth()/2).attr('y',yScale(comp)+yScale.bandwidth()/2+4)
           .attr('text-anchor','middle').attr('fill',val>maxVal*0.5?'#000':C.text).attr('font-size',11).attr('font-weight',600)
@@ -1459,8 +1523,9 @@ function drawCityDigital(d) {
       const bw = xScale(pct);
       g.append('rect').attr('x',xOff).attr('y',yBand(item.name)).attr('width',bw).attr('height',yBand.bandwidth())
         .attr('fill',ch.color).attr('opacity',0.75)
-        .on('mousemove', evt => showTip(evt, `<b>${item.name}</b> — ${ch.label}<br>${item[ch.key]}/${item.total} (${pct.toFixed(0)}%)`))
-        .on('mouseleave', hideTip);
+        .on('mousemove', evt => showTip(evt, `<b>${item.name}</b> — ${ch.label}<br>${item[ch.key]}/${item.total} (${pct.toFixed(0)}%)<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+        .on('mouseleave', hideTip)
+        .on('click', () => showDrillDown(`${item.name} — ${ch.label}`, b=>b.c===item.name&&b[ch.key]===1)).attr('class','seg-click');
       xOff += bw;
     });
 
@@ -1524,8 +1589,9 @@ function drawSentimentGeo(d) {
       const bw = xScale(pct);
       g.append('rect').attr('x',xOff).attr('y',yBand(item.name)).attr('width',bw).attr('height',yBand.bandwidth())
         .attr('fill',s.color).attr('opacity',0.75)
-        .on('mousemove', evt => showTip(evt, `<b>${item.name}</b> — ${s.label}<br>${item[s.key]}/${item.total} (${pct.toFixed(0)}%)`))
-        .on('mouseleave', hideTip);
+        .on('mousemove', evt => showTip(evt, `<b>${item.name}</b> — ${s.label}<br>${item[s.key]}/${item.total} (${pct.toFixed(0)}%)<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+        .on('mouseleave', hideTip)
+        .on('click', () => showDrillDown(`${item.name} — ${s.label}`, b=>b.c===item.name&&b.se===s.key)).attr('class','seg-click');
       xOff += bw;
     });
 
@@ -1642,8 +1708,9 @@ function drawSocialStack(d) {
       .attr('width',xScale(item.count)).attr('height',yBand.bandwidth())
       .attr('fill',colorScale(item.avg)).attr('opacity',0.75).attr('rx',3)
       .on('mousemove', evt => showTip(evt,
-        `<b>${item.name}</b><br>${item.count} companies<br>Avg rating: ${item.avg.toFixed(2)}★`))
-      .on('mouseleave', hideTip);
+        `<b>${item.name}</b><br>${item.count} companies<br>Avg rating: ${item.avg.toFixed(2)}★<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+      .on('mouseleave', hideTip)
+      .on('click', () => { const nm=item.name; showDrillDown(`Social: ${nm}`, b => { const p=[]; if(b.ig)p.push('IG'); if(b.fb)p.push('FB'); if(b.tk)p.push('TK'); if(b.bk)p.push('BK'); return (p.length?p.join('+'):'None')===nm; }); }).attr('class','seg-click');
 
     g.append('text').attr('x',-6).attr('y',yBand(item.name)+yBand.bandwidth()/2+4)
       .attr('text-anchor','end').attr('fill',C.text).attr('font-size',10).text(item.name);
@@ -1696,8 +1763,9 @@ function drawTypeLandscape(d) {
     g.append('rect').attr('x',leaf.x0).attr('y',leaf.y0).attr('width',lw).attr('height',lh)
       .attr('fill',colorScale(d.avg)).attr('opacity',0.7).attr('rx',3).attr('stroke',C.border).attr('stroke-width',0.5)
       .on('mousemove', evt => showTip(evt,
-        `<b>${d.name}</b><br>${d.count} companies<br>Avg rating: ${d.avg.toFixed(2)}★<br>Avg reviews: ${Math.round(d.avgRv).toLocaleString()}`))
-      .on('mouseleave', hideTip);
+        `<b>${d.name}</b><br>${d.count} companies<br>Avg rating: ${d.avg.toFixed(2)}★<br>Avg reviews: ${Math.round(d.avgRv).toLocaleString()}<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+      .on('mouseleave', hideTip)
+      .on('click', () => { const tp=d.name; showDrillDown(`Type: ${tp}`, b=>(b.tp||'Unknown')===tp); }).attr('class','seg-click');
 
     // Only show text if tile is big enough
     if (lw > 50 && lh > 25) {
