@@ -2648,99 +2648,149 @@ function exportSegmentCSV() {
   URL.revokeObjectURL(url);
 }
 
-function exportSegmentPDF() {
-  if (!_currentSegItems.length) { alert('No items to export'); return; }
-  if (typeof jspdf === 'undefined' && typeof window.jspdf === 'undefined') {
-    alert('Loading PDF library... Please try again in a moment.');
+// Lazy-load libs for PDF generation
+const _pdfLibs = { jspdf: false, qrcode: false, jszip: false };
+function _loadLib(name, url, check) {
+  return new Promise((resolve, reject) => {
+    if (check()) { resolve(); return; }
     const s = document.createElement('script');
-    s.src = 'https://cdn.jsdelivr.net/npm/jspdf@2.5/dist/jspdf.umd.min.js';
-    s.onload = () => exportSegmentPDF();
+    s.src = url;
+    s.onload = () => { _pdfLibs[name] = true; resolve(); };
+    s.onerror = reject;
     document.head.appendChild(s);
-    return;
-  }
+  });
+}
+async function _ensurePdfLibs() {
+  await Promise.all([
+    _loadLib('jspdf', 'https://cdn.jsdelivr.net/npm/jspdf@2.5/dist/jspdf.umd.min.js', () => window.jspdf),
+    _loadLib('qrcode', 'https://cdn.jsdelivr.net/npm/qrcode@1.5/build/qrcode.min.js', () => window.QRCode),
+    _loadLib('jszip', 'https://cdn.jsdelivr.net/npm/jszip@3.10/dist/jszip.min.js', () => window.JSZip),
+  ]);
+}
+
+function _buildPdf(b, segId, segName, segProduct) {
   const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  const trackUrl = `https://hubdash-theta.vercel.app/api/track?id=${b.id}&seg=${segId}`;
+
+  // Header
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(22);
+  doc.text('PROPUESTA COMERCIAL', 20, 30);
+  doc.setFontSize(14);
+  doc.setTextColor(88, 166, 255);
+  doc.text(segName, 20, 40);
+  doc.setTextColor(0, 0, 0);
+  doc.setDrawColor(200, 200, 200);
+  doc.line(20, 45, 190, 45);
+
+  // Client info
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(12);
+  doc.text(`Para: ${b.n}`, 20, 58);
+  if (b.addr) doc.text(`Direccion: ${b.addr}`, 20, 66);
+  if (b.zip || b.c) doc.text(`${b.c || 'Barcelona'}, ${b.zip || ''}`, 20, 74);
+  if (b.ph) doc.text(`Tel: ${b.ph}`, 20, 82);
+
+  // Rating badge
+  if (b.r) {
+    doc.setFont('helvetica', 'bold');
+    doc.text(`${'★'.repeat(Math.round(b.r))} ${b.r}/5 (${fmt(b.rv)} resenas)`, 20, 96);
+  }
+
+  // Product section
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(13);
+  doc.text('NUESTRA PROPUESTA', 20, 114);
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(11);
+
+  if (segId === 'agua_km0') {
+    const lines = [
+      'Barcelona recibe agua con alto contenido en cal y cloro.',
+      `Su restaurante, con ${b.r} estrellas y ${fmt(b.rv)} resenas,`,
+      'merece un agua a la altura de su cocina.',
+      '',
+      'Le ofrecemos:',
+      '  - Sistema de filtracion KM0 instalado en su local',
+      '  - Agua purificada ilimitada sin botellas de plastico',
+      '  - Mantenimiento incluido',
+      '  - Personalizacion con su marca',
+      '',
+      'INVERSION: Consultar condiciones especiales',
+    ];
+    let y = 124;
+    lines.forEach(l => { doc.text(l, 20, y); y += 7; });
+  } else {
+    doc.text(segProduct, 20, 124);
+    doc.text(`Adaptado a las necesidades de ${b.n}.`, 20, 134);
+    doc.text('Para mas informacion contactenos.', 20, 148);
+  }
+
+  // QR Code
+  try {
+    const canvas = document.createElement('canvas');
+    QRCode.toCanvas(canvas, trackUrl, { width: 100, margin: 1, color: { dark: '#000', light: '#fff' } });
+    const qrData = canvas.toDataURL('image/png');
+    doc.addImage(qrData, 'PNG', 145, 195, 40, 40);
+    doc.setFontSize(8);
+    doc.setTextColor(100, 100, 100);
+    doc.text('Escanee para mas', 148, 240);
+    doc.text('informacion', 155, 245);
+  } catch(e) { /* QR generation failed silently */ }
+
+  // Signature block
+  doc.setTextColor(0, 0, 0);
+  doc.setDrawColor(200, 200, 200);
+  doc.line(20, 255, 90, 255);
+  doc.setFontSize(10);
+  doc.text('Firma:', 20, 263);
+  doc.line(20, 272, 90, 272);
+  doc.text('Fecha:', 20, 280);
+
+  // Footer
+  doc.setFontSize(8);
+  doc.setTextColor(150, 150, 150);
+  doc.text(`Generado por HubDash — ${new Date().toLocaleDateString('es-ES')}`, 20, 290);
+  doc.text(`Ref: ${b.id}`, 170, 290);
+
+  return doc;
+}
+
+async function exportSegmentPDF() {
+  if (!_currentSegItems.length) { alert('No items to export'); return; }
+  const btn = document.getElementById('seg-export-pdf');
+  if (btn) btn.textContent = 'Loading libraries...';
+  try {
+    await _ensurePdfLibs();
+  } catch(e) { alert('Failed to load PDF libraries'); return; }
+
   const seg = (window.DATA?.pmf_segments || []).find(s => s.id === _currentSegId);
   const segName = seg ? seg.name : _currentSegId;
   const segProduct = seg ? seg.product : '';
+  const items = _currentSegItems;
+  const zip = new JSZip();
 
-  _currentSegItems.forEach((b, i) => {
-    const doc = new jsPDF();
-    // Header
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(22);
-    doc.text('PROPUESTA COMERCIAL', 20, 30);
-    doc.setFontSize(14);
-    doc.setTextColor(88, 166, 255);
-    doc.text(segName, 20, 40);
-    doc.setTextColor(0, 0, 0);
+  if (btn) btn.textContent = `Generating 0/${items.length}...`;
+  // Generate PDFs in batches to avoid UI freeze
+  for (let i = 0; i < items.length; i++) {
+    const doc = _buildPdf(items[i], _currentSegId, segName, segProduct);
+    const fileName = `propuesta_${items[i].n.replace(/[^a-zA-Z0-9]/g,'_').slice(0,30)}.pdf`;
+    zip.file(fileName, doc.output('arraybuffer'));
+    if (i % 50 === 0 && btn) btn.textContent = `Generating ${i}/${items.length}...`;
+    if (i % 100 === 0) await new Promise(r => setTimeout(r, 0)); // yield to UI
+  }
 
-    // Line
-    doc.setDrawColor(200, 200, 200);
-    doc.line(20, 45, 190, 45);
-
-    // Client info
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(12);
-    doc.text(`Para: ${b.n}`, 20, 58);
-    if (b.addr) doc.text(`Direccion: ${b.addr}`, 20, 66);
-    if (b.zip || b.c) doc.text(`${b.c || 'Barcelona'}, ${b.zip || ''}`, 20, 74);
-    if (b.ph) doc.text(`Tel: ${b.ph}`, 20, 82);
-
-    // Rating badge
-    if (b.r) {
-      doc.setFont('helvetica', 'bold');
-      doc.text(`${'★'.repeat(Math.round(b.r))} ${b.r}/5 (${fmt(b.rv)} resenas)`, 20, 96);
-    }
-
-    // Product section
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(13);
-    doc.text('NUESTRA PROPUESTA', 20, 114);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(11);
-
-    if (_currentSegId === 'agua_km0') {
-      const lines = [
-        'Barcelona recibe agua con alto contenido en cal y cloro.',
-        `Su restaurante, con ${b.r} estrellas y ${fmt(b.rv)} resenas,`,
-        'merece un agua a la altura de su cocina.',
-        '',
-        'Le ofrecemos:',
-        '  - Sistema de filtracion KM0 instalado en su local',
-        '  - Agua purificada ilimitada sin botellas de plastico',
-        '  - Mantenimiento incluido',
-        '  - Personalizacion con su marca',
-        '',
-        'INVERSION: Consultar condiciones especiales',
-        '',
-        'Para mas informacion:',
-        `  ${hsUrl('company', b.id).replace('https://','')}`
-      ];
-      let y = 124;
-      lines.forEach(l => { doc.text(l, 20, y); y += 7; });
-    } else {
-      doc.text(segProduct, 20, 124);
-      doc.text(`Adaptado a las necesidades de ${b.n}.`, 20, 134);
-      doc.text(`Para mas informacion contactenos.`, 20, 148);
-    }
-
-    // Signature block
-    doc.setDrawColor(200, 200, 200);
-    doc.line(20, 240, 90, 240);
-    doc.setFontSize(10);
-    doc.text('Firma:', 20, 248);
-    doc.line(110, 240, 180, 240);
-    doc.text('Fecha:', 110, 248);
-
-    // Footer
-    doc.setFontSize(8);
-    doc.setTextColor(150, 150, 150);
-    doc.text(`Generado por HubDash — ${new Date().toLocaleDateString('es-ES')}`, 20, 280);
-    doc.text(`Ref: ${b.id}`, 170, 280);
-
-    doc.save(`propuesta_${_currentSegId}_${b.n.replace(/[^a-zA-Z0-9]/g,'_').slice(0,30)}.pdf`);
-  });
-  alert(`${_currentSegItems.length} PDFs generados`);
+  if (btn) btn.textContent = 'Compressing ZIP...';
+  const blob = await zip.generateAsync({ type: 'blob' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `propuestas_${_currentSegId}_${new Date().toISOString().slice(0,10)}.zip`;
+  a.click();
+  URL.revokeObjectURL(url);
+  if (btn) btn.textContent = 'Generate PDFs';
+  alert(`${items.length} PDFs generated in ZIP`);
 }
 
 function drawOppHeatmap(d) {
