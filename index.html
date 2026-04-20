@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HubDash — CRM Health Monitor</title>
+<title>HubDash — Sales Intelligence Platform</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script type="importmap">
@@ -112,15 +112,90 @@ svg text { fill: var(--muted); font-size: 11px; }
   display: inline-block; background: var(--card); border: 1px solid var(--border);
   border-radius: 12px; padding: 2px 10px; font-size: 10px; color: var(--dim);
 }
+/* Tab navigation */
+.nav-tabs { display: flex; gap: 4px; }
+.nav-tab {
+  background: transparent; border: 1px solid transparent; color: var(--muted);
+  padding: 6px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: all 0.2s;
+}
+.nav-tab:hover { color: var(--text); background: var(--grid); }
+.nav-tab.active { color: var(--text); background: var(--card); border-color: var(--border); }
+.tab-content { display: none; }
+.tab-content.active { display: contents; }
+
+/* Section dividers */
+.section-divider {
+  grid-column: 1 / -1; display: flex; align-items: center; gap: 12px;
+  padding: 8px 0; margin: 4px 0;
+}
+.section-divider::before, .section-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--grid);
+}
+.section-divider span {
+  font-size: 10px; color: var(--dim); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap;
+}
+
+/* Sales Intel styles */
+.pmf-grid {
+  grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;
+}
+.pmf-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px; cursor: pointer; transition: all 0.2s;
+}
+.pmf-card:hover { border-color: var(--blue); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+.pmf-icon { font-size: 24px; margin-bottom: 8px; }
+.pmf-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.pmf-product { font-size: 11px; color: var(--dim); margin-bottom: 10px; line-height: 1.4; }
+.pmf-stats { display: flex; gap: 16px; margin-bottom: 8px; font-size: 12px; }
+.pmf-stat-val { font-weight: 700; color: var(--text); }
+.pmf-stat-label { color: var(--muted); font-size: 10px; }
+.pmf-meta { font-size: 11px; color: var(--muted); margin-bottom: 10px; }
+.pmf-timing { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+.pmf-timing.now { background: rgba(63,185,80,0.15); color: var(--green); }
+.pmf-timing.soon { background: rgba(210,153,34,0.15); color: var(--yellow); }
+.pmf-timing.later { background: rgba(139,148,158,0.15); color: var(--muted); }
+.pmf-actions { display: flex; gap: 6px; margin-top: 10px; }
+.pmf-btn {
+  background: var(--grid); border: 1px solid var(--border); color: var(--muted);
+  padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 11px;
+  transition: all 0.15s;
+}
+.pmf-btn:hover { background: var(--border); color: var(--text); }
+.pmf-btn.primary { background: rgba(88,166,255,0.15); border-color: rgba(88,166,255,0.3); color: var(--blue); }
+.pmf-btn.primary:hover { background: rgba(88,166,255,0.25); }
+.pmf-cities { font-size: 10px; color: var(--dim); margin-top: 4px; }
+
+/* Segment detail panel */
+#seg-detail { display:none; animation: fadeIn 0.2s ease; }
+#seg-detail.active { display:block; }
+#seg-detail table { width:100%; border-collapse:collapse; font-size:12px; }
+#seg-detail th { text-align:left; color:var(--muted); font-weight:500; padding:6px 8px;
+  border-bottom:1px solid var(--border); font-size:11px; text-transform:uppercase; letter-spacing:0.3px; }
+#seg-detail td { padding:5px 8px; border-bottom:1px solid #1c2128; color:var(--text); }
+#seg-detail tr:hover td { background:#1c2128; }
+.seg-name-link { color:var(--blue); cursor:pointer; text-decoration:none; }
+.seg-name-link:hover { text-decoration:underline; }
+.seg-addr-link { color:var(--muted); cursor:pointer; text-decoration:none; font-size:11px; }
+.seg-addr-link:hover { color:var(--text); text-decoration:underline; }
+
 @media (max-width: 900px) {
   .dashboard { grid-template-columns: 1fr; }
   .kpi-row { grid-template-columns: repeat(3, 1fr); }
+  .nav-tabs { flex-wrap: wrap; }
+  .pmf-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 <div class="header">
-  <h1><span>Hub</span>Dash <small style="font-size:11px;color:var(--dim);font-weight:400">v0.2.0</small></h1>
+  <h1><span>Hub</span>Dash <small style="font-size:11px;color:var(--dim);font-weight:400">v1.0</small></h1>
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-tab="crm" onclick="switchTab('crm')">CRM Health</button>
+    <button class="nav-tab" data-tab="bi" onclick="switchTab('bi')">Business Intel</button>
+    <button class="nav-tab" data-tab="sales" onclick="switchTab('sales')">Sales Intel</button>
+  </div>
   <div class="header-right">
     <span class="sync-badge" id="sync-time">Loading...</span>
     <button class="btn" onclick="loadData()">Reload</button>
@@ -128,6 +203,8 @@ svg text { fill: var(--muted); font-size: 11px; }
 </div>
 
 <div class="dashboard">
+  <!-- ═══ TAB: CRM HEALTH ═══ -->
+  <div class="tab-content active" data-tab="crm">
   <div class="kpi-row">
     <div class="kpi-card"><div class="kpi-label">Companies</div><div class="kpi-value" id="kpi-companies">—</div></div>
     <div class="kpi-card"><div class="kpi-label">Contacts</div><div class="kpi-value" id="kpi-contacts">—</div></div>
@@ -180,7 +257,10 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title">Contact 4D — Score × Mobile × Email</div>
     <canvas id="contact4d-canvas"></canvas>
   </div>
+  </div><!-- end CRM tab -->
 
+  <!-- ═══ TAB: BUSINESS INTEL ═══ -->
+  <div class="tab-content" data-tab="bi">
   <div class="panel">
     <div class="panel-title">Opportunity Matrix — Rating × Contacts</div>
     <svg id="chart-opportunity" width="100%" height="300"></svg>
@@ -297,7 +377,43 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title">Enrichment Evolution — Field Coverage Over Time</div>
     <svg id="chart-evolution" width="100%" height="380"></svg>
   </div>
+  </div><!-- end BI tab -->
 
+  <!-- ═══ TAB: SALES INTEL ═══ -->
+  <div class="tab-content" data-tab="sales">
+
+  <div class="kpi-row" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="kpi-card"><div class="kpi-label">Total Opportunities</div><div class="kpi-value" id="kpi-pmf-total" style="color:#ff6b6b">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Segments Active</div><div class="kpi-value" id="kpi-pmf-segments" style="color:#ffd93d">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Agua KM0 Targets</div><div class="kpi-value" id="kpi-pmf-agua" style="color:#4d96ff">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Avg Opportunity Score</div><div class="kpi-value" id="kpi-pmf-avg" style="color:#6bcb77">—</div></div>
+  </div>
+
+  <div class="section-divider"><span>Product-Market Fit Segments</span></div>
+  <div class="pmf-grid" id="pmf-grid"></div>
+
+  <div class="panel panel-full" id="seg-detail">
+    <div class="dd-header">
+      <div><span class="dd-title" id="seg-title"></span><span class="dd-count" id="seg-count"></span></div>
+      <div style="display:flex;gap:6px;">
+        <button class="pmf-btn primary" id="seg-export-csv" onclick="exportSegmentCSV()">Export CSV</button>
+        <button class="pmf-btn primary" id="seg-export-pdf" onclick="exportSegmentPDF()">Generate PDFs</button>
+        <button class="dd-close" onclick="hideSegDetail()">✕ Close</button>
+      </div>
+    </div>
+    <div class="dd-body" id="seg-body" style="max-height:500px;overflow-y:auto;"></div>
+  </div>
+
+  <div class="section-divider"><span>Opportunity Heatmap</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title">Opportunity Heatmap — Segment × City</div>
+    <svg id="chart-opp-heatmap" width="100%" height="400"></svg>
+  </div>
+
+  </div><!-- end Sales tab -->
+
+  <!-- ═══ SHARED: Infrastructure panels (always CRM tab) ═══ -->
+  <div class="tab-content active" data-tab="crm">
   <div class="panel">
     <div class="panel-title">Field Completeness — Companies</div>
     <svg id="chart-fields-co" width="100%" height="300"></svg>
@@ -320,6 +436,7 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title">Enrichment Log</div>
     <div class="log-panel" id="log-panel">Synced data — no live log on web version.</div>
   </div>
+  </div><!-- end CRM shared -->
 </div>
 
 <div class="panel panel-full" id="drilldown">
@@ -348,6 +465,40 @@ const HS_BASE_URL = `https://app-eu1.hubspot.com/contacts/${HS_PORTAL}`;
 function hsUrl(type, id) { return `${HS_BASE_URL}/${type}/${id}`; }
 function openHs(b) { if (b && b.id) window.open(hsUrl('company', b.id), '_blank'); }
 
+// === Tab Navigation ===
+let currentTab = 'crm';
+const tabInited = {crm: false, bi: false, sales: false};
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.tab-content').forEach(el => {
+    const match = el.dataset.tab === tab || (tab === 'crm' && el.dataset.tab === 'crm');
+    el.classList.toggle('active', match);
+  });
+  // Lazy init: render charts on first tab visit
+  if (window.DATA && !tabInited[tab]) {
+    tabInited[tab] = true;
+    if (tab === 'bi') updateBI(window.DATA);
+    if (tab === 'sales') updateSales(window.DATA);
+  }
+  // Re-trigger resize for canvases
+  window.dispatchEvent(new Event('resize'));
+}
+
+// === Sales Intel Color Palette ===
+const SALES = {
+  opportunity: '#ff6b6b', action: '#ffd93d', confirmed: '#6bcb77', cold: '#4d96ff',
+};
+const TIMING_MAP = {
+  now: {cls:'now', label:'NOW'}, autumn: {cls:'later', label:'Autumn'},
+  jan_sept: {cls:'soon', label:'Jan/Sept'}, nov_dec: {cls:'soon', label:'Nov-Dec'},
+  spring_autumn: {cls:'soon', label:'Spring/Autumn'}, feb_sept: {cls:'soon', label:'Feb-Mar/Aug-Sept'},
+};
+
+// Current segment for exports
+let _currentSegId = null;
+let _currentSegItems = [];
+
 const tooltip = d3.select('#tooltip');
 function showTip(evt, html) { tooltip.html(html).style('display','block').style('left',(evt.clientX+12)+'px').style('top',(evt.clientY-10)+'px'); }
 function hideTip() { tooltip.style('display','none'); }
@@ -359,7 +510,7 @@ function showDrillDown(title, filterFn) {
   document.getElementById('dd-title').textContent = title;
   document.getElementById('dd-count').textContent = `${items.length} companies`;
 
-  const sentColors = {Pos:'#3fb950', Neu:'#d29922', Neg:'#f85149'};
+  const sentColors = {Pos:'#3fb950', Neu:'#6e7681', Neg:'#f85149'};
   let html = `<table><thead><tr>
     <th>Name</th><th>⭐</th><th>Reviews</th><th>City</th><th>Score</th><th>Contacts</th><th>Sentiment</th><th>Price</th>
   </tr></thead><tbody>`;
@@ -2335,9 +2486,317 @@ function drawEvolution(d) {
   });
 }
 
-function updateAll(d) {
+// === SALES INTEL FUNCTIONS ===
+
+function updatePmfKPIs(d) {
+  const segs = d.pmf_segments || [];
+  const total = segs.reduce((s,x) => s + x.count, 0);
+  const active = segs.filter(x => x.count > 0).length;
+  const agua = (segs.find(x => x.id === 'agua_km0') || {}).count || 0;
+  const avgScore = segs.length ? Math.round(segs.reduce((s,x) => s + x.avg_score, 0) / segs.length) : 0;
+  document.getElementById('kpi-pmf-total').textContent = fmt(total);
+  document.getElementById('kpi-pmf-segments').textContent = active + '/' + segs.length;
+  document.getElementById('kpi-pmf-agua').textContent = fmt(agua);
+  document.getElementById('kpi-pmf-avg').textContent = avgScore;
+}
+
+function drawPmfCards(d) {
+  const grid = document.getElementById('pmf-grid');
+  grid.innerHTML = '';
+  const segs = d.pmf_segments || [];
+  segs.forEach(seg => {
+    const tm = TIMING_MAP[seg.timing] || {cls:'later', label:seg.timing};
+    const cities = Object.entries(seg.cities || {}).sort((a,b) => b[1]-a[1]).slice(0,4)
+      .map(([c,n]) => `${c}: ${n}`).join(' | ');
+    const card = document.createElement('div');
+    card.className = 'pmf-card';
+    card.innerHTML = `
+      <div class="pmf-icon">${seg.icon}</div>
+      <div class="pmf-name">${seg.name}</div>
+      <div class="pmf-product">${seg.product}</div>
+      <div class="pmf-stats">
+        <div><div class="pmf-stat-val">${seg.count}</div><div class="pmf-stat-label">Companies</div></div>
+        <div><div class="pmf-stat-val">${seg.avg_score}</div><div class="pmf-stat-label">Avg Score</div></div>
+        <div><div class="pmf-timing ${tm.cls}">${tm.label}</div></div>
+      </div>
+      <div class="pmf-meta">Who signs: ${seg.who_signs}</div>
+      <div class="pmf-cities">${cities || 'All cities'}</div>
+      <div class="pmf-actions">
+        <button class="pmf-btn primary" onclick="showSegDetail('${seg.id}')">View List</button>
+        <button class="pmf-btn" onclick="exportSegCSVById('${seg.id}')">CSV</button>
+        <button class="pmf-btn" onclick="exportSegPDFById('${seg.id}')">PDF</button>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function showSegDetail(segId) {
+  const d = window.DATA;
+  if (!d) return;
+  const seg = (d.pmf_segments || []).find(s => s.id === segId);
+  if (!seg) return;
+
+  // Get items: prefer segment_lists for agua_km0, otherwise filter bubbles
+  let items;
+  if (d.segment_lists && d.segment_lists[segId]) {
+    items = d.segment_lists[segId];
+  } else {
+    // Rebuild filter client-side from bubble data
+    items = filterBubblesForSegment(segId, d.bubbles || []);
+  }
+  _currentSegId = segId;
+  _currentSegItems = items;
+
+  const panel = document.getElementById('seg-detail');
+  document.getElementById('seg-title').textContent = `${seg.icon} ${seg.name}`;
+  document.getElementById('seg-count').textContent = `${items.length} companies`;
+
+  let html = '<table><thead><tr><th>Name</th><th>Address</th><th>City</th><th>ZIP</th><th>Rating</th><th>Reviews</th><th>Score</th><th>Phone</th><th>Contacts</th></tr></thead><tbody>';
+  items.forEach(b => {
+    const url = hsUrl('company', b.id);
+    const mapUrl = b.addr ? `https://www.google.com/maps/search/${encodeURIComponent(b.addr + ' ' + (b.c || ''))}` : '#';
+    html += `<tr>
+      <td><a class="seg-name-link" href="${url}" target="_blank">${b.n}</a></td>
+      <td><a class="seg-addr-link" href="${mapUrl}" target="_blank">${b.addr || '—'}</a></td>
+      <td>${b.c || b.zip && 'BCN' || '—'}</td>
+      <td>${b.zip || '—'}</td>
+      <td>${b.r || '—'}</td>
+      <td>${fmt(b.rv || 0)}</td>
+      <td>${b.s || '—'}</td>
+      <td>${b.ph || '—'}</td>
+      <td>${b.ct || 0}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('seg-body').innerHTML = html;
+  panel.classList.add('active');
+  panel.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function hideSegDetail() {
+  document.getElementById('seg-detail').classList.remove('active');
+}
+
+function filterBubblesForSegment(segId, bubbles) {
+  const ds = (b) => (b.wb||0)*20 + (b.em||0)*15 + (b.ig||0)*20 + (b.fb||0)*10 + (b.bk||0)*20 + (b.tk||0)*15;
+  const filters = {
+    agua_km0: b => b.c === 'Barcelona' && b.r >= 3.5,
+    web_design: b => (b.wb||0) === 0 && b.r >= 3.0,
+    booking: b => (b.bk||0) === 0 && b.r >= 4.0 && b.rv > 1000,
+    social_media: b => (b.ig||0) === 0 && b.r >= 3.5 && b.rv > 500,
+    reputation: b => b.se === 'Neg' || b.tc === 'Hygiene' || b.tc === 'Cold Food',
+    delivery: b => b.r >= 3.5 && (b.pl === '$' || b.pl === '$$') && b.rv > 500,
+    pos: b => (b.wb||0) === 1 && !b.sp && b.r >= 3.5,
+    supplier: b => (b.pl === '$$' || b.pl === '$$$' || b.pl === '$$$$') && b.r >= 4.0,
+    training: b => (b.tc === 'Slow Service' || b.tc === 'Wait Time' || b.tc === 'Disorganized') && b.r >= 3.5,
+    launch_pkg: b => b.rv < 500 && b.r >= 4.0 && ds(b) < 40,
+  };
+  const fn = filters[segId];
+  return fn ? bubbles.filter(fn).sort((a,b) => (b.rv||0) - (a.rv||0)) : [];
+}
+
+function exportSegCSVById(segId) {
+  const d = window.DATA;
+  if (!d) return;
+  let items;
+  if (d.segment_lists && d.segment_lists[segId]) {
+    items = d.segment_lists[segId];
+  } else {
+    items = filterBubblesForSegment(segId, d.bubbles || []);
+  }
+  _currentSegId = segId;
+  _currentSegItems = items;
+  exportSegmentCSV();
+}
+
+function exportSegPDFById(segId) {
+  const d = window.DATA;
+  if (!d) return;
+  let items;
+  if (d.segment_lists && d.segment_lists[segId]) {
+    items = d.segment_lists[segId];
+  } else {
+    items = filterBubblesForSegment(segId, d.bubbles || []);
+  }
+  _currentSegId = segId;
+  _currentSegItems = items;
+  exportSegmentPDF();
+}
+
+function exportSegmentCSV() {
+  if (!_currentSegItems.length) return;
+  const rows = [['Name','Address','City','ZIP','Phone','Rating','Reviews','Score','Contacts','Domain','HubSpot URL']];
+  _currentSegItems.forEach(b => {
+    rows.push([
+      b.n, b.addr||'', b.c||'', b.zip||'', b.ph||'',
+      b.r||'', b.rv||'', b.s||'', b.ct||'', b.dm||'',
+      hsUrl('company', b.id)
+    ]);
+  });
+  const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const blob = new Blob(['\ufeff' + csv], {type: 'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `hubdash_${_currentSegId}_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function exportSegmentPDF() {
+  if (!_currentSegItems.length) { alert('No items to export'); return; }
+  if (typeof jspdf === 'undefined' && typeof window.jspdf === 'undefined') {
+    alert('Loading PDF library... Please try again in a moment.');
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/jspdf@2.5/dist/jspdf.umd.min.js';
+    s.onload = () => exportSegmentPDF();
+    document.head.appendChild(s);
+    return;
+  }
+  const { jsPDF } = window.jspdf;
+  const seg = (window.DATA?.pmf_segments || []).find(s => s.id === _currentSegId);
+  const segName = seg ? seg.name : _currentSegId;
+  const segProduct = seg ? seg.product : '';
+
+  _currentSegItems.forEach((b, i) => {
+    const doc = new jsPDF();
+    // Header
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(22);
+    doc.text('PROPUESTA COMERCIAL', 20, 30);
+    doc.setFontSize(14);
+    doc.setTextColor(88, 166, 255);
+    doc.text(segName, 20, 40);
+    doc.setTextColor(0, 0, 0);
+
+    // Line
+    doc.setDrawColor(200, 200, 200);
+    doc.line(20, 45, 190, 45);
+
+    // Client info
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(12);
+    doc.text(`Para: ${b.n}`, 20, 58);
+    if (b.addr) doc.text(`Direccion: ${b.addr}`, 20, 66);
+    if (b.zip || b.c) doc.text(`${b.c || 'Barcelona'}, ${b.zip || ''}`, 20, 74);
+    if (b.ph) doc.text(`Tel: ${b.ph}`, 20, 82);
+
+    // Rating badge
+    if (b.r) {
+      doc.setFont('helvetica', 'bold');
+      doc.text(`${'★'.repeat(Math.round(b.r))} ${b.r}/5 (${fmt(b.rv)} resenas)`, 20, 96);
+    }
+
+    // Product section
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(13);
+    doc.text('NUESTRA PROPUESTA', 20, 114);
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(11);
+
+    if (_currentSegId === 'agua_km0') {
+      const lines = [
+        'Barcelona recibe agua con alto contenido en cal y cloro.',
+        `Su restaurante, con ${b.r} estrellas y ${fmt(b.rv)} resenas,`,
+        'merece un agua a la altura de su cocina.',
+        '',
+        'Le ofrecemos:',
+        '  - Sistema de filtracion KM0 instalado en su local',
+        '  - Agua purificada ilimitada sin botellas de plastico',
+        '  - Mantenimiento incluido',
+        '  - Personalizacion con su marca',
+        '',
+        'INVERSION: Consultar condiciones especiales',
+        '',
+        'Para mas informacion:',
+        `  ${hsUrl('company', b.id).replace('https://','')}`
+      ];
+      let y = 124;
+      lines.forEach(l => { doc.text(l, 20, y); y += 7; });
+    } else {
+      doc.text(segProduct, 20, 124);
+      doc.text(`Adaptado a las necesidades de ${b.n}.`, 20, 134);
+      doc.text(`Para mas informacion contactenos.`, 20, 148);
+    }
+
+    // Signature block
+    doc.setDrawColor(200, 200, 200);
+    doc.line(20, 240, 90, 240);
+    doc.setFontSize(10);
+    doc.text('Firma:', 20, 248);
+    doc.line(110, 240, 180, 240);
+    doc.text('Fecha:', 110, 248);
+
+    // Footer
+    doc.setFontSize(8);
+    doc.setTextColor(150, 150, 150);
+    doc.text(`Generado por HubDash — ${new Date().toLocaleDateString('es-ES')}`, 20, 280);
+    doc.text(`Ref: ${b.id}`, 170, 280);
+
+    doc.save(`propuesta_${_currentSegId}_${b.n.replace(/[^a-zA-Z0-9]/g,'_').slice(0,30)}.pdf`);
+  });
+  alert(`${_currentSegItems.length} PDFs generados`);
+}
+
+function drawOppHeatmap(d) {
+  const segs = d.pmf_segments || [];
+  const svg = d3.select('#chart-opp-heatmap');
+  svg.selectAll('*').remove();
+  const W = svg.node()?.getBoundingClientRect().width || 800;
+  const m = {t:10, r:20, b:30, l:160}, w = W - m.l - m.r, h = 360 - m.t - m.b;
+  const g = svg.attr('height', 400).append('g').attr('transform', `translate(${m.l},${m.t})`);
+
+  const cities = ['Barcelona','Madrid','Valencia','Sevilla','Bilbao','Other'];
+  const segIds = segs.filter(s => s.count > 0).map(s => s.id);
+  const segNames = {};
+  segs.forEach(s => segNames[s.id] = `${s.icon} ${s.name.split(' — ')[0]}`);
+
+  const x = d3.scaleBand().domain(cities).range([0, w]).padding(0.08);
+  const y = d3.scaleBand().domain(segIds).range([0, h]).padding(0.08);
+
+  // Find max count for color scale
+  let maxCount = 1;
+  segs.forEach(s => { Object.values(s.cities || {}).forEach(v => { if (v > maxCount) maxCount = v; }); });
+  const color = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, maxCount]);
+
+  // Draw cells
+  segIds.forEach(sid => {
+    const seg = segs.find(s => s.id === sid);
+    if (!seg) return;
+    cities.forEach(city => {
+      const val = (seg.cities || {})[city] || 0;
+      g.append('rect')
+        .attr('x', x(city)).attr('y', y(sid))
+        .attr('width', x.bandwidth()).attr('height', y.bandwidth())
+        .attr('fill', val > 0 ? color(val) : '#1c2128')
+        .attr('rx', 3).attr('class', 'seg-click')
+        .on('click', () => { if (val > 0) showSegDetail(sid); });
+      if (val > 0) {
+        g.append('text').attr('x', x(city) + x.bandwidth()/2).attr('y', y(sid) + y.bandwidth()/2 + 4)
+          .attr('text-anchor', 'middle').attr('fill', val > maxCount*0.6 ? '#000' : C.text)
+          .attr('font-size', 12).attr('font-weight', 600).text(val);
+      }
+    });
+  });
+
+  // Axes
+  g.append('g').attr('transform', `translate(0,${h})`).call(d3.axisBottom(x).tickSize(0))
+    .selectAll('text').attr('fill', C.muted).attr('font-size', 11);
+  g.append('g').call(d3.axisLeft(y).tickSize(0).tickFormat(id => segNames[id] || id))
+    .selectAll('text').attr('fill', C.muted).attr('font-size', 11);
+  g.selectAll('.domain').remove();
+}
+
+function updateCRM(d) {
   updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d);
   drawRatings(d); drawFieldCompleteness(d); drawServices(d); drawBudget(d);
+  document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
+  if (window.mountainReady) window.updateMountain(d);
+  if (window.bubbleReady) window.updateBubbles(d);
+  if (window.contact4dReady) window.updateContact4D(d);
+}
+function updateBI(d) {
   drawOpportunityMatrix(d); drawSentimentComplaints(d); drawPriceQuality(d);
   drawGeoConstellation(d); drawRatingDelta(d);
   drawTouristTrap(d); drawComplaintGeo(d); drawDigitalMatrix(d);
@@ -2347,10 +2806,16 @@ function updateAll(d) {
   drawSentimentGeo(d); drawCrmValue(d); drawSocialStack(d); drawTypeLandscape(d);
   drawPriceGeo(d); drawIgEffect(d); drawPowerLaw(d); drawReviewVelocity(d); drawCorrelation(d);
   drawEvolution(d);
-  document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
-  if (window.mountainReady) window.updateMountain(d);
-  if (window.bubbleReady) window.updateBubbles(d);
-  if (window.contact4dReady) window.updateContact4D(d);
+}
+function updateSales(d) {
+  updatePmfKPIs(d); drawPmfCards(d); drawOppHeatmap(d);
+}
+function updateAll(d) {
+  updateCRM(d);
+  tabInited.crm = true;
+  // Render current tab if not CRM
+  if (currentTab === 'bi') { updateBI(d); tabInited.bi = true; }
+  else if (currentTab === 'sales') { updateSales(d); tabInited.sales = true; }
 }
 
 async function loadData() {
@@ -2369,7 +2834,16 @@ async function loadData() {
 }
 
 loadData();
-window.addEventListener('resize', () => { if (window.DATA) updateAll(window.DATA); });
+let _resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(_resizeTimer);
+  _resizeTimer = setTimeout(() => {
+    if (!window.DATA) return;
+    if (currentTab === 'crm') updateCRM(window.DATA);
+    else if (currentTab === 'bi' && tabInited.bi) updateBI(window.DATA);
+    else if (currentTab === 'sales' && tabInited.sales) updateSales(window.DATA);
+  }, 200);
+});
 </script>
 
 <script type="module">
