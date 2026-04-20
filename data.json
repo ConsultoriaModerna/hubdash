@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-04-20T00:17:29",
-  "fetch_seconds": 80.4,
+  "generated_at": "2026-04-20T10:27:03",
+  "fetch_seconds": 73.5,
   "summary": {
     "companies_total": 74635,
     "contacts_total": 69858,
-    "enriched_gp": 2640,
+    "enriched_gp": 2811,
     "avg_score_companies": 53.0,
     "avg_score_contacts": 47.3
   },
   "scores": {
     "companies": {
       "0-29": 6249,
-      "30-49": 28519,
-      "50-69": 23837,
-      "70-89": 15457,
-      "90-100": 573
+      "30-49": 28469,
+      "50-69": 23840,
+      "70-89": 15475,
+      "90-100": 602
     },
     "contacts": {
       "0-29": 12777,
@@ -27,40 +27,40 @@
   "pipeline": {
     "total": 74635,
     "with_place_id": 22877,
-    "phase_a_pending": 20187,
-    "enriched": 2640,
+    "phase_a_pending": 20018,
+    "enriched": 2811,
     "phase_b_pending": 51758
   },
   "cities": [
     {
       "city": "Barcelona",
-      "total": 8692,
-      "enriched": 715
+      "total": 8701,
+      "enriched": 721
     },
     {
       "city": "Madrid",
-      "total": 5875,
-      "enriched": 629
+      "total": 5905,
+      "enriched": 738
     },
     {
       "city": "Valencia",
-      "total": 1406,
-      "enriched": 66
+      "total": 1421,
+      "enriched": 79
     },
     {
       "city": "Sevilla",
-      "total": 1137,
-      "enriched": 48
+      "total": 1147,
+      "enriched": 59
     },
     {
       "city": "Bilbao",
-      "total": 311,
-      "enriched": 4
+      "total": 313,
+      "enriched": 6
     },
     {
       "city": "Otras",
-      "total": 57214,
-      "enriched": 1178
+      "total": 57148,
+      "enriched": 1208
     }
   ],
   "mountain": {
@@ -82,87 +82,87 @@
     "companies": [
       [
         421,
-        2929,
-        2236,
-        2759,
+        2931,
+        2242,
+        2760,
         347
       ],
       [
         83,
-        1436,
-        1800,
-        2420,
-        136
+        1441,
+        1794,
+        2425,
+        162
       ],
       [
         22,
-        186,
-        523,
-        667,
-        8
+        187,
+        532,
+        671,
+        9
       ],
       [
         10,
         98,
-        472,
-        555,
-        2
+        478,
+        558,
+        3
       ],
       [
         1,
         34,
-        126,
-        149,
+        127,
+        150,
         1
       ],
       [
         5712,
-        23836,
-        18680,
-        8907,
-        79
+        23778,
+        18667,
+        8911,
+        80
       ]
     ],
     "contacts": [
       [
-        2,
-        281,
-        1676,
+        64,
+        417,
+        1763,
         1390,
         0
       ],
       [
-        4,
-        378,
-        1588,
+        97,
+        548,
+        1699,
         1728,
         0
       ],
       [
-        0,
-        168,
-        291,
+        18,
+        196,
+        307,
         430,
         0
       ],
       [
-        0,
-        14,
+        4,
         20,
+        23,
         1,
         0
       ],
       [
         0,
-        9,
+        10,
         141,
         227,
         0
       ],
       [
-        12771,
-        24672,
-        17899,
+        12594,
+        24331,
+        17682,
         6168,
         0
       ]
@@ -384,6 +384,22 @@
       "rg": 4.4
     },
     {
+      "n": "Casa Labra",
+      "r": 4.4,
+      "rv": 15339,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 40.4172,
+      "ln": -3.7046,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "El Corte Ingl√©s",
       "r": 4.2,
       "rv": 14702,
@@ -412,6 +428,22 @@
       "tp": "Restaurante de cocina española",
       "la": 40.425,
       "ln": -3.7253,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Asador el Porteño",
+      "r": 4.8,
+      "rv": 14060,
+      "s": 100,
+      "c": "Valencia",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante argentino",
+      "la": 39.4708,
+      "ln": -0.3774,
       "ta": null,
       "rg": null
     },
@@ -784,6 +816,22 @@
       "rg": 4.4
     },
     {
+      "n": "Hotel Balneari les Arenes",
+      "r": 4.6,
+      "rv": 10245,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "",
+      "tc": "Slow Service",
+      "tp": "Hotel",
+      "la": 39.4664,
+      "ln": -0.3246,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Pastelería Mallorca",
       "r": 4.5,
       "rv": 9863,
@@ -1120,6 +1168,38 @@
       "rg": 4.7
     },
     {
+      "n": "La Negra Tomasa",
+      "r": 4.1,
+      "rv": 7798,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante cubano",
+      "la": 40.4158,
+      "ln": -3.7024,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Restaurante Asador Casa Juan",
+      "r": 4.5,
+      "rv": 7794,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.464,
+      "ln": -3.6933,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "El Rey de la Gamba 1",
       "r": 4.2,
       "rv": 7580,
@@ -1180,6 +1260,22 @@
       "tp": "Restaurante",
       "la": 40.4231,
       "ln": -3.7231,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Arrocería el Rek",
+      "r": 4.6,
+      "rv": 7450,
+      "s": 85,
+      "c": "El Palmar",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante coreano",
+      "la": 39.3128,
+      "ln": -0.3193,
       "ta": null,
       "rg": null
     },
@@ -1310,6 +1406,22 @@
       "ln": 2.1827,
       "ta": 4.2,
       "rg": 4.3
+    },
+    {
+      "n": "Lateral Fuencarral",
+      "r": 4.4,
+      "rv": 7039,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4233,
+      "ln": -3.7011,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Norah Coffee & Brunch - Speciality Coffe",
@@ -1728,6 +1840,22 @@
       "rg": null
     },
     {
+      "n": "La Bicicleta",
+      "r": 4.0,
+      "rv": 5966,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Neu",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante de brunch",
+      "la": 40.4238,
+      "ln": -3.7022,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Kilómetros de Pizza -",
       "r": 4.4,
       "rv": 5935,
@@ -1838,6 +1966,22 @@
       "ln": -0.3759,
       "ta": null,
       "rg": 5.0
+    },
+    {
+      "n": "La Mordida",
+      "r": 4.6,
+      "rv": 5837,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 4,
+      "se": "Neu",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante mexicano",
+      "la": 40.4541,
+      "ln": -3.6929,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Grupo Abrassame",
@@ -1952,6 +2096,22 @@
       "rg": null
     },
     {
+      "n": "Tandoori Station",
+      "r": 4.6,
+      "rv": 5635,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 3,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante indio",
+      "la": 40.4298,
+      "ln": -3.6709,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Jenkin's - Corts Valencianes",
       "r": 4.4,
       "rv": 5623,
@@ -2012,6 +2172,22 @@
       "tp": "",
       "la": 37.39,
       "ln": -5.9904,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Restaurante la Catedral",
+      "r": 4.0,
+      "rv": 5445,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$",
+      "tc": "Cold Food",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4165,
+      "ln": -3.7011,
       "ta": null,
       "rg": null
     },
@@ -2448,6 +2624,22 @@
       "rg": 4.7
     },
     {
+      "n": "Bar Típico Barra de Tapas",
+      "r": 4.6,
+      "rv": 4654,
+      "s": 85,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Bar",
+      "la": 37.3837,
+      "ln": -6.0052,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Honest Greens",
       "r": 4.4,
       "rv": 4652,
@@ -2496,6 +2688,22 @@
       "rg": 4.5
     },
     {
+      "n": "Restaurante Taberna Madrid Madriz",
+      "r": 4.3,
+      "rv": 4630,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.4262,
+      "ln": -3.7014,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Mesón Txistu",
       "r": 4.5,
       "rv": 4622,
@@ -2542,6 +2750,22 @@
       "ln": 2.1963,
       "ta": 4.1,
       "rg": 4.2
+    },
+    {
+      "n": "Microteatro por Dinero",
+      "r": 4.6,
+      "rv": 4567,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "",
+      "tc": "Wait Time",
+      "tp": "Teatro",
+      "la": 40.4215,
+      "ln": -3.7041,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "N√úa Smart Restaurant",
@@ -2688,6 +2912,22 @@
       "rg": null
     },
     {
+      "n": "Tatel Madrid",
+      "r": 4.2,
+      "rv": 4410,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4325,
+      "ln": -3.6878,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Callao24 By Jhosef Arias",
       "r": 4.6,
       "rv": 4408,
@@ -2750,6 +2990,22 @@
       "ln": 2.1906,
       "ta": 4.2,
       "rg": 4.3
+    },
+    {
+      "n": "Antigüedades Bar de Tapas",
+      "r": 4.2,
+      "rv": 4368,
+      "s": 85,
+      "c": "Sevilla",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Wait Time",
+      "tp": "Bar",
+      "la": 37.3873,
+      "ln": -5.9928,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Europa Cafe",
@@ -2972,6 +3228,22 @@
       "tp": "Restaurante",
       "la": 40.4131,
       "ln": -3.6913,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Restaurante Ogrelo",
+      "r": 4.6,
+      "rv": 4194,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4194,
+      "ln": -3.6743,
       "ta": null,
       "rg": null
     },
@@ -3552,6 +3824,22 @@
       "rg": null
     },
     {
+      "n": "Opium Club",
+      "r": 3.5,
+      "rv": 3747,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Neg",
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Club nocturno",
+      "la": 40.4379,
+      "ln": -3.6922,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Restaurante-Taberna Parrilla Asador Vasc",
       "r": 4.4,
       "rv": 3746,
@@ -3856,6 +4144,38 @@
       "rg": null
     },
     {
+      "n": "Massart - Goya",
+      "r": 4.6,
+      "rv": 3585,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4227,
+      "ln": -3.679,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "La Bodega de los Reyes",
+      "r": 4.9,
+      "rv": 3579,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "",
+      "tc": "Wait Time",
+      "tp": "Tienda de bebidas alcohólicas",
+      "la": 40.4243,
+      "ln": -3.7092,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Tejeringo's Coffee",
       "r": 4.1,
       "rv": 3576,
@@ -4046,6 +4366,22 @@
       "ln": 2.1511,
       "ta": 4.3,
       "rg": 4.3
+    },
+    {
+      "n": "Restaurante Oviedo",
+      "r": 4.3,
+      "rv": 3488,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.3978,
+      "ln": -3.7063,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "La Burguesa Tuset",
@@ -4254,6 +4590,22 @@
       "ln": 2.1686,
       "ta": 4.4,
       "rg": 4.8
+    },
+    {
+      "n": "Salvaje",
+      "r": 4.1,
+      "rv": 3401,
+      "s": 95,
+      "c": "Madrid",
+      "ct": 2,
+      "se": "Pos",
+      "pl": "$$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante japonés",
+      "la": 40.4282,
+      "ln": -3.6832,
+      "ta": null,
+      "rg": null
     },
     {
       "n": "Orgaz",
@@ -4508,6 +4860,38 @@
       "tp": "Restaurante",
       "la": 40.3732,
       "ln": -3.7647,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Lhardy Restaurante",
+      "r": 4.2,
+      "rv": 3248,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de alta cocina",
+      "la": 40.4166,
+      "ln": -3.7014,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Asador Wok Âíå",
+      "r": 4.0,
+      "rv": 3239,
+      "s": 65,
+      "c": "València",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Buffet libre",
+      "la": 39.4841,
+      "ln": -0.3954,
       "ta": null,
       "rg": null
     },
@@ -5308,6 +5692,22 @@
       "tp": "",
       "la": 39.4696,
       "ln": -0.3745,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Teatro Off la Latina",
+      "r": 4.5,
+      "rv": 2774,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "",
+      "tc": "",
+      "tp": "Teatro",
+      "la": 40.412,
+      "ln": -3.712,
       "ta": null,
       "rg": null
     },
@@ -6192,6 +6592,22 @@
       "rg": null
     },
     {
+      "n": "Pimiento Verde",
+      "r": 4.4,
+      "rv": 2529,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Cold Food",
+      "tp": "Restaurante",
+      "la": 40.424,
+      "ln": -3.6814,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Bar-Restaurante Muy Buenas",
       "r": 4.5,
       "rv": 2529,
@@ -6304,6 +6720,22 @@
       "rg": null
     },
     {
+      "n": "Taramara",
+      "r": 4.5,
+      "rv": 2516,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 40.4539,
+      "ln": -3.6218,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Quintoelemento",
       "r": 4.4,
       "rv": 2508,
@@ -6352,6 +6784,22 @@
       "rg": 4.6
     },
     {
+      "n": "Restaurante Asador Puerta Bisagra",
+      "r": 4.0,
+      "rv": 2504,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4018,
+      "ln": -3.6598,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Restaurante Amordmadre",
       "r": 4.5,
       "rv": 2499,
@@ -6396,6 +6844,22 @@
       "tp": "Restaurante mexicano",
       "la": 40.4137,
       "ln": -3.7125,
+      "ta": null,
+      "rg": null
+    },
+    {
+      "n": "Los Arroces de Segis",
+      "r": 3.8,
+      "rv": 2496,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante coreano",
+      "la": 40.4639,
+      "ln": -3.6934,
       "ta": null,
       "rg": null
     },
@@ -6672,6 +7136,22 @@
       "rg": 4.1
     },
     {
+      "n": "Taberna de la Daniela - Goya",
+      "r": 4.1,
+      "rv": 2416,
+      "s": 85,
+      "c": "Madrid",
+      "ct": 0,
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4263,
+      "ln": -3.6787,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Picasso",
       "r": 4.1,
       "rv": 2412,
@@ -6797,6 +7277,22 @@
       "la": 41.3801,
       "ln": 2.1759,
       "ta": 3.8,
+      "rg": null
+    },
+    {
+      "n": "Bar Málaga",
+      "r": 4.4,
+      "rv": 2368,
+      "s": 65,
+      "c": "Málaga",
+      "ct": 0,
+      "se": "Neu",
+      "pl": "$$",
+      "tc": "Slow Service",
+      "tp": "Restaurante",
+      "la": 36.7212,
+      "ln": -4.4214,
+      "ta": null,
       "rg": null
     },
     {
@@ -6976,6 +7472,22 @@
       "rg": null
     },
     {
+      "n": "Restaurante el Valle",
+      "r": 4.1,
+      "rv": 2302,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Neu",
+      "pl": "$",
+      "tc": "Pricing",
+      "tp": "Restaurante de cocina española",
+      "la": 40.4036,
+      "ln": -3.6994,
+      "ta": null,
+      "rg": null
+    },
+    {
       "n": "Llagar la Llobera",
       "r": 4.1,
       "rv": 2300,
@@ -7085,6 +7597,22 @@
       "la": 41.3886,
       "ln": 2.1816,
       "ta": 4.3,
+      "rg": null
+    },
+    {
+      "n": "La Unica Madrid",
+      "r": 4.5,
+      "rv": 2262,
+      "s": 100,
+      "c": "Madrid",
+      "ct": 1,
+      "se": "Pos",
+      "pl": "$$$",
+      "tc": "Pricing",
+      "tp": "Restaurante",
+      "la": 40.421,
+      "ln": -3.6854,
+      "ta": null,
       "rg": null
     },
     {
@@ -7646,568 +8174,40 @@
       "ln": -3.6585,
       "ta": null,
       "rg": null
-    },
-    {
-      "n": "Restaurante Osteria Bravissimo",
-      "r": 4.7,
-      "rv": 2066,
-      "s": 77,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "",
-      "tc": "",
-      "tp": "",
-      "la": 40.4294,
-      "ln": -3.7219,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Bro Room",
-      "r": 4.3,
-      "rv": 2061,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "Pricing",
-      "tp": "Hamburguesería",
-      "la": 41.4072,
-      "ln": 2.1738,
-      "ta": 4.4,
-      "rg": 4.3
-    },
-    {
-      "n": "Sylkar",
-      "r": 4.2,
-      "rv": 2053,
-      "s": 72,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "",
-      "tp": "",
-      "la": 40.4407,
-      "ln": -3.6974,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Lar de Domingo",
-      "r": 4.0,
-      "rv": 2053,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Neu",
-      "pl": "$$$",
-      "tc": "Pricing",
-      "tp": "Restaurante",
-      "la": 40.5141,
-      "ln": -3.764,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Can Xurrades",
-      "r": 4.5,
-      "rv": 2047,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante de alta cocina",
-      "la": 41.392,
-      "ln": 2.1503,
-      "ta": 4.5,
-      "rg": null
-    },
-    {
-      "n": "Barril de Goya",
-      "r": 4.3,
-      "rv": 2047,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$$",
-      "tc": "Slow Service",
-      "tp": "Marisquería",
-      "la": 40.4244,
-      "ln": -3.6728,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Santa Burg",
-      "r": 4.3,
-      "rv": 2045,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Pricing",
-      "tp": "Hamburguesería",
-      "la": 41.3797,
-      "ln": 2.1368,
-      "ta": 3.8,
-      "rg": 4.2
-    },
-    {
-      "n": "La Terraza del Claris",
-      "r": 4.4,
-      "rv": 2035,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "",
-      "tc": "Slow Service",
-      "tp": "Hotel",
-      "la": 41.3944,
-      "ln": 2.1653,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Mamma Italia",
-      "r": 4.7,
-      "rv": 2035,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "Slow Service",
-      "tp": "Pizzería",
-      "la": 41.3765,
-      "ln": 2.1234,
-      "ta": 4.5,
-      "rg": 4.7
-    },
-    {
-      "n": "La Divina Comedia",
-      "r": 4.1,
-      "rv": 2033,
-      "s": 40,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "",
-      "tp": "",
-      "la": 39.4653,
-      "ln": -0.3232,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Uskar",
-      "r": 4.5,
-      "rv": 2032,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Wait Time",
-      "tp": "Restaurante",
-      "la": 40.4041,
-      "ln": -3.7009,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Restaurante el Pastoret Valencia",
-      "r": 4.4,
-      "rv": 2030,
-      "s": 80,
-      "c": "London",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "",
-      "tp": "",
-      "la": 39.446,
-      "ln": -0.3589,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Peso Neto Taberna-Jatetxea",
-      "r": 4.4,
-      "rv": 2029,
-      "s": 80,
-      "c": "Bilbo",
-      "ct": 0,
-      "se": "Neu",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "",
-      "la": 43.2549,
-      "ln": -2.9252,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Zerain Restaurante Asador - Sidrería Vas",
-      "r": 4.4,
-      "rv": 2025,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$$",
-      "tc": "Wait Time",
-      "tp": "Restaurante vasco",
-      "la": 40.4141,
-      "ln": -3.6975,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Al√ì Chino",
-      "r": 4.8,
-      "rv": 2015,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "",
-      "tc": "Slow Service",
-      "tp": "Restaurante",
-      "la": 41.3752,
-      "ln": 2.1254,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Origen Taberna Madrid",
-      "r": 4.7,
-      "rv": 2015,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Pricing",
-      "tp": "Restaurante especializado en t",
-      "la": 40.4265,
-      "ln": -3.7163,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "La Doña",
-      "r": 4.1,
-      "rv": 2015,
-      "s": 80,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Neu",
-      "pl": "$",
-      "tc": "Slow Service",
-      "tp": "Cafetería",
-      "la": 40.426,
-      "ln": -3.7072,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "La Colosal",
-      "r": 4.3,
-      "rv": 2013,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante especializado en t",
-      "la": 41.3888,
-      "ln": 2.1663,
-      "ta": 4.2,
-      "rg": 4.2
-    },
-    {
-      "n": "Churrería Chocolatería Xix Century",
-      "r": 4.5,
-      "rv": 2010,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "Pricing",
-      "tp": "Tienda de postres",
-      "la": 40.387,
-      "ln": -3.64,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Mercato Ballaró",
-      "r": 4.5,
-      "rv": 2003,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Pricing",
-      "tp": "Restaurante italiano",
-      "la": 40.4311,
-      "ln": -3.6969,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "La Bella Napoli",
-      "r": 4.2,
-      "rv": 1999,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Pricing",
-      "tp": "Restaurante italiano",
-      "la": 41.3851,
-      "ln": 2.1568,
-      "ta": 4.5,
-      "rg": 4.1
-    },
-    {
-      "n": "Casa Andreea: Arrocería y Mariscos",
-      "r": 4.2,
-      "rv": 1999,
-      "s": 80,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante",
-      "la": 40.4476,
-      "ln": -3.6641,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Cantina Machito",
-      "r": 4.3,
-      "rv": 1998,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante mexicano",
-      "la": 41.4043,
-      "ln": 2.1579,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Silan",
-      "r": 4.6,
-      "rv": 1994,
-      "s": 95,
-      "c": "Barcelona",
-      "ct": 3,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante de cocina de Orien",
-      "la": 41.3907,
-      "ln": 2.1588,
-      "ta": 4.6,
-      "rg": 4.5
-    },
-    {
-      "n": "Restaurante Pizzeria Il Bocconcino Valen",
-      "r": 4.6,
-      "rv": 1991,
-      "s": 77,
-      "c": "Other",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "",
-      "tp": "",
-      "la": 39.4762,
-      "ln": -0.381,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "The Thirty Three Bar Irlandés",
-      "r": 4.4,
-      "rv": 1989,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "Pub irlandés",
-      "la": 40.4422,
-      "ln": -3.6709,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "La Picanteria de L'Escribà",
-      "r": 4.5,
-      "rv": 1986,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante de fusión",
-      "la": 41.4021,
-      "ln": 2.2021,
-      "ta": 4.0,
-      "rg": 4.5
-    },
-    {
-      "n": "Panishop",
-      "r": 4.1,
-      "rv": 1974,
-      "s": 100,
-      "c": "Zaragoza",
-      "ct": 3,
-      "se": "Pos",
-      "pl": "$",
-      "tc": "",
-      "tp": "",
-      "la": 40.4765,
-      "ln": -3.7166,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "El Pescaito 915040457",
-      "r": 4.2,
-      "rv": 1972,
-      "s": 85,
-      "c": "Madrid",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Pricing",
-      "tp": "Restaurante de cocina española",
-      "la": 40.4225,
-      "ln": -3.6745,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Guetaria Asador 2.zero",
-      "r": 4.4,
-      "rv": 1969,
-      "s": 100,
-      "c": "Madrid",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante",
-      "la": 40.4475,
-      "ln": -3.6984,
-      "ta": null,
-      "rg": null
-    },
-    {
-      "n": "Sms Delícies",
-      "r": 4.4,
-      "rv": 1968,
-      "s": 85,
-      "c": "Barcelona",
-      "ct": 0,
-      "se": "Pos",
-      "pl": "$$",
-      "tc": "Hygiene",
-      "tp": "Restaurante",
-      "la": 41.4033,
-      "ln": 2.1542,
-      "ta": 4.5,
-      "rg": 4.3
-    },
-    {
-      "n": "Can Sole",
-      "r": 4.3,
-      "rv": 1967,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante de cocina española",
-      "la": 41.3789,
-      "ln": 2.1884,
-      "ta": 4.0,
-      "rg": 4.2
-    },
-    {
-      "n": "Bar Mut",
-      "r": 4.1,
-      "rv": 1958,
-      "s": 100,
-      "c": "Barcelona",
-      "ct": 1,
-      "se": "Pos",
-      "pl": "$$$",
-      "tc": "Slow Service",
-      "tp": "Restaurante de alta cocina",
-      "la": 41.3973,
-      "ln": 2.1613,
-      "ta": 4.0,
-      "rg": null
     }
   ],
   "services": {
-    "dine_in": 1271,
-    "delivery": 630,
-    "takeout": 981,
-    "reservable": 1057,
-    "serves_breakfast": 496,
-    "serves_lunch": 1119,
-    "serves_dinner": 1079,
-    "serves_brunch": 561,
-    "serves_beer": 1186,
-    "serves_wine": 1140,
-    "serves_vegetarian": 361,
-    "outdoor_seating": 715,
-    "live_music": 93,
-    "good_for_children": 754,
-    "good_for_groups": 874,
-    "good_for_sports": 89
+    "dine_in": 1415,
+    "delivery": 684,
+    "takeout": 1085,
+    "reservable": 1174,
+    "serves_breakfast": 558,
+    "serves_lunch": 1248,
+    "serves_dinner": 1196,
+    "serves_brunch": 624,
+    "serves_beer": 1317,
+    "serves_wine": 1265,
+    "serves_vegetarian": 382,
+    "outdoor_seating": 783,
+    "live_music": 101,
+    "good_for_children": 841,
+    "good_for_groups": 979,
+    "good_for_sports": 104
   },
   "field_completeness": {
     "companies": {
       "name": 74622,
       "phone": 45642,
-      "domain": 35434,
-      "website": 35483,
-      "city": 48560,
+      "domain": 35453,
+      "website": 35501,
+      "city": 48840,
       "address": 66931,
-      "industry": 34449,
+      "industry": 34470,
       "google_place_id": 22877,
-      "gp__rating_count": 2646,
-      "gp__sentiment": 2667,
+      "gp__rating_count": 2811,
+      "gp__sentiment": 2838,
       "num_associated_contacts": 74635,
-      "description": 26647,
+      "description": 26707,
       "country": 73833
     },
     "contacts": {
@@ -8217,7 +8217,7 @@
       "lastname": 16948,
       "phone": 38635,
       "company": 45479,
-      "city": 32463,
+      "city": 34038,
       "jobtitle": 3260,
       "lifecyclestage": 69858,
       "associatedcompanyid": 41400,
@@ -8349,16 +8349,16 @@
     ]
   ],
   "ratings_dist": {
-    "<3": 67,
-    "3-3.5": 73,
-    "3.5-4": 343,
-    "4-4.5": 1239,
-    "4.5-5": 924
+    "<3": 68,
+    "3-3.5": 78,
+    "3.5-4": 364,
+    "4-4.5": 1325,
+    "4.5-5": 976
   },
   "sentiment_dist": {
-    "Positive": 1969,
-    "Neutral": 512,
-    "Negative": 186
+    "Positive": 2088,
+    "Neutral": 552,
+    "Negative": 198
   },
   "price_dist": {
     "Free": 0,
@@ -8367,16 +8367,90 @@
     "$$$": 27,
     "$$$$": 3
   },
+  "snapshots": [
+    {
+      "ts": "2026-04-19 06:00",
+      "website": 35483,
+      "phone": 45642,
+      "domain": 35442,
+      "gp_enriched": 1786,
+      "ws_scraped": 0,
+      "ws_emails": 0,
+      "ws_instagram": 0,
+      "contacts_mobile": 18576,
+      "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-19 14:00",
+      "website": 35483,
+      "phone": 45642,
+      "domain": 35442,
+      "gp_enriched": 1993,
+      "ws_scraped": 0,
+      "ws_emails": 0,
+      "ws_instagram": 0,
+      "contacts_mobile": 18576,
+      "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-19 22:00",
+      "website": 35483,
+      "phone": 45642,
+      "domain": 35442,
+      "gp_enriched": 2173,
+      "ws_scraped": 0,
+      "ws_emails": 0,
+      "ws_instagram": 0,
+      "contacts_mobile": 18576,
+      "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-20 00:15",
+      "website": 35483,
+      "phone": 45642,
+      "domain": 35442,
+      "gp_enriched": 2811,
+      "ws_scraped": 0,
+      "ws_emails": 0,
+      "ws_instagram": 0,
+      "contacts_mobile": 18576,
+      "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-20 06:03",
+      "website": 35483,
+      "phone": 45642,
+      "domain": 35442,
+      "gp_enriched": 2811,
+      "ws_scraped": 0,
+      "ws_emails": 0,
+      "ws_instagram": 0,
+      "contacts_mobile": 18579,
+      "contacts_email": 38255
+    },
+    {
+      "ts": "2026-04-20 10:25",
+      "website": 35501,
+      "phone": 45642,
+      "domain": 35453,
+      "gp_enriched": 2811,
+      "ws_scraped": 763,
+      "ws_emails": 261,
+      "ws_instagram": 209,
+      "contacts_mobile": 18579,
+      "contacts_email": 38255
+    }
+  ],
   "budget": {
     "config": {
-      "monthly_limit": 50.0,
-      "daily_limit": 25.0
+      "monthly_limit": 20.01,
+      "daily_limit": 0.0
     },
     "months": {
       "2026-04": {
-        "place_details": 870,
+        "place_details": 1067,
         "text_search": 0,
-        "cost": 20.01,
+        "cost": 24.541,
         "daily": {
           "2026-04-19": {
             "pd": 217,
@@ -8384,21 +8458,21 @@
             "cost": 4.991
           },
           "2026-04-20": {
-            "pd": 653,
+            "pd": 850,
             "ts": 0,
-            "cost": 15.019
+            "cost": 19.55
           }
         }
       }
     }
   },
   "enrichment": {
-    "total_enriched_a": 826,
+    "total_enriched_a": 1018,
     "total_enriched_b": 0,
-    "total_not_found": 44,
-    "total_errors": 0,
-    "last_run": "2026-04-20T00:16:09.081911",
-    "runs": 10
+    "total_not_found": 48,
+    "total_errors": 1,
+    "last_run": "2026-04-20T06:03:22.041582",
+    "runs": 11
   },
-  "log_tail": "[2026-04-19 18:00:11] Phase A pending: 20812\n[2026-04-19 18:00:11] Phase: A\n[2026-04-19 18:00:11] Batch: 40 (budget allows 67)\n[2026-04-19 18:00:13] Fetched 40 companies\n[2026-04-19 18:00:23]   10/40: 10 enriched\n[2026-04-19 18:00:34]   20/40: 20 enriched\n[2026-04-19 18:00:39]   Place Details HTTP 404 (ChIJPR6QkNAvQg0R0VXnM1SauMo)\n[2026-04-19 18:00:44]   30/40: 29 enriched\n[2026-04-19 18:00:55]   40/40: 39 enriched\n[2026-04-19 18:00:55] Backup: phaseA_20260419_180055.jsonl\n[2026-04-19 18:00:55] Phase A: 39 enriched, 1 not found, 0 errors\n[2026-04-19 18:00:55] API: 40 PD + 0 TS = $0.92 | Month: $4.37\n[2026-04-19 18:00:55] === Run finished ===\n[2026-04-19 22:00:04] === Enrichment run started (dry_run=False) ===\n[2026-04-19 22:00:04] Phase A pending: 20780\n[2026-04-19 22:00:04] Phase: A\n[2026-04-19 22:00:04] Batch: 27 (budget allows 27)\n[2026-04-19 22:00:06] Fetched 27 companies\n[2026-04-19 22:00:27]   10/27: 10 enriched\n[2026-04-19 22:00:38]   20/27: 20 enriched\n[2026-04-19 22:00:46] Backup: phaseA_20260419_220046.jsonl\n[2026-04-19 22:00:46] Phase A: 27 enriched, 0 not found, 0 errors\n[2026-04-19 22:00:46] API: 27 PD + 0 TS = $0.62 | Month: $4.99\n[2026-04-19 22:00:46] === Run finished ===\n[2026-04-19 22:00:46] Syncing HubDash..."
+  "log_tail": "[2026-04-20 06:01:54]   100/197: 99 enriched\n[2026-04-20 06:01:57]   Place Details HTTP 500 (ChIJDYN_UYooQg0RN1ir1NlLYmI)\n[2026-04-20 06:02:04]   110/197: 108 enriched\n[2026-04-20 06:02:12]   120/197: 118 enriched\n[2026-04-20 06:02:21]   130/197: 128 enriched\n[2026-04-20 06:02:29]   140/197: 138 enriched\n[2026-04-20 06:02:38]   Place Details HTTP 404 (ChIJbfrtMCUnQg0RE0xyswHh3BA)\n[2026-04-20 06:02:38]   150/197: 147 enriched\n[2026-04-20 06:02:48]   160/197: 157 enriched\n[2026-04-20 06:02:57]   170/197: 167 enriched\n[2026-04-20 06:03:06]   180/197: 177 enriched\n[2026-04-20 06:03:10]   Place Details HTTP 404 (ChIJc7w3LlebYw0RXiTV_VOESRs)\n[2026-04-20 06:03:15]   190/197: 186 enriched\n[2026-04-20 06:03:21]   Place Details HTTP 404 (ChIJG7FVWdRtEg0RU3j_tJJ88iY)\n[2026-04-20 06:03:22] Backup: phaseA_20260420_060322.jsonl\n[2026-04-20 06:03:22] Phase A: 192 enriched, 4 not found, 1 errors\n[2026-04-20 06:03:22] API: 197 PD + 0 TS = $4.53 | Month: $24.54\n[2026-04-20 06:03:22] === Run finished ===\n[2026-04-20 06:03:22] Syncing HubDash...\n[2026-04-20 10:00:05] === Enrichment run started (dry_run=False) ===\n[2026-04-20 10:00:06] Phase A pending: 20018\n[2026-04-20 10:00:06] Phase: A\n[2026-04-20 10:00:06] Budget exhausted for today/month. Skipping.\n[2026-04-20 10:00:06] === Run finished ===\n[2026-04-20 10:00:06] Syncing HubDash..."
 }
