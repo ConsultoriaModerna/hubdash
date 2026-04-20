@@ -268,7 +268,30 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title">Business Type Landscape</div>
     <svg id="chart-type-landscape" width="100%" height="350"></svg>
   </div>
-  <!-- === END VANGUARD BI v2 === -->
+  <!-- === VANGUARD BI v3 === -->
+  <div class="panel">
+    <div class="panel-title">Price Geography — Spatial Pricing</div>
+    <svg id="chart-price-geo" width="100%" height="350"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">The Instagram Effect — Social Presence vs Quality</div>
+    <svg id="chart-ig-effect" width="100%" height="350"></svg>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Contact Power Law — CRM Concentration</div>
+    <svg id="chart-power-law" width="100%" height="320"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Review Velocity by Type</div>
+    <svg id="chart-review-velocity" width="100%" height="320"></svg>
+  </div>
+
+  <div class="panel panel-full">
+    <div class="panel-title">Cross-Signal Correlation Matrix</div>
+    <svg id="chart-correlation" width="100%" height="400"></svg>
+  </div>
+  <!-- === END VANGUARD BI v3 === -->
 
   <div class="panel panel-full">
     <div class="panel-title">Enrichment Evolution — Field Coverage Over Time</div>
@@ -1784,6 +1807,421 @@ function drawTypeLandscape(d) {
   });
 }
 
+// === VANGUARD BI v3 ===
+
+function drawPriceGeo(d) {
+  const svg = d3.select('#chart-price-geo'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const data = d.bubbles.filter(b => b.la != null && b.ln != null && b.pl);
+  if (data.length < 10) {
+    svg.append('text').attr('x','50%').attr('y',175).attr('text-anchor','middle')
+      .attr('fill',C.muted).attr('font-size',13).text('Not enough geo + price data');
+    return;
+  }
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 350;
+  const m = {t:25, r:90, b:35, l:50};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const lnE = d3.extent(data, b => b.ln), laE = d3.extent(data, b => b.la);
+  const lnR = (lnE[1]-lnE[0])||1, laR = (laE[1]-laE[0])||1;
+  let xR = w, yR = h;
+  const ratio = laR / lnR;
+  if (ratio > h/w) xR = h / ratio; else yR = w * ratio;
+  const x = d3.scaleLinear().domain([lnE[0]-0.02, lnE[1]+0.02]).range([(w-xR)/2, (w+xR)/2]);
+  const y = d3.scaleLinear().domain([laE[0]-0.02, laE[1]+0.02]).range([(h+yR)/2, (h-yR)/2]);
+
+  const priceColors = {'$':C.green, '$$':C.blue, '$$$':C.orange, '$$$$':C.red, 'Free':C.muted};
+  const priceSize = {'$':4, '$$':5, '$$$':7, '$$$$':9, 'Free':3};
+  const maxRv = d3.max(data, b => b.rv) || 1;
+
+  g.append('rect').attr('width',w).attr('height',h).attr('fill','none').attr('stroke',C.border).attr('stroke-width',0.5);
+
+  data.sort((a,b) => (priceSize[b.pl]||3) - (priceSize[a.pl]||3));
+  data.forEach(b => {
+    const r = (priceSize[b.pl]||4) + Math.sqrt(b.rv / maxRv) * 5;
+    g.append('circle').attr('cx',x(b.ln)).attr('cy',y(b.la)).attr('r',r)
+      .attr('fill',priceColors[b.pl]||C.muted).attr('opacity',0.7)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${b.n}</b><br>${b.pl} | ⭐ ${b.r} | ${b.rv.toLocaleString()} reviews<br>${b.c}<br><span style="color:${C.dim};font-size:10px">Click → HubSpot</span>`))
+      .on('mouseleave', hideTip).on('click', () => openHs(b)).style('cursor','pointer');
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5).tickFormat(d=>d.toFixed(1)+'°'))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.append('g').call(d3.axisLeft(y).ticks(4).tickFormat(d=>d.toFixed(1)+'°'))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  // Legend
+  const lg = g.append('g').attr('transform',`translate(${w+10},${h/2-50})`);
+  const priceLevels = ['$','$$','$$$','$$$$'];
+  priceLevels.forEach((p, i) => {
+    lg.append('circle').attr('cx',6).attr('cy',i*22).attr('r',priceSize[p]).attr('fill',priceColors[p]);
+    lg.append('text').attr('x',18).attr('y',i*22+4).attr('fill',C.muted).attr('font-size',10).text(p);
+  });
+
+  const counts = {};
+  data.forEach(b => { counts[b.pl] = (counts[b.pl]||0)+1; });
+  svg.append('text').attr('x',W-10).attr('y',16).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9)
+    .text(priceLevels.map(p=>`${p}: ${counts[p]||0}`).join(' | '));
+}
+
+function drawIgEffect(d) {
+  const svg = d3.select('#chart-ig-effect'); svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 350;
+  const m = {t:30, r:20, b:45, l:45};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  // Compare: with IG vs without, with Booking vs without
+  const pairs = [
+    {key:'ig', label:'Instagram', color:C.purple},
+    {key:'bk', label:'Booking Widget', color:C.orange},
+    {key:'em', label:'Email Found', color:C.green},
+    {key:'fb', label:'Facebook', color:'#1877F2'},
+  ];
+
+  const y = d3.scaleLinear().domain([2.5, 5]).range([h, 0]);
+  const xBand = d3.scaleBand().domain(pairs.map(p=>p.label)).range([0, w]).padding(0.15);
+  const boxW = xBand.bandwidth() / 2 - 4;
+
+  // Grid
+  y.ticks(5).forEach(tick => {
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(tick)).attr('y2',y(tick))
+      .attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+
+  pairs.forEach(pair => {
+    const withF = d.bubbles.filter(b => b[pair.key] === 1).map(b => b.r).sort(d3.ascending);
+    const withoutF = d.bubbles.filter(b => b[pair.key] === 0).map(b => b.r).sort(d3.ascending);
+    if (withF.length < 3) return;
+
+    const cx = xBand(pair.label);
+
+    // Draw box plot for each group
+    [{data: withF, label: 'With', xOff: 0, color: pair.color, opacity: 0.8},
+     {data: withoutF, label: 'Without', xOff: boxW + 8, color: C.muted, opacity: 0.5}].forEach(grp => {
+      if (grp.data.length < 3) return;
+      const q1 = d3.quantile(grp.data, 0.25);
+      const med = d3.quantile(grp.data, 0.5);
+      const q3 = d3.quantile(grp.data, 0.75);
+      const iqr = q3 - q1;
+      const lo = Math.max(d3.min(grp.data), q1 - 1.5 * iqr);
+      const hi = Math.min(d3.max(grp.data), q3 + 1.5 * iqr);
+      const mean = d3.mean(grp.data);
+      const bx = cx + grp.xOff;
+
+      // Whiskers
+      g.append('line').attr('x1',bx+boxW/2).attr('x2',bx+boxW/2).attr('y1',y(hi)).attr('y2',y(lo))
+        .attr('stroke',grp.color).attr('opacity',grp.opacity);
+      g.append('line').attr('x1',bx+2).attr('x2',bx+boxW-2).attr('y1',y(hi)).attr('y2',y(hi))
+        .attr('stroke',grp.color).attr('opacity',grp.opacity);
+      g.append('line').attr('x1',bx+2).attr('x2',bx+boxW-2).attr('y1',y(lo)).attr('y2',y(lo))
+        .attr('stroke',grp.color).attr('opacity',grp.opacity);
+
+      // Box
+      g.append('rect').attr('x',bx).attr('y',y(q3)).attr('width',boxW).attr('height',y(q1)-y(q3))
+        .attr('fill',grp.color).attr('opacity',grp.opacity*0.3).attr('stroke',grp.color).attr('stroke-width',1.5).attr('rx',2)
+        .on('mousemove', evt => showTip(evt,
+          `<b>${pair.label} — ${grp.label}</b><br>n=${grp.data.length}<br>Median: ${med.toFixed(2)}<br>Mean: ${mean.toFixed(2)}<br>Q1: ${q1.toFixed(2)} | Q3: ${q3.toFixed(2)}<br><span style="color:${C.dim};font-size:10px">Click → drill down</span>`))
+        .on('mouseleave', hideTip)
+        .on('click', () => showDrillDown(`${pair.label}: ${grp.label}`,
+          grp.label==='With' ? b=>b[pair.key]===1 : b=>b[pair.key]===0)).attr('class','seg-click');
+
+      // Median line
+      g.append('line').attr('x1',bx).attr('x2',bx+boxW).attr('y1',y(med)).attr('y2',y(med))
+        .attr('stroke',grp.label==='With'?'#fff':C.text).attr('stroke-width',2);
+
+      // Mean diamond
+      g.append('text').attr('x',bx+boxW/2).attr('y',y(mean)+1).attr('text-anchor','middle')
+        .attr('fill',grp.color).attr('font-size',8).text('◆').style('pointer-events','none');
+
+      // Label under
+      g.append('text').attr('x',bx+boxW/2).attr('y',h+15).attr('text-anchor','middle')
+        .attr('fill',grp.color).attr('font-size',9).attr('opacity',grp.opacity).text(grp.label);
+      g.append('text').attr('x',bx+boxW/2).attr('y',h+26).attr('text-anchor','middle')
+        .attr('fill',C.dim).attr('font-size',8).text(`n=${grp.data.length}`);
+    });
+
+    // Category label
+    g.append('text').attr('x',cx+xBand.bandwidth()/2).attr('y',h+40).attr('text-anchor','middle')
+      .attr('fill',pair.color).attr('font-size',10).attr('font-weight',600).text(pair.label);
+  });
+
+  g.append('g').call(d3.axisLeft(y).ticks(6)).selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-32).attr('text-anchor','middle')
+    .attr('fill',C.dim).attr('font-size',10).text('Google Rating');
+
+  svg.append('text').attr('x',W-10).attr('y',16).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9).text('Box: Q1-Q3 | Line: median | ◆: mean');
+}
+
+function drawPowerLaw(d) {
+  const svg = d3.select('#chart-power-law'); svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:20, r:60, b:40, l:50};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  // Contact distribution
+  const cts = d.bubbles.map(b => b.ct).sort(d3.ascending);
+  const bins = [
+    {label:'0', lo:0, hi:0, color:C.red},
+    {label:'1', lo:1, hi:1, color:C.orange},
+    {label:'2-3', lo:2, hi:3, color:C.yellow},
+    {label:'4-10', lo:4, hi:10, color:C.green},
+    {label:'11-30', lo:11, hi:30, color:C.blue},
+    {label:'30+', lo:31, hi:99999, color:C.purple},
+  ];
+  bins.forEach(bin => { bin.count = d.bubbles.filter(b => b.ct >= bin.lo && b.ct <= bin.hi).length; });
+
+  const xBand = d3.scaleBand().domain(bins.map(b=>b.label)).range([0,w]).padding(0.12);
+  const yMax = d3.max(bins, b => b.count) || 1;
+  const yScale = d3.scaleLinear().domain([0, yMax*1.1]).range([h, 0]);
+
+  // Grid
+  yScale.ticks(4).forEach(tick => {
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',yScale(tick)).attr('y2',yScale(tick))
+      .attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+
+  // Bars
+  bins.forEach(bin => {
+    g.append('rect').attr('x',xBand(bin.label)).attr('y',yScale(bin.count))
+      .attr('width',xBand.bandwidth()).attr('height',h-yScale(bin.count))
+      .attr('fill',bin.color).attr('opacity',0.75).attr('rx',3)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${bin.label} contacts</b><br>${bin.count} companies (${((bin.count/d.bubbles.length)*100).toFixed(1)}%)<br><span style="color:${C.dim};font-size:10px">Click → drill down</span>`))
+      .on('mouseleave', hideTip)
+      .on('click', () => showDrillDown(`${bin.label} contacts`, b=>b.ct>=bin.lo&&b.ct<=bin.hi)).attr('class','seg-click');
+
+    if (bin.count > 0) {
+      g.append('text').attr('x',xBand(bin.label)+xBand.bandwidth()/2).attr('y',yScale(bin.count)-5)
+        .attr('text-anchor','middle').attr('fill',bin.color).attr('font-size',11).attr('font-weight',600)
+        .text(bin.count);
+    }
+  });
+
+  // Cumulative line (right axis)
+  const yR = d3.scaleLinear().domain([0,100]).range([h,0]);
+  let cumul = 0;
+  const cumulPts = bins.map(bin => {
+    cumul += bin.count;
+    return {x: xBand(bin.label) + xBand.bandwidth()/2, pct: (cumul / d.bubbles.length) * 100};
+  });
+
+  const cLine = d3.line().x(d=>d.x).y(d=>yR(d.pct)).curve(d3.curveMonotoneX);
+  g.append('path').datum(cumulPts).attr('d',cLine).attr('fill','none')
+    .attr('stroke',C.text).attr('stroke-width',2).attr('opacity',0.5);
+  cumulPts.forEach(pt => {
+    g.append('circle').attr('cx',pt.x).attr('cy',yR(pt.pct)).attr('r',3).attr('fill',C.text).attr('opacity',0.5);
+    g.append('text').attr('x',pt.x).attr('y',yR(pt.pct)-8).attr('text-anchor','middle')
+      .attr('fill',C.text).attr('font-size',9).attr('opacity',0.6).text(pt.pct.toFixed(0)+'%');
+  });
+
+  // Right axis
+  const axR = g.append('g').attr('transform',`translate(${w},0)`)
+    .call(d3.axisRight(yR).ticks(5).tickFormat(d=>d+'%'));
+  axR.selectAll('text').attr('fill',C.text).attr('font-size',9).attr('opacity',0.5);
+  axR.selectAll('.domain,.tick line').attr('stroke',C.border).attr('opacity',0.3);
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xBand))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',10);
+  g.append('g').call(d3.axisLeft(yScale).ticks(4)).selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Contacts per company');
+
+  const zero = bins[0].count;
+  const zeroPct = ((zero/d.bubbles.length)*100).toFixed(0);
+  svg.append('text').attr('x',W-10).attr('y',14).attr('text-anchor','end')
+    .attr('fill',C.dim).attr('font-size',9).text(`${zeroPct}% have 0 contacts | cumulative curve →`);
+}
+
+function drawReviewVelocity(d) {
+  const svg = d3.select('#chart-review-velocity'); svg.selectAll('*').remove();
+  if (!d.bubbles) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {t:15, r:80, b:30, l:120};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  // Group by type
+  const types = {};
+  d.bubbles.forEach(b => {
+    const tp = b.tp || 'Unknown';
+    if (!types[tp]) types[tp] = [];
+    types[tp].push(b.rv);
+  });
+
+  const items = Object.entries(types)
+    .map(([name, rvs]) => ({
+      name,
+      mean: d3.mean(rvs),
+      median: d3.median(rvs),
+      q1: d3.quantile(rvs.sort(d3.ascending), 0.25),
+      q3: d3.quantile(rvs.sort(d3.ascending), 0.75),
+      min: d3.min(rvs),
+      max: d3.max(rvs),
+      count: rvs.length,
+    }))
+    .filter(d => d.count >= 3)
+    .sort((a,b) => b.median - a.median)
+    .slice(0, 12);
+
+  if (items.length < 2) return;
+
+  const yBand = d3.scaleBand().domain(items.map(i=>i.name)).range([0,h]).padding(0.2);
+  const xMax = d3.max(items, i => i.q3) * 1.3;
+  const xScale = d3.scaleLinear().domain([0, xMax]).range([0, w]);
+
+  items.forEach(item => {
+    const cy = yBand(item.name) + yBand.bandwidth()/2;
+    const bh = yBand.bandwidth() * 0.6;
+
+    // Whisker line (Q1 to Q3)
+    g.append('line').attr('x1',xScale(item.q1)).attr('x2',xScale(item.q3)).attr('y1',cy).attr('y2',cy)
+      .attr('stroke',C.blue).attr('stroke-width',1.5);
+    // Q1 cap
+    g.append('line').attr('x1',xScale(item.q1)).attr('x2',xScale(item.q1)).attr('y1',cy-bh/3).attr('y2',cy+bh/3)
+      .attr('stroke',C.blue);
+    // Q3 cap
+    g.append('line').attr('x1',xScale(item.q3)).attr('x2',xScale(item.q3)).attr('y1',cy-bh/3).attr('y2',cy+bh/3)
+      .attr('stroke',C.blue);
+
+    // Median dot
+    g.append('circle').attr('cx',xScale(item.median)).attr('cy',cy).attr('r',5)
+      .attr('fill',C.orange).attr('stroke','#fff').attr('stroke-width',1)
+      .on('mousemove', evt => showTip(evt,
+        `<b>${item.name}</b> (${item.count})<br>Median: ${Math.round(item.median).toLocaleString()} reviews<br>Q1-Q3: ${Math.round(item.q1).toLocaleString()}-${Math.round(item.q3).toLocaleString()}<br>Mean: ${Math.round(item.mean).toLocaleString()}<br><span style="color:${C.dim};font-size:10px">Click → drill down</span>`))
+      .on('mouseleave', hideTip)
+      .on('click', () => showDrillDown(`Type: ${item.name}`, b=>(b.tp||'Unknown')===item.name)).attr('class','seg-click');
+
+    // Label
+    g.append('text').attr('x',-6).attr('y',cy+4).attr('text-anchor','end')
+      .attr('fill',C.text).attr('font-size',10)
+      .text(item.name.length > 16 ? item.name.slice(0,15)+'…' : item.name);
+
+    // Value
+    g.append('text').attr('x',xScale(item.q3)+6).attr('y',cy+4)
+      .attr('fill',C.muted).attr('font-size',9)
+      .text(`${Math.round(item.median).toLocaleString()} (${item.count})`);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.format(',.0f')))
+    .selectAll('text').attr('fill',C.muted).attr('font-size',9);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  g.append('text').attr('x',w/2).attr('y',h+25).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10)
+    .text('Reviews (● median, ─ Q1-Q3 range)');
+}
+
+function drawCorrelation(d) {
+  const svg = d3.select('#chart-correlation'); svg.selectAll('*').remove();
+  if (!d.bubbles || d.bubbles.length < 20) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 400;
+  const m = {t:20, r:20, b:10, l:110};
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const fields = [
+    {key:'r', label:'Google Rating', fn: b=>b.r},
+    {key:'rv', label:'Review Count', fn: b=>b.rv},
+    {key:'s', label:'Data Score', fn: b=>b.s},
+    {key:'ct', label:'Contacts', fn: b=>b.ct},
+    {key:'ds', label:'Digital Score', fn: b=>computeDigitalScore(b)},
+    {key:'ta', label:'TA Rating', fn: b=>b.ta},
+    {key:'rg', label:'RG Rating', fn: b=>b.rg},
+  ];
+
+  // Compute Pearson correlation for each pair
+  function pearson(xs, ys) {
+    const pairs = xs.map((x,i) => [x, ys[i]]).filter(([x,y]) => x!=null && y!=null && !isNaN(x) && !isNaN(y));
+    if (pairs.length < 5) return null;
+    const n = pairs.length;
+    const mx = d3.mean(pairs, p=>p[0]), my = d3.mean(pairs, p=>p[1]);
+    let num = 0, dx2 = 0, dy2 = 0;
+    pairs.forEach(([x,y]) => { const dx=x-mx, dy=y-my; num+=dx*dy; dx2+=dx*dx; dy2+=dy*dy; });
+    const denom = Math.sqrt(dx2*dy2);
+    return denom === 0 ? 0 : num/denom;
+  }
+
+  const n = fields.length;
+  const matrix = fields.map((_,i) => fields.map((_,j) => {
+    if (i === j) return 1;
+    const xs = d.bubbles.map(fields[i].fn);
+    const ys = d.bubbles.map(fields[j].fn);
+    return pearson(xs, ys);
+  }));
+
+  const labels = fields.map(f => f.label);
+  const cellW = Math.min(w / n, h / n);
+  const gridW = cellW * n, gridH = cellW * n;
+  const offX = (w - gridW) / 2, offY = (h - gridH) / 2;
+
+  const color = d3.scaleLinear().domain([-1, 0, 1]).range([C.red, '#1c2128', C.green]);
+
+  fields.forEach((fi, i) => {
+    fields.forEach((fj, j) => {
+      const val = matrix[i][j];
+      if (val === null) {
+        g.append('rect').attr('x',offX+j*cellW).attr('y',offY+i*cellW).attr('width',cellW-2).attr('height',cellW-2)
+          .attr('fill',C.grid).attr('rx',3);
+        return;
+      }
+      g.append('rect').attr('x',offX+j*cellW).attr('y',offY+i*cellW).attr('width',cellW-2).attr('height',cellW-2)
+        .attr('fill',color(val)).attr('rx',3).attr('opacity',0.8)
+        .on('mousemove', evt => showTip(evt,
+          `<b>${fi.label} × ${fj.label}</b><br>r = ${val.toFixed(3)}<br>${Math.abs(val)>0.5?'<b>Strong</b>':Math.abs(val)>0.3?'Moderate':'Weak'} ${val>0?'positive':'negative'} correlation`))
+        .on('mouseleave', hideTip);
+
+      // Show value in cell
+      if (cellW > 30) {
+        g.append('text').attr('x',offX+j*cellW+cellW/2-1).attr('y',offY+i*cellW+cellW/2+4)
+          .attr('text-anchor','middle').attr('fill',Math.abs(val)>0.4?'#fff':C.muted)
+          .attr('font-size', cellW > 45 ? 11 : 8).attr('font-weight',Math.abs(val)>0.5?700:400)
+          .text(val.toFixed(2)).style('pointer-events','none');
+      }
+    });
+  });
+
+  // Row labels (left)
+  fields.forEach((f, i) => {
+    g.append('text').attr('x',offX-8).attr('y',offY+i*cellW+cellW/2+4).attr('text-anchor','end')
+      .attr('fill',C.text).attr('font-size',10).text(f.label);
+  });
+
+  // Column labels (top)
+  fields.forEach((f, j) => {
+    g.append('text').attr('x',offX+j*cellW+cellW/2).attr('y',offY-6).attr('text-anchor','middle')
+      .attr('fill',C.text).attr('font-size',9)
+      .attr('transform',`rotate(-35,${offX+j*cellW+cellW/2},${offY-6})`)
+      .text(f.label);
+  });
+
+  // Legend bar
+  const lgW = 150, lgH = 10;
+  const lgX = offX + gridW/2 - lgW/2, lgY = offY + gridH + 20;
+  const lgGrad = svg.append('defs').append('linearGradient').attr('id','corr-grad');
+  lgGrad.append('stop').attr('offset','0%').attr('stop-color',C.red);
+  lgGrad.append('stop').attr('offset','50%').attr('stop-color','#1c2128');
+  lgGrad.append('stop').attr('offset','100%').attr('stop-color',C.green);
+  g.append('rect').attr('x',lgX).attr('y',lgY).attr('width',lgW).attr('height',lgH).attr('fill','url(#corr-grad)').attr('rx',2);
+  g.append('text').attr('x',lgX).attr('y',lgY+lgH+12).attr('fill',C.red).attr('font-size',9).text('-1');
+  g.append('text').attr('x',lgX+lgW/2).attr('y',lgY+lgH+12).attr('text-anchor','middle').attr('fill',C.muted).attr('font-size',9).text('0');
+  g.append('text').attr('x',lgX+lgW).attr('y',lgY+lgH+12).attr('text-anchor','end').attr('fill',C.green).attr('font-size',9).text('+1');
+}
+
+// === END VANGUARD BI v3 ===
+
 // === END VANGUARD BI v2 ===
 
 // === END VANGUARD BI ===
@@ -1907,6 +2345,7 @@ function updateAll(d) {
   drawReputationFragmentation(d);
   drawReviewGravity(d); drawComplaintPrice(d); drawCityDigital(d);
   drawSentimentGeo(d); drawCrmValue(d); drawSocialStack(d); drawTypeLandscape(d);
+  drawPriceGeo(d); drawIgEffect(d); drawPowerLaw(d); drawReviewVelocity(d); drawCorrelation(d);
   drawEvolution(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
