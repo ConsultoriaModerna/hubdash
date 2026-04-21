@@ -9,9 +9,15 @@ const HS_PORTAL = '139994805';
 const PIXEL_GIF = Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64');
 
 const SEG_NAMES = {
+  // PMF segments
   agua_km0: 'Agua KM0', web_design: 'Web Design', booking: 'Reservas',
   social_media: 'Social Media', reputation: 'Reputacion', delivery: 'Delivery',
   pos: 'POS/TPV', supplier: 'Ingredientes', training: 'Formacion', launch_pkg: 'Pack Lanzamiento',
+  // Hidden segments
+  dark_premium: 'Dark Premium', slow_service: 'Servicio Lento', pricing_pain: 'Dolor de Precio',
+  delivery_void: 'Sin Delivery', brunch_econ: 'Brunch Economy', terraza: 'Terraza Economy',
+  sports_bar: 'Sports Bar', veg_wave: 'Vegetariano', family_gap: 'Familia sin Delivery',
+  neg_crisis: 'Crisis Reputacion', premium_buy: 'Premium Buyers', no_reserv: 'Sin Reservas',
 };
 
 export default async function handler(req, res) {
