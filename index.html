@@ -136,6 +136,38 @@ svg text { fill: var(--muted); font-size: 11px; }
   font-size: 10px; color: var(--dim); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap;
 }
 
+/* Segment filter chips */
+.seg-filter-bar {
+  grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px;
+  padding: 8px 0; align-items: center;
+}
+.seg-filter-bar .bar-label {
+  font-size: 10px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.5px;
+  margin-right: 4px; white-space: nowrap;
+}
+.seg-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 14px; cursor: pointer;
+  font-size: 11px; font-weight: 500; border: 1px solid var(--border);
+  background: var(--card); color: var(--muted); transition: all 0.2s;
+  user-select: none;
+}
+.seg-chip:hover { border-color: var(--blue); color: var(--text); }
+.seg-chip.active { color: #fff; border-color: transparent; }
+.seg-chip .chip-icon { font-size: 13px; }
+.seg-chip .chip-count {
+  background: rgba(255,255,255,0.15); border-radius: 8px;
+  padding: 0 5px; font-size: 10px; font-weight: 600; min-width: 18px; text-align: center;
+}
+.seg-chip.active .chip-count { background: rgba(0,0,0,0.25); }
+.seg-chip-clear {
+  display: inline-flex; align-items: center; gap: 3px;
+  padding: 4px 8px; border-radius: 14px; cursor: pointer;
+  font-size: 10px; border: 1px solid var(--border); background: transparent;
+  color: var(--dim); transition: all 0.2s;
+}
+.seg-chip-clear:hover { color: var(--red); border-color: var(--red); }
+
 /* Sales Intel styles */
 .pmf-grid {
   grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;
@@ -247,6 +279,13 @@ svg text { fill: var(--muted); font-size: 11px; }
 
   <!-- ═══ TAB: BUSINESS INTEL ═══ -->
   <div class="tab-content" data-tab="bi">
+
+  <!-- Segment filter chips -->
+  <div class="seg-filter-bar" id="seg-filter-bar">
+    <span class="bar-label">Segments:</span>
+    <!-- chips rendered by JS -->
+  </div>
+  <div id="seg-info-bar" style="grid-column:1/-1;display:none;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:12px;"></div>
 
   <!-- ── Overview ── -->
   <div class="panel panel-full">
@@ -498,6 +537,70 @@ const TIMING_MAP = {
   jan_sept: {cls:'soon', label:'Jan/Sept'}, nov_dec: {cls:'soon', label:'Nov-Dec'},
   spring_autumn: {cls:'soon', label:'Spring/Autumn'}, feb_sept: {cls:'soon', label:'Feb-Mar/Aug-Sept'},
 };
+
+// === Segment Filter System ===
+let _activeSegFilter = null; // null = show all, or segment id string
+let _allBubbles = null; // original unfiltered bubbles
+
+function renderSegChips(d) {
+  const bar = document.getElementById('seg-filter-bar');
+  if (!d.hidden_segments || !d.hidden_segments.length) return;
+  let html = '<span class="bar-label">Segments:</span>';
+  d.hidden_segments.forEach(seg => {
+    if (seg.count === 0) return;
+    const active = _activeSegFilter === seg.id;
+    const style = active ? `background:${seg.color};color:#fff;border-color:transparent` : '';
+    html += `<button class="seg-chip${active?' active':''}" data-seg="${seg.id}" style="${style}" onclick="toggleSegFilter('${seg.id}')">
+      <span class="chip-icon">${seg.icon}</span>${seg.name}<span class="chip-count">${seg.count}</span></button>`;
+  });
+  if (_activeSegFilter) {
+    html += `<button class="seg-chip-clear" onclick="toggleSegFilter(null)">✕ Clear</button>`;
+  }
+  bar.innerHTML = html;
+}
+
+function toggleSegFilter(segId) {
+  const infoBar = document.getElementById('seg-info-bar');
+  if (_activeSegFilter === segId || segId === null) {
+    _activeSegFilter = null;
+    window.DATA.bubbles = _allBubbles;
+    if (infoBar) infoBar.style.display = 'none';
+  } else {
+    _activeSegFilter = segId;
+    window.DATA.bubbles = _allBubbles.filter(b => (b.sg || []).includes(segId));
+    // Show info bar
+    const seg = (window.DATA.hidden_segments || []).find(s => s.id === segId);
+    if (seg && infoBar) {
+      const cityParts = Object.entries(seg.cities || {}).slice(0, 6).map(([c,n]) => `${c}: <b>${n}</b>`).join(' · ');
+      infoBar.innerHTML = `<span style="font-size:16px">${seg.icon}</span>
+        <b style="color:${seg.color};margin:0 8px">${seg.name}</b>
+        <span style="color:var(--muted)">${seg.desc}</span>
+        <span style="margin-left:16px">⭐ ${seg.avg_rating}</span>
+        <span style="margin-left:8px;color:var(--dim)">Score: ${seg.avg_score}</span>
+        <span style="margin-left:16px;color:var(--dim)">${cityParts}</span>
+        <button style="float:right;background:none;border:1px solid var(--border);color:var(--muted);border-radius:4px;padding:2px 10px;cursor:pointer;font-size:11px"
+          onclick="showDrillDown('${seg.name}', b => (b.sg||[]).includes('${seg.id}'))">View All ↗</button>`;
+      infoBar.style.display = 'block';
+    }
+  }
+  renderSegChips(window.DATA);
+  reRenderBI(window.DATA);
+}
+
+function reRenderBI(d) {
+  // Update bubble panel title with filter context
+  const panels = document.querySelectorAll('[data-tab="bi"] .panel-title');
+  if (panels.length && _allBubbles) {
+    const count = d.bubbles.length;
+    const total = _allBubbles.length;
+    const segName = _activeSegFilter ? (d.hidden_segments || []).find(s => s.id === _activeSegFilter)?.name || '' : '';
+    panels[0].textContent = _activeSegFilter
+      ? `Bubble Universe — ${count} of ${total} (${segName})`
+      : `Bubble Universe — ${total} Enriched Companies (Rating × Reviews × Score)`;
+  }
+  // Re-render all BI charts (reuse updateBI which calls all draw functions)
+  if (tabInited.bi) updateBI(d);
+}
 
 // Current segment for exports
 let _currentSegId = null;
@@ -2887,6 +2990,8 @@ async function loadData() {
     try { resp = await fetch('/api/data', {signal: AbortSignal.timeout(2000)}); } catch(e) {}
     if (!resp || !resp.ok) resp = await fetch('data.json');
     window.DATA = await resp.json();
+    _allBubbles = window.DATA.bubbles ? [...window.DATA.bubbles] : [];
+    renderSegChips(window.DATA);
     updateAll(window.DATA);
     const ts = window.DATA.generated_at ? new Date(window.DATA.generated_at).toLocaleString('es-ES') : 'now';
     document.getElementById('sync-time').textContent = 'Synced: ' + ts;
