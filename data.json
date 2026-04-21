@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-21T14:43:12",
-  "fetch_seconds": 70.9,
+  "generated_at": "2026-04-21T16:10:59",
+  "fetch_seconds": 72.7,
   "summary": {
     "companies_total": 74634,
     "contacts_total": 67038,
@@ -11,16 +11,16 @@
   "scores": {
     "companies": {
       "0-29": 3663,
-      "30-49": 25793,
-      "50-69": 25511,
-      "70-89": 18377,
-      "90-100": 1290
+      "30-49": 25773,
+      "50-69": 25521,
+      "70-89": 18386,
+      "90-100": 1291
     },
     "contacts": {
-      "0-29": 10396,
-      "30-49": 24568,
-      "50-69": 22104,
-      "70-89": 9970,
+      "0-29": 10358,
+      "30-49": 24555,
+      "50-69": 22153,
+      "70-89": 9972,
       "90-100": 0
     }
   },
@@ -34,18 +34,18 @@
   "cities": [
     {
       "city": "Barcelona",
-      "total": 12023,
-      "enriched": 959
+      "total": 12025,
+      "enriched": 960
     },
     {
       "city": "Madrid",
-      "total": 12598,
-      "enriched": 1360
+      "total": 12600,
+      "enriched": 1361
     },
     {
       "city": "Valencia",
-      "total": 4482,
-      "enriched": 429
+      "total": 4483,
+      "enriched": 430
     },
     {
       "city": "Sevilla",
@@ -59,8 +59,8 @@
     },
     {
       "city": "Otras",
-      "total": 41083,
-      "enriched": 1122
+      "total": 41078,
+      "enriched": 1119
     }
   ],
   "mountain": {
@@ -84,71 +84,71 @@
         470,
         4645,
         3368,
-        3173,
-        367
+        3174,
+        368
       ],
       [
         204,
         4446,
-        4162,
-        3538,
+        4163,
+        3539,
         248
       ],
       [
         65,
         1697,
         1619,
-        1034,
+        1035,
         67
       ],
       [
         40,
-        1371,
-        1326,
+        1370,
+        1327,
         817,
         47
       ],
       [
         8,
         285,
-        327,
-        223,
+        326,
+        224,
         4
       ],
       [
         2876,
-        13349,
-        14709,
-        9592,
+        13330,
+        14718,
+        9597,
         557
       ]
     ],
     "contacts": [
       [
-        5,
-        385,
-        1879,
+        6,
+        448,
+        1945,
         1396,
         0
       ],
       [
-        9,
-        552,
-        1847,
-        1732,
+        10,
+        579,
+        1886,
+        1734,
         0
       ],
       [
         0,
-        199,
-        337,
+        209,
+        356,
         431,
         0
       ],
       [
         0,
-        23,
-        28,
+        25,
+        33,
         1,
         0
       ],
@@ -160,9 +160,9 @@
         0
       ],
       [
-        10382,
-        23400,
-        17864,
+        10342,
+        23285,
+        17784,
         6183,
         0
       ]
@@ -938,8 +938,8 @@
       "n": "Mirandoalmar",
       "r": 4.5,
       "rv": 17066,
-      "s": 67,
-      "c": "Other",
+      "s": 83,
+      "c": "Barcelona",
       "ct": 3,
       "se": "Pos",
       "pl": "",
@@ -959,7 +959,7 @@
       "addr": "",
       "zip": "10004",
       "ph": "",
-      "dm": "",
+      "dm": "places.singleplatform.com",
       "dl": 1,
       "to": 0,
       "rs": 1,
@@ -10776,7 +10776,7 @@
       "n": "Tuscania Food & Wine",
       "r": 4.7,
       "rv": 4835,
-      "s": 75,
+      "s": 80,
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
@@ -12612,7 +12612,7 @@
       "n": "Takumi Ramen Barcelona Balmes",
       "r": 4.5,
       "rv": 4486,
-      "s": 75,
+      "s": 80,
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
@@ -13725,7 +13725,7 @@
       "n": "Sakana Restaurante",
       "r": 4.9,
       "rv": 4266,
-      "s": 75,
+      "s": 80,
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
@@ -21624,7 +21624,7 @@
       "n": "Restaurante Everest Tandoori",
       "r": 4.6,
       "rv": 3193,
-      "s": 75,
+      "s": 80,
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
@@ -24164,9 +24164,9 @@
     "companies": {
       "name": 74621,
       "phone": 48197,
-      "domain": 35421,
+      "domain": 35500,
       "website": 35500,
-      "city": 71229,
+      "city": 71246,
       "address": 66888,
       "industry": 34699,
       "google_place_id": 22877,
@@ -24183,7 +24183,7 @@
       "lastname": 16145,
       "phone": 35815,
       "company": 45472,
-      "city": 34226,
+      "city": 34618,
       "jobtitle": 2474,
       "lifecyclestage": 67038,
       "associatedcompanyid": 41374,
@@ -24209,13 +24209,13 @@
       0,
       0,
       1,
-      1361
+      1316
     ],
     [
       0,
       0,
       0,
-      9016
+      8995
     ],
     [
       1,
@@ -24233,13 +24233,13 @@
       1,
       0,
       1,
-      9267
+      9261
     ],
     [
       1,
       0,
       0,
-      15049
+      15048
     ],
     [
       2,
@@ -24257,13 +24257,13 @@
       2,
       0,
       1,
-      13205
+      13251
     ],
     [
       2,
       0,
       0,
-      73
+      95
     ],
     [
       3,
@@ -24281,7 +24281,7 @@
       3,
       0,
       1,
-      493
+      498
     ],
     [
       3,
@@ -24513,6 +24513,18 @@
       "ws_instagram": 8622,
       "contacts_mobile": 18574,
       "contacts_email": 38253
+    },
+    {
+      "ts": "2026-04-21 16:10",
+      "website": 35500,
+      "phone": 48197,
+      "domain": 35500,
+      "gp_enriched": 4200,
+      "ws_scraped": 28540,
+      "ws_emails": 8253,
+      "ws_instagram": 8622,
+      "contacts_mobile": 18574,
+      "contacts_email": 38253
     }
   ],
   "reachability_funnel": {
@@ -24549,7 +24561,7 @@
       "count": 245,
       "cities": {
         "Madrid": 85,
-        "Barcelona": 76,
+        "Barcelona": 77,
         "Sevilla": 15,
         "València": 11,
         "Granada": 10,
@@ -24560,7 +24572,6 @@
         "Murcia": 2,
         "Bilbo": 2,
         "Mogan (Capital Munic": 1,
-        "Other": 1,
         "Bilbao": 1,
         "Angus": 1,
         "A Coruna": 1,
@@ -24658,7 +24669,7 @@
       "count": 255,
       "cities": {
         "Madrid": 90,
-        "Barcelona": 73,
+        "Barcelona": 74,
         "Sevilla": 17,
         "Zaragoza": 16,
         "Granada": 9,
@@ -24670,7 +24681,6 @@
         "Murcia": 3,
         "Cádiz": 3,
         "Mogan (Capital Munic": 1,
-        "Other": 1,
         "Bilbao": 1,
         "New York": 1,
         "Angus": 1,
@@ -24696,7 +24706,7 @@
       "color": "#ffd93d",
       "count": 284,
       "cities": {
-        "Barcelona": 91,
+        "Barcelona": 92,
         "Madrid": 83,
         "Sevilla": 19,
         "Zaragoza": 15,
@@ -24711,7 +24721,6 @@
         "Bilbao": 2,
         "Cádiz": 2,
         "Mogan (Capital Munic": 1,
-        "Other": 1,
         "New York": 1,
         "دبي": 1,
         "El Palmar": 1,
@@ -24726,7 +24735,7 @@
         "Charlottetown": 1
       },
       "avg_rating": 4.34,
-      "avg_score": 93.0
+      "avg_score": 93.1
     },
     {
       "id": "sports_bar",
@@ -24884,10 +24893,10 @@
       "product": "Sistema de agua purificada de proximidad",
       "who_signs": "Propietario / Gerente",
       "timing": "now",
-      "count": 144,
-      "avg_score": 82.7,
+      "count": 145,
+      "avg_score": 82.8,
       "cities": {
-        "Barcelona": 144
+        "Barcelona": 145
       },
       "top_ids": [
         "9921928652",
@@ -24929,12 +24938,12 @@
       "count": 329,
       "avg_score": 63.9,
       "cities": {
-        "Barcelona": 101,
+        "Barcelona": 102,
         "Madrid": 110,
         "Valencia": 15,
         "Sevilla": 20,
         "Bilbao": 1,
-        "Other": 82
+        "Other": 81
       },
       "top_ids": [
         "9919750361",
@@ -24954,11 +24963,11 @@
       "count": 200,
       "avg_score": 66.5,
       "cities": {
-        "Barcelona": 57,
+        "Barcelona": 58,
         "Madrid": 71,
         "Valencia": 9,
         "Sevilla": 11,
-        "Other": 52
+        "Other": 51
       },
       "top_ids": [
         "9919836382",
@@ -25024,20 +25033,20 @@
       "who_signs": "Propietario / Finanzas",
       "timing": "nov_dec",
       "count": 165,
-      "avg_score": 17.0,
+      "avg_score": 16.8,
       "cities": {
-        "Barcelona": 53,
+        "Barcelona": 54,
         "Madrid": 58,
         "Valencia": 10,
         "Sevilla": 4,
-        "Other": 40
+        "Other": 39
       },
       "top_ids": [
         "9922131152",
-        "9919921644",
-        "9919896528",
         "9922088903",
-        "9920658407"
+        "9920658407",
+        "9919921644",
+        "9919896536"
       ]
     },
     {
@@ -25075,12 +25084,12 @@
       "count": 291,
       "avg_score": 62.7,
       "cities": {
-        "Barcelona": 84,
+        "Barcelona": 85,
         "Madrid": 102,
         "Valencia": 13,
         "Sevilla": 20,
         "Bilbao": 1,
-        "Other": 71
+        "Other": 70
       },
       "top_ids": [
         "9921922770",
@@ -26037,7 +26046,7 @@
         "ph": "935390773",
         "r": 4.7,
         "rv": 4835,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "tuscaniabarcelona.com",
         "tp": "",
@@ -26289,7 +26298,7 @@
         "ph": "936250814",
         "r": 4.5,
         "rv": 4486,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "carrerbalmes.takumibarcelona.es",
         "tp": "",
@@ -27283,7 +27292,7 @@
         "ph": "34934619309",
         "r": 4.4,
         "rv": 2787,
-        "s": 90,
+        "s": 95,
         "wb": 1,
         "dm": "momoavinyo.com",
         "tp": "",
@@ -27451,7 +27460,7 @@
         "ph": "34934531046",
         "r": 4.4,
         "rv": 2700,
-        "s": 90,
+        "s": 95,
         "wb": 1,
         "dm": "oretorno.es",
         "tp": "",
@@ -28375,7 +28384,7 @@
         "ph": "935321125",
         "r": 4.1,
         "rv": 1982,
-        "s": 95,
+        "s": 100,
         "wb": 1,
         "dm": "fonduesbarcelona.es",
         "tp": "Restaurante de fondues",
@@ -30923,9 +30932,9 @@
         "ph": "+34 933 15 07 54",
         "r": 4.5,
         "rv": 1013,
-        "s": 92,
+        "s": 100,
         "wb": 1,
-        "dm": "",
+        "dm": "instagram.com",
         "tp": "Cafetería",
         "ct": 2
       },
@@ -31343,7 +31352,7 @@
         "ph": "34932188578",
         "r": 4.1,
         "rv": 887,
-        "s": 90,
+        "s": 95,
         "wb": 1,
         "dm": "restaurantsporting.com",
         "tp": "",
@@ -31903,9 +31912,9 @@
         "ph": "936274701",
         "r": 4.8,
         "rv": 756,
-        "s": 87,
+        "s": 95,
         "wb": 1,
-        "dm": "",
+        "dm": "instagram.com",
         "tp": "Restaurante",
         "ct": 1
       },
@@ -32057,7 +32066,7 @@
         "ph": "34936395703",
         "r": 4.5,
         "rv": 734,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "comobarcelona.es",
         "tp": "",
@@ -32197,7 +32206,7 @@
         "ph": "34934238448",
         "r": 4.6,
         "rv": 697,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "tientsing.com",
         "tp": "Restaurante chino",
@@ -32435,7 +32444,7 @@
         "ph": "934171196",
         "r": 4.3,
         "rv": 668,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "restauranthidalgobcn.com",
         "tp": "",
@@ -33569,7 +33578,7 @@
         "ph": "631220870",
         "r": 4.8,
         "rv": 481,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "muchocieloymuchomar.com",
         "tp": "",
@@ -33919,7 +33928,7 @@
         "ph": "932100841",
         "r": 4.3,
         "rv": 425,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "kavlyrestaurant.com",
         "tp": "",
@@ -34311,7 +34320,7 @@
         "ph": "938597525",
         "r": 4.8,
         "rv": 364,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "magatzemsesilles.com",
         "tp": "",
@@ -34563,7 +34572,7 @@
         "ph": "931920509",
         "r": 3.7,
         "rv": 337,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "junadonerkebabbcn.com",
         "tp": "",
@@ -34773,9 +34782,9 @@
         "ph": "930008151",
         "r": 4.7,
         "rv": 307,
-        "s": 72,
+        "s": 80,
         "wb": 1,
-        "dm": "",
+        "dm": "instagram.com",
         "tp": "Servicio de catering",
         "ct": 0
       },
@@ -34871,7 +34880,7 @@
         "ph": "935356820",
         "r": 4.1,
         "rv": 297,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "ristorantemadeinitalybarcelona.com",
         "tp": "",
@@ -35585,7 +35594,7 @@
         "ph": "667091817",
         "r": 4.8,
         "rv": 207,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "lacerveseradelpoblenou.cat",
         "tp": "",
