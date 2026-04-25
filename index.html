@@ -62,6 +62,12 @@ body {
   background: var(--card); border: 1px solid var(--border); border-radius: 8px;
   padding: 16px; min-height: 300px;
 }
+.panel-id {
+  display: inline-block; background: var(--border); color: var(--dim);
+  font-size: 10px; font-weight: 700; border-radius: 4px;
+  padding: 1px 5px; margin-right: 6px; vertical-align: middle;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
 .panel-title {
   font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 12px;
   text-transform: uppercase; letter-spacing: 0.5px;
@@ -246,24 +252,24 @@ svg text { fill: var(--muted); font-size: 11px; }
   </div>
 
   <div class="panel">
-    <div class="panel-title">Data Score Distribution</div>
+    <div class="panel-title"><span class="panel-id">01</span>Data Score Distribution</div>
     <svg id="chart-scores" width="100%" height="260"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Enrichment Pipeline</div>
+    <div class="panel-title"><span class="panel-id">02</span>Enrichment Pipeline</div>
     <svg id="chart-pipeline" width="100%" height="260"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Companies por Ciudad</div>
+    <div class="panel-title"><span class="panel-id">03</span>Companies por Ciudad</div>
     <svg id="chart-cities" width="100%" height="260"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Contact Assets</div>
+    <div class="panel-title"><span class="panel-id">04</span>Contact Assets</div>
     <svg id="chart-assets" width="100%" height="260"></svg>
   </div>
 
   <div class="panel panel-full">
-    <div class="panel-title">CRM Mountain — City x Score x Volume</div>
+    <div class="panel-title"><span class="panel-id">05</span>CRM Mountain — City x Score x Volume</div>
     <div class="mountain-controls">
       <button class="btn active" id="mtn-co" onclick="setMountainMode('companies')">Companies</button>
       <button class="btn" id="mtn-ct" onclick="setMountainMode('contacts')">Contacts</button>
@@ -272,7 +278,7 @@ svg text { fill: var(--muted); font-size: 11px; }
   </div>
 
   <div class="panel">
-    <div class="panel-title">Contact 4D — Score × Mobile × Email</div>
+    <div class="panel-title"><span class="panel-id">06</span>Contact 4D — Score × Mobile × Email</div>
     <canvas id="contact4d-canvas"></canvas>
   </div>
   </div><!-- end CRM tab -->
@@ -289,7 +295,7 @@ svg text { fill: var(--muted); font-size: 11px; }
 
   <!-- ── Overview ── -->
   <div class="panel panel-full">
-    <div class="panel-title">Bubble Universe — 500 Enriched Companies (Rating × Reviews × Score)</div>
+    <div class="panel-title"><span class="panel-id">07</span>Bubble Universe — 500 Enriched Companies (Rating × Reviews × Score)</div>
     <div class="mountain-controls">
       <button class="btn active" id="bub-rating" onclick="setBubbleColor('rating')">Color: Rating</button>
       <button class="btn" id="bub-city" onclick="setBubbleColor('city')">Color: City</button>
@@ -301,122 +307,122 @@ svg text { fill: var(--muted); font-size: 11px; }
   <!-- ── Quality & Ratings ── -->
   <div class="section-divider"><span>Quality & Ratings</span></div>
   <div class="panel">
-    <div class="panel-title">Rating Distribution (Enriched)</div>
+    <div class="panel-title"><span class="panel-id">08</span>Rating Distribution (Enriched)</div>
     <svg id="chart-ratings" width="100%" height="260"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Opportunity Matrix — Rating × Contacts</div>
+    <div class="panel-title"><span class="panel-id">09</span>Opportunity Matrix — Rating × Contacts</div>
     <svg id="chart-opportunity" width="100%" height="300"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Review Gravity — Volume vs Rating</div>
+    <div class="panel-title"><span class="panel-id">10</span>Review Gravity — Volume vs Rating</div>
     <svg id="chart-review-gravity" width="100%" height="320"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Reputation Fragmentation — Cross-Platform Variance</div>
+    <div class="panel-title"><span class="panel-id">11</span>Reputation Fragmentation — Cross-Platform Variance</div>
     <svg id="chart-reputation-frag" width="100%" height="300"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Rating Delta — Google vs TripAdvisor</div>
+    <div class="panel-title"><span class="panel-id">12</span>Rating Delta — Google vs TripAdvisor</div>
     <svg id="chart-rating-delta" width="100%" height="300"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Price × Quality — Hidden Gems</div>
+    <div class="panel-title"><span class="panel-id">13</span>Price × Quality — Hidden Gems</div>
     <svg id="chart-price-quality" width="100%" height="300"></svg>
   </div>
 
   <!-- ── Geographic Intelligence ── -->
   <div class="section-divider"><span>Geographic Intelligence</span></div>
   <div class="panel panel-full">
-    <div class="panel-title">Geographic Constellation — Spatial Intelligence</div>
+    <div class="panel-title"><span class="panel-id">14</span>Geographic Constellation — Spatial Intelligence</div>
     <svg id="chart-geo" width="100%" height="450"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Tourist Trap Detector — TA vs Google Divergence</div>
+    <div class="panel-title"><span class="panel-id">15</span>Tourist Trap Detector — TA vs Google Divergence</div>
     <svg id="chart-tourist-trap" width="100%" height="350"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Complaint Microgeography — Spatial CX Patterns</div>
+    <div class="panel-title"><span class="panel-id">16</span>Complaint Microgeography — Spatial CX Patterns</div>
     <svg id="chart-complaint-geo" width="100%" height="350"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Price Geography — Spatial Pricing</div>
+    <div class="panel-title"><span class="panel-id">17</span>Price Geography — Spatial Pricing</div>
     <svg id="chart-price-geo" width="100%" height="350"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Sentiment Geography — CX by City</div>
+    <div class="panel-title"><span class="panel-id">18</span>Sentiment Geography — CX by City</div>
     <svg id="chart-sentiment-geo" width="100%" height="320"></svg>
   </div>
 
   <!-- ── Digital Presence ── -->
   <div class="section-divider"><span>Digital Presence</span></div>
   <div class="panel">
-    <div class="panel-title">Digital Maturity × Quality Matrix</div>
+    <div class="panel-title"><span class="panel-id">19</span>Digital Maturity × Quality Matrix</div>
     <svg id="chart-digital-matrix" width="100%" height="320"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Dark Restaurant Index — Hidden Gems vs Leaders</div>
+    <div class="panel-title"><span class="panel-id">20</span>Dark Restaurant Index — Hidden Gems vs Leaders</div>
     <svg id="chart-dark-restaurant" width="100%" height="320"></svg>
   </div>
   <div class="panel panel-full">
-    <div class="panel-title">Reachability Funnel — Company Digital Pipeline</div>
+    <div class="panel-title"><span class="panel-id">21</span>Reachability Funnel — Company Digital Pipeline</div>
     <svg id="chart-reachability" width="100%" height="280"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Platform Stack × Success</div>
+    <div class="panel-title"><span class="panel-id">22</span>Platform Stack × Success</div>
     <svg id="chart-platform-stack" width="100%" height="320"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">City Digital Pulse — Adoption by City</div>
+    <div class="panel-title"><span class="panel-id">23</span>City Digital Pulse — Adoption by City</div>
     <svg id="chart-city-digital" width="100%" height="320"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">The Instagram Effect — Social Presence vs Quality</div>
+    <div class="panel-title"><span class="panel-id">24</span>The Instagram Effect — Social Presence vs Quality</div>
     <svg id="chart-ig-effect" width="100%" height="350"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Social Stack Effect — Platform Combos × Rating</div>
+    <div class="panel-title"><span class="panel-id">25</span>Social Stack Effect — Platform Combos × Rating</div>
     <svg id="chart-social-stack" width="100%" height="320"></svg>
   </div>
 
   <!-- ── Customer Experience ── -->
   <div class="section-divider"><span>Customer Experience</span></div>
   <div class="panel">
-    <div class="panel-title">Sentiment × Complaints — CX Intelligence</div>
+    <div class="panel-title"><span class="panel-id">26</span>Sentiment × Complaints — CX Intelligence</div>
     <svg id="chart-sentiment" width="100%" height="300"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Complaint × Price — CX by Segment</div>
+    <div class="panel-title"><span class="panel-id">27</span>Complaint × Price — CX by Segment</div>
     <svg id="chart-complaint-price" width="100%" height="320"></svg>
   </div>
 
   <!-- ── CRM Analytics ── -->
   <div class="section-divider"><span>CRM Analytics</span></div>
   <div class="panel">
-    <div class="panel-title">CRM Value Map — Score × Contacts</div>
+    <div class="panel-title"><span class="panel-id">28</span>CRM Value Map — Score × Contacts</div>
     <svg id="chart-crm-value" width="100%" height="320"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Contact Power Law — CRM Concentration</div>
+    <div class="panel-title"><span class="panel-id">29</span>Contact Power Law — CRM Concentration</div>
     <svg id="chart-power-law" width="100%" height="320"></svg>
   </div>
   <div class="panel panel-full">
-    <div class="panel-title">Business Type Landscape</div>
+    <div class="panel-title"><span class="panel-id">30</span>Business Type Landscape</div>
     <svg id="chart-type-landscape" width="100%" height="350"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Review Velocity by Type</div>
+    <div class="panel-title"><span class="panel-id">31</span>Review Velocity by Type</div>
     <svg id="chart-review-velocity" width="100%" height="320"></svg>
   </div>
 
   <!-- ── Correlation & Evolution ── -->
   <div class="section-divider"><span>Correlation & Evolution</span></div>
   <div class="panel panel-full">
-    <div class="panel-title">Cross-Signal Correlation Matrix</div>
+    <div class="panel-title"><span class="panel-id">32</span>Cross-Signal Correlation Matrix</div>
     <svg id="chart-correlation" width="100%" height="400"></svg>
   </div>
   <div class="panel panel-full">
-    <div class="panel-title">Enrichment Evolution — Field Coverage Over Time</div>
+    <div class="panel-title"><span class="panel-id">33</span>Enrichment Evolution — Field Coverage Over Time</div>
     <svg id="chart-evolution" width="100%" height="380"></svg>
   </div>
 
@@ -449,7 +455,7 @@ svg text { fill: var(--muted); font-size: 11px; }
 
   <div class="section-divider"><span>Opportunity Heatmap</span></div>
   <div class="panel panel-full">
-    <div class="panel-title">Opportunity Heatmap — Segment × City</div>
+    <div class="panel-title"><span class="panel-id">34</span>Opportunity Heatmap — Segment × City</div>
     <svg id="chart-opp-heatmap" width="100%" height="400"></svg>
   </div>
 
@@ -458,25 +464,25 @@ svg text { fill: var(--muted); font-size: 11px; }
   <!-- ═══ SHARED: Infrastructure panels (always CRM tab) ═══ -->
   <div class="tab-content active" data-tab="crm">
   <div class="panel">
-    <div class="panel-title">Field Completeness — Companies</div>
+    <div class="panel-title"><span class="panel-id">35</span>Field Completeness — Companies</div>
     <svg id="chart-fields-co" width="100%" height="300"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Field Completeness — Contacts</div>
+    <div class="panel-title"><span class="panel-id">36</span>Field Completeness — Contacts</div>
     <svg id="chart-fields-ct" width="100%" height="300"></svg>
   </div>
 
   <div class="panel">
-    <div class="panel-title">Service Capabilities (Enriched)</div>
+    <div class="panel-title"><span class="panel-id">37</span>Service Capabilities (Enriched)</div>
     <svg id="chart-services" width="100%" height="320"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title">Budget Tracker</div>
+    <div class="panel-title"><span class="panel-id">38</span>Budget Tracker</div>
     <svg id="chart-budget" width="100%" height="260"></svg>
   </div>
 
   <div class="panel panel-full" style="min-height:auto">
-    <div class="panel-title">Enrichment Log</div>
+    <div class="panel-title"><span class="panel-id">39</span>Enrichment Log</div>
     <div class="log-panel" id="log-panel">Synced data — no live log on web version.</div>
   </div>
   </div><!-- end CRM shared -->
