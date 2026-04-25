@@ -524,14 +524,17 @@ function switchTab(tab) {
     const match = el.dataset.tab === tab || (tab === 'crm' && el.dataset.tab === 'crm');
     el.classList.toggle('active', match);
   });
-  // Lazy init: render charts on first tab visit
+  // Lazy init: render charts on first tab visit (wait for reflow so SVGs have dimensions)
   if (window.DATA && !tabInited[tab]) {
     tabInited[tab] = true;
-    if (tab === 'bi') updateBI(window.DATA);
-    if (tab === 'sales') updateSales(window.DATA);
+    requestAnimationFrame(() => {
+      if (tab === 'bi') updateBI(window.DATA);
+      if (tab === 'sales') updateSales(window.DATA);
+      window.dispatchEvent(new Event('resize'));
+    });
+  } else {
+    window.dispatchEvent(new Event('resize'));
   }
-  // Re-trigger resize for canvases
-  window.dispatchEvent(new Event('resize'));
 }
 
 // === Sales Intel Color Palette ===
