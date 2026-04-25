@@ -524,14 +524,14 @@ function switchTab(tab) {
     const match = el.dataset.tab === tab || (tab === 'crm' && el.dataset.tab === 'crm');
     el.classList.toggle('active', match);
   });
-  // Lazy init: render charts on first tab visit (wait for reflow so SVGs have dimensions)
+  // Lazy init: render charts on first tab visit (delay ensures layout reflow is complete)
   if (window.DATA && !tabInited[tab]) {
     tabInited[tab] = true;
-    requestAnimationFrame(() => {
+    setTimeout(() => {
       if (tab === 'bi') updateBI(window.DATA);
       if (tab === 'sales') updateSales(window.DATA);
       window.dispatchEvent(new Event('resize'));
-    });
+    }, 50);
   } else {
     window.dispatchEvent(new Event('resize'));
   }
@@ -2962,24 +2962,24 @@ function updateCRM(d) {
   if (window.contact4dReady) window.updateContact4D(d);
 }
 function updateBI(d) {
-  // Overview — lazy init bubble universe (needs visible canvas for sizing)
-  if (!window.bubbleReady) initBubbles();
-  if (window.bubbleReady) window.updateBubbles(d);
-  // Quality & Ratings
-  drawRatings(d); drawOpportunityMatrix(d); drawReviewGravity(d);
-  drawReputationFragmentation(d); drawRatingDelta(d); drawPriceQuality(d);
-  // Geographic Intelligence
-  drawGeoConstellation(d); drawTouristTrap(d); drawComplaintGeo(d);
-  drawPriceGeo(d); drawSentimentGeo(d);
-  // Digital Presence
-  drawDigitalMatrix(d); drawDarkRestaurant(d); drawReachabilityFunnel(d);
-  drawPlatformStack(d); drawCityDigital(d); drawIgEffect(d); drawSocialStack(d);
-  // Customer Experience
-  drawSentimentComplaints(d); drawComplaintPrice(d);
-  // CRM Analytics
-  drawCrmValue(d); drawPowerLaw(d); drawTypeLandscape(d); drawReviewVelocity(d);
-  // Correlation & Evolution
-  drawCorrelation(d); drawEvolution(d);
+  // Overview — lazy init bubble universe (isolated so failure doesn't block D3 charts)
+  try {
+    if (!window.bubbleReady) initBubbles();
+    if (window.bubbleReady) window.updateBubbles(d);
+  } catch(e) { console.warn('Bubble init error:', e); }
+  // All D3 charts — each wrapped so one failure doesn't block the rest
+  const biCharts = [
+    drawRatings, drawOpportunityMatrix, drawReviewGravity,
+    drawReputationFragmentation, drawRatingDelta, drawPriceQuality,
+    drawGeoConstellation, drawTouristTrap, drawComplaintGeo,
+    drawPriceGeo, drawSentimentGeo,
+    drawDigitalMatrix, drawDarkRestaurant, drawReachabilityFunnel,
+    drawPlatformStack, drawCityDigital, drawIgEffect, drawSocialStack,
+    drawSentimentComplaints, drawComplaintPrice,
+    drawCrmValue, drawPowerLaw, drawTypeLandscape, drawReviewVelocity,
+    drawCorrelation, drawEvolution,
+  ];
+  biCharts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
 }
 function updateSales(d) {
   updatePmfKPIs(d); drawPmfCards(d); drawOppHeatmap(d);
