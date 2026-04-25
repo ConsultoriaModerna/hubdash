@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-25T21:34:53",
-  "fetch_seconds": 81.8,
+  "generated_at": "2026-04-25T23:22:30",
+  "fetch_seconds": 85.5,
   "summary": {
     "companies_total": 74947,
     "contacts_total": 67090,
@@ -63,6 +63,59 @@
       "enriched": 1237
     }
   ],
+  "contact_cities": [
+    {
+      "city": "Barcelona",
+      "total": 5357
+    },
+    {
+      "city": "Madrid",
+      "total": 4872
+    },
+    {
+      "city": "Valencia",
+      "total": 1144
+    },
+    {
+      "city": "Sevilla",
+      "total": 210
+    },
+    {
+      "city": "Bilbao",
+      "total": 397
+    },
+    {
+      "city": "Otras",
+      "total": 55110
+    }
+  ],
+  "contact_city_assets": {
+    "Barcelona": {
+      "mobile": 3003,
+      "email": 3515,
+      "phone": 3637
+    },
+    "Madrid": {
+      "mobile": 3202,
+      "email": 3154,
+      "phone": 3779
+    },
+    "Valencia": {
+      "mobile": 703,
+      "email": 673,
+      "phone": 925
+    },
+    "Sevilla": {
+      "mobile": 15,
+      "email": 87,
+      "phone": 39
+    },
+    "Bilbao": {
+      "mobile": 362,
+      "email": 276,
+      "phone": 372
+    }
+  },
   "mountain": {
     "cities": [
       "Barcelona",
@@ -24450,6 +24503,18 @@
     },
     {
       "ts": "2026-04-25 21:34",
+      "website": 35770,
+      "phone": 48476,
+      "domain": 35736,
+      "gp_enriched": 4452,
+      "ws_scraped": 28540,
+      "ws_emails": 8253,
+      "ws_instagram": 8622,
+      "contacts_mobile": 18611,
+      "contacts_email": 38305
+    },
+    {
+      "ts": "2026-04-25 23:22",
       "website": 35770,
       "phone": 48476,
       "domain": 35736,
