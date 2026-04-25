@@ -281,6 +281,14 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title"><span class="panel-id">06</span>Contact 4D — Score × Mobile × Email</div>
     <canvas id="contact4d-canvas"></canvas>
   </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">40</span>Contactos por Ciudad</div>
+    <svg id="chart-contact-cities" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">41</span>City × Contact Assets</div>
+    <svg id="chart-contact-city-assets" width="100%" height="260"></svg>
+  </div>
   </div><!-- end CRM tab -->
 
   <!-- ═══ TAB: BUSINESS INTEL ═══ -->
@@ -426,6 +434,17 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-evolution" width="100%" height="380"></svg>
   </div>
 
+  <!-- ── Rating & Service Intelligence ── -->
+  <div class="section-divider"><span>Rating & Service Intelligence</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">42</span>Multi-Rating — Google vs TripAdvisor vs Restaurant Guru</div>
+    <svg id="chart-multi-rating" width="100%" height="300"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">43</span>Service Heatmap — Capability × City</div>
+    <svg id="chart-service-heatmap" width="100%" height="340"></svg>
+  </div>
+
   </div><!-- end BI tab -->
 
   <!-- ═══ TAB: SALES INTEL ═══ -->
@@ -478,12 +497,16 @@ svg text { fill: var(--muted); font-size: 11px; }
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">38</span>Budget Tracker</div>
-    <svg id="chart-budget" width="100%" height="260"></svg>
+    <svg id="chart-budget" width="100%" height="320"></svg>
   </div>
 
   <div class="panel panel-full" style="min-height:auto">
     <div class="panel-title"><span class="panel-id">39</span>Enrichment Log</div>
     <div class="log-panel" id="log-panel">Synced data — no live log on web version.</div>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">44</span>Enrichment Velocity</div>
+    <svg id="chart-enrich-velocity" width="100%" height="280"></svg>
   </div>
   </div><!-- end CRM shared -->
 </div>
@@ -751,6 +774,74 @@ function drawCities(d) {
   d.cities.forEach((c,i)=>{leg.append('rect').attr('y',i*18).attr('width',10).attr('height',10).attr('fill',cityColors[i]).attr('rx',2);leg.append('text').attr('x',14).attr('y',i*18+9).text(c.city).attr('fill',C.muted).style('font-size','10px');});
 }
 
+function drawContactCities(d) {
+  if (!d.contact_cities || !d.contact_cities.length) return;
+  const svg = d3.select('#chart-contact-cities'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const radius = Math.min(W,H)/2 - 30;
+  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
+  const colors = [C.purple,'#e875c2',C.orange,'#ffc83d',C.green,C.muted];
+  const total = d3.sum(d.contact_cities, c=>c.total);
+  const pie = d3.pie().value(d=>d.total).sort(null);
+  const arc = d3.arc().innerRadius(radius*0.55).outerRadius(radius);
+  const arcH = d3.arc().innerRadius(radius*0.55).outerRadius(radius+6);
+  const arcs = g.selectAll('.arc').data(pie(d.contact_cities)).enter().append('g');
+  arcs.append('path').attr('d',arc).attr('fill',(d,i)=>colors[i%6]).attr('stroke','#161b22').attr('stroke-width',2)
+    .on('mousemove',function(evt,dd){
+      d3.select(this).transition().duration(100).attr('d',arcH);
+      const pct = total>0 ? (dd.data.total/total*100).toFixed(1) : 0;
+      showTip(evt,`<b>${dd.data.city}</b><br>${fmt(dd.data.total)} contacts (${pct}%)`);
+    })
+    .on('mouseleave',function(){d3.select(this).transition().duration(200).attr('d',arc);hideTip();});
+  g.append('text').attr('text-anchor','middle').attr('dy','-0.3em').text(fmt(total)).attr('fill',C.text).style('font-size','18px').style('font-weight','700');
+  g.append('text').attr('text-anchor','middle').attr('dy','1.2em').text('contacts').attr('fill',C.muted).style('font-size','11px');
+  const leg = svg.append('g').attr('transform',`translate(${W-120},20)`);
+  d.contact_cities.forEach((c,i)=>{
+    leg.append('rect').attr('y',i*18).attr('width',10).attr('height',10).attr('fill',colors[i]).attr('rx',2);
+    leg.append('text').attr('x',14).attr('y',i*18+9).text(`${c.city} (${fmt(c.total)})`).attr('fill',C.muted).style('font-size','10px');
+  });
+}
+
+function drawContactCityAssets(d) {
+  if (!d.contact_city_assets) return;
+  const svg = d3.select('#chart-contact-city-assets'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const m = {top:30, right:20, bottom:20, left:90};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+  const cities = Object.keys(d.contact_city_assets);
+  if (!cities.length) return;
+  const assets = ['mobile','email','phone'];
+  const assetMeta = {mobile:{label:'Mobile',color:C.green},email:{label:'Email',color:C.blue},phone:{label:'Phone',color:C.orange}};
+  const allVals = cities.flatMap(c=>assets.map(a=>d.contact_city_assets[c][a]||0));
+  const maxVal = Math.max(1,...allVals);
+  const color = d3.scaleSequential(d3.interpolateBlues).domain([0,maxVal]);
+  const x = d3.scaleBand().domain(assets).range([0,w]).padding(0.1);
+  const y = d3.scaleBand().domain(cities).range([0,h]).padding(0.1);
+  cities.forEach(city=>{
+    assets.forEach(asset=>{
+      const val = (d.contact_city_assets[city]||{})[asset]||0;
+      g.append('rect').attr('x',x(asset)).attr('y',y(city))
+        .attr('width',x.bandwidth()).attr('height',y.bandwidth())
+        .attr('fill',val>0?color(val):C.grid).attr('rx',4)
+        .on('mousemove',evt=>showTip(evt,`<b>${city}</b> — ${assetMeta[asset].label}<br>${fmt(val)} contacts`))
+        .on('mouseleave',hideTip);
+      if (val>0) g.append('text').attr('x',x(asset)+x.bandwidth()/2).attr('y',y(city)+y.bandwidth()/2+4)
+        .attr('text-anchor','middle').text(fmt(val)).attr('fill',val>maxVal*0.7?'#0d1117':C.text)
+        .style('font-size','12px').style('font-weight','600').style('pointer-events','none');
+    });
+  });
+  assets.forEach(a=>{
+    g.append('text').attr('x',x(a)+x.bandwidth()/2).attr('y',-10)
+      .attr('text-anchor','middle').text(assetMeta[a].label).attr('fill',assetMeta[a].color)
+      .style('font-size','11px').style('font-weight','600');
+  });
+  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text').attr('fill',C.muted).style('font-size','11px');
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+}
+
 function drawAssets(d) {
   const svg = d3.select('#chart-assets'); svg.selectAll('*').remove();
   const rect = svg.node().getBoundingClientRect();
@@ -772,9 +863,10 @@ function drawAssets(d) {
 function drawBudget(d) {
   const svg = d3.select('#chart-budget'); svg.selectAll('*').remove();
   const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 260;
-  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2+30})`);
-  const radius = Math.min(W,H)/2 - 40;
+  const W = rect.width, H = 320;
+  // === GAUGE (top section) ===
+  const gaugeG = svg.append('g').attr('transform',`translate(${W/2},${H/2-40})`);
+  const radius = Math.min(W,H*0.5)/2 - 30;
   const budget = d.budget || {};
   const months = budget.months || {};
   const mkeys = Object.keys(months);
@@ -783,15 +875,48 @@ function drawBudget(d) {
   const monthLimit = budget.config?.monthly_limit || 20;
   const monthPct = Math.min(monthSpent/monthLimit,1);
   const arcM = d3.arc().innerRadius(radius-18).outerRadius(radius).startAngle(-Math.PI/2);
-  g.append('path').datum({endAngle:Math.PI/2}).attr('d',arcM).attr('fill',C.grid);
+  gaugeG.append('path').datum({endAngle:Math.PI/2}).attr('d',arcM).attr('fill',C.grid);
   const mc = monthPct<0.6?C.green:monthPct<0.85?C.yellow:C.red;
-  g.append('path').datum({endAngle:-Math.PI/2+Math.PI*monthPct}).attr('d',arcM).attr('fill',mc);
-  g.append('text').attr('text-anchor','middle').attr('dy','-1.5em').text(`€${monthSpent.toFixed(2)}`).attr('fill',C.text).style('font-size','22px').style('font-weight','700');
-  g.append('text').attr('text-anchor','middle').attr('dy','0em').text(`de €${monthLimit} mes`).attr('fill',C.muted).style('font-size','12px');
+  gaugeG.append('path').datum({endAngle:-Math.PI/2+Math.PI*monthPct}).attr('d',arcM).attr('fill',mc);
+  gaugeG.append('text').attr('text-anchor','middle').attr('dy','-1.5em').text(`€${monthSpent.toFixed(2)}`).attr('fill',C.text).style('font-size','22px').style('font-weight','700');
+  gaugeG.append('text').attr('text-anchor','middle').attr('dy','0em').text(`de €${monthLimit} mes`).attr('fill',C.muted).style('font-size','12px');
   const pd = mdata.place_details||0, ts = mdata.text_search||0;
-  g.append('text').attr('text-anchor','middle').attr('dy','1.8em').text(`${pd} PD + ${ts} TS calls`).attr('fill',C.dim).style('font-size','11px');
+  gaugeG.append('text').attr('text-anchor','middle').attr('dy','1.8em').text(`${pd} PD + ${ts} TS calls`).attr('fill',C.dim).style('font-size','11px');
+  // === DAILY HISTORY BARS (bottom section) ===
+  const daily = mdata.daily || {};
+  const dailyEntries = Object.entries(daily).sort((a,b)=>a[0].localeCompare(b[0]));
+  if (dailyEntries.length > 0) {
+    const barTop = H - 100, barH = 55;
+    const ml = 40, mr = 20, bw = W - ml - mr;
+    const barG = svg.append('g').attr('transform',`translate(${ml},${barTop})`);
+    const costs = dailyEntries.map(([,v])=>v.cost||0);
+    const maxCost = Math.max(1,...costs);
+    const xB = d3.scaleBand().domain(dailyEntries.map(([d])=>d)).range([0,bw]).padding(0.15);
+    const yB = d3.scaleLinear().domain([0,maxCost*1.2]).range([barH,0]);
+    const dayLimit = budget.config?.daily_limit || 5;
+    if (dayLimit > 0 && dayLimit <= maxCost*1.2) {
+      barG.append('line').attr('x1',0).attr('x2',bw).attr('y1',yB(dayLimit)).attr('y2',yB(dayLimit))
+        .attr('stroke',C.yellow).attr('stroke-dasharray','4,3').attr('opacity',0.6);
+      barG.append('text').attr('x',bw+3).attr('y',yB(dayLimit)+4).text(`€${dayLimit}`)
+        .attr('fill',C.yellow).style('font-size','8px');
+    }
+    dailyEntries.forEach(([date,v])=>{
+      const cost = v.cost||0;
+      const bc = cost > monthLimit*0.25 ? C.red : cost > dayLimit ? C.yellow : C.green;
+      barG.append('rect').attr('x',xB(date)).attr('y',yB(cost))
+        .attr('width',xB.bandwidth()).attr('height',barH-yB(cost))
+        .attr('fill',bc).attr('opacity',0.8).attr('rx',2)
+        .on('mousemove',evt=>showTip(evt,`<b>${date.slice(5)}</b><br>€${cost.toFixed(2)}<br>${v.pd||0} PD + ${v.ts||0} TS`))
+        .on('mouseleave',hideTip);
+      barG.append('text').attr('x',xB(date)+xB.bandwidth()/2).attr('y',barH+14)
+        .attr('text-anchor','middle').text(date.slice(5)).attr('fill',C.muted).style('font-size','9px');
+    });
+    barG.append('g').call(d3.axisLeft(yB).ticks(3).tickFormat(v=>`€${v.toFixed(0)}`))
+      .selectAll('text').attr('fill',C.muted).style('font-size','9px');
+    barG.selectAll('.domain,.tick line').attr('stroke',C.border);
+  }
   const st = d.enrichment || {};
-  svg.append('text').attr('x',W/2).attr('y',H-10).attr('text-anchor','middle')
+  svg.append('text').attr('x',W/2).attr('y',H-5).attr('text-anchor','middle')
     .text(`Runs: ${st.runs||0} | Enriched: ${st.total_enriched_a||0} A + ${st.total_enriched_b||0} B | Not found: ${st.total_not_found||0}`)
     .attr('fill',C.dim).style('font-size','10px');
 }
@@ -2602,6 +2727,175 @@ function drawEvolution(d) {
   });
 }
 
+function drawEnrichVelocity(d) {
+  const svg = d3.select('#chart-enrich-velocity'); svg.selectAll('*').remove();
+  const snaps = d.snapshots || [];
+  if (snaps.length < 2) {
+    svg.append('text').attr('x','50%').attr('y',140).attr('text-anchor','middle')
+      .attr('fill',C.muted).style('font-size','13px').text('Collecting data points... (need 2+ syncs)');
+    return;
+  }
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 280;
+  const m = {top:20, right:160, bottom:40, left:55};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+  const series = [
+    {key:'gp_enriched',label:'GP Enriched',color:C.orange},
+    {key:'ws_scraped',label:'WS Scraped',color:C.yellow},
+    {key:'ws_emails',label:'WS Emails',color:C.green},
+    {key:'ws_instagram',label:'WS Instagram',color:'#e1306c'},
+  ];
+  const data = snaps.map(s=>{
+    const row = {t:new Date(s.ts.replace(' ','T'))};
+    series.forEach(sr=>{row[sr.key]=s[sr.key]||0;});
+    return row;
+  });
+  const x = d3.scaleTime().domain(d3.extent(data,d=>d.t)).range([0,w]);
+  const maxY = d3.max(series.flatMap(sr=>data.map(d=>d[sr.key])))||1;
+  const y = d3.scaleLinear().domain([0,maxY*1.1]).range([h,0]);
+  y.ticks(5).forEach(tick=>{
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(tick)).attr('y2',y(tick))
+      .attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+  const labelSlots = [];
+  series.forEach(sr=>{
+    const line = d3.line().x(d=>x(d.t)).y(d=>y(d[sr.key])).curve(d3.curveMonotoneX);
+    const area = d3.area().x(d=>x(d.t)).y0(h).y1(d=>y(d[sr.key])).curve(d3.curveMonotoneX);
+    g.append('path').datum(data).attr('d',area).attr('fill',sr.color).attr('opacity',0.07);
+    g.append('path').datum(data).attr('d',line).attr('fill','none').attr('stroke',sr.color).attr('stroke-width',2.2);
+    data.forEach(dp=>{
+      g.append('circle').attr('cx',x(dp.t)).attr('cy',y(dp[sr.key])).attr('r',3)
+        .attr('fill',sr.color).attr('opacity',0.75)
+        .on('mousemove',evt=>showTip(evt,`<b>${sr.label}</b><br>${fmt(dp[sr.key])}<br>${dp.t.toLocaleDateString('es-ES')}`))
+        .on('mouseleave',hideTip);
+    });
+    const last = data[data.length-1];
+    let ly = y(last[sr.key]);
+    for (const prev of labelSlots) { if (Math.abs(ly-prev)<16) ly=prev-16; }
+    labelSlots.push(ly);
+    g.append('circle').attr('cx',w+10).attr('cy',ly).attr('r',4).attr('fill',sr.color);
+    g.append('text').attr('x',w+18).attr('y',ly+4).attr('fill',sr.color)
+      .style('font-size','11px').style('font-weight','600')
+      .text(`${sr.label}: ${fmt(last[sr.key])}`);
+  });
+  const tickCount = data.length > 14 ? d3.timeDay.every(2) : d3.timeDay.every(1);
+  g.append('g').attr('transform',`translate(0,${h})`)
+    .call(d3.axisBottom(x).ticks(tickCount).tickFormat(d3.timeFormat('%d/%m')))
+    .selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('~s')))
+    .selectAll('text').attr('fill',C.muted);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+}
+
+function drawMultiRating(d) {
+  if (!d.bubbles || !d.bubbles.length) return;
+  const svg = d3.select('#chart-multi-rating'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 300;
+  const m = {top:30, right:140, bottom:40, left:55};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+  const platforms = [
+    {key:'r', label:'Google', color:C.blue},
+    {key:'ta', label:'TripAdvisor', color:C.orange},
+    {key:'rg', label:'Rest. Guru', color:C.purple},
+  ];
+  const cityNames = ['Barcelona','Madrid','Valencia','Sevilla','Bilbao'];
+  const cityData = cityNames.map(city=>{
+    const subset = d.bubbles.filter(b=>b.c===city);
+    if (!subset.length) return null;
+    const row = {city, n:subset.length};
+    platforms.forEach(p=>{
+      const vals = subset.map(b=>b[p.key]).filter(v=>v!=null&&v>0);
+      row[p.key] = vals.length ? d3.mean(vals) : null;
+      row[p.key+'_n'] = vals.length;
+    });
+    return row;
+  }).filter(Boolean);
+  if (!cityData.length) return;
+  const xOuter = d3.scaleBand().domain(cityData.map(d=>d.city)).range([0,w]).padding(0.2);
+  const xInner = d3.scaleBand().domain(platforms.map(p=>p.key)).range([0,xOuter.bandwidth()]).padding(0.08);
+  const y = d3.scaleLinear().domain([3,5]).range([h,0]).clamp(true);
+  [3.5,4,4.5,5].forEach(v=>{
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(v)).attr('y2',y(v))
+      .attr('stroke',C.grid).attr('stroke-dasharray','2,2');
+  });
+  g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(4)).attr('y2',y(4))
+    .attr('stroke',C.muted).attr('stroke-dasharray','6,3').attr('opacity',0.4);
+  g.append('text').attr('x',w+4).attr('y',y(4)+4).attr('fill',C.muted).style('font-size','9px').text('4.0');
+  cityData.forEach(row=>{
+    platforms.forEach(p=>{
+      if (row[p.key]==null) return;
+      const bx = xOuter(row.city)+xInner(p.key), by = y(row[p.key]), bh = h-by;
+      g.append('rect').attr('x',bx).attr('y',by).attr('width',xInner.bandwidth()).attr('height',bh)
+        .attr('fill',p.color).attr('opacity',0.8).attr('rx',3)
+        .on('mousemove',evt=>showTip(evt,`<b>${row.city}</b> — ${p.label}<br>Avg: ${row[p.key].toFixed(2)} ★<br>${row[p.key+'_n']} companies`))
+        .on('mouseleave',hideTip);
+      g.append('text').attr('x',bx+xInner.bandwidth()/2).attr('y',by-3).attr('text-anchor','middle')
+        .text(row[p.key].toFixed(1)).attr('fill',p.color).style('font-size','9px').style('font-weight','600');
+    });
+  });
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xOuter))
+    .selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.append('g').call(d3.axisLeft(y).ticks(5)).selectAll('text').attr('fill',C.muted);
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  const leg = svg.append('g').attr('transform',`translate(${W-130},10)`);
+  platforms.forEach((p,i)=>{
+    leg.append('rect').attr('y',i*18).attr('width',10).attr('height',10).attr('fill',p.color).attr('rx',2);
+    leg.append('text').attr('x',14).attr('y',i*18+9).text(p.label).attr('fill',C.muted).style('font-size','10px');
+  });
+  const taN = d.bubbles.filter(b=>b.ta!=null&&b.ta>0).length;
+  const rgN = d.bubbles.filter(b=>b.rg!=null&&b.rg>0).length;
+  svg.append('text').attr('x',W-10).attr('y',H-5).attr('text-anchor','end')
+    .text(`TA: ${taN} companies | RG: ${rgN} companies`).attr('fill',C.muted).style('font-size','9px');
+}
+
+function drawServiceHeatmap(d) {
+  if (!d.bubbles || !d.bubbles.length) return;
+  const svg = d3.select('#chart-service-heatmap'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 340;
+  const m = {top:30, right:30, bottom:30, left:150};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+  const SVCS = [
+    {key:'dl',label:'Delivery'},{key:'to',label:'Takeout'},{key:'di',label:'Dine In'},
+    {key:'rs',label:'Reservable'},{key:'tr',label:'Outdoor / Terraza'},
+    {key:'gr',label:'Good for Groups'},{key:'ch',label:'Good for Children'},
+    {key:'vg',label:'Vegetarian'},{key:'bn',label:'Brunch'},
+    {key:'bf',label:'Breakfast'},{key:'lm',label:'Live Music'},{key:'st',label:'Sports'},
+  ];
+  const cities = ['Barcelona','Madrid','Valencia','Sevilla','Bilbao'];
+  const matrix = {};
+  SVCS.forEach(s=>{matrix[s.key]={};cities.forEach(c=>{matrix[s.key][c]=d.bubbles.filter(b=>b.c===c&&b[s.key]===1).length;});});
+  const maxVal = Math.max(1,...SVCS.flatMap(s=>cities.map(c=>matrix[s.key][c])));
+  const color = d3.scaleSequential(d3.interpolateYlOrRd).domain([0,maxVal]);
+  const x = d3.scaleBand().domain(cities).range([0,w]).padding(0.08);
+  const y = d3.scaleBand().domain(SVCS.map(s=>s.label)).range([0,h]).padding(0.08);
+  SVCS.forEach(s=>{
+    cities.forEach(city=>{
+      const val = matrix[s.key][city];
+      g.append('rect').attr('x',x(city)).attr('y',y(s.label))
+        .attr('width',x.bandwidth()).attr('height',y.bandwidth())
+        .attr('fill',val>0?color(val):C.grid).attr('rx',3)
+        .on('mousemove',evt=>showTip(evt,`<b>${s.label}</b> in ${city}<br>${val} companies`))
+        .on('mouseleave',hideTip)
+        .on('click',()=>showDrillDown(`${s.label} — ${city}`,b=>b.c===city&&b[s.key]===1))
+        .attr('class','seg-click');
+      if (val>0) g.append('text').attr('x',x(city)+x.bandwidth()/2).attr('y',y(s.label)+y.bandwidth()/2+4)
+        .attr('text-anchor','middle').text(val).attr('fill',val>maxVal*0.6?'#0d1117':C.text)
+        .style('font-size','11px').style('font-weight','600').style('pointer-events','none');
+    });
+  });
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).tickSize(0))
+    .selectAll('text').attr('fill',C.muted).style('font-size','11px');
+  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain').remove();
+  svg.append('text').attr('x',W-10).attr('y',H-5).attr('text-anchor','end')
+    .text(`Sample: ${d.bubbles.length} enriched companies`).attr('fill',C.muted).style('font-size','9px');
+}
+
 // === SALES INTEL FUNCTIONS ===
 
 function updatePmfKPIs(d) {
@@ -2956,7 +3250,9 @@ function drawOppHeatmap(d) {
 
 function updateCRM(d) {
   updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d);
+  drawContactCities(d); drawContactCityAssets(d);
   drawFieldCompleteness(d); drawServices(d); drawBudget(d);
+  drawEnrichVelocity(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
   if (window.contact4dReady) window.updateContact4D(d);
@@ -2978,6 +3274,7 @@ function updateBI(d) {
     drawSentimentComplaints, drawComplaintPrice,
     drawCrmValue, drawPowerLaw, drawTypeLandscape, drawReviewVelocity,
     drawCorrelation, drawEvolution,
+    drawMultiRating, drawServiceHeatmap,
   ];
   biCharts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
 }
