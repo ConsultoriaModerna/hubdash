@@ -2807,58 +2807,98 @@ function drawEnrichVelocity(d) {
     return;
   }
   const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 320;
-  const m = {top:20, right:170, bottom:40, left:55};
+  const W = rect.width, H = 340;
+  const m = {top:20, right:180, bottom:40, left:55};
   const w = W-m.left-m.right, h = H-m.top-m.bottom;
   const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
-  const series = [
-    {key:'domain_finder',label:'Domain Finder',color:'#58a6ff'},
-    {key:'gp_enriched',label:'GP Enriched',color:C.orange},
-    {key:'ta_enriched',label:'TripAdvisor',color:'#00aa6c'},
-    {key:'rg_enriched',label:'Rest. Guru',color:'#ce4257'},
+
+  // Two groups: scraping (large scale) and enrichment (smaller scale)
+  const scrapeSeries = [
     {key:'ws_scraped',label:'WS Scraped',color:C.yellow},
     {key:'ws_emails',label:'WS Emails',color:C.green},
     {key:'ws_instagram',label:'WS Instagram',color:'#e1306c'},
   ];
+  const enrichSeries = [
+    {key:'gp_enriched',label:'GP Enriched',color:C.orange},
+    {key:'domain_finder',label:'Domain Finder',color:'#58a6ff'},
+    {key:'ta_enriched',label:'TripAdvisor',color:'#00aa6c'},
+    {key:'rg_enriched',label:'Rest. Guru',color:'#ce4257'},
+  ];
+  const allSeries = [...scrapeSeries, ...enrichSeries];
+
   const data = snaps.map(s=>{
     const row = {t:new Date(s.ts.replace(' ','T'))};
-    series.forEach(sr=>{row[sr.key]=s[sr.key]||0;});
+    allSeries.forEach(sr=>{row[sr.key]=s[sr.key]||0;});
     return row;
   });
+
   const x = d3.scaleTime().domain(d3.extent(data,d=>d.t)).range([0,w]);
-  const maxY = d3.max(series.flatMap(sr=>data.map(d=>d[sr.key])))||1;
-  const y = d3.scaleLinear().domain([0,maxY*1.1]).range([h,0]);
-  y.ticks(5).forEach(tick=>{
-    g.append('line').attr('x1',0).attr('x2',w).attr('y1',y(tick)).attr('y2',y(tick))
+
+  // Left Y axis: scrape series (large numbers)
+  const maxL = d3.max(scrapeSeries.flatMap(sr=>data.map(d=>d[sr.key])))||1;
+  const yL = d3.scaleLinear().domain([0,maxL*1.1]).range([h,0]);
+
+  // Right Y axis: enrichment series (smaller numbers)
+  const maxR = d3.max(enrichSeries.flatMap(sr=>data.map(d=>d[sr.key])))||1;
+  const yR = d3.scaleLinear().domain([0,maxR*1.15]).range([h,0]);
+
+  // Grid lines from left axis
+  yL.ticks(5).forEach(tick=>{
+    g.append('line').attr('x1',0).attr('x2',w).attr('y1',yL(tick)).attr('y2',yL(tick))
       .attr('stroke',C.grid).attr('stroke-dasharray','2,2');
   });
+
+  // Draw scrape series (left Y)
   const labelSlots = [];
-  series.forEach(sr=>{
-    const line = d3.line().x(d=>x(d.t)).y(d=>y(d[sr.key])).curve(d3.curveMonotoneX);
-    const area = d3.area().x(d=>x(d.t)).y0(h).y1(d=>y(d[sr.key])).curve(d3.curveMonotoneX);
-    g.append('path').datum(data).attr('d',area).attr('fill',sr.color).attr('opacity',0.07);
-    g.append('path').datum(data).attr('d',line).attr('fill','none').attr('stroke',sr.color).attr('stroke-width',2.2);
+  function drawSeries(sr, yScale, dashed) {
+    const line = d3.line().x(d=>x(d.t)).y(d=>yScale(d[sr.key])).curve(d3.curveMonotoneX);
+    const area = d3.area().x(d=>x(d.t)).y0(h).y1(d=>yScale(d[sr.key])).curve(d3.curveMonotoneX);
+    g.append('path').datum(data).attr('d',area).attr('fill',sr.color).attr('opacity',0.05);
+    g.append('path').datum(data).attr('d',line).attr('fill','none').attr('stroke',sr.color)
+      .attr('stroke-width', dashed ? 1.8 : 2.2)
+      .attr('stroke-dasharray', dashed ? '6,3' : 'none');
     data.forEach(dp=>{
-      g.append('circle').attr('cx',x(dp.t)).attr('cy',y(dp[sr.key])).attr('r',3)
-        .attr('fill',sr.color).attr('opacity',0.75)
+      g.append('circle').attr('cx',x(dp.t)).attr('cy',yScale(dp[sr.key])).attr('r',2.5)
+        .attr('fill',sr.color).attr('opacity',0.7)
         .on('mousemove',evt=>showTip(evt,`<b>${sr.label}</b><br>${fmt(dp[sr.key])}<br>${dp.t.toLocaleDateString('es-ES')}`))
         .on('mouseleave',hideTip);
     });
     const last = data[data.length-1];
-    let ly = y(last[sr.key]);
-    for (const prev of labelSlots) { if (Math.abs(ly-prev)<16) ly=prev-16; }
+    let ly = yScale(last[sr.key]);
+    for (const prev of labelSlots) { if (Math.abs(ly-prev)<14) ly=prev-14; }
     labelSlots.push(ly);
     g.append('circle').attr('cx',w+10).attr('cy',ly).attr('r',4).attr('fill',sr.color);
     g.append('text').attr('x',w+18).attr('y',ly+4).attr('fill',sr.color)
-      .style('font-size','11px').style('font-weight','600')
+      .style('font-size','10.5px').style('font-weight','600')
       .text(`${sr.label}: ${fmt(last[sr.key])}`);
-  });
+  }
+
+  // Draw scrape series with left Y (solid lines)
+  scrapeSeries.forEach(sr => drawSeries(sr, yL, false));
+  // Draw enrichment series with right Y (dashed lines to distinguish scale)
+  enrichSeries.forEach(sr => drawSeries(sr, yR, true));
+
+  // X axis
   const tickCount = data.length > 14 ? d3.timeDay.every(2) : d3.timeDay.every(1);
   g.append('g').attr('transform',`translate(0,${h})`)
     .call(d3.axisBottom(x).ticks(tickCount).tickFormat(d3.timeFormat('%d/%m')))
     .selectAll('text').attr('fill',C.muted).style('font-size','10px');
-  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('~s')))
+
+  // Left Y axis (scraping)
+  g.append('g').call(d3.axisLeft(yL).ticks(5).tickFormat(d3.format('~s')))
     .selectAll('text').attr('fill',C.muted);
+
+  // Right Y axis (enrichment)
+  g.append('g').attr('transform',`translate(${w},0)`)
+    .call(d3.axisRight(yR).ticks(5).tickFormat(d3.format('~s')))
+    .selectAll('text').attr('fill',C.dim);
+
+  // Axis labels
+  g.append('text').attr('x',-10).attr('y',-8).attr('fill',C.muted)
+    .style('font-size','9px').text('Scraping \u2190');
+  g.append('text').attr('x',w-5).attr('y',-8).attr('fill',C.dim).attr('text-anchor','end')
+    .style('font-size','9px').text('\u2192 Enrichment');
+
   g.selectAll('.domain,.tick line').attr('stroke',C.border);
 }
 
