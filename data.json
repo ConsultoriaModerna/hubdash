@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-26T11:42:35",
-  "fetch_seconds": 94.3,
+  "generated_at": "2026-04-26T14:39:14",
+  "fetch_seconds": 103.3,
   "summary": {
     "companies_total": 74947,
     "contacts_total": 67090,
@@ -120,16 +120,16 @@
     "total": 67090,
     "has_mobile": 18611,
     "has_mobile_email": 13964,
-    "has_mobile_valid_email": 0,
-    "has_mobile_valid_company": 0
+    "has_mobile_valid_email": 12149,
+    "has_mobile_valid_company": 11208
   },
   "mv_email_dist": {
-    "valid": 0,
+    "ok": 32656,
     "invalid": 9032,
     "catch_all": 2816,
     "unknown": 2408,
     "disposable": 7,
-    "not_verified": 52827
+    "not_verified": 20171
   },
   "mountain": {
     "cities": [
@@ -611,16 +611,16 @@
       "id": "428050798825",
       "n": "El Botánico",
       "r": 4.4,
-      "rv": 36358,
+      "rv": 36366,
       "s": 0,
       "c": "Madrid",
       "ct": 1,
-      "se": "",
+      "se": "Pos",
       "pl": "",
       "tc": "",
       "tp": "Botanical Garden",
-      "la": null,
-      "ln": null,
+      "la": 40.4111,
+      "ln": -3.6911,
       "ta": null,
       "rg": null,
       "em": 0,
@@ -7430,16 +7430,16 @@
       "id": "428006780108",
       "n": "Cala Bandida",
       "r": 4.1,
-      "rv": 6491,
+      "rv": 6492,
       "s": 0,
       "c": "Jávea",
       "ct": 1,
-      "se": "",
-      "pl": "2",
+      "se": "Pos",
+      "pl": "$$",
       "tc": "",
       "tp": "Mediterranean Restaurant",
-      "la": null,
-      "ln": null,
+      "la": 38.7963,
+      "ln": 0.1837,
       "ta": null,
       "rg": null,
       "em": 0,
@@ -13717,16 +13717,16 @@
       "id": "428056143067",
       "n": "Arzábal",
       "r": 4.1,
-      "rv": 4580,
+      "rv": 4581,
       "s": 0,
       "c": "Madrid",
       "ct": 1,
-      "se": "",
-      "pl": "3",
+      "se": "Pos",
+      "pl": "$$$",
       "tc": "",
       "tp": "Mediterranean Restaurant",
-      "la": null,
-      "ln": null,
+      "la": 40.4204,
+      "ln": -3.6793,
       "ta": null,
       "rg": null,
       "em": 0,
@@ -13756,7 +13756,8 @@
       "nf": 0,
       "desc": 0,
       "sg": [
-        "terraza"
+        "terraza",
+        "premium_buy"
       ]
     },
     {
@@ -16296,16 +16297,16 @@
       "id": "427983229164",
       "n": "El Gallo Ronco",
       "r": 4.3,
-      "rv": 4180,
+      "rv": 4181,
       "s": 0,
       "c": "Málaga",
       "ct": 1,
-      "se": "",
-      "pl": "2",
-      "tc": "",
+      "se": "Pos",
+      "pl": "$$",
+      "tc": "Slow Service",
       "tp": "Spanish Restaurant",
-      "la": null,
-      "ln": null,
+      "la": 36.7206,
+      "ln": -4.4221,
       "ta": null,
       "rg": null,
       "em": 0,
@@ -16335,6 +16336,7 @@
       "nf": 0,
       "desc": 1,
       "sg": [
+        "slow_service",
         "delivery_void",
         "terraza"
       ]
@@ -16824,12 +16826,12 @@
       "s": 0,
       "c": "Santa Ponsa",
       "ct": 1,
-      "se": "",
-      "pl": "2",
+      "se": "Pos",
+      "pl": "$$",
       "tc": "",
       "tp": "Restaurant",
-      "la": null,
-      "ln": null,
+      "la": 39.5133,
+      "ln": 2.478,
       "ta": null,
       "rg": null,
       "em": 0,
@@ -24160,14 +24162,14 @@
     "companies": {
       "name": 74930,
       "phone": 48476,
-      "domain": 35795,
-      "website": 35829,
+      "domain": 36521,
+      "website": 36555,
       "city": 71369,
       "address": 66812,
       "industry": 34701,
       "google_place_id": 23108,
       "gp__rating_count": 4452,
-      "gp__sentiment": 4441,
+      "gp__sentiment": 4472,
       "num_associated_contacts": 74947,
       "description": 28513,
       "country": 73864
@@ -24318,15 +24320,15 @@
     "4.5-5": 1549
   },
   "sentiment_dist": {
-    "Positive": 3274,
-    "Neutral": 861,
-    "Negative": 306
+    "Positive": 3301,
+    "Neutral": 863,
+    "Negative": 308
   },
   "price_dist": {
     "Free": 0,
-    "$": 452,
-    "$$": 320,
-    "$$$": 52,
+    "$": 456,
+    "$$": 337,
+    "$$$": 55,
     "$$$$": 7
   },
   "snapshots": [
@@ -24569,11 +24571,23 @@
       "ws_instagram": 8622,
       "contacts_mobile": 18611,
       "contacts_email": 38305
+    },
+    {
+      "ts": "2026-04-26 14:34",
+      "website": 36554,
+      "phone": 48476,
+      "domain": 36520,
+      "gp_enriched": 4452,
+      "ws_scraped": 28540,
+      "ws_emails": 8253,
+      "ws_instagram": 8622,
+      "contacts_mobile": 18611,
+      "contacts_email": 38305
     }
   ],
   "reachability_funnel": {
     "total": 74947,
-    "has_website": 35829,
+    "has_website": 36555,
     "ws_scraped": 28540,
     "ws_email_found": 8253,
     "ws_instagram": 8622,
@@ -24603,7 +24617,7 @@
       "icon": "🐌",
       "desc": "Complaint #1: Slow Service — oportunidad POS, formación, gestión cocina",
       "color": "#f0883e",
-      "count": 224,
+      "count": 225,
       "cities": {
         "Madrid": 79,
         "Barcelona": 74,
@@ -24615,6 +24629,7 @@
         "Malaga": 5,
         "Murcia": 2,
         "Bilbo": 2,
+        "Málaga": 2,
         "Mogan (Capital Munic": 1,
         "Paris": 1,
         "Bilbao": 1,
@@ -24627,7 +24642,6 @@
         "Bogotá": 1,
         "Lo Pagán": 1,
         "Gijón": 1,
-        "Málaga": 1,
         "Lleida": 1,
         "San Cristóbal de La ": 1,
         "Mataró": 1,
@@ -24636,7 +24650,7 @@
         "León": 1
       },
       "avg_rating": 4.37,
-      "avg_score": 92.2
+      "avg_score": 91.8
     },
     {
       "id": "pricing_pain",
@@ -24897,9 +24911,9 @@
       "icon": "💎",
       "desc": "Nivel $$$/$$$$ — pueden pagar cualquier servicio premium",
       "color": "#58a6ff",
-      "count": 63,
+      "count": 64,
       "cities": {
-        "Madrid": 29,
+        "Madrid": 30,
         "Barcelona": 19,
         "València": 5,
         "Sevilla": 2,
@@ -24913,7 +24927,7 @@
         "Malaga": 1
       },
       "avg_rating": 4.29,
-      "avg_score": 76.4
+      "avg_score": 75.2
     },
     {
       "id": "no_reserv",
@@ -25062,15 +25076,15 @@
       "product": "Integración Glovo / UberEats / JustEat",
       "who_signs": "Propietario",
       "timing": "autumn",
-      "count": 377,
-      "avg_score": 57.1,
+      "count": 380,
+      "avg_score": 57.0,
       "cities": {
         "Barcelona": 116,
         "Madrid": 138,
         "Valencia": 12,
         "Sevilla": 24,
         "Bilbao": 3,
-        "Other": 84
+        "Other": 87
       },
       "top_ids": [
         "9919895779",
@@ -25112,15 +25126,15 @@
       "product": "Ingredientes premium, proveedores orgánicos",
       "who_signs": "Chef / Propietario",
       "timing": "spring_autumn",
-      "count": 338,
+      "count": 342,
       "avg_score": 69.7,
       "cities": {
         "Barcelona": 106,
-        "Madrid": 133,
+        "Madrid": 134,
         "Valencia": 12,
         "Sevilla": 19,
         "Bilbao": 2,
-        "Other": 66
+        "Other": 69
       },
       "top_ids": [
         "428057841901",
@@ -25137,7 +25151,7 @@
       "product": "Formación en servicio, consultoría hostelera",
       "who_signs": "Director General / RRHH",
       "timing": "feb_sept",
-      "count": 274,
+      "count": 275,
       "avg_score": 62.9,
       "cities": {
         "Barcelona": 82,
@@ -25145,7 +25159,7 @@
         "Valencia": 10,
         "Sevilla": 19,
         "Bilbao": 1,
-        "Other": 64
+        "Other": 65
       },
       "top_ids": [
         "9921922770",
@@ -30287,7 +30301,7 @@
         "zip": "",
         "ph": "937 43 03 58",
         "r": 4.6,
-        "rv": 1268,
+        "rv": 1270,
         "s": 0,
         "wb": 1,
         "dm": "amorino.com",

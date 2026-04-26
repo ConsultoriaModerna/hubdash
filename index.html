@@ -3003,8 +3003,8 @@ function drawMvEmail(d) {
   const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
   const entries = Object.entries(d.mv_email_dist).filter(([,v])=>v>0);
   if (!entries.length) return;
-  const colorMap = {valid:C.green, invalid:C.red, catch_all:C.yellow, unknown:C.muted, disposable:'#f85149', not_verified:C.dim};
-  const labelMap = {valid:'Valid',invalid:'Invalid',catch_all:'Catch-All',unknown:'Unknown',disposable:'Disposable',not_verified:'Not Verified'};
+  const colorMap = {ok:C.green, invalid:C.red, catch_all:C.yellow, unknown:C.muted, disposable:'#f85149', not_verified:C.dim};
+  const labelMap = {ok:'Valid (OK)',invalid:'Invalid',catch_all:'Catch-All',unknown:'Unknown',disposable:'Disposable',not_verified:'Not Verified'};
   const total = d3.sum(entries, ([,v])=>v);
   const pie = d3.pie().value(d=>d[1]).sort(null);
   const arc = d3.arc().innerRadius(radius*0.55).outerRadius(radius);
