@@ -10,7 +10,8 @@
 {
   "imports": {
     "three": "https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160/examples/jsm/"
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160/examples/jsm/",
+    "@observablehq/plot": "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm"
   }
 }
 </script>
@@ -21,7 +22,17 @@
   --red: #f85149; --orange: #f0883e; --yellow: #d29922;
   --green: #3fb950; --cyan: #39d353; --blue: #58a6ff; --purple: #bc8cff;
   --teal: #2ea043;
+  --plot-background: transparent;
 }
+/* Observable Plot dark theme */
+figure[class^="plot-"] { margin:0; }
+[class^="plot-"] text, [class^="plot-"] tspan { fill: var(--muted); }
+[class^="plot-"] [aria-label*="axis"] text { fill: var(--dim); font-size: 11px; }
+[class^="plot-"] [aria-label="tip"] rect { fill: #1c2128; stroke: var(--border); }
+[class^="plot-"] [aria-label="tip"] text { fill: var(--text); font-size: 11px; }
+[class^="plot-"] line[aria-label="crosshair"] { stroke: var(--muted); stroke-dasharray: 3,3; }
+[class^="plot-"] [aria-label*="grid"] line { stroke: var(--grid); }
+[class^="plot-"] [aria-label*="axis"] line, [class^="plot-"] [aria-label*="axis"] path { stroke: var(--border); }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -273,7 +284,7 @@ svg text { fill: var(--muted); font-size: 11px; }
 
   <div class="panel">
     <div class="panel-title"><span class="panel-id">01</span>Data Score Distribution</div>
-    <svg id="chart-scores" width="100%" height="260"></svg>
+    <div id="chart-scores"></div>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">02</span>Enrichment Pipeline</div>
@@ -359,11 +370,11 @@ svg text { fill: var(--muted); font-size: 11px; }
   <div class="section-divider"><span>Quality & Ratings</span></div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">08</span>Rating Distribution (Enriched)</div>
-    <svg id="chart-ratings" width="100%" height="260"></svg>
+    <div id="chart-ratings"></div>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">09</span>Opportunity Matrix — Rating × Contacts</div>
-    <svg id="chart-opportunity" width="100%" height="300"></svg>
+    <div id="chart-opportunity"></div>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">10</span>Review Gravity — Volume vs Rating</div>
@@ -470,7 +481,7 @@ svg text { fill: var(--muted); font-size: 11px; }
   <div class="section-divider"><span>Correlation & Evolution</span></div>
   <div class="panel panel-full">
     <div class="panel-title"><span class="panel-id">32</span>Cross-Signal Correlation Matrix</div>
-    <svg id="chart-correlation" width="100%" height="400"></svg>
+    <div id="chart-correlation"></div>
   </div>
   <div class="panel panel-full">
     <div class="panel-title"><span class="panel-id">33</span>Enrichment Evolution — Field Coverage Over Time</div>
@@ -485,7 +496,7 @@ svg text { fill: var(--muted); font-size: 11px; }
   </div>
   <div class="panel panel-full">
     <div class="panel-title"><span class="panel-id">43</span>Service Heatmap — Capability × City</div>
-    <svg id="chart-service-heatmap" width="100%" height="340"></svg>
+    <div id="chart-service-heatmap"></div>
   </div>
 
   <!-- ── Tactical Intelligence ── -->
@@ -603,6 +614,8 @@ const SCORE_COLORS = [C.red, C.orange, C.yellow, C.green, C.cyan];
 const BUCKET_LABELS = ['0-29', '30-49', '50-69', '70-89', '90-100'];
 
 window.DATA = null;
+let Plot = null;
+const PlotReady = import("https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm").then(m => { Plot = m; console.log('Observable Plot loaded'); }).catch(e => console.warn('Plot load failed:', e));
 const HS_PORTAL = '139994805';
 const HS_BASE_URL = `https://app-eu1.hubspot.com/contacts/${HS_PORTAL}`;
 function hsUrl(type, id) { return `${HS_BASE_URL}/${type}/${id}`; }
@@ -760,37 +773,37 @@ function updateKPIs(d) {
 }
 
 function drawScores(d) {
-  const svg = d3.select('#chart-scores'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 260;
-  const m = {top: 20, right: 20, bottom: 40, left: 55};
-  const w = W - m.left - m.right, h = H - m.top - m.bottom;
-  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
-  const coVals = BUCKET_LABELS.map(k => d.scores.companies[k] || 0);
-  const ctVals = BUCKET_LABELS.map(k => d.scores.contacts[k] || 0);
-  const maxVal = d3.max([...coVals, ...ctVals]);
-  const x = d3.scaleBand().domain(BUCKET_LABELS).range([0, w]).padding(0.3);
-  const y = d3.scaleLinear().domain([0, maxVal * 1.1]).range([h, 0]);
-  const barW = x.bandwidth() / 2 - 2;
-  g.selectAll('.grid').data(y.ticks(5)).enter().append('line')
-    .attr('x1',0).attr('x2',w).attr('y1',d=>y(d)).attr('y2',d=>y(d)).attr('stroke',C.grid).attr('stroke-dasharray','2,2');
-  g.selectAll('.bar-co').data(coVals).enter().append('rect')
-    .attr('x',(d,i)=>x(BUCKET_LABELS[i])).attr('y',d=>y(d)).attr('width',barW).attr('height',d=>h-y(d))
-    .attr('fill',(d,i)=>SCORE_COLORS[i]).attr('opacity',0.9).attr('rx',3)
-    .on('mousemove',(evt,d)=>{const i=coVals.indexOf(d);showTip(evt,`<b>Companies ${BUCKET_LABELS[i]}</b><br>${fmt(d)}<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`);}).on('mouseleave',hideTip)
-    .on('click',(evt,d)=>{const i=coVals.indexOf(d);const ranges=[[0,30],[30,50],[50,70],[70,90],[90,101]];const[lo,hi]=ranges[i];showDrillDown(`Score ${BUCKET_LABELS[i]} — Companies`,b=>b.s>=lo&&b.s<hi);}).attr('class','seg-click');
-  g.selectAll('.bar-ct').data(ctVals).enter().append('rect')
-    .attr('x',(d,i)=>x(BUCKET_LABELS[i])+barW+4).attr('y',d=>y(d)).attr('width',barW).attr('height',d=>h-y(d))
-    .attr('fill',(d,i)=>SCORE_COLORS[i]).attr('opacity',0.5).attr('rx',3)
-    .on('mousemove',(evt,d)=>{const i=ctVals.indexOf(d);showTip(evt,`<b>Contacts ${BUCKET_LABELS[i]}</b><br>${fmt(d)}`);}).on('mouseleave',hideTip);
-  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
-  g.selectAll('.domain,.tick line').attr('stroke',C.border);
-  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('~s'))).selectAll('text').attr('fill',C.muted);
-  const leg = svg.append('g').attr('transform',`translate(${m.left+10},12)`);
-  leg.append('rect').attr('width',10).attr('height',10).attr('fill',C.blue).attr('rx',2);
-  leg.append('text').attr('x',14).attr('y',9).text('Companies').attr('fill',C.muted).style('font-size','10px');
-  leg.append('rect').attr('x',90).attr('width',10).attr('height',10).attr('fill',C.purple).attr('opacity',0.5).attr('rx',2);
-  leg.append('text').attr('x',104).attr('y',9).text('Contacts').attr('fill',C.muted).style('font-size','10px');
+  const el = document.getElementById('chart-scores'); el.innerHTML = '';
+  if (!Plot) return;
+  const ranges = [[0,30],[30,50],[50,70],[70,90],[90,101]];
+  const data = BUCKET_LABELS.flatMap((label, i) => [
+    {bucket: label, type: 'Companies', value: d.scores.companies[label] || 0, idx: i, lo: ranges[i][0], hi: ranges[i][1]},
+    {bucket: label, type: 'Contacts', value: d.scores.contacts[label] || 0, idx: i, lo: ranges[i][0], hi: ranges[i][1]},
+  ]);
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 260,
+    marginLeft: 55, marginBottom: 35,
+    fx: {label: null, domain: BUCKET_LABELS, padding: 0.3},
+    x: {label: null, domain: ['Companies','Contacts'], axis: null, padding: 0.1},
+    y: {label: null, tickFormat: "~s", grid: true},
+    color: {domain: ['Companies','Contacts'], range: [C.blue, C.purple], legend: true},
+    marks: [
+      Plot.barY(data, {
+        fx: "bucket", x: "type", y: "value", fill: "type",
+        opacity: r => r.type === 'Contacts' ? 0.5 : 0.9,
+        tip: true,
+      }),
+      Plot.ruleY([0]),
+    ]
+  });
+  el.append(chart);
+  // Add drill-down click on company bars
+  d3.select(el).selectAll('rect').on('click', function() {
+    const datum = d3.select(this).datum();
+    if (datum && datum.type === 'Companies') {
+      showDrillDown(`Score ${datum.bucket} — Companies`, b => b.s >= datum.lo && b.s < datum.hi);
+    }
+  }).filter(r => r && r.type === 'Companies').classed('seg-click', true);
 }
 
 function drawPipeline(d) {
@@ -994,34 +1007,38 @@ function drawBudget(d) {
 
 function drawRatings(d) {
   if (!d.ratings_dist) return;
-  const svg = d3.select('#chart-ratings'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 260;
-  const m = {top: 20, right: 20, bottom: 40, left: 55};
-  const w = W - m.left - m.right, h = H - m.top - m.bottom;
-  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+  const el = document.getElementById('chart-ratings'); el.innerHTML = '';
+  if (!Plot) return;
   const labels = Object.keys(d.ratings_dist);
-  const vals = labels.map(k => d.ratings_dist[k]);
-  const colors = [C.red, C.orange, C.yellow, C.green, C.cyan];
-  const x = d3.scaleBand().domain(labels).range([0, w]).padding(0.25);
-  const y = d3.scaleLinear().domain([0, d3.max(vals) * 1.15]).range([h, 0]);
-  g.selectAll('.grid').data(y.ticks(5)).enter().append('line')
-    .attr('x1',0).attr('x2',w).attr('y1',d=>y(d)).attr('y2',d=>y(d)).attr('stroke',C.grid).attr('stroke-dasharray','2,2');
-  g.selectAll('.bar').data(vals).enter().append('rect')
-    .attr('x',(d,i) => x(labels[i])).attr('y', d => y(d)).attr('width', x.bandwidth()).attr('height', d => h - y(d))
-    .attr('fill',(d,i) => colors[i]).attr('rx', 4).attr('opacity', 0.85)
-    .on('mousemove',(evt,d) => { const i = vals.indexOf(d); showTip(evt, `<b>Rating ${labels[i]}</b><br>${fmt(d)} companies<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`); })
-    .on('mouseleave', hideTip)
-    .on('click',(evt,d) => { const i=vals.indexOf(d);const ranges=[[0,3],[3,3.5],[3.5,4],[4,4.5],[4.5,5.1]];const[lo,hi]=ranges[i];showDrillDown(`Rating ${labels[i]}`,b=>b.r>=lo&&b.r<hi); }).attr('class','seg-click');
-  g.selectAll('.val').data(vals).enter().append('text')
-    .attr('x',(d,i) => x(labels[i]) + x.bandwidth()/2).attr('y', d => y(d) - 5)
-    .attr('text-anchor','middle').text(d => fmt(d)).attr('fill',C.text).style('font-size','11px').style('font-weight','600');
-  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
-  g.selectAll('.domain,.tick line').attr('stroke',C.border);
-  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('~s'))).selectAll('text').attr('fill',C.muted);
-  const total = d3.sum(vals);
-  svg.append('text').attr('x', W - 10).attr('y', 14).attr('text-anchor','end')
-    .text(`${fmt(total)} enriched`).attr('fill',C.muted).style('font-size','10px');
+  const rColors = [C.red, C.orange, C.yellow, C.green, C.cyan];
+  const ranges = [[0,3],[3,3.5],[3.5,4],[4,4.5],[4.5,5.1]];
+  const data = labels.map((label, i) => ({
+    label, value: d.ratings_dist[label], color: rColors[i], lo: ranges[i][0], hi: ranges[i][1]
+  }));
+  const total = d3.sum(data, r => r.value);
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 260,
+    marginLeft: 55, marginBottom: 35,
+    x: {label: null, domain: labels, padding: 0.25},
+    y: {label: null, tickFormat: "~s", grid: true},
+    color: {domain: labels, range: rColors},
+    marks: [
+      Plot.barY(data, {
+        x: "label", y: "value", fill: "label",
+        opacity: 0.85, rx: 4,
+        tip: true,
+      }),
+      Plot.text(data, {x: "label", y: "value", text: r => fmt(r.value), dy: -8, fill: C.text, fontSize: 11, fontWeight: 600}),
+      Plot.ruleY([0]),
+      Plot.text([`${fmt(total)} enriched`], {frameAnchor: "top-right", dx: -5, dy: 5, fill: C.muted, fontSize: 10}),
+    ]
+  });
+  el.append(chart);
+  // Drill-down click
+  d3.select(el).selectAll('rect').on('click', function() {
+    const datum = d3.select(this).datum();
+    if (datum && datum.lo != null) showDrillDown(`Rating ${datum.label}`, b => b.r >= datum.lo && b.r < datum.hi);
+  }).classed('seg-click', true);
 }
 
 function drawFieldCompleteness(d) {
@@ -1112,53 +1129,62 @@ function drawServices(d) {
 // ─── Chart 1: Opportunity Matrix ──────────────────────────────────────────
 function drawOpportunityMatrix(d) {
   if (!d.bubbles || !d.bubbles.length) return;
-  const svg = d3.select('#chart-opportunity'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 300;
-  const m = {top: 30, right: 20, bottom: 40, left: 90};
-  const w = W - m.left - m.right, h = H - m.top - m.bottom;
-  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+  const el = document.getElementById('chart-opportunity'); el.innerHTML = '';
+  if (!Plot) return;
 
   const rBands = [['<3',0,3],['3-3.5',3,3.5],['3.5-4',3.5,4],['4-4.5',4,4.5],['4.5-5',4.5,5.1]];
   const cBands = [['0 contacts',0,0],['1-3',1,3],['4-10',4,10],['10+',11,9999]];
   const rLabels = rBands.map(b=>b[0]), cLabels = cBands.map(b=>b[0]);
 
-  // Cross-tabulate
-  const matrix = cLabels.map(() => rLabels.map(() => 0));
+  // Cross-tabulate into flat array for Plot.cell
+  const cells = [];
   d.bubbles.forEach(b => {
     const ri = rBands.findIndex(([,lo,hi]) => b.r >= lo && b.r < hi);
     const ci = cBands.findIndex(([,lo,hi]) => b.ct >= lo && b.ct <= hi);
-    if (ri >= 0 && ci >= 0) matrix[ci][ri]++;
+    if (ri >= 0 && ci >= 0) {
+      const key = `${ri}-${ci}`;
+      let cell = cells.find(c => c.key === key);
+      if (!cell) { cell = {key, rating: rLabels[ri], contacts: cLabels[ci], count: 0, ri, ci, rlo: rBands[ri][1], rhi: rBands[ri][2], clo: cBands[ci][1], chi: cBands[ci][2]}; cells.push(cell); }
+      cell.count++;
+    }
   });
-  const maxVal = Math.max(1, ...matrix.flat());
+  // Fill empties
+  rLabels.forEach((rl,ri) => cLabels.forEach((cl,ci) => {
+    if (!cells.find(c => c.ri === ri && c.ci === ci)) cells.push({key:`${ri}-${ci}`, rating: rl, contacts: cl, count: 0, ri, ci, rlo: rBands[ri][1], rhi: rBands[ri][2], clo: cBands[ci][1], chi: cBands[ci][2]});
+  }));
 
-  const x = d3.scaleBand().domain(rLabels).range([0, w]).padding(0.08);
-  const y = d3.scaleBand().domain(cLabels).range([0, h]).padding(0.08);
-  const color = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, maxVal]);
-
-  cLabels.forEach((cl, ci) => {
-    rLabels.forEach((rl, ri) => {
-      const val = matrix[ci][ri];
-      const isGold = ri >= 3 && ci === 0 && val > 0; // high rating + 0 contacts
-      g.append('rect').attr('x', x(rl)).attr('y', y(cl))
-        .attr('width', x.bandwidth()).attr('height', y.bandwidth())
-        .attr('fill', val > 0 ? color(val) : '#161b22').attr('rx', 4)
-        .attr('stroke', isGold ? '#d29922' : 'none').attr('stroke-width', isGold ? 3 : 0)
-        .on('mousemove', evt => showTip(evt, `<b>Rating ${rl} / ${cl}</b><br>${val} companies${isGold ? '<br>⭐ Untapped opportunity!' : ''}<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
-        .on('mouseleave', hideTip)
-        .on('click', () => { const [,rlo,rhi]=rBands[ri]; const [,clo,chi]=cBands[ci]; showDrillDown(`Rating ${rl} / ${cl}`, b=>b.r>=rlo&&b.r<rhi&&b.ct>=clo&&b.ct<=chi); }).attr('class','seg-click');
-      if (val > 0) {
-        g.append('text').attr('x', x(rl) + x.bandwidth()/2).attr('y', y(cl) + y.bandwidth()/2)
-          .attr('text-anchor','middle').attr('dominant-baseline','middle')
-          .text(val).attr('fill', val > maxVal*0.6 ? '#000' : C.text).style('font-size','12px').style('font-weight','700');
-      }
-    });
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 300,
+    marginLeft: 90, marginBottom: 40, marginTop: 30,
+    x: {label: null, domain: rLabels, padding: 0.08},
+    y: {label: null, domain: cLabels, padding: 0.08},
+    color: {scheme: "YlOrRd", domain: [0, d3.max(cells, c=>c.count)], legend: false},
+    marks: [
+      Plot.cell(cells, {
+        x: "rating", y: "contacts", fill: c => c.count || null,
+        rx: 4,
+        tip: {format: {x: true, y: true, fill: false}, channels: {Companies: "count"}},
+      }),
+      Plot.text(cells.filter(c=>c.count>0), {
+        x: "rating", y: "contacts", text: c => String(c.count),
+        fill: c => c.count > d3.max(cells, c=>c.count)*0.6 ? '#000' : C.text,
+        fontSize: 12, fontWeight: 700,
+      }),
+      // Gold border for high rating + 0 contacts
+      Plot.cell(cells.filter(c => c.ri >= 3 && c.ci === 0 && c.count > 0), {
+        x: "rating", y: "contacts", fill: "none", stroke: C.yellow, strokeWidth: 3, rx: 4,
+      }),
+      Plot.text(["Gold border = high rating + 0 contacts = prospecting targets"], {
+        frameAnchor: "top", dy: -15, fill: C.yellow, fontSize: 10,
+      }),
+    ]
   });
-  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
-  g.append('g').call(d3.axisLeft(y)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
-  g.selectAll('.domain,.tick line').attr('stroke',C.border);
-  svg.append('text').attr('x',W/2).attr('y',16).attr('text-anchor','middle')
-    .text('⭐ Gold border = high rating + 0 contacts = prospecting targets').attr('fill',C.yellow).style('font-size','10px');
+  el.append(chart);
+  // Drill-down click on cells
+  d3.select(el).selectAll('rect[fill]:not([fill="none"])').on('click', function() {
+    const datum = d3.select(this).datum();
+    if (datum && datum.rlo != null) showDrillDown(`Rating ${datum.rating} / ${datum.contacts}`, b => b.r>=datum.rlo && b.r<datum.rhi && b.ct>=datum.clo && b.ct<=datum.chi);
+  }).classed('seg-click', true);
 }
 
 // ─── Chart 2: Sentiment × Complaints ─────────────────────────────────────
@@ -2587,13 +2613,9 @@ function drawReviewVelocity(d) {
 }
 
 function drawCorrelation(d) {
-  const svg = d3.select('#chart-correlation'); svg.selectAll('*').remove();
+  const el = document.getElementById('chart-correlation'); el.innerHTML = '';
   if (!d.bubbles || d.bubbles.length < 20) return;
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 400;
-  const m = {t:20, r:20, b:10, l:110};
-  const w = W - m.l - m.r, h = H - m.t - m.b;
-  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+  if (!Plot) return;
 
   const fields = [
     {key:'r', label:'Google Rating', fn: b=>b.r},
@@ -2604,12 +2626,11 @@ function drawCorrelation(d) {
     {key:'ta', label:'TA Rating', fn: b=>b.ta},
     {key:'rg', label:'RG Rating', fn: b=>b.rg},
   ];
+  const labels = fields.map(f => f.label);
 
-  // Compute Pearson correlation for each pair
   function pearson(xs, ys) {
     const pairs = xs.map((x,i) => [x, ys[i]]).filter(([x,y]) => x!=null && y!=null && !isNaN(x) && !isNaN(y));
     if (pairs.length < 5) return null;
-    const n = pairs.length;
     const mx = d3.mean(pairs, p=>p[0]), my = d3.mean(pairs, p=>p[1]);
     let num = 0, dx2 = 0, dy2 = 0;
     pairs.forEach(([x,y]) => { const dx=x-mx, dy=y-my; num+=dx*dy; dx2+=dx*dx; dy2+=dy*dy; });
@@ -2617,70 +2638,38 @@ function drawCorrelation(d) {
     return denom === 0 ? 0 : num/denom;
   }
 
-  const n = fields.length;
-  const matrix = fields.map((_,i) => fields.map((_,j) => {
-    if (i === j) return 1;
-    const xs = d.bubbles.map(fields[i].fn);
-    const ys = d.bubbles.map(fields[j].fn);
-    return pearson(xs, ys);
-  }));
-
-  const labels = fields.map(f => f.label);
-  const cellW = Math.min(w / n, h / n);
-  const gridW = cellW * n, gridH = cellW * n;
-  const offX = (w - gridW) / 2, offY = (h - gridH) / 2;
-
-  const color = d3.scaleLinear().domain([-1, 0, 1]).range([C.red, '#1c2128', C.green]);
-
+  // Build flat cell data for Plot
+  const cells = [];
   fields.forEach((fi, i) => {
     fields.forEach((fj, j) => {
-      const val = matrix[i][j];
-      if (val === null) {
-        g.append('rect').attr('x',offX+j*cellW).attr('y',offY+i*cellW).attr('width',cellW-2).attr('height',cellW-2)
-          .attr('fill',C.grid).attr('rx',3);
-        return;
-      }
-      g.append('rect').attr('x',offX+j*cellW).attr('y',offY+i*cellW).attr('width',cellW-2).attr('height',cellW-2)
-        .attr('fill',color(val)).attr('rx',3).attr('opacity',0.8)
-        .on('mousemove', evt => showTip(evt,
-          `<b>${fi.label} × ${fj.label}</b><br>r = ${val.toFixed(3)}<br>${Math.abs(val)>0.5?'<b>Strong</b>':Math.abs(val)>0.3?'Moderate':'Weak'} ${val>0?'positive':'negative'} correlation`))
-        .on('mouseleave', hideTip);
-
-      // Show value in cell
-      if (cellW > 30) {
-        g.append('text').attr('x',offX+j*cellW+cellW/2-1).attr('y',offY+i*cellW+cellW/2+4)
-          .attr('text-anchor','middle').attr('fill',Math.abs(val)>0.4?'#fff':C.muted)
-          .attr('font-size', cellW > 45 ? 11 : 8).attr('font-weight',Math.abs(val)>0.5?700:400)
-          .text(val.toFixed(2)).style('pointer-events','none');
-      }
+      const val = i === j ? 1 : pearson(d.bubbles.map(fi.fn), d.bubbles.map(fj.fn));
+      const strength = val == null ? 'N/A' : Math.abs(val)>0.5 ? 'Strong' : Math.abs(val)>0.3 ? 'Moderate' : 'Weak';
+      cells.push({row: fi.label, col: fj.label, r: val, strength, label: val != null ? val.toFixed(2) : ''});
     });
   });
 
-  // Row labels (left)
-  fields.forEach((f, i) => {
-    g.append('text').attr('x',offX-8).attr('y',offY+i*cellW+cellW/2+4).attr('text-anchor','end')
-      .attr('fill',C.text).attr('font-size',10).text(f.label);
+  const chart = Plot.plot({
+    width: el.clientWidth || 700, height: 400,
+    marginLeft: 110, marginBottom: 40, marginTop: 50,
+    x: {label: null, domain: labels, tickRotate: -35, tickSize: 0},
+    y: {label: null, domain: labels, tickSize: 0},
+    color: {type: "diverging", scheme: "RdYlGn", domain: [-1, 1], legend: true, label: "Pearson r", width: 200},
+    marks: [
+      Plot.cell(cells.filter(c => c.r != null), {
+        x: "col", y: "row", fill: "r", rx: 3, opacity: 0.8,
+        tip: {format: {fill: false}, channels: {"Correlation": c => c.r?.toFixed(3), "Strength": "strength"}},
+      }),
+      Plot.cell(cells.filter(c => c.r == null), {
+        x: "col", y: "row", fill: C.grid, rx: 3,
+      }),
+      Plot.text(cells.filter(c => c.r != null), {
+        x: "col", y: "row", text: "label",
+        fill: c => Math.abs(c.r) > 0.4 ? '#fff' : C.muted,
+        fontSize: 11, fontWeight: c => Math.abs(c.r) > 0.5 ? 700 : 400,
+      }),
+    ]
   });
-
-  // Column labels (top)
-  fields.forEach((f, j) => {
-    g.append('text').attr('x',offX+j*cellW+cellW/2).attr('y',offY-6).attr('text-anchor','middle')
-      .attr('fill',C.text).attr('font-size',9)
-      .attr('transform',`rotate(-35,${offX+j*cellW+cellW/2},${offY-6})`)
-      .text(f.label);
-  });
-
-  // Legend bar
-  const lgW = 150, lgH = 10;
-  const lgX = offX + gridW/2 - lgW/2, lgY = offY + gridH + 20;
-  const lgGrad = svg.append('defs').append('linearGradient').attr('id','corr-grad');
-  lgGrad.append('stop').attr('offset','0%').attr('stop-color',C.red);
-  lgGrad.append('stop').attr('offset','50%').attr('stop-color','#1c2128');
-  lgGrad.append('stop').attr('offset','100%').attr('stop-color',C.green);
-  g.append('rect').attr('x',lgX).attr('y',lgY).attr('width',lgW).attr('height',lgH).attr('fill','url(#corr-grad)').attr('rx',2);
-  g.append('text').attr('x',lgX).attr('y',lgY+lgH+12).attr('fill',C.red).attr('font-size',9).text('-1');
-  g.append('text').attr('x',lgX+lgW/2).attr('y',lgY+lgH+12).attr('text-anchor','middle').attr('fill',C.muted).attr('font-size',9).text('0');
-  g.append('text').attr('x',lgX+lgW).attr('y',lgY+lgH+12).attr('text-anchor','end').attr('fill',C.green).attr('font-size',9).text('+1');
+  el.append(chart);
 }
 
 // === END VANGUARD BI v3 ===
@@ -3050,12 +3039,9 @@ function drawMultiRating(d) {
 
 function drawServiceHeatmap(d) {
   if (!d.bubbles || !d.bubbles.length) return;
-  const svg = d3.select('#chart-service-heatmap'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 340;
-  const m = {top:30, right:30, bottom:30, left:150};
-  const w = W-m.left-m.right, h = H-m.top-m.bottom;
-  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+  const el = document.getElementById('chart-service-heatmap'); el.innerHTML = '';
+  if (!Plot) return;
+
   const SVCS = [
     {key:'dl',label:'Delivery'},{key:'to',label:'Takeout'},{key:'di',label:'Dine In'},
     {key:'rs',label:'Reservable'},{key:'tr',label:'Outdoor / Terraza'},
@@ -3064,33 +3050,49 @@ function drawServiceHeatmap(d) {
     {key:'bf',label:'Breakfast'},{key:'lm',label:'Live Music'},{key:'st',label:'Sports'},
   ];
   const cities = ['Barcelona','Madrid','Valencia','Sevilla','Bilbao'];
-  const matrix = {};
-  SVCS.forEach(s=>{matrix[s.key]={};cities.forEach(c=>{matrix[s.key][c]=d.bubbles.filter(b=>b.c===c&&b[s.key]===1).length;});});
-  const maxVal = Math.max(1,...SVCS.flatMap(s=>cities.map(c=>matrix[s.key][c])));
-  const color = d3.scaleSequential(d3.interpolateYlOrRd).domain([0,maxVal]);
-  const x = d3.scaleBand().domain(cities).range([0,w]).padding(0.08);
-  const y = d3.scaleBand().domain(SVCS.map(s=>s.label)).range([0,h]).padding(0.08);
-  SVCS.forEach(s=>{
-    cities.forEach(city=>{
-      const val = matrix[s.key][city];
-      g.append('rect').attr('x',x(city)).attr('y',y(s.label))
-        .attr('width',x.bandwidth()).attr('height',y.bandwidth())
-        .attr('fill',val>0?color(val):C.grid).attr('rx',3)
-        .on('mousemove',evt=>showTip(evt,`<b>${s.label}</b> in ${city}<br>${val} companies`))
-        .on('mouseleave',hideTip)
-        .on('click',()=>showDrillDown(`${s.label} — ${city}`,b=>b.c===city&&b[s.key]===1))
-        .attr('class','seg-click');
-      if (val>0) g.append('text').attr('x',x(city)+x.bandwidth()/2).attr('y',y(s.label)+y.bandwidth()/2+4)
-        .attr('text-anchor','middle').text(val).attr('fill',val>maxVal*0.6?'#0d1117':C.text)
-        .style('font-size','11px').style('font-weight','600').style('pointer-events','none');
+  const svcLabels = SVCS.map(s=>s.label);
+
+  // Build flat cells
+  const cells = [];
+  SVCS.forEach(s => {
+    cities.forEach(city => {
+      const count = d.bubbles.filter(b => b.c === city && b[s.key] === 1).length;
+      cells.push({service: s.label, city, count, svcKey: s.key});
     });
   });
-  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).tickSize(0))
-    .selectAll('text').attr('fill',C.muted).style('font-size','11px');
-  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
-  g.selectAll('.domain').remove();
-  svg.append('text').attr('x',W-10).attr('y',H-5).attr('text-anchor','end')
-    .text(`Sample: ${d.bubbles.length} enriched companies`).attr('fill',C.muted).style('font-size','9px');
+
+  const chart = Plot.plot({
+    width: el.clientWidth || 700, height: 340,
+    marginLeft: 150, marginBottom: 30, marginTop: 10,
+    x: {label: null, domain: cities, tickSize: 0},
+    y: {label: null, domain: svcLabels, tickSize: 0},
+    color: {scheme: "YlOrRd", domain: [0, d3.max(cells, c=>c.count)], legend: false},
+    marks: [
+      Plot.cell(cells, {
+        x: "city", y: "service", fill: c => c.count || null, rx: 3,
+        tip: {format: {fill: false}, channels: {Companies: "count"}},
+      }),
+      Plot.cell(cells.filter(c => c.count === 0), {
+        x: "city", y: "service", fill: C.grid, rx: 3,
+      }),
+      Plot.text(cells.filter(c => c.count > 0), {
+        x: "city", y: "service", text: c => String(c.count),
+        fill: c => c.count > d3.max(cells, c2=>c2.count)*0.6 ? '#0d1117' : C.text,
+        fontSize: 11, fontWeight: 600,
+      }),
+      Plot.text([`Sample: ${d.bubbles.length} enriched companies`], {
+        frameAnchor: "bottom-right", dx: -5, dy: -5, fill: C.muted, fontSize: 9,
+      }),
+    ]
+  });
+  el.append(chart);
+  // Drill-down click
+  d3.select(el).selectAll('rect[fill]:not([fill="none"])').each(function(datum) {
+    if (datum && datum.count > 0) {
+      d3.select(this).on('click', () => showDrillDown(`${datum.service} — ${datum.city}`, b => b.c === datum.city && b[datum.svcKey] === 1))
+        .classed('seg-click', true);
+    }
+  });
 }
 
 // === CHART 1: Golden Contacts Funnel (Panel 45) ===
@@ -4021,6 +4023,7 @@ async function loadData() {
     if (!resp || !resp.ok) resp = await fetch('data.json');
     window.DATA = await resp.json();
     _allBubbles = window.DATA.bubbles ? [...window.DATA.bubbles] : [];
+    await PlotReady;
     renderSegChips(window.DATA);
     updateAll(window.DATA);
     const ts = window.DATA.generated_at ? new Date(window.DATA.generated_at).toLocaleString('es-ES') : 'now';
