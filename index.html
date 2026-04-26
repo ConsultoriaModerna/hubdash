@@ -71,7 +71,27 @@ body {
 .panel-title {
   font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 12px;
   text-transform: uppercase; letter-spacing: 0.5px;
+  display: flex; align-items: center; gap: 6px;
 }
+.panel-title-text { flex: 1; }
+.panel-fav, .panel-note-btn {
+  cursor: pointer; font-size: 14px; color: var(--dim); transition: color 0.15s;
+  text-transform: none; letter-spacing: 0; user-select: none; flex-shrink: 0;
+}
+.panel-fav:hover { color: var(--yellow); }
+.panel-fav.active { color: var(--yellow); }
+.panel-note-btn:hover { color: var(--blue); }
+.panel-note-btn.has-note { color: var(--blue); }
+.panel-note-wrap {
+  margin: -8px 0 8px 0; padding: 0 4px;
+}
+.panel-note-wrap input {
+  width: 100%; background: var(--grid); border: 1px solid var(--border);
+  color: var(--text); font-size: 11px; padding: 4px 8px; border-radius: 4px;
+  font-family: inherit; outline: none;
+}
+.panel-note-wrap input:focus { border-color: var(--blue); }
+.panel-note-wrap input::placeholder { color: var(--dim); }
 .panel-full { grid-column: 1 / -1; }
 .mountain-controls { display: flex; gap: 8px; margin-bottom: 8px; }
 
@@ -3306,6 +3326,80 @@ async function loadData() {
     document.getElementById('sync-time').textContent = 'Error: ' + e.message;
   }
 }
+
+// === Panel Favorites & Notes ===
+function initPanelPrefs() {
+  const STOR_KEY = 'hubdash_panel_prefs';
+  let prefs;
+  try { prefs = JSON.parse(localStorage.getItem(STOR_KEY)) || {}; } catch(e) { prefs = {}; }
+  if (!prefs.fav) prefs.fav = {};
+  if (!prefs.notes) prefs.notes = {};
+  function save() { localStorage.setItem(STOR_KEY, JSON.stringify(prefs)); }
+
+  document.querySelectorAll('.panel-title').forEach(title => {
+    const idSpan = title.querySelector('.panel-id');
+    if (!idSpan) return;
+    const pid = idSpan.textContent.trim();
+
+    // Wrap text nodes in a flex span
+    const textWrap = document.createElement('span');
+    textWrap.className = 'panel-title-text';
+    const nodes = [...title.childNodes].filter(n => n !== idSpan);
+    nodes.forEach(n => textWrap.appendChild(n));
+    title.appendChild(textWrap);
+
+    // Star button
+    const star = document.createElement('span');
+    star.className = 'panel-fav' + (prefs.fav[pid] ? ' active' : '');
+    star.dataset.pid = pid;
+    star.textContent = prefs.fav[pid] ? '\u2605' : '\u2606';
+    star.title = 'Favorito';
+    star.onclick = (e) => {
+      e.stopPropagation();
+      prefs.fav[pid] = !prefs.fav[pid];
+      if (!prefs.fav[pid]) delete prefs.fav[pid];
+      star.classList.toggle('active', !!prefs.fav[pid]);
+      star.textContent = prefs.fav[pid] ? '\u2605' : '\u2606';
+      save();
+    };
+    title.appendChild(star);
+
+    // Note button
+    const noteBtn = document.createElement('span');
+    noteBtn.className = 'panel-note-btn' + (prefs.notes[pid] ? ' has-note' : '');
+    noteBtn.dataset.pid = pid;
+    noteBtn.textContent = '\u270E';
+    noteBtn.title = prefs.notes[pid] || 'Agregar nota';
+    title.appendChild(noteBtn);
+
+    // Note input (hidden)
+    const noteWrap = document.createElement('div');
+    noteWrap.className = 'panel-note-wrap';
+    noteWrap.style.display = prefs.notes[pid] ? 'block' : 'none';
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = 'Ej: \u00bfQu\u00e9 pregunta responde este panel?';
+    input.value = prefs.notes[pid] || '';
+    input.onblur = () => {
+      const val = input.value.trim();
+      if (val) { prefs.notes[pid] = val; noteBtn.classList.add('has-note'); }
+      else { delete prefs.notes[pid]; noteBtn.classList.remove('has-note'); noteWrap.style.display = 'none'; }
+      noteBtn.title = val || 'Agregar nota';
+      save();
+    };
+    input.onkeydown = (e) => { if (e.key === 'Enter') input.blur(); if (e.key === 'Escape') { input.value = prefs.notes[pid] || ''; input.blur(); } };
+    noteWrap.appendChild(input);
+    title.parentNode.insertBefore(noteWrap, title.nextSibling);
+
+    noteBtn.onclick = (e) => {
+      e.stopPropagation();
+      const showing = noteWrap.style.display !== 'none';
+      noteWrap.style.display = showing ? 'none' : 'block';
+      if (!showing) input.focus();
+    };
+  });
+}
+initPanelPrefs();
 
 loadData();
 let _resizeTimer;
