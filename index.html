@@ -2807,12 +2807,15 @@ function drawEnrichVelocity(d) {
     return;
   }
   const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 280;
-  const m = {top:20, right:160, bottom:40, left:55};
+  const W = rect.width, H = 320;
+  const m = {top:20, right:170, bottom:40, left:55};
   const w = W-m.left-m.right, h = H-m.top-m.bottom;
   const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
   const series = [
+    {key:'domain_finder',label:'Domain Finder',color:'#58a6ff'},
     {key:'gp_enriched',label:'GP Enriched',color:C.orange},
+    {key:'ta_enriched',label:'TripAdvisor',color:'#00aa6c'},
+    {key:'rg_enriched',label:'Rest. Guru',color:'#ce4257'},
     {key:'ws_scraped',label:'WS Scraped',color:C.yellow},
     {key:'ws_emails',label:'WS Emails',color:C.green},
     {key:'ws_instagram',label:'WS Instagram',color:'#e1306c'},
