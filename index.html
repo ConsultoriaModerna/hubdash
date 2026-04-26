@@ -273,6 +273,7 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="mountain-controls">
       <button class="btn active" id="mtn-co" onclick="setMountainMode('companies')">Companies</button>
       <button class="btn" id="mtn-ct" onclick="setMountainMode('contacts')">Contacts</button>
+      <button class="btn active" id="mtn-otras" onclick="toggleMountainOtras()" style="margin-left:auto;font-size:10px">Otras ✓</button>
     </div>
     <canvas id="mountain-canvas"></canvas>
   </div>
@@ -3326,6 +3327,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const canvas = document.getElementById('mountain-canvas');
 let scene, camera, renderer, controls, surfaceMesh, wireframeMesh;
 let mountainMode = 'companies';
+let mountainShowOtras = true;
 window.mountainReady = false;
 
 function initMountain() {
@@ -3378,8 +3380,9 @@ function bilinearInterp(matrix,fx,fy) {
 
 window.updateMountain = function(d) {
   if(!d.mountain) return;
-  const matrix = mountainMode==='companies' ? d.mountain.companies : d.mountain.contacts;
+  let matrix = mountainMode==='companies' ? d.mountain.companies : d.mountain.contacts;
   if(!matrix||!matrix.length) return;
+  if(!mountainShowOtras) matrix = matrix.slice(0,-1).concat([matrix[matrix.length-1].map(()=>0)]);
   if(surfaceMesh){scene.remove(surfaceMesh);surfaceMesh.geometry.dispose();surfaceMesh.material.dispose();}
   if(wireframeMesh){scene.remove(wireframeMesh);wireframeMesh.geometry.dispose();wireframeMesh.material.dispose();}
   const maxVal=Math.max(1,...matrix.flat());
@@ -3406,6 +3409,14 @@ window.setMountainMode = function(mode) {
   mountainMode = mode;
   document.getElementById('mtn-co').classList.toggle('active',mode==='companies');
   document.getElementById('mtn-ct').classList.toggle('active',mode==='contacts');
+  if(window.DATA) window.updateMountain(window.DATA);
+};
+
+window.toggleMountainOtras = function() {
+  mountainShowOtras = !mountainShowOtras;
+  const btn = document.getElementById('mtn-otras');
+  btn.textContent = mountainShowOtras ? 'Otras ✓' : 'Otras ✗';
+  btn.classList.toggle('active', mountainShowOtras);
   if(window.DATA) window.updateMountain(window.DATA);
 };
 
