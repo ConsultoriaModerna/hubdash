@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-26T14:39:14",
-  "fetch_seconds": 103.3,
+  "generated_at": "2026-04-26T18:12:27",
+  "fetch_seconds": 100.9,
   "summary": {
     "companies_total": 74947,
     "contacts_total": 67090,
@@ -24162,8 +24162,8 @@
     "companies": {
       "name": 74930,
       "phone": 48476,
-      "domain": 36521,
-      "website": 36555,
+      "domain": 36582,
+      "website": 36616,
       "city": 71369,
       "address": 66812,
       "industry": 34701,
@@ -24583,11 +24583,23 @@
       "ws_instagram": 8622,
       "contacts_mobile": 18611,
       "contacts_email": 38305
+    },
+    {
+      "ts": "2026-04-26 18:07",
+      "website": 36616,
+      "phone": 48476,
+      "domain": 36582,
+      "gp_enriched": 4452,
+      "ws_scraped": 28540,
+      "ws_emails": 8253,
+      "ws_instagram": 8622,
+      "contacts_mobile": 18611,
+      "contacts_email": 38305
     }
   ],
   "reachability_funnel": {
     "total": 74947,
-    "has_website": 36555,
+    "has_website": 36616,
     "ws_scraped": 28540,
     "ws_email_found": 8253,
     "ws_instagram": 8622,
@@ -38500,6 +38512,59 @@
       }
     ]
   },
+  "domain_coverage": {
+    "total": 74947,
+    "with_domain": 36582,
+    "with_website": 36616,
+    "no_domain": 38365,
+    "no_domain_with_contacts": 14404,
+    "ws_scraped": 28540,
+    "ws_emails": 8253,
+    "ws_instagram": 8622,
+    "domain_finder_found": 844
+  },
+  "enrich_sources": {
+    "gp_enriched": 4452,
+    "ws_scraped": 28540,
+    "ta_enriched": 832,
+    "rg_enriched": 569,
+    "domain_finder": 844,
+    "cross_enrich_cities": 1795
+  },
+  "mv_by_tier": [
+    {
+      "tier": "Diamante",
+      "list_id": "299",
+      "total": 1801,
+      "has_email": 1801,
+      "mv_ok": 1801,
+      "sample": 200
+    },
+    {
+      "tier": "Oro",
+      "list_id": "300",
+      "total": 2531,
+      "has_email": 2531,
+      "mv_ok": 2506,
+      "sample": 200
+    },
+    {
+      "tier": "Plata",
+      "list_id": "301",
+      "total": 8029,
+      "has_email": 8029,
+      "mv_ok": 7828,
+      "sample": 200
+    },
+    {
+      "tier": "Parking",
+      "list_id": "302",
+      "total": 19617,
+      "has_email": 18048,
+      "mv_ok": 17753,
+      "sample": 200
+    }
+  ],
   "budget": {
     "config": {
       "monthly_limit": 100.0,

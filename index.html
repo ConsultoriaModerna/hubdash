@@ -318,6 +318,20 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title"><span class="panel-id">51</span>MV Email Verification Health</div>
     <svg id="chart-mv-email" width="100%" height="260"></svg>
   </div>
+  <div class="section-divider"><span>Reflexiones Operativas</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">53</span>Domain Coverage Funnel</div>
+    <svg id="chart-domain-coverage" width="100%" height="280"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">54</span>Enrichment Sources — Yield & Cost</div>
+    <svg id="chart-enrich-sources" width="100%" height="300"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">55</span>MV Email Verification by Tier</div>
+    <svg id="chart-mv-tier" width="100%" height="300"></svg>
+  </div>
+
   </div><!-- end CRM tab -->
 
   <!-- ═══ TAB: BUSINESS INTEL ═══ -->
@@ -3681,12 +3695,160 @@ function drawOppHeatmap(d) {
   g.selectAll('.domain').remove();
 }
 
+// === CHART: Domain Coverage Funnel (Panel 53) ===
+function drawDomainCoverage(d) {
+  if (!d.domain_coverage) return;
+  const dc = d.domain_coverage;
+  const svg = d3.select('#chart-domain-coverage');
+  svg.selectAll('*').remove();
+  const W = svg.node().getBoundingClientRect().width || 700;
+  const m = {t:30,r:20,b:30,l:20}, w = W-m.l-m.r, h = 240-m.t-m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const steps = [
+    {label:'Total Companies', val:dc.total, color:C.muted},
+    {label:'Con Domain', val:dc.with_domain, color:C.blue},
+    {label:'Con Website', val:dc.with_website, color:C.cyan},
+    {label:'Web Scraped', val:dc.ws_scraped, color:C.green},
+    {label:'Email Found', val:dc.ws_emails, color:C.yellow},
+    {label:'Instagram', val:dc.ws_instagram, color:C.purple},
+  ];
+  const maxVal = d3.max(steps, s=>s.val) || 1;
+  const stepH = h / steps.length;
+  const maxBarW = w * 0.65;
+
+  steps.forEach((s,i) => {
+    const barW = (s.val/maxVal) * maxBarW;
+    const cx = w/2;
+    g.append('rect').attr('x', cx - barW/2).attr('y', i*stepH+2)
+      .attr('width', barW).attr('height', stepH-6).attr('rx',4)
+      .attr('fill', s.color).attr('opacity', 0.7);
+    g.append('text').attr('x', cx).attr('y', i*stepH + stepH/2 + 1)
+      .attr('text-anchor','middle').attr('fill','#fff').attr('font-size',12).attr('font-weight',600)
+      .text(`${s.label}: ${d3.format(',')(s.val)}`);
+    if (i > 0) {
+      const pct = ((s.val / steps[0].val)*100).toFixed(1);
+      g.append('text').attr('x', cx + barW/2 + 8).attr('y', i*stepH + stepH/2 + 1)
+        .attr('fill', C.dim).attr('font-size',10).text(`${pct}%`);
+    }
+  });
+
+  // Gap callout
+  const gap = dc.no_domain_with_contacts || 0;
+  if (gap > 0) {
+    g.append('text').attr('x', w).attr('y', 16).attr('text-anchor','end')
+      .attr('fill', C.orange).attr('font-size',12).attr('font-weight',600)
+      .text(`⚠ ${d3.format(',')(gap)} sin domain CON contacts`);
+    g.append('text').attr('x', w).attr('y', 32).attr('text-anchor','end')
+      .attr('fill', C.dim).attr('font-size',10)
+      .text(`${d3.format(',')(dc.no_domain)} sin domain total`);
+  }
+}
+
+// === CHART: Enrichment Sources Yield (Panel 54) ===
+function drawEnrichSources(d) {
+  if (!d.enrich_sources) return;
+  const es = d.enrich_sources;
+  const svg = d3.select('#chart-enrich-sources');
+  svg.selectAll('*').remove();
+  const W = svg.node().getBoundingClientRect().width || 400;
+  const m = {t:20,r:100,b:40,l:140}, w = W-m.l-m.r, h = 260-m.t-m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const sources = [
+    {label:'Google Places (API)', val:es.gp_enriched, color:C.blue, cost:'€76.57'},
+    {label:'Website Scraper (free)', val:es.ws_scraped, color:C.green, cost:'€0'},
+    {label:'TripAdvisor (WebSearch)', val:es.ta_enriched, color:C.orange, cost:'~€0*'},
+    {label:'RestaurantGuru (WebSearch)', val:es.rg_enriched, color:C.yellow, cost:'~€0*'},
+    {label:'Domain Finder (Tavily)', val:es.domain_finder, color:C.red, cost:'~5K credits'},
+    {label:'Cross-Enrich (free)', val:es.cross_enrich_cities, color:C.cyan, cost:'€0'},
+  ].filter(s => s.val > 0);
+
+  const x = d3.scaleLinear().domain([0, d3.max(sources, s=>s.val)*1.1]).range([0,w]);
+  const y = d3.scaleBand().domain(sources.map(s=>s.label)).range([0,h]).padding(0.25);
+
+  sources.forEach(s => {
+    g.append('rect').attr('x',0).attr('y',y(s.label)).attr('width',x(s.val))
+      .attr('height',y.bandwidth()).attr('rx',3).attr('fill',s.color).attr('opacity',0.8);
+    g.append('text').attr('x',x(s.val)+6).attr('y',y(s.label)+y.bandwidth()/2+1)
+      .attr('fill',C.text).attr('font-size',11).attr('dominant-baseline','middle')
+      .text(d3.format(',')(s.val));
+    g.append('text').attr('x',x(s.val)+6).attr('y',y(s.label)+y.bandwidth()/2+13)
+      .attr('fill',C.dim).attr('font-size',9).attr('dominant-baseline','middle')
+      .text(s.cost);
+  });
+
+  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text')
+    .attr('fill',C.muted).attr('font-size',10);
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5).tickFormat(d3.format(','))).selectAll('text')
+    .attr('fill',C.dim).attr('font-size',9);
+  g.selectAll('.domain').remove();
+
+  // Footnote
+  svg.append('text').attr('x',m.l).attr('y',h+m.t+m.b-4).attr('fill',C.dim).attr('font-size',9)
+    .text('* WebSearch = Claude built-in (incluido en API). Tavily quemó créditos por MCP routing.');
+}
+
+// === CHART: MV by Tier (Panel 55) ===
+function drawMvTier(d) {
+  if (!d.mv_by_tier || !d.mv_by_tier.length) return;
+  const svg = d3.select('#chart-mv-tier');
+  svg.selectAll('*').remove();
+  const W = svg.node().getBoundingClientRect().width || 400;
+  const m = {t:20,r:20,b:30,l:90}, w = W-m.l-m.r, h = 260-m.t-m.b;
+  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const tiers = d.mv_by_tier;
+  const tierColors = {'Diamante':C.cyan, 'Oro':C.yellow, 'Plata':'#8b949e', 'Parking':C.dim};
+  const y = d3.scaleBand().domain(tiers.map(t=>t.tier)).range([0,h]).padding(0.2);
+  const x = d3.scaleLinear().domain([0, d3.max(tiers, t=>t.total)*1.1]).range([0,w]);
+
+  tiers.forEach(t => {
+    const tierY = y(t.tier);
+    const bh = y.bandwidth();
+    const color = tierColors[t.tier] || C.muted;
+
+    // Full bar (total)
+    g.append('rect').attr('x',0).attr('y',tierY).attr('width',x(t.total))
+      .attr('height',bh).attr('rx',3).attr('fill',color).attr('opacity',0.15);
+    // Has email bar
+    g.append('rect').attr('x',0).attr('y',tierY).attr('width',x(t.has_email))
+      .attr('height',bh).attr('rx',3).attr('fill',color).attr('opacity',0.35);
+    // MV ok bar
+    g.append('rect').attr('x',0).attr('y',tierY).attr('width',x(t.mv_ok))
+      .attr('height',bh).attr('rx',3).attr('fill',color).attr('opacity',0.85);
+
+    // Labels
+    const mvPct = t.has_email > 0 ? ((t.mv_ok / t.has_email)*100).toFixed(0) : '0';
+    g.append('text').attr('x', x(t.total)+6).attr('y', tierY+bh/2-6)
+      .attr('fill',C.text).attr('font-size',11).attr('dominant-baseline','middle')
+      .text(`${d3.format(',')(t.total)} total`);
+    g.append('text').attr('x', x(t.total)+6).attr('y', tierY+bh/2+8)
+      .attr('fill', mvPct === '100' ? C.green : C.orange).attr('font-size',11)
+      .attr('dominant-baseline','middle').attr('font-weight',600)
+      .text(`MV: ${mvPct}% (${d3.format(',')(t.mv_ok)}/${d3.format(',')(t.has_email)} emails)`);
+  });
+
+  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text')
+    .attr('fill',C.muted).attr('font-size',12).attr('font-weight',600);
+  g.selectAll('.domain').remove();
+
+  // Legend
+  const leg = g.append('g').attr('transform',`translate(${w-160},-5)`);
+  [{label:'MV OK',op:0.85},{label:'Has Email',op:0.35},{label:'Total',op:0.15}].forEach((l,i) => {
+    leg.append('rect').attr('x',i*60).attr('y',0).attr('width',10).attr('height',10).attr('rx',2)
+      .attr('fill',C.cyan).attr('opacity',l.op);
+    leg.append('text').attr('x',i*60+14).attr('y',9).attr('fill',C.dim).attr('font-size',9).text(l.label);
+  });
+}
+
 function updateCRM(d) {
   updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d);
   drawContactCities(d); drawContactCityAssets(d);
   drawGoldenContacts(d); drawMvEmail(d);
   drawFieldCompleteness(d); drawServices(d); drawBudget(d);
   drawEnrichVelocity(d);
+  drawDomainCoverage(d); drawEnrichSources(d); drawMvTier(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
   if (window.contact4dReady) window.updateContact4D(d);
