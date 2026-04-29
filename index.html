@@ -622,9 +622,14 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title"><span class="panel-id">65</span><span class="panel-title-text">Data Quality × Contacts — Distributor Health</span><span class="panel-fav" onclick="toggleFav(65)">☆</span></div>
     <svg id="chart-dist-scatter" width="100%" height="320"></svg>
   </div>
-  <div class="panel">
-    <div class="panel-title"><span class="panel-id">66</span><span class="panel-title-text">Top Distribuidores — By Contact Count</span><span class="panel-fav" onclick="toggleFav(66)">☆</span></div>
-    <div id="chart-dist-table" style="max-height:320px; overflow-y:auto;"></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">66</span><span class="panel-title-text">Distribuidores — Click any chart to filter</span><span class="panel-fav" onclick="toggleFav(66)">☆</span></div>
+    <div id="dist-filter-bar" style="display:none; padding:6px 14px; margin-bottom:8px; background:var(--card); border-radius:8px; border:1px solid var(--border); font-size:13px;">
+      <span style="color:var(--muted)">Filtro activo:</span> <span id="dist-filter-label" style="font-weight:600; color:var(--accent)"></span>
+      <span id="dist-filter-count" style="color:var(--muted); margin-left:8px"></span>
+      <button onclick="clearDistFilter()" style="float:right; background:none; border:1px solid var(--border); color:var(--muted); border-radius:4px; padding:2px 10px; cursor:pointer; font-size:12px;">✕ Clear</button>
+    </div>
+    <div id="chart-dist-table" style="max-height:480px; overflow-y:auto;"></div>
   </div>
 
   </div><!-- end Distribuidores tab -->
@@ -4424,6 +4429,19 @@ function updateInsights(d) {
 
 // ═══ DISTRIBUIDORES TAB ═══
 const DIST_COLORS = {food:'#3fb950', tech:'#58a6ff', equipment:'#f0883e', services:'#bc8cff', retail:'#ffd93d', city:'#8b949e', other:'#484f58'};
+let distFilter = null; // {type: 'category'|'city'|'industry'|'combo', value: string, label: string}
+
+function setDistFilter(type, value, label) {
+  distFilter = {type, value, label};
+  document.getElementById('dist-filter-bar').style.display = 'block';
+  document.getElementById('dist-filter-label').textContent = label;
+  drawDistTable(window.DATA);
+}
+function clearDistFilter() {
+  distFilter = null;
+  document.getElementById('dist-filter-bar').style.display = 'none';
+  drawDistTable(window.DATA);
+}
 
 function drawDistSankey(d) {
   if (!d.dist_sankey || !d.dist_sankey.nodes.length) return;
@@ -4452,8 +4470,29 @@ function drawDistSankey(d) {
     .on('mousemove', (evt, l) => showTip(evt, `<b>${l.source.name}</b> → <b>${l.target.name}</b><br>${fmt(l.value)} companies`))
     .on('mouseleave', hideTip);
 
+  // Reverse map: Spanish label → raw HubSpot industry code
+  const LABEL_TO_IND = {
+    'Bebidas':'FOOD_BEVERAGES', 'Producción':'FOOD_PRODUCTION', 'Vinos':'WINE_AND_SPIRITS',
+    'Software':'COMPUTER_SOFTWARE', 'Electrónica':'CONSUMER_ELECTRONICS', 'IT Services':'INFORMATION_TECHNOLOGY_AND_SERVICES',
+    'Equipamiento':'MECHANICAL_OR_INDUSTRIAL_ENGINEERING', 'Suministros':'BUSINESS_SUPPLIES_AND_EQUIPMENT',
+    'Marketing':'MARKETING_AND_ADVERTISING', 'Formación':'PROFESSIONAL_TRAINING_COACHING',
+    'Salud':'HEALTH_WELLNESS_AND_FITNESS', 'Educación':'EDUCATION_MANAGEMENT',
+    'Comercio':'RETAIL', 'Consumer':'CONSUMER_GOODS', 'Servicios':'CONSUMER_SERVICES',
+  };
+
   // Nodes
-  const node = g.append('g').selectAll('g').data(graph.nodes).join('g');
+  const node = g.append('g').selectAll('g').data(graph.nodes).join('g')
+    .style('cursor', 'pointer')
+    .on('click', (evt, n) => {
+      const layer = n.layer ?? n.depth ?? 0;
+      if (layer === 0) setDistFilter('category', n.category || n.name.toLowerCase(), `Categoría: ${n.name}`);
+      else if (layer === 1) {
+        const rawInd = LABEL_TO_IND[n.name];
+        if (rawInd) setDistFilter('industry', rawInd, `Industria: ${n.name}`);
+        else setDistFilter('category', n.category, `${n.name}`);
+      }
+      else setDistFilter('city', n.name, `Ciudad: ${n.name}`);
+    });
   node.append('rect')
     .attr('x', n => n.x0).attr('y', n => n.y0)
     .attr('width', n => n.x1 - n.x0).attr('height', n => Math.max(1, n.y1 - n.y0))
@@ -4486,9 +4525,10 @@ function drawDistHeatmap(d) {
   g.selectAll('rect').data(d.dist_heatmap).join('rect')
     .attr('x', r => x(r.city)).attr('y', r => y(r.cat))
     .attr('width', x.bandwidth()).attr('height', y.bandwidth())
-    .attr('fill', r => color(r.count)).attr('rx', 3)
+    .attr('fill', r => color(r.count)).attr('rx', 3).style('cursor', 'pointer')
     .on('mousemove', (evt, r) => showTip(evt, `<b>${r.cat}</b> × ${r.city}<br>${fmt(r.count)} companies`))
-    .on('mouseleave', hideTip);
+    .on('mouseleave', hideTip)
+    .on('click', (evt, r) => setDistFilter('combo', `${r.cat}|${r.city}`, `${r.cat} × ${r.city}`));
 
   // Cell labels
   g.selectAll('.cell-label').data(d.dist_heatmap).join('text')
@@ -4528,9 +4568,10 @@ function drawDistCats(d) {
   g.selectAll('.bar').data(entries).join('rect')
     .attr('x', 0).attr('y', e => y(e[0]))
     .attr('width', e => x(e[1])).attr('height', y.bandwidth())
-    .attr('fill', e => DIST_COLORS[e[0]] || C.muted).attr('rx', 4)
-    .on('mousemove', (evt, e) => showTip(evt, `<b>${catLabels[e[0]]||e[0]}</b><br>${fmt(e[1])} companies`))
-    .on('mouseleave', hideTip);
+    .attr('fill', e => DIST_COLORS[e[0]] || C.muted).attr('rx', 4).style('cursor', 'pointer')
+    .on('mousemove', (evt, e) => showTip(evt, `<b>${catLabels[e[0]]||e[0]}</b><br>${fmt(e[1])} companies — click to filter`))
+    .on('mouseleave', hideTip)
+    .on('click', (evt, e) => setDistFilter('category', e[0], `Categoría: ${catLabels[e[0]]||e[0]}`));
 
   // Value labels
   g.selectAll('.val').data(entries).join('text')
@@ -4561,12 +4602,14 @@ function drawDistCities(d) {
 
   g.selectAll('path').data(pieGen(entries)).join('path')
     .attr('d', arc).attr('fill', (_, i) => cityColors(i)).attr('stroke', C.card).attr('stroke-width', 2)
+    .style('cursor', 'pointer')
     .on('mousemove', function(evt, dd) {
       d3.select(this).transition().duration(100).attr('d', arcH);
       const pct = (dd.data[1]/total*100).toFixed(1);
-      showTip(evt, `<b>${dd.data[0]}</b><br>${fmt(dd.data[1])} (${pct}%)`);
+      showTip(evt, `<b>${dd.data[0]}</b><br>${fmt(dd.data[1])} (${pct}%) — click to filter`);
     })
-    .on('mouseleave', function() { d3.select(this).transition().duration(200).attr('d', arc); hideTip(); });
+    .on('mouseleave', function() { d3.select(this).transition().duration(200).attr('d', arc); hideTip(); })
+    .on('click', (evt, dd) => setDistFilter('city', dd.data[0], `Ciudad: ${dd.data[0]}`));
 
   // Center total
   g.append('text').attr('text-anchor','middle').attr('dy','-0.2em')
@@ -4604,9 +4647,10 @@ function drawDistIndustries(d) {
   g.selectAll('.bar').data(entries).join('rect')
     .attr('x', 0).attr('y', e => y(e[0]))
     .attr('width', e => x(e[1])).attr('height', y.bandwidth())
-    .attr('fill', e => DIST_COLORS[IND_TO_CAT[e[0]]||'other'] || C.muted).attr('rx', 3)
-    .on('mousemove', (evt, e) => showTip(evt, `<b>${e[0].replace(/_/g,' ')}</b><br>${fmt(e[1])} companies<br>Category: ${IND_TO_CAT[e[0]]||'other'}`))
-    .on('mouseleave', hideTip);
+    .attr('fill', e => DIST_COLORS[IND_TO_CAT[e[0]]||'other'] || C.muted).attr('rx', 3).style('cursor', 'pointer')
+    .on('mousemove', (evt, e) => showTip(evt, `<b>${e[0].replace(/_/g,' ')}</b><br>${fmt(e[1])} companies — click to filter`))
+    .on('mouseleave', hideTip)
+    .on('click', (evt, e) => setDistFilter('industry', e[0], `Industria: ${e[0].replace(/_/g,' ')}`));
 
   g.selectAll('.val').data(entries).join('text')
     .attr('x', e => x(e[1]) + 6).attr('y', e => y(e[0]) + y.bandwidth()/2)
@@ -4639,8 +4683,10 @@ function drawDistScatter(d) {
   g.selectAll('.dot').data(data).join('circle')
     .attr('cx', r => x(r.s)).attr('cy', r => y(r.ct))
     .attr('r', 4).attr('fill', r => DIST_COLORS[r.cat] || C.muted).attr('opacity', 0.7)
+    .style('cursor', 'pointer')
     .on('mousemove', (evt, r) => showTip(evt, `<b>${r.n}</b><br>Score: ${r.s} | Contacts: ${r.ct}<br>Industry: ${r.ind.replace(/_/g,' ')}<br>${r.c}`))
-    .on('mouseleave', hideTip);
+    .on('mouseleave', hideTip)
+    .on('click', (evt, r) => window.open(hsUrl('company', r.id), '_blank'));
 
   g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5).tickSize(0))
     .selectAll('text').attr('fill',C.muted);
@@ -4658,18 +4704,51 @@ function drawDistScatter(d) {
 function drawDistTable(d) {
   if (!d.distributors || !d.distributors.length) return;
   const container = document.getElementById('chart-dist-table');
-  const top = d.distributors.filter(r => r.ct > 0).sort((a,b) => b.ct - a.ct).slice(0, 30);
   const catLabels = {food:'🍷 Food', tech:'💻 Tech', equipment:'🔧 Equip', services:'📋 Svc', retail:'🛒 Retail'};
 
-  let html = '<table class="dist-table"><thead><tr><th>Empresa</th><th>Categoría</th><th>Ciudad</th><th>Score</th><th>Contactos</th></tr></thead><tbody>';
-  for (const r of top) {
+  // Build industry→category map for industry filter matching
+  const IND_LABELS_REV = {};
+  const DIST_CAT_MAP = {
+    food:['FOOD_BEVERAGES','FOOD_PRODUCTION','WINE_AND_SPIRITS'],
+    tech:['COMPUTER_SOFTWARE','CONSUMER_ELECTRONICS','INFORMATION_TECHNOLOGY_AND_SERVICES'],
+    equipment:['MECHANICAL_OR_INDUSTRIAL_ENGINEERING','BUSINESS_SUPPLIES_AND_EQUIPMENT'],
+    services:['MARKETING_AND_ADVERTISING','PROFESSIONAL_TRAINING_COACHING','HEALTH_WELLNESS_AND_FITNESS','EDUCATION_MANAGEMENT'],
+    retail:['RETAIL','CONSUMER_GOODS','CONSUMER_SERVICES'],
+  };
+
+  // Apply filter
+  let filtered = d.distributors;
+  if (distFilter) {
+    const f = distFilter;
+    if (f.type === 'category') filtered = filtered.filter(r => r.cat === f.value);
+    else if (f.type === 'city') filtered = filtered.filter(r => r.c === f.value);
+    else if (f.type === 'industry') filtered = filtered.filter(r => r.ind === f.value);
+    else if (f.type === 'combo') {
+      const [cat, city] = f.value.split('|');
+      filtered = filtered.filter(r => r.cat === cat && r.c === city);
+    }
+  }
+
+  // Sort: contacts desc, then score desc
+  const sorted = filtered.sort((a,b) => b.ct - a.ct || b.s - a.s);
+  const show = sorted.slice(0, distFilter ? 200 : 30);
+
+  // Update count
+  const countEl = document.getElementById('dist-filter-count');
+  if (countEl && distFilter) countEl.textContent = `(${filtered.length} empresas)`;
+
+  let html = '<table class="dist-table"><thead><tr><th>Empresa</th><th>Categoría</th><th>Industria</th><th>Ciudad</th><th>Score</th><th>Contactos</th></tr></thead><tbody>';
+  for (const r of show) {
+    const indLabel = (r.ind||'').replace(/_/g,' ').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());
     html += `<tr onclick="window.open('${hsUrl('company',r.id)}','_blank')" style="cursor:pointer">`;
     html += `<td style="font-weight:500">${r.n}</td>`;
     html += `<td><span class="dist-badge dist-${r.cat}">${catLabels[r.cat]||r.cat}</span></td>`;
+    html += `<td style="font-size:11px;color:var(--muted)">${indLabel}</td>`;
     html += `<td>${r.c}</td><td>${r.s}</td><td style="font-weight:600">${r.ct}</td></tr>`;
   }
   html += '</tbody></table>';
-  if (!top.length) html = '<div style="text-align:center;color:var(--muted);padding:40px">No distributors with contacts found</div>';
+  if (!show.length) html = '<div style="text-align:center;color:var(--muted);padding:40px">No distributors found for this filter</div>';
+  if (sorted.length > show.length) html += `<div style="text-align:center;color:var(--muted);padding:8px;font-size:12px">Showing ${show.length} of ${filtered.length}</div>`;
   container.innerHTML = html;
 }
 
