@@ -280,6 +280,7 @@ svg text { fill: var(--muted); font-size: 11px; }
     <button class="nav-tab" data-tab="bi" onclick="switchTab('bi')">Business Intel</button>
     <button class="nav-tab" data-tab="sales" onclick="switchTab('sales')">Sales Intel</button>
     <button class="nav-tab" data-tab="dist" onclick="switchTab('dist')">Distribuidores</button>
+    <button class="nav-tab" data-tab="insights" onclick="switchTab('insights')">Insights</button>
   </div>
   <div class="header-right">
     <span class="sync-badge" id="sync-time">Loading...</span>
@@ -628,6 +629,57 @@ svg text { fill: var(--muted); font-size: 11px; }
 
   </div><!-- end Distribuidores tab -->
 
+  <!-- ═══ TAB: INSIGHTS ═══ -->
+  <div class="tab-content" data-tab="insights">
+
+  <div class="kpi-row" style="grid-template-columns: repeat(5, 1fr);">
+    <div class="kpi-card"><div class="kpi-label">Datapoints Nuevos</div><div class="kpi-value" id="kpi-ins-dp" style="color:var(--cyan)">—</div><div class="kpi-sub">~490K total</div></div>
+    <div class="kpi-card"><div class="kpi-label">MV Pendientes</div><div class="kpi-value" id="kpi-ins-mv" style="color:var(--orange)">—</div><div class="kpi-sub">emails sin verificar</div></div>
+    <div class="kpi-card"><div class="kpi-label">Email Match Potencial</div><div class="kpi-value" id="kpi-ins-match" style="color:var(--blue)">—</div><div class="kpi-sub">contactos sin email + empresa</div></div>
+    <div class="kpi-card"><div class="kpi-label">Scraped Emails</div><div class="kpi-value" id="kpi-ins-scraped" style="color:var(--green)">—</div><div class="kpi-sub">empresas con email</div></div>
+    <div class="kpi-card"><div class="kpi-label">Ghost Contacts</div><div class="kpi-value" id="kpi-ins-ghost" style="color:var(--red)">—</div><div class="kpi-sub">MV=invalid, email removed</div></div>
+  </div>
+
+  <div class="section-divider"><span>Digital Maturity</span></div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">70</span><span class="panel-title-text">Digital Maturity Ladder — Ghost to Leader</span><span class="panel-fav" onclick="toggleFav(70)">☆</span></div>
+    <svg id="chart-ins-maturity" width="100%" height="350"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">71</span><span class="panel-title-text">WordPress Ecosystem — Platform × Adoption</span><span class="panel-fav" onclick="toggleFav(71)">☆</span></div>
+    <svg id="chart-ins-wp" width="100%" height="350"></svg>
+  </div>
+
+  <div class="section-divider"><span>Revenue Intelligence</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">72</span><span class="panel-title-text">Revenue Proxy Tiers — S/A/B/C</span><span class="panel-fav" onclick="toggleFav(72)">☆</span></div>
+    <svg id="chart-ins-revenue" width="100%" height="380"></svg>
+  </div>
+
+  <div class="section-divider"><span>Compound Opportunities</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">73</span><span class="panel-title-text">Compound Segments — Multi-Signal Opportunities</span><span class="panel-fav" onclick="toggleFav(73)">☆</span></div>
+    <svg id="chart-ins-compound" width="100%" height="400"></svg>
+  </div>
+
+  <div class="section-divider"><span>Service Gap Analysis</span></div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">74</span><span class="panel-title-text">Service Gap Funnel — High-Rated Without</span><span class="panel-fav" onclick="toggleFav(74)">☆</span></div>
+    <svg id="chart-ins-gaps" width="100%" height="380"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">75</span><span class="panel-title-text">Complaint Geography — What Hurts Where</span><span class="panel-fav" onclick="toggleFav(75)">☆</span></div>
+    <svg id="chart-ins-complaints" width="100%" height="380"></svg>
+  </div>
+
+  <div class="section-divider"><span>Email & Verification Intelligence</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">76</span><span class="panel-title-text">MV Verification Funnel — Real Numbers</span><span class="panel-fav" onclick="toggleFav(76)">☆</span></div>
+    <svg id="chart-ins-mv-funnel" width="100%" height="350"></svg>
+  </div>
+
+  </div><!-- end Insights tab -->
+
   <!-- ═══ SHARED: Infrastructure panels (always CRM tab) ═══ -->
   <div class="tab-content active" data-tab="crm">
   <div class="panel">
@@ -689,7 +741,7 @@ function openHs(b) { if (b && b.id) window.open(hsUrl('company', b.id), '_blank'
 
 // === Tab Navigation ===
 let currentTab = 'crm';
-const tabInited = {crm: false, bi: false, sales: false, dist: false};
+const tabInited = {crm: false, bi: false, sales: false, dist: false, insights: false};
 function switchTab(tab) {
   currentTab = tab;
   document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
@@ -704,6 +756,7 @@ function switchTab(tab) {
       if (tab === 'bi') updateBI(window.DATA);
       if (tab === 'sales') updateSales(window.DATA);
       if (tab === 'dist') updateDist(window.DATA);
+      if (tab === 'insights') updateInsights(window.DATA);
       window.dispatchEvent(new Event('resize'));
     }, 50);
   } else {
@@ -4074,6 +4127,301 @@ function updateSales(d) {
   updatePmfKPIs(d); drawPmfCards(d); drawOppHeatmap(d);
   try { drawScoreSegment(d); } catch(e) { console.warn('drawScoreSegment', e); }
 }
+// ═══ INSIGHTS TAB ═══
+const INS_COLORS = {
+  'L0: Ghost':'#f85149', 'L1: Website Only':'#f0883e', 'L2: Social':'#d29922',
+  'L3: Engaged':'#3fb950', 'L4: Leader':'#58a6ff',
+  S:'#58a6ff', A:'#3fb950', B:'#d29922', C:'#f0883e',
+};
+
+function drawInsMaturity(d) {
+  const ins = d.insights; if (!ins) return;
+  const data = ins.maturity_ladder;
+  const svg = d3.select('#chart-ins-maturity'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||400, H = 350;
+  const m = {top:30, right:80, bottom:40, left:130};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const y = d3.scaleBand().domain(data.map(d=>d.level)).range([0,h]).padding(0.2);
+  const x = d3.scaleLinear().domain([0,d3.max(data,d=>d.count)*1.15]).range([0,w]);
+
+  g.selectAll('.bar').data(data).join('rect')
+    .attr('x',0).attr('y',d=>y(d.level)).attr('width',d=>x(d.count)).attr('height',y.bandwidth())
+    .attr('fill',d=>INS_COLORS[d.level]||C.muted).attr('rx',4)
+    .on('mousemove',(evt,d)=>showTip(evt,`<b>${d.level}</b><br>${d.count} companies<br>Rating: ${d.avg_r}★ | Reviews: ${d.avg_rv.toLocaleString()}<br>Contacts: ${d.avg_ct}`))
+    .on('mouseleave',hideTip);
+
+  g.selectAll('.val').data(data).join('text')
+    .attr('x',d=>x(d.count)+6).attr('y',d=>y(d.level)+y.bandwidth()/2)
+    .attr('dy','0.35em').attr('fill',C.text).style('font-size','12px').style('font-weight','600')
+    .text(d=>`${d.count}  (${d.avg_r}★)`);
+
+  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text').attr('fill',C.muted).style('font-size','11px');
+  g.selectAll('.domain').remove();
+
+  // Title annotation
+  g.append('text').attr('x',w/2).attr('y',-10).attr('text-anchor','middle')
+    .attr('fill',C.muted).style('font-size','10px')
+    .text('← Less Digital │ More Digital →');
+}
+
+function drawInsWP(d) {
+  const ins = d.insights; if (!ins) return;
+  const data = ins.wp_ecosystem;
+  const svg = d3.select('#chart-ins-wp'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||400, H = 350;
+  const m = {top:40, right:20, bottom:60, left:50};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const x = d3.scaleBand().domain(data.map(d=>d.platform)).range([0,w]).padding(0.15);
+  const y = d3.scaleLinear().domain([0,100]).range([h,0]);
+  const metrics = [{key:'ig_pct',label:'Instagram',color:'#e1306c'},{key:'bk_pct',label:'Booking',color:'#58a6ff'},{key:'em_pct',label:'Email',color:'#3fb950'}];
+  const bw = x.bandwidth()/metrics.length;
+
+  metrics.forEach((met,mi) => {
+    g.selectAll(`.bar-${mi}`).data(data).join('rect')
+      .attr('x',d=>x(d.platform)+mi*bw).attr('y',d=>y(d[met.key]))
+      .attr('width',bw-2).attr('height',d=>h-y(d[met.key]))
+      .attr('fill',met.color).attr('opacity',0.8).attr('rx',2)
+      .on('mousemove',(evt,dd)=>showTip(evt,`<b>${dd.platform}</b> — ${met.label}<br>${dd[met.key]}% adoption<br>${dd.count} companies | ${dd.avg_r}★`))
+      .on('mouseleave',hideTip);
+  });
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).tickSize(0)).selectAll('text').attr('fill',C.muted).style('font-size','11px');
+  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d=>d+'%').tickSize(0)).selectAll('text').attr('fill',C.muted);
+  g.selectAll('.domain').attr('stroke',C.grid);
+
+  // Legend
+  const leg = g.append('g').attr('transform',`translate(${w-180},-25)`);
+  metrics.forEach((met,i) => {
+    leg.append('rect').attr('x',i*65).attr('y',0).attr('width',10).attr('height',10).attr('fill',met.color).attr('rx',2);
+    leg.append('text').attr('x',i*65+14).attr('y',9).attr('fill',C.muted).style('font-size','10px').text(met.label);
+  });
+}
+
+function drawInsRevenue(d) {
+  const ins = d.insights; if (!ins) return;
+  // Draw bubbles colored by tier, sized by reviews
+  const svg = d3.select('#chart-ins-revenue'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||900, H = 380;
+  const m = {top:30, right:120, bottom:40, left:50};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const bubs = d.bubbles.filter(b=>b.rt);
+  const x = d3.scaleLinear().domain([d3.min(bubs,b=>b.r)-0.2, 5]).range([0,w]);
+  const y = d3.scaleLog().domain([Math.max(1,d3.min(bubs,b=>b.rv)), d3.max(bubs,b=>b.rv)]).range([h,0]);
+  const r = d3.scaleSqrt().domain([0,d3.max(bubs,b=>b.rv)]).range([2,18]);
+
+  // Grid
+  g.selectAll('.gy').data(y.ticks(5)).join('line').attr('x1',0).attr('x2',w).attr('y1',d=>y(d)).attr('y2',d=>y(d)).attr('stroke',C.grid).attr('stroke-dasharray','2,3');
+
+  g.selectAll('.dot').data(bubs).join('circle')
+    .attr('cx',b=>x(b.r)).attr('cy',b=>y(b.rv)).attr('r',b=>r(b.rv))
+    .attr('fill',b=>INS_COLORS[b.rt]||C.muted).attr('opacity',0.6).attr('stroke',b=>INS_COLORS[b.rt]).attr('stroke-width',0.5)
+    .on('mousemove',(evt,b)=>showTip(evt,`<b>${b.n}</b> [Tier ${b.rt}]<br>${b.r}★ | ${b.rv.toLocaleString()} reviews<br>${b.pl||'N/A'} | ${b.c}`))
+    .on('mouseleave',hideTip).on('click',(_,b)=>window.open(hsUrl('company',b.id))).style('cursor','pointer');
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(6)).selectAll('text').attr('fill',C.muted);
+  g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d=>d>=1000?d/1000+'K':d)).selectAll('text').attr('fill',C.muted);
+  g.selectAll('.domain').attr('stroke',C.grid);
+
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.muted).style('font-size','10px').text('Google Rating');
+  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-38).attr('text-anchor','middle').attr('fill',C.muted).style('font-size','10px').text('Reviews (log)');
+
+  // Legend
+  const lg = g.append('g').attr('transform',`translate(${w+10},10)`);
+  ins.revenue_tiers.forEach((t,i) => {
+    lg.append('circle').attr('cx',8).attr('cy',i*22).attr('r',6).attr('fill',INS_COLORS[t.tier]);
+    lg.append('text').attr('x',20).attr('y',i*22+4).attr('fill',C.text).style('font-size','11px')
+      .text(`Tier ${t.tier} (${t.count})`);
+  });
+}
+
+function drawInsCompound(d) {
+  const ins = d.insights; if (!ins) return;
+  const data = ins.compound_segs.filter(s=>s.count>0).sort((a,b)=>b.count-a.count);
+  const svg = d3.select('#chart-ins-compound'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||900, H = 400;
+  const m = {top:20, right:300, bottom:30, left:220};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const compColors = [C.cyan, C.green, C.blue, C.purple, C.orange, C.yellow, C.red, C.teal];
+  const y = d3.scaleBand().domain(data.map(s=>s.name)).range([0,h]).padding(0.18);
+  const x = d3.scaleLinear().domain([0,d3.max(data,s=>s.count)*1.1]).range([0,w]);
+
+  g.selectAll('.bar').data(data).join('rect')
+    .attr('x',0).attr('y',s=>y(s.name)).attr('width',s=>x(s.count)).attr('height',y.bandwidth())
+    .attr('fill',(s,i)=>compColors[i%compColors.length]).attr('rx',4).attr('opacity',0.85)
+    .on('mousemove',(evt,s)=>{
+      const cities = Object.entries(s.cities).map(([c,n])=>`${c}: ${n}`).join(', ');
+      showTip(evt,`<b>${s.icon} ${s.name}</b><br>${s.count} opportunities | ${s.avg_r}★<br>→ ${s.opportunity}<br>Cities: ${cities}`);
+    }).on('mouseleave',hideTip);
+
+  g.selectAll('.val').data(data).join('text')
+    .attr('x',s=>x(s.count)+6).attr('y',s=>y(s.name)+y.bandwidth()/2)
+    .attr('dy','0.35em').attr('fill',C.text).style('font-size','11px').style('font-weight','600')
+    .text(s=>`${s.count}  →  ${s.opportunity.substring(0,40)}`);
+
+  g.append('g').call(d3.axisLeft(y).tickFormat(d=>'  '+d).tickSize(0)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain').remove();
+}
+
+function drawInsGaps(d) {
+  const ins = d.insights; if (!ins) return;
+  const data = ins.service_gaps;
+  const svg = d3.select('#chart-ins-gaps'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||400, H = 380;
+  const m = {top:20, right:60, bottom:30, left:100};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const y = d3.scaleBand().domain(data.map(s=>s.service)).range([0,h]).padding(0.2);
+  const x = d3.scaleLinear().domain([0,d3.max(data,s=>s.total_gap)*1.1]).range([0,w]);
+
+  // Total gap (faded)
+  g.selectAll('.bar-total').data(data).join('rect')
+    .attr('x',0).attr('y',s=>y(s.service)).attr('width',s=>x(s.total_gap)).attr('height',y.bandwidth())
+    .attr('fill',C.grid).attr('rx',3);
+  // High-rated gap (highlighted)
+  g.selectAll('.bar-hr').data(data).join('rect')
+    .attr('x',0).attr('y',s=>y(s.service)).attr('width',s=>x(s.hr_gap)).attr('height',y.bandwidth())
+    .attr('fill',C.orange).attr('rx',3).attr('opacity',0.85)
+    .on('mousemove',(evt,s)=>showTip(evt,`<b>${s.service}</b><br>Total gap: ${s.total_gap}<br>High-rated (4★+) gap: <b>${s.hr_gap}</b>`))
+    .on('mouseleave',hideTip);
+
+  g.selectAll('.val').data(data).join('text')
+    .attr('x',s=>x(s.total_gap)+6).attr('y',s=>y(s.service)+y.bandwidth()/2)
+    .attr('dy','0.35em').attr('fill',C.muted).style('font-size','11px')
+    .text(s=>`${s.hr_gap} / ${s.total_gap}`);
+
+  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text').attr('fill',C.muted).style('font-size','11px');
+  g.selectAll('.domain').remove();
+}
+
+function drawInsComplaints(d) {
+  const ins = d.insights; if (!ins) return;
+  const data = ins.complaint_geo;
+  const svg = d3.select('#chart-ins-complaints'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||400, H = 380;
+  const m = {top:30, right:20, bottom:40, left:90};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const cities = data.map(d=>d.city);
+  const allComplaints = [...new Set(data.flatMap(d=>Object.keys(d.complaints)))];
+  const compColors = {'Slow Service':C.orange, 'Pricing':C.red, 'Wait Time':C.yellow, 'Cold Food':C.blue, 'Hygiene':'#da3633', 'Disorganized':C.purple};
+
+  const x = d3.scaleLinear().domain([0,100]).range([0,w]);
+  const y = d3.scaleBand().domain(cities).range([0,h]).padding(0.2);
+
+  data.forEach(city => {
+    let cumX = 0;
+    const sorted = Object.entries(city.complaints).sort((a,b)=>b[1]-a[1]);
+    sorted.forEach(([comp, count]) => {
+      const pct = count / city.total_complaints * 100;
+      g.append('rect').attr('x',x(cumX)).attr('y',y(city.city))
+        .attr('width',x(pct)).attr('height',y.bandwidth())
+        .attr('fill',compColors[comp]||C.muted).attr('rx',cumX===0?3:0).attr('opacity',0.85)
+        .on('mousemove',evt=>showTip(evt,`<b>${city.city}</b> — ${comp}<br>${count} / ${city.total_complaints} (${pct.toFixed(0)}%)<br>n=${city.n} restaurants`))
+        .on('mouseleave',hideTip);
+      if (pct > 12) {
+        g.append('text').attr('x',x(cumX)+x(pct)/2).attr('y',y(city.city)+y.bandwidth()/2)
+          .attr('dy','0.35em').attr('text-anchor','middle').attr('fill','#0d1117')
+          .style('font-size','10px').style('font-weight','600').text(`${pct.toFixed(0)}%`);
+      }
+      cumX += pct;
+    });
+  });
+
+  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text').attr('fill',C.muted).style('font-size','11px');
+  g.selectAll('.domain').remove();
+
+  // Legend
+  const lg = g.append('g').attr('transform',`translate(0,-15)`);
+  let lx = 0;
+  Object.entries(compColors).slice(0,4).forEach(([name,color]) => {
+    lg.append('rect').attr('x',lx).attr('y',0).attr('width',10).attr('height',10).attr('fill',color).attr('rx',2);
+    lg.append('text').attr('x',lx+14).attr('y',9).attr('fill',C.muted).style('font-size','9px').text(name);
+    lx += name.length * 6 + 24;
+  });
+}
+
+function drawInsMVFunnel(d) {
+  const ins = d.insights; if (!ins) return;
+  const mv = ins.mv_funnel;
+  const svg = d3.select('#chart-ins-mv-funnel'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||900, H = 350;
+  const m = {top:20, right:20, bottom:30, left:20};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const steps = [
+    {label:'Total Contacts', value:mv.total_contacts, color:C.muted},
+    {label:'Has Email', value:mv.has_email, color:C.blue},
+    {label:'MV Verified', value:mv.mv_verified, color:C.cyan},
+    {label:'MV OK', value:mv.mv_ok, color:C.green},
+    {label:'MV Invalid', value:mv.mv_invalid, color:C.red},
+    {label:'Catch All', value:mv.mv_catch_all, color:C.yellow},
+  ];
+
+  const x = d3.scaleBand().domain(steps.map(s=>s.label)).range([0,w]).padding(0.15);
+  const y = d3.scaleLinear().domain([0,mv.total_contacts*1.05]).range([h,0]);
+
+  steps.forEach(step => {
+    const bx = x(step.label), bw = x.bandwidth(), by = y(step.value), bh = h - by;
+    g.append('rect').attr('x',bx).attr('y',by).attr('width',bw).attr('height',bh)
+      .attr('fill',step.color).attr('opacity',0.7).attr('rx',4);
+    g.append('text').attr('x',bx+bw/2).attr('y',by-6).attr('text-anchor','middle')
+      .attr('fill',C.text).style('font-size','12px').style('font-weight','600')
+      .text(step.value.toLocaleString('es-ES'));
+  });
+
+  // Annotations
+  const annY = h + 5;
+  const unvX = x('MV Verified');
+  g.append('text').attr('x',w-10).attr('y',20).attr('text-anchor','end')
+    .attr('fill',C.orange).style('font-size','11px').style('font-weight','600')
+    .text(`⚠ ${mv.mv_unverified} emails sin verificar (€${(mv.mv_unverified*0.001).toFixed(2)})`);
+  g.append('text').attr('x',w-10).attr('y',38).attr('text-anchor','end')
+    .attr('fill',C.purple).style('font-size','11px')
+    .text(`👻 ${fmt(mv.ghost_invalid)} ghost contacts (MV=invalid, email removed)`);
+  g.append('text').attr('x',w-10).attr('y',56).attr('text-anchor','end')
+    .attr('fill',C.blue).style('font-size','11px')
+    .text(`📧 ${fmt(mv.no_email_with_company)} contacts sin email + con empresa → email_match`);
+  g.append('text').attr('x',w-10).attr('y',74).attr('text-anchor','end')
+    .attr('fill',C.green).style('font-size','11px')
+    .text(`🔍 ${fmt(mv.companies_with_scraped_emails)} empresas con emails scrapeados`);
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).tickSize(0))
+    .selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain').remove();
+}
+
+function updateInsights(d) {
+  if (!d.insights) return;
+  const ins = d.insights;
+  const el = id => document.getElementById(id);
+  el('kpi-ins-dp').textContent = '490K';
+  el('kpi-ins-mv').textContent = fmt(ins.mv_funnel.mv_unverified);
+  el('kpi-ins-match').textContent = fmt(ins.mv_funnel.no_email_with_company);
+  el('kpi-ins-scraped').textContent = fmt(ins.mv_funnel.companies_with_scraped_emails);
+  el('kpi-ins-ghost').textContent = fmt(ins.mv_funnel.ghost_invalid);
+
+  const charts = [drawInsMaturity, drawInsWP, drawInsRevenue, drawInsCompound, drawInsGaps, drawInsComplaints, drawInsMVFunnel];
+  charts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
+}
+
 // ═══ DISTRIBUIDORES TAB ═══
 const DIST_COLORS = {food:'#3fb950', tech:'#58a6ff', equipment:'#f0883e', services:'#bc8cff', retail:'#ffd93d', city:'#8b949e', other:'#484f58'};
 
@@ -4346,6 +4694,7 @@ function updateAll(d) {
   if (currentTab === 'bi') { updateBI(d); tabInited.bi = true; }
   else if (currentTab === 'sales') { updateSales(d); tabInited.sales = true; }
   else if (currentTab === 'dist') { updateDist(d); tabInited.dist = true; }
+  else if (currentTab === 'insights') { updateInsights(d); tabInited.insights = true; }
 }
 
 async function loadData() {
@@ -4450,6 +4799,7 @@ window.addEventListener('resize', () => {
     else if (currentTab === 'bi' && tabInited.bi) updateBI(window.DATA);
     else if (currentTab === 'sales' && tabInited.sales) updateSales(window.DATA);
     else if (currentTab === 'dist' && tabInited.dist) updateDist(window.DATA);
+    else if (currentTab === 'insights' && tabInited.insights) updateInsights(window.DATA);
   }, 200);
 });
 </script>
