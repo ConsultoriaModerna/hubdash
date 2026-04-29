@@ -6,6 +6,7 @@
 <title>HubDash — Sales Intelligence Platform</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12/dist/d3-sankey.min.js"></script>
 <script type="importmap">
 {
   "imports": {
@@ -143,6 +144,20 @@ svg text { fill: var(--muted); font-size: 11px; }
 }
 #mountain-canvas:active, #bubble-canvas:active, #contact4d-canvas:active { cursor: grabbing; }
 .heatmap-cell { stroke: var(--bg); stroke-width: 1; }
+/* Sankey */
+.sankey-link { fill: none; stroke-opacity: 0.3; transition: stroke-opacity 0.2s; }
+.sankey-link:hover { stroke-opacity: 0.6; }
+.sankey-node text { fill: var(--muted); font-size: 11px; }
+.dist-badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:10px; font-weight:600; }
+.dist-food { background:rgba(63,185,80,0.15); color:#3fb950; }
+.dist-tech { background:rgba(88,166,255,0.15); color:#58a6ff; }
+.dist-equipment { background:rgba(240,136,62,0.15); color:#f0883e; }
+.dist-services { background:rgba(188,140,255,0.15); color:#bc8cff; }
+.dist-retail { background:rgba(255,217,61,0.15); color:#ffd93d; }
+.dist-table { width:100%; border-collapse:collapse; font-size:12px; }
+.dist-table th { text-align:left; color:var(--muted); padding:6px 8px; border-bottom:1px solid var(--border); font-weight:500; }
+.dist-table td { padding:5px 8px; border-bottom:1px solid var(--grid); color:var(--text); }
+.dist-table tr:hover td { background:var(--grid); }
 .radar-axis { stroke: var(--grid); stroke-width: 1; }
 .radar-polygon { fill-opacity: 0.15; stroke-width: 2; }
 .sync-badge {
@@ -264,6 +279,7 @@ svg text { fill: var(--muted); font-size: 11px; }
     <button class="nav-tab active" data-tab="crm" onclick="switchTab('crm')">CRM Health</button>
     <button class="nav-tab" data-tab="bi" onclick="switchTab('bi')">Business Intel</button>
     <button class="nav-tab" data-tab="sales" onclick="switchTab('sales')">Sales Intel</button>
+    <button class="nav-tab" data-tab="dist" onclick="switchTab('dist')">Distribuidores</button>
   </div>
   <div class="header-right">
     <span class="sync-badge" id="sync-time">Loading...</span>
@@ -562,6 +578,56 @@ svg text { fill: var(--muted); font-size: 11px; }
 
   </div><!-- end Sales tab -->
 
+  <!-- ═══ TAB: DISTRIBUIDORES ═══ -->
+  <div class="tab-content" data-tab="dist">
+
+  <div class="kpi-row" style="grid-template-columns: repeat(5, 1fr);">
+    <div class="kpi-card"><div class="kpi-label">Total Distribuidores</div><div class="kpi-value" id="kpi-dist-total" style="color:var(--green)">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Food & Beverage</div><div class="kpi-value" id="kpi-dist-food" style="color:#3fb950">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Tech & POS</div><div class="kpi-value" id="kpi-dist-tech" style="color:#58a6ff">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Equipment</div><div class="kpi-value" id="kpi-dist-equip" style="color:#f0883e">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Services + Retail</div><div class="kpi-value" id="kpi-dist-services" style="color:#bc8cff">—</div></div>
+  </div>
+
+  <div class="section-divider"><span>Supply Chain Flow</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">60</span><span class="panel-title-text">Supply Chain Sankey — Category → Industry → City</span><span class="panel-fav" onclick="toggleFav(60)">☆</span></div>
+    <svg id="chart-dist-sankey" width="100%" height="500"></svg>
+  </div>
+
+  <div class="section-divider"><span>Coverage Analysis</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">61</span><span class="panel-title-text">Coverage Heatmap — Category × City</span><span class="panel-fav" onclick="toggleFav(61)">☆</span></div>
+    <svg id="chart-dist-heatmap" width="100%" height="350"></svg>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">62</span><span class="panel-title-text">Distribuidores por Categoría</span><span class="panel-fav" onclick="toggleFav(62)">☆</span></div>
+    <svg id="chart-dist-cats" width="100%" height="300"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">63</span><span class="panel-title-text">Distribuidores por Ciudad</span><span class="panel-fav" onclick="toggleFav(63)">☆</span></div>
+    <svg id="chart-dist-cities" width="100%" height="300"></svg>
+  </div>
+
+  <div class="section-divider"><span>Industry Breakdown</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">64</span><span class="panel-title-text">Top Industries — Supply Chain Distribution</span><span class="panel-fav" onclick="toggleFav(64)">☆</span></div>
+    <svg id="chart-dist-industries" width="100%" height="400"></svg>
+  </div>
+
+  <div class="section-divider"><span>Quality & Relationships</span></div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">65</span><span class="panel-title-text">Data Quality × Contacts — Distributor Health</span><span class="panel-fav" onclick="toggleFav(65)">☆</span></div>
+    <svg id="chart-dist-scatter" width="100%" height="320"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">66</span><span class="panel-title-text">Top Distribuidores — By Contact Count</span><span class="panel-fav" onclick="toggleFav(66)">☆</span></div>
+    <div id="chart-dist-table" style="max-height:320px; overflow-y:auto;"></div>
+  </div>
+
+  </div><!-- end Distribuidores tab -->
+
   <!-- ═══ SHARED: Infrastructure panels (always CRM tab) ═══ -->
   <div class="tab-content active" data-tab="crm">
   <div class="panel">
@@ -623,7 +689,7 @@ function openHs(b) { if (b && b.id) window.open(hsUrl('company', b.id), '_blank'
 
 // === Tab Navigation ===
 let currentTab = 'crm';
-const tabInited = {crm: false, bi: false, sales: false};
+const tabInited = {crm: false, bi: false, sales: false, dist: false};
 function switchTab(tab) {
   currentTab = tab;
   document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
@@ -637,6 +703,7 @@ function switchTab(tab) {
     setTimeout(() => {
       if (tab === 'bi') updateBI(window.DATA);
       if (tab === 'sales') updateSales(window.DATA);
+      if (tab === 'dist') updateDist(window.DATA);
       window.dispatchEvent(new Event('resize'));
     }, 50);
   } else {
@@ -4007,12 +4074,278 @@ function updateSales(d) {
   updatePmfKPIs(d); drawPmfCards(d); drawOppHeatmap(d);
   try { drawScoreSegment(d); } catch(e) { console.warn('drawScoreSegment', e); }
 }
+// ═══ DISTRIBUIDORES TAB ═══
+const DIST_COLORS = {food:'#3fb950', tech:'#58a6ff', equipment:'#f0883e', services:'#bc8cff', retail:'#ffd93d', city:'#8b949e', other:'#484f58'};
+
+function drawDistSankey(d) {
+  if (!d.dist_sankey || !d.dist_sankey.nodes.length) return;
+  const svg = d3.select('#chart-dist-sankey'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width || 900, H = 500;
+  const m = {top:10, right:140, bottom:10, left:10};
+
+  const sankey = d3.sankey()
+    .nodeWidth(18).nodePadding(14).nodeAlign(d3.sankeyJustify)
+    .extent([[m.left, m.top], [W - m.right, H - m.bottom]]);
+
+  const graph = sankey({
+    nodes: d.dist_sankey.nodes.map(n => Object.assign({}, n)),
+    links: d.dist_sankey.links.map(l => Object.assign({}, l)),
+  });
+
+  const g = svg.append('g');
+
+  // Links
+  g.append('g').selectAll('path').data(graph.links).join('path')
+    .attr('d', d3.sankeyLinkHorizontal())
+    .attr('class', 'sankey-link')
+    .attr('stroke', l => DIST_COLORS[l.source.category] || C.muted)
+    .attr('stroke-width', l => Math.max(1, l.width))
+    .on('mousemove', (evt, l) => showTip(evt, `<b>${l.source.name}</b> → <b>${l.target.name}</b><br>${fmt(l.value)} companies`))
+    .on('mouseleave', hideTip);
+
+  // Nodes
+  const node = g.append('g').selectAll('g').data(graph.nodes).join('g');
+  node.append('rect')
+    .attr('x', n => n.x0).attr('y', n => n.y0)
+    .attr('width', n => n.x1 - n.x0).attr('height', n => Math.max(1, n.y1 - n.y0))
+    .attr('fill', n => DIST_COLORS[n.category] || C.orange).attr('opacity', 0.85).attr('rx', 2);
+  node.append('text')
+    .attr('x', n => n.x0 < W/2 ? n.x1 + 6 : n.x0 - 6)
+    .attr('y', n => (n.y0 + n.y1) / 2).attr('dy', '0.35em')
+    .attr('text-anchor', n => n.x0 < W/2 ? 'start' : 'end')
+    .text(n => `${n.name} (${n.value||''})`)
+    .attr('fill', C.text).style('font-size', '11px');
+}
+
+function drawDistHeatmap(d) {
+  if (!d.dist_heatmap || !d.dist_heatmap.length) return;
+  const svg = d3.select('#chart-dist-heatmap'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width || 900, H = 350;
+  const m = {top:30, right:20, bottom:40, left:120};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const cats = [...new Set(d.dist_heatmap.map(r => r.cat))];
+  const cities = [...new Set(d.dist_heatmap.map(r => r.city))];
+  const maxVal = d3.max(d.dist_heatmap, r => r.count) || 1;
+
+  const x = d3.scaleBand().domain(cities).range([0, w]).padding(0.05);
+  const y = d3.scaleBand().domain(cats).range([0, h]).padding(0.05);
+  const color = d3.scaleSequential(d3.interpolateGreens).domain([0, maxVal]);
+
+  g.selectAll('rect').data(d.dist_heatmap).join('rect')
+    .attr('x', r => x(r.city)).attr('y', r => y(r.cat))
+    .attr('width', x.bandwidth()).attr('height', y.bandwidth())
+    .attr('fill', r => color(r.count)).attr('rx', 3)
+    .on('mousemove', (evt, r) => showTip(evt, `<b>${r.cat}</b> × ${r.city}<br>${fmt(r.count)} companies`))
+    .on('mouseleave', hideTip);
+
+  // Cell labels
+  g.selectAll('.cell-label').data(d.dist_heatmap).join('text')
+    .attr('class', 'cell-label')
+    .attr('x', r => x(r.city) + x.bandwidth()/2)
+    .attr('y', r => y(r.cat) + y.bandwidth()/2)
+    .attr('dy', '0.35em').attr('text-anchor', 'middle')
+    .attr('fill', r => r.count > maxVal*0.5 ? '#0d1117' : C.text)
+    .style('font-size', '12px').style('font-weight', '600')
+    .text(r => r.count);
+
+  // Axes
+  g.append('g').attr('transform', `translate(0,${h})`).call(d3.axisBottom(x).tickSize(0))
+    .selectAll('text').attr('fill', C.muted).style('font-size', '11px');
+  g.append('g').call(d3.axisLeft(y).tickSize(0))
+    .selectAll('text').attr('fill', C.muted).style('font-size', '11px');
+  g.selectAll('.domain').remove();
+}
+
+function drawDistCats(d) {
+  const ds = d.dist_summary; if (!ds) return;
+  const svg = d3.select('#chart-dist-cats'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width || 400, H = 300;
+  const m = {top:20, right:20, bottom:30, left:110};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const entries = Object.entries(ds.by_category).sort((a,b) => b[1]-a[1]);
+  const labels = entries.map(e => e[0]);
+  const values = entries.map(e => e[1]);
+  const catLabels = {food:'Food & Beverage', tech:'Tech & POS', equipment:'Equipment', services:'Services', retail:'Retail'};
+
+  const y = d3.scaleBand().domain(labels).range([0, h]).padding(0.25);
+  const x = d3.scaleLinear().domain([0, d3.max(values)*1.15]).range([0, w]);
+
+  g.selectAll('.bar').data(entries).join('rect')
+    .attr('x', 0).attr('y', e => y(e[0]))
+    .attr('width', e => x(e[1])).attr('height', y.bandwidth())
+    .attr('fill', e => DIST_COLORS[e[0]] || C.muted).attr('rx', 4)
+    .on('mousemove', (evt, e) => showTip(evt, `<b>${catLabels[e[0]]||e[0]}</b><br>${fmt(e[1])} companies`))
+    .on('mouseleave', hideTip);
+
+  // Value labels
+  g.selectAll('.val').data(entries).join('text')
+    .attr('x', e => x(e[1]) + 6).attr('y', e => y(e[0]) + y.bandwidth()/2)
+    .attr('dy', '0.35em').attr('fill', C.text).style('font-size', '12px').style('font-weight', '600')
+    .text(e => fmt(e[1]));
+
+  // Y axis
+  g.append('g').call(d3.axisLeft(y).tickFormat(d => catLabels[d]||d).tickSize(0))
+    .selectAll('text').attr('fill', C.muted).style('font-size', '11px');
+  g.selectAll('.domain').remove();
+}
+
+function drawDistCities(d) {
+  const ds = d.dist_summary; if (!ds) return;
+  const svg = d3.select('#chart-dist-cities'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width || 400, H = 300;
+  const R = Math.min(W, H) / 2 - 30;
+  const g = svg.append('g').attr('transform', `translate(${W/2},${H/2})`);
+
+  const entries = Object.entries(ds.by_city).slice(0, 10);
+  const pieGen = d3.pie().value(e => e[1]).sort(null);
+  const arc = d3.arc().innerRadius(R*0.45).outerRadius(R);
+  const arcH = d3.arc().innerRadius(R*0.45).outerRadius(R+6);
+  const cityColors = d3.scaleOrdinal(d3.schemeTableau10);
+  const total = entries.reduce((s, e) => s + e[1], 0);
+
+  g.selectAll('path').data(pieGen(entries)).join('path')
+    .attr('d', arc).attr('fill', (_, i) => cityColors(i)).attr('stroke', C.card).attr('stroke-width', 2)
+    .on('mousemove', function(evt, dd) {
+      d3.select(this).transition().duration(100).attr('d', arcH);
+      const pct = (dd.data[1]/total*100).toFixed(1);
+      showTip(evt, `<b>${dd.data[0]}</b><br>${fmt(dd.data[1])} (${pct}%)`);
+    })
+    .on('mouseleave', function() { d3.select(this).transition().duration(200).attr('d', arc); hideTip(); });
+
+  // Center total
+  g.append('text').attr('text-anchor','middle').attr('dy','-0.2em')
+    .attr('fill', C.text).style('font-size','22px').style('font-weight','700').text(fmt(total));
+  g.append('text').attr('text-anchor','middle').attr('dy','1.2em')
+    .attr('fill', C.muted).style('font-size','11px').text('cities');
+}
+
+function drawDistIndustries(d) {
+  const ds = d.dist_summary; if (!ds) return;
+  const svg = d3.select('#chart-dist-industries'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width || 900, H = 400;
+  const m = {top:20, right:60, bottom:30, left:260};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const IND_TO_CAT = {};
+  const DIST_CATEGORIES = {
+    food:['FOOD_BEVERAGES','FOOD_PRODUCTION','WINE_AND_SPIRITS'],
+    tech:['COMPUTER_SOFTWARE','CONSUMER_ELECTRONICS','INFORMATION_TECHNOLOGY_AND_SERVICES'],
+    equipment:['MECHANICAL_OR_INDUSTRIAL_ENGINEERING','BUSINESS_SUPPLIES_AND_EQUIPMENT'],
+    services:['MARKETING_AND_ADVERTISING','PROFESSIONAL_TRAINING_COACHING','HEALTH_WELLNESS_AND_FITNESS','EDUCATION_MANAGEMENT'],
+    retail:['RETAIL','CONSUMER_GOODS','CONSUMER_SERVICES'],
+  };
+  for (const [cat, inds] of Object.entries(DIST_CATEGORIES)) inds.forEach(i => IND_TO_CAT[i] = cat);
+
+  const entries = Object.entries(ds.by_industry).sort((a,b) => b[1]-a[1]);
+  const labels = entries.map(e => e[0]);
+  const values = entries.map(e => e[1]);
+
+  const y = d3.scaleBand().domain(labels).range([0, h]).padding(0.2);
+  const x = d3.scaleLinear().domain([0, d3.max(values)*1.1]).range([0, w]);
+
+  g.selectAll('.bar').data(entries).join('rect')
+    .attr('x', 0).attr('y', e => y(e[0]))
+    .attr('width', e => x(e[1])).attr('height', y.bandwidth())
+    .attr('fill', e => DIST_COLORS[IND_TO_CAT[e[0]]||'other'] || C.muted).attr('rx', 3)
+    .on('mousemove', (evt, e) => showTip(evt, `<b>${e[0].replace(/_/g,' ')}</b><br>${fmt(e[1])} companies<br>Category: ${IND_TO_CAT[e[0]]||'other'}`))
+    .on('mouseleave', hideTip);
+
+  g.selectAll('.val').data(entries).join('text')
+    .attr('x', e => x(e[1]) + 6).attr('y', e => y(e[0]) + y.bandwidth()/2)
+    .attr('dy', '0.35em').attr('fill', C.text).style('font-size', '11px').style('font-weight', '600')
+    .text(e => fmt(e[1]));
+
+  g.append('g').call(d3.axisLeft(y).tickFormat(d => d.replace(/_/g,' ').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())).tickSize(0))
+    .selectAll('text').attr('fill', C.muted).style('font-size', '10px');
+  g.selectAll('.domain').remove();
+}
+
+function drawDistScatter(d) {
+  if (!d.distributors || !d.distributors.length) return;
+  const svg = d3.select('#chart-dist-scatter'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width || 400, H = 320;
+  const m = {top:20, right:20, bottom:40, left:50};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const data = d.distributors.filter(r => r.s > 0);
+  const x = d3.scaleLinear().domain([0, 100]).range([0, w]);
+  const y = d3.scaleLinear().domain([0, d3.max(data, r => r.ct)+1]).range([h, 0]);
+
+  // Grid lines
+  g.selectAll('.gx').data(x.ticks(5)).join('line').attr('class','gx')
+    .attr('x1',d=>x(d)).attr('x2',d=>x(d)).attr('y1',0).attr('y2',h)
+    .attr('stroke',C.grid).attr('stroke-dasharray','2,3');
+
+  g.selectAll('.dot').data(data).join('circle')
+    .attr('cx', r => x(r.s)).attr('cy', r => y(r.ct))
+    .attr('r', 4).attr('fill', r => DIST_COLORS[r.cat] || C.muted).attr('opacity', 0.7)
+    .on('mousemove', (evt, r) => showTip(evt, `<b>${r.n}</b><br>Score: ${r.s} | Contacts: ${r.ct}<br>Industry: ${r.ind.replace(/_/g,' ')}<br>${r.c}`))
+    .on('mouseleave', hideTip);
+
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(5).tickSize(0))
+    .selectAll('text').attr('fill',C.muted);
+  g.append('g').call(d3.axisLeft(y).ticks(5).tickSize(0))
+    .selectAll('text').attr('fill',C.muted);
+  g.selectAll('.domain').attr('stroke',C.grid);
+
+  // Axis labels
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle')
+    .attr('fill',C.muted).style('font-size','10px').text('Data Score');
+  g.append('text').attr('transform','rotate(-90)').attr('x',-h/2).attr('y',-38)
+    .attr('text-anchor','middle').attr('fill',C.muted).style('font-size','10px').text('Contacts');
+}
+
+function drawDistTable(d) {
+  if (!d.distributors || !d.distributors.length) return;
+  const container = document.getElementById('chart-dist-table');
+  const top = d.distributors.filter(r => r.ct > 0).sort((a,b) => b.ct - a.ct).slice(0, 30);
+  const catLabels = {food:'🍷 Food', tech:'💻 Tech', equipment:'🔧 Equip', services:'📋 Svc', retail:'🛒 Retail'};
+
+  let html = '<table class="dist-table"><thead><tr><th>Empresa</th><th>Categoría</th><th>Ciudad</th><th>Score</th><th>Contactos</th></tr></thead><tbody>';
+  for (const r of top) {
+    html += `<tr onclick="window.open('${hsUrl('company',r.id)}','_blank')" style="cursor:pointer">`;
+    html += `<td style="font-weight:500">${r.n}</td>`;
+    html += `<td><span class="dist-badge dist-${r.cat}">${catLabels[r.cat]||r.cat}</span></td>`;
+    html += `<td>${r.c}</td><td>${r.s}</td><td style="font-weight:600">${r.ct}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  if (!top.length) html = '<div style="text-align:center;color:var(--muted);padding:40px">No distributors with contacts found</div>';
+  container.innerHTML = html;
+}
+
+function updateDist(d) {
+  if (!d.distributors) return;
+  const ds = d.dist_summary || {};
+  const el = id => document.getElementById(id);
+  el('kpi-dist-total').textContent = fmt(ds.total || 0);
+  el('kpi-dist-food').textContent = fmt((ds.by_category||{}).food || 0);
+  el('kpi-dist-tech').textContent = fmt((ds.by_category||{}).tech || 0);
+  el('kpi-dist-equip').textContent = fmt((ds.by_category||{}).equipment || 0);
+  el('kpi-dist-services').textContent = fmt(((ds.by_category||{}).services||0) + ((ds.by_category||{}).retail||0));
+
+  const distCharts = [drawDistSankey, drawDistHeatmap, drawDistCats, drawDistCities, drawDistIndustries, drawDistScatter, drawDistTable];
+  distCharts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
+}
+
 function updateAll(d) {
   updateCRM(d);
   tabInited.crm = true;
   // Render current tab if not CRM
   if (currentTab === 'bi') { updateBI(d); tabInited.bi = true; }
   else if (currentTab === 'sales') { updateSales(d); tabInited.sales = true; }
+  else if (currentTab === 'dist') { updateDist(d); tabInited.dist = true; }
 }
 
 async function loadData() {
@@ -4116,6 +4449,7 @@ window.addEventListener('resize', () => {
     if (currentTab === 'crm') updateCRM(window.DATA);
     else if (currentTab === 'bi' && tabInited.bi) updateBI(window.DATA);
     else if (currentTab === 'sales' && tabInited.sales) updateSales(window.DATA);
+    else if (currentTab === 'dist' && tabInited.dist) updateDist(window.DATA);
   }, 200);
 });
 </script>
