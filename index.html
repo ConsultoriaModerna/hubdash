@@ -276,7 +276,9 @@ svg text { fill: var(--muted); font-size: 11px; }
 <div class="header">
   <h1><span>Hub</span>Dash <small style="font-size:11px;color:var(--dim);font-weight:400">v1.0</small></h1>
   <div class="nav-tabs">
-    <button class="nav-tab active" data-tab="crm" onclick="switchTab('crm')">CRM Health</button>
+    <button class="nav-tab active" data-tab="crm" onclick="switchTab('crm')">Overview</button>
+    <button class="nav-tab" data-tab="companies" onclick="switchTab('companies')">Companies</button>
+    <button class="nav-tab" data-tab="contacts" onclick="switchTab('contacts')">Contacts</button>
     <button class="nav-tab" data-tab="bi" onclick="switchTab('bi')">Business Intel</button>
     <button class="nav-tab" data-tab="sales" onclick="switchTab('sales')">Sales Intel</button>
     <button class="nav-tab" data-tab="dist" onclick="switchTab('dist')">Distribuidores</button>
@@ -303,18 +305,6 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title"><span class="panel-id">01</span>Data Score Distribution</div>
     <div id="chart-scores"></div>
   </div>
-  <div class="panel">
-    <div class="panel-title"><span class="panel-id">02</span>Enrichment Pipeline</div>
-    <svg id="chart-pipeline" width="100%" height="260"></svg>
-  </div>
-  <div class="panel">
-    <div class="panel-title"><span class="panel-id">03</span>Companies por Ciudad</div>
-    <svg id="chart-cities" width="100%" height="260"></svg>
-  </div>
-  <div class="panel">
-    <div class="panel-title"><span class="panel-id">04</span>Contact Assets</div>
-    <svg id="chart-assets" width="100%" height="260"></svg>
-  </div>
 
   <div class="panel panel-full">
     <div class="panel-title"><span class="panel-id">05</span>CRM Mountain — City x Score x Volume</div>
@@ -326,6 +316,56 @@ svg text { fill: var(--muted); font-size: 11px; }
     <canvas id="mountain-canvas"></canvas>
   </div>
 
+  </div><!-- end Overview tab -->
+
+  <!-- ═══ TAB: COMPANIES ═══ -->
+  <div class="tab-content" data-tab="companies">
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="kpi-label">Total Companies</div><div class="kpi-value" id="kpi-co-total">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Enriched (GP)</div><div class="kpi-value" id="kpi-co-enriched" style="color:var(--green)">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">With Domain</div><div class="kpi-value" id="kpi-co-domain">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Avg Score</div><div class="kpi-value" id="kpi-co-score">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">WS Scraped</div><div class="kpi-value" id="kpi-co-scraped" style="color:var(--cyan)">—</div></div>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">02</span>Enrichment Pipeline</div>
+    <svg id="chart-pipeline" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">03</span>Companies por Ciudad</div>
+    <svg id="chart-cities" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">35</span>Field Completeness — Companies</div>
+    <svg id="chart-fields-co" width="100%" height="300"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">37</span>Service Capabilities (Enriched)</div>
+    <svg id="chart-services" width="100%" height="320"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">53</span>Domain Coverage Funnel</div>
+    <svg id="chart-domain-coverage" width="100%" height="280"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">54</span>Enrichment Sources — Yield & Cost</div>
+    <svg id="chart-enrich-sources" width="100%" height="300"></svg>
+  </div>
+  </div><!-- end Companies tab -->
+
+  <!-- ═══ TAB: CONTACTS ═══ -->
+  <div class="tab-content" data-tab="contacts">
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="kpi-label">Total Contacts</div><div class="kpi-value" id="kpi-ct-total">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">With Mobile</div><div class="kpi-value" id="kpi-ct-mobile" style="color:var(--green)">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Email OK (MV)</div><div class="kpi-value" id="kpi-ct-mvok" style="color:var(--cyan)">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Golden</div><div class="kpi-value" id="kpi-ct-golden" style="color:#FFD700">—</div></div>
+    <div class="kpi-card"><div class="kpi-label">Ghost</div><div class="kpi-value" id="kpi-ct-ghost" style="color:var(--red)">—</div></div>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">04</span>Contact Assets</div>
+    <svg id="chart-assets" width="100%" height="260"></svg>
+  </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">06</span>Contact 4D — Score × Mobile × Email</div>
     <canvas id="contact4d-canvas"></canvas>
@@ -343,24 +383,36 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-golden" width="100%" height="260"></svg>
   </div>
   <div class="panel">
+    <div class="panel-title"><span class="panel-id">36</span>Field Completeness — Contacts</div>
+    <svg id="chart-fields-ct" width="100%" height="300"></svg>
+  </div>
+  <div class="section-divider"><span>Email Verification</span></div>
+  <div class="panel">
     <div class="panel-title"><span class="panel-id">51</span>MV Email Verification Health</div>
     <svg id="chart-mv-email" width="100%" height="260"></svg>
-  </div>
-  <div class="section-divider"><span>Reflexiones Operativas</span></div>
-  <div class="panel panel-full">
-    <div class="panel-title"><span class="panel-id">53</span>Domain Coverage Funnel</div>
-    <svg id="chart-domain-coverage" width="100%" height="280"></svg>
-  </div>
-  <div class="panel">
-    <div class="panel-title"><span class="panel-id">54</span>Enrichment Sources — Yield & Cost</div>
-    <svg id="chart-enrich-sources" width="100%" height="300"></svg>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">55</span>MV Email Verification by Tier</div>
     <svg id="chart-mv-tier" width="100%" height="300"></svg>
   </div>
-
-  </div><!-- end CRM tab -->
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">80</span>MV Verification Heatmap — City × Status</div>
+    <div id="chart-mv-heatmap"></div>
+  </div>
+  <div class="section-divider"><span>Contact Quality Nuclei</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">81</span>Contact Quality Nuclei</div>
+    <svg id="chart-nuclei" width="100%" height="320"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">82</span>Lifecycle Stage Distribution</div>
+    <svg id="chart-lifecycle" width="100%" height="260"></svg>
+  </div>
+  <div class="panel">
+    <div class="panel-title"><span class="panel-id">83</span>Contact Source Distribution</div>
+    <svg id="chart-source" width="100%" height="260"></svg>
+  </div>
+  </div><!-- end Contacts tab -->
 
   <!-- ═══ TAB: BUSINESS INTEL ═══ -->
   <div class="tab-content" data-tab="bi">
@@ -688,19 +740,6 @@ svg text { fill: var(--muted); font-size: 11px; }
   <!-- ═══ SHARED: Infrastructure panels (always CRM tab) ═══ -->
   <div class="tab-content active" data-tab="crm">
   <div class="panel">
-    <div class="panel-title"><span class="panel-id">35</span>Field Completeness — Companies</div>
-    <svg id="chart-fields-co" width="100%" height="300"></svg>
-  </div>
-  <div class="panel">
-    <div class="panel-title"><span class="panel-id">36</span>Field Completeness — Contacts</div>
-    <svg id="chart-fields-ct" width="100%" height="300"></svg>
-  </div>
-
-  <div class="panel">
-    <div class="panel-title"><span class="panel-id">37</span>Service Capabilities (Enriched)</div>
-    <svg id="chart-services" width="100%" height="320"></svg>
-  </div>
-  <div class="panel">
     <div class="panel-title"><span class="panel-id">38</span>Budget Tracker</div>
     <svg id="chart-budget" width="100%" height="320"></svg>
   </div>
@@ -713,7 +752,7 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title"><span class="panel-id">44</span>Enrichment Velocity</div>
     <svg id="chart-enrich-velocity" width="100%" height="400"></svg>
   </div>
-  </div><!-- end CRM shared -->
+  </div><!-- end Overview shared -->
 </div>
 
 <div class="panel panel-full" id="drilldown">
@@ -746,7 +785,7 @@ function openHs(b) { if (b && b.id) window.open(hsUrl('company', b.id), '_blank'
 
 // === Tab Navigation ===
 let currentTab = 'crm';
-const tabInited = {crm: false, bi: false, sales: false, dist: false, insights: false};
+const tabInited = {crm: false, companies: false, contacts: false, bi: false, sales: false, dist: false, insights: false};
 function switchTab(tab) {
   currentTab = tab;
   document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
@@ -758,6 +797,8 @@ function switchTab(tab) {
   if (window.DATA && !tabInited[tab]) {
     tabInited[tab] = true;
     setTimeout(() => {
+      if (tab === 'companies') updateCompanies(window.DATA);
+      if (tab === 'contacts') updateContacts(window.DATA);
       if (tab === 'bi') updateBI(window.DATA);
       if (tab === 'sales') updateSales(window.DATA);
       if (tab === 'dist') updateDist(window.DATA);
@@ -1166,11 +1207,11 @@ function drawRatings(d) {
   }).classed('seg-click', true);
 }
 
-function drawFieldCompleteness(d) {
+function drawFieldCompleteness(d, mode) {
   if (!d.field_completeness) return;
   const fc = d.field_completeness;
-  drawFieldBars('#chart-fields-co', fc.companies, fc.companies_total, 'Companies', C.blue);
-  drawFieldBars('#chart-fields-ct', fc.contacts, fc.contacts_total, 'Contacts', C.purple);
+  if (!mode || mode === 'co') drawFieldBars('#chart-fields-co', fc.companies, fc.companies_total, 'Companies', C.blue);
+  if (!mode || mode === 'ct') drawFieldBars('#chart-fields-ct', fc.contacts, fc.contacts_total, 'Contacts', C.purple);
 }
 
 function drawFieldBars(selector, fields, total, label, color) {
@@ -4096,14 +4137,44 @@ function drawMvTier(d) {
 }
 
 function updateCRM(d) {
-  updateKPIs(d); drawScores(d); drawPipeline(d); drawCities(d); drawAssets(d);
-  drawContactCities(d); drawContactCityAssets(d);
-  drawGoldenContacts(d); drawMvEmail(d);
-  drawFieldCompleteness(d); drawServices(d); drawBudget(d);
+  // Overview tab: KPIs + Score distribution + Mountain + Budget/Log/Velocity
+  updateKPIs(d); drawScores(d); drawBudget(d);
   drawEnrichVelocity(d);
-  drawDomainCoverage(d); drawEnrichSources(d); drawMvTier(d);
   document.getElementById('log-panel').textContent = d.log_tail || 'Data synced from M1. No live log on web.';
   if (window.mountainReady) window.updateMountain(d);
+}
+function updateCompanies(d) {
+  // Companies tab KPIs
+  const s = d.summary || {};
+  const dc = d.domain_coverage || {};
+  const es = d.enrich_sources || {};
+  setText('kpi-co-total', (s.companies_total||0).toLocaleString());
+  setText('kpi-co-enriched', (s.enriched_gp||0).toLocaleString());
+  setText('kpi-co-domain', (dc.with_domain||0).toLocaleString());
+  setText('kpi-co-score', s.avg_score_companies||'—');
+  setText('kpi-co-scraped', (es.ws_scraped||0).toLocaleString());
+  // Charts
+  drawPipeline(d); drawCities(d); drawFieldCompleteness(d, 'co');
+  drawServices(d); drawDomainCoverage(d); drawEnrichSources(d);
+}
+function updateContacts(d) {
+  // Contacts tab KPIs
+  const ca = d.contact_assets || {};
+  const mv = d.mv_email_dist || {};
+  const g = d.golden_contacts || {};
+  const ct = d.contacts_tab || {};
+  const nuclei = ct.nuclei || [];
+  const ghostN = nuclei.find(n => n.nucleus === 'Ghost');
+  setText('kpi-ct-total', (ca.total||0).toLocaleString());
+  setText('kpi-ct-mobile', (ca.mobile||0).toLocaleString());
+  setText('kpi-ct-mvok', (mv.ok||0).toLocaleString());
+  setText('kpi-ct-golden', (g.has_mobile_valid_company||0).toLocaleString());
+  setText('kpi-ct-ghost', ghostN ? ghostN.count.toLocaleString() : '—');
+  // Charts
+  drawAssets(d); drawContactCities(d); drawContactCityAssets(d);
+  drawGoldenContacts(d); drawFieldCompleteness(d, 'ct');
+  drawMvEmail(d); drawMvTier(d);
+  drawMvHeatmap(d); drawNuclei(d); drawLifecycle(d); drawSource(d);
   if (window.contact4dReady) window.updateContact4D(d);
 }
 function updateBI(d) {
@@ -4766,11 +4837,148 @@ function updateDist(d) {
   distCharts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
 }
 
+// === Helper ===
+function setText(id, val) { const e = document.getElementById(id); if (e) e.textContent = val; }
+
+// === NEW: MV Verification Heatmap (Panel 80) ===
+function drawMvHeatmap(d) {
+  const ct = d.contacts_tab || {};
+  const data = ct.mv_heatmap || [];
+  if (!data.length) return;
+  const container = document.getElementById('chart-mv-heatmap');
+  if (!container) return;
+  const W = container.getBoundingClientRect().width || 700;
+  const statuses = [...new Set(data.map(d => d.status))];
+  const cities = [...new Set(data.map(d => d.city))];
+  const maxVal = Math.max(...data.map(d => d.count));
+  const MV_COLORS = {ok:'#22c55e', invalid:'#ef4444', catch_all:'#f59e0b', unknown:'#6b7280', disposable:'#a855f7', unverified:'#3b82f6'};
+  const cellW = Math.min(90, (W - 140) / statuses.length);
+  const cellH = 36;
+  const m = {left: 100, top: 30};
+  let svg = `<svg width="${W}" height="${m.top + cities.length * cellH + 20}">`;
+  // Header
+  statuses.forEach((s, i) => {
+    svg += `<text x="${m.left + i * cellW + cellW/2}" y="18" text-anchor="middle" fill="${C.muted}" font-size="10">${s}</text>`;
+  });
+  // Cells
+  cities.forEach((city, ci) => {
+    svg += `<text x="${m.left - 8}" y="${m.top + ci * cellH + cellH/2 + 4}" text-anchor="end" fill="${C.text}" font-size="11">${city}</text>`;
+    statuses.forEach((status, si) => {
+      const cell = data.find(d => d.city === city && d.status === status);
+      const val = cell ? cell.count : 0;
+      const opacity = val ? Math.max(0.15, val / maxVal) : 0.03;
+      const color = MV_COLORS[status] || '#888';
+      const x = m.left + si * cellW;
+      const y = m.top + ci * cellH;
+      svg += `<rect x="${x+1}" y="${y+1}" width="${cellW-2}" height="${cellH-2}" rx="4" fill="${color}" opacity="${opacity}"/>`;
+      if (val) svg += `<text x="${x + cellW/2}" y="${y + cellH/2 + 4}" text-anchor="middle" fill="${C.text}" font-size="10" font-weight="600">${fmt(val)}</text>`;
+    });
+  });
+  svg += '</svg>';
+  container.innerHTML = svg;
+}
+
+// === NEW: Contact Quality Nuclei (Panel 81) ===
+function drawNuclei(d) {
+  const ct = d.contacts_tab || {};
+  const nuclei = ct.nuclei || [];
+  if (!nuclei.length) return;
+  const svg = d3.select('#chart-nuclei'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 320;
+  const m = {top: 20, right: 30, bottom: 30, left: 140};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+  const total = nuclei.reduce((s,n) => s + n.count, 0);
+  const x = d3.scaleLinear().domain([0, d3.max(nuclei, n => n.count)]).range([0, w]);
+  const y = d3.scaleBand().domain(nuclei.map(n => n.nucleus)).range([0, h]).padding(0.25);
+  // Bars
+  g.selectAll('.bar').data(nuclei).enter().append('rect')
+    .attr('x', 0).attr('y', n => y(n.nucleus)).attr('width', n => x(n.count)).attr('height', y.bandwidth())
+    .attr('fill', n => n.color).attr('opacity', 0.8).attr('rx', 4)
+    .on('mousemove', (evt, n) => showTip(evt, `<b>${n.nucleus}</b><br>${n.desc}<br>${fmt(n.count)} (${(n.count/total*100).toFixed(1)}%)`))
+    .on('mouseleave', hideTip);
+  // Labels
+  g.selectAll('.lbl').data(nuclei).enter().append('text')
+    .attr('x', -8).attr('y', n => y(n.nucleus) + y.bandwidth()/2).attr('text-anchor','end').attr('dominant-baseline','middle')
+    .text(n => n.nucleus).attr('fill', n => n.color).style('font-size','12px').style('font-weight','600');
+  // Values
+  g.selectAll('.val').data(nuclei).enter().append('text')
+    .attr('x', n => x(n.count) + 6).attr('y', n => y(n.nucleus) + y.bandwidth()/2).attr('dominant-baseline','middle')
+    .text(n => `${fmt(n.count)} (${(n.count/total*100).toFixed(1)}%)`).attr('fill', C.text).style('font-size','11px').style('font-weight','600');
+}
+
+// === NEW: Lifecycle Stage Distribution (Panel 82) ===
+function drawLifecycle(d) {
+  const ct = d.contacts_tab || {};
+  const lc = ct.lifecycle || {};
+  if (!Object.keys(lc).length) return;
+  const svg = d3.select('#chart-lifecycle'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const entries = Object.entries(lc).sort((a,b) => b[1] - a[1]);
+  const total = entries.reduce((s,e) => s + e[1], 0);
+  const m = {top: 10, right: 30, bottom: 30, left: 130};
+  const w = W - m.left - m.right, h = H - m.top - m.bottom;
+  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+  const x = d3.scaleLinear().domain([0, d3.max(entries, e => e[1])]).range([0, w]);
+  const y = d3.scaleBand().domain(entries.map(e => e[0])).range([0, h]).padding(0.25);
+  const colors = {subscriber:'#3b82f6', lead:'#22c55e', marketingqualifiedlead:'#f59e0b', salesqualifiedlead:'#ef4444',
+    opportunity:'#a855f7', customer:'#06b6d4', evangelist:'#f97316', other:'#6b7280', '(not set)':'#374151'};
+  g.selectAll('.bar').data(entries).enter().append('rect')
+    .attr('x',0).attr('y',e => y(e[0])).attr('width',e => x(e[1])).attr('height',y.bandwidth())
+    .attr('fill',e => colors[e[0]]||C.blue).attr('opacity',0.75).attr('rx',3)
+    .on('mousemove',(evt,e) => showTip(evt,`<b>${e[0]}</b><br>${fmt(e[1])} (${(e[1]/total*100).toFixed(1)}%)`))
+    .on('mouseleave',hideTip);
+  g.selectAll('.lbl').data(entries).enter().append('text')
+    .attr('x',-6).attr('y',e => y(e[0])+y.bandwidth()/2).attr('text-anchor','end').attr('dominant-baseline','middle')
+    .text(e => e[0]).attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.val').data(entries).enter().append('text')
+    .attr('x',e => x(e[1])+5).attr('y',e => y(e[0])+y.bandwidth()/2).attr('dominant-baseline','middle')
+    .text(e => fmt(e[1])).attr('fill',C.text).style('font-size','10px').style('font-weight','600');
+}
+
+// === NEW: Contact Source Distribution (Panel 83) ===
+function drawSource(d) {
+  const ct = d.contacts_tab || {};
+  const src = ct.source || {};
+  if (!Object.keys(src).length) return;
+  const svg = d3.select('#chart-source'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width, H = 260;
+  const entries = Object.entries(src).sort((a,b) => b[1] - a[1]);
+  const total = entries.reduce((s,e) => s + e[1], 0);
+  // Donut chart
+  const cx = W/2, cy = H/2;
+  const radius = Math.min(W, H)/2 - 30;
+  const g = svg.append('g').attr('transform', `translate(${cx},${cy})`);
+  const pie = d3.pie().value(d => d[1]).sort(null);
+  const arc = d3.arc().innerRadius(radius * 0.55).outerRadius(radius);
+  const srcColors = ['#3b82f6','#22c55e','#f59e0b','#ef4444','#a855f7','#06b6d4','#f97316','#6b7280'];
+  const paths = g.selectAll('path').data(pie(entries)).enter().append('path')
+    .attr('d', arc).attr('fill', (d,i) => srcColors[i % srcColors.length]).attr('opacity', 0.8)
+    .attr('stroke', '#1a1a2e').attr('stroke-width', 2)
+    .on('mousemove', (evt, dd) => showTip(evt, `<b>${dd.data[0]}</b><br>${fmt(dd.data[1])} (${(dd.data[1]/total*100).toFixed(1)}%)`))
+    .on('mouseleave', hideTip);
+  // Center text
+  g.append('text').attr('text-anchor','middle').attr('dy','-0.2em').text(fmt(total)).attr('fill',C.text).style('font-size','18px').style('font-weight','700');
+  g.append('text').attr('text-anchor','middle').attr('dy','1.2em').text('contacts').attr('fill',C.muted).style('font-size','10px');
+  // Legend
+  const legend = svg.append('g').attr('transform', `translate(10,${H-12})`);
+  entries.slice(0,6).forEach((e,i) => {
+    const lx = i * (W/6);
+    legend.append('rect').attr('x',lx).attr('y',0).attr('width',8).attr('height',8).attr('rx',2).attr('fill',srcColors[i%srcColors.length]);
+    legend.append('text').attr('x',lx+11).attr('y',7).text(e[0].replace(/_/g,' ')).attr('fill',C.muted).style('font-size','8px');
+  });
+}
+
 function updateAll(d) {
   updateCRM(d);
   tabInited.crm = true;
   // Render current tab if not CRM
-  if (currentTab === 'bi') { updateBI(d); tabInited.bi = true; }
+  if (currentTab === 'companies') { updateCompanies(d); tabInited.companies = true; }
+  else if (currentTab === 'contacts') { updateContacts(d); tabInited.contacts = true; }
+  else if (currentTab === 'bi') { updateBI(d); tabInited.bi = true; }
   else if (currentTab === 'sales') { updateSales(d); tabInited.sales = true; }
   else if (currentTab === 'dist') { updateDist(d); tabInited.dist = true; }
   else if (currentTab === 'insights') { updateInsights(d); tabInited.insights = true; }
@@ -4875,6 +5083,8 @@ window.addEventListener('resize', () => {
   _resizeTimer = setTimeout(() => {
     if (!window.DATA) return;
     if (currentTab === 'crm') updateCRM(window.DATA);
+    else if (currentTab === 'companies' && tabInited.companies) updateCompanies(window.DATA);
+    else if (currentTab === 'contacts' && tabInited.contacts) updateContacts(window.DATA);
     else if (currentTab === 'bi' && tabInited.bi) updateBI(window.DATA);
     else if (currentTab === 'sales' && tabInited.sales) updateSales(window.DATA);
     else if (currentTab === 'dist' && tabInited.dist) updateDist(window.DATA);
