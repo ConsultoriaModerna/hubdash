@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-01T14:10:48",
-  "fetch_seconds": 166.2,
+  "generated_at": "2026-05-01T15:00:21",
+  "fetch_seconds": 156.4,
   "summary": {
     "companies_total": 75099,
     "contacts_total": 60897,
@@ -124,12 +124,12 @@
     "has_mobile_valid_company": 11221
   },
   "mv_email_dist": {
-    "ok": 32950,
-    "invalid": 8887,
+    "ok": 32951,
+    "invalid": 8896,
     "catch_all": 2881,
     "unknown": 2503,
     "disposable": 7,
-    "no_mv_status": 13669
+    "no_mv_status": 13659
   },
   "mountain": {
     "cities": [
@@ -24671,7 +24671,7 @@
       "gp__rating_count": 4452,
       "gp__sentiment": 4472,
       "num_associated_contacts": 75099,
-      "description": 29531,
+      "description": 29641,
       "country": 73864
     },
     "contacts": {
@@ -25241,9 +25241,9 @@
   "reachability_funnel": {
     "total": 75099,
     "has_website": 37877,
-    "ws_scraped": 31325,
-    "ws_email_found": 9127,
-    "ws_instagram": 9667,
+    "ws_scraped": 31930,
+    "ws_email_found": 9306,
+    "ws_instagram": 9894,
     "has_phone": 48481,
     "has_contacts": 40135
   },
@@ -39159,14 +39159,14 @@
     "with_website": 37877,
     "no_domain": 37251,
     "no_domain_with_contacts": 13902,
-    "ws_scraped": 31325,
-    "ws_emails": 9127,
-    "ws_instagram": 9667,
+    "ws_scraped": 31930,
+    "ws_emails": 9306,
+    "ws_instagram": 9894,
     "domain_finder_found": 2135
   },
   "enrich_sources": {
     "gp_enriched": 4452,
-    "ws_scraped": 31325,
+    "ws_scraped": 31930,
     "ta_enriched": 832,
     "rg_enriched": 569,
     "domain_finder": 2135,
@@ -106254,15 +106254,15 @@
     "mv_funnel": {
       "total_contacts": 60897,
       "has_email": 39173,
-      "mv_verified": 47228,
-      "mv_unverified": 10,
-      "mv_ok": 32950,
-      "mv_invalid": 8887,
+      "mv_verified": 47238,
+      "mv_unverified": 0,
+      "mv_ok": 32951,
+      "mv_invalid": 8896,
       "mv_catch_all": 2881,
       "ghost_invalid": 8059,
       "no_email": 21724,
       "no_email_with_company": 15763,
-      "companies_with_scraped_emails": 9127
+      "companies_with_scraped_emails": 9314
     }
   },
   "contacts_tab": {
