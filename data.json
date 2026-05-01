@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-01T21:40:00",
-  "fetch_seconds": 164.3,
+  "generated_at": "2026-05-01T23:45:43",
+  "fetch_seconds": 155.1,
   "summary": {
     "companies_total": 75100,
-    "contacts_total": 60865,
+    "contacts_total": 60689,
     "enriched_gp": 4452,
     "avg_score_companies": 56.4,
     "avg_score_contacts": 51.6
@@ -18,8 +18,8 @@
     },
     "contacts": {
       "0-29": 5521,
-      "30-49": 22987,
-      "50-69": 22162,
+      "30-49": 22983,
+      "50-69": 22158,
       "70-89": 9975,
       "90-100": 0
     }
@@ -66,11 +66,11 @@
   "contact_cities": [
     {
       "city": "Barcelona",
-      "total": 5150
+      "total": 5147
     },
     {
       "city": "Madrid",
-      "total": 4723
+      "total": 4722
     },
     {
       "city": "Valencia",
@@ -86,19 +86,19 @@
     },
     {
       "city": "Otras",
-      "total": 49327
+      "total": 49155
     }
   ],
   "contact_city_assets": {
     "Barcelona": {
       "mobile": 3001,
       "email": 3649,
-      "phone": 3544
+      "phone": 3541
     },
     "Madrid": {
       "mobile": 3201,
       "email": 3284,
-      "phone": 3766
+      "phone": 3765
     },
     "Valencia": {
       "mobile": 703,
@@ -107,7 +107,7 @@
     },
     "Sevilla": {
       "mobile": 15,
-      "email": 94,
+      "email": 93,
       "phone": 39
     },
     "Bilbao": {
@@ -117,19 +117,19 @@
     }
   },
   "golden_contacts": {
-    "total": 60865,
+    "total": 60689,
     "has_mobile": 18600,
-    "has_mobile_email": 14199,
-    "has_mobile_valid_email": 12162,
-    "has_mobile_valid_company": 11221
+    "has_mobile_email": 14198,
+    "has_mobile_valid_email": 12166,
+    "has_mobile_valid_company": 11224
   },
   "mv_email_dist": {
     "ok": 32983,
-    "invalid": 8863,
+    "invalid": 8858,
     "catch_all": 2886,
     "unknown": 2510,
     "disposable": 7,
-    "no_mv_status": 13616
+    "no_mv_status": 13445
   },
   "mountain": {
     "cities": [
@@ -194,15 +194,15 @@
     "contacts": [
       [
         323,
-        1258,
-        2155,
+        1257,
+        2153,
         1396,
         0
       ],
       [
         85,
         812,
-        2090,
+        2089,
         1734,
         0
       ],
@@ -229,8 +229,8 @@
       ],
       [
         5003,
-        20610,
-        17330,
+        20607,
+        17329,
         6185,
         0
       ]
@@ -238,9 +238,9 @@
   },
   "contact_assets": {
     "mobile": 18600,
-    "email": 39308,
-    "phone": 35103,
-    "total": 60865
+    "email": 39278,
+    "phone": 35098,
+    "total": 60689
   },
   "bubbles": [
     {
@@ -24662,8 +24662,8 @@
     "companies": {
       "name": 75083,
       "phone": 48482,
-      "domain": 37849,
-      "website": 37878,
+      "domain": 38013,
+      "website": 38042,
       "city": 71371,
       "address": 66814,
       "industry": 34720,
@@ -24675,20 +24675,20 @@
       "country": 73865
     },
     "contacts": {
-      "email": 39308,
+      "email": 39278,
       "mobilephone": 18600,
-      "firstname": 57284,
-      "lastname": 15224,
-      "phone": 35103,
-      "company": 43677,
-      "city": 46529,
+      "firstname": 57279,
+      "lastname": 15222,
+      "phone": 35098,
+      "company": 43673,
+      "city": 46524,
       "jobtitle": 2188,
-      "lifecyclestage": 60694,
-      "associatedcompanyid": 44429,
+      "lifecyclestage": 60689,
+      "associatedcompanyid": 44424,
       "country": 16032
     },
     "companies_total": 75100,
-    "contacts_total": 60865
+    "contacts_total": 60689
   },
   "contact_matrix": [
     [
@@ -24707,19 +24707,19 @@
       0,
       0,
       1,
-      1416
+      1402
     ],
     [
       0,
       0,
       0,
-      4086
+      4100
     ],
     [
       1,
       1,
       1,
-      55
+      56
     ],
     [
       1,
@@ -24731,13 +24731,13 @@
       1,
       0,
       1,
-      9919
+      9911
     ],
     [
       1,
       0,
       0,
-      12816
+      12822
     ],
     [
       2,
@@ -24749,31 +24749,31 @@
       2,
       1,
       0,
-      4196
+      4195
     ],
     [
       2,
       0,
       1,
-      13258
+      13251
     ],
     [
       2,
       0,
       0,
-      83
+      87
     ],
     [
       3,
       1,
       1,
-      9476
+      9474
     ],
     [
       3,
       1,
       0,
-      1
+      3
     ],
     [
       3,
@@ -25251,16 +25251,31 @@
       "domain_finder": 2135,
       "contacts_mobile": 18600,
       "contacts_email": 39308
+    },
+    {
+      "ts": "2026-05-01 23:44",
+      "website": 38042,
+      "phone": 48482,
+      "domain": 38013,
+      "gp_enriched": 4452,
+      "ws_scraped": 35415,
+      "ws_emails": 10056,
+      "ws_instagram": 10916,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 18600,
+      "contacts_email": 39278
     }
   ],
   "reachability_funnel": {
     "total": 75100,
-    "has_website": 37878,
+    "has_website": 38042,
     "ws_scraped": 35415,
     "ws_email_found": 10056,
     "ws_instagram": 10916,
     "has_phone": 48482,
-    "has_contacts": 40032
+    "has_contacts": 40031
   },
   "hidden_segments": [
     {
@@ -28944,7 +28959,7 @@
         "wb": 1,
         "dm": "xemei.es",
         "tp": "Restaurante italiano",
-        "ct": 4
+        "ct": 3
       },
       {
         "id": "9919864783",
@@ -30358,7 +30373,7 @@
         "wb": 1,
         "dm": "ostaia.com",
         "tp": "Restaurante italiano",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9921923004",
@@ -37876,7 +37891,7 @@
         "wb": 1,
         "dm": "alsurcafe.com",
         "tp": "Panadería",
-        "ct": 4
+        "ct": 3
       },
       {
         "id": "9922066888",
@@ -39170,10 +39185,10 @@
   },
   "domain_coverage": {
     "total": 75100,
-    "with_domain": 37849,
-    "with_website": 37878,
-    "no_domain": 37251,
-    "no_domain_with_contacts": 13902,
+    "with_domain": 38013,
+    "with_website": 38042,
+    "no_domain": 37087,
+    "no_domain_with_contacts": 13738,
     "ws_scraped": 35415,
     "ws_emails": 10056,
     "ws_instagram": 10916,
@@ -39215,9 +39230,9 @@
     {
       "tier": "Parking",
       "list_id": "302",
-      "total": 19616,
-      "has_email": 18243,
-      "mv_ok": 17851,
+      "total": 19615,
+      "has_email": 18242,
+      "mv_ok": 17850,
       "sample": 200
     }
   ],
@@ -101768,7 +101783,7 @@
       "wb": 1,
       "ph": "956235173",
       "s": 80,
-      "ct": 1,
+      "ct": 0,
       "tp": "",
       "la": null,
       "ln": null,
@@ -106284,16 +106299,16 @@
       }
     ],
     "mv_funnel": {
-      "total_contacts": 60865,
-      "has_email": 39308,
-      "mv_verified": 47249,
+      "total_contacts": 60689,
+      "has_email": 39278,
+      "mv_verified": 47244,
       "mv_unverified": 0,
       "mv_ok": 32983,
-      "mv_invalid": 8863,
+      "mv_invalid": 8858,
       "mv_catch_all": 2886,
       "ghost_invalid": 7935,
-      "no_email": 21557,
-      "no_email_with_company": 15425,
+      "no_email": 21411,
+      "no_email_with_company": 15431,
       "companies_with_scraped_emails": 10056
     }
   },
@@ -106307,7 +106322,7 @@
       {
         "city": "Barcelona",
         "status": "invalid",
-        "count": 1261
+        "count": 1258
       },
       {
         "city": "Barcelona",
@@ -106327,7 +106342,7 @@
       {
         "city": "Madrid",
         "status": "invalid",
-        "count": 1165
+        "count": 1164
       },
       {
         "city": "Madrid",
@@ -106409,43 +106424,43 @@
       {
         "nucleus": "Golden",
         "desc": "Mobile + Email OK + Company",
-        "count": 11221,
+        "count": 11224,
         "color": "#FFD700"
       },
       {
         "nucleus": "Mobile Hero",
         "desc": "Has mobile, no email",
-        "count": 4401,
+        "count": 4402,
         "color": "#22c55e"
       },
       {
         "nucleus": "Silver",
         "desc": "Email OK + Company (no mobile)",
-        "count": 12182,
+        "count": 12179,
         "color": "#C0C0C0"
       },
       {
         "nucleus": "Bronze",
         "desc": "Company but weak contact",
-        "count": 15464,
+        "count": 15463,
         "color": "#CD7F32"
       },
       {
         "nucleus": "Orphan",
         "desc": "Has email, no company",
-        "count": 10304,
+        "count": 10285,
         "color": "#f97316"
       },
       {
         "nucleus": "Ghost",
         "desc": "No email, no mobile, no phone, no company",
-        "count": 3600,
+        "count": 3616,
         "color": "#6b7280"
       }
     ],
     "lifecycle": {
       "subscriber": 14684,
-      "lead": 44611,
+      "lead": 44606,
       "marketingqualifiedlead": 56,
       "salesqualifiedlead": 14,
       "opportunity": 83,
@@ -106453,7 +106468,7 @@
       "other": 924
     },
     "source": {
-      "OFFLINE": 59340,
+      "OFFLINE": 59335,
       "ORGANIC_SEARCH": 53,
       "DIRECT_TRAFFIC": 296,
       "REFERRALS": 6,
