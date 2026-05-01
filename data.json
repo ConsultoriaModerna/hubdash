@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-01T23:45:43",
-  "fetch_seconds": 155.1,
+  "generated_at": "2026-05-02T00:47:19",
+  "fetch_seconds": 144.8,
   "summary": {
     "companies_total": 75100,
     "contacts_total": 60689,
@@ -93,7 +93,7 @@
     "Barcelona": {
       "mobile": 3001,
       "email": 3649,
-      "phone": 3541
+      "phone": 3538
     },
     "Madrid": {
       "mobile": 3201,
@@ -118,10 +118,10 @@
   },
   "golden_contacts": {
     "total": 60689,
-    "has_mobile": 18600,
-    "has_mobile_email": 14198,
-    "has_mobile_valid_email": 12166,
-    "has_mobile_valid_company": 11224
+    "has_mobile": 18469,
+    "has_mobile_email": 14087,
+    "has_mobile_valid_email": 12087,
+    "has_mobile_valid_company": 11151
   },
   "mv_email_dist": {
     "ok": 32983,
@@ -237,9 +237,9 @@
     ]
   },
   "contact_assets": {
-    "mobile": 18600,
+    "mobile": 18469,
     "email": 39278,
-    "phone": 35098,
+    "phone": 28190,
     "total": 60689
   },
   "bubbles": [
@@ -24661,25 +24661,25 @@
   "field_completeness": {
     "companies": {
       "name": 75083,
-      "phone": 48482,
-      "domain": 38013,
-      "website": 38042,
+      "phone": 48459,
+      "domain": 37976,
+      "website": 37994,
       "city": 71371,
       "address": 66814,
-      "industry": 34720,
+      "industry": 34664,
       "google_place_id": 23108,
       "gp__rating_count": 4452,
       "gp__sentiment": 4472,
       "num_associated_contacts": 75100,
-      "description": 29890,
+      "description": 29833,
       "country": 73865
     },
     "contacts": {
       "email": 39278,
-      "mobilephone": 18600,
+      "mobilephone": 18469,
       "firstname": 57279,
       "lastname": 15222,
-      "phone": 35098,
+      "phone": 28190,
       "company": 43673,
       "city": 46524,
       "jobtitle": 2188,
@@ -24695,73 +24695,73 @@
       0,
       1,
       1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
       9
     ],
     [
       0,
-      1,
-      0,
-      10
-    ],
-    [
-      0,
       0,
       1,
-      1402
+      1411
     ],
     [
       0,
       0,
       0,
-      4100
+      4101
     ],
     [
       1,
       1,
       1,
-      56
+      39
     ],
     [
       1,
       1,
       0,
-      194
+      187
     ],
     [
       1,
       0,
       1,
-      9911
+      9928
     ],
     [
       1,
       0,
       0,
-      12822
+      12829
     ],
     [
       2,
       1,
       1,
-      4625
+      4540
     ],
     [
       2,
       1,
       0,
-      4195
+      4183
     ],
     [
       2,
       0,
       1,
-      13251
+      13336
     ],
     [
       2,
       0,
       0,
-      87
+      99
     ],
     [
       3,
@@ -25266,15 +25266,30 @@
       "domain_finder": 2135,
       "contacts_mobile": 18600,
       "contacts_email": 39278
+    },
+    {
+      "ts": "2026-05-02 00:46",
+      "website": 37994,
+      "phone": 48459,
+      "domain": 37976,
+      "gp_enriched": 4452,
+      "ws_scraped": 35415,
+      "ws_emails": 10056,
+      "ws_instagram": 10926,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 18469,
+      "contacts_email": 39278
     }
   ],
   "reachability_funnel": {
     "total": 75100,
-    "has_website": 38042,
+    "has_website": 37994,
     "ws_scraped": 35415,
     "ws_email_found": 10056,
-    "ws_instagram": 10916,
-    "has_phone": 48482,
+    "ws_instagram": 10926,
+    "has_phone": 48459,
     "has_contacts": 40031
   },
   "hidden_segments": [
@@ -35844,7 +35859,7 @@
         "r": 4.7,
         "rv": 307,
         "s": 80,
-        "wb": 1,
+        "wb": 0,
         "dm": "",
         "tp": "Servicio de catering",
         "ct": 0
@@ -39185,13 +39200,13 @@
   },
   "domain_coverage": {
     "total": 75100,
-    "with_domain": 38013,
-    "with_website": 38042,
-    "no_domain": 37087,
-    "no_domain_with_contacts": 13738,
+    "with_domain": 37976,
+    "with_website": 37994,
+    "no_domain": 37124,
+    "no_domain_with_contacts": 13761,
     "ws_scraped": 35415,
     "ws_emails": 10056,
-    "ws_instagram": 10916,
+    "ws_instagram": 10926,
     "domain_finder_found": 2135
   },
   "enrich_sources": {
@@ -57778,23 +57793,6 @@
       "zip": ""
     },
     {
-      "id": "38466632925",
-      "n": "A Baiuca Fado",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Lisbon",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "+351 213711700",
-      "s": 80,
-      "ct": 11,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "Rua de S.Miguel nr.20",
-      "zip": "1100-544"
-    },
-    {
       "id": "9921989587",
       "n": "A2 Informática",
       "ind": "COMPUTER_SOFTWARE",
@@ -58594,23 +58592,6 @@
       "zip": ""
     },
     {
-      "id": "9921770207",
-      "n": "Asadero de Pollos Serrano",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
       "id": "9921938645",
       "n": "Asador de Pollos Toma 3",
       "ind": "COMPUTER_SOFTWARE",
@@ -59119,23 +59100,6 @@
       "ln": null,
       "addr": "Carretera Molina de Segura 1 Javali Viejo",
       "zip": "65022"
-    },
-    {
-      "id": "9921864410",
-      "n": "Bar Julio",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9921852616",
@@ -59750,23 +59714,6 @@
       "zip": "94306"
     },
     {
-      "id": "37988422842",
-      "n": "Bistro du Cours",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Nantes",
-      "dm": "club-internet.fr",
-      "wb": 1,
-      "ph": "632002177",
-      "s": 80,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "13 Rue des Halles",
-      "zip": "44000"
-    },
-    {
       "id": "9922006476",
       "n": "Bits & Bobs",
       "ind": "COMPUTER_SOFTWARE",
@@ -60277,23 +60224,6 @@
       "zip": "94158"
     },
     {
-      "id": "9920701142",
-      "n": "Café Bar \"el Albero\"",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "ww.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 40,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
       "id": "9921928125",
       "n": "Cafe Bar Jane",
       "ind": "COMPUTER_SOFTWARE",
@@ -60343,57 +60273,6 @@
       "ln": null,
       "addr": "15023 SW 146 AVE",
       "zip": "08242"
-    },
-    {
-      "id": "9921937399",
-      "n": "Cafe del Centre",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "es-la.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
-      "id": "38466632905",
-      "n": "Café Mortara",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Lisbon",
-      "dm": "coralcoletivo.pt",
-      "wb": 1,
-      "ph": "+351 914800200",
-      "s": 80,
-      "ct": 28,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "R. Angelina Vidal 23",
-      "zip": "1170-017"
-    },
-    {
-      "id": "9919741640",
-      "n": "Cafe-Bar Drago",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "z-p15.instagram.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9920664534",
@@ -60487,7 +60366,7 @@
       "cat": "tech",
       "c": "Other",
       "dm": "",
-      "wb": 1,
+      "wb": 0,
       "ph": "",
       "s": 45,
       "ct": 0,
@@ -61212,23 +61091,6 @@
       "zip": "41003"
     },
     {
-      "id": "9921909437",
-      "n": "Cervecería Alhambra",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
       "id": "9921990113",
       "n": "Cervecería Jamonería Leomar",
       "ind": "COMPUTER_SOFTWARE",
@@ -61499,23 +61361,6 @@
       "ln": null,
       "addr": "PZ XAVIER CUGAT 2, PARC EMP, ST.CUGAT NORD, EDIF D P",
       "zip": ""
-    },
-    {
-      "id": "38466632907",
-      "n": "Cityvox",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Paris",
-      "dm": "cityvox.fr",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "12 Place d' Italie",
-      "zip": "75013"
     },
     {
       "id": "377298603253",
@@ -62315,23 +62160,6 @@
       "ln": 2.1857,
       "addr": "7 Bell Yard",
       "zip": "WC2A 2JR"
-    },
-    {
-      "id": "9922005220",
-      "n": "De Cai",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Malaga",
-      "dm": "latest.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 63,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9921913290",
@@ -64000,57 +63828,6 @@
       "zip": "94025"
     },
     {
-      "id": "38470267078",
-      "n": "Facebook",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Marseille",
-      "dm": "en-gb.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "1 boulevard de la Blancarde",
-      "zip": "13004"
-    },
-    {
-      "id": "38562096349",
-      "n": "Facebook",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Nantes",
-      "dm": "fr-fr.facebook.com",
-      "wb": 1,
-      "ph": "626744273",
-      "s": 80,
-      "ct": 37,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "23 rue du Port Guichard",
-      "zip": "44000"
-    },
-    {
-      "id": "38562129098",
-      "n": "Facebook",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Montpellier",
-      "dm": "web.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "21 rue du Palais des Guilhem",
-      "zip": "34000"
-    },
-    {
       "id": "377298603230",
       "n": "Factoria de Innovacion Delta A.I.E",
       "ind": "COMPUTER_SOFTWARE",
@@ -64986,23 +64763,6 @@
       "zip": "75002"
     },
     {
-      "id": "38090622157",
-      "n": "Google",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Paris",
-      "dm": "restaurantkokoro.blogspot.fr",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "36 rue des Boulangers",
-      "zip": "75005"
-    },
-    {
       "id": "38382154941",
       "n": "Google",
       "ind": "COMPUTER_SOFTWARE",
@@ -65086,40 +64846,6 @@
       "ln": null,
       "addr": "7 Rue de Bassano",
       "zip": "75116"
-    },
-    {
-      "id": "38470266083",
-      "n": "Google",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Paris",
-      "dm": "lacasbamarocaine.blogspot.fr",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "33 rue du Chateau D Eau",
-      "zip": "75010"
-    },
-    {
-      "id": "38562127054",
-      "n": "Google",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Paris",
-      "dm": "caffe-panem.blogspot.fr",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "18 rue de Crussol",
-      "zip": "75011"
     },
     {
       "id": "9921920470",
@@ -66601,23 +66327,6 @@
       "zip": "07120"
     },
     {
-      "id": "38470227136",
-      "n": "Já Fumega",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Lisbon",
-      "dm": "pt-pt.facebook.com",
-      "wb": 1,
-      "ph": "+351 969656737",
-      "s": 80,
-      "ct": 2,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "9 rue Clement Roassal",
-      "zip": "6000"
-    },
-    {
       "id": "9922088671",
       "n": "Jci",
       "ind": "COMPUTER_SOFTWARE",
@@ -67009,23 +66718,6 @@
       "zip": "65022"
     },
     {
-      "id": "9920525781",
-      "n": "L'Empanaderia de Gr√†cia",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
       "id": "9922009838",
       "n": "L'Eucaliptus",
       "ind": "COMPUTER_SOFTWARE",
@@ -67060,23 +66752,6 @@
       "zip": "75017"
     },
     {
-      "id": "9920616895",
-      "n": "L'Osteria di Giovanni",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Palma",
-      "dm": "it-it.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 63,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
       "id": "9919852512",
       "n": "La Bamba Gastro",
       "ind": "COMPUTER_SOFTWARE",
@@ -67109,23 +66784,6 @@
       "ln": null,
       "addr": "7 Bell Yard",
       "zip": "WC2A 2JR"
-    },
-    {
-      "id": "9921776377",
-      "n": "La Barra de Fede",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "es-es.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9919749330",
@@ -67468,23 +67126,6 @@
       "zip": "65022"
     },
     {
-      "id": "9920613867",
-      "n": "La Guapa Burg",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Granada",
-      "dm": "web.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 63,
-      "ct": 4,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
       "id": "9921856756",
       "n": "La Limenita",
       "ind": "COMPUTER_SOFTWARE",
@@ -67534,23 +67175,6 @@
       "ln": null,
       "addr": "7 Bell Yard",
       "zip": "WC2A 2JR"
-    },
-    {
-      "id": "9919893728",
-      "n": "La Morera",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Madrid",
-      "dm": "es-es.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 63,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9919895231",
@@ -68046,23 +67670,6 @@
       "zip": ""
     },
     {
-      "id": "9922086892",
-      "n": "Lisanti Ii",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "mobile.twitter.com",
-      "wb": 1,
-      "ph": "+1 415-222-9670",
-      "s": 70,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": ""
-    },
-    {
       "id": "9921944515",
       "n": "Livan Nicaragua Bar Restaurante",
       "ind": "COMPUTER_SOFTWARE",
@@ -68180,23 +67787,6 @@
       "ln": null,
       "addr": "",
       "zip": "94043"
-    },
-    {
-      "id": "9921798125",
-      "n": "Lo Pinyol",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "ca-es.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 55,
-      "ct": 2,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "374395852001",
@@ -69015,23 +68605,6 @@
       "zip": "75011"
     },
     {
-      "id": "9922016229",
-      "n": "Monal Restaurante Valencia",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Valencia",
-      "dm": "l.instagram.com",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 0,
-      "tp": "",
-      "la": 39.4702,
-      "ln": -0.3888,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
       "id": "9921796307",
       "n": "Montaditos Tapas Blai 11",
       "ind": "COMPUTER_SOFTWARE",
@@ -69132,23 +68705,6 @@
       "ln": null,
       "addr": "VIA AUGUSTA NUM.105",
       "zip": ""
-    },
-    {
-      "id": "9919752904",
-      "n": "Mummy's Momo",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "secure.instagram.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "422452828367",
@@ -69625,23 +69181,6 @@
       "ln": null,
       "addr": "34 rue Legraverend",
       "zip": "35000"
-    },
-    {
-      "id": "9921872326",
-      "n": "Old Trafford Bar Valencia",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9920615867",
@@ -71087,40 +70626,6 @@
       "ln": null,
       "addr": "C/ de Fra Pere Vives, 46009 Val√®ncia, Valencia, Spain",
       "zip": "65022"
-    },
-    {
-      "id": "9921852402",
-      "n": "Restaurant la Vitamínica D'Horta",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
-      "id": "9921823200",
-      "n": "Restaurant Lahiver",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9922086592",
@@ -72744,7 +72249,7 @@
       "cat": "tech",
       "c": "Other",
       "dm": "",
-      "wb": 1,
+      "wb": 0,
       "ph": "",
       "s": 45,
       "ct": 0,
@@ -73809,23 +73314,6 @@
       "zip": "8012"
     },
     {
-      "id": "9919847610",
-      "n": "Sweet Fit",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "business.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 40,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
-    },
-    {
       "id": "376075035855",
       "n": "Synaptik Analytics SL",
       "ind": "COMPUTER_SOFTWARE",
@@ -73943,23 +73431,6 @@
       "ln": null,
       "addr": "Calle Cortes de Aragon 64",
       "zip": ""
-    },
-    {
-      "id": "9921946815",
-      "n": "Taberna la Pochola de Arturo de Soria",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Madrid",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 0,
-      "tp": "",
-      "la": 40.4422,
-      "ln": -3.6407,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9920666590",
@@ -74693,23 +74164,6 @@
       "zip": "72703"
     },
     {
-      "id": "38307410129",
-      "n": "Thefork",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Paris",
-      "dm": "",
-      "wb": 1,
-      "ph": "",
-      "s": 68,
-      "ct": 9,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "5 rue Caron",
-      "zip": "75004"
-    },
-    {
       "id": "377298606290",
       "n": "Theramatchai S.L",
       "ind": "COMPUTER_SOFTWARE",
@@ -75184,23 +74638,6 @@
       "ln": null,
       "addr": "7 Bell Yard",
       "zip": "WC2A 2JR"
-    },
-    {
-      "id": "9922039777",
-      "n": "Uh Mami",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Zaragoza",
-      "dm": "en-gb.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 83,
-      "ct": 1,
-      "tp": "Restaurante vegano",
-      "la": 37.1732,
-      "ln": -3.594,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "376764101859",
@@ -75915,23 +75352,6 @@
       "ln": null,
       "addr": "14 Carrer del Rabí Rubèn",
       "zip": "08004"
-    },
-    {
-      "id": "38470238452",
-      "n": "Weebly",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Bordeaux",
-      "dm": "restauranthutong.weebly.com",
-      "wb": 1,
-      "ph": "+1 415-375-3176",
-      "s": 80,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "137 rue du Tondu L'entrée se fait côté terrasse",
-      "zip": "33000"
     },
     {
       "id": "376075035869",
@@ -76850,23 +76270,6 @@
       "ln": null,
       "addr": "CL LEPANT NUM.270",
       "zip": ""
-    },
-    {
-      "id": "9919740862",
-      "n": "Zumería Naturalia",
-      "ind": "COMPUTER_SOFTWARE",
-      "cat": "tech",
-      "c": "Other",
-      "dm": "m.facebook.com",
-      "wb": 1,
-      "ph": "",
-      "s": 45,
-      "ct": 0,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "",
-      "zip": "94025"
     },
     {
       "id": "9922040268",
@@ -79281,23 +78684,6 @@
       "ln": null,
       "addr": "CALLE SEVERO OCHOA, 16",
       "zip": "06800"
-    },
-    {
-      "id": "37800313081",
-      "n": "Fb.com",
-      "ind": "MARKETING_AND_ADVERTISING",
-      "cat": "services",
-      "c": "Nantes",
-      "dm": "fb.com",
-      "wb": 1,
-      "ph": "+1 650-618-7714",
-      "s": 80,
-      "ct": 1,
-      "tp": "",
-      "la": null,
-      "ln": null,
-      "addr": "17 rue Bon Secours",
-      "zip": "44000"
     },
     {
       "id": "9921918171",
@@ -104274,40 +103660,40 @@
     }
   ],
   "dist_summary": {
-    "total": 3823,
+    "total": 3786,
     "by_category": {
-      "tech": 1213,
       "retail": 1188,
+      "tech": 1177,
       "food": 1083,
-      "services": 299,
+      "services": 298,
       "equipment": 40
     },
     "by_city": {
-      "Madrid": 569,
+      "Madrid": 567,
       "Barcelona": 556,
-      "Other": 190,
-      "Paris": 175,
+      "Other": 174,
+      "Paris": 170,
       "Sant Cugat Del Valle": 92,
       "Sevilla": 90,
       "New York": 81,
-      "Valencia": 65,
-      "Malaga": 57,
-      "Zaragoza": 55,
+      "Valencia": 64,
+      "Malaga": 56,
       "London": 55,
-      "Granada": 53,
+      "Zaragoza": 54,
+      "Granada": 52,
       "San Fernando De Masp": 51,
-      "Palma": 42,
-      "Murcia": 42
+      "Murcia": 42,
+      "Palma": 41
     },
     "by_industry": {
-      "COMPUTER_SOFTWARE": 1129,
       "RETAIL": 1115,
+      "COMPUTER_SOFTWARE": 1093,
       "FOOD_BEVERAGES": 863,
       "FOOD_PRODUCTION": 214,
       "PROFESSIONAL_TRAINING_COACHING": 105,
       "HEALTH_WELLNESS_AND_FITNESS": 87,
       "EDUCATION_MANAGEMENT": 56,
-      "MARKETING_AND_ADVERTISING": 51,
+      "MARKETING_AND_ADVERTISING": 50,
       "CONSUMER_ELECTRONICS": 47,
       "CONSUMER_GOODS": 43,
       "INFORMATION_TECHNOLOGY_AND_SERVICES": 37,
@@ -104484,7 +103870,7 @@
       {
         "source": 4,
         "target": 5,
-        "value": 1129
+        "value": 1093
       },
       {
         "source": 4,
@@ -104509,7 +103895,7 @@
       {
         "source": 11,
         "target": 12,
-        "value": 51
+        "value": 50
       },
       {
         "source": 11,
@@ -104639,7 +104025,7 @@
       {
         "source": 5,
         "target": 20,
-        "value": 548
+        "value": 536
       },
       {
         "source": 5,
@@ -104649,12 +104035,12 @@
       {
         "source": 5,
         "target": 21,
-        "value": 108
+        "value": 106
       },
       {
         "source": 5,
         "target": 24,
-        "value": 8
+        "value": 7
       },
       {
         "source": 5,
@@ -104664,7 +104050,7 @@
       {
         "source": 5,
         "target": 22,
-        "value": 53
+        "value": 48
       },
       {
         "source": 5,
@@ -104674,7 +104060,7 @@
       {
         "source": 5,
         "target": 25,
-        "value": 90
+        "value": 74
       },
       {
         "source": 5,
@@ -104759,7 +104145,7 @@
       {
         "source": 12,
         "target": 20,
-        "value": 32
+        "value": 31
       },
       {
         "source": 12,
@@ -105027,7 +104413,7 @@
     {
       "cat": "Tech & POS",
       "city": "Madrid",
-      "count": 115
+      "count": 113
     },
     {
       "cat": "Tech & POS",
@@ -105037,12 +104423,12 @@
     {
       "cat": "Tech & POS",
       "city": "Other",
-      "count": 94
+      "count": 78
     },
     {
       "cat": "Tech & POS",
       "city": "Paris",
-      "count": 53
+      "count": 48
     },
     {
       "cat": "Tech & POS",
@@ -105062,7 +104448,7 @@
     {
       "cat": "Tech & POS",
       "city": "Valencia",
-      "count": 8
+      "count": 7
     },
     {
       "cat": "Equipment",
@@ -106424,25 +105810,25 @@
       {
         "nucleus": "Golden",
         "desc": "Mobile + Email OK + Company",
-        "count": 11224,
+        "count": 11151,
         "color": "#FFD700"
       },
       {
         "nucleus": "Mobile Hero",
         "desc": "Has mobile, no email",
-        "count": 4402,
+        "count": 4382,
         "color": "#22c55e"
       },
       {
         "nucleus": "Silver",
         "desc": "Email OK + Company (no mobile)",
-        "count": 12179,
+        "count": 12252,
         "color": "#C0C0C0"
       },
       {
         "nucleus": "Bronze",
         "desc": "Company but weak contact",
-        "count": 15463,
+        "count": 15511,
         "color": "#CD7F32"
       },
       {
@@ -106454,7 +105840,7 @@
       {
         "nucleus": "Ghost",
         "desc": "No email, no mobile, no phone, no company",
-        "count": 3616,
+        "count": 3634,
         "color": "#6b7280"
       }
     ],
