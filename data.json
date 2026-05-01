@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-01T15:00:21",
-  "fetch_seconds": 156.4,
+  "generated_at": "2026-05-01T21:40:00",
+  "fetch_seconds": 164.3,
   "summary": {
-    "companies_total": 75099,
-    "contacts_total": 60897,
+    "companies_total": 75100,
+    "contacts_total": 60865,
     "enriched_gp": 4452,
     "avg_score_companies": 56.4,
     "avg_score_contacts": 51.6
@@ -17,19 +17,19 @@
       "90-100": 1291
     },
     "contacts": {
-      "0-29": 5569,
-      "30-49": 23130,
-      "50-69": 22171,
+      "0-29": 5521,
+      "30-49": 22987,
+      "50-69": 22162,
       "70-89": 9975,
       "90-100": 0
     }
   },
   "pipeline": {
-    "total": 75099,
+    "total": 75100,
     "with_place_id": 23108,
     "phase_a_pending": 18589,
     "enriched": 4452,
-    "phase_b_pending": 51991
+    "phase_b_pending": 51992
   },
   "cities": [
     {
@@ -59,46 +59,46 @@
     },
     {
       "city": "Otras",
-      "total": 41273,
+      "total": 41274,
       "enriched": 1237
     }
   ],
   "contact_cities": [
     {
       "city": "Barcelona",
-      "total": 5188
+      "total": 5150
     },
     {
       "city": "Madrid",
-      "total": 4746
+      "total": 4723
     },
     {
       "city": "Valencia",
-      "total": 1084
+      "total": 1080
     },
     {
       "city": "Sevilla",
-      "total": 195
+      "total": 192
     },
     {
       "city": "Bilbao",
-      "total": 395
+      "total": 393
     },
     {
       "city": "Otras",
-      "total": 49289
+      "total": 49327
     }
   ],
   "contact_city_assets": {
     "Barcelona": {
-      "mobile": 3003,
-      "email": 3646,
-      "phone": 3558
+      "mobile": 3001,
+      "email": 3649,
+      "phone": 3544
     },
     "Madrid": {
-      "mobile": 3202,
-      "email": 3278,
-      "phone": 3773
+      "mobile": 3201,
+      "email": 3284,
+      "phone": 3766
     },
     "Valencia": {
       "mobile": 703,
@@ -107,29 +107,29 @@
     },
     "Sevilla": {
       "mobile": 15,
-      "email": 93,
+      "email": 94,
       "phone": 39
     },
     "Bilbao": {
-      "mobile": 362,
+      "mobile": 361,
       "email": 281,
-      "phone": 371
+      "phone": 369
     }
   },
   "golden_contacts": {
-    "total": 60897,
-    "has_mobile": 18608,
-    "has_mobile_email": 14186,
+    "total": 60865,
+    "has_mobile": 18600,
+    "has_mobile_email": 14199,
     "has_mobile_valid_email": 12162,
     "has_mobile_valid_company": 11221
   },
   "mv_email_dist": {
-    "ok": 32951,
-    "invalid": 8896,
-    "catch_all": 2881,
-    "unknown": 2503,
+    "ok": 32983,
+    "invalid": 8863,
+    "catch_all": 2886,
+    "unknown": 2510,
     "disposable": 7,
-    "no_mv_status": 13659
+    "no_mv_status": 13616
   },
   "mountain": {
     "cities": [
@@ -193,54 +193,54 @@
     ],
     "contacts": [
       [
-        335,
-        1282,
-        2157,
+        323,
+        1258,
+        2155,
         1396,
         0
       ],
       [
-        94,
-        825,
-        2091,
+        85,
+        812,
+        2090,
         1734,
         0
       ],
       [
-        29,
+        25,
         243,
         380,
         431,
         0
       ],
       [
-        83,
-        53,
+        82,
+        51,
         57,
         2,
         0
       ],
       [
         3,
-        14,
-        151,
+        13,
+        150,
         227,
         0
       ],
       [
-        5025,
-        20713,
-        17335,
+        5003,
+        20610,
+        17330,
         6185,
         0
       ]
     ]
   },
   "contact_assets": {
-    "mobile": 18608,
-    "email": 39173,
-    "phone": 35160,
-    "total": 60897
+    "mobile": 18600,
+    "email": 39308,
+    "phone": 35103,
+    "total": 60865
   },
   "bubbles": [
     {
@@ -3684,7 +3684,7 @@
       "rv": 10382,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 2,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -4561,7 +4561,7 @@
       "rv": 9202,
       "s": 100,
       "c": "Madrid",
-      "ct": 2,
+      "ct": 1,
       "se": "Neu",
       "pl": "$$",
       "tc": "Wait Time",
@@ -6837,7 +6837,7 @@
       "rv": 6919,
       "s": 100,
       "c": "Granada",
-      "ct": 1,
+      "ct": 0,
       "se": "Pos",
       "pl": "",
       "tc": "Slow Service",
@@ -10136,7 +10136,7 @@
       "rv": 5635,
       "s": 100,
       "c": "Madrid",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$$",
       "tc": "Slow Service",
@@ -12766,7 +12766,7 @@
       "rv": 4804,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 2,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -24660,35 +24660,35 @@
   },
   "field_completeness": {
     "companies": {
-      "name": 75082,
-      "phone": 48481,
-      "domain": 37848,
-      "website": 37877,
-      "city": 71370,
-      "address": 66813,
-      "industry": 34719,
+      "name": 75083,
+      "phone": 48482,
+      "domain": 37849,
+      "website": 37878,
+      "city": 71371,
+      "address": 66814,
+      "industry": 34720,
       "google_place_id": 23108,
       "gp__rating_count": 4452,
       "gp__sentiment": 4472,
-      "num_associated_contacts": 75099,
-      "description": 29641,
-      "country": 73864
+      "num_associated_contacts": 75100,
+      "description": 29890,
+      "country": 73865
     },
     "contacts": {
-      "email": 39173,
-      "mobilephone": 18608,
-      "firstname": 57487,
-      "lastname": 15287,
-      "phone": 35160,
-      "company": 43858,
-      "city": 46727,
-      "jobtitle": 2190,
-      "lifecyclestage": 60897,
-      "associatedcompanyid": 44632,
-      "country": 16083
+      "email": 39308,
+      "mobilephone": 18600,
+      "firstname": 57284,
+      "lastname": 15224,
+      "phone": 35103,
+      "company": 43677,
+      "city": 46529,
+      "jobtitle": 2188,
+      "lifecyclestage": 60694,
+      "associatedcompanyid": 44429,
+      "country": 16032
     },
-    "companies_total": 75099,
-    "contacts_total": 60897
+    "companies_total": 75100,
+    "contacts_total": 60865
   },
   "contact_matrix": [
     [
@@ -24707,13 +24707,13 @@
       0,
       0,
       1,
-      1399
+      1416
     ],
     [
       0,
       0,
       0,
-      4151
+      4086
     ],
     [
       1,
@@ -24731,25 +24731,25 @@
       1,
       0,
       1,
-      9814
+      9919
     ],
     [
       1,
       0,
       0,
-      13067
-    ],
-    [
-      2,
-      1,
-      1,
-      4612
+      12816
     ],
     [
       2,
       1,
+      1,
+      4625
+    ],
+    [
+      2,
+      1,
       0,
-      4217
+      4196
     ],
     [
       2,
@@ -24761,7 +24761,7 @@
       2,
       0,
       0,
-      84
+      83
     ],
     [
       3,
@@ -25236,16 +25236,31 @@
       "domain_finder": 2135,
       "contacts_mobile": 18608,
       "contacts_email": 39173
+    },
+    {
+      "ts": "2026-05-01 21:38",
+      "website": 37878,
+      "phone": 48482,
+      "domain": 37849,
+      "gp_enriched": 4452,
+      "ws_scraped": 35415,
+      "ws_emails": 10056,
+      "ws_instagram": 10916,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 18600,
+      "contacts_email": 39308
     }
   ],
   "reachability_funnel": {
-    "total": 75099,
-    "has_website": 37877,
-    "ws_scraped": 31930,
-    "ws_email_found": 9306,
-    "ws_instagram": 9894,
-    "has_phone": 48481,
-    "has_contacts": 40135
+    "total": 75100,
+    "has_website": 37878,
+    "ws_scraped": 35415,
+    "ws_email_found": 10056,
+    "ws_instagram": 10916,
+    "has_phone": 48482,
+    "has_contacts": 40032
   },
   "hidden_segments": [
     {
@@ -26129,7 +26144,7 @@
         "wb": 1,
         "dm": "makamaka.es",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 2
       },
       {
         "id": "426851535074",
@@ -26927,7 +26942,7 @@
         "wb": 1,
         "dm": "blubar.es",
         "tp": "Restaurante especializado en t",
-        "ct": 3
+        "ct": 2
       },
       {
         "id": "9919849449",
@@ -28103,7 +28118,7 @@
         "wb": 1,
         "dm": "anticcafeespanyol.es",
         "tp": "Restaurante",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9919836918",
@@ -29097,7 +29112,7 @@
         "wb": 1,
         "dm": "benzina.es",
         "tp": "Restaurante italiano",
-        "ct": 1
+        "ct": 0
       },
       {
         "id": "9919832546",
@@ -33759,7 +33774,7 @@
         "wb": 1,
         "dm": "sandwichez.com",
         "tp": "Bocatería",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9920526027",
@@ -34361,7 +34376,7 @@
         "wb": 1,
         "dm": "gonzalezandco.com",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 2
       },
       {
         "id": "9919753916",
@@ -36783,7 +36798,7 @@
         "wb": 1,
         "dm": "restaurantgrup.com",
         "tp": "Bar",
-        "ct": 3
+        "ct": 2
       },
       {
         "id": "9922014161",
@@ -36951,7 +36966,7 @@
         "wb": 1,
         "dm": "lasmuns.com",
         "tp": "Restaurante",
-        "ct": 11
+        "ct": 10
       },
       {
         "id": "9921771498",
@@ -39154,19 +39169,19 @@
     ]
   },
   "domain_coverage": {
-    "total": 75099,
-    "with_domain": 37848,
-    "with_website": 37877,
+    "total": 75100,
+    "with_domain": 37849,
+    "with_website": 37878,
     "no_domain": 37251,
     "no_domain_with_contacts": 13902,
-    "ws_scraped": 31930,
-    "ws_emails": 9306,
-    "ws_instagram": 9894,
+    "ws_scraped": 35415,
+    "ws_emails": 10056,
+    "ws_instagram": 10916,
     "domain_finder_found": 2135
   },
   "enrich_sources": {
     "gp_enriched": 4452,
-    "ws_scraped": 31930,
+    "ws_scraped": 35415,
     "ta_enriched": 832,
     "rg_enriched": 569,
     "domain_finder": 2135,
@@ -39201,8 +39216,8 @@
       "tier": "Parking",
       "list_id": "302",
       "total": 19616,
-      "has_email": 18145,
-      "mv_ok": 17752,
+      "has_email": 18243,
+      "mv_ok": 17851,
       "sample": 200
     }
   ],
@@ -52504,7 +52519,7 @@
       "wb": 1,
       "ph": "+34 914 131 719",
       "s": 80,
-      "ct": 3,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -57306,6 +57321,23 @@
       "zip": "35219"
     },
     {
+      "id": "312365443298",
+      "n": "Singular Bites",
+      "ind": "FOOD_PRODUCTION",
+      "cat": "food",
+      "c": "Madrid",
+      "dm": "singularbites.com",
+      "wb": 1,
+      "ph": "+34644757090",
+      "s": 33,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "51 Abril",
+      "zip": "28022"
+    },
+    {
       "id": "38470270147",
       "n": "Société Parisienne de Bière",
       "ind": "FOOD_PRODUCTION",
@@ -60392,7 +60424,7 @@
       "wb": 1,
       "ph": "+972 3-545-4900",
       "s": 100,
-      "ct": 1,
+      "ct": 0,
       "tp": "Restaurante",
       "la": 41.6448,
       "ln": -0.8652,
@@ -60987,7 +61019,7 @@
       "wb": 1,
       "ph": "+34 955 45 30 93",
       "s": 100,
-      "ct": 4,
+      "ct": 3,
       "tp": "Bar restaurante",
       "la": 37.3906,
       "ln": -5.998,
@@ -65696,7 +65728,7 @@
       "wb": 1,
       "ph": "+34 932 71 89 99",
       "s": 80,
-      "ct": 4,
+      "ct": 3,
       "tp": "",
       "la": null,
       "ln": null,
@@ -66240,7 +66272,7 @@
       "wb": 1,
       "ph": "+34 627 45 79 86",
       "s": 80,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -68773,7 +68805,7 @@
       "wb": 1,
       "ph": "",
       "s": 68,
-      "ct": 3,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -69929,7 +69961,7 @@
       "wb": 1,
       "ph": "+1 800-274-9694",
       "s": 80,
-      "ct": 3,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -72156,7 +72188,7 @@
       "wb": 1,
       "ph": "+34900104668",
       "s": 80,
-      "ct": 8,
+      "ct": 7,
       "tp": "",
       "la": null,
       "ln": null,
@@ -72989,7 +73021,7 @@
       "wb": 1,
       "ph": "34958489952",
       "s": 75,
-      "ct": 3,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -74740,7 +74772,7 @@
       "wb": 1,
       "ph": "+34696199419",
       "s": 80,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -77800,7 +77832,7 @@
       "wb": 1,
       "ph": "956328790",
       "s": 80,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -79551,7 +79583,7 @@
       "wb": 1,
       "ph": "34 91 744 44 70",
       "s": 80,
-      "ct": 3,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -80129,7 +80161,7 @@
       "wb": 1,
       "ph": "34944416181",
       "s": 80,
-      "ct": 1,
+      "ct": 0,
       "tp": "",
       "la": null,
       "ln": null,
@@ -104227,16 +104259,16 @@
     }
   ],
   "dist_summary": {
-    "total": 3822,
+    "total": 3823,
     "by_category": {
       "tech": 1213,
       "retail": 1188,
-      "food": 1082,
+      "food": 1083,
       "services": 299,
       "equipment": 40
     },
     "by_city": {
-      "Madrid": 568,
+      "Madrid": 569,
       "Barcelona": 556,
       "Other": 190,
       "Paris": 175,
@@ -104256,7 +104288,7 @@
       "COMPUTER_SOFTWARE": 1129,
       "RETAIL": 1115,
       "FOOD_BEVERAGES": 863,
-      "FOOD_PRODUCTION": 213,
+      "FOOD_PRODUCTION": 214,
       "PROFESSIONAL_TRAINING_COACHING": 105,
       "HEALTH_WELLNESS_AND_FITNESS": 87,
       "EDUCATION_MANAGEMENT": 56,
@@ -104427,7 +104459,7 @@
       {
         "source": 0,
         "target": 2,
-        "value": 213
+        "value": 214
       },
       {
         "source": 0,
@@ -104547,7 +104579,7 @@
       {
         "source": 2,
         "target": 21,
-        "value": 13
+        "value": 14
       },
       {
         "source": 2,
@@ -104945,7 +104977,7 @@
     {
       "cat": "Food & Beverage",
       "city": "Madrid",
-      "count": 167
+      "count": 168
     },
     {
       "cat": "Food & Beverage",
@@ -106252,17 +106284,17 @@
       }
     ],
     "mv_funnel": {
-      "total_contacts": 60897,
-      "has_email": 39173,
-      "mv_verified": 47238,
+      "total_contacts": 60865,
+      "has_email": 39308,
+      "mv_verified": 47249,
       "mv_unverified": 0,
-      "mv_ok": 32951,
-      "mv_invalid": 8896,
-      "mv_catch_all": 2881,
-      "ghost_invalid": 8059,
-      "no_email": 21724,
-      "no_email_with_company": 15763,
-      "companies_with_scraped_emails": 9314
+      "mv_ok": 32983,
+      "mv_invalid": 8863,
+      "mv_catch_all": 2886,
+      "ghost_invalid": 7935,
+      "no_email": 21557,
+      "no_email_with_company": 15425,
+      "companies_with_scraped_emails": 10056
     }
   },
   "contacts_tab": {
@@ -106270,12 +106302,12 @@
       {
         "city": "Barcelona",
         "status": "ok",
-        "count": 2960
+        "count": 2963
       },
       {
         "city": "Barcelona",
         "status": "invalid",
-        "count": 1268
+        "count": 1261
       },
       {
         "city": "Barcelona",
@@ -106290,17 +106322,17 @@
       {
         "city": "Madrid",
         "status": "ok",
-        "count": 2645
+        "count": 2649
       },
       {
         "city": "Madrid",
         "status": "invalid",
-        "count": 1173
+        "count": 1165
       },
       {
         "city": "Madrid",
         "status": "catch_all",
-        "count": 352
+        "count": 353
       },
       {
         "city": "Madrid",
@@ -106360,7 +106392,7 @@
       {
         "city": "Bilbao",
         "status": "invalid",
-        "count": 109
+        "count": 107
       },
       {
         "city": "Bilbao",
@@ -106383,19 +106415,19 @@
       {
         "nucleus": "Mobile Hero",
         "desc": "Has mobile, no email",
-        "count": 4422,
+        "count": 4401,
         "color": "#22c55e"
       },
       {
         "nucleus": "Silver",
         "desc": "Email OK + Company (no mobile)",
-        "count": 12150,
+        "count": 12182,
         "color": "#C0C0C0"
       },
       {
         "nucleus": "Bronze",
         "desc": "Company but weak contact",
-        "count": 15691,
+        "count": 15464,
         "color": "#CD7F32"
       },
       {
@@ -106413,15 +106445,15 @@
     ],
     "lifecycle": {
       "subscriber": 14684,
-      "lead": 44804,
+      "lead": 44611,
       "marketingqualifiedlead": 56,
       "salesqualifiedlead": 14,
-      "opportunity": 85,
+      "opportunity": 83,
       "customer": 1,
-      "other": 928
+      "other": 924
     },
     "source": {
-      "OFFLINE": 59543,
+      "OFFLINE": 59340,
       "ORGANIC_SEARCH": 53,
       "DIRECT_TRAFFIC": 296,
       "REFERRALS": 6,
