@@ -512,7 +512,13 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-ig-effect" width="100%" height="350"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title"><span class="panel-id">25</span>Social Stack Effect — Platform Combos × Rating</div>
+    <div class="panel-title"><span class="panel-id">25</span>Social Stack Effect — Platform Combos × Rating
+      <span style="margin-left:auto;display:flex;gap:4px">
+        <button class="btn active" id="ss-abs" onclick="ssSwitchMode('abs')" style="font-size:10px">#</button>
+        <button class="btn" id="ss-pct" onclick="ssSwitchMode('pct')" style="font-size:10px">%</button>
+        <button class="btn" id="ss-all" onclick="ssSwitchMode('all')" style="font-size:10px">All</button>
+      </span>
+    </div>
     <svg id="chart-social-stack" width="100%" height="320"></svg>
   </div>
 
@@ -2341,6 +2347,15 @@ function drawCrmValue(d) {
     .attr('fill',C.dim).attr('font-size',9).text(`${high} high-value (score≥70 + 5+ct) | ${orphan} rich data, 0 contacts`);
 }
 
+let ssMode = 'abs';
+function ssSwitchMode(mode) {
+  ssMode = mode;
+  ['abs','pct','all'].forEach(m => {
+    const btn = document.getElementById('ss-'+m);
+    if (btn) btn.classList.toggle('active', m === mode);
+  });
+  if (window.DATA) drawSocialStack(window.DATA);
+}
 function drawSocialStack(d) {
   const svg = d3.select('#chart-social-stack'); svg.selectAll('*').remove();
   if (!d.bubbles) return;
@@ -2364,11 +2379,13 @@ function drawSocialStack(d) {
     combos[key].count++;
   });
 
+  const minCount = ssMode === 'all' ? 1 : 3;
+  const total = d.bubbles.length;
   const items = Object.entries(combos)
-    .map(([name,{sum,count}]) => ({name, avg: sum/count, count}))
-    .filter(d => d.count >= 3)
+    .map(([name,{sum,count}]) => ({name, avg: sum/count, count, pct: count/total*100}))
+    .filter(d => d.count >= minCount)
     .sort((a,b) => b.count - a.count)
-    .slice(0, 10);
+    .slice(0, ssMode === 'all' ? 20 : 10);
 
   if (items.length < 2) {
     svg.append('text').attr('x','50%').attr('y',160).attr('text-anchor','middle')
@@ -2376,31 +2393,35 @@ function drawSocialStack(d) {
     return;
   }
 
+  const usePct = ssMode === 'pct';
+  const valFn = i => usePct ? i.pct : i.count;
   const yBand = d3.scaleBand().domain(items.map(i=>i.name)).range([0,h]).padding(0.15);
-  const xMax = d3.max(items, i => i.count);
+  const xMax = d3.max(items, valFn);
   const xScale = d3.scaleLinear().domain([0, xMax]).range([0, w]);
   const colorScale = d3.scaleLinear().domain([3,4,5]).range([C.red,C.yellow,C.green]);
 
   items.forEach(item => {
     g.append('rect').attr('x',0).attr('y',yBand(item.name))
-      .attr('width',xScale(item.count)).attr('height',yBand.bandwidth())
+      .attr('width',xScale(valFn(item))).attr('height',yBand.bandwidth())
       .attr('fill',colorScale(item.avg)).attr('opacity',0.75).attr('rx',3)
       .on('mousemove', evt => showTip(evt,
-        `<b>${item.name}</b><br>${item.count} companies<br>Avg rating: ${item.avg.toFixed(2)}★<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
+        `<b>${item.name}</b><br>${item.count} companies (${item.pct.toFixed(1)}%)<br>Avg rating: ${item.avg.toFixed(2)}★<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`))
       .on('mouseleave', hideTip)
       .on('click', () => { const nm=item.name; showDrillDown(`Social: ${nm}`, b => { const p=[]; if(b.ig)p.push('IG'); if(b.fb)p.push('FB'); if(b.tk)p.push('TK'); if(b.bk)p.push('BK'); return (p.length?p.join('+'):'None')===nm; }); }).attr('class','seg-click');
 
     g.append('text').attr('x',-6).attr('y',yBand(item.name)+yBand.bandwidth()/2+4)
       .attr('text-anchor','end').attr('fill',C.text).attr('font-size',10).text(item.name);
 
-    g.append('text').attr('x',xScale(item.count)+5).attr('y',yBand(item.name)+yBand.bandwidth()/2+4)
-      .attr('fill',C.muted).attr('font-size',10).text(`${item.count} (${item.avg.toFixed(1)}★)`);
+    const label = usePct ? `${item.pct.toFixed(1)}% (${item.avg.toFixed(1)}★)` : `${item.count} (${item.avg.toFixed(1)}★)`;
+    g.append('text').attr('x',xScale(valFn(item))+5).attr('y',yBand(item.name)+yBand.bandwidth()/2+4)
+      .attr('fill',C.muted).attr('font-size',10).text(label);
   });
 
-  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale).ticks(5))
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(xScale).ticks(5).tickFormat(v => usePct ? v.toFixed(0)+'%' : v))
     .selectAll('text').attr('fill',C.muted).attr('font-size',9);
   g.selectAll('.domain,.tick line').attr('stroke',C.border);
-  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text('Companies (bar color = avg rating)');
+  const axisLabel = usePct ? '% of companies (bar color = avg rating)' : 'Companies (bar color = avg rating)';
+  g.append('text').attr('x',w/2).attr('y',h+32).attr('text-anchor','middle').attr('fill',C.dim).attr('font-size',10).text(axisLabel);
 }
 
 function drawTypeLandscape(d) {
