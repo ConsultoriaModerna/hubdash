@@ -333,7 +333,7 @@ svg text { fill: var(--muted); font-size: 11px; }
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">03</span>Companies por Ciudad</div>
-    <svg id="chart-cities" width="100%" height="260"></svg>
+    <div id="chart-cities"></div>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">35</span>Field Completeness — Companies</div>
@@ -364,7 +364,7 @@ svg text { fill: var(--muted); font-size: 11px; }
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">04</span>Contact Assets</div>
-    <svg id="chart-assets" width="100%" height="260"></svg>
+    <div id="chart-assets"></div>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">06</span>Contact 4D — Score × Mobile × Email</div>
@@ -389,11 +389,11 @@ svg text { fill: var(--muted); font-size: 11px; }
   <div class="section-divider"><span>Email Verification</span></div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">51</span>MV Email Verification Health</div>
-    <svg id="chart-mv-email" width="100%" height="260"></svg>
+    <div id="chart-mv-email"></div>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">55</span>MV Email Verification by Tier</div>
-    <svg id="chart-mv-tier" width="100%" height="300"></svg>
+    <div id="chart-mv-tier"></div>
   </div>
   <div class="panel panel-full">
     <div class="panel-title"><span class="panel-id">80</span>MV Verification Heatmap — City × Status</div>
@@ -402,15 +402,15 @@ svg text { fill: var(--muted); font-size: 11px; }
   <div class="section-divider"><span>Contact Quality Nuclei</span></div>
   <div class="panel panel-full">
     <div class="panel-title"><span class="panel-id">81</span>Contact Quality Nuclei</div>
-    <svg id="chart-nuclei" width="100%" height="320"></svg>
+    <div id="chart-nuclei"></div>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">82</span>Lifecycle Stage Distribution</div>
-    <svg id="chart-lifecycle" width="100%" height="260"></svg>
+    <div id="chart-lifecycle"></div>
   </div>
   <div class="panel">
     <div class="panel-title"><span class="panel-id">83</span>Contact Source Distribution</div>
-    <svg id="chart-source" width="100%" height="260"></svg>
+    <div id="chart-source"></div>
   </div>
   </div><!-- end Contacts tab -->
 
@@ -1031,25 +1031,27 @@ function drawPipeline(d) {
 }
 
 function drawCities(d) {
-  const svg = d3.select('#chart-cities'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 260;
-  const radius = Math.min(W,H)/2 - 30;
-  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
+  const el = document.getElementById('chart-cities'); el.innerHTML = '';
+  if (!Plot || !d.cities) return;
   const cityColors = [C.blue,'#e875c2',C.orange,'#ffc83d','#7ee787',C.muted];
-  const pie = d3.pie().value(d=>d.total).sort(null);
-  const arc = d3.arc().innerRadius(radius*0.55).outerRadius(radius);
-  const arcH = d3.arc().innerRadius(radius*0.55).outerRadius(radius+6);
-  const arcs = g.selectAll('.arc').data(pie(d.cities)).enter().append('g');
-  arcs.append('path').attr('d',arc).attr('fill',(d,i)=>cityColors[i%6]).attr('stroke','#161b22').attr('stroke-width',2)
-    .on('mousemove',function(evt,dd){d3.select(this).transition().duration(100).attr('d',arcH);showTip(evt,`<b>${dd.data.city}</b><br>${fmt(dd.data.total)} total<br>${fmt(dd.data.enriched)} enriched<br><span style="color:#484f58;font-size:10px">Click → drill down</span>`);})
-    .on('mouseleave',function(){d3.select(this).transition().duration(200).attr('d',arc);hideTip();})
-    .on('click',function(evt,dd){showDrillDown(`City: ${dd.data.city}`,b=>b.c===dd.data.city||(dd.data.city==='Otras'&&!['Barcelona','Madrid','Valencia','Sevilla','Bilbao'].includes(b.c)));}).attr('class','seg-click');
-  const total = d3.sum(d.cities,c=>c.total);
-  g.append('text').attr('text-anchor','middle').attr('dy','-0.3em').text(fmt(total)).attr('fill',C.text).style('font-size','18px').style('font-weight','700');
-  g.append('text').attr('text-anchor','middle').attr('dy','1.2em').text('companies').attr('fill',C.muted).style('font-size','11px');
-  const leg = svg.append('g').attr('transform',`translate(${W-120},20)`);
-  d.cities.forEach((c,i)=>{leg.append('rect').attr('y',i*18).attr('width',10).attr('height',10).attr('fill',cityColors[i]).attr('rx',2);leg.append('text').attr('x',14).attr('y',i*18+9).text(c.city).attr('fill',C.muted).style('font-size','10px');});
+  const data = d.cities.map((c,i) => ({...c, color: cityColors[i%6]}));
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 260,
+    marginLeft: 80, marginRight: 60, marginBottom: 25,
+    x: {label: null, tickFormat: "~s"},
+    y: {label: null, domain: data.map(c=>c.city), padding: 0.3},
+    marks: [
+      Plot.barX(data, {y: "city", x: "total", fill: (d,i) => cityColors[i%6], opacity: 0.85, tip: {format: {x: true, y: true}}}),
+      Plot.text(data, {y: "city", x: "total", text: d => `${fmt(d.total)} (${fmt(d.enriched)} enriched)`, dx: 5, textAnchor: "start", fill: C.text, fontSize: 11, fontWeight: 600}),
+      Plot.ruleX([0]),
+    ]
+  });
+  el.append(chart);
+  d3.select(el).selectAll('rect').style('cursor','pointer')
+    .on('click', function(evt) {
+      const datum = d3.select(this).datum();
+      if (datum) showDrillDown(`City: ${datum.city}`, b => b.c===datum.city||(datum.city==='Otras'&&!['Barcelona','Madrid','Valencia','Sevilla','Bilbao'].includes(b.c)));
+    });
 }
 
 function drawContactCities(d) {
@@ -1121,21 +1123,27 @@ function drawContactCityAssets(d) {
 }
 
 function drawAssets(d) {
-  const svg = d3.select('#chart-assets'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 260;
-  const m = {top:10, right:100, bottom:10, left:100};
-  const w = W-m.left-m.right, h = H-m.top-m.bottom;
-  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+  const el = document.getElementById('chart-assets'); el.innerHTML = '';
+  if (!Plot || !d.contact_assets) return;
   const a = d.contact_assets;
-  const items = [{label:'Mobile/WhatsApp',val:a.mobile,color:C.green},{label:'Email',val:a.email,color:C.blue},{label:'Telefono fijo',val:a.phone,color:C.orange},{label:'Total Contacts',val:a.total,color:C.muted}];
-  const x = d3.scaleLinear().domain([0,a.total]).range([0,w]);
-  const y = d3.scaleBand().domain(items.map(d=>d.label)).range([0,h]).padding(0.35);
-  g.selectAll('.bar').data(items).enter().append('rect').attr('x',0).attr('y',d=>y(d.label)).attr('width',d=>x(d.val)).attr('height',y.bandwidth()).attr('fill',d=>d.color).attr('opacity',0.8).attr('rx',4)
-    .on('mousemove',(evt,d)=>{showTip(evt,`<b>${d.label}</b><br>${fmt(d.val)} (${(d.val/a.total*100).toFixed(1)}%)`);}).on('mouseleave',hideTip);
-  g.selectAll('.label').data(items).enter().append('text').attr('x',-8).attr('y',d=>y(d.label)+y.bandwidth()/2).attr('text-anchor','end').attr('dominant-baseline','middle').text(d=>d.label).attr('fill',C.muted).style('font-size','11px');
-  g.selectAll('.val').data(items).enter().append('text').attr('x',d=>x(d.val)+6).attr('y',d=>y(d.label)+y.bandwidth()/2).attr('dominant-baseline','middle')
-    .text(d=>`${fmt(d.val)} (${(d.val/a.total*100).toFixed(0)}%)`).attr('fill',C.text).style('font-size','11px').style('font-weight','600');
+  const items = [
+    {label:'Mobile/WhatsApp', val:a.mobile, color:C.green},
+    {label:'Email', val:a.email, color:C.blue},
+    {label:'Telefono fijo', val:a.phone, color:C.orange},
+    {label:'Total Contacts', val:a.total, color:C.muted},
+  ];
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 240,
+    marginLeft: 120, marginRight: 90, marginBottom: 20,
+    x: {label: null, tickFormat: "~s"},
+    y: {label: null, domain: items.map(i=>i.label), padding: 0.35},
+    marks: [
+      Plot.barX(items, {y: "label", x: "val", fill: "color", opacity: 0.8, tip: true}),
+      Plot.text(items, {y: "label", x: "val", text: i => `${fmt(i.val)} (${(i.val/a.total*100).toFixed(0)}%)`, dx: 5, textAnchor: "start", fill: C.text, fontSize: 11, fontWeight: 600}),
+      Plot.ruleX([0]),
+    ]
+  });
+  el.append(chart);
 }
 
 function drawBudget(d) {
@@ -3346,36 +3354,25 @@ function drawGoldenContacts(d) {
 
 // === CHART 7: MV Email Health (Panel 51) ===
 function drawMvEmail(d) {
-  if (!d.mv_email_dist) return;
-  const svg = d3.select('#chart-mv-email'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 260;
-  const radius = Math.min(W,H)/2 - 30;
-  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
-  const entries = Object.entries(d.mv_email_dist).filter(([,v])=>v>0);
-  if (!entries.length) return;
+  const el = document.getElementById('chart-mv-email'); el.innerHTML = '';
+  if (!Plot || !d.mv_email_dist) return;
   const colorMap = {ok:C.green, invalid:C.red, catch_all:C.yellow, unknown:C.muted, disposable:'#f85149', not_verified:C.dim};
   const labelMap = {ok:'Valid (OK)',invalid:'Invalid',catch_all:'Catch-All',unknown:'Unknown',disposable:'Disposable',not_verified:'Not Verified'};
-  const total = d3.sum(entries, ([,v])=>v);
-  const pie = d3.pie().value(d=>d[1]).sort(null);
-  const arc = d3.arc().innerRadius(radius*0.55).outerRadius(radius);
-  const arcH = d3.arc().innerRadius(radius*0.55).outerRadius(radius+6);
-  const arcs = g.selectAll('.arc').data(pie(entries)).enter().append('g');
-  arcs.append('path').attr('d',arc).attr('fill',(d)=>colorMap[d.data[0]]||C.muted).attr('stroke','#161b22').attr('stroke-width',2)
-    .on('mousemove',function(evt,dd){
-      d3.select(this).transition().duration(100).attr('d',arcH);
-      const pct = (dd.data[1]/total*100).toFixed(1);
-      showTip(evt,`<b>${labelMap[dd.data[0]]||dd.data[0]}</b><br>${fmt(dd.data[1])} (${pct}%)`);
-    })
-    .on('mouseleave',function(){d3.select(this).transition().duration(200).attr('d',arc);hideTip();});
-  g.append('text').attr('text-anchor','middle').attr('dy','-0.3em').text(fmt(total)).attr('fill',C.text).style('font-size','18px').style('font-weight','700');
-  g.append('text').attr('text-anchor','middle').attr('dy','1.2em').text('contacts').attr('fill',C.muted).style('font-size','11px');
-  const leg = svg.append('g').attr('transform',`translate(${W-130},20)`);
-  entries.forEach(([k,v],i)=>{
-    leg.append('rect').attr('y',i*16).attr('width',10).attr('height',10).attr('fill',colorMap[k]||C.muted).attr('rx',2);
-    leg.append('text').attr('x',14).attr('y',i*16+9).text(`${labelMap[k]||k} (${fmt(v)})`)
-      .attr('fill',C.muted).style('font-size','9px');
+  const entries = Object.entries(d.mv_email_dist).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+  const total = entries.reduce((s,[,v])=>s+v, 0);
+  const data = entries.map(([k,v]) => ({status: labelMap[k]||k, count: v, color: colorMap[k]||C.muted, pct: (v/total*100).toFixed(1)}));
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 260,
+    marginLeft: 100, marginRight: 80, marginBottom: 20,
+    x: {label: null, tickFormat: "~s"},
+    y: {label: null, domain: data.map(d=>d.status), padding: 0.3},
+    marks: [
+      Plot.barX(data, {y: "status", x: "count", fill: "color", opacity: 0.8, tip: true}),
+      Plot.text(data, {y: "status", x: "count", text: d => `${fmt(d.count)} (${d.pct}%)`, dx: 5, textAnchor: "start", fill: C.text, fontSize: 11, fontWeight: 600}),
+      Plot.ruleX([0]),
+    ]
   });
+  el.append(chart);
 }
 
 // === CHART 2: Score × Segment (Panel 46) ===
@@ -4128,55 +4125,35 @@ function drawEnrichSources(d) {
 
 // === CHART: MV by Tier (Panel 55) ===
 function drawMvTier(d) {
-  if (!d.mv_by_tier || !d.mv_by_tier.length) return;
-  const svg = d3.select('#chart-mv-tier');
-  svg.selectAll('*').remove();
-  const W = svg.node().getBoundingClientRect().width || 400;
-  const m = {t:20,r:20,b:30,l:90}, w = W-m.l-m.r, h = 260-m.t-m.b;
-  const g = svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
-
-  const tiers = d.mv_by_tier;
+  const el = document.getElementById('chart-mv-tier'); el.innerHTML = '';
+  if (!Plot || !d.mv_by_tier || !d.mv_by_tier.length) return;
   const tierColors = {'Diamante':C.cyan, 'Oro':C.yellow, 'Plata':'#8b949e', 'Parking':C.dim};
-  const y = d3.scaleBand().domain(tiers.map(t=>t.tier)).range([0,h]).padding(0.2);
-  const x = d3.scaleLinear().domain([0, d3.max(tiers, t=>t.total)*1.1]).range([0,w]);
-
-  tiers.forEach(t => {
-    const tierY = y(t.tier);
-    const bh = y.bandwidth();
-    const color = tierColors[t.tier] || C.muted;
-
-    // Full bar (total)
-    g.append('rect').attr('x',0).attr('y',tierY).attr('width',x(t.total))
-      .attr('height',bh).attr('rx',3).attr('fill',color).attr('opacity',0.15);
-    // Has email bar
-    g.append('rect').attr('x',0).attr('y',tierY).attr('width',x(t.has_email))
-      .attr('height',bh).attr('rx',3).attr('fill',color).attr('opacity',0.35);
-    // MV ok bar
-    g.append('rect').attr('x',0).attr('y',tierY).attr('width',x(t.mv_ok))
-      .attr('height',bh).attr('rx',3).attr('fill',color).attr('opacity',0.85);
-
-    // Labels
-    const mvPct = t.has_email > 0 ? ((t.mv_ok / t.has_email)*100).toFixed(0) : '0';
-    g.append('text').attr('x', x(t.total)+6).attr('y', tierY+bh/2-6)
-      .attr('fill',C.text).attr('font-size',11).attr('dominant-baseline','middle')
-      .text(`${d3.format(',')(t.total)} total`);
-    g.append('text').attr('x', x(t.total)+6).attr('y', tierY+bh/2+8)
-      .attr('fill', mvPct === '100' ? C.green : C.orange).attr('font-size',11)
-      .attr('dominant-baseline','middle').attr('font-weight',600)
-      .text(`MV: ${mvPct}% (${d3.format(',')(t.mv_ok)}/${d3.format(',')(t.has_email)} emails)`);
+  const tiers = d.mv_by_tier;
+  // Build stacked data: Total, Has Email, MV OK as overlapping bars (3 layers)
+  const data = tiers.flatMap(t => [
+    {tier: t.tier, layer: 'Total', value: t.total, color: tierColors[t.tier]||C.muted, opacity: 0.15},
+    {tier: t.tier, layer: 'Has Email', value: t.has_email, color: tierColors[t.tier]||C.muted, opacity: 0.35},
+    {tier: t.tier, layer: 'MV OK', value: t.mv_ok, color: tierColors[t.tier]||C.muted, opacity: 0.85},
+  ]);
+  const labels = tiers.map(t => {
+    const mvPct = t.has_email > 0 ? ((t.mv_ok/t.has_email)*100).toFixed(0) : '0';
+    return {tier: t.tier, x: t.total, text: `${fmt(t.total)} total — MV: ${mvPct}% (${fmt(t.mv_ok)}/${fmt(t.has_email)})`, color: mvPct==='100'?C.green:C.orange};
   });
-
-  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text')
-    .attr('fill',C.muted).attr('font-size',12).attr('font-weight',600);
-  g.selectAll('.domain').remove();
-
-  // Legend
-  const leg = g.append('g').attr('transform',`translate(${w-160},-5)`);
-  [{label:'MV OK',op:0.85},{label:'Has Email',op:0.35},{label:'Total',op:0.15}].forEach((l,i) => {
-    leg.append('rect').attr('x',i*60).attr('y',0).attr('width',10).attr('height',10).attr('rx',2)
-      .attr('fill',C.cyan).attr('opacity',l.op);
-    leg.append('text').attr('x',i*60+14).attr('y',9).attr('fill',C.dim).attr('font-size',9).text(l.label);
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 280,
+    marginLeft: 90, marginRight: 160, marginBottom: 20,
+    x: {label: null, tickFormat: "~s"},
+    y: {label: null, domain: tiers.map(t=>t.tier), padding: 0.25},
+    marks: [
+      // Overlapping bars: total (faint), has_email (medium), mv_ok (solid)
+      Plot.barX(data.filter(d=>d.layer==='Total'), {y:"tier", x:"value", fill:"color", opacity:0.15}),
+      Plot.barX(data.filter(d=>d.layer==='Has Email'), {y:"tier", x:"value", fill:"color", opacity:0.35}),
+      Plot.barX(data.filter(d=>d.layer==='MV OK'), {y:"tier", x:"value", fill:"color", opacity:0.85}),
+      Plot.text(labels, {y:"tier", x:"x", text:"text", dx:6, textAnchor:"start", fill:"color", fontSize:10, fontWeight:600}),
+      Plot.ruleX([0]),
+    ]
   });
+  el.append(chart);
 }
 
 function updateCRM(d) {
@@ -4968,134 +4945,97 @@ function setText(id, val) { const e = document.getElementById(id); if (e) e.text
 
 // === NEW: MV Verification Heatmap (Panel 80) ===
 function drawMvHeatmap(d) {
+  const el = document.getElementById('chart-mv-heatmap'); el.innerHTML = '';
   const ct = d.contacts_tab || {};
   const data = ct.mv_heatmap || [];
-  if (!data.length) return;
-  const container = document.getElementById('chart-mv-heatmap');
-  if (!container) return;
-  const W = container.getBoundingClientRect().width || 700;
+  if (!Plot || !data.length) return;
+  const MV_COLORS = {ok:'#22c55e', invalid:'#ef4444', catch_all:'#f59e0b', unknown:'#6b7280', disposable:'#a855f7', unverified:'#3b82f6'};
   const statuses = [...new Set(data.map(d => d.status))];
   const cities = [...new Set(data.map(d => d.city))];
   const maxVal = Math.max(...data.map(d => d.count));
-  const MV_COLORS = {ok:'#22c55e', invalid:'#ef4444', catch_all:'#f59e0b', unknown:'#6b7280', disposable:'#a855f7', unverified:'#3b82f6'};
-  const cellW = Math.min(90, (W - 140) / statuses.length);
-  const cellH = 36;
-  const m = {left: 100, top: 30};
-  let svg = `<svg width="${W}" height="${m.top + cities.length * cellH + 20}">`;
-  // Header
-  statuses.forEach((s, i) => {
-    svg += `<text x="${m.left + i * cellW + cellW/2}" y="18" text-anchor="middle" fill="${C.muted}" font-size="10">${s}</text>`;
+  const chart = Plot.plot({
+    width: el.clientWidth || 700, height: Math.max(200, cities.length * 40 + 60),
+    marginLeft: 100, marginBottom: 30, marginTop: 30,
+    x: {label: null, domain: statuses, padding: 0.08},
+    y: {label: null, domain: cities, padding: 0.08},
+    color: {type: "linear", domain: [0, maxVal], range: ["#161b22", "#22c55e"]},
+    marks: [
+      Plot.cell(data, {x: "status", y: "city", fill: d => MV_COLORS[d.status] || '#888', opacity: d => d.count ? Math.max(0.15, d.count/maxVal) : 0.03, tip: true}),
+      Plot.text(data.filter(d=>d.count>0), {x: "status", y: "city", text: d => fmt(d.count), fill: C.text, fontSize: 10, fontWeight: 600}),
+    ]
   });
-  // Cells
-  cities.forEach((city, ci) => {
-    svg += `<text x="${m.left - 8}" y="${m.top + ci * cellH + cellH/2 + 4}" text-anchor="end" fill="${C.text}" font-size="11">${city}</text>`;
-    statuses.forEach((status, si) => {
-      const cell = data.find(d => d.city === city && d.status === status);
-      const val = cell ? cell.count : 0;
-      const opacity = val ? Math.max(0.15, val / maxVal) : 0.03;
-      const color = MV_COLORS[status] || '#888';
-      const x = m.left + si * cellW;
-      const y = m.top + ci * cellH;
-      svg += `<rect x="${x+1}" y="${y+1}" width="${cellW-2}" height="${cellH-2}" rx="4" fill="${color}" opacity="${opacity}"/>`;
-      if (val) svg += `<text x="${x + cellW/2}" y="${y + cellH/2 + 4}" text-anchor="middle" fill="${C.text}" font-size="10" font-weight="600">${fmt(val)}</text>`;
-    });
-  });
-  svg += '</svg>';
-  container.innerHTML = svg;
+  el.append(chart);
 }
 
 // === NEW: Contact Quality Nuclei (Panel 81) ===
 function drawNuclei(d) {
+  const el = document.getElementById('chart-nuclei'); el.innerHTML = '';
   const ct = d.contacts_tab || {};
   const nuclei = ct.nuclei || [];
-  if (!nuclei.length) return;
-  const svg = d3.select('#chart-nuclei'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 320;
-  const m = {top: 20, right: 30, bottom: 30, left: 140};
-  const w = W - m.left - m.right, h = H - m.top - m.bottom;
-  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
+  if (!Plot || !nuclei.length) return;
   const total = nuclei.reduce((s,n) => s + n.count, 0);
-  const x = d3.scaleLinear().domain([0, d3.max(nuclei, n => n.count)]).range([0, w]);
-  const y = d3.scaleBand().domain(nuclei.map(n => n.nucleus)).range([0, h]).padding(0.25);
-  // Bars
-  g.selectAll('.bar').data(nuclei).enter().append('rect')
-    .attr('x', 0).attr('y', n => y(n.nucleus)).attr('width', n => x(n.count)).attr('height', y.bandwidth())
-    .attr('fill', n => n.color).attr('opacity', 0.8).attr('rx', 4)
-    .on('mousemove', (evt, n) => showTip(evt, `<b>${n.nucleus}</b><br>${n.desc}<br>${fmt(n.count)} (${(n.count/total*100).toFixed(1)}%)`))
-    .on('mouseleave', hideTip);
-  // Labels
-  g.selectAll('.lbl').data(nuclei).enter().append('text')
-    .attr('x', -8).attr('y', n => y(n.nucleus) + y.bandwidth()/2).attr('text-anchor','end').attr('dominant-baseline','middle')
-    .text(n => n.nucleus).attr('fill', n => n.color).style('font-size','12px').style('font-weight','600');
-  // Values
-  g.selectAll('.val').data(nuclei).enter().append('text')
-    .attr('x', n => x(n.count) + 6).attr('y', n => y(n.nucleus) + y.bandwidth()/2).attr('dominant-baseline','middle')
-    .text(n => `${fmt(n.count)} (${(n.count/total*100).toFixed(1)}%)`).attr('fill', C.text).style('font-size','11px').style('font-weight','600');
+  const data = nuclei.map(n => ({...n, pct: (n.count/total*100).toFixed(1)}));
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 320,
+    marginLeft: 130, marginRight: 100, marginBottom: 20,
+    x: {label: null, tickFormat: "~s"},
+    y: {label: null, domain: data.map(n=>n.nucleus), padding: 0.25},
+    marks: [
+      Plot.barX(data, {y: "nucleus", x: "count", fill: "color", opacity: 0.8, tip: {format: {fill: false}}, title: d => `${d.nucleus}\n${d.desc}\n${fmt(d.count)} (${d.pct}%)`}),
+      Plot.text(data, {y: "nucleus", x: "count", text: d => `${fmt(d.count)} (${d.pct}%)`, dx: 6, textAnchor: "start", fill: C.text, fontSize: 11, fontWeight: 600}),
+      Plot.ruleX([0]),
+    ]
+  });
+  el.append(chart);
 }
 
 // === NEW: Lifecycle Stage Distribution (Panel 82) ===
 function drawLifecycle(d) {
+  const el = document.getElementById('chart-lifecycle'); el.innerHTML = '';
   const ct = d.contacts_tab || {};
   const lc = ct.lifecycle || {};
-  if (!Object.keys(lc).length) return;
-  const svg = d3.select('#chart-lifecycle'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 260;
-  const entries = Object.entries(lc).sort((a,b) => b[1] - a[1]);
-  const total = entries.reduce((s,e) => s + e[1], 0);
-  const m = {top: 10, right: 30, bottom: 30, left: 130};
-  const w = W - m.left - m.right, h = H - m.top - m.bottom;
-  const g = svg.append('g').attr('transform', `translate(${m.left},${m.top})`);
-  const x = d3.scaleLinear().domain([0, d3.max(entries, e => e[1])]).range([0, w]);
-  const y = d3.scaleBand().domain(entries.map(e => e[0])).range([0, h]).padding(0.25);
+  if (!Plot || !Object.keys(lc).length) return;
   const colors = {subscriber:'#3b82f6', lead:'#22c55e', marketingqualifiedlead:'#f59e0b', salesqualifiedlead:'#ef4444',
     opportunity:'#a855f7', customer:'#06b6d4', evangelist:'#f97316', other:'#6b7280', '(not set)':'#374151'};
-  g.selectAll('.bar').data(entries).enter().append('rect')
-    .attr('x',0).attr('y',e => y(e[0])).attr('width',e => x(e[1])).attr('height',y.bandwidth())
-    .attr('fill',e => colors[e[0]]||C.blue).attr('opacity',0.75).attr('rx',3)
-    .on('mousemove',(evt,e) => showTip(evt,`<b>${e[0]}</b><br>${fmt(e[1])} (${(e[1]/total*100).toFixed(1)}%)`))
-    .on('mouseleave',hideTip);
-  g.selectAll('.lbl').data(entries).enter().append('text')
-    .attr('x',-6).attr('y',e => y(e[0])+y.bandwidth()/2).attr('text-anchor','end').attr('dominant-baseline','middle')
-    .text(e => e[0]).attr('fill',C.muted).style('font-size','10px');
-  g.selectAll('.val').data(entries).enter().append('text')
-    .attr('x',e => x(e[1])+5).attr('y',e => y(e[0])+y.bandwidth()/2).attr('dominant-baseline','middle')
-    .text(e => fmt(e[1])).attr('fill',C.text).style('font-size','10px').style('font-weight','600');
+  const entries = Object.entries(lc).sort((a,b) => b[1] - a[1]);
+  const total = entries.reduce((s,e) => s + e[1], 0);
+  const data = entries.map(([k,v]) => ({stage: k, count: v, color: colors[k]||C.blue, pct: (v/total*100).toFixed(1)}));
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 260,
+    marginLeft: 140, marginRight: 80, marginBottom: 20,
+    x: {label: null, tickFormat: "~s"},
+    y: {label: null, domain: data.map(d=>d.stage), padding: 0.25},
+    marks: [
+      Plot.barX(data, {y: "stage", x: "count", fill: "color", opacity: 0.75, tip: true}),
+      Plot.text(data, {y: "stage", x: "count", text: d => `${fmt(d.count)} (${d.pct}%)`, dx: 5, textAnchor: "start", fill: C.text, fontSize: 10, fontWeight: 600}),
+      Plot.ruleX([0]),
+    ]
+  });
+  el.append(chart);
 }
 
 // === NEW: Contact Source Distribution (Panel 83) ===
 function drawSource(d) {
+  const el = document.getElementById('chart-source'); el.innerHTML = '';
   const ct = d.contacts_tab || {};
   const src = ct.source || {};
-  if (!Object.keys(src).length) return;
-  const svg = d3.select('#chart-source'); svg.selectAll('*').remove();
-  const rect = svg.node().getBoundingClientRect();
-  const W = rect.width, H = 260;
+  if (!Plot || !Object.keys(src).length) return;
+  const srcColors = ['#3b82f6','#22c55e','#f59e0b','#ef4444','#a855f7','#06b6d4','#f97316','#6b7280'];
   const entries = Object.entries(src).sort((a,b) => b[1] - a[1]);
   const total = entries.reduce((s,e) => s + e[1], 0);
-  // Donut chart
-  const cx = W/2, cy = H/2;
-  const radius = Math.min(W, H)/2 - 30;
-  const g = svg.append('g').attr('transform', `translate(${cx},${cy})`);
-  const pie = d3.pie().value(d => d[1]).sort(null);
-  const arc = d3.arc().innerRadius(radius * 0.55).outerRadius(radius);
-  const srcColors = ['#3b82f6','#22c55e','#f59e0b','#ef4444','#a855f7','#06b6d4','#f97316','#6b7280'];
-  const paths = g.selectAll('path').data(pie(entries)).enter().append('path')
-    .attr('d', arc).attr('fill', (d,i) => srcColors[i % srcColors.length]).attr('opacity', 0.8)
-    .attr('stroke', '#1a1a2e').attr('stroke-width', 2)
-    .on('mousemove', (evt, dd) => showTip(evt, `<b>${dd.data[0]}</b><br>${fmt(dd.data[1])} (${(dd.data[1]/total*100).toFixed(1)}%)`))
-    .on('mouseleave', hideTip);
-  // Center text
-  g.append('text').attr('text-anchor','middle').attr('dy','-0.2em').text(fmt(total)).attr('fill',C.text).style('font-size','18px').style('font-weight','700');
-  g.append('text').attr('text-anchor','middle').attr('dy','1.2em').text('contacts').attr('fill',C.muted).style('font-size','10px');
-  // Legend
-  const legend = svg.append('g').attr('transform', `translate(10,${H-12})`);
-  entries.slice(0,6).forEach((e,i) => {
-    const lx = i * (W/6);
-    legend.append('rect').attr('x',lx).attr('y',0).attr('width',8).attr('height',8).attr('rx',2).attr('fill',srcColors[i%srcColors.length]);
-    legend.append('text').attr('x',lx+11).attr('y',7).text(e[0].replace(/_/g,' ')).attr('fill',C.muted).style('font-size','8px');
+  const data = entries.map(([k,v], i) => ({source: k.replace(/_/g,' '), count: v, color: srcColors[i%srcColors.length], pct: (v/total*100).toFixed(1)}));
+  const chart = Plot.plot({
+    width: el.clientWidth || 500, height: 260,
+    marginLeft: 120, marginRight: 80, marginBottom: 20,
+    x: {label: null, tickFormat: "~s"},
+    y: {label: null, domain: data.map(d=>d.source), padding: 0.25},
+    marks: [
+      Plot.barX(data, {y: "source", x: "count", fill: "color", opacity: 0.8, tip: true}),
+      Plot.text(data, {y: "source", x: "count", text: d => `${fmt(d.count)} (${d.pct}%)`, dx: 5, textAnchor: "start", fill: C.text, fontSize: 10, fontWeight: 600}),
+      Plot.ruleX([0]),
+    ]
   });
+  el.append(chart);
 }
 
 function updateAll(d) {
