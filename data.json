@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-30T17:25:09",
-  "fetch_seconds": 133.2,
+  "generated_at": "2026-05-01T14:10:48",
+  "fetch_seconds": 166.2,
   "summary": {
-    "companies_total": 74948,
-    "contacts_total": 67090,
+    "companies_total": 75099,
+    "contacts_total": 60897,
     "enriched_gp": 4452,
     "avg_score_companies": 56.4,
-    "avg_score_contacts": 48.7
+    "avg_score_contacts": 51.6
   },
   "scores": {
     "companies": {
@@ -17,19 +17,19 @@
       "90-100": 1291
     },
     "contacts": {
-      "0-29": 10330,
-      "30-49": 24561,
-      "50-69": 22172,
+      "0-29": 5569,
+      "30-49": 23130,
+      "50-69": 22171,
       "70-89": 9975,
       "90-100": 0
     }
   },
   "pipeline": {
-    "total": 74948,
+    "total": 75099,
     "with_place_id": 23108,
     "phase_a_pending": 18589,
     "enriched": 4452,
-    "phase_b_pending": 51840
+    "phase_b_pending": 51991
   },
   "cities": [
     {
@@ -59,51 +59,51 @@
     },
     {
       "city": "Otras",
-      "total": 41122,
+      "total": 41273,
       "enriched": 1237
     }
   ],
   "contact_cities": [
     {
       "city": "Barcelona",
-      "total": 5357
+      "total": 5188
     },
     {
       "city": "Madrid",
-      "total": 4872
+      "total": 4746
     },
     {
       "city": "Valencia",
-      "total": 1144
+      "total": 1084
     },
     {
       "city": "Sevilla",
-      "total": 210
+      "total": 195
     },
     {
       "city": "Bilbao",
-      "total": 397
+      "total": 395
     },
     {
       "city": "Otras",
-      "total": 55110
+      "total": 49289
     }
   ],
   "contact_city_assets": {
     "Barcelona": {
       "mobile": 3003,
-      "email": 3647,
-      "phone": 3637
+      "email": 3646,
+      "phone": 3558
     },
     "Madrid": {
       "mobile": 3202,
       "email": 3278,
-      "phone": 3779
+      "phone": 3773
     },
     "Valencia": {
       "mobile": 703,
       "email": 701,
-      "phone": 925
+      "phone": 920
     },
     "Sevilla": {
       "mobile": 15,
@@ -113,23 +113,23 @@
     "Bilbao": {
       "mobile": 362,
       "email": 281,
-      "phone": 372
+      "phone": 371
     }
   },
   "golden_contacts": {
-    "total": 67090,
-    "has_mobile": 18611,
+    "total": 60897,
+    "has_mobile": 18608,
     "has_mobile_email": 14186,
     "has_mobile_valid_email": 12162,
     "has_mobile_valid_company": 11221
   },
   "mv_email_dist": {
-    "ok": 32952,
-    "invalid": 9094,
+    "ok": 32950,
+    "invalid": 8887,
     "catch_all": 2881,
     "unknown": 2503,
     "disposable": 7,
-    "no_mv_status": 19653
+    "no_mv_status": 13669
   },
   "mountain": {
     "cities": [
@@ -193,54 +193,54 @@
     ],
     "contacts": [
       [
-        401,
-        1385,
+        335,
+        1282,
         2157,
         1396,
         0
       ],
       [
-        172,
-        873,
+        94,
+        825,
         2091,
         1734,
         0
       ],
       [
-        81,
-        251,
+        29,
+        243,
         380,
         431,
         0
       ],
       [
-        98,
+        83,
         53,
         57,
         2,
         0
       ],
       [
-        4,
-        15,
+        3,
+        14,
         151,
         227,
         0
       ],
       [
-        9574,
-        21984,
-        17336,
+        5025,
+        20713,
+        17335,
         6185,
         0
       ]
     ]
   },
   "contact_assets": {
-    "mobile": 18611,
-    "email": 39164,
-    "phone": 35854,
-    "total": 67090
+    "mobile": 18608,
+    "email": 39173,
+    "phone": 35160,
+    "total": 60897
   },
   "bubbles": [
     {
@@ -765,7 +765,7 @@
       "rv": 27061,
       "s": 100,
       "c": "Paris",
-      "ct": 4,
+      "ct": 3,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -1249,7 +1249,7 @@
       "rv": 17066,
       "s": 83,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "",
       "tc": "Slow Service",
@@ -2070,7 +2070,7 @@
       "rv": 13484,
       "s": 100,
       "c": "Granada",
-      "ct": 4,
+      "ct": 1,
       "se": "Pos",
       "pl": "$",
       "tc": "Slow Service",
@@ -2559,7 +2559,7 @@
       "rv": 12134,
       "s": 100,
       "c": "New York",
-      "ct": 2,
+      "ct": 3,
       "se": "Neu",
       "pl": "$",
       "tc": "Pricing",
@@ -2659,7 +2659,7 @@
       "rv": 11883,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 2,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -4171,7 +4171,7 @@
       "rv": 9766,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -4416,7 +4416,7 @@
       "rv": 9458,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -4704,7 +4704,7 @@
       "rv": 9039,
       "s": 100,
       "c": "Marbella",
-      "ct": 19,
+      "ct": 18,
       "se": "Pos",
       "pl": "$$$",
       "tc": "Slow Service",
@@ -5662,7 +5662,7 @@
       "rv": 7823,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -5957,7 +5957,7 @@
       "rv": 7548,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Pricing",
@@ -7333,7 +7333,7 @@
       "rv": 6563,
       "s": 100,
       "c": "Madrid",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -7433,7 +7433,7 @@
       "rv": 6557,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Pricing",
@@ -7632,7 +7632,7 @@
       "rv": 6467,
       "s": 100,
       "c": "Málaga",
-      "ct": 5,
+      "ct": 4,
       "se": "Pos",
       "pl": "$$",
       "tc": "Pricing",
@@ -7976,7 +7976,7 @@
       "rv": 6356,
       "s": 100,
       "c": "Barcelona",
-      "ct": 1,
+      "ct": 0,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -8668,7 +8668,7 @@
       "rv": 6090,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$",
       "tc": "Pricing",
@@ -8718,7 +8718,7 @@
       "rv": 6055,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -9743,7 +9743,7 @@
       "rv": 5776,
       "s": 100,
       "c": "Barcelona",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -10136,7 +10136,7 @@
       "rv": 5635,
       "s": 100,
       "c": "Madrid",
-      "ct": 3,
+      "ct": 2,
       "se": "Pos",
       "pl": "$$$",
       "tc": "Slow Service",
@@ -12865,7 +12865,7 @@
       "rv": 4782,
       "s": 100,
       "c": "Gijón",
-      "ct": 1,
+      "ct": 0,
       "se": "Pos",
       "pl": "$$$",
       "tc": "Slow Service",
@@ -13901,7 +13901,7 @@
       "rv": 4608,
       "s": 100,
       "c": "Barcelona",
-      "ct": 4,
+      "ct": 2,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -14145,7 +14145,7 @@
       "rv": 4551,
       "s": 85,
       "c": "Madrid",
-      "ct": 0,
+      "ct": 1,
       "se": "Neg",
       "pl": "$$",
       "tc": "Hygiene",
@@ -15677,7 +15677,7 @@
       "rv": 4289,
       "s": 80,
       "c": "Zaragoza",
-      "ct": 0,
+      "ct": 1,
       "se": "Pos",
       "pl": "$",
       "tc": "Wait Time",
@@ -16444,7 +16444,7 @@
       "rv": 4190,
       "s": 100,
       "c": "Zaragoza",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Pricing",
@@ -16589,7 +16589,7 @@
       "rv": 4182,
       "s": 100,
       "c": "Madrid",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Cold Food",
@@ -18193,7 +18193,7 @@
       "rv": 3952,
       "s": 100,
       "c": "Valencia",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "",
       "tc": "Pricing",
@@ -19858,7 +19858,7 @@
       "rv": 3705,
       "s": 100,
       "c": "Madrid",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$",
       "tc": "Slow Service",
@@ -19957,7 +19957,7 @@
       "rv": 3696,
       "s": 100,
       "c": "San Cristóbal de La ",
-      "ct": 3,
+      "ct": 2,
       "se": "Neu",
       "pl": "$",
       "tc": "Slow Service",
@@ -20053,7 +20053,7 @@
       "rv": 3694,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Pricing",
@@ -20290,7 +20290,7 @@
       "rv": 3669,
       "s": 100,
       "c": "Granada",
-      "ct": 1,
+      "ct": 2,
       "se": "Pos",
       "pl": "$",
       "tc": "Slow Service",
@@ -20341,7 +20341,7 @@
       "rv": 3668,
       "s": 95,
       "c": "Malaga",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -20542,7 +20542,7 @@
       "rv": 3626,
       "s": 100,
       "c": "Madrid",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$",
       "tc": "Slow Service",
@@ -21359,7 +21359,7 @@
       "rv": 3553,
       "s": 100,
       "c": "Mataró",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -21561,7 +21561,7 @@
       "rv": 3545,
       "s": 85,
       "c": "Madrid",
-      "ct": 0,
+      "ct": 1,
       "se": "Pos",
       "pl": "$",
       "tc": "Slow Service",
@@ -22011,7 +22011,7 @@
       "rv": 3496,
       "s": 100,
       "c": "Barcelona",
-      "ct": 3,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -22161,7 +22161,7 @@
       "rv": 3482,
       "s": 100,
       "c": "Madrid",
-      "ct": 3,
+      "ct": 2,
       "se": "Pos",
       "pl": "$$",
       "tc": "Pricing",
@@ -22696,7 +22696,7 @@
       "rv": 3433,
       "s": 85,
       "c": "Madrid",
-      "ct": 0,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Pricing",
@@ -22939,7 +22939,7 @@
       "rv": 3401,
       "s": 100,
       "c": "Madrid",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$$$",
       "tc": "Slow Service",
@@ -23136,7 +23136,7 @@
       "rv": 3351,
       "s": 100,
       "c": "Barcelona",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "",
       "tc": "Slow Service",
@@ -23485,7 +23485,7 @@
       "rv": 3327,
       "s": 100,
       "c": "Barcelona",
-      "ct": 2,
+      "ct": 1,
       "se": "Neu",
       "pl": "$",
       "tc": "Cold Food",
@@ -23675,7 +23675,7 @@
       "rv": 3320,
       "s": 100,
       "c": "València",
-      "ct": 2,
+      "ct": 1,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -24660,35 +24660,35 @@
   },
   "field_completeness": {
     "companies": {
-      "name": 74931,
+      "name": 75082,
       "phone": 48481,
-      "domain": 37847,
-      "website": 37876,
+      "domain": 37848,
+      "website": 37877,
       "city": 71370,
       "address": 66813,
       "industry": 34719,
       "google_place_id": 23108,
       "gp__rating_count": 4452,
       "gp__sentiment": 4472,
-      "num_associated_contacts": 74948,
+      "num_associated_contacts": 75099,
       "description": 29531,
       "country": 73864
     },
     "contacts": {
-      "email": 39164,
-      "mobilephone": 18611,
-      "firstname": 63564,
-      "lastname": 16805,
-      "phone": 35854,
-      "company": 45680,
-      "city": 48419,
-      "jobtitle": 2514,
-      "lifecyclestage": 67090,
-      "associatedcompanyid": 44491,
-      "country": 16704
+      "email": 39173,
+      "mobilephone": 18608,
+      "firstname": 57487,
+      "lastname": 15287,
+      "phone": 35160,
+      "company": 43858,
+      "city": 46727,
+      "jobtitle": 2190,
+      "lifecyclestage": 60897,
+      "associatedcompanyid": 44632,
+      "country": 16083
     },
-    "companies_total": 74948,
-    "contacts_total": 67090
+    "companies_total": 75099,
+    "contacts_total": 60897
   },
   "contact_matrix": [
     [
@@ -24707,13 +24707,13 @@
       0,
       0,
       1,
-      1388
+      1399
     ],
     [
       0,
       0,
       0,
-      8923
+      4151
     ],
     [
       1,
@@ -24725,19 +24725,19 @@
       1,
       1,
       0,
-      197
+      194
     ],
     [
       1,
       0,
       1,
-      9815
+      9814
     ],
     [
       1,
       0,
       0,
-      14494
+      13067
     ],
     [
       2,
@@ -24755,7 +24755,7 @@
       2,
       0,
       1,
-      13259
+      13258
     ],
     [
       2,
@@ -25221,16 +25221,31 @@
       "domain_finder": 2135,
       "contacts_mobile": 18611,
       "contacts_email": 39164
+    },
+    {
+      "ts": "2026-05-01 14:09",
+      "website": 37877,
+      "phone": 48481,
+      "domain": 37848,
+      "gp_enriched": 4452,
+      "ws_scraped": 31325,
+      "ws_emails": 9127,
+      "ws_instagram": 9667,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 18608,
+      "contacts_email": 39173
     }
   ],
   "reachability_funnel": {
-    "total": 74948,
-    "has_website": 37876,
+    "total": 75099,
+    "has_website": 37877,
     "ws_scraped": 31325,
     "ws_email_found": 9127,
     "ws_instagram": 9667,
     "has_phone": 48481,
-    "has_contacts": 39115
+    "has_contacts": 40135
   },
   "hidden_segments": [
     {
@@ -25600,7 +25615,7 @@
       "who_signs": "Propietario / Gerente",
       "timing": "now",
       "count": 145,
-      "avg_score": 82.7,
+      "avg_score": 82.8,
       "cities": {
         "Barcelona": 145
       },
@@ -26030,7 +26045,7 @@
         "wb": 1,
         "dm": "arrosserialasarenas.com",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 2
       },
       {
         "id": "9919875297",
@@ -26128,7 +26143,7 @@
         "wb": 1,
         "dm": "b-one.es",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9921868533",
@@ -26170,7 +26185,7 @@
         "wb": 1,
         "dm": "sensi.es",
         "tp": "Restaurante especializado en t",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919745228",
@@ -26324,7 +26339,7 @@
         "wb": 1,
         "dm": "leromane.com",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9922009279",
@@ -26352,7 +26367,7 @@
         "wb": 1,
         "dm": "grillrestaurante.com",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9921770213",
@@ -26478,7 +26493,7 @@
         "wb": 1,
         "dm": "tapaslabonasort.com",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919921863",
@@ -26520,7 +26535,7 @@
         "wb": 1,
         "dm": "lamarearestaurante.com",
         "tp": "",
-        "ct": 1
+        "ct": 0
       },
       {
         "id": "9919860980",
@@ -26576,7 +26591,7 @@
         "wb": 1,
         "dm": "bodegajoan.com",
         "tp": "Bar restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "426829020407",
@@ -26590,7 +26605,7 @@
         "wb": 1,
         "dm": "gruparenal.com",
         "tp": "Restaurante mediterráneo",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "427985111271",
@@ -26730,7 +26745,7 @@
         "wb": 1,
         "dm": "patronrestaurante.com",
         "tp": "Restaurante",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "428027417842",
@@ -27066,7 +27081,7 @@
         "wb": 1,
         "dm": "lamarsalada.cat",
         "tp": "Restaurante mediterráneo",
-        "ct": 4
+        "ct": 2
       },
       {
         "id": "9922001863",
@@ -27374,7 +27389,7 @@
         "wb": 1,
         "dm": "lataqueria.eu",
         "tp": "Restaurante mexicano",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9922067681",
@@ -27556,7 +27571,7 @@
         "wb": 1,
         "dm": "maitea.es",
         "tp": "Taberna",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9921943254",
@@ -27696,7 +27711,7 @@
         "wb": 1,
         "dm": "quickgold.es",
         "tp": "Servicios",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9919747278",
@@ -27766,7 +27781,7 @@
         "wb": 1,
         "dm": "tacoalto.es",
         "tp": "Restaurante mexicano",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9921874130",
@@ -27878,7 +27893,7 @@
         "wb": 1,
         "dm": "laporca.com",
         "tp": "Hamburguesería",
-        "ct": 4
+        "ct": 3
       },
       {
         "id": "9920638145",
@@ -27934,7 +27949,7 @@
         "wb": 1,
         "dm": "calpep.com",
         "tp": "Restaurante especializado en t",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9921867743",
@@ -28060,7 +28075,7 @@
         "wb": 1,
         "dm": "piazzeditalia.com",
         "tp": "Restaurante italiano",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "426918694081",
@@ -28074,7 +28089,7 @@
         "wb": 1,
         "dm": "albagranados.cat",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9920634352",
@@ -28116,7 +28131,7 @@
         "wb": 1,
         "dm": "restaurantvegetalia.com",
         "tp": "Restaurante vegetariano",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919863782",
@@ -28186,7 +28201,7 @@
         "wb": 1,
         "dm": "elargentino.cat",
         "tp": "Restaurante argentino",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9920640490",
@@ -28340,7 +28355,7 @@
         "wb": 1,
         "dm": "vrutal.es",
         "tp": "Restaurante vegano",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9921919217",
@@ -28354,7 +28369,7 @@
         "wb": 1,
         "dm": "barcelonacook.com",
         "tp": "Bar",
-        "ct": 0
+        "ct": 1
       },
       {
         "id": "9919831544",
@@ -28564,7 +28579,7 @@
         "wb": 1,
         "dm": "txokoa-barcelona.com",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9921773270",
@@ -28592,7 +28607,7 @@
         "wb": 1,
         "dm": "restaurantalianca.es",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9921772521",
@@ -28998,7 +29013,7 @@
         "wb": 1,
         "dm": "casaangelabcn.com",
         "tp": "Bar",
-        "ct": 0
+        "ct": 1
       },
       {
         "id": "9922087610",
@@ -29054,7 +29069,7 @@
         "wb": 1,
         "dm": "sushinori.es",
         "tp": "Restaurante japonés",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919835109",
@@ -29236,7 +29251,7 @@
         "wb": 1,
         "dm": "silan-barcelona.shop",
         "tp": "Restaurante de cocina de Orien",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9922005724",
@@ -29446,7 +29461,7 @@
         "wb": 1,
         "dm": "lamarbella.shop",
         "tp": "Restaurante mediterráneo",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9920525543",
@@ -29628,7 +29643,7 @@
         "wb": 1,
         "dm": "venusrestaurantebarcelona.com",
         "tp": "Restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919910594",
@@ -29922,7 +29937,7 @@
         "wb": 1,
         "dm": "petitcomite.cat",
         "tp": "Restaurante de cocina española",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919921367",
@@ -30062,7 +30077,7 @@
         "wb": 1,
         "dm": "lassorrentinas.com",
         "tp": "Restaurante italiano",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919858140",
@@ -30090,7 +30105,7 @@
         "wb": 1,
         "dm": "aljaimadeaboukhalil.com",
         "tp": "Restaurante libanés",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9922088135",
@@ -30216,7 +30231,7 @@
         "wb": 1,
         "dm": "avocadobcn.es",
         "tp": "Restaurante",
-        "ct": 1
+        "ct": 2
       },
       {
         "id": "9920611789",
@@ -30244,7 +30259,7 @@
         "wb": 1,
         "dm": "rangoli-barcelona.com",
         "tp": "Restaurante indio",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9919835858",
@@ -30356,7 +30371,7 @@
         "wb": 1,
         "dm": "barramon.dudaone.com",
         "tp": "Bar",
-        "ct": 1
+        "ct": 0
       },
       {
         "id": "9919864537",
@@ -30412,7 +30427,7 @@
         "wb": 1,
         "dm": "lasvermudas.com",
         "tp": "Bar",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9919741641",
@@ -30468,7 +30483,7 @@
         "wb": 1,
         "dm": "nakashitabcn.com",
         "tp": "Restaurante japonés",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9921818092",
@@ -30832,7 +30847,7 @@
         "wb": 1,
         "dm": "puntal.barcelona",
         "tp": "Bar restaurante",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9922041593",
@@ -31672,7 +31687,7 @@
         "wb": 1,
         "dm": "restaurantestruch.com",
         "tp": "Restaurante mediterráneo",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919853777",
@@ -31868,7 +31883,7 @@
         "wb": 1,
         "dm": "meson-del-cafe-1909.menustic.com",
         "tp": "Cafetería",
-        "ct": 2
+        "ct": 1
       },
       {
         "id": "9920616901",
@@ -31952,7 +31967,7 @@
         "wb": 1,
         "dm": "laflordelnord.shop",
         "tp": "Bar",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9922042597",
@@ -32148,7 +32163,7 @@
         "wb": 1,
         "dm": "congraciarestaurant.com",
         "tp": "Restaurante mediterráneo",
-        "ct": 4
+        "ct": 2
       },
       {
         "id": "9921946558",
@@ -32274,7 +32289,7 @@
         "wb": 1,
         "dm": "actahotels.com",
         "tp": "Hotel",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919909054",
@@ -32330,7 +32345,7 @@
         "wb": 1,
         "dm": "gruposantelmo.com",
         "tp": "Restaurante mediterráneo",
-        "ct": 4
+        "ct": 3
       },
       {
         "id": "9919835323",
@@ -32624,7 +32639,7 @@
         "wb": 1,
         "dm": "la-alcoba.com",
         "tp": "Bar",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919920860",
@@ -32904,7 +32919,7 @@
         "wb": 1,
         "dm": "restaurantelibanespetra.com",
         "tp": "Restaurante libanés",
-        "ct": 2
+        "ct": 3
       },
       {
         "id": "9919896805",
@@ -33156,7 +33171,7 @@
         "wb": 1,
         "dm": "fiveguys.es",
         "tp": "Hamburguesería",
-        "ct": 1
+        "ct": 2
       },
       {
         "id": "9919863516",
@@ -33660,7 +33675,7 @@
         "wb": 1,
         "dm": "barmarcel.com",
         "tp": "Bar",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9920635348",
@@ -35690,7 +35705,7 @@
         "wb": 1,
         "dm": "enriquetomas.com",
         "tp": "Restaurante",
-        "ct": 18
+        "ct": 20
       },
       {
         "id": "9919832795",
@@ -36558,7 +36573,7 @@
         "wb": 0,
         "dm": "",
         "tp": "Restaurante mediterráneo",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "9919896044",
@@ -36824,7 +36839,7 @@
         "wb": 1,
         "dm": "lapapa.es",
         "tp": "Cafetería",
-        "ct": 3
+        "ct": 1
       },
       {
         "id": "428019260615",
@@ -39139,11 +39154,11 @@
     ]
   },
   "domain_coverage": {
-    "total": 74948,
-    "with_domain": 37847,
-    "with_website": 37876,
-    "no_domain": 37101,
-    "no_domain_with_contacts": 13140,
+    "total": 75099,
+    "with_domain": 37848,
+    "with_website": 37877,
+    "no_domain": 37251,
+    "no_domain_with_contacts": 13902,
     "ws_scraped": 31325,
     "ws_emails": 9127,
     "ws_instagram": 9667,
@@ -39177,17 +39192,17 @@
     {
       "tier": "Plata",
       "list_id": "301",
-      "total": 8029,
-      "has_email": 8029,
-      "mv_ok": 7828,
+      "total": 8028,
+      "has_email": 8028,
+      "mv_ok": 7827,
       "sample": 200
     },
     {
       "tier": "Parking",
       "list_id": "302",
-      "total": 19617,
-      "has_email": 18146,
-      "mv_ok": 17753,
+      "total": 19616,
+      "has_email": 18145,
+      "mv_ok": 17752,
       "sample": 200
     }
   ],
@@ -40147,7 +40162,7 @@
       "wb": 0,
       "ph": "",
       "s": 33,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -40725,7 +40740,7 @@
       "wb": 1,
       "ph": "",
       "s": 53,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -41473,7 +41488,7 @@
       "wb": 1,
       "ph": "660906121",
       "s": 70,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -41643,7 +41658,7 @@
       "wb": 0,
       "ph": "",
       "s": 20,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -42034,7 +42049,7 @@
       "wb": 1,
       "ph": "34931507847",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -42170,7 +42185,7 @@
       "wb": 1,
       "ph": "34606724744",
       "s": 60,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -42204,7 +42219,7 @@
       "wb": 1,
       "ph": "34644643619",
       "s": 67,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -42255,7 +42270,7 @@
       "wb": 0,
       "ph": "",
       "s": 20,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -42357,7 +42372,7 @@
       "wb": 1,
       "ph": "34934573090",
       "s": 85,
-      "ct": 0,
+      "ct": 1,
       "tp": "Bar",
       "la": 41.4034,
       "ln": 2.1729,
@@ -42714,7 +42729,7 @@
       "wb": 1,
       "ph": "+34 976 22 67 71",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -43751,7 +43766,7 @@
       "wb": 1,
       "ph": "",
       "s": 45,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -44193,7 +44208,7 @@
       "wb": 1,
       "ph": "+34 932909200",
       "s": 80,
-      "ct": 8,
+      "ct": 9,
       "tp": "",
       "la": null,
       "ln": null,
@@ -44941,7 +44956,7 @@
       "wb": 1,
       "ph": "+34 619 79 39 77",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -50211,7 +50226,7 @@
       "wb": 1,
       "ph": "609 269 869",
       "s": 80,
-      "ct": 14,
+      "ct": 15,
       "tp": "",
       "la": null,
       "ln": null,
@@ -50279,7 +50294,7 @@
       "wb": 1,
       "ph": "+351 226089700",
       "s": 80,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -51044,7 +51059,7 @@
       "wb": 1,
       "ph": "+351 226089700",
       "s": 80,
-      "ct": 2,
+      "ct": 3,
       "tp": "",
       "la": null,
       "ln": null,
@@ -52608,7 +52623,7 @@
       "wb": 1,
       "ph": "+18553809577",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -53543,7 +53558,7 @@
       "wb": 1,
       "ph": "+34 934 92 73 73",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -54852,7 +54867,7 @@
       "wb": 1,
       "ph": "34900180957",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -54869,7 +54884,7 @@
       "wb": 1,
       "ph": "+34913838052",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -55107,7 +55122,7 @@
       "wb": 0,
       "ph": "976243165",
       "s": 45,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -55124,7 +55139,7 @@
       "wb": 1,
       "ph": "958225539",
       "s": 90,
-      "ct": 3,
+      "ct": 4,
       "tp": "Restaurante",
       "la": 37.1731,
       "ln": -3.5926,
@@ -55243,7 +55258,7 @@
       "wb": 1,
       "ph": "+15042569073",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -55821,7 +55836,7 @@
       "wb": 1,
       "ph": "965125359",
       "s": 80,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -56263,7 +56278,7 @@
       "wb": 1,
       "ph": "+34926588015",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -56297,7 +56312,7 @@
       "wb": 1,
       "ph": "",
       "s": 78,
-      "ct": 3,
+      "ct": 1,
       "tp": "Servicio de lavado de coches",
       "la": 40.4286,
       "ln": -3.7199,
@@ -56433,7 +56448,7 @@
       "wb": 1,
       "ph": "+34 958 22 97 91",
       "s": 80,
-      "ct": 2,
+      "ct": 0,
       "tp": "",
       "la": null,
       "ln": null,
@@ -57198,7 +57213,7 @@
       "wb": 1,
       "ph": "+34 922 293 370",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -57538,7 +57553,7 @@
       "wb": 1,
       "ph": "441-295-4345",
       "s": 80,
-      "ct": 2,
+      "ct": 3,
       "tp": "",
       "la": null,
       "ln": null,
@@ -58235,7 +58250,7 @@
       "wb": 1,
       "ph": "",
       "s": 68,
-      "ct": 3,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -59187,7 +59202,7 @@
       "wb": 1,
       "ph": "+1 650-260-4930",
       "s": 100,
-      "ct": 1,
+      "ct": 0,
       "tp": "Bar",
       "la": 41.3787,
       "ln": 2.1606,
@@ -59629,7 +59644,7 @@
       "wb": 1,
       "ph": "+34 937256983",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -60445,7 +60460,7 @@
       "wb": 1,
       "ph": "",
       "s": 45,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -60462,7 +60477,7 @@
       "wb": 1,
       "ph": "",
       "s": 53,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -60530,7 +60545,7 @@
       "wb": 1,
       "ph": "+1 415-375-3176",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -60683,7 +60698,7 @@
       "wb": 1,
       "ph": "34971651445",
       "s": 80,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -60989,7 +61004,7 @@
       "wb": 1,
       "ph": "+1 877-273-3049",
       "s": 100,
-      "ct": 2,
+      "ct": 3,
       "tp": "Bar",
       "la": 40.4721,
       "ln": -3.7131,
@@ -62264,7 +62279,7 @@
       "wb": 1,
       "ph": "",
       "s": 63,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -63182,7 +63197,7 @@
       "wb": 1,
       "ph": "+1 877-273-3049",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -63233,7 +63248,7 @@
       "wb": 1,
       "ph": "+34 615 07 35 86",
       "s": 60,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -63352,7 +63367,7 @@
       "wb": 1,
       "ph": "+34 615 07 35 86",
       "s": 60,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -64355,7 +64370,7 @@
       "wb": 1,
       "ph": "976527405",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -67704,7 +67719,7 @@
       "wb": 1,
       "ph": "+34 876 11 58 63",
       "s": 100,
-      "ct": 2,
+      "ct": 1,
       "tp": "Bar restaurante",
       "la": 41.6535,
       "ln": -0.88,
@@ -68809,7 +68824,7 @@
       "wb": 1,
       "ph": "",
       "s": 83,
-      "ct": 3,
+      "ct": 1,
       "tp": "Restaurante",
       "la": 41.3751,
       "ln": 2.1829,
@@ -72141,7 +72156,7 @@
       "wb": 1,
       "ph": "+34900104668",
       "s": 80,
-      "ct": 9,
+      "ct": 8,
       "tp": "",
       "la": null,
       "ln": null,
@@ -72379,7 +72394,7 @@
       "wb": 1,
       "ph": "+34 600 63 85 41",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -76238,7 +76253,7 @@
       "wb": 1,
       "ph": "699305827",
       "s": 80,
-      "ct": 5,
+      "ct": 4,
       "tp": "",
       "la": null,
       "ln": null,
@@ -77037,7 +77052,7 @@
       "wb": 1,
       "ph": "6168426790",
       "s": 80,
-      "ct": 4,
+      "ct": 3,
       "tp": "",
       "la": null,
       "ln": null,
@@ -77241,7 +77256,7 @@
       "wb": 1,
       "ph": "+34983232907",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -80097,7 +80112,7 @@
       "wb": 1,
       "ph": "",
       "s": 53,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -80539,7 +80554,7 @@
       "wb": 1,
       "ph": "",
       "s": 68,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -81049,7 +81064,7 @@
       "wb": 1,
       "ph": "+1 415-965-0161",
       "s": 80,
-      "ct": 6,
+      "ct": 4,
       "tp": "",
       "la": null,
       "ln": null,
@@ -83072,7 +83087,7 @@
       "wb": 1,
       "ph": "",
       "s": 40,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -84041,7 +84056,7 @@
       "wb": 1,
       "ph": "+34 965 26 85 57",
       "s": 80,
-      "ct": 8,
+      "ct": 7,
       "tp": "",
       "la": null,
       "ln": null,
@@ -84993,7 +85008,7 @@
       "wb": 1,
       "ph": "661697735",
       "s": 70,
-      "ct": 0,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -87441,7 +87456,7 @@
       "wb": 1,
       "ph": "34936817557",
       "s": 65,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -88359,7 +88374,7 @@
       "wb": 1,
       "ph": "",
       "s": 53,
-      "ct": 0,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -90229,7 +90244,7 @@
       "wb": 1,
       "ph": "910068545",
       "s": 85,
-      "ct": 0,
+      "ct": 1,
       "tp": "Pastelería",
       "la": 40.4531,
       "ln": -3.6152,
@@ -90246,7 +90261,7 @@
       "wb": 1,
       "ph": "928915220",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -90280,7 +90295,7 @@
       "wb": 1,
       "ph": "+34 976370464",
       "s": 100,
-      "ct": 2,
+      "ct": 0,
       "tp": "",
       "la": 41.6446,
       "ln": -0.8767,
@@ -91538,7 +91553,7 @@
       "wb": 1,
       "ph": "+34 937 00 44 53",
       "s": 80,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -94955,7 +94970,7 @@
       "wb": 1,
       "ph": "+34 932 12 64 55",
       "s": 80,
-      "ct": 2,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -95822,7 +95837,7 @@
       "wb": 1,
       "ph": "+34910880980",
       "s": 75,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -95907,7 +95922,7 @@
       "wb": 1,
       "ph": "616530592",
       "s": 80,
-      "ct": 3,
+      "ct": 5,
       "tp": "",
       "la": null,
       "ln": null,
@@ -99069,7 +99084,7 @@
       "wb": 1,
       "ph": "+34 931 54 62 24",
       "s": 100,
-      "ct": 2,
+      "ct": 1,
       "tp": "Servicios",
       "la": 41.3985,
       "ln": 2.1683,
@@ -99290,7 +99305,7 @@
       "wb": 1,
       "ph": "+34931416360",
       "s": 80,
-      "ct": 1,
+      "ct": 3,
       "tp": "",
       "la": null,
       "ln": null,
@@ -105107,14 +105122,14 @@
         "count": 175,
         "avg_r": 4.37,
         "avg_rv": 9301,
-        "avg_ct": 1.0
+        "avg_ct": 0.9
       },
       {
         "level": "L2: Social",
         "count": 77,
         "avg_r": 4.33,
         "avg_rv": 8263,
-        "avg_ct": 1.1
+        "avg_ct": 1.0
       },
       {
         "level": "L3: Engaged",
@@ -105137,7 +105152,7 @@
         "count": 20,
         "avg_r": 4.4,
         "avg_rv": 47378,
-        "avg_ct": 0.8,
+        "avg_ct": 0.7,
         "top_city": "Madrid",
         "top_city_n": 9,
         "ids": [
@@ -105153,7 +105168,7 @@
         "count": 80,
         "avg_r": 4.43,
         "avg_rv": 11276,
-        "avg_ct": 1.3,
+        "avg_ct": 1.2,
         "top_city": "Madrid",
         "top_city_n": 33,
         "ids": [
@@ -105169,7 +105184,7 @@
         "count": 150,
         "avg_r": 4.38,
         "avg_rv": 6183,
-        "avg_ct": 0.9,
+        "avg_ct": 0.8,
         "top_city": "Madrid",
         "top_city_n": 62,
         "ids": [
@@ -106237,16 +106252,16 @@
       }
     ],
     "mv_funnel": {
-      "total_contacts": 67090,
-      "has_email": 39164,
-      "mv_verified": 47437,
-      "mv_unverified": 0,
-      "mv_ok": 32952,
-      "mv_invalid": 9094,
+      "total_contacts": 60897,
+      "has_email": 39173,
+      "mv_verified": 47228,
+      "mv_unverified": 10,
+      "mv_ok": 32950,
+      "mv_invalid": 8887,
       "mv_catch_all": 2881,
-      "ghost_invalid": 8267,
-      "no_email": 27926,
-      "no_email_with_company": 15629,
+      "ghost_invalid": 8059,
+      "no_email": 21724,
+      "no_email_with_company": 15763,
       "companies_with_scraped_emails": 9127
     }
   },
@@ -106255,12 +106270,12 @@
       {
         "city": "Barcelona",
         "status": "ok",
-        "count": 2961
+        "count": 2960
       },
       {
         "city": "Barcelona",
         "status": "invalid",
-        "count": 1291
+        "count": 1268
       },
       {
         "city": "Barcelona",
@@ -106280,7 +106295,7 @@
       {
         "city": "Madrid",
         "status": "invalid",
-        "count": 1190
+        "count": 1173
       },
       {
         "city": "Madrid",
@@ -106305,7 +106320,7 @@
       {
         "city": "Valencia",
         "status": "invalid",
-        "count": 227
+        "count": 225
       },
       {
         "city": "Valencia",
@@ -106368,47 +106383,47 @@
       {
         "nucleus": "Mobile Hero",
         "desc": "Has mobile, no email",
-        "count": 4425,
+        "count": 4422,
         "color": "#22c55e"
       },
       {
         "nucleus": "Silver",
         "desc": "Email OK + Company (no mobile)",
-        "count": 12152,
+        "count": 12150,
         "color": "#C0C0C0"
       },
       {
         "nucleus": "Bronze",
         "desc": "Company but weak contact",
-        "count": 15548,
+        "count": 15691,
         "color": "#CD7F32"
       },
       {
         "nucleus": "Orphan",
         "desc": "Has email, no company",
-        "count": 10302,
+        "count": 10304,
         "color": "#f97316"
       },
       {
         "nucleus": "Ghost",
         "desc": "No email, no mobile, no phone, no company",
-        "count": 9430,
+        "count": 3600,
         "color": "#6b7280"
       }
     ],
     "lifecycle": {
-      "subscriber": 20654,
-      "lead": 44968,
+      "subscriber": 14684,
+      "lead": 44804,
       "marketingqualifiedlead": 56,
       "salesqualifiedlead": 14,
-      "opportunity": 89,
+      "opportunity": 85,
       "customer": 1,
-      "other": 981
+      "other": 928
     },
     "source": {
-      "OFFLINE": 65721,
-      "ORGANIC_SEARCH": 55,
-      "DIRECT_TRAFFIC": 303,
+      "OFFLINE": 59543,
+      "ORGANIC_SEARCH": 53,
+      "DIRECT_TRAFFIC": 296,
       "REFERRALS": 6,
       "OTHER_CAMPAIGNS": 12,
       "PAID_SEARCH": 80
