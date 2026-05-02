@@ -160,6 +160,20 @@ svg text { fill: var(--muted); font-size: 11px; }
 .dist-table tr:hover td { background:var(--grid); }
 .radar-axis { stroke: var(--grid); stroke-width: 1; }
 .radar-polygon { fill-opacity: 0.15; stroke-width: 2; }
+/* Sort dropdowns */
+.panel-sort {
+  background: var(--grid); border: 1px solid var(--border); color: var(--muted);
+  font-size: 11px; padding: 3px 22px 3px 8px; border-radius: 4px;
+  outline: none; cursor: pointer; font-family: inherit;
+  appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238b949e'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 6px center;
+}
+.panel-sort:hover, .panel-sort:focus { border-color: var(--blue); }
+.panel-sort option { background: var(--card); color: var(--text); }
+/* Globe canvas */
+#globe-canvas { width: 100%; height: 500px; border-radius: 6px; cursor: grab; }
+#globe-canvas:active { cursor: grabbing; }
 .sync-badge {
   display: inline-block; background: var(--card); border: 1px solid var(--border);
   border-radius: 12px; padding: 2px 10px; font-size: 10px; color: var(--dim);
@@ -332,7 +346,7 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-pipeline" width="100%" height="260"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title"><span class="panel-id">03</span>Companies por Ciudad</div>
+    <div class="panel-title"><span class="panel-id">03</span><span class="panel-title-text">Companies por Ciudad</span><select class="panel-sort" onchange="setSortMode('p03',this.value)"><option value="count">Sort: Count</option><option value="alpha">Sort: A-Z</option><option value="enriched_pct">Sort: Enriched %</option></select></div>
     <div id="chart-cities"></div>
   </div>
   <div class="panel">
@@ -342,6 +356,16 @@ svg text { fill: var(--muted); font-size: 11px; }
   <div class="panel">
     <div class="panel-title"><span class="panel-id">37</span>Service Capabilities (Enriched)</div>
     <svg id="chart-services" width="100%" height="320"></svg>
+  </div>
+  <!-- ── Advanced Analytics ── -->
+  <div class="section-divider"><span>Advanced Analytics</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">86</span><span class="panel-title-text">City Radar — Multi-Metric Comparison (Top 8)</span></div>
+    <svg id="chart-radar" width="100%" height="450"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">89</span><span class="panel-title-text">Score Distribution by City — Box Plot</span></div>
+    <div id="chart-boxplot"></div>
   </div>
   <div class="panel panel-full">
     <div class="panel-title"><span class="panel-id">53</span>Domain Coverage Funnel</div>
@@ -433,6 +457,17 @@ svg text { fill: var(--muted); font-size: 11px; }
       <button class="btn" id="bub-score" onclick="setBubbleColor('score')">Color: Score</button>
     </div>
     <canvas id="bubble-canvas"></canvas>
+  </div>
+
+  <!-- ── Multi-Dimensional Analysis ── -->
+  <div class="section-divider"><span>Multi-Dimensional Analysis</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">87</span><span class="panel-title-text">Parallel Coordinates — 500 Companies (6 Axes)</span><span style="margin-left:auto;display:flex;gap:4px"><button class="btn active" id="pc-seg" onclick="setPcColor('segment')">Color: Segment</button><button class="btn" id="pc-city" onclick="setPcColor('city')">Color: City</button></span></div>
+    <svg id="chart-parallel" width="100%" height="400"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">85</span><span class="panel-title-text">3D Globe — Company Locations</span><span style="margin-left:auto;display:flex;gap:4px"><button class="btn active" id="globe-all" onclick="setGlobeMode('all')">All</button><button class="btn" id="globe-bub" onclick="setGlobeMode('bubbles')">Enriched</button><button class="btn" id="globe-dist" onclick="setGlobeMode('dist')">Distributors</button></span></div>
+    <canvas id="globe-canvas"></canvas>
   </div>
 
   <!-- ── Quality & Ratings ── -->
@@ -669,18 +704,24 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-dist-heatmap" width="100%" height="350"></svg>
   </div>
 
+  <!-- Sunburst -->
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">88</span><span class="panel-title-text">Sunburst — Category > City > Count</span></div>
+    <svg id="chart-sunburst" width="100%" height="500"></svg>
+  </div>
+
   <div class="panel">
-    <div class="panel-title"><span class="panel-id">62</span><span class="panel-title-text">Distribuidores por Categoría</span><span class="panel-fav" onclick="toggleFav(62)">☆</span></div>
+    <div class="panel-title"><span class="panel-id">62</span><span class="panel-title-text">Distribuidores por Categoría</span><select class="panel-sort" onchange="setSortMode('p62',this.value)"><option value="count">Sort: Count</option><option value="alpha">Sort: A-Z</option></select><span class="panel-fav" onclick="toggleFav(62)">☆</span></div>
     <svg id="chart-dist-cats" width="100%" height="300"></svg>
   </div>
   <div class="panel">
-    <div class="panel-title"><span class="panel-id">63</span><span class="panel-title-text">Distribuidores por Ciudad</span><span class="panel-fav" onclick="toggleFav(63)">☆</span></div>
+    <div class="panel-title"><span class="panel-id">63</span><span class="panel-title-text">Distribuidores por Ciudad</span><select class="panel-sort" onchange="setSortMode('p63',this.value)"><option value="count">Sort: Count</option><option value="alpha">Sort: A-Z</option></select><span class="panel-fav" onclick="toggleFav(63)">☆</span></div>
     <svg id="chart-dist-cities" width="100%" height="300"></svg>
   </div>
 
   <div class="section-divider"><span>Industry Breakdown</span></div>
   <div class="panel panel-full">
-    <div class="panel-title"><span class="panel-id">64</span><span class="panel-title-text">Top Industries — Supply Chain Distribution</span><span class="panel-fav" onclick="toggleFav(64)">☆</span></div>
+    <div class="panel-title"><span class="panel-id">64</span><span class="panel-title-text">Top Industries — Supply Chain Distribution</span><select class="panel-sort" onchange="setSortMode('p64',this.value)"><option value="count">Sort: Count</option><option value="alpha">Sort: A-Z</option></select><span class="panel-fav" onclick="toggleFav(64)">☆</span></div>
     <svg id="chart-dist-industries" width="100%" height="400"></svg>
   </div>
 
@@ -802,6 +843,15 @@ const BUCKET_LABELS = ['0-29', '30-49', '50-69', '70-89', '90-100'];
 
 window.DATA = null;
 let Plot = null;
+const sortState = {p03:'count', p62:'count', p63:'count', p64:'count'};
+function setSortMode(p, m) {
+  sortState[p] = m;
+  if (!window.DATA) return;
+  if (p === 'p03') drawCities(window.DATA);
+  if (p === 'p62') drawDistCats(window.DATA);
+  if (p === 'p63') drawDistCities(window.DATA);
+  if (p === 'p64') drawDistIndustries(window.DATA);
+}
 const PlotReady = import("https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm").then(m => { Plot = m; console.log('Observable Plot loaded'); }).catch(e => console.warn('Plot load failed:', e));
 const HS_PORTAL = '139994805';
 const HS_BASE_URL = `https://app-eu1.hubspot.com/contacts/${HS_PORTAL}`;
@@ -1044,7 +1094,10 @@ function drawCities(d) {
   const el = document.getElementById('chart-cities'); el.innerHTML = '';
   if (!Plot || !d.cities) return;
   const cityColors = [C.blue,'#e875c2',C.orange,'#ffc83d','#7ee787',C.muted];
-  const data = d.cities.map((c,i) => ({...c, color: cityColors[i%6]}));
+  let data = d.cities.map((c,i) => ({...c, color: cityColors[i%6], pct: c.total>0?c.enriched/c.total:0}));
+  const sm = sortState.p03;
+  if (sm==='alpha') data.sort((a,b) => a.city.localeCompare(b.city));
+  else if (sm==='enriched_pct') data.sort((a,b) => b.pct - a.pct);
   const chart = Plot.plot({
     width: el.clientWidth || 500, height: 260,
     marginLeft: 80, marginRight: 60, marginBottom: 25,
@@ -4186,6 +4239,7 @@ function updateCompanies(d) {
   // Charts
   drawPipeline(d); drawCities(d); drawFieldCompleteness(d, 'co');
   drawServices(d); drawDomainCoverage(d); drawEnrichSources(d);
+  drawRadar(d); drawBoxPlot(d);
 }
 function updateContacts(d) {
   // Contacts tab KPIs
@@ -4226,8 +4280,14 @@ function updateBI(d) {
     drawCorrelation, drawEvolution,
     drawMultiRating, drawServiceHeatmap,
     drawComplaintCity, drawSegOverlap, drawContactDensity, drawZipDensity, drawDigitalDark,
+    drawParallelCoords,
   ];
   biCharts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
+  // Globe (Three.js)
+  try {
+    if (!window.globeReady) initGlobe();
+    if (window.globeReady) window.updateGlobe(d);
+  } catch(e) { console.warn('Globe init error:', e); }
 }
 function updateSales(d) {
   updatePmfKPIs(d); drawPmfCards(d); drawOppHeatmap(d);
@@ -4903,7 +4963,9 @@ function drawDistCats(d) {
   const w = W-m.left-m.right, h = H-m.top-m.bottom;
   const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
 
-  const entries = Object.entries(ds.by_category).sort((a,b) => b[1]-a[1]);
+  let entries = Object.entries(ds.by_category);
+  if (sortState.p62==='alpha') entries.sort((a,b) => a[0].localeCompare(b[0]));
+  else entries.sort((a,b) => b[1]-a[1]);
   const labels = entries.map(e => e[0]);
   const values = entries.map(e => e[1]);
   const catLabels = {food:'Food & Beverage', tech:'Tech & POS', equipment:'Equipment', services:'Services', retail:'Retail'};
@@ -4939,7 +5001,8 @@ function drawDistCities(d) {
   const R = Math.min(W, H) / 2 - 30;
   const g = svg.append('g').attr('transform', `translate(${W/2},${H/2})`);
 
-  const entries = Object.entries(ds.by_city).slice(0, 10);
+  let entries = Object.entries(ds.by_city).sort((a,b) => b[1]-a[1]).slice(0, 10);
+  if (sortState.p63==='alpha') entries.sort((a,b) => a[0].localeCompare(b[0]));
   const pieGen = d3.pie().value(e => e[1]).sort(null);
   const arc = d3.arc().innerRadius(R*0.45).outerRadius(R);
   const arcH = d3.arc().innerRadius(R*0.45).outerRadius(R+6);
@@ -4983,7 +5046,9 @@ function drawDistIndustries(d) {
   };
   for (const [cat, inds] of Object.entries(DIST_CATEGORIES)) inds.forEach(i => IND_TO_CAT[i] = cat);
 
-  const entries = Object.entries(ds.by_industry).sort((a,b) => b[1]-a[1]);
+  let entries = Object.entries(ds.by_industry);
+  if (sortState.p64==='alpha') entries.sort((a,b) => a[0].localeCompare(b[0]));
+  else entries.sort((a,b) => b[1]-a[1]);
   const labels = entries.map(e => e[0]);
   const values = entries.map(e => e[1]);
 
@@ -5098,6 +5163,263 @@ function drawDistTable(d) {
   container.innerHTML = html;
 }
 
+// ═══════════════════════════════════════════════
+// Panel 89: Box Plot — Score Distribution by City
+// ═══════════════════════════════════════════════
+function drawBoxPlot(d) {
+  const el = document.getElementById('chart-boxplot'); if (!el) return; el.innerHTML = '';
+  if (!Plot || !d.bubbles || !d.bubbles.length) return;
+  const cityMap = {};
+  d.bubbles.forEach(b => { const c = b.c||'Other'; if (!cityMap[c]) cityMap[c]=[]; cityMap[c].push(b.s); });
+  const topCities = Object.entries(cityMap).sort((a,b)=>b[1].length-a[1].length).slice(0,8).map(e=>e[0]);
+  const records = d.bubbles.filter(b=>topCities.includes(b.c)).map(b=>({city:b.c, score:b.s}));
+  const boxMarks = topCities.flatMap(city => {
+    const vals = cityMap[city].slice().sort((a,b)=>a-b); const n = vals.length;
+    const q1=vals[Math.floor(n*0.25)], med=vals[Math.floor(n*0.5)], q3=vals[Math.floor(n*0.75)];
+    const iqr=q3-q1, lo=Math.max(vals[0],q1-1.5*iqr), hi=Math.min(vals[n-1],q3+1.5*iqr);
+    return [
+      Plot.ruleX([{city,lo,hi}],{y:'city',x1:'lo',x2:'hi',stroke:C.muted,strokeWidth:1}),
+      Plot.rectX([{city,q1,q3}],{y:'city',x1:'q1',x2:'q3',fill:C.blue,fillOpacity:0.2,stroke:C.blue,ry:4}),
+      Plot.tickX([{city,med}],{y:'city',x:'med',stroke:C.text,strokeWidth:2.5}),
+    ];
+  });
+  const chart = Plot.plot({
+    width: el.clientWidth||800, height:350, marginLeft:80, marginBottom:30,
+    x:{label:'Score',domain:[Math.max(0,d3.min(records,r=>r.score)-5),d3.max(records,r=>r.score)+5]},
+    y:{label:null,domain:topCities,padding:0.3},
+    marks: [
+      Plot.dot(records,{x:'score',y:'city',fill:'city',r:2.5,opacity:0.4,
+        tip:{format:{x:true,y:true}}}),
+      ...boxMarks, Plot.ruleX([0]),
+    ]
+  });
+  el.append(chart);
+}
+
+// ═══════════════════════════════════════════════
+// Panel 86: Radar/Spider Chart — City Comparison
+// ═══════════════════════════════════════════════
+function drawRadar(d) {
+  const svg = d3.select('#chart-radar'); if (svg.empty()) return; svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||700, H = 450, R = Math.min(W,H)/2-60;
+  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
+
+  // Compute city metrics from bubbles
+  const cm = {};
+  d.bubbles.forEach(b => {
+    const c = b.c||'Other';
+    if (!cm[c]) cm[c] = {cnt:0, rSum:0, sSum:0, em:0, wb:0, ig:0};
+    cm[c].cnt++; cm[c].rSum += (b.r||0); cm[c].sSum += (b.s||0);
+    if (b.em) cm[c].em++; if (b.wb) cm[c].wb++; if (b.ig) cm[c].ig++;
+  });
+  const topCities = Object.entries(cm).sort((a,b)=>b[1].cnt-a[1].cnt).slice(0,8);
+  const maxCnt = d3.max(topCities, e=>e[1].cnt);
+
+  const metrics = ['Companies','Avg Rating','Avg Score','% Email','% Website','% Instagram'];
+  const N = metrics.length, angleSlice = 2*Math.PI/N;
+  const cityColors = [C.blue,'#e875c2',C.orange,'#ffc83d','#7ee787',C.purple,C.cyan,C.muted];
+
+  // Grid
+  [0.2,0.4,0.6,0.8,1.0].forEach(lv => {
+    const pts = d3.range(N).map(i => {
+      const a = angleSlice*i - Math.PI/2;
+      return [lv*R*Math.cos(a), lv*R*Math.sin(a)];
+    });
+    g.append('polygon').attr('points', pts.map(p=>p.join(',')).join(' '))
+      .attr('fill','none').attr('stroke',C.grid).attr('stroke-width',1);
+    if (lv===1) return;
+    g.append('text').attr('x',4).attr('y',-lv*R).text(Math.round(lv*100)+'%')
+      .attr('fill',C.dim).style('font-size','9px');
+  });
+
+  // Axis lines + labels
+  metrics.forEach((m,i) => {
+    const a = angleSlice*i - Math.PI/2;
+    g.append('line').attr('x1',0).attr('y1',0).attr('x2',R*Math.cos(a)).attr('y2',R*Math.sin(a))
+      .attr('stroke',C.grid).attr('stroke-width',1);
+    const lx = (R+20)*Math.cos(a), ly = (R+20)*Math.sin(a);
+    g.append('text').attr('x',lx).attr('y',ly).text(m)
+      .attr('text-anchor',Math.abs(lx)<5?'middle':lx>0?'start':'end')
+      .attr('fill',C.muted).style('font-size','11px').attr('dominant-baseline','middle');
+  });
+
+  // City polygons
+  topCities.forEach(([city, v], ci) => {
+    const vals = [
+      v.cnt/maxCnt,
+      ((v.rSum/v.cnt)-2)/3,
+      (v.sSum/v.cnt)/100,
+      v.em/v.cnt,
+      v.wb/v.cnt,
+      v.ig/v.cnt,
+    ].map(x => Math.max(0, Math.min(1, x)));
+
+    const pts = vals.map((val,i) => {
+      const a = angleSlice*i - Math.PI/2;
+      return [val*R*Math.cos(a), val*R*Math.sin(a)];
+    });
+    const col = cityColors[ci%cityColors.length];
+    g.append('polygon').attr('points', pts.map(p=>p.join(',')).join(' '))
+      .attr('fill',col).attr('fill-opacity',0.12).attr('stroke',col).attr('stroke-width',2)
+      .style('cursor','pointer')
+      .on('mousemove', evt => showTip(evt, `<b>${city}</b><br>Companies: ${v.cnt}<br>Avg Rating: ${(v.rSum/v.cnt).toFixed(1)}<br>Avg Score: ${(v.sSum/v.cnt).toFixed(0)}<br>Email: ${Math.round(v.em/v.cnt*100)}% | Web: ${Math.round(v.wb/v.cnt*100)}% | IG: ${Math.round(v.ig/v.cnt*100)}%`))
+      .on('mouseleave', () => hideTip());
+    // Dots at vertices
+    pts.forEach(([px,py]) => g.append('circle').attr('cx',px).attr('cy',py).attr('r',3).attr('fill',col));
+  });
+
+  // Legend
+  const lg = g.append('g').attr('transform',`translate(${R+40},${-R+10})`);
+  topCities.forEach(([city],i) => {
+    lg.append('rect').attr('x',0).attr('y',i*18).attr('width',10).attr('height',10).attr('fill',cityColors[i%cityColors.length]).attr('rx',2);
+    lg.append('text').attr('x',15).attr('y',i*18+9).text(city).attr('fill',C.text).style('font-size','11px');
+  });
+}
+
+// ═══════════════════════════════════════════════
+// Panel 87: Parallel Coordinates — 500 Companies
+// ═══════════════════════════════════════════════
+let pcColorMode = 'segment';
+const PC_AXES = [
+  {key:'r', label:'Rating', domain:[2,5]},
+  {key:'rv', label:'Reviews', log:true, domain:[1,100000]},
+  {key:'s', label:'Score', domain:[0,100]},
+  {key:'ct', label:'Contacts', domain:[0,15]},
+  {key:'ig', label:'Instagram', domain:[0,1]},
+  {key:'bk', label:'Booking', domain:[0,1]},
+];
+function drawParallelCoords(d) {
+  const svg = d3.select('#chart-parallel'); if (svg.empty()) return; svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||900, H = 400;
+  const m = {top:35, right:30, bottom:20, left:30};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const yScales = {};
+  PC_AXES.forEach(ax => {
+    yScales[ax.key] = ax.log
+      ? d3.scaleLog().domain(ax.domain).range([h,0]).clamp(true)
+      : d3.scaleLinear().domain(ax.domain).range([h,0]).clamp(true);
+  });
+  const xScale = d3.scalePoint().domain(PC_AXES.map(a=>a.key)).range([0,w]).padding(0.05);
+
+  // Draw axes
+  PC_AXES.forEach(ax => {
+    const xPos = xScale(ax.key);
+    const axis = d3.axisLeft(yScales[ax.key]).ticks(5);
+    if (ax.log) axis.tickFormat(d3.format('~s'));
+    g.append('g').attr('transform',`translate(${xPos},0)`).call(axis)
+      .selectAll('text').attr('fill',C.muted).style('font-size','10px');
+    g.append('text').attr('x',xPos).attr('y',-12).attr('text-anchor','middle')
+      .attr('fill',C.text).style('font-size','11px').style('font-weight','600').text(ax.label);
+  });
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  const CITY_COLORS = {Barcelona:C.blue, Madrid:'#e875c2', Valencia:C.orange, Sevilla:'#ffc83d', Bilbao:'#7ee787'};
+  const SEG_COLORS_MAP = {};
+  if (d.hidden_segments) d.hidden_segments.forEach(s => { SEG_COLORS_MAP[s.id] = s.color; });
+
+  function lineColor(b) {
+    if (pcColorMode==='city') return CITY_COLORS[b.c] || C.dim;
+    const sid = (b.sg && b.sg.length) ? b.sg[0] : null;
+    return SEG_COLORS_MAP[sid] || C.dim;
+  }
+
+  // Draw lines
+  const lineGen = d3.line();
+  d.bubbles.forEach(b => {
+    const pts = PC_AXES.map(ax => [xScale(ax.key), yScales[ax.key](Math.max(ax.domain[0], b[ax.key]||0))]);
+    g.append('path').datum(b).attr('d',lineGen(pts))
+      .attr('fill','none').attr('stroke',lineColor(b)).attr('stroke-width',1).attr('stroke-opacity',0.2)
+      .on('mouseover', function(evt) {
+        d3.select(this).attr('stroke-opacity',1).attr('stroke-width',2.5).raise();
+        showTip(evt,`<b>${b.n||'?'}</b><br>Rating:${b.r} Reviews:${(b.rv||0).toLocaleString()}<br>Score:${b.s} Contacts:${b.ct}<br>${b.c}`);
+      })
+      .on('mouseleave', function() {
+        d3.select(this).attr('stroke-opacity',0.2).attr('stroke-width',1); hideTip();
+      });
+  });
+}
+window.setPcColor = function(mode) {
+  pcColorMode = mode;
+  document.getElementById('pc-seg').classList.toggle('active', mode==='segment');
+  document.getElementById('pc-city').classList.toggle('active', mode==='city');
+  if (window.DATA) drawParallelCoords(window.DATA);
+};
+
+// ═══════════════════════════════════════════════
+// Panel 88: Sunburst — Category > City
+// ═══════════════════════════════════════════════
+function drawSunburst(d) {
+  const svg = d3.select('#chart-sunburst'); if (svg.empty()) return; svg.selectAll('*').remove();
+  if (!d.distributors || !d.distributors.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||700, H = 500, R = Math.min(W,H)/2 - 10;
+  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
+
+  const catLabels = {food:'Food & Bev',tech:'Tech & POS',equipment:'Equipment',services:'Services',retail:'Retail'};
+  const catColors = {food:C.green,tech:C.blue,equipment:C.orange,services:C.purple,retail:'#ffd93d'};
+  const nest = {};
+  d.distributors.forEach(dist => {
+    const cat = dist.cat||'unknown', city = dist.c||'Unknown';
+    if (!nest[cat]) nest[cat] = {};
+    nest[cat][city] = (nest[cat][city]||0) + 1;
+  });
+
+  const root = d3.hierarchy({
+    name:'All', children: Object.entries(nest).map(([cat,cities]) => ({
+      name: catLabels[cat]||cat, catKey:cat,
+      children: Object.entries(cities).sort((a,b)=>b[1]-a[1]).slice(0,15)
+        .map(([city,count]) => ({name:city, value:count, catKey:cat}))
+    }))
+  }).sum(dd => dd.value).sort((a,b) => b.value-a.value);
+
+  d3.partition().size([2*Math.PI, R])(root);
+
+  const arc = d3.arc().startAngle(dd=>dd.x0).endAngle(dd=>dd.x1)
+    .innerRadius(dd=>dd.y0*0.55).outerRadius(dd=>dd.y1*0.55-1);
+
+  g.selectAll('path').data(root.descendants().filter(dd=>dd.depth>0)).join('path')
+    .attr('d', arc)
+    .attr('fill', dd => {
+      const cat = dd.data.catKey||(dd.parent?dd.parent.data.catKey:null);
+      const base = catColors[cat]||C.muted;
+      return dd.depth===1 ? base : d3.color(base).darker(0.4);
+    })
+    .attr('stroke',C.card).attr('stroke-width',1).style('cursor','pointer')
+    .on('mousemove', (evt,dd) => {
+      const path = dd.ancestors().reverse().map(x=>x.data.name).join(' > ');
+      showTip(evt,`<b>${path}</b><br>${fmt(dd.value)} companies`);
+    })
+    .on('mouseleave', () => hideTip());
+
+  // Center label
+  g.append('text').attr('text-anchor','middle').attr('dy','-0.2em')
+    .attr('fill',C.text).style('font-size','22px').style('font-weight','700')
+    .text(fmt(d.distributors.length));
+  g.append('text').attr('text-anchor','middle').attr('dy','1.3em')
+    .attr('fill',C.muted).style('font-size','11px').text('distributors');
+
+  // Category labels on outer ring
+  root.children.forEach(child => {
+    if (child.x1-child.x0 > 0.4) {
+      const angle = (child.x0+child.x1)/2 - Math.PI/2;
+      const r = (child.y0+child.y1)/2*0.55;
+      const rot = angle*180/Math.PI;
+      const flip = rot > 90 && rot < 270;
+      g.append('text')
+        .attr('transform',`rotate(${rot}) translate(${r},0) rotate(${flip?180:0})`)
+        .attr('text-anchor','middle').attr('dominant-baseline','middle')
+        .attr('fill',C.text).style('font-size','11px').style('font-weight','600')
+        .text(child.data.name);
+    }
+  });
+}
+
 function updateDist(d) {
   if (!d.distributors) return;
   const ds = d.dist_summary || {};
@@ -5108,7 +5430,7 @@ function updateDist(d) {
   el('kpi-dist-equip').textContent = fmt((ds.by_category||{}).equipment || 0);
   el('kpi-dist-services').textContent = fmt(((ds.by_category||{}).services||0) + ((ds.by_category||{}).retail||0));
 
-  const distCharts = [drawDistSankey, drawDistHeatmap, drawDistCats, drawDistCities, drawDistIndustries, drawDistScatter, drawDistTable];
+  const distCharts = [drawDistSankey, drawDistHeatmap, drawSunburst, drawDistCats, drawDistCities, drawDistIndustries, drawDistScatter, drawDistTable];
   distCharts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
 }
 
@@ -5725,6 +6047,139 @@ function animateC4() {
 
 window.addEventListener('resize', resizeC4Renderer);
 initContact4D();
+</script>
+
+<!-- 3D Globe Module -->
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const globeCanvas = document.getElementById('globe-canvas');
+let gScene, gCamera, gRenderer, gControls, gDots = [];
+let globeMode = 'all';
+window.globeReady = false;
+
+function latLngToXYZ(lat, lng, r) {
+  const phi = (90-lat)*Math.PI/180, theta = (lng+180)*Math.PI/180;
+  return new THREE.Vector3(-(r*Math.sin(phi)*Math.cos(theta)), r*Math.cos(phi), r*Math.sin(phi)*Math.sin(theta));
+}
+
+function initGlobe() {
+  if (!globeCanvas) return;
+  gScene = new THREE.Scene();
+  gScene.background = new THREE.Color(0x0d1117);
+  gRenderer = new THREE.WebGLRenderer({canvas:globeCanvas, antialias:true});
+  gRenderer.setPixelRatio(window.devicePixelRatio);
+  const W = globeCanvas.clientWidth, H = globeCanvas.clientHeight;
+  gRenderer.setSize(W, H);
+  gCamera = new THREE.PerspectiveCamera(45, W/H, 0.1, 200);
+  gCamera.position.set(0, 0.5, 3.2);
+  gControls = new OrbitControls(gCamera, gRenderer.domElement);
+  gControls.enableDamping = true; gControls.dampingFactor = 0.05;
+  gControls.autoRotate = true; gControls.autoRotateSpeed = 0.5;
+  gControls.minDistance = 1.5; gControls.maxDistance = 8;
+  gScene.add(new THREE.AmbientLight(0xffffff, 0.6));
+  const dl = new THREE.DirectionalLight(0xffffff, 0.7); dl.position.set(5,10,5); gScene.add(dl);
+
+  // Earth wireframe sphere
+  const earthGeo = new THREE.SphereGeometry(1, 48, 48);
+  const earthMat = new THREE.MeshPhongMaterial({color:0x161b22, transparent:true, opacity:0.9, shininess:10});
+  gScene.add(new THREE.Mesh(earthGeo, earthMat));
+  const wire = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.SphereGeometry(1.001, 24, 24)),
+    new THREE.LineBasicMaterial({color:0x30363d, transparent:true, opacity:0.3}));
+  gScene.add(wire);
+
+  // Equator + prime meridian
+  const circGeo = new THREE.BufferGeometry();
+  const pts = []; for (let i=0;i<=64;i++){const a=i/64*2*Math.PI; pts.push(Math.cos(a),0,Math.sin(a));}
+  circGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts,3));
+  gScene.add(new THREE.Line(circGeo, new THREE.LineBasicMaterial({color:0x30363d, transparent:true, opacity:0.5})));
+
+  window.globeReady = true;
+  animateGlobe();
+}
+
+function ratingColor(r) {
+  if (r>=4.5) return 0x3fb950;
+  if (r>=4.0) return 0x39d353;
+  if (r>=3.5) return 0xd29922;
+  if (r>=3.0) return 0xf0883e;
+  return 0xf85149;
+}
+const DIST_COL_MAP = {food:0x3fb950, tech:0x58a6ff, equipment:0xf0883e, services:0xbc8cff, retail:0xffd93d};
+
+window.updateGlobe = function(d) {
+  if (!gScene) return;
+  gDots.forEach(m => gScene.remove(m)); gDots = [];
+  const dotGeo = new THREE.SphereGeometry(1, 6, 6);
+  let items = [];
+  if (globeMode==='all'||globeMode==='bubbles') {
+    (d.bubbles||[]).forEach(b => {
+      if (b.la && b.ln) items.push({la:b.la, ln:b.ln, r: (b.s||50)/100*0.008+0.003,
+        color: ratingColor(b.r||3), name:b.n, info:`Rating:${b.r} Score:${b.s}`, src:'bub'});
+    });
+  }
+  if (globeMode==='all'||globeMode==='dist') {
+    (d.distributors||[]).forEach(dd => {
+      if (dd.la && dd.ln) items.push({la:dd.la, ln:dd.ln, r:0.005,
+        color: DIST_COL_MAP[dd.cat]||0x8b949e, name:dd.n, info:`${dd.cat} | ${dd.c}`, src:'dist'});
+    });
+  }
+  items.forEach(it => {
+    const mat = new THREE.MeshBasicMaterial({color:it.color, transparent:true, opacity:0.8});
+    const mesh = new THREE.Mesh(dotGeo, mat);
+    const pos = latLngToXYZ(it.la, it.ln, 1.015);
+    mesh.position.copy(pos); mesh.scale.setScalar(it.r);
+    mesh.userData = {name:it.name, info:it.info};
+    gScene.add(mesh); gDots.push(mesh);
+  });
+};
+
+// Tooltip raycaster
+const gRay = new THREE.Raycaster(), gMouse = new THREE.Vector2();
+let hoveredGlobe = null;
+if (globeCanvas) globeCanvas.addEventListener('mousemove', evt => {
+  const r = globeCanvas.getBoundingClientRect();
+  gMouse.x = ((evt.clientX-r.left)/r.width)*2-1;
+  gMouse.y = -((evt.clientY-r.top)/r.height)*2+1;
+  if (!gCamera) return;
+  gRay.setFromCamera(gMouse, gCamera);
+  const hits = gRay.intersectObjects(gDots);
+  if (hits.length) {
+    const ud = hits[0].object.userData;
+    if (ud.name) {
+      const tip = document.getElementById('tooltip');
+      tip.innerHTML = `<b>${ud.name}</b><br>${ud.info}`;
+      tip.style.display = 'block'; tip.style.left = (evt.clientX+12)+'px'; tip.style.top = (evt.clientY+12)+'px';
+    }
+  } else {
+    document.getElementById('tooltip').style.display = 'none';
+  }
+});
+
+window.setGlobeMode = function(mode) {
+  globeMode = mode;
+  ['all','bub','dist'].forEach(m => {
+    const btn = document.getElementById('globe-'+m);
+    if (btn) btn.classList.toggle('active', (m==='all'&&mode==='all')||(m==='bub'&&mode==='bubbles')||(m==='dist'&&mode==='dist'));
+  });
+  if (window.DATA) window.updateGlobe(window.DATA);
+};
+
+function resizeGlobe() {
+  if (!gRenderer||!globeCanvas) return;
+  const W=globeCanvas.clientWidth, H=globeCanvas.clientHeight;
+  gRenderer.setSize(W,H); gCamera.aspect=W/H; gCamera.updateProjectionMatrix();
+}
+
+function animateGlobe() {
+  requestAnimationFrame(animateGlobe);
+  if (gControls) gControls.update();
+  if (gRenderer && gScene && gCamera) gRenderer.render(gScene, gCamera);
+}
+
+window.addEventListener('resize', resizeGlobe);
+initGlobe();
 </script>
 </body>
 </html>
