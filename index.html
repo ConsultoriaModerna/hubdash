@@ -375,6 +375,11 @@ svg text { fill: var(--muted); font-size: 11px; }
     <div class="panel-title"><span class="panel-id">54</span>Enrichment Sources — Yield & Cost</div>
     <svg id="chart-enrich-sources" width="100%" height="300"></svg>
   </div>
+  <!-- ── Treemap ── -->
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">90</span><span class="panel-title-text">Treemap — Companies by City & Type</span></div>
+    <svg id="chart-treemap" width="100%" height="420"></svg>
+  </div>
   </div><!-- end Companies tab -->
 
   <!-- ═══ TAB: CONTACTS ═══ -->
@@ -632,6 +637,17 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-digital-dark" width="100%" height="320"></svg>
   </div>
 
+  <!-- ── Network & Distributions ── -->
+  <div class="section-divider"><span>Network & Distributions</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">91</span><span class="panel-title-text">Chord Diagram — City × Segment Connections</span></div>
+    <svg id="chart-chord" width="100%" height="500"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">92</span><span class="panel-title-text">Ridgeline — Rating Distributions by City</span></div>
+    <svg id="chart-ridgeline" width="100%" height="400"></svg>
+  </div>
+
   </div><!-- end BI tab -->
 
   <!-- ═══ TAB: SALES INTEL ═══ -->
@@ -708,6 +724,10 @@ svg text { fill: var(--muted); font-size: 11px; }
   <div class="panel panel-full">
     <div class="panel-title"><span class="panel-id">88</span><span class="panel-title-text">Sunburst — Category > City > Count</span></div>
     <svg id="chart-sunburst" width="100%" height="500"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">93</span><span class="panel-title-text">Circle Packing — Category > City (click to zoom)</span></div>
+    <svg id="chart-circpack" width="100%" height="500"></svg>
   </div>
 
   <div class="panel">
@@ -801,6 +821,16 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-ins-levers" width="100%" height="420"></svg>
   </div>
 
+  <!-- ── Trends ── -->
+  <div class="section-divider"><span>Trends</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">94</span><span class="panel-title-text">Enrichment Stream — Area Chart (14-Day Trend)</span></div>
+    <svg id="chart-stream" width="100%" height="350"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">95</span><span class="panel-title-text">CRM Health Gauges</span></div>
+    <div id="chart-gauges" style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;padding:16px 0"></div>
+  </div>
   </div><!-- end Insights tab -->
 
   <!-- ═══ SHARED: Infrastructure panels (always CRM tab) ═══ -->
@@ -4239,7 +4269,7 @@ function updateCompanies(d) {
   // Charts
   drawPipeline(d); drawCities(d); drawFieldCompleteness(d, 'co');
   drawServices(d); drawDomainCoverage(d); drawEnrichSources(d);
-  drawRadar(d); drawBoxPlot(d);
+  drawRadar(d); drawBoxPlot(d); drawTreemap(d);
 }
 function updateContacts(d) {
   // Contacts tab KPIs
@@ -4280,7 +4310,7 @@ function updateBI(d) {
     drawCorrelation, drawEvolution,
     drawMultiRating, drawServiceHeatmap,
     drawComplaintCity, drawSegOverlap, drawContactDensity, drawZipDensity, drawDigitalDark,
-    drawParallelCoords,
+    drawParallelCoords, drawChord, drawRidgeline,
   ];
   biCharts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
   // Globe (Three.js)
@@ -4746,7 +4776,7 @@ function updateInsights(d) {
   el('kpi-ins-scraped').textContent = fmt(ins.mv_funnel.companies_with_scraped_emails);
   el('kpi-ins-ghost').textContent = fmt(ins.mv_funnel.ghost_invalid);
 
-  const charts = [drawInsMaturity, drawInsWP, drawInsRevenue, drawInsCompound, drawInsGaps, drawInsComplaints, drawInsMVFunnel, drawInsTimeline, drawInsLevers];
+  const charts = [drawInsMaturity, drawInsWP, drawInsRevenue, drawInsCompound, drawInsGaps, drawInsComplaints, drawInsMVFunnel, drawInsTimeline, drawInsLevers, drawStream, drawGauges];
   charts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
 }
 
@@ -5420,6 +5450,367 @@ function drawSunburst(d) {
   });
 }
 
+// ═══════════════════════════════════════════════
+// Panel 90: Treemap — Companies by City & Type
+// ═══════════════════════════════════════════════
+function drawTreemap(d) {
+  const svg = d3.select('#chart-treemap'); if (svg.empty()) return; svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||700, H = 420;
+  const g = svg.append('g');
+
+  // Build hierarchy: city → type → count
+  const nest = {};
+  d.bubbles.forEach(b => {
+    const city = b.c||'Other', tp = b.tp||'Other';
+    if (!nest[city]) nest[city] = {};
+    nest[city][tp] = (nest[city][tp]||0) + 1;
+  });
+  const root = d3.hierarchy({name:'root', children: Object.entries(nest).map(([city,types]) => ({
+    name:city, children: Object.entries(types).map(([tp,cnt]) => ({name:tp, value:cnt, city:city}))
+  }))}).sum(dd=>dd.value).sort((a,b)=>b.value-a.value);
+
+  d3.treemap().size([W,H]).padding(2).paddingTop(18)(root);
+
+  const cityColors = d3.scaleOrdinal().domain(Object.keys(nest)).range([C.blue,'#e875c2',C.orange,'#ffc83d','#7ee787',C.purple,C.cyan,C.muted]);
+
+  // City groups
+  root.children.forEach(cityNode => {
+    const cg = g.append('g');
+    // City background
+    cg.append('rect').attr('x',cityNode.x0).attr('y',cityNode.y0)
+      .attr('width',cityNode.x1-cityNode.x0).attr('height',cityNode.y1-cityNode.y0)
+      .attr('fill','none').attr('stroke',C.border).attr('rx',3);
+    // City label
+    cg.append('text').attr('x',cityNode.x0+4).attr('y',cityNode.y0+13)
+      .text(`${cityNode.data.name} (${cityNode.value})`).attr('fill',C.text)
+      .style('font-size','10px').style('font-weight','700');
+    // Type cells
+    cityNode.children.forEach(leaf => {
+      const w = leaf.x1-leaf.x0, h = leaf.y1-leaf.y0;
+      if (w<2||h<2) return;
+      cg.append('rect').attr('x',leaf.x0).attr('y',leaf.y0).attr('width',w).attr('height',h)
+        .attr('fill',cityColors(cityNode.data.name)).attr('fill-opacity',0.6).attr('rx',2)
+        .style('cursor','pointer')
+        .on('mousemove', evt => showTip(evt,`<b>${leaf.data.name}</b><br>${leaf.data.city}: ${leaf.value} companies`))
+        .on('mouseleave', ()=>hideTip());
+      if (w>30 && h>14) {
+        cg.append('text').attr('x',leaf.x0+3).attr('y',leaf.y0+12)
+          .text(leaf.data.name.substring(0,Math.floor(w/6))).attr('fill',C.text)
+          .style('font-size','9px').attr('pointer-events','none');
+      }
+    });
+  });
+}
+
+// ═══════════════════════════════════════════════
+// Panel 91: Chord Diagram — City × Segment
+// ═══════════════════════════════════════════════
+function drawChord(d) {
+  const svg = d3.select('#chart-chord'); if (svg.empty()) return; svg.selectAll('*').remove();
+  if (!d.bubbles || !d.hidden_segments) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||700, H = 500, R = Math.min(W,H)/2 - 40;
+  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
+
+  // Build matrix: cities (rows) × segments (cols)
+  const cities = ['Barcelona','Madrid','Valencia','Sevilla','Bilbao','Otras'];
+  const topSegs = d.hidden_segments.slice(0,6).map(s=>s.id);
+  const segNames = {}; d.hidden_segments.forEach(s => { segNames[s.id] = s.name; });
+  const names = [...cities, ...topSegs.map(s => segNames[s]||s)];
+  const n = names.length;
+  const matrix = Array.from({length:n}, ()=>Array(n).fill(0));
+
+  d.bubbles.forEach(b => {
+    let ci = cities.indexOf(b.c);
+    if (ci===-1) ci = 5; // Otras
+    (b.sg||[]).forEach(s => {
+      const si = topSegs.indexOf(s);
+      if (si!==-1) { matrix[ci][6+si]++; matrix[6+si][ci]++; }
+    });
+  });
+
+  const chord = d3.chord().padAngle(0.04).sortSubgroups(d3.descending)(matrix);
+  const arcGen = d3.arc().innerRadius(R-20).outerRadius(R);
+  const ribbon = d3.ribbon().radius(R-20);
+
+  const colors = [C.blue,'#e875c2',C.orange,'#ffc83d','#7ee787',C.muted,
+    ...d.hidden_segments.slice(0,6).map(s=>s.color)];
+
+  // Arcs
+  g.selectAll('.arc').data(chord.groups).join('path')
+    .attr('d',arcGen).attr('fill',(dd,i)=>colors[i]||C.dim).attr('stroke',C.card).attr('stroke-width',1)
+    .on('mousemove',(evt,dd)=>showTip(evt,`<b>${names[dd.index]}</b><br>${dd.value} connections`))
+    .on('mouseleave',()=>hideTip());
+
+  // Ribbons
+  g.selectAll('.ribbon').data(chord).join('path')
+    .attr('d',ribbon).attr('fill',(dd)=>colors[dd.source.index]).attr('fill-opacity',0.35)
+    .attr('stroke','none')
+    .on('mousemove',(evt,dd)=>showTip(evt,`<b>${names[dd.source.index]}</b> → <b>${names[dd.target.index]}</b><br>${dd.source.value} companies`))
+    .on('mouseleave',()=>hideTip());
+
+  // Labels
+  chord.groups.forEach(dd => {
+    const angle = (dd.startAngle+dd.endAngle)/2;
+    const flip = angle > Math.PI;
+    g.append('text')
+      .attr('transform',`rotate(${angle*180/Math.PI-90}) translate(${R+8},0)${flip?' rotate(180)':''}`)
+      .attr('text-anchor',flip?'end':'start').attr('dominant-baseline','middle')
+      .attr('fill',C.text).style('font-size','10px')
+      .text(names[dd.index]);
+  });
+}
+
+// ═══════════════════════════════════════════════
+// Panel 92: Ridgeline — Rating Distributions
+// ═══════════════════════════════════════════════
+function drawRidgeline(d) {
+  const svg = d3.select('#chart-ridgeline'); if (svg.empty()) return; svg.selectAll('*').remove();
+  if (!d.bubbles || !d.bubbles.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||700, H = 400;
+  const m = {top:20,right:30,bottom:35,left:80};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const cities = ['Barcelona','Madrid','Valencia','Sevilla','Bilbao'];
+  const cityColors = [C.blue,'#e875c2',C.orange,'#ffc83d','#7ee787'];
+  const cityData = {};
+  d.bubbles.forEach(b => {
+    if (cities.includes(b.c) && b.r) {
+      if (!cityData[b.c]) cityData[b.c] = [];
+      cityData[b.c].push(b.r);
+    }
+  });
+
+  const x = d3.scaleLinear().domain([1.5,5.5]).range([0,w]);
+  const rowH = h/cities.length;
+  const yDensity = d3.scaleLinear().domain([0,0.5]).range([0,-rowH*0.85]);
+
+  // X axis
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(8))
+    .selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+  g.append('text').attr('x',w/2).attr('y',h+30).attr('text-anchor','middle')
+    .attr('fill',C.muted).style('font-size','11px').text('Rating');
+
+  cities.forEach((city,i) => {
+    const vals = cityData[city]||[];
+    if (!vals.length) return;
+    const yOff = (i+1)*rowH;
+
+    // KDE (kernel density estimation)
+    const bins = d3.range(1.5,5.55,0.1);
+    const bandwidth = 0.25;
+    const density = bins.map(x0 => {
+      let sum = 0;
+      vals.forEach(v => { const u=(x0-v)/bandwidth; sum += Math.exp(-0.5*u*u); });
+      return {x:x0, y: sum/(vals.length*bandwidth*Math.sqrt(2*Math.PI))};
+    });
+
+    const area = d3.area().curve(d3.curveBasis)
+      .x(dd => x(dd.x)).y0(yOff).y1(dd => yOff + yDensity(dd.y));
+
+    g.append('path').datum(density).attr('d',area)
+      .attr('fill',cityColors[i]).attr('fill-opacity',0.4)
+      .attr('stroke',cityColors[i]).attr('stroke-width',1.5);
+
+    // City label
+    g.append('text').attr('x',-8).attr('y',yOff-2).attr('text-anchor','end')
+      .attr('fill',C.text).style('font-size','11px').style('font-weight','600')
+      .text(`${city} (${vals.length})`);
+
+    // Median line
+    const med = d3.median(vals);
+    g.append('line').attr('x1',x(med)).attr('x2',x(med)).attr('y1',yOff).attr('y2',yOff-rowH*0.7)
+      .attr('stroke',cityColors[i]).attr('stroke-width',1.5).attr('stroke-dasharray','3,3');
+  });
+}
+
+// ═══════════════════════════════════════════════
+// Panel 93: Circle Packing — Category > City
+// ═══════════════════════════════════════════════
+function drawCirclePacking(d) {
+  const svg = d3.select('#chart-circpack'); if (svg.empty()) return; svg.selectAll('*').remove();
+  if (!d.distributors || !d.distributors.length) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||700, H = 500;
+  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
+
+  const catLabels = {food:'Food & Bev',tech:'Tech & POS',equipment:'Equipment',services:'Services',retail:'Retail'};
+  const catColors = {food:C.green,tech:C.blue,equipment:C.orange,services:C.purple,retail:'#ffd93d'};
+  const nest = {};
+  d.distributors.forEach(dd => {
+    const cat=dd.cat||'unknown', city=dd.c||'Unknown';
+    if (!nest[cat]) nest[cat]={};
+    nest[cat][city]=(nest[cat][city]||0)+1;
+  });
+
+  const root = d3.hierarchy({name:'root', children: Object.entries(nest).map(([cat,cities]) => ({
+    name:catLabels[cat]||cat, catKey:cat,
+    children: Object.entries(cities).sort((a,b)=>b[1]-a[1]).slice(0,20)
+      .map(([city,cnt]) => ({name:city, value:cnt, catKey:cat}))
+  }))}).sum(dd=>dd.value).sort((a,b)=>b.value-a.value);
+
+  const R = Math.min(W,H)/2 - 10;
+  d3.pack().size([2*R,2*R]).padding(4)(root);
+
+  const nodes = root.descendants();
+  nodes.forEach(n => { n.x -= R; n.y -= R; }); // Center
+
+  g.selectAll('circle').data(nodes.filter(n=>n.depth>0)).join('circle')
+    .attr('cx',n=>n.x).attr('cy',n=>n.y).attr('r',n=>n.r)
+    .attr('fill',n => {
+      const cat = n.data.catKey||(n.parent?n.parent.data.catKey:null);
+      return n.depth===1 ? 'none' : (catColors[cat]||C.dim);
+    })
+    .attr('fill-opacity',n=>n.depth===1?0:0.5)
+    .attr('stroke',n=>{
+      const cat=n.data.catKey||(n.parent?n.parent.data.catKey:null);
+      return catColors[cat]||C.dim;
+    })
+    .attr('stroke-width',n=>n.depth===1?2:0.5).style('cursor','pointer')
+    .on('mousemove',(evt,n)=>{
+      const path = n.ancestors().reverse().map(x=>x.data.name).filter(x=>x!=='root').join(' > ');
+      showTip(evt,`<b>${path}</b><br>${n.value} companies`);
+    })
+    .on('mouseleave',()=>hideTip());
+
+  // Labels on category circles
+  nodes.filter(n=>n.depth===1).forEach(n => {
+    g.append('text').attr('x',n.x).attr('y',n.y-n.r+14)
+      .attr('text-anchor','middle').attr('fill',C.text).style('font-size','11px').style('font-weight','700')
+      .text(n.data.name).attr('pointer-events','none');
+  });
+  // Labels on larger city circles
+  nodes.filter(n=>n.depth===2&&n.r>18).forEach(n => {
+    g.append('text').attr('x',n.x).attr('y',n.y+4)
+      .attr('text-anchor','middle').attr('fill',C.text).style('font-size','9px')
+      .text(n.data.name.substring(0,Math.floor(n.r/3.5))).attr('pointer-events','none');
+  });
+}
+
+// ═══════════════════════════════════════════════
+// Panel 94: Stream/Area Chart — Enrichment Trend
+// ═══════════════════════════════════════════════
+function drawStream(d) {
+  const svg = d3.select('#chart-stream'); if (svg.empty()) return; svg.selectAll('*').remove();
+  if (!d.snapshots || d.snapshots.length < 3) return;
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||700, H = 350;
+  const m = {top:20,right:120,bottom:35,left:50};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const keys = ['ws_scraped','ws_emails','ws_instagram','gp_enriched','domain_finder'];
+  const labels = {ws_scraped:'Website Scraped',ws_emails:'Emails Found',ws_instagram:'Instagram',gp_enriched:'GP Enriched',domain_finder:'Domain Finder'};
+  const colors = [C.blue,C.green,'#e875c2',C.orange,C.purple];
+
+  const parseTime = d3.timeParse('%Y-%m-%d %H:%M');
+  const data = d.snapshots.map(s => {
+    const row = {date: parseTime(s.ts)||new Date(s.ts)};
+    keys.forEach(k => { row[k] = s[k]||0; });
+    return row;
+  });
+
+  const x = d3.scaleTime().domain(d3.extent(data,dd=>dd.date)).range([0,w]);
+  const stack = d3.stack().keys(keys).order(d3.stackOrderInsideOut).offset(d3.stackOffsetWiggle);
+  const series = stack(data);
+
+  const y = d3.scaleLinear()
+    .domain([d3.min(series,s=>d3.min(s,dd=>dd[0])), d3.max(series,s=>d3.max(s,dd=>dd[1]))])
+    .range([h,0]);
+
+  const area = d3.area().curve(d3.curveBasis)
+    .x(dd=>x(dd.data.date)).y0(dd=>y(dd[0])).y1(dd=>y(dd[1]));
+
+  g.selectAll('.stream').data(series).join('path')
+    .attr('d',area).attr('fill',(dd,i)=>colors[i]).attr('fill-opacity',0.7)
+    .attr('stroke',(dd,i)=>colors[i]).attr('stroke-width',0.5)
+    .on('mousemove',(evt,dd)=>{
+      const key = dd.key;
+      const latest = data[data.length-1][key];
+      showTip(evt,`<b>${labels[key]}</b><br>Latest: ${latest.toLocaleString()}`);
+    })
+    .on('mouseleave',()=>hideTip());
+
+  // X axis
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')))
+    .selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain,.tick line').attr('stroke',C.border);
+
+  // Legend
+  const lg = g.append('g').attr('transform',`translate(${w+12},10)`);
+  keys.forEach((k,i) => {
+    lg.append('rect').attr('x',0).attr('y',i*20).attr('width',12).attr('height',12).attr('fill',colors[i]).attr('rx',2);
+    lg.append('text').attr('x',18).attr('y',i*20+10).text(labels[k]).attr('fill',C.text).style('font-size','10px');
+  });
+}
+
+// ═══════════════════════════════════════════════
+// Panel 95: Gauge Charts — CRM Health
+// ═══════════════════════════════════════════════
+function drawGauges(d) {
+  const el = document.getElementById('chart-gauges'); if (!el) return; el.innerHTML = '';
+  const s = d.summary||{};
+  const gauges = [
+    {label:'Enrichment Rate', value:s.companies_total?Math.round((s.enriched_gp||0)/s.companies_total*100):0, max:100, color:C.green},
+    {label:'Email Coverage', value:s.contacts_total?Math.round((s.contacts_email||0)/s.contacts_total*100):0, max:100, color:C.blue},
+    {label:'Mobile Coverage', value:s.contacts_total?Math.round((s.contacts_mobile||0)/s.contacts_total*100):0, max:100, color:'#e875c2'},
+    {label:'Avg Score', value:Math.round(s.avg_score_companies||0), max:100, color:C.orange},
+    {label:'Domain Coverage', value:s.companies_total?Math.round(((d.domain_coverage||{}).with_domain||0)/s.companies_total*100):0, max:100, color:C.purple},
+  ];
+
+  gauges.forEach(gc => {
+    const size = 130, R = 50, stroke = 10;
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'text-align:center';
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('width', size); svg.setAttribute('height', size);
+
+    const pct = Math.min(gc.value/gc.max, 1);
+    const startAngle = -Math.PI*0.75, endAngle = Math.PI*0.75;
+    const totalAngle = endAngle - startAngle;
+    const cx = size/2, cy = size/2 + 10;
+
+    // Background arc
+    const bgPath = document.createElementNS(svgNS,'path');
+    const x1=cx+R*Math.cos(startAngle), y1=cy+R*Math.sin(startAngle);
+    const x2=cx+R*Math.cos(endAngle), y2=cy+R*Math.sin(endAngle);
+    bgPath.setAttribute('d',`M${x1},${y1} A${R},${R} 0 1,1 ${x2},${y2}`);
+    bgPath.setAttribute('fill','none'); bgPath.setAttribute('stroke','#21262d'); bgPath.setAttribute('stroke-width',stroke);
+    bgPath.setAttribute('stroke-linecap','round');
+    svg.appendChild(bgPath);
+
+    // Value arc
+    const valAngle = startAngle + totalAngle * pct;
+    const vx = cx+R*Math.cos(valAngle), vy = cy+R*Math.sin(valAngle);
+    const largeArc = pct > 0.5 ? 1 : 0;
+    const valPath = document.createElementNS(svgNS,'path');
+    valPath.setAttribute('d',`M${x1},${y1} A${R},${R} 0 ${largeArc},1 ${vx},${vy}`);
+    valPath.setAttribute('fill','none'); valPath.setAttribute('stroke',gc.color); valPath.setAttribute('stroke-width',stroke);
+    valPath.setAttribute('stroke-linecap','round');
+    svg.appendChild(valPath);
+
+    // Value text
+    const txt = document.createElementNS(svgNS,'text');
+    txt.setAttribute('x',cx); txt.setAttribute('y',cy+5); txt.setAttribute('text-anchor','middle');
+    txt.setAttribute('fill','#e6edf3'); txt.style.fontSize='22px'; txt.style.fontWeight='700';
+    txt.textContent = gc.value + (gc.max===100?'%':'');
+    svg.appendChild(txt);
+
+    wrapper.appendChild(svg);
+    const lbl = document.createElement('div');
+    lbl.style.cssText = 'color:#8b949e;font-size:11px;margin-top:-8px';
+    lbl.textContent = gc.label;
+    wrapper.appendChild(lbl);
+    el.appendChild(wrapper);
+  });
+}
+
 function updateDist(d) {
   if (!d.distributors) return;
   const ds = d.dist_summary || {};
@@ -5430,7 +5821,7 @@ function updateDist(d) {
   el('kpi-dist-equip').textContent = fmt((ds.by_category||{}).equipment || 0);
   el('kpi-dist-services').textContent = fmt(((ds.by_category||{}).services||0) + ((ds.by_category||{}).retail||0));
 
-  const distCharts = [drawDistSankey, drawDistHeatmap, drawSunburst, drawDistCats, drawDistCities, drawDistIndustries, drawDistScatter, drawDistTable];
+  const distCharts = [drawDistSankey, drawDistHeatmap, drawSunburst, drawDistCats, drawDistCities, drawDistIndustries, drawDistScatter, drawDistTable, drawCirclePacking];
   distCharts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
 }
 
