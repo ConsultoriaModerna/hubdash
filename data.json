@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-02T13:09:26",
-  "fetch_seconds": 142.9,
+  "generated_at": "2026-05-02T15:10:37",
+  "fetch_seconds": 135.2,
   "summary": {
     "companies_total": 76480,
     "contacts_total": 60689,
@@ -25314,6 +25314,21 @@
     },
     {
       "ts": "2026-05-02 13:08",
+      "website": 37993,
+      "phone": 48461,
+      "domain": 37975,
+      "gp_enriched": 4452,
+      "ws_scraped": 35415,
+      "ws_emails": 10056,
+      "ws_instagram": 10926,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 18469,
+      "contacts_email": 39278
+    },
+    {
+      "ts": "2026-05-02 15:09",
       "website": 37993,
       "phone": 48461,
       "domain": 37975,
@@ -84579,6 +84594,23 @@
       "zip": "18010"
     },
     {
+      "id": "9921850055",
+      "n": "Andarique Bar&Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Murcia",
+      "dm": "andariqueshowroom.wixsite.com",
+      "wb": 1,
+      "ph": "642973576",
+      "s": 75,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Francisco Rabal Jardín de la Pólvora",
+      "zip": "30009"
+    },
+    {
       "id": "9921866480",
       "n": "Andrea Williams Cake Shop",
       "ind": "RETAIL",
@@ -84611,6 +84643,23 @@
       "ln": null,
       "addr": "AVINGUDA GRANVIA, 83",
       "zip": "08205"
+    },
+    {
+      "id": "38466638023",
+      "n": "Andrews Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "New York",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 43,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
     },
     {
       "id": "9921769177",
@@ -84917,6 +84966,23 @@
       "ln": null,
       "addr": "606 Carrer 31",
       "zip": "46470"
+    },
+    {
+      "id": "38562103501",
+      "n": "Art Tea Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Toulouse",
+      "dm": "art-teashop.com",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "37 rue des lois",
+      "zip": "31000"
     },
     {
       "id": "9921789413",
@@ -85392,6 +85458,23 @@
       "la": null,
       "ln": null,
       "addr": "AV 328 NUM.23",
+      "zip": ""
+    },
+    {
+      "id": "428927895755",
+      "n": "Baba Boudan Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
       "zip": ""
     },
     {
@@ -86075,6 +86158,23 @@
       "zip": "07013"
     },
     {
+      "id": "428940581078",
+      "n": "Bistrot Atelier Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
       "id": "377298609344",
       "n": "Bitariq Servicios Informaticos SL",
       "ind": "RETAIL",
@@ -86089,6 +86189,23 @@
       "la": null,
       "ln": null,
       "addr": "C/ MARTIN IRIARTE 20 (ROZAS DE MADRID (LAS))",
+      "zip": ""
+    },
+    {
+      "id": "377298609375",
+      "n": "Bite Boutique S.L",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "CL BALMES NUM.109 P.PP PTA.2",
       "zip": ""
     },
     {
@@ -86143,6 +86260,23 @@
       "zip": ""
     },
     {
+      "id": "9919752178",
+      "n": "Bnjud Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "bnjud-shop.negocio.site",
+      "wb": 1,
+      "ph": "",
+      "s": 58,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C. de Orense, 46, 28020 Madrid, Spain",
+      "zip": "53780"
+    },
+    {
       "id": "38124895446",
       "n": "Bo&Mie",
       "ind": "RETAIL",
@@ -86160,6 +86294,23 @@
       "zip": "75002"
     },
     {
+      "id": "428896546028",
+      "n": "Bo-Bun Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
       "id": "38470266049",
       "n": "Bobun",
       "ind": "RETAIL",
@@ -86175,6 +86326,23 @@
       "ln": null,
       "addr": "15 rue Louis Bonnet",
       "zip": "75011"
+    },
+    {
+      "id": "9921990600",
+      "n": "Bocafina Gourmet Shop & Café",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Palma",
+      "dm": "bocafinadeli.com",
+      "wb": 1,
+      "ph": "",
+      "s": 63,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Carrer Font i Monteros",
+      "zip": ""
     },
     {
       "id": "9919742437",
@@ -86225,6 +86393,23 @@
       "la": null,
       "ln": null,
       "addr": "CL PUJADES NUM.68 P.0 PTA.4",
+      "zip": ""
+    },
+    {
+      "id": "9920611018",
+      "n": "Boho Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Sevilla",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "41003 Seville, Spain",
       "zip": ""
     },
     {
@@ -86449,6 +86634,57 @@
       "zip": "75013"
     },
     {
+      "id": "9921821687",
+      "n": "Boutique Bar Es Berenar",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Palma",
+      "dm": "edeen.es",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "79 Carrer de Joan Mascaró i Fornés",
+      "zip": "07010"
+    },
+    {
+      "id": "9920608728",
+      "n": "Boutique del Pan Doradito",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "panaderiadoradito.es",
+      "wb": 1,
+      "ph": "",
+      "s": 55,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Viana 24",
+      "zip": ""
+    },
+    {
+      "id": "9921767660",
+      "n": "Boutique del Pan el Buen Bouquet",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "San Cristobal De La ",
+      "dm": "",
+      "wb": 0,
+      "ph": "922638276",
+      "s": 45,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Carretera General Guamasa, 300",
+      "zip": "38350"
+    },
+    {
       "id": "38466637033",
       "n": "Boutique des Saveurs",
       "ind": "RETAIL",
@@ -86464,6 +86700,40 @@
       "ln": null,
       "addr": "34 rue des Petits Carreaux",
       "zip": "75002"
+    },
+    {
+      "id": "9919844794",
+      "n": "Boutique do Gelado",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
+      "id": "422447419633",
+      "n": "Boutique do Gelado",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Porto",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 33,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Rua Ferreira Borges 67",
+      "zip": "4050-253"
     },
     {
       "id": "376617193703",
@@ -86582,6 +86852,23 @@
       "la": null,
       "ln": null,
       "addr": "CL CORSEGA NUM.284 P.1",
+      "zip": ""
+    },
+    {
+      "id": "428972687598",
+      "n": "Brolenda Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
       "zip": ""
     },
     {
@@ -86772,6 +87059,23 @@
       "zip": ""
     },
     {
+      "id": "9921989864",
+      "n": "Cafetería Jamaica Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "jamaica-cafeteria.negocio.site",
+      "wb": 1,
+      "ph": "915938794",
+      "s": 70,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Glorieta Pintor Sorolla, 4, 28010 Madrid, Spain",
+      "zip": "53780"
+    },
+    {
       "id": "9920658650",
       "n": "Cafetería Restaurante el Corte Inglés",
       "ind": "RETAIL",
@@ -86821,6 +87125,40 @@
       "ln": null,
       "addr": "Calle Primavera 23",
       "zip": ""
+    },
+    {
+      "id": "428896545995",
+      "n": "Caffé Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
+      "id": "9921914817",
+      "n": "Cake Shop Ana Quevedo",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "cakeshop-anaquevedo.com",
+      "wb": 1,
+      "ph": "34931620556",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Carrer Pere IV",
+      "zip": "08005"
     },
     {
       "id": "9921927374",
@@ -86974,6 +87312,40 @@
       "ln": null,
       "addr": "RD PRESIDENT IRLA 26-28",
       "zip": ""
+    },
+    {
+      "id": "9921997271",
+      "n": "Carlotta Cake Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Sevilla",
+      "dm": "carlottacakeboutique.pt",
+      "wb": 1,
+      "ph": "",
+      "s": 58,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": "4150753"
+    },
+    {
+      "id": "422393364680",
+      "n": "Carlotta Cake Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Porto",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 33,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Rua Fonte da Luz 183",
+      "zip": "4150-753"
     },
     {
       "id": "9921819633",
@@ -87537,6 +87909,23 @@
       "zip": ""
     },
     {
+      "id": "38562103513",
+      "n": "Chawp Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Rennes",
+      "dm": "chawpshop.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "14 rue Nantaise",
+      "zip": "35000"
+    },
+    {
       "id": "374469740788",
       "n": "Chc Disve SL",
       "ind": "RETAIL",
@@ -87824,6 +88213,40 @@
       "ln": null,
       "addr": "13A Frodsham Street",
       "zip": "CH3 9GA"
+    },
+    {
+      "id": "9920526808",
+      "n": "Cocktail Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "cocktailshop.es",
+      "wb": 1,
+      "ph": "+34 963 228 685",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "46 Carrer de Roger de Llúria",
+      "zip": "08009"
+    },
+    {
+      "id": "9921995483",
+      "n": "Coffee Shop Poeta",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Valencia",
+      "dm": "coffeeshoppoeta.negocio.site",
+      "wb": 1,
+      "ph": "636001350",
+      "s": 70,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Gran Via de Ferran el Cat√≤lic, 35, 46008 Valencia, Spain",
+      "zip": "53780"
     },
     {
       "id": "374469739730",
@@ -88251,6 +88674,23 @@
       "zip": ""
     },
     {
+      "id": "38090624200",
+      "n": "Cosy, Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Nice",
+      "dm": "cosycoffeeshop.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "42 avenue de la Republique",
+      "zip": "6300"
+    },
+    {
       "id": "374512678104",
       "n": "Cpm Carreras Distribucions S.L",
       "ind": "RETAIL",
@@ -88278,6 +88718,23 @@
       "ph": "",
       "s": 40,
       "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
+      "id": "428896546024",
+      "n": "Crepe Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
       "tp": "",
       "la": null,
       "ln": null,
@@ -88384,6 +88841,23 @@
       "la": null,
       "ln": null,
       "addr": "CALLE MARTINEZ IZQUIERDO Número20",
+      "zip": ""
+    },
+    {
+      "id": "9921854412",
+      "n": "Cuxta Antojitos-Drinks & Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "635309458",
+      "s": 50,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle de Do√±a Urraca 15, Puestos 34-35, 28011 Madrid, Spain",
       "zip": ""
     },
     {
@@ -89252,6 +89726,23 @@
       "ln": null,
       "addr": "CL JARDI NUM.65 P.4 PTA.2",
       "zip": ""
+    },
+    {
+      "id": "9919740395",
+      "n": "Dulces Dreams Boutique Hostel & Café Gallery",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Málaga",
+      "dm": "dulcesdreamshostel.com",
+      "wb": 1,
+      "ph": "+34 951 35 78 69",
+      "s": 85,
+      "ct": 0,
+      "tp": "Hotel",
+      "la": 36.7224,
+      "ln": -4.4227,
+      "addr": "6 Plaza de los Mártires Ciriaco y Paula",
+      "zip": "29008"
     },
     {
       "id": "377430638823",
@@ -90187,6 +90678,23 @@
       "ln": null,
       "addr": "C/ COPENHAGUE 6 - 1º, OFICINA 6 (ROZAS DE MADRID (LAS))",
       "zip": ""
+    },
+    {
+      "id": "38307411144",
+      "n": "Etienne Coffee & Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Rouen",
+      "dm": "etienne-coffeeshop.com",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "17-19",
+      "zip": "76000"
     },
     {
       "id": "377298607309",
@@ -91362,6 +91870,23 @@
       "zip": ""
     },
     {
+      "id": "428972687558",
+      "n": "Good News Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
       "id": "374469736673",
       "n": "Goodis Vida S.L",
       "ind": "RETAIL",
@@ -91430,6 +91955,23 @@
       "zip": ""
     },
     {
+      "id": "429011577067",
+      "n": "Gout Boutique a Manger",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
       "id": "9922039493",
       "n": "Granier",
       "ind": "RETAIL",
@@ -91445,6 +91987,23 @@
       "ln": null,
       "addr": "47 Carrer d'Olèrdola",
       "zip": "70352"
+    },
+    {
+      "id": "9921788114",
+      "n": "Greek And Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "greekandshop.es",
+      "wb": 1,
+      "ph": "915326083",
+      "s": 80,
+      "ct": 2,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Corredera Alta de San Pablo 9 Corredera Alta de San Pablo 9",
+      "zip": "28004"
     },
     {
       "id": "9920665536",
@@ -91770,6 +92329,40 @@
       "zip": ""
     },
     {
+      "id": "9919745477",
+      "n": "Guilty - Cookie Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "guilty-cookies.com",
+      "wb": 1,
+      "ph": "913194174",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "48 Calle de Fernández de la Hoz",
+      "zip": "28010"
+    },
+    {
+      "id": "9921996220",
+      "n": "Guilty - Cookie Shop Tablas",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Av. de Manoteras, 22, nave 45, 28050 Madrid, Spain",
+      "zip": ""
+    },
+    {
       "id": "376955059444",
       "n": "Guixescaplac 65 S.L",
       "ind": "RETAIL",
@@ -91921,6 +92514,23 @@
       "ln": null,
       "addr": "7 rue Blanche",
       "zip": "75009"
+    },
+    {
+      "id": "9920665052",
+      "n": "Happie Happie - Dutch Snackbar & Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Palma",
+      "dm": "happiehappie.com",
+      "wb": 1,
+      "ph": "871100120",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Carrer de George Orwell, 3, 07004 Palma, Illes Balears",
+      "zip": "7004"
     },
     {
       "id": "377160856813",
@@ -92295,6 +92905,40 @@
       "ln": null,
       "addr": "84 Carrer de l'Arxiduc Carles",
       "zip": "46014"
+    },
+    {
+      "id": "9920632044",
+      "n": "Hotel Boutique & Spa las Mimosas",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Sant Josep De Sa Tal",
+      "dm": "lasmimosasibiza.com",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Carrer de Burgos, 29, 07829 Sant Josep de sa Talaia",
+      "zip": "7829"
+    },
+    {
+      "id": "9920663772",
+      "n": "Hotel Linda Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Marbella",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 33,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C. Ancha, 21",
+      "zip": "29601"
     },
     {
       "id": "37988423890",
@@ -93334,6 +93978,23 @@
       "zip": ""
     },
     {
+      "id": "9920610290",
+      "n": "Junio Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "junio-shop.negocio.site",
+      "wb": 1,
+      "ph": "",
+      "s": 58,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "P.¬∫ de la Castellana, 132, 28046 Madrid, Spain",
+      "zip": "53780"
+    },
+    {
       "id": "374469737718",
       "n": "Juno Insights SL",
       "ind": "RETAIL",
@@ -93383,6 +94044,40 @@
       "ln": null,
       "addr": "C/ VILLARDONDIEGO 26 - POSTERIOR, LOCAL 1",
       "zip": ""
+    },
+    {
+      "id": "9922041786",
+      "n": "Just Meats Sandwich Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Segovia",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 43,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": "4050442"
+    },
+    {
+      "id": "422452842733",
+      "n": "Just Meats Sandwich Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Porto",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 33,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Rua Oliveira Monteiro 183",
+      "zip": "4050-442"
     },
     {
       "id": "376764102875",
@@ -93451,6 +94146,23 @@
       "ln": null,
       "addr": "Av. de José Ortega y Gasset, 238, 29006 Málaga",
       "zip": "29006"
+    },
+    {
+      "id": "9919909566",
+      "n": "Kento Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Valencia",
+      "dm": "",
+      "wb": 0,
+      "ph": "646727678",
+      "s": 50,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C/ de Sant Vicent M√†rtir, 100, 46007 Val√®ncia, Valencia, S",
+      "zip": ""
     },
     {
       "id": "374469738738",
@@ -93793,6 +94505,40 @@
       "zip": "33149"
     },
     {
+      "id": "9921946308",
+      "n": "La Boutique [3 Locales]",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
+      "id": "38576527595",
+      "n": "La Boutique de Calligraphie",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": "6300"
+    },
+    {
       "id": "9920528841",
       "n": "La Boutique de la Hostelerã­a",
       "ind": "RETAIL",
@@ -93808,6 +94554,142 @@
       "ln": null,
       "addr": "Calle Huerto Ponce, 10, 41520 El Viso del Alcor",
       "zip": "41520"
+    },
+    {
+      "id": "9919753421",
+      "n": "La Boutique de la Lampara",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "28026 Madrid, Spain",
+      "zip": ""
+    },
+    {
+      "id": "9920614885",
+      "n": "La Boutique del Cafe And Tee",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Palma",
+      "dm": "",
+      "wb": 0,
+      "ph": "618518360",
+      "s": 60,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Marbella numero 15 Centro Comercial La Ribera",
+      "zip": "7610"
+    },
+    {
+      "id": "9919908810",
+      "n": "La Boutique del Gelato",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Palma Mallorca",
+      "dm": "laboutiquedelgelato.com",
+      "wb": 1,
+      "ph": "34971799102",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Concha Espina 23",
+      "zip": "7011"
+    },
+    {
+      "id": "9919878132",
+      "n": "La Boutique del Pollo",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Murcia",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 53,
+      "ct": 0,
+      "tp": "",
+      "la": 37.9869,
+      "ln": -1.1196,
+      "addr": "Av. de la Fama, 32, 30006 Murcia, Spain",
+      "zip": ""
+    },
+    {
+      "id": "9920642007",
+      "n": "La Boutique del Pollo #2",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "915791582",
+      "s": 50,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle del Marqu√©s de Viana, 4, 28039 Madrid, Spain",
+      "zip": ""
+    },
+    {
+      "id": "9922086344",
+      "n": "La Boutique del Pollo Asadero Sea",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Valencia",
+      "dm": "",
+      "wb": 0,
+      "ph": "968341898",
+      "s": 50,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C. Capit√°n Balaca, 30003 Murcia, Spain",
+      "zip": ""
+    },
+    {
+      "id": "38090620137",
+      "n": "La Boutique des Vins",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Paris",
+      "dm": "boutiquedesvins-paris.com",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "33 Rue de l'Arcade Passage Puteaux",
+      "zip": "75008"
+    },
+    {
+      "id": "9921800150",
+      "n": "La Boutique Italian Food",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Zaragoza",
+      "dm": "laboutiqueitalianfood.es",
+      "wb": 1,
+      "ph": "+34 913 68 71 65",
+      "s": 100,
+      "ct": 1,
+      "tp": "Restaurante italiano",
+      "la": 36.6726,
+      "ln": -4.4825,
+      "addr": "Calle de Alfonso Ponce de Leon 6 Plaza Mayor",
+      "zip": "50008"
     },
     {
       "id": "9920607979",
@@ -94046,6 +94928,40 @@
       "ln": null,
       "addr": "13 Carrer del Capità Arenas",
       "zip": "08034"
+    },
+    {
+      "id": "9919751667",
+      "n": "La Grazia Cake & Dessert Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Malaga",
+      "dm": "lagraziacakeshop.com",
+      "wb": 1,
+      "ph": "615404223",
+      "s": 75,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Dos Aceras 24",
+      "zip": "29012"
+    },
+    {
+      "id": "9921920490",
+      "n": "La Iberoteca Madrid Tienda Gourmet",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "laiberoteca.es",
+      "wb": 1,
+      "ph": "915328957",
+      "s": 75,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Almirante 8",
+      "zip": "28004"
     },
     {
       "id": "9921769167",
@@ -94371,6 +95287,23 @@
       "zip": "75018"
     },
     {
+      "id": "9919862230",
+      "n": "La Tanqueta Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "",
+      "wb": 0,
+      "ph": "34936888243",
+      "s": 60,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Josep Tarradellas 111 Entrada tambien por calle Gelabe",
+      "zip": "8029"
+    },
+    {
       "id": "9920526034",
       "n": "La Terraza del Pádel",
       "ind": "RETAIL",
@@ -94385,6 +95318,74 @@
       "la": null,
       "ln": null,
       "addr": "Avenida de Mariano Rojas 9 Puente Tocinos",
+      "zip": ""
+    },
+    {
+      "id": "9919860186",
+      "n": "La Tienda de \"espe\"",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "649797715",
+      "s": 50,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C. de Tristana, 10, 28018 Madrid, Spain",
+      "zip": ""
+    },
+    {
+      "id": "9921944547",
+      "n": "La Tienda de Carlos",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Sevilla",
+      "dm": "",
+      "wb": 0,
+      "ph": "656948841",
+      "s": 50,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Pl. de la Contrataci√≥n, 5, BAJO B, 41004 Sevilla, Spain",
+      "zip": ""
+    },
+    {
+      "id": "9922042329",
+      "n": "La Tienda de Isa",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Malaga",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 53,
+      "ct": 0,
+      "tp": "",
+      "la": 36.7212,
+      "ln": -4.3645,
+      "addr": "C. Escultor Mar√≠n Higuero, 6, 29017 M√°laga, Spain",
+      "zip": ""
+    },
+    {
+      "id": "9921875437",
+      "n": "La Tienda de Mari Luz",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Oviedo",
+      "dm": "bartiendamariluz.com",
+      "wb": 1,
+      "ph": "",
+      "s": 63,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Gonzalez Besada 2",
       "zip": ""
     },
     {
@@ -94847,6 +95848,23 @@
       "zip": ""
     },
     {
+      "id": "9919893716",
+      "n": "Lia Madrid Cocktail Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "liamadrid.es",
+      "wb": 1,
+      "ph": "914575657",
+      "s": 75,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Avenida de Alberto Alcocer 32",
+      "zip": "28036"
+    },
+    {
       "id": "9920630492",
       "n": "Licorería Vinoteca Supercaro Málaga",
       "ind": "RETAIL",
@@ -95083,6 +96101,23 @@
       "ln": null,
       "addr": "C/ FALCINELO, 5, 2º C",
       "zip": ""
+    },
+    {
+      "id": "38470231239",
+      "n": "Ma Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Lille",
+      "dm": "lepresentoirlille.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "24",
+      "zip": "59000"
     },
     {
       "id": "9921797595",
@@ -96173,6 +97208,23 @@
       "zip": ""
     },
     {
+      "id": "9919749313",
+      "n": "Mikasa Boutique Hotel",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Ibiza",
+      "dm": "mikasaibiza.com",
+      "wb": 1,
+      "ph": "971317922",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Carrer d'Ibosim, 11, 07800 Ibiza, Balearic Islands",
+      "zip": "07800"
+    },
+    {
       "id": "9921857722",
       "n": "Minibar",
       "ind": "RETAIL",
@@ -96426,6 +97478,23 @@
       "ln": null,
       "addr": "rue Keller",
       "zip": "75011"
+    },
+    {
+      "id": "9922041592",
+      "n": "Montgarri Coffee&Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Vielha",
+      "dm": "",
+      "wb": 0,
+      "ph": "973641199",
+      "s": 60,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "CarrÃ¨r Anglada, 5, 25530 Viella",
+      "zip": "25530"
     },
     {
       "id": "38090622199",
@@ -96938,6 +98007,23 @@
       "zip": ""
     },
     {
+      "id": "9921792710",
+      "n": "Noodle Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "noodleshop.es",
+      "wb": 1,
+      "ph": "914318126",
+      "s": 60,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Lagasca 80",
+      "zip": "28001"
+    },
+    {
       "id": "377160854762",
       "n": "North Station Pen Suites Sociedad Limitada",
       "ind": "RETAIL",
@@ -97072,6 +98158,23 @@
       "ln": null,
       "addr": "40 Calle de Puentelarra",
       "zip": "28031"
+    },
+    {
+      "id": "9921795561",
+      "n": "Old School Skaterock Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "910130427",
+      "s": 60,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Palafox 16",
+      "zip": "28010"
     },
     {
       "id": "377298606327",
@@ -97210,6 +98313,23 @@
       "zip": ""
     },
     {
+      "id": "9921946344",
+      "n": "Osiris Wine Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Alicante",
+      "dm": "osiriswine.com",
+      "wb": 1,
+      "ph": "623177721",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle de Pablo Iglesias 19 Local A",
+      "zip": "3004"
+    },
+    {
       "id": "9920639699",
       "n": "Outcompany",
       "ind": "RETAIL",
@@ -97293,6 +98413,23 @@
       "ln": -3.6564,
       "addr": "23 Calle del Príncipe Carlos",
       "zip": "28050"
+    },
+    {
+      "id": "9919856610",
+      "n": "Pan Boutique Jaranda",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "pasteleriacafeteriajaranda.es",
+      "wb": 1,
+      "ph": "911700992",
+      "s": 65,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C. Talamanca del Jarama, 26, 28051 Madrid, Spain",
+      "zip": ""
     },
     {
       "id": "377160857847",
@@ -98094,6 +99231,23 @@
       "zip": "75006"
     },
     {
+      "id": "9921775317",
+      "n": "Pinale Coffee Shop & Salad Bar",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "pinale.es",
+      "wb": 1,
+      "ph": "917568147",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "23 Calle del General Pardiñas",
+      "zip": "28001"
+    },
+    {
       "id": "9919832785",
       "n": "Pizzerã­a Lucciola",
       "ind": "RETAIL",
@@ -98143,6 +99297,23 @@
       "ln": null,
       "addr": "CR B-124, KM 8, 8",
       "zip": ""
+    },
+    {
+      "id": "9922006736",
+      "n": "Poké Shop - Plaza Xúquer - Ganador \"best Travelers",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Caceres",
+      "dm": "pokeshop.es",
+      "wb": 1,
+      "ph": "621291043",
+      "s": 70,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Pça. del Xúquer, 20, 46021 València, Valencia, Spain",
+      "zip": "10452"
     },
     {
       "id": "9921911235",
@@ -98434,6 +99605,23 @@
       "zip": ""
     },
     {
+      "id": "9921795556",
+      "n": "Puente Colgante Boutique Hotel",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Portugalete",
+      "dm": "puentecolgantebh.com",
+      "wb": 1,
+      "ph": "944014800",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Maria Diaz de Haro Kalea 2",
+      "zip": "48920"
+    },
+    {
       "id": "377307576560",
       "n": "Pune Electric 2024 S.L",
       "ind": "RETAIL",
@@ -98672,6 +99860,23 @@
       "zip": ""
     },
     {
+      "id": "9920639984",
+      "n": "Ratinos Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Santiago De Composte",
+      "dm": "ratinos.es",
+      "wb": 1,
+      "ph": "637191376",
+      "s": 75,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Rua de entrepracinas",
+      "zip": "15704"
+    },
+    {
       "id": "377160855765",
       "n": "Real Zero SL",
       "ind": "RETAIL",
@@ -98721,6 +99926,23 @@
       "ln": null,
       "addr": "AV PARE JAUME CATALA NUM.5",
       "zip": ""
+    },
+    {
+      "id": "9922039750",
+      "n": "Recyclo Bike Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Málaga",
+      "dm": "recyclobikeshop.es",
+      "wb": 1,
+      "ph": "+34 952 29 73 24",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "50 Avenida Juan Sebastián Elcano",
+      "zip": "29017"
     },
     {
       "id": "377307577537",
@@ -99182,6 +100404,23 @@
       "zip": ""
     },
     {
+      "id": "428929731820",
+      "n": "Ritual Coffee Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Other",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 35,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
       "id": "38072398028",
       "n": "Rosetta Bakery",
       "ind": "RETAIL",
@@ -99213,6 +100452,23 @@
       "la": null,
       "ln": null,
       "addr": "Calle Habana, 107, 18194 Churriana de la Vega",
+      "zip": "18194"
+    },
+    {
+      "id": "9920640233",
+      "n": "Rubio Expocash Hostelerã­a. Suministro y Tienda",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Churriana De La Vega",
+      "dm": "expocash.es",
+      "wb": 1,
+      "ph": "+34 958572033",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "POLÍGONO SAN CAYETANO, CALLE CHARLIE RIVEL, NAVE 4",
       "zip": "18194"
     },
     {
@@ -99301,6 +100557,23 @@
       "zip": ""
     },
     {
+      "id": "9920612313",
+      "n": "Salad Boutique",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Zaragoza",
+      "dm": "saladboutique.es",
+      "wb": 1,
+      "ph": "671285280",
+      "s": 70,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C. de Gertrudis Gómez de Avellaneda, 37, 50018 Zaragoza, Spa",
+      "zip": ""
+    },
+    {
       "id": "376764103889",
       "n": "Saleem Mehar S.L",
       "ind": "RETAIL",
@@ -99350,6 +100623,23 @@
       "ln": null,
       "addr": "C/ FUENTE FRIA 13",
       "zip": ""
+    },
+    {
+      "id": "9921801417",
+      "n": "Sambo's Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Sevilla",
+      "dm": "sambosshop.es",
+      "wb": 1,
+      "ph": "645260137",
+      "s": 75,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Paseo Las Delicias 3 Acc a",
+      "zip": "41001"
     },
     {
       "id": "374469740785",
@@ -99486,6 +100776,23 @@
       "ln": null,
       "addr": "7 Calle de Fernández de la Hoz",
       "zip": "47906"
+    },
+    {
+      "id": "9919847409",
+      "n": "Savta Sandwich Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Ronda de la Univ., 7, 08007 Barcelona, Spain",
+      "zip": ""
     },
     {
       "id": "376764103913",
@@ -99675,6 +100982,23 @@
       "zip": "08040"
     },
     {
+      "id": "9921873652",
+      "n": "Serendipia Shop Coffe",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Las Palmas",
+      "dm": "",
+      "wb": 0,
+      "ph": "699872001",
+      "s": 60,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C/ Alfredo L. Jones 35",
+      "zip": "35007"
+    },
+    {
       "id": "9922067184",
       "n": "SERHS",
       "ind": "RETAIL",
@@ -99757,6 +101081,23 @@
       "la": null,
       "ln": null,
       "addr": "AV ELS PINS NUM.1",
+      "zip": ""
+    },
+    {
+      "id": "374469737688",
+      "n": "Sf Beuty Shop S.L",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Sant Cugat Del Valle",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "CL ROSELLO NUM.40 P.4 PTA.2",
       "zip": ""
     },
     {
@@ -99979,6 +101320,23 @@
       "ln": null,
       "addr": "C/ JUAN BRAVO 3 - PORTAL A",
       "zip": ""
+    },
+    {
+      "id": "9919850699",
+      "n": "Somos la Pera Bar & Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Vigo",
+      "dm": "",
+      "wb": 0,
+      "ph": "986433709",
+      "s": 60,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Rua Doctor Cadaval 32",
+      "zip": "36202"
     },
     {
       "id": "377160854770",
@@ -100457,6 +101815,23 @@
       "zip": ""
     },
     {
+      "id": "9919839939",
+      "n": "Tanka's Boutique del Cafe",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "912870024",
+      "s": 60,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle Silva 4",
+      "zip": "28013"
+    },
+    {
       "id": "9920642020",
       "n": "Taperia a Leiteira",
       "ind": "RETAIL",
@@ -100763,6 +102138,57 @@
       "zip": "28002"
     },
     {
+      "id": "9921823172",
+      "n": "The Danish Pastry Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Lugo",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 43,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": "2790491"
+    },
+    {
+      "id": "422386433265",
+      "n": "The Danish Pastry Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Lisboa",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 33,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Rua do Campo Grande 115",
+      "zip": "2790-491"
+    },
+    {
+      "id": "9919896805",
+      "n": "The Fish & Chips Shop",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "thefishandchipsshop.es",
+      "wb": 1,
+      "ph": "34677834117",
+      "s": 100,
+      "ct": 3,
+      "tp": "",
+      "la": 41.3868,
+      "ln": 2.1567,
+      "addr": "70 Carrer de Rocafort",
+      "zip": "08015"
+    },
+    {
       "id": "9922105068",
       "n": "The Juice House",
       "ind": "RETAIL",
@@ -100829,6 +102255,23 @@
       "ln": null,
       "addr": "Avda. de las Americas. C.C. Oasis",
       "zip": "38660"
+    },
+    {
+      "id": "9922009573",
+      "n": "The Plant Based Market - la Boqueria - By Vegacelo",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C/ del Pintor Fortuny, 24, 08001 Barcelona, Spain",
+      "zip": ""
     },
     {
       "id": "9919850737",
@@ -100950,6 +102393,23 @@
       "zip": ""
     },
     {
+      "id": "9921945069",
+      "n": "Tienda",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C. Amador Valdés, 6, 28017 Madrid, Spain",
+      "zip": ""
+    },
+    {
       "id": "9920666862",
       "n": "Tienda Comida Japonesa - Japonshop",
       "ind": "RETAIL",
@@ -100998,6 +102458,57 @@
       "la": null,
       "ln": null,
       "addr": "PS ESPRONCEDA NUM.44",
+      "zip": ""
+    },
+    {
+      "id": "9922042578",
+      "n": "Tienda de Bollos",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "",
+      "wb": 0,
+      "ph": "",
+      "s": 38,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "C. de Sebasti√°n Elcano, 28012 Madrid, Spain",
+      "zip": ""
+    },
+    {
+      "id": "9922086874",
+      "n": "Tienda de Pesca",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "",
+      "wb": 0,
+      "ph": "924793796",
+      "s": 50,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Carrer del Comte d'Urgell, 1, 08011 Barcelona, Spain",
+      "zip": ""
+    },
+    {
+      "id": "9919873735",
+      "n": "Tienda del Pollo Asado",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Sevilla",
+      "dm": "",
+      "wb": 0,
+      "ph": "958170757",
+      "s": 50,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Av. de Juan Pablo II, 7, 18014 Granada, Spain",
       "zip": ""
     },
     {
@@ -101492,6 +103003,23 @@
       "ln": null,
       "addr": "c/ de la Constitució nº75",
       "zip": "8014"
+    },
+    {
+      "id": "9920614601",
+      "n": "Urban Wine Shop & Bar",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Alicante",
+      "dm": "urbanwine.es",
+      "wb": 1,
+      "ph": "966145745",
+      "s": 75,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "Calle de San Vicente 44",
+      "zip": "3004"
     },
     {
       "id": "377392900293",
@@ -103705,33 +105233,33 @@
     }
   ],
   "dist_summary": {
-    "total": 3786,
+    "total": 3875,
     "by_category": {
-      "retail": 1188,
+      "retail": 1277,
       "tech": 1177,
       "food": 1083,
       "services": 298,
       "equipment": 40
     },
     "by_city": {
-      "Madrid": 567,
-      "Barcelona": 556,
-      "Other": 174,
-      "Paris": 170,
-      "Sant Cugat Del Valle": 92,
-      "Sevilla": 90,
-      "New York": 81,
-      "Valencia": 64,
-      "Malaga": 56,
+      "Madrid": 586,
+      "Barcelona": 564,
+      "Other": 187,
+      "Paris": 171,
+      "Sevilla": 95,
+      "Sant Cugat Del Valle": 93,
+      "New York": 82,
+      "Valencia": 67,
+      "Malaga": 58,
+      "Zaragoza": 56,
       "London": 55,
-      "Zaragoza": 54,
       "Granada": 52,
       "San Fernando De Masp": 51,
-      "Murcia": 42,
-      "Palma": 41
+      "Palma": 45,
+      "Murcia": 44
     },
     "by_industry": {
-      "RETAIL": 1115,
+      "RETAIL": 1204,
       "COMPUTER_SOFTWARE": 1093,
       "FOOD_BEVERAGES": 863,
       "FOOD_PRODUCTION": 214,
@@ -103960,7 +105488,7 @@
       {
         "source": 16,
         "target": 17,
-        "value": 1115
+        "value": 1204
       },
       {
         "source": 16,
@@ -104325,47 +105853,47 @@
       {
         "source": 17,
         "target": 20,
-        "value": 582
+        "value": 620
       },
       {
         "source": 17,
         "target": 23,
-        "value": 202
-      },
-      {
-        "source": 17,
-        "target": 26,
-        "value": 18
-      },
-      {
-        "source": 17,
-        "target": 25,
-        "value": 32
-      },
-      {
-        "source": 17,
-        "target": 24,
-        "value": 16
-      },
-      {
-        "source": 17,
-        "target": 21,
         "value": 210
       },
       {
         "source": 17,
-        "target": 28,
-        "value": 9
+        "target": 26,
+        "value": 23
       },
       {
         "source": 17,
-        "target": 22,
-        "value": 44
+        "target": 25,
+        "value": 45
+      },
+      {
+        "source": 17,
+        "target": 24,
+        "value": 19
+      },
+      {
+        "source": 17,
+        "target": 21,
+        "value": 229
+      },
+      {
+        "source": 17,
+        "target": 28,
+        "value": 10
       },
       {
         "source": 17,
         "target": 27,
-        "value": 2
+        "value": 3
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "value": 45
       },
       {
         "source": 18,
@@ -104477,13 +106005,13 @@
     },
     {
       "cat": "Tech & POS",
-      "city": "Sant Cugat Del Valle",
-      "count": 83
+      "city": "Sevilla",
+      "count": 24
     },
     {
       "cat": "Tech & POS",
-      "city": "Sevilla",
-      "count": 24
+      "city": "Sant Cugat Del Valle",
+      "count": 83
     },
     {
       "cat": "Tech & POS",
@@ -104548,42 +106076,42 @@
     {
       "cat": "Retail",
       "city": "Madrid",
-      "count": 220
+      "count": 239
     },
     {
       "cat": "Retail",
       "city": "Barcelona",
-      "count": 216
+      "count": 224
     },
     {
       "cat": "Retail",
       "city": "Other",
-      "count": 33
+      "count": 46
     },
     {
       "cat": "Retail",
       "city": "Paris",
-      "count": 47
-    },
-    {
-      "cat": "Retail",
-      "city": "Sant Cugat Del Valle",
-      "count": 9
+      "count": 48
     },
     {
       "cat": "Retail",
       "city": "Sevilla",
-      "count": 20
+      "count": 25
+    },
+    {
+      "cat": "Retail",
+      "city": "Sant Cugat Del Valle",
+      "count": 10
     },
     {
       "cat": "Retail",
       "city": "New York",
-      "count": 2
+      "count": 3
     },
     {
       "cat": "Retail",
       "city": "Valencia",
-      "count": 16
+      "count": 19
     }
   ],
   "insights": {
@@ -106062,8 +107590,8 @@
         "missing": 72028,
         "weight": 10,
         "potential": 9.4,
-        "how": "GP enrichment (€)",
-        "difficulty": "paid"
+        "how": "GP scraping (Playwright)",
+        "difficulty": "medium"
       },
       {
         "field": "domain",
@@ -106080,8 +107608,8 @@
         "missing": 28019,
         "weight": 12,
         "potential": 4.4,
-        "how": "GP enrichment, scraping",
-        "difficulty": "paid"
+        "how": "GP scraping, website scraping",
+        "difficulty": "medium"
       },
       {
         "field": "industry",
@@ -106089,8 +107617,8 @@
         "missing": 4067,
         "weight": 5,
         "potential": 0.3,
-        "how": "Bulk-set RESTAURANTS",
-        "difficulty": "easy"
+        "how": "Progressive classification",
+        "difficulty": "medium"
       }
     ]
   }
