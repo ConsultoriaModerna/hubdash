@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-02T10:32:09",
-  "fetch_seconds": 136.7,
+  "generated_at": "2026-05-02T11:15:18",
+  "fetch_seconds": 136.2,
   "summary": {
-    "companies_total": 76481,
+    "companies_total": 76480,
     "contacts_total": 60689,
     "enriched_gp": 4452,
     "avg_score_companies": 56.4,
@@ -11,7 +11,7 @@
   "scores": {
     "companies": {
       "0-29": 3663,
-      "30-49": 25773,
+      "30-49": 25772,
       "50-69": 25521,
       "70-89": 18386,
       "90-100": 1291
@@ -25,11 +25,11 @@
     }
   },
   "pipeline": {
-    "total": 76481,
+    "total": 76480,
     "with_place_id": 23108,
     "phase_a_pending": 18589,
     "enriched": 4452,
-    "phase_b_pending": 53373
+    "phase_b_pending": 53372
   },
   "cities": [
     {
@@ -59,7 +59,7 @@
     },
     {
       "city": "Otras",
-      "total": 42655,
+      "total": 42654,
       "enriched": 1237
     }
   ],
@@ -185,7 +185,7 @@
       ],
       [
         2876,
-        13330,
+        13329,
         14666,
         9515,
         554
@@ -24660,19 +24660,19 @@
   },
   "field_completeness": {
     "companies": {
-      "name": 76464,
+      "name": 76463,
       "phone": 48461,
-      "domain": 37976,
-      "website": 37994,
-      "city": 71371,
+      "domain": 37975,
+      "website": 37993,
+      "city": 71417,
       "address": 66815,
       "industry": 34667,
       "google_place_id": 23108,
       "gp__rating_count": 4452,
       "gp__sentiment": 4472,
-      "num_associated_contacts": 76481,
+      "num_associated_contacts": 76480,
       "description": 29835,
-      "country": 73865
+      "country": 75246
     },
     "contacts": {
       "email": 39278,
@@ -24687,7 +24687,7 @@
       "associatedcompanyid": 44104,
       "country": 16032
     },
-    "companies_total": 76481,
+    "companies_total": 76480,
     "contacts_total": 60689
   },
   "contact_matrix": [
@@ -25296,16 +25296,31 @@
       "domain_finder": 2135,
       "contacts_mobile": 18469,
       "contacts_email": 39278
+    },
+    {
+      "ts": "2026-05-02 11:14",
+      "website": 37993,
+      "phone": 48461,
+      "domain": 37975,
+      "gp_enriched": 4452,
+      "ws_scraped": 35415,
+      "ws_emails": 10056,
+      "ws_instagram": 10926,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 18469,
+      "contacts_email": 39278
     }
   ],
   "reachability_funnel": {
-    "total": 76481,
-    "has_website": 37994,
+    "total": 76480,
+    "has_website": 37993,
     "ws_scraped": 35415,
     "ws_email_found": 10056,
     "ws_instagram": 10926,
     "has_phone": 48461,
-    "has_contacts": 41430
+    "has_contacts": 41429
   },
   "hidden_segments": [
     {
@@ -39214,9 +39229,9 @@
     ]
   },
   "domain_coverage": {
-    "total": 76481,
-    "with_domain": 37976,
-    "with_website": 37994,
+    "total": 76480,
+    "with_domain": 37975,
+    "with_website": 37993,
     "no_domain": 38505,
     "no_domain_with_contacts": 15154,
     "ws_scraped": 35415,
