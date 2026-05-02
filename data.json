@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-05-02T15:10:37",
-  "fetch_seconds": 135.2,
+  "generated_at": "2026-05-02T22:04:00",
+  "fetch_seconds": 160.5,
   "summary": {
     "companies_total": 76480,
     "contacts_total": 60689,
     "enriched_gp": 4452,
-    "avg_score_companies": 60.1,
-    "avg_score_contacts": 55.1
+    "avg_score_companies": 60.0,
+    "avg_score_contacts": 55.4
   },
   "scores": {
     "companies": {
       "0-29": 578,
-      "30-49": 23725,
-      "50-69": 27856,
-      "70-89": 22979,
-      "90-100": 1342
+      "30-49": 23485,
+      "50-69": 28714,
+      "70-89": 22223,
+      "90-100": 1480
     },
     "contacts": {
       "0-29": 3520,
-      "30-49": 21338,
-      "50-69": 21578,
-      "70-89": 14215,
-      "90-100": 38
+      "30-49": 21027,
+      "50-69": 21200,
+      "70-89": 14902,
+      "90-100": 40
     }
   },
   "pipeline": {
@@ -91,37 +91,37 @@
   ],
   "contact_city_assets": {
     "Barcelona": {
-      "mobile": 3001,
-      "email": 3655,
-      "phone": 3538
+      "mobile": 3142,
+      "email": 3657,
+      "phone": 4722
     },
     "Madrid": {
-      "mobile": 3201,
+      "mobile": 3491,
       "email": 3287,
-      "phone": 3765
+      "phone": 4262
     },
     "Valencia": {
-      "mobile": 703,
+      "mobile": 765,
       "email": 701,
-      "phone": 920
+      "phone": 1032
     },
     "Sevilla": {
-      "mobile": 15,
+      "mobile": 29,
       "email": 93,
-      "phone": 39
+      "phone": 73
     },
     "Bilbao": {
-      "mobile": 361,
+      "mobile": 362,
       "email": 281,
-      "phone": 369
+      "phone": 373
     }
   },
   "golden_contacts": {
     "total": 60689,
-    "has_mobile": 18469,
-    "has_mobile_email": 14087,
-    "has_mobile_valid_email": 12087,
-    "has_mobile_valid_company": 11149
+    "has_mobile": 20803,
+    "has_mobile_email": 15846,
+    "has_mobile_valid_email": 13412,
+    "has_mobile_valid_company": 12474
   },
   "mv_email_dist": {
     "ok": 32983,
@@ -150,96 +150,96 @@
     "companies": [
       [
         27,
-        4099,
-        3722,
-        3895,
-        386
+        4105,
+        3811,
+        3791,
+        395
       ],
       [
         39,
         3148,
-        4658,
-        4592,
-        282
+        4866,
+        4339,
+        327
       ],
       [
         5,
         952,
-        2049,
-        1433,
-        70
+        2141,
+        1340,
+        71
       ],
       [
         6,
         741,
-        1717,
-        1107,
-        48
+        1809,
+        1013,
+        50
       ],
       [
         0,
         144,
-        380,
-        322,
+        400,
+        302,
         4
       ],
       [
         501,
-        14641,
-        15330,
-        11630,
-        552
+        14395,
+        15687,
+        11438,
+        633
       ]
     ],
     "contacts": [
       [
         1,
-        620,
-        2240,
-        2322,
+        573,
+        2105,
+        2504,
         14
       ],
       [
         2,
-        488,
-        1764,
-        2504,
+        431,
+        1701,
+        2624,
         2
       ],
       [
         0,
-        193,
-        341,
-        557,
+        180,
+        338,
+        573,
         6
       ],
       [
         0,
-        98,
-        70,
-        25,
-        0
+        96,
+        66,
+        30,
+        1
       ],
       [
         0,
         9,
-        125,
-        258,
+        124,
+        259,
         1
       ],
       [
         3517,
-        19930,
-        17038,
-        8549,
-        15
+        19738,
+        16866,
+        8912,
+        16
       ]
     ]
   },
   "contact_assets": {
-    "mobile": 18469,
-    "email": 39278,
-    "phone": 28190,
+    "mobile": 20803,
+    "email": 39322,
+    "phone": 33732,
     "total": 60689
   },
   "bubbles": [
@@ -248,7 +248,7 @@
       "n": "Mercat de la Boqueria",
       "r": 4.5,
       "rv": 209734,
-      "s": 85,
+      "s": 90,
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
@@ -293,7 +293,7 @@
       "n": "Mercado de San Miguel",
       "r": 4.4,
       "rv": 158792,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -530,7 +530,7 @@
       "n": "El Nacional Barcelona",
       "r": 4.4,
       "rv": 40073,
-      "s": 85,
+      "s": 90,
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
@@ -575,7 +575,7 @@
       "n": "Mercat de Sant Antoni",
       "r": 4.4,
       "rv": 38169,
-      "s": 70,
+      "s": 75,
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
@@ -1346,7 +1346,7 @@
       "n": "Sobrino de Botín",
       "r": 4.3,
       "rv": 16005,
-      "s": 70,
+      "s": 75,
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
@@ -2118,7 +2118,7 @@
       "n": "Los Montes de Galicia",
       "r": 4.8,
       "rv": 13114,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -3100,7 +3100,7 @@
       "n": "El Rey de los Tacos",
       "r": 4.7,
       "rv": 11297,
-      "s": 58,
+      "s": 63,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -3827,7 +3827,7 @@
       "n": "El Faro de Cádiz",
       "r": 4.4,
       "rv": 10098,
-      "s": 70,
+      "s": 75,
       "c": "Cádiz",
       "ct": 0,
       "se": "Neu",
@@ -4512,7 +4512,7 @@
       "n": "Bar Restaurante Los Mellizos",
       "r": 4.2,
       "rv": 9203,
-      "s": 85,
+      "s": 90,
       "c": "Málaga",
       "ct": 1,
       "se": "Pos",
@@ -4898,7 +4898,7 @@
       "n": "La Rosa del Desierto",
       "r": 4.4,
       "rv": 8468,
-      "s": 70,
+      "s": 75,
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
@@ -4943,7 +4943,7 @@
       "n": "La Cachapera BCN",
       "r": 4.6,
       "rv": 8462,
-      "s": 85,
+      "s": 90,
       "c": "Barcelona",
       "ct": 1,
       "se": "Neu",
@@ -5424,7 +5424,7 @@
       "n": "Mercado de la Reina",
       "r": 4.2,
       "rv": 7930,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -5471,7 +5471,7 @@
       "n": "Taberna La Gaditana",
       "r": 4.4,
       "rv": 7873,
-      "s": 75,
+      "s": 80,
       "c": "Madrid",
       "ct": 1,
       "se": "",
@@ -5806,7 +5806,7 @@
       "n": "Venta de Aires",
       "r": 4.1,
       "rv": 7762,
-      "s": 85,
+      "s": 90,
       "c": "Toledo",
       "ct": 1,
       "se": "Neu",
@@ -6253,7 +6253,7 @@
       "n": "La Mi Venta",
       "r": 4.7,
       "rv": 7386,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -6301,7 +6301,7 @@
       "n": "Lateral Arturo Soria",
       "r": 4.2,
       "rv": 7315,
-      "s": 70,
+      "s": 75,
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
@@ -7084,7 +7084,7 @@
       "n": "La Máquina de Chamberí",
       "r": 4.3,
       "rv": 6713,
-      "s": 75,
+      "s": 80,
       "c": "Madrid",
       "ct": 2,
       "se": "",
@@ -7582,7 +7582,7 @@
       "n": "Cala Bandida",
       "r": 4.1,
       "rv": 6492,
-      "s": 85,
+      "s": 90,
       "c": "Jávea",
       "ct": 1,
       "se": "Pos",
@@ -8118,7 +8118,7 @@
       "n": "Puerta 57",
       "r": 4.6,
       "rv": 6287,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -8817,7 +8817,7 @@
       "n": "Mar Beach Restaurant",
       "r": 4.6,
       "rv": 5983,
-      "s": 75,
+      "s": 80,
       "c": "Barcelona",
       "ct": 1,
       "se": "",
@@ -8960,7 +8960,7 @@
       "n": "Kilómetros de Pizza Av Brasil",
       "r": 4.4,
       "rv": 5936,
-      "s": 75,
+      "s": 80,
       "c": "Madrid",
       "ct": 1,
       "se": "",
@@ -9790,7 +9790,7 @@
       "n": "Jacqueline Barcelona",
       "r": 4.6,
       "rv": 5754,
-      "s": 85,
+      "s": 90,
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
@@ -10231,7 +10231,7 @@
       "n": "Sagardi",
       "r": 4.4,
       "rv": 5583,
-      "s": 85,
+      "s": 90,
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
@@ -10328,7 +10328,7 @@
       "n": "Sala de Despiece",
       "r": 4.4,
       "rv": 5550,
-      "s": 70,
+      "s": 75,
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
@@ -10619,7 +10619,7 @@
       "n": "Restaurante El Rubio 360º",
       "r": 4.5,
       "rv": 5470,
-      "s": 85,
+      "s": 90,
       "c": "Lo Pagán",
       "ct": 1,
       "se": "Pos",
@@ -10762,7 +10762,7 @@
       "n": "Café La Ola",
       "r": 4.4,
       "rv": 5417,
-      "s": 70,
+      "s": 75,
       "c": "Puerto del Carmen",
       "ct": 0,
       "se": "Pos",
@@ -11157,7 +11157,7 @@
       "n": "Mano a Mano Centro Pizzería y Empanadill",
       "r": 4.6,
       "rv": 5261,
-      "s": 85,
+      "s": 90,
       "c": "Murcia",
       "ct": 1,
       "se": "Pos",
@@ -11205,7 +11205,7 @@
       "n": "Ávila Bar",
       "r": 4.9,
       "rv": 5255,
-      "s": 85,
+      "s": 80,
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
@@ -11350,7 +11350,7 @@
       "n": "La Mafia Se Sienta a la Mesa Plaza Colón",
       "r": 4.5,
       "rv": 5218,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -11397,7 +11397,7 @@
       "n": "Restaurante Cafetería Viena",
       "r": 4.6,
       "rv": 5214,
-      "s": 70,
+      "s": 75,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -12525,7 +12525,7 @@
       "n": "Los Galayos",
       "r": 4.2,
       "rv": 4859,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -12572,7 +12572,7 @@
       "n": "Restaurante Barlovento",
       "r": 4.2,
       "rv": 4852,
-      "s": 70,
+      "s": 75,
       "c": "Torrevieja",
       "ct": 0,
       "se": "Pos",
@@ -13311,7 +13311,7 @@
       "n": "La Tagliatella",
       "r": 4.5,
       "rv": 4705,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -13506,7 +13506,7 @@
       "n": "Bar Típico Barra de Tapas",
       "r": 4.6,
       "rv": 4654,
-      "s": 85,
+      "s": 80,
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
@@ -14000,7 +14000,7 @@
       "n": "Arzábal",
       "r": 4.1,
       "rv": 4581,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -15432,7 +15432,7 @@
       "n": "Sibuya Urban Sushi Bar",
       "r": 4.6,
       "rv": 4322,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Neu",
@@ -15626,7 +15626,7 @@
       "n": "Grupo Cappuccino",
       "r": 3.8,
       "rv": 4292,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -15867,7 +15867,7 @@
       "n": "La Mafia Se Sienta a la Mesa",
       "r": 4.3,
       "rv": 4257,
-      "s": 60,
+      "s": 65,
       "c": "Málaga",
       "ct": 6,
       "se": "",
@@ -15960,7 +15960,7 @@
       "n": "La Parada del Mar",
       "r": 4.6,
       "rv": 4254,
-      "s": 70,
+      "s": 75,
       "c": "Palma",
       "ct": 0,
       "se": "Pos",
@@ -16634,7 +16634,7 @@
       "n": "El Gallo Ronco",
       "r": 4.3,
       "rv": 4181,
-      "s": 85,
+      "s": 90,
       "c": "Málaga",
       "ct": 1,
       "se": "Pos",
@@ -17170,7 +17170,7 @@
       "n": "Balcón de María",
       "r": 4.1,
       "rv": 4101,
-      "s": 85,
+      "s": 90,
       "c": "Santa Ponsa",
       "ct": 1,
       "se": "Pos",
@@ -17314,7 +17314,7 @@
       "n": "La Mafia Se Sienta a la Mesa",
       "r": 4.3,
       "rv": 4050,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Neu",
@@ -17754,7 +17754,7 @@
       "n": "El Paraguas",
       "r": 4.4,
       "rv": 3992,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -17902,7 +17902,7 @@
       "n": "El Cable Bar",
       "r": 4.4,
       "rv": 3989,
-      "s": 85,
+      "s": 90,
       "c": "Sitges",
       "ct": 1,
       "se": "Pos",
@@ -19265,7 +19265,7 @@
       "n": "Bar Restaurante Los Pinos",
       "r": 4.1,
       "rv": 3792,
-      "s": 85,
+      "s": 90,
       "c": "Multiple locations",
       "ct": 1,
       "se": "Pos",
@@ -20288,7 +20288,7 @@
       "n": "La Bodeguita",
       "r": 4.0,
       "rv": 3669,
-      "s": 100,
+      "s": 95,
       "c": "Granada",
       "ct": 2,
       "se": "Pos",
@@ -22503,7 +22503,7 @@
       "n": "Patio de Leones",
       "r": 3.8,
       "rv": 3459,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -22551,7 +22551,7 @@
       "n": "La Olla",
       "r": 4.4,
       "rv": 3448,
-      "s": 70,
+      "s": 75,
       "c": "Bilbao",
       "ct": 0,
       "se": "Pos",
@@ -23724,7 +23724,7 @@
       "n": "La Mar Salá",
       "r": 4.2,
       "rv": 3317,
-      "s": 70,
+      "s": 75,
       "c": "Cullera",
       "ct": 0,
       "se": "Pos",
@@ -24267,7 +24267,7 @@
       "n": "El Qüenco de Pepa",
       "r": 4.3,
       "rv": 3236,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -24409,7 +24409,7 @@
       "n": "Tragabuches",
       "r": 4.6,
       "rv": 3227,
-      "s": 85,
+      "s": 90,
       "c": "Madrid",
       "ct": 1,
       "se": "Pos",
@@ -24554,7 +24554,7 @@
       "n": "El Dorado Chicken",
       "r": 4.4,
       "rv": 3214,
-      "s": 85,
+      "s": 90,
       "c": "Barcelona",
       "ct": 1,
       "se": "Pos",
@@ -24661,25 +24661,25 @@
   "field_completeness": {
     "companies": {
       "name": 76463,
-      "phone": 48461,
+      "phone": 48465,
       "domain": 37975,
       "website": 37993,
       "city": 71417,
       "address": 66815,
-      "industry": 72413,
+      "industry": 72692,
       "google_place_id": 23108,
       "gp__rating_count": 4452,
       "gp__sentiment": 4472,
       "num_associated_contacts": 76480,
-      "description": 29835,
-      "country": 75246
+      "description": 29232,
+      "country": 75247
     },
     "contacts": {
-      "email": 39278,
-      "mobilephone": 18469,
+      "email": 39322,
+      "mobilephone": 20803,
       "firstname": 57279,
       "lastname": 15222,
-      "phone": 28190,
+      "phone": 33732,
       "company": 48828,
       "city": 46701,
       "jobtitle": 2188,
@@ -24719,67 +24719,67 @@
       1,
       1,
       1,
-      7
+      41
     ],
     [
       1,
       1,
       0,
-      150
+      547
     ],
     [
       1,
       0,
       1,
-      7765
+      7462
     ],
     [
       1,
       0,
       0,
-      13416
-    ],
-    [
-      2,
-      1,
-      1,
-      2106
+      12977
     ],
     [
       2,
       1,
+      1,
+      3268
+    ],
+    [
+      2,
+      1,
       0,
-      4147
+      4324
     ],
     [
       2,
       0,
       1,
-      14015
+      12478
     ],
     [
       2,
       0,
       0,
-      1310
+      1130
     ],
     [
       3,
       1,
       1,
-      11936
+      12497
     ],
     [
       3,
       1,
       0,
-      76
+      77
     ],
     [
       3,
       0,
       1,
-      2203
+      2328
     ],
     [
       3,
@@ -24791,7 +24791,7 @@
       4,
       1,
       1,
-      38
+      40
     ],
     [
       4,
@@ -25341,15 +25341,30 @@
       "domain_finder": 2135,
       "contacts_mobile": 18469,
       "contacts_email": 39278
+    },
+    {
+      "ts": "2026-05-02 22:02",
+      "website": 37993,
+      "phone": 48465,
+      "domain": 37975,
+      "gp_enriched": 4452,
+      "ws_scraped": 36850,
+      "ws_emails": 10554,
+      "ws_instagram": 11548,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 20803,
+      "contacts_email": 39322
     }
   ],
   "reachability_funnel": {
     "total": 76480,
     "has_website": 37993,
-    "ws_scraped": 35415,
-    "ws_email_found": 10056,
-    "ws_instagram": 10926,
-    "has_phone": 48461,
+    "ws_scraped": 36850,
+    "ws_email_found": 10554,
+    "ws_instagram": 11548,
+    "has_phone": 48465,
     "has_contacts": 41429
   },
   "hidden_segments": [
@@ -25367,7 +25382,7 @@
         "Barcelona": 1
       },
       "avg_rating": 4.6,
-      "avg_score": 60.2
+      "avg_score": 62.2
     },
     {
       "id": "slow_service",
@@ -25481,7 +25496,7 @@
         "Santiago de Composte": 1
       },
       "avg_rating": 4.33,
-      "avg_score": 90.9
+      "avg_score": 91.4
     },
     {
       "id": "brunch_econ",
@@ -25564,7 +25579,7 @@
         "Cullera": 1
       },
       "avg_rating": 4.34,
-      "avg_score": 91.8
+      "avg_score": 92.2
     },
     {
       "id": "sports_bar",
@@ -25645,7 +25660,7 @@
         "Kalamazoo": 1
       },
       "avg_rating": 4.34,
-      "avg_score": 92.6
+      "avg_score": 92.5
     },
     {
       "id": "neg_crisis",
@@ -25685,7 +25700,7 @@
         "Malaga": 1
       },
       "avg_rating": 4.29,
-      "avg_score": 91.3
+      "avg_score": 92.2
     },
     {
       "id": "no_reserv",
@@ -25860,7 +25875,7 @@
       "who_signs": "Propietario / Finanzas",
       "timing": "nov_dec",
       "count": 194,
-      "avg_score": 17.1,
+      "avg_score": 16.0,
       "cities": {
         "Barcelona": 57,
         "Madrid": 79,
@@ -25950,7 +25965,7 @@
         "ph": "934 13 23 03",
         "r": 4.5,
         "rv": 209734,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "boqueria.barcelona",
         "tp": "Market",
@@ -25978,7 +25993,7 @@
         "ph": "935 18 50 53",
         "r": 4.4,
         "rv": 40073,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "elnacionalbcn.com",
         "tp": "Spanish Restaurant",
@@ -25992,7 +26007,7 @@
         "ph": "934 26 35 21",
         "r": 4.4,
         "rv": 38169,
-        "s": 70,
+        "s": 75,
         "wb": 0,
         "dm": "",
         "tp": "Market",
@@ -26328,7 +26343,7 @@
         "ph": "933 10 17 98",
         "r": 4.4,
         "rv": 8468,
-        "s": 70,
+        "s": 75,
         "wb": 0,
         "dm": "",
         "tp": "Mexican Restaurant",
@@ -26342,7 +26357,7 @@
         "ph": "932 20 07 09",
         "r": 4.6,
         "rv": 8462,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "lacachapera.es",
         "tp": "Restaurant",
@@ -26720,7 +26735,7 @@
         "ph": "938 67 92 21",
         "r": 4.6,
         "rv": 5983,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "restaurantemar.com",
         "tp": "Restaurant",
@@ -26860,7 +26875,7 @@
         "ph": "930 46 75 11",
         "r": 4.6,
         "rv": 5754,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "jacquelinebarcelona.com",
         "tp": "Mediterranean Restaurant",
@@ -26874,7 +26889,7 @@
         "ph": "933 19 99 93",
         "r": 4.4,
         "rv": 5583,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "sagardi.com",
         "tp": "Basque Restaurant",
@@ -27952,7 +27967,7 @@
         "ph": "632 62 96 29",
         "r": 4.4,
         "rv": 3214,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "eldoradochicken.com",
         "tp": "Peruvian Restaurant",
@@ -29016,7 +29031,7 @@
         "ph": "932 68 36 24",
         "r": 4.4,
         "rv": 2229,
-        "s": 70,
+        "s": 75,
         "wb": 0,
         "dm": "",
         "tp": "Peruvian Restaurant",
@@ -29086,7 +29101,7 @@
         "ph": "934 46 40 82",
         "r": 4.2,
         "rv": 2198,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "senoriodeperubarcelona.com",
         "tp": "Peruvian Restaurant",
@@ -29842,7 +29857,7 @@
         "ph": "933 19 80 22",
         "r": 4.5,
         "rv": 1673,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "restaurantesalero.com",
         "tp": "Restaurant",
@@ -29884,7 +29899,7 @@
         "ph": "932217140",
         "r": 3.8,
         "rv": 1635,
-        "s": 100,
+        "s": 95,
         "wb": 1,
         "dm": "restaurant-port-vell-restaurant.negocio.",
         "tp": "Restaurante",
@@ -31060,7 +31075,7 @@
         "ph": "937 43 03 58",
         "r": 4.6,
         "rv": 1270,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "amorino.com",
         "tp": "Ice Cream Shop",
@@ -31074,7 +31089,7 @@
         "ph": "34931380319",
         "r": 4.6,
         "rv": 1264,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "intichaska.negocio.site",
         "tp": "",
@@ -31564,7 +31579,7 @@
         "ph": "932 66 00 41",
         "r": 4.4,
         "rv": 1125,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "Bar",
@@ -33874,7 +33889,7 @@
         "ph": "696890345",
         "r": 4.7,
         "rv": 613,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "el-rincon-de-luca.negocio.site",
         "tp": "Bar restaurante",
@@ -33916,7 +33931,7 @@
         "ph": "34931389579",
         "r": 3.8,
         "rv": 607,
-        "s": 100,
+        "s": 95,
         "wb": 1,
         "dm": "cafetapas-restaurant.negocio.site",
         "tp": "Bar",
@@ -34168,7 +34183,7 @@
         "ph": "34935126900",
         "r": 4.8,
         "rv": 557,
-        "s": 100,
+        "s": 95,
         "wb": 1,
         "dm": "kiwami-japanese-restaurant.negocio.site",
         "tp": "Restaurante japonés",
@@ -34224,7 +34239,7 @@
         "ph": "934875216",
         "r": 3.8,
         "rv": 551,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "restauranteseven.negocio.site",
         "tp": "",
@@ -34602,7 +34617,7 @@
         "ph": "936318610",
         "r": 4.4,
         "rv": 498,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "selene-restaurant.negocio.site",
         "tp": "",
@@ -34882,7 +34897,7 @@
         "ph": "932031036",
         "r": 4.0,
         "rv": 455,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "restaurantcasajoana.negocio.site",
         "tp": "Restaurante",
@@ -35134,7 +35149,7 @@
         "ph": "933115713",
         "r": 4.4,
         "rv": 415,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "restaurant-la-brotxeta.negocio.site",
         "tp": "",
@@ -36086,7 +36101,7 @@
         "ph": "34934903708",
         "r": 4.2,
         "rv": 294,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "el-pica-i-beu-de-sants.negocio.site",
         "tp": "Restaurante",
@@ -36394,7 +36409,7 @@
         "ph": "",
         "r": 4.9,
         "rv": 242,
-        "s": 73,
+        "s": 68,
         "wb": 1,
         "dm": "nonno-zacca-pizzeria-bcn.negocio.site",
         "tp": "",
@@ -36898,7 +36913,7 @@
         "ph": "34938099687",
         "r": 4.9,
         "rv": 188,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "iaiaceliabcn.negocio.site",
         "tp": "Restaurante",
@@ -36954,7 +36969,7 @@
         "ph": "934 10 83 90",
         "r": 4.4,
         "rv": 187,
-        "s": 85,
+        "s": 90,
         "wb": 1,
         "dm": "elquatredelondres.com",
         "tp": "Tapas Restaurant",
@@ -37346,7 +37361,7 @@
         "ph": "34934110282",
         "r": 4.0,
         "rv": 143,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "restaurante-el-rebost-de-vallespir.negoc",
         "tp": "Restaurante",
@@ -37486,7 +37501,7 @@
         "ph": "930312997",
         "r": 4.0,
         "rv": 116,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "larrosseria-com-a-casa.negocio.site",
         "tp": "",
@@ -37528,7 +37543,7 @@
         "ph": "632023762",
         "r": 4.3,
         "rv": 113,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "gurleen-barbacoa.negocio.site",
         "tp": "Bar restaurante",
@@ -37794,7 +37809,7 @@
         "ph": "661664433",
         "r": 4.5,
         "rv": 83,
-        "s": 80,
+        "s": 75,
         "wb": 1,
         "dm": "pizza-hot-bar-restaurante.negocio.site",
         "tp": "",
@@ -37990,7 +38005,7 @@
         "ph": "697838797",
         "r": 4.1,
         "rv": 64,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "barrestaurantstudio44.negocio.site",
         "tp": "Restaurante",
@@ -38018,7 +38033,7 @@
         "ph": "640 82 15 46",
         "r": 4.4,
         "rv": 61,
-        "s": 55,
+        "s": 60,
         "wb": 0,
         "dm": "",
         "tp": "Bar",
@@ -38088,7 +38103,7 @@
         "ph": "935648785",
         "r": 4.9,
         "rv": 55,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "ajoyoreganobcn.negocio.site",
         "tp": "Bar",
@@ -38214,7 +38229,7 @@
         "ph": "931240389",
         "r": 4.7,
         "rv": 44,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "el-barrilet.negocio.site",
         "tp": "Bar",
@@ -38340,7 +38355,7 @@
         "ph": "34936052332",
         "r": 4.8,
         "rv": 37,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "brusi-47-gourmet.negocio.site",
         "tp": "Restaurante",
@@ -38396,7 +38411,7 @@
         "ph": "936598576",
         "r": 3.6,
         "rv": 34,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "bar-restaurante-familiar-que-morro.negoc",
         "tp": "Restaurante",
@@ -38718,7 +38733,7 @@
         "ph": "930090534",
         "r": 4.6,
         "rv": 15,
-        "s": 80,
+        "s": 75,
         "wb": 1,
         "dm": "frankfurt-el-port-vell.negocio.site",
         "tp": "",
@@ -38914,7 +38929,7 @@
         "ph": "34679137204",
         "r": 4.0,
         "rv": 8,
-        "s": 85,
+        "s": 80,
         "wb": 1,
         "dm": "can-rovira.negocio.site",
         "tp": "Bar restaurante",
@@ -39264,14 +39279,14 @@
     "with_website": 37993,
     "no_domain": 38505,
     "no_domain_with_contacts": 15154,
-    "ws_scraped": 35415,
-    "ws_emails": 10056,
-    "ws_instagram": 10926,
+    "ws_scraped": 36850,
+    "ws_emails": 10554,
+    "ws_instagram": 11548,
     "domain_finder_found": 2135
   },
   "enrich_sources": {
     "gp_enriched": 4452,
-    "ws_scraped": 35415,
+    "ws_scraped": 36850,
     "ta_enriched": 832,
     "rg_enriched": 569,
     "domain_finder": 2135,
@@ -43479,7 +43494,7 @@
       "dm": "churreria-alicante.negocio.site",
       "wb": 1,
       "ph": "",
-      "s": 68,
+      "s": 63,
       "ct": 1,
       "tp": "",
       "la": null,
@@ -43513,7 +43528,7 @@
       "dm": "churreria-mis-ninos.negocio.site",
       "wb": 1,
       "ph": "678140707",
-      "s": 70,
+      "s": 65,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -43724,6 +43739,23 @@
       "ln": null,
       "addr": "Pla√ßa de Vannes, 5, 46007 Val√®ncia, Valencia, Spain",
       "zip": ""
+    },
+    {
+      "id": "10798282470",
+      "n": "Coca-Cola Europacific Partners",
+      "ind": "FOOD_BEVERAGES",
+      "cat": "food",
+      "c": "Uxbridge",
+      "dm": "cocacolaep.com",
+      "wb": 1,
+      "ph": "+44 1895 231313",
+      "s": 75,
+      "ct": 2,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": "UB8 1RG"
     },
     {
       "id": "9922000614",
@@ -44329,7 +44361,7 @@
       "dm": "daras-coffee-lounge.negocio.site",
       "wb": 1,
       "ph": "631560592",
-      "s": 65,
+      "s": 60,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -46148,7 +46180,7 @@
       "dm": "cateringmarcfosh.com",
       "wb": 1,
       "ph": "",
-      "s": 63,
+      "s": 68,
       "ct": 1,
       "tp": "",
       "la": null,
@@ -48494,7 +48526,7 @@
       "dm": "lempanadite.negocio.site",
       "wb": 1,
       "ph": "934351310",
-      "s": 70,
+      "s": 65,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -53118,7 +53150,7 @@
       "dm": "teteria-la-oriental-sl.negocio.site",
       "wb": 1,
       "ph": "655363316",
-      "s": 70,
+      "s": 65,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -54087,7 +54119,7 @@
       "dm": "aji-panca-2-oficial.negocio.site",
       "wb": 1,
       "ph": "653758907",
-      "s": 70,
+      "s": 65,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -57232,7 +57264,7 @@
       "dm": "raquel-heladeriadeautor.negocio.site",
       "wb": 1,
       "ph": "966673902",
-      "s": 80,
+      "s": 75,
       "ct": 1,
       "tp": "",
       "la": null,
@@ -65059,6 +65091,40 @@
       "ln": null,
       "addr": "PZ XAVIER CUGAT 2, PARC EMP, ST.CUGAT NORD, EDIF D P.",
       "zip": ""
+    },
+    {
+      "id": "422425772280",
+      "n": "Grupo Fullest - Holding",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Lisboa",
+      "dm": "",
+      "wb": 0,
+      "ph": "+351 965 254 052",
+      "s": 45,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "34 Rua Rosa Araújo",
+      "zip": "1250-096"
+    },
+    {
+      "id": "422481671364",
+      "n": "Grupo Fullest - Holding",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Lisboa",
+      "dm": "",
+      "wb": 0,
+      "ph": "+351 965254052",
+      "s": 45,
+      "ct": 0,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "34 Rua Rosa Araújo",
+      "zip": "1250-096"
     },
     {
       "id": "9919834862",
@@ -74224,6 +74290,40 @@
       "zip": "72703"
     },
     {
+      "id": "38307410129",
+      "n": "Thefork",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "",
+      "wb": 1,
+      "ph": "",
+      "s": 55,
+      "ct": 9,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "5 rue Caron",
+      "zip": "75004"
+    },
+    {
+      "id": "348173740243",
+      "n": "Thefork, a Tripadvisor Company",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Other",
+      "dm": "careers.thefork.com",
+      "wb": 1,
+      "ph": "",
+      "s": 45,
+      "ct": 2,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "",
+      "zip": ""
+    },
+    {
       "id": "377298606290",
       "n": "Theramatchai S.L",
       "ind": "COMPUTER_SOFTWARE",
@@ -75890,6 +75990,40 @@
       "zip": ""
     },
     {
+      "id": "37800313069",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Nice",
+      "dm": "faragoontheroof.com",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 2,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "59 Promenade des Anglais",
+      "zip": "6000"
+    },
+    {
+      "id": "37800316139",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Toulouse",
+      "dm": "pizzerianumero15.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "15 avenue de Larrieu",
+      "zip": "31100"
+    },
+    {
       "id": "38072394947",
       "n": "Zenchef",
       "ind": "COMPUTER_SOFTWARE",
@@ -75905,6 +76039,23 @@
       "ln": null,
       "addr": "307 Rue du Faubourg Saint-Antoine",
       "zip": "75011"
+    },
+    {
+      "id": "38072395996",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "la-bonne-ecole.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "13 rue des Cloys",
+      "zip": "75018"
     },
     {
       "id": "38072397045",
@@ -75941,6 +76092,142 @@
       "zip": "75014"
     },
     {
+      "id": "38090621135",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "alamesa.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "99 rue des Dames",
+      "zip": "75017"
+    },
+    {
+      "id": "38124893371",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Lyon",
+      "dm": "copainscopinessurlacolline.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "3 rue Duviard",
+      "zip": "69004"
+    },
+    {
+      "id": "38124894398",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "gambino-restaurant.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "6 rue Gomboust",
+      "zip": "75001"
+    },
+    {
+      "id": "38289366220",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "latable.bio",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "55 Rue de Prony",
+      "zip": "75017"
+    },
+    {
+      "id": "38289368308",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "foodi-jia-ba-buay.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "2 Rue du Nil",
+      "zip": "75002"
+    },
+    {
+      "id": "38307414254",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "La Madeleinembersart",
+      "dm": "dina-patesfraiches.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "362 Avenue de Dunkerque",
+      "zip": "59130"
+    },
+    {
+      "id": "38307414255",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "lewiriwiri.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "16 Cours de Vincennes",
+      "zip": "75012"
+    },
+    {
+      "id": "38382152907",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Lyon",
+      "dm": "brasserie-folliet-lyon.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 63,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "211 Rue Duguesclin",
+      "zip": "69003"
+    },
+    {
       "id": "38382153934",
       "n": "Zenchef",
       "ind": "COMPUTER_SOFTWARE",
@@ -75958,6 +76245,57 @@
       "zip": "75017"
     },
     {
+      "id": "38382153974",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Lille",
+      "dm": "auxbretons.com",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "18 Place de la Nouvelle Aventure",
+      "zip": "59000"
+    },
+    {
+      "id": "38382154987",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "indian-house.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "27 Rue de Gassendi",
+      "zip": "75014"
+    },
+    {
+      "id": "38436290794",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Plobsheim",
+      "dm": "restaurant-auberge-du-moulin.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "24 rue du General Leclerc",
+      "zip": "67115"
+    },
+    {
       "id": "38436292814",
       "n": "Zenchef",
       "ind": "COMPUTER_SOFTWARE",
@@ -75973,6 +76311,40 @@
       "ln": null,
       "addr": "6",
       "zip": "75009"
+    },
+    {
+      "id": "38436294878",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Nantes",
+      "dm": "buvette-nantes.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "40 quai de Malakoff",
+      "zip": "44000"
+    },
+    {
+      "id": "38446058743",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "piou-restaurant.fr",
+      "wb": 1,
+      "ph": "33614683251",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "3 Place Cambronne",
+      "zip": "75015"
     },
     {
       "id": "38466634960",
@@ -76009,6 +76381,23 @@
       "zip": "59800"
     },
     {
+      "id": "38468429006",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "restaurantlacitrouille.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "10 rue Gregoire de Tours",
+      "zip": "75006"
+    },
+    {
       "id": "38468432066",
       "n": "Zenchef",
       "ind": "COMPUTER_SOFTWARE",
@@ -76024,6 +76413,40 @@
       "ln": null,
       "addr": "10 rue Terme",
       "zip": "69001"
+    },
+    {
+      "id": "38470226161",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "labombeparis.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "20",
+      "zip": "75002"
+    },
+    {
+      "id": "38470227147",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "pitanga-paris.com",
+      "wb": 1,
+      "ph": "0033 1 40 28 12 69",
+      "s": 80,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "11 rue Jean-Jacques-Rousseau",
+      "zip": "75001"
     },
     {
       "id": "38470238448",
@@ -76043,6 +76466,57 @@
       "zip": "13001"
     },
     {
+      "id": "38470288616",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Strasbourg",
+      "dm": "lapetitemairie-strasbourg.com",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "8 rue Brulee Ex-Nom de Rue Brûlée Déformé du Nom de Famille ",
+      "zip": "67000"
+    },
+    {
+      "id": "38470289646",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Lille",
+      "dm": "latabledusiam.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "85 rue de la Monnaie",
+      "zip": "59800"
+    },
+    {
+      "id": "38470293701",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "La Madeleine",
+      "dm": "restaurant-lorangerie.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "153 rue du General de Gaulle",
+      "zip": "59110"
+    },
+    {
       "id": "38518889707",
       "n": "Zenchef",
       "ind": "COMPUTER_SOFTWARE",
@@ -76060,6 +76534,23 @@
       "zip": "75003"
     },
     {
+      "id": "38518890713",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Paris",
+      "dm": "shinkoparis.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "21 rue Vignon",
+      "zip": "75008"
+    },
+    {
       "id": "38562100465",
       "n": "Zenchef",
       "ind": "COMPUTER_SOFTWARE",
@@ -76075,6 +76566,40 @@
       "ln": null,
       "addr": "rue des Troenes",
       "zip": "31200"
+    },
+    {
+      "id": "38576522435",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Lyon",
+      "dm": "garri.fr",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "8 Place Tabareau",
+      "zip": "69004"
+    },
+    {
+      "id": "38576525554",
+      "n": "Zenchef",
+      "ind": "COMPUTER_SOFTWARE",
+      "cat": "tech",
+      "c": "Wambrechies",
+      "dm": "lasquadrawambrechies.com",
+      "wb": 1,
+      "ph": "",
+      "s": 68,
+      "ct": 1,
+      "tp": "",
+      "la": null,
+      "ln": null,
+      "addr": "150 avenue de l Espace",
+      "zip": "59118"
     },
     {
       "id": "37800314090",
@@ -84857,7 +85382,7 @@
       "dm": "arabica-foods-market.negocio.site",
       "wb": 1,
       "ph": "871965576",
-      "s": 80,
+      "s": 75,
       "ct": 1,
       "tp": "",
       "la": null,
@@ -86268,7 +86793,7 @@
       "dm": "bnjud-shop.negocio.site",
       "wb": 1,
       "ph": "",
-      "s": 58,
+      "s": 53,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -87067,7 +87592,7 @@
       "dm": "jamaica-cafeteria.negocio.site",
       "wb": 1,
       "ph": "915938794",
-      "s": 70,
+      "s": 65,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -88240,7 +88765,7 @@
       "dm": "coffeeshoppoeta.negocio.site",
       "wb": 1,
       "ph": "636001350",
-      "s": 70,
+      "s": 65,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -93986,7 +94511,7 @@
       "dm": "junio-shop.negocio.site",
       "wb": 1,
       "ph": "",
-      "s": 58,
+      "s": 53,
       "ct": 0,
       "tp": "",
       "la": null,
@@ -96919,6 +97444,23 @@
       "zip": "WC1B 5JA"
     },
     {
+      "id": "428063179980",
+      "n": "Mercado de San Miguel",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Madrid",
+      "dm": "mercadodesanmiguel.es",
+      "wb": 1,
+      "ph": "915 42 49 36",
+      "s": 90,
+      "ct": 1,
+      "tp": "Market",
+      "la": 40.4154,
+      "ln": -3.709,
+      "addr": "Pl. de San Miguel, s/n, Centro, 28005 Madrid, Spain",
+      "zip": ""
+    },
+    {
       "id": "377400093917",
       "n": "Mercado Elite S.L",
       "ind": "RETAIL",
@@ -97019,6 +97561,40 @@
       "ln": null,
       "addr": "Carretera Sevilla MÃ¡laga, Km 9, 41500 AlcalÃ¡ de GuadaÃ­ra",
       "zip": "41500"
+    },
+    {
+      "id": "427988892874",
+      "n": "Mercat de la Boqueria",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "boqueria.barcelona",
+      "wb": 1,
+      "ph": "934 13 23 03",
+      "s": 90,
+      "ct": 1,
+      "tp": "Market",
+      "la": 41.3817,
+      "ln": 2.1716,
+      "addr": "La Rambla, 91, Ciutat Vella, 08001 Barcelona, Spain",
+      "zip": ""
+    },
+    {
+      "id": "428054154436",
+      "n": "Mercat de Sant Antoni",
+      "ind": "RETAIL",
+      "cat": "retail",
+      "c": "Barcelona",
+      "dm": "",
+      "wb": 0,
+      "ph": "934 26 35 21",
+      "s": 75,
+      "ct": 1,
+      "tp": "Market",
+      "la": 41.3786,
+      "ln": 2.162,
+      "addr": "Carrer del Comte d'Urgell, 1, Eixample, 08011 Barcelona, Spa",
+      "zip": ""
     },
     {
       "id": "9919751904",
@@ -105233,19 +105809,19 @@
     }
   ],
   "dist_summary": {
-    "total": 3875,
+    "total": 3908,
     "by_category": {
-      "retail": 1277,
-      "tech": 1177,
-      "food": 1083,
+      "retail": 1280,
+      "tech": 1206,
+      "food": 1084,
       "services": 298,
       "equipment": 40
     },
     "by_city": {
-      "Madrid": 586,
-      "Barcelona": 564,
-      "Other": 187,
-      "Paris": 171,
+      "Madrid": 587,
+      "Barcelona": 566,
+      "Other": 188,
+      "Paris": 184,
       "Sevilla": 95,
       "Sant Cugat Del Valle": 93,
       "New York": 82,
@@ -105259,9 +105835,9 @@
       "Murcia": 44
     },
     "by_industry": {
-      "RETAIL": 1204,
-      "COMPUTER_SOFTWARE": 1093,
-      "FOOD_BEVERAGES": 863,
+      "RETAIL": 1207,
+      "COMPUTER_SOFTWARE": 1122,
+      "FOOD_BEVERAGES": 864,
       "FOOD_PRODUCTION": 214,
       "PROFESSIONAL_TRAINING_COACHING": 105,
       "HEALTH_WELLNESS_AND_FITNESS": 87,
@@ -105428,7 +106004,7 @@
       {
         "source": 0,
         "target": 1,
-        "value": 863
+        "value": 864
       },
       {
         "source": 0,
@@ -105443,7 +106019,7 @@
       {
         "source": 4,
         "target": 5,
-        "value": 1093
+        "value": 1122
       },
       {
         "source": 4,
@@ -105488,7 +106064,7 @@
       {
         "source": 16,
         "target": 17,
-        "value": 1204
+        "value": 1207
       },
       {
         "source": 16,
@@ -105503,7 +106079,7 @@
       {
         "source": 1,
         "target": 20,
-        "value": 440
+        "value": 441
       },
       {
         "source": 1,
@@ -105598,7 +106174,7 @@
       {
         "source": 5,
         "target": 20,
-        "value": 536
+        "value": 551
       },
       {
         "source": 5,
@@ -105623,7 +106199,7 @@
       {
         "source": 5,
         "target": 22,
-        "value": 48
+        "value": 61
       },
       {
         "source": 5,
@@ -105633,7 +106209,7 @@
       {
         "source": 5,
         "target": 25,
-        "value": 74
+        "value": 75
       },
       {
         "source": 5,
@@ -105858,7 +106434,7 @@
       {
         "source": 17,
         "target": 23,
-        "value": 210
+        "value": 212
       },
       {
         "source": 17,
@@ -105878,7 +106454,7 @@
       {
         "source": 17,
         "target": 21,
-        "value": 229
+        "value": 230
       },
       {
         "source": 17,
@@ -105996,12 +106572,12 @@
     {
       "cat": "Tech & POS",
       "city": "Other",
-      "count": 78
+      "count": 79
     },
     {
       "cat": "Tech & POS",
       "city": "Paris",
-      "count": 48
+      "count": 61
     },
     {
       "cat": "Tech & POS",
@@ -106076,12 +106652,12 @@
     {
       "cat": "Retail",
       "city": "Madrid",
-      "count": 239
+      "count": 240
     },
     {
       "cat": "Retail",
       "city": "Barcelona",
-      "count": 224
+      "count": 226
     },
     {
       "cat": "Retail",
@@ -107259,16 +107835,16 @@
     ],
     "mv_funnel": {
       "total_contacts": 60689,
-      "has_email": 39278,
+      "has_email": 39322,
       "mv_verified": 47244,
-      "mv_unverified": 0,
+      "mv_unverified": 29,
       "mv_ok": 32983,
       "mv_invalid": 8858,
       "mv_catch_all": 2886,
-      "ghost_invalid": 7935,
-      "no_email": 21411,
-      "no_email_with_company": 15380,
-      "companies_with_scraped_emails": 10056
+      "ghost_invalid": 7921,
+      "no_email": 21367,
+      "no_email_with_company": 15336,
+      "companies_with_scraped_emails": 10554
     }
   },
   "contacts_tab": {
@@ -107377,31 +107953,36 @@
         "city": "Bilbao",
         "status": "unknown",
         "count": 22
+      },
+      {
+        "city": "Barcelona",
+        "status": "unverified",
+        "count": 1
       }
     ],
     "nuclei": [
       {
         "nucleus": "Golden",
         "desc": "Mobile + Email OK + Company",
-        "count": 11149,
+        "count": 12474,
         "color": "#FFD700"
       },
       {
         "nucleus": "Mobile Hero",
         "desc": "Has mobile, no email",
-        "count": 4382,
+        "count": 4957,
         "color": "#22c55e"
       },
       {
         "nucleus": "Silver",
         "desc": "Email OK + Company (no mobile)",
-        "count": 12017,
+        "count": 10692,
         "color": "#C0C0C0"
       },
       {
         "nucleus": "Bronze",
         "desc": "Company but weak contact",
-        "count": 15429,
+        "count": 14420,
         "color": "#CD7F32"
       },
       {
@@ -107505,8 +108086,8 @@
         "date": "2026-05-02",
         "contacts": 60689,
         "companies": 76480,
-        "avg_ct": 55.1,
-        "avg_co": 60.1,
+        "avg_ct": 55.4,
+        "avg_co": 60.0,
         "label": "Now",
         "actions": [
           "Phone purge 7K",
@@ -107517,11 +108098,11 @@
     ],
     "field_coverage": {
       "contacts": {
-        "email": 39278,
-        "mobilephone": 18469,
+        "email": 39322,
+        "mobilephone": 20803,
         "firstname": 57279,
         "lastname": 15222,
-        "phone": 28190,
+        "phone": 33732,
         "company": 48828,
         "city": 46701,
         "jobtitle": 2188,
@@ -107531,18 +108112,18 @@
       },
       "companies": {
         "name": 76463,
-        "phone": 48461,
+        "phone": 48465,
         "domain": 37975,
         "website": 37993,
         "city": 71417,
         "address": 66815,
-        "industry": 72413,
+        "industry": 72692,
         "google_place_id": 23108,
         "gp__rating_count": 4452,
         "gp__sentiment": 4472,
         "num_associated_contacts": 76480,
-        "description": 29835,
-        "country": 75246
+        "description": 29232,
+        "country": 75247
       },
       "contacts_total": 60689,
       "companies_total": 76480
@@ -107551,9 +108132,9 @@
       {
         "field": "mobilephone",
         "obj": "contact",
-        "missing": 42220,
+        "missing": 39886,
         "weight": 15,
-        "potential": 10.4,
+        "potential": 9.9,
         "how": "Formularios, llamadas",
         "difficulty": "hard"
       },
@@ -107569,7 +108150,7 @@
       {
         "field": "email",
         "obj": "contact",
-        "missing": 21411,
+        "missing": 21367,
         "weight": 15,
         "potential": 5.3,
         "how": "email_match, scraping",
@@ -107605,7 +108186,7 @@
       {
         "field": "phone",
         "obj": "company",
-        "missing": 28019,
+        "missing": 28015,
         "weight": 12,
         "potential": 4.4,
         "how": "GP scraping, website scraping",
@@ -107614,9 +108195,9 @@
       {
         "field": "industry",
         "obj": "company",
-        "missing": 4067,
+        "missing": 3788,
         "weight": 5,
-        "potential": 0.3,
+        "potential": 0.2,
         "how": "Progressive classification",
         "difficulty": "medium"
       }
