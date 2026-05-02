@@ -750,6 +750,16 @@ svg text { fill: var(--muted); font-size: 11px; }
     <svg id="chart-ins-mv-funnel" width="100%" height="350"></svg>
   </div>
 
+  <div class="section-divider"><span>CRM Health Evolution</span></div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">77</span><span class="panel-title-text">CRM Health Timeline — Score & Volume Evolution</span><span class="panel-fav" onclick="toggleFav(77)">☆</span></div>
+    <svg id="chart-ins-timeline" width="100%" height="420"></svg>
+  </div>
+  <div class="panel panel-full">
+    <div class="panel-title"><span class="panel-id">78</span><span class="panel-title-text">Data Score Levers — Potential Improvement by Field</span><span class="panel-fav" onclick="toggleFav(78)">☆</span></div>
+    <svg id="chart-ins-levers" width="100%" height="420"></svg>
+  </div>
+
   </div><!-- end Insights tab -->
 
   <!-- ═══ SHARED: Infrastructure panels (always CRM tab) ═══ -->
@@ -4504,6 +4514,168 @@ function drawInsMVFunnel(d) {
   g.selectAll('.domain').remove();
 }
 
+function drawInsTimeline(d) {
+  const tl = d.crm_timeline; if (!tl) return;
+  const data = tl.milestones;
+  const svg = d3.select('#chart-ins-timeline'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||900, H = 420;
+  const m = {top:40, right:80, bottom:100, left:70};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const parseDate = d3.timeParse('%Y-%m-%d');
+  data.forEach(d => d._date = parseDate(d.date));
+
+  const x = d3.scaleTime().domain(d3.extent(data, d=>d._date)).range([0,w]);
+  const yScore = d3.scaleLinear().domain([0,100]).range([h,0]);
+  const yCount = d3.scaleLinear().domain([0,d3.max(data,d=>d.contacts)*1.15]).range([h,0]);
+
+  // Grid
+  g.append('g').call(d3.axisLeft(yScore).ticks(5).tickSize(-w)).selectAll('line').attr('stroke',C.border).attr('stroke-dasharray','3,3');
+  g.selectAll('.domain').remove();
+
+  // Area for contacts
+  const areaContacts = d3.area().x(d=>x(d._date)).y0(h).y1(d=>yCount(d.contacts)).curve(d3.curveMonotoneX);
+  g.append('path').datum(data).attr('d',areaContacts).attr('fill',C.blue).attr('opacity',0.08);
+
+  // Area for companies
+  const areaCompanies = d3.area().x(d=>x(d._date)).y0(h).y1(d=>yCount(d.companies)).curve(d3.curveMonotoneX);
+  g.append('path').datum(data).attr('d',areaCompanies).attr('fill',C.purple).attr('opacity',0.06);
+
+  // Lines for contacts/companies
+  const lineContacts = d3.line().x(d=>x(d._date)).y(d=>yCount(d.contacts)).curve(d3.curveMonotoneX);
+  g.append('path').datum(data).attr('d',lineContacts).attr('fill','none').attr('stroke',C.blue).attr('stroke-width',2).attr('stroke-dasharray','5,3');
+  const lineCompanies = d3.line().x(d=>x(d._date)).y(d=>yCount(d.companies)).curve(d3.curveMonotoneX);
+  g.append('path').datum(data).attr('d',lineCompanies).attr('fill','none').attr('stroke',C.purple).attr('stroke-width',2).attr('stroke-dasharray','5,3');
+
+  // Lines for scores
+  const lineCtScore = d3.line().x(d=>x(d._date)).y(d=>yScore(d.avg_ct)).curve(d3.curveMonotoneX);
+  g.append('path').datum(data).attr('d',lineCtScore).attr('fill','none').attr('stroke',C.cyan).attr('stroke-width',3);
+  const lineCoScore = d3.line().x(d=>x(d._date)).y(d=>yScore(d.avg_co)).curve(d3.curveMonotoneX);
+  g.append('path').datum(data).attr('d',lineCoScore).attr('fill','none').attr('stroke',C.green).attr('stroke-width',3);
+
+  // Dots + tooltips
+  const dotR = 6;
+  data.forEach(pt => {
+    // Score dots
+    g.append('circle').attr('cx',x(pt._date)).attr('cy',yScore(pt.avg_ct)).attr('r',dotR)
+      .attr('fill',C.cyan).attr('stroke','#0d1117').attr('stroke-width',2)
+      .on('mousemove',(evt)=>showTip(evt,`<b>${pt.label}</b> (${pt.date})<br>Contact Score: <b>${pt.avg_ct}</b><br>Company Score: <b>${pt.avg_co}</b><br>Contacts: ${pt.contacts.toLocaleString('es-ES')}<br>Companies: ${pt.companies.toLocaleString('es-ES')}<br><br>${pt.actions.map(a=>'• '+a).join('<br>')}`))
+      .on('mouseleave',hideTip);
+    g.append('circle').attr('cx',x(pt._date)).attr('cy',yScore(pt.avg_co)).attr('r',dotR)
+      .attr('fill',C.green).attr('stroke','#0d1117').attr('stroke-width',2);
+
+    // Label
+    g.append('text').attr('x',x(pt._date)).attr('y',yScore(pt.avg_ct)-14).attr('text-anchor','middle')
+      .attr('fill',C.cyan).style('font-size','11px').style('font-weight','700')
+      .text(pt.avg_ct);
+    g.append('text').attr('x',x(pt._date)).attr('y',yScore(pt.avg_co)+20).attr('text-anchor','middle')
+      .attr('fill',C.green).style('font-size','11px').style('font-weight','700')
+      .text(pt.avg_co);
+  });
+
+  // Milestone annotations at bottom
+  data.forEach((pt,i) => {
+    const px = x(pt._date);
+    g.append('line').attr('x1',px).attr('x2',px).attr('y1',h).attr('y2',h+12).attr('stroke',C.border).attr('stroke-width',1);
+    g.append('text').attr('x',px).attr('y',h+24).attr('text-anchor','middle')
+      .attr('fill',C.text).style('font-size','10px').style('font-weight','600')
+      .text(pt.label);
+    // Top action
+    const topAction = pt.actions[0]||'';
+    g.append('text').attr('x',px).attr('y',h+38).attr('text-anchor','middle')
+      .attr('fill',C.muted).style('font-size','9px')
+      .text(topAction.length>22?topAction.slice(0,20)+'…':topAction);
+  });
+
+  // Axes
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(data.length).tickFormat(d3.timeFormat('%d %b'))).selectAll('text').attr('fill',C.muted).style('font-size','9px');
+  g.append('g').call(d3.axisLeft(yScore).ticks(5)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.append('g').attr('transform',`translate(${w},0)`).call(d3.axisRight(yCount).ticks(5).tickFormat(d=>d>=1000?(d/1000)+'K':d)).selectAll('text').attr('fill',C.muted).style('font-size','10px');
+  g.selectAll('.domain').remove();
+
+  // Axis labels
+  g.append('text').attr('x',-h/2).attr('y',-50).attr('transform','rotate(-90)').attr('text-anchor','middle')
+    .attr('fill',C.cyan).style('font-size','11px').text('Avg Data Score');
+  g.append('text').attr('x',w+55).attr('y',h/2).attr('text-anchor','middle').attr('transform',`rotate(90,${w+55},${h/2})`)
+    .attr('fill',C.blue).style('font-size','11px').text('Object Count');
+
+  // Legend
+  const leg = g.append('g').attr('transform',`translate(${w/2-150},-25)`);
+  [{label:'Contact Score',color:C.cyan},{label:'Company Score',color:C.green},{label:'Contacts',color:C.blue,dash:true},{label:'Companies',color:C.purple,dash:true}].forEach((l,i) => {
+    const lx = i*100;
+    if (l.dash) {
+      leg.append('line').attr('x1',lx).attr('x2',lx+18).attr('y1',0).attr('y2',0).attr('stroke',l.color).attr('stroke-width',2).attr('stroke-dasharray','5,3');
+    } else {
+      leg.append('line').attr('x1',lx).attr('x2',lx+18).attr('y1',0).attr('y2',0).attr('stroke',l.color).attr('stroke-width',3);
+    }
+    leg.append('text').attr('x',lx+22).attr('y',4).attr('fill',C.muted).style('font-size','10px').text(l.label);
+  });
+}
+
+function drawInsLevers(d) {
+  const tl = d.crm_timeline; if (!tl) return;
+  const levers = tl.levers.slice().sort((a,b)=>b.potential-a.potential);
+  const svg = d3.select('#chart-ins-levers'); svg.selectAll('*').remove();
+  const rect = svg.node().getBoundingClientRect();
+  const W = rect.width||900, H = 420;
+  const m = {top:30, right:200, bottom:30, left:160};
+  const w = W-m.left-m.right, h = H-m.top-m.bottom;
+  const g = svg.append('g').attr('transform',`translate(${m.left},${m.top})`);
+
+  const diffColors = {easy:'#3fb950', medium:'#58a6ff', hard:'#f0883e', paid:'#f85149'};
+  const diffLabels = {easy:'Gratis',medium:'Medio',hard:'Dificil',paid:'De pago'};
+
+  const y = d3.scaleBand().domain(levers.map(l=>l.field)).range([0,h]).padding(0.18);
+  const x = d3.scaleLinear().domain([0,d3.max(levers,l=>l.potential)*1.2]).range([0,w]);
+
+  // Bars
+  g.selectAll('.bar').data(levers).join('rect')
+    .attr('x',0).attr('y',l=>y(l.field)).attr('width',l=>x(l.potential)).attr('height',y.bandwidth())
+    .attr('fill',l=>diffColors[l.difficulty]||C.muted).attr('opacity',0.8).attr('rx',4)
+    .on('mousemove',(evt,l)=>showTip(evt,`<b>${l.field}</b> (${l.obj})<br>Missing: ${l.missing.toLocaleString('es-ES')}<br>Weight: ${l.weight}/100<br>Potential: +${l.potential} pts<br>How: ${l.how}<br>Difficulty: ${diffLabels[l.difficulty]}`))
+    .on('mouseleave',hideTip);
+
+  // Value labels
+  g.selectAll('.val').data(levers).join('text')
+    .attr('x',l=>x(l.potential)+6).attr('y',l=>y(l.field)+y.bandwidth()/2)
+    .attr('dy','0.35em').attr('fill',C.text).style('font-size','12px').style('font-weight','700')
+    .text(l=>`+${l.potential} pts`);
+
+  // Right annotations
+  g.selectAll('.how').data(levers).join('text')
+    .attr('x',l=>x(l.potential)+68).attr('y',l=>y(l.field)+y.bandwidth()/2)
+    .attr('dy','0.35em').attr('fill',C.muted).style('font-size','10px')
+    .text(l=>l.how);
+
+  // Difficulty badges
+  g.selectAll('.badge').data(levers).join('g').each(function(l) {
+    const bg = d3.select(this);
+    const bx = x(l.potential)+52, by = y(l.field)-2;
+    bg.append('rect').attr('x',bx-1).attr('y',by).attr('width',10).attr('height',10).attr('rx',2)
+      .attr('fill',diffColors[l.difficulty]).attr('opacity',0.3);
+  });
+
+  // Y axis labels
+  g.append('g').call(d3.axisLeft(y).tickSize(0)).selectAll('text').attr('fill',l=> {
+    const lev = levers.find(v=>v.field===l);
+    return lev && lev.obj==='company'?C.green:C.cyan;
+  }).style('font-size','11px').style('font-weight','500');
+  g.selectAll('.domain').remove();
+
+  // Legend
+  const leg = g.append('g').attr('transform',`translate(0,-15)`);
+  ['easy','medium','hard','paid'].forEach((diff,i) => {
+    const lx = i*90;
+    leg.append('rect').attr('x',lx).attr('y',-5).attr('width',12).attr('height',12).attr('rx',3).attr('fill',diffColors[diff]).attr('opacity',0.8);
+    leg.append('text').attr('x',lx+16).attr('y',5).attr('fill',C.muted).style('font-size','10px').text(diffLabels[diff]);
+  });
+  // Obj type legend
+  leg.append('text').attr('x',w-60).attr('y',5).attr('fill',C.cyan).style('font-size','10px').text('= contact');
+  leg.append('text').attr('x',w).attr('y',5).attr('fill',C.green).style('font-size','10px').text('= company');
+}
+
 function updateInsights(d) {
   if (!d.insights) return;
   const ins = d.insights;
@@ -4514,7 +4686,7 @@ function updateInsights(d) {
   el('kpi-ins-scraped').textContent = fmt(ins.mv_funnel.companies_with_scraped_emails);
   el('kpi-ins-ghost').textContent = fmt(ins.mv_funnel.ghost_invalid);
 
-  const charts = [drawInsMaturity, drawInsWP, drawInsRevenue, drawInsCompound, drawInsGaps, drawInsComplaints, drawInsMVFunnel];
+  const charts = [drawInsMaturity, drawInsWP, drawInsRevenue, drawInsCompound, drawInsGaps, drawInsComplaints, drawInsMVFunnel, drawInsTimeline, drawInsLevers];
   charts.forEach(fn => { try { fn(d); } catch(e) { console.warn(fn.name, e); } });
 }
 

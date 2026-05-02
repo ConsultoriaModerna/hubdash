@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-05-02T11:38:44",
-  "fetch_seconds": 139.8,
+  "generated_at": "2026-05-02T13:09:26",
+  "fetch_seconds": 142.9,
   "summary": {
     "companies_total": 76480,
     "contacts_total": 60689,
     "enriched_gp": 4452,
-    "avg_score_companies": 57.4,
-    "avg_score_contacts": 53.6
+    "avg_score_companies": 60.1,
+    "avg_score_contacts": 55.1
   },
   "scores": {
     "companies": {
-      "0-29": 3194,
-      "30-49": 25951,
-      "50-69": 24995,
-      "70-89": 20998,
+      "0-29": 578,
+      "30-49": 23725,
+      "50-69": 27856,
+      "70-89": 22979,
       "90-100": 1342
     },
     "contacts": {
-      "0-29": 4360,
-      "30-49": 21626,
-      "50-69": 22617,
-      "70-89": 12070,
-      "90-100": 16
+      "0-29": 3520,
+      "30-49": 21338,
+      "50-69": 21578,
+      "70-89": 14215,
+      "90-100": 38
     }
   },
   "pipeline": {
@@ -66,19 +66,19 @@
   "contact_cities": [
     {
       "city": "Barcelona",
-      "total": 5147
+      "total": 5197
     },
     {
       "city": "Madrid",
-      "total": 4722
+      "total": 4760
     },
     {
       "city": "Valencia",
-      "total": 1080
+      "total": 1097
     },
     {
       "city": "Sevilla",
-      "total": 192
+      "total": 193
     },
     {
       "city": "Bilbao",
@@ -86,18 +86,18 @@
     },
     {
       "city": "Otras",
-      "total": 49155
+      "total": 49049
     }
   ],
   "contact_city_assets": {
     "Barcelona": {
       "mobile": 3001,
-      "email": 3649,
+      "email": 3655,
       "phone": 3538
     },
     "Madrid": {
       "mobile": 3201,
-      "email": 3284,
+      "email": 3287,
       "phone": 3765
     },
     "Valencia": {
@@ -149,90 +149,90 @@
     ],
     "companies": [
       [
-        458,
-        4426,
-        3193,
-        3666,
+        27,
+        4099,
+        3722,
+        3895,
         386
       ],
       [
-        193,
-        4244,
-        4023,
-        3977,
+        39,
+        3148,
+        4658,
+        4592,
         282
       ],
       [
-        63,
-        1635,
-        1566,
-        1175,
+        5,
+        952,
+        2049,
+        1433,
         70
       ],
       [
-        40,
-        1300,
-        1323,
-        908,
+        6,
+        741,
+        1717,
+        1107,
         48
       ],
       [
-        8,
-        269,
-        311,
-        258,
+        0,
+        144,
+        380,
+        322,
         4
       ],
       [
-        2432,
-        14077,
-        14579,
-        11014,
+        501,
+        14641,
+        15330,
+        11630,
         552
       ]
     ],
     "contacts": [
       [
-        15,
-        729,
-        2378,
-        2019,
+        1,
+        620,
+        2240,
+        2322,
+        14
+      ],
+      [
+        2,
+        488,
+        1764,
+        2504,
+        2
+      ],
+      [
+        0,
+        193,
+        341,
+        557,
         6
       ],
       [
-        30,
-        628,
-        1944,
-        2120,
-        0
-      ],
-      [
-        2,
-        215,
-        363,
-        500,
-        0
-      ],
-      [
-        2,
-        107,
-        71,
-        12,
+        0,
+        98,
+        70,
+        25,
         0
       ],
       [
         0,
-        13,
-        129,
-        251,
-        0
+        9,
+        125,
+        258,
+        1
       ],
       [
-        4311,
-        19934,
-        17732,
-        7168,
-        10
+        3517,
+        19930,
+        17038,
+        8549,
+        15
       ]
     ]
   },
@@ -4369,7 +4369,7 @@
       "n": "Ovella Negra",
       "r": 4.2,
       "rv": 9499,
-      "s": 80,
+      "s": 85,
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
@@ -6398,7 +6398,7 @@
       "n": "La Sitarilla",
       "r": 4.6,
       "rv": 7245,
-      "s": 48,
+      "s": 53,
       "c": "Granada",
       "ct": 0,
       "se": "Pos",
@@ -6790,7 +6790,7 @@
       "n": "Norah Coffee & Brunch - Speciality Coffe",
       "r": 4.8,
       "rv": 6938,
-      "s": 80,
+      "s": 85,
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
@@ -9935,7 +9935,7 @@
       "n": "Restaurante Submarino",
       "r": 4.0,
       "rv": 5704,
-      "s": 80,
+      "s": 85,
       "c": "València",
       "ct": 0,
       "se": "Neu",
@@ -10186,7 +10186,7 @@
       "n": "Jenkin's - Corts Valencianes",
       "r": 4.4,
       "rv": 5623,
-      "s": 90,
+      "s": 95,
       "c": "Valencia",
       "ct": 1,
       "se": "Pos",
@@ -10280,7 +10280,7 @@
       "n": "Palau Alameda",
       "r": 4.1,
       "rv": 5567,
-      "s": 95,
+      "s": 100,
       "c": "València",
       "ct": 1,
       "se": "Neu",
@@ -10669,7 +10669,7 @@
       "n": "La Bodega de la Alfalfa",
       "r": 4.4,
       "rv": 5468,
-      "s": 80,
+      "s": 85,
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
@@ -11305,7 +11305,7 @@
       "n": "Sushi Kory Valencia",
       "r": 4.2,
       "rv": 5224,
-      "s": 75,
+      "s": 80,
       "c": "Valencia",
       "ct": 0,
       "se": "Pos",
@@ -11542,7 +11542,7 @@
       "n": "Restaurante San Marco Santa Cruz",
       "r": 4.5,
       "rv": 5148,
-      "s": 80,
+      "s": 85,
       "c": "Sevilla",
       "ct": 0,
       "se": "Pos",
@@ -11638,7 +11638,7 @@
       "n": "Meli del Tubo",
       "r": 4.5,
       "rv": 5138,
-      "s": 95,
+      "s": 100,
       "c": "Zaragoza",
       "ct": 1,
       "se": "Pos",
@@ -12621,7 +12621,7 @@
       "n": "Tuscania Food & Wine",
       "r": 4.7,
       "rv": 4835,
-      "s": 80,
+      "s": 85,
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
@@ -14590,7 +14590,7 @@
       "n": "Takumi Ramen Barcelona Balmes",
       "r": 4.5,
       "rv": 4486,
-      "s": 80,
+      "s": 85,
       "c": "Barcelona",
       "ct": 0,
       "se": "Pos",
@@ -15822,7 +15822,7 @@
       "n": "Sakana Restaurante",
       "r": 4.9,
       "rv": 4266,
-      "s": 80,
+      "s": 85,
       "c": "Madrid",
       "ct": 0,
       "se": "Neu",
@@ -16149,7 +16149,7 @@
       "n": "La Morenilla | Casa de Antojos",
       "r": 3.9,
       "rv": 4233,
-      "s": 80,
+      "s": 85,
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
@@ -16542,7 +16542,7 @@
       "n": "Restaurante la Suegra",
       "r": 4.1,
       "rv": 4188,
-      "s": 80,
+      "s": 85,
       "c": "Madrid",
       "ct": 0,
       "se": "Pos",
@@ -20006,7 +20006,7 @@
       "n": "Nao Borraset",
       "r": 4.0,
       "rv": 3695,
-      "s": 80,
+      "s": 85,
       "c": "Valencia",
       "ct": 0,
       "se": "Neu",
@@ -20830,7 +20830,7 @@
       "n": "Restaurant Fuji",
       "r": 4.3,
       "rv": 3605,
-      "s": 80,
+      "s": 85,
       "c": "Valencia",
       "ct": 0,
       "se": "Pos",
@@ -24362,7 +24362,7 @@
       "n": "Restaurants Casa Saragossa",
       "r": 2.1,
       "rv": 3229,
-      "s": 48,
+      "s": 53,
       "c": "Valencia",
       "ct": 0,
       "se": "Neg",
@@ -24666,7 +24666,7 @@
       "website": 37993,
       "city": 71417,
       "address": 66815,
-      "industry": 34667,
+      "industry": 72413,
       "google_place_id": 23108,
       "gp__rating_count": 4452,
       "gp__sentiment": 4472,
@@ -24680,12 +24680,12 @@
       "firstname": 57279,
       "lastname": 15222,
       "phone": 28190,
-      "company": 43673,
-      "city": 46524,
+      "company": 48828,
+      "city": 46701,
       "jobtitle": 2188,
       "lifecyclestage": 60689,
       "associatedcompanyid": 44104,
-      "country": 16032
+      "country": 46420
     },
     "companies_total": 76480,
     "contacts_total": 60689
@@ -24707,79 +24707,79 @@
       0,
       0,
       1,
-      1277
+      1208
     ],
     [
       0,
       0,
       0,
-      3074
+      2303
     ],
     [
       1,
       1,
       1,
-      35
+      7
     ],
     [
       1,
       1,
       0,
-      167
+      150
     ],
     [
       1,
       0,
       1,
-      8047
+      7765
     ],
     [
       1,
       0,
       0,
-      13377
-    ],
-    [
-      2,
-      1,
-      1,
-      3100
+      13416
     ],
     [
       2,
       1,
+      1,
+      2106
+    ],
+    [
+      2,
+      1,
       0,
-      4187
+      4147
     ],
     [
       2,
       0,
       1,
-      14752
+      14015
     ],
     [
       2,
       0,
       0,
-      578
+      1310
     ],
     [
       3,
       1,
       1,
-      10936
+      11936
     ],
     [
       3,
       1,
       0,
-      19
+      76
     ],
     [
       3,
       0,
       1,
-      1115
+      2203
     ],
     [
       3,
@@ -24791,7 +24791,7 @@
       4,
       1,
       1,
-      16
+      38
     ],
     [
       4,
@@ -25311,6 +25311,21 @@
       "domain_finder": 2135,
       "contacts_mobile": 18469,
       "contacts_email": 39278
+    },
+    {
+      "ts": "2026-05-02 13:08",
+      "website": 37993,
+      "phone": 48461,
+      "domain": 37975,
+      "gp_enriched": 4452,
+      "ws_scraped": 35415,
+      "ws_emails": 10056,
+      "ws_instagram": 10926,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 18469,
+      "contacts_email": 39278
     }
   ],
   "reachability_funnel": {
@@ -25337,7 +25352,7 @@
         "Barcelona": 1
       },
       "avg_rating": 4.6,
-      "avg_score": 59.2
+      "avg_score": 60.2
     },
     {
       "id": "slow_service",
@@ -25631,7 +25646,7 @@
         "Valencia": 1
       },
       "avg_rating": 3.3,
-      "avg_score": 88.2
+      "avg_score": 88.9
     },
     {
       "id": "premium_buy",
@@ -25655,7 +25670,7 @@
         "Malaga": 1
       },
       "avg_rating": 4.29,
-      "avg_score": 91.2
+      "avg_score": 91.3
     },
     {
       "id": "no_reserv",
@@ -25830,7 +25845,7 @@
       "who_signs": "Propietario / Finanzas",
       "timing": "nov_dec",
       "count": 194,
-      "avg_score": 17.3,
+      "avg_score": 17.1,
       "cities": {
         "Barcelona": 57,
         "Madrid": 79,
@@ -26242,7 +26257,7 @@
         "ph": "+34 933 17 10 87",
         "r": 4.2,
         "rv": 9499,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "ovellanegra.com",
         "tp": "",
@@ -26956,7 +26971,7 @@
         "ph": "935390773",
         "r": 4.7,
         "rv": 4835,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "tuscaniabarcelona.com",
         "tp": "",
@@ -27208,7 +27223,7 @@
         "ph": "936250814",
         "r": 4.5,
         "rv": 4486,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "carrerbalmes.takumibarcelona.es",
         "tp": "",
@@ -28076,7 +28091,7 @@
         "ph": "934876034",
         "r": 4.3,
         "rv": 2874,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "restaurantecharrito.es",
         "tp": "",
@@ -28216,7 +28231,7 @@
         "ph": "34934619309",
         "r": 4.4,
         "rv": 2787,
-        "s": 95,
+        "s": 100,
         "wb": 1,
         "dm": "momoavinyo.com",
         "tp": "",
@@ -28636,7 +28651,7 @@
         "ph": "932503376",
         "r": 4.4,
         "rv": 2517,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "mediterraneoristorante.es",
         "tp": "",
@@ -28888,7 +28903,7 @@
         "ph": "933003138",
         "r": 4.3,
         "rv": 2269,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "larodapoblenou.com",
         "tp": "",
@@ -29434,7 +29449,7 @@
         "ph": "936837955",
         "r": 4.6,
         "rv": 1941,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "lajabata.com",
         "tp": "",
@@ -29476,7 +29491,7 @@
         "ph": "931373407",
         "r": 4.7,
         "rv": 1923,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "pedidos.maramaia.es",
         "tp": "",
@@ -30190,7 +30205,7 @@
         "ph": "932808847",
         "r": 4.3,
         "rv": 1567,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "ramenhousebcn.com",
         "tp": "",
@@ -30428,7 +30443,7 @@
         "ph": "34932073175",
         "r": 4.5,
         "rv": 1436,
-        "s": 90,
+        "s": 95,
         "wb": 1,
         "dm": "goliard.cat",
         "tp": "",
@@ -30456,7 +30471,7 @@
         "ph": "34931296987",
         "r": 4.6,
         "rv": 1426,
-        "s": 95,
+        "s": 100,
         "wb": 1,
         "dm": "pirineuenboca.es",
         "tp": "",
@@ -30582,7 +30597,7 @@
         "ph": "936786293",
         "r": 4.4,
         "rv": 1395,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -30694,7 +30709,7 @@
         "ph": "934464350",
         "r": 4.3,
         "rv": 1364,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "teppan-ya.es",
         "tp": "",
@@ -31044,7 +31059,7 @@
         "ph": "34931380319",
         "r": 4.6,
         "rv": 1264,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "intichaska.negocio.site",
         "tp": "",
@@ -31170,7 +31185,7 @@
         "ph": "931244912",
         "r": 4.6,
         "rv": 1226,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "restaurantemasaniello.com",
         "tp": "",
@@ -31646,7 +31661,7 @@
         "ph": "932375324",
         "r": 4.5,
         "rv": 1104,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -31674,7 +31689,7 @@
         "ph": "936813880",
         "r": 4.0,
         "rv": 1099,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "restauranteogura.eatbu.com",
         "tp": "",
@@ -31730,7 +31745,7 @@
         "ph": "658941131",
         "r": 4.8,
         "rv": 1094,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "lantorestaurant.com",
         "tp": "",
@@ -31744,7 +31759,7 @@
         "ph": "933599826",
         "r": 4.5,
         "rv": 1091,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "orincon-galego.eatbu.com",
         "tp": "",
@@ -32164,7 +32179,7 @@
         "ph": "934157450",
         "r": 4.2,
         "rv": 943,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "pizzerialagavinabcn.blogspot.com",
         "tp": "",
@@ -32388,7 +32403,7 @@
         "ph": "34932188578",
         "r": 4.1,
         "rv": 887,
-        "s": 95,
+        "s": 100,
         "wb": 1,
         "dm": "restaurantsporting.com",
         "tp": "",
@@ -32626,7 +32641,7 @@
         "ph": "",
         "r": 4.5,
         "rv": 827,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -32766,7 +32781,7 @@
         "ph": "932001348",
         "r": 4.5,
         "rv": 792,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "laxarxabarcelona.com",
         "tp": "",
@@ -32822,7 +32837,7 @@
         "ph": "",
         "r": 4.4,
         "rv": 784,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -32850,7 +32865,7 @@
         "ph": "655884958",
         "r": 3.7,
         "rv": 774,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "limbobarcelona.com",
         "tp": "",
@@ -32934,7 +32949,7 @@
         "ph": "934199639",
         "r": 3.6,
         "rv": 761,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "asiaticotayu.wixsite.com",
         "tp": "",
@@ -33116,7 +33131,7 @@
         "ph": "34936395703",
         "r": 4.5,
         "rv": 734,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "comobarcelona.es",
         "tp": "",
@@ -33354,7 +33369,7 @@
         "ph": "647443976",
         "r": 4.8,
         "rv": 685,
-        "s": 95,
+        "s": 100,
         "wb": 1,
         "dm": "saltafood.last.shop",
         "tp": "",
@@ -33508,7 +33523,7 @@
         "ph": "934171196",
         "r": 4.3,
         "rv": 668,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "restauranthidalgobcn.com",
         "tp": "",
@@ -33536,7 +33551,7 @@
         "ph": "+34 936 39 74 18",
         "r": 4.7,
         "rv": 664,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "thebagelhood.com",
         "tp": "",
@@ -33592,7 +33607,7 @@
         "ph": "650884547",
         "r": 3.9,
         "rv": 655,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "restaurantezalcentric.com",
         "tp": "",
@@ -33732,7 +33747,7 @@
         "ph": "34936397046",
         "r": 4.2,
         "rv": 645,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "snacknador.com",
         "tp": "",
@@ -33816,7 +33831,7 @@
         "ph": "652851997",
         "r": 4.6,
         "rv": 628,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -34166,7 +34181,7 @@
         "ph": "936339329",
         "r": 4.6,
         "rv": 556,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -34194,7 +34209,7 @@
         "ph": "934875216",
         "r": 3.8,
         "rv": 551,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "restauranteseven.negocio.site",
         "tp": "",
@@ -34208,7 +34223,7 @@
         "ph": "931749078",
         "r": 4.2,
         "rv": 551,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "tururuu.eatbu.com",
         "tp": "",
@@ -34264,7 +34279,7 @@
         "ph": "931987643",
         "r": 3.9,
         "rv": 532,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "santstandoori.com",
         "tp": "",
@@ -34446,7 +34461,7 @@
         "ph": "654464978",
         "r": 4.7,
         "rv": 510,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "mistobarcelona.metro.rest",
         "tp": "",
@@ -34572,7 +34587,7 @@
         "ph": "936318610",
         "r": 4.4,
         "rv": 498,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "selene-restaurant.negocio.site",
         "tp": "",
@@ -34642,7 +34657,7 @@
         "ph": "631220870",
         "r": 4.8,
         "rv": 481,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "muchocieloymuchomar.com",
         "tp": "",
@@ -34880,7 +34895,7 @@
         "ph": "932848402",
         "r": 4.0,
         "rv": 449,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "montserratpizzeria.com",
         "tp": "",
@@ -35062,7 +35077,7 @@
         "ph": "633348071",
         "r": 4.5,
         "rv": 418,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -35104,7 +35119,7 @@
         "ph": "933115713",
         "r": 4.4,
         "rv": 415,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "restaurant-la-brotxeta.negocio.site",
         "tp": "",
@@ -35300,7 +35315,7 @@
         "ph": "634411909",
         "r": 4.7,
         "rv": 380,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "fishrestaurantbarcelona.com",
         "tp": "",
@@ -35356,7 +35371,7 @@
         "ph": "680476599",
         "r": 4.5,
         "rv": 372,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -35412,7 +35427,7 @@
         "ph": "938597525",
         "r": 4.8,
         "rv": 364,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "magatzemsesilles.com",
         "tp": "",
@@ -35510,7 +35525,7 @@
         "ph": "631030658",
         "r": 4.4,
         "rv": 354,
-        "s": 90,
+        "s": 95,
         "wb": 1,
         "dm": "riberacoffee.com",
         "tp": "",
@@ -35524,7 +35539,7 @@
         "ph": "933409398",
         "r": 4.9,
         "rv": 351,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "remolrestaurant.com",
         "tp": "",
@@ -35552,7 +35567,7 @@
         "ph": "934765249",
         "r": 4.5,
         "rv": 346,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "syrianlesmiliunanits.com",
         "tp": "",
@@ -35650,7 +35665,7 @@
         "ph": "",
         "r": 4.5,
         "rv": 338,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -35664,7 +35679,7 @@
         "ph": "931920509",
         "r": 3.7,
         "rv": 337,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "junadonerkebabbcn.com",
         "tp": "",
@@ -35846,7 +35861,7 @@
         "ph": "",
         "r": 4.4,
         "rv": 312,
-        "s": 68,
+        "s": 73,
         "wb": 1,
         "dm": "spartanrestaurante.es",
         "tp": "",
@@ -35860,7 +35875,7 @@
         "ph": "934196815",
         "r": 4.3,
         "rv": 311,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -35916,7 +35931,7 @@
         "ph": "934213799",
         "r": 4.7,
         "rv": 301,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -35986,7 +36001,7 @@
         "ph": "935356820",
         "r": 4.1,
         "rv": 297,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "ristorantemadeinitalybarcelona.com",
         "tp": "",
@@ -36084,7 +36099,7 @@
         "ph": "",
         "r": 4.9,
         "rv": 291,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -36364,7 +36379,7 @@
         "ph": "",
         "r": 4.9,
         "rv": 242,
-        "s": 68,
+        "s": 73,
         "wb": 1,
         "dm": "nonno-zacca-pizzeria-bcn.negocio.site",
         "tp": "",
@@ -36602,7 +36617,7 @@
         "ph": "",
         "r": 3.6,
         "rv": 223,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -36714,7 +36729,7 @@
         "ph": "+34 936 00 30 20",
         "r": 3.8,
         "rv": 210,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "expohotelbarcelona.expohotels.com",
         "tp": "",
@@ -36728,7 +36743,7 @@
         "ph": "667091817",
         "r": 4.8,
         "rv": 207,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "lacerveseradelpoblenou.cat",
         "tp": "",
@@ -36896,7 +36911,7 @@
         "ph": "931373393",
         "r": 4.4,
         "rv": 187,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "barsolepin.com",
         "tp": "",
@@ -37008,7 +37023,7 @@
         "ph": "936670454",
         "r": 4.3,
         "rv": 177,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -37078,7 +37093,7 @@
         "ph": "931162791",
         "r": 4.2,
         "rv": 172,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "sabanna.es",
         "tp": "",
@@ -37148,7 +37163,7 @@
         "ph": "931407743",
         "r": 4.4,
         "rv": 157,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "vegetarium.es",
         "tp": "",
@@ -37344,7 +37359,7 @@
         "ph": "930251158",
         "r": 4.3,
         "rv": 128,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "standardpizza.es",
         "tp": "",
@@ -37456,7 +37471,7 @@
         "ph": "930312997",
         "r": 4.0,
         "rv": 116,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "larrosseria-com-a-casa.negocio.site",
         "tp": "",
@@ -37484,7 +37499,7 @@
         "ph": "933394840",
         "r": 4.2,
         "rv": 114,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "menjarsanet.com",
         "tp": "",
@@ -37526,7 +37541,7 @@
         "ph": "34933158776",
         "r": 3.9,
         "rv": 113,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "sushi-idea.es",
         "tp": "",
@@ -38002,7 +38017,7 @@
         "ph": "",
         "r": 4.1,
         "rv": 58,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -38030,7 +38045,7 @@
         "ph": "",
         "r": 4.0,
         "rv": 56,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -38114,7 +38129,7 @@
         "ph": "722688738",
         "r": 4.6,
         "rv": 52,
-        "s": 80,
+        "s": 85,
         "wb": 1,
         "dm": "sushigarage.last.shop",
         "tp": "",
@@ -38170,7 +38185,7 @@
         "ph": "",
         "r": 4.2,
         "rv": 47,
-        "s": 68,
+        "s": 73,
         "wb": 1,
         "dm": "raj-bar-restaurant.eatbu.com",
         "tp": "",
@@ -38422,7 +38437,7 @@
         "ph": "647794812",
         "r": 3.7,
         "rv": 27,
-        "s": 75,
+        "s": 80,
         "wb": 1,
         "dm": "superpicnic.es",
         "tp": "",
@@ -38534,7 +38549,7 @@
         "ph": "",
         "r": 4.5,
         "rv": 21,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -38590,7 +38605,7 @@
         "ph": "",
         "r": 4.4,
         "rv": 19,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -38660,7 +38675,7 @@
         "ph": "",
         "r": 4.9,
         "rv": 16,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -38744,7 +38759,7 @@
         "ph": "",
         "r": 4.6,
         "rv": 12,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -38968,7 +38983,7 @@
         "ph": "",
         "r": 4.2,
         "rv": 5,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -38982,7 +38997,7 @@
         "ph": "",
         "r": 4.0,
         "rv": 5,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -38996,7 +39011,7 @@
         "ph": "",
         "r": 3.8,
         "rv": 5,
-        "s": 68,
+        "s": 73,
         "wb": 1,
         "dm": "tabernasantamaria.es",
         "tp": "",
@@ -39010,7 +39025,7 @@
         "ph": "",
         "r": 5.0,
         "rv": 4,
-        "s": 63,
+        "s": 68,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -39038,7 +39053,7 @@
         "ph": "",
         "r": 4.0,
         "rv": 3,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -39052,7 +39067,7 @@
         "ph": "",
         "r": 5.0,
         "rv": 2,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -39122,7 +39137,7 @@
         "ph": "",
         "r": 5.0,
         "rv": 1,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -39164,7 +39179,7 @@
         "ph": "936673539",
         "r": 5.0,
         "rv": 1,
-        "s": 60,
+        "s": 65,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -39192,7 +39207,7 @@
         "ph": "",
         "r": 5.0,
         "rv": 1,
-        "s": 48,
+        "s": 53,
         "wb": 0,
         "dm": "",
         "tp": "",
@@ -105733,17 +105748,17 @@
       {
         "city": "Barcelona",
         "status": "ok",
-        "count": 2963
+        "count": 2965
       },
       {
         "city": "Barcelona",
         "status": "invalid",
-        "count": 1258
+        "count": 1279
       },
       {
         "city": "Barcelona",
         "status": "catch_all",
-        "count": 393
+        "count": 394
       },
       {
         "city": "Barcelona",
@@ -105753,12 +105768,12 @@
       {
         "city": "Madrid",
         "status": "ok",
-        "count": 2649
+        "count": 2650
       },
       {
         "city": "Madrid",
         "status": "invalid",
-        "count": 1164
+        "count": 1166
       },
       {
         "city": "Madrid",
@@ -105768,7 +105783,7 @@
       {
         "city": "Madrid",
         "status": "unknown",
-        "count": 199
+        "count": 200
       },
       {
         "city": "Madrid",
@@ -105891,5 +105906,192 @@
       "OTHER_CAMPAIGNS": 12,
       "PAID_SEARCH": 80
     }
+  },
+  "crm_timeline": {
+    "milestones": [
+      {
+        "date": "2026-04-12",
+        "contacts": 69150,
+        "companies": 75000,
+        "avg_ct": 30,
+        "avg_co": 45,
+        "label": "Pre-HB",
+        "actions": [
+          "CRM sin tocar"
+        ]
+      },
+      {
+        "date": "2026-04-14",
+        "contacts": 69150,
+        "companies": 75000,
+        "avg_ct": 33,
+        "avg_co": 45,
+        "label": "W1",
+        "actions": [
+          "Firstname 32K",
+          "CAPS 860",
+          "Accents 238"
+        ]
+      },
+      {
+        "date": "2026-04-22",
+        "contacts": 69150,
+        "companies": 75500,
+        "avg_ct": 35,
+        "avg_co": 48,
+        "label": "W2",
+        "actions": [
+          "GP Enrich 4,452",
+          "Web scraping start",
+          "Domain cleanup"
+        ]
+      },
+      {
+        "date": "2026-04-26",
+        "contacts": 67090,
+        "companies": 75500,
+        "avg_ct": 42,
+        "avg_co": 52,
+        "label": "W3",
+        "actions": [
+          "City cross-enrich 13,758",
+          "Encoding fix 129",
+          "MV audit"
+        ]
+      },
+      {
+        "date": "2026-05-01",
+        "contacts": 60897,
+        "companies": 76000,
+        "avg_ct": 48,
+        "avg_co": 55,
+        "label": "W4",
+        "actions": [
+          "Dedup -8,253",
+          "Email match 796",
+          "Franchise 1,276",
+          "Scraping 35K"
+        ]
+      },
+      {
+        "date": "2026-05-02",
+        "contacts": 60689,
+        "companies": 76480,
+        "avg_ct": 55.1,
+        "avg_co": 60.1,
+        "label": "Now",
+        "actions": [
+          "Phone purge 7K",
+          "Shuffled fix 615",
+          "Quick wins"
+        ]
+      }
+    ],
+    "field_coverage": {
+      "contacts": {
+        "email": 39278,
+        "mobilephone": 18469,
+        "firstname": 57279,
+        "lastname": 15222,
+        "phone": 28190,
+        "company": 48828,
+        "city": 46701,
+        "jobtitle": 2188,
+        "lifecyclestage": 60689,
+        "associatedcompanyid": 44104,
+        "country": 46420
+      },
+      "companies": {
+        "name": 76463,
+        "phone": 48461,
+        "domain": 37975,
+        "website": 37993,
+        "city": 71417,
+        "address": 66815,
+        "industry": 72413,
+        "google_place_id": 23108,
+        "gp__rating_count": 4452,
+        "gp__sentiment": 4472,
+        "num_associated_contacts": 76480,
+        "description": 29835,
+        "country": 75246
+      },
+      "contacts_total": 60689,
+      "companies_total": 76480
+    },
+    "levers": [
+      {
+        "field": "mobilephone",
+        "obj": "contact",
+        "missing": 42220,
+        "weight": 15,
+        "potential": 10.4,
+        "how": "Formularios, llamadas",
+        "difficulty": "hard"
+      },
+      {
+        "field": "lastname",
+        "obj": "contact",
+        "missing": 45467,
+        "weight": 10,
+        "potential": 7.5,
+        "how": "Solo manual o LinkedIn",
+        "difficulty": "hard"
+      },
+      {
+        "field": "email",
+        "obj": "contact",
+        "missing": 21411,
+        "weight": 15,
+        "potential": 5.3,
+        "how": "email_match, scraping",
+        "difficulty": "medium"
+      },
+      {
+        "field": "country",
+        "obj": "contact",
+        "missing": 14269,
+        "weight": 5,
+        "potential": 1.2,
+        "how": "Propagar de company",
+        "difficulty": "easy"
+      },
+      {
+        "field": "gp__rating_count",
+        "obj": "company",
+        "missing": 72028,
+        "weight": 10,
+        "potential": 9.4,
+        "how": "GP enrichment (€)",
+        "difficulty": "paid"
+      },
+      {
+        "field": "domain",
+        "obj": "company",
+        "missing": 38505,
+        "weight": 8,
+        "potential": 4.0,
+        "how": "domain_finder, scraping",
+        "difficulty": "medium"
+      },
+      {
+        "field": "phone",
+        "obj": "company",
+        "missing": 28019,
+        "weight": 12,
+        "potential": 4.4,
+        "how": "GP enrichment, scraping",
+        "difficulty": "paid"
+      },
+      {
+        "field": "industry",
+        "obj": "company",
+        "missing": 4067,
+        "weight": 5,
+        "potential": 0.3,
+        "how": "Bulk-set RESTAURANTS",
+        "difficulty": "easy"
+      }
+    ]
   }
 }
