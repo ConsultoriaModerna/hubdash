@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-02T00:47:19",
-  "fetch_seconds": 144.8,
+  "generated_at": "2026-05-02T10:32:09",
+  "fetch_seconds": 136.7,
   "summary": {
-    "companies_total": 75100,
+    "companies_total": 76481,
     "contacts_total": 60689,
     "enriched_gp": 4452,
     "avg_score_companies": 56.4,
@@ -25,11 +25,11 @@
     }
   },
   "pipeline": {
-    "total": 75100,
+    "total": 76481,
     "with_place_id": 23108,
     "phase_a_pending": 18589,
     "enriched": 4452,
-    "phase_b_pending": 51992
+    "phase_b_pending": 53373
   },
   "cities": [
     {
@@ -59,7 +59,7 @@
     },
     {
       "city": "Otras",
-      "total": 41274,
+      "total": 42655,
       "enriched": 1237
     }
   ],
@@ -121,7 +121,7 @@
     "has_mobile": 18469,
     "has_mobile_email": 14087,
     "has_mobile_valid_email": 12087,
-    "has_mobile_valid_company": 11151
+    "has_mobile_valid_company": 11149
   },
   "mv_email_dist": {
     "ok": 32983,
@@ -11110,7 +11110,7 @@
       "rv": 5298,
       "s": 100,
       "c": "Madrid",
-      "ct": 3,
+      "ct": 4,
       "se": "Pos",
       "pl": "$$",
       "tc": "Slow Service",
@@ -24660,18 +24660,18 @@
   },
   "field_completeness": {
     "companies": {
-      "name": 75083,
-      "phone": 48459,
+      "name": 76464,
+      "phone": 48461,
       "domain": 37976,
       "website": 37994,
       "city": 71371,
-      "address": 66814,
-      "industry": 34664,
+      "address": 66815,
+      "industry": 34667,
       "google_place_id": 23108,
       "gp__rating_count": 4452,
       "gp__sentiment": 4472,
-      "num_associated_contacts": 75100,
-      "description": 29833,
+      "num_associated_contacts": 76481,
+      "description": 29835,
       "country": 73865
     },
     "contacts": {
@@ -24684,10 +24684,10 @@
       "city": 46524,
       "jobtitle": 2188,
       "lifecyclestage": 60689,
-      "associatedcompanyid": 44424,
+      "associatedcompanyid": 44104,
       "country": 16032
     },
-    "companies_total": 75100,
+    "companies_total": 76481,
     "contacts_total": 60689
   },
   "contact_matrix": [
@@ -25281,16 +25281,31 @@
       "domain_finder": 2135,
       "contacts_mobile": 18469,
       "contacts_email": 39278
+    },
+    {
+      "ts": "2026-05-02 10:31",
+      "website": 37994,
+      "phone": 48461,
+      "domain": 37976,
+      "gp_enriched": 4452,
+      "ws_scraped": 35415,
+      "ws_emails": 10056,
+      "ws_instagram": 10926,
+      "ta_enriched": 832,
+      "rg_enriched": 569,
+      "domain_finder": 2135,
+      "contacts_mobile": 18469,
+      "contacts_email": 39278
     }
   ],
   "reachability_funnel": {
-    "total": 75100,
+    "total": 76481,
     "has_website": 37994,
     "ws_scraped": 35415,
     "ws_email_found": 10056,
     "ws_instagram": 10926,
-    "has_phone": 48459,
-    "has_contacts": 40031
+    "has_phone": 48461,
+    "has_contacts": 41430
   },
   "hidden_segments": [
     {
@@ -33454,7 +33469,7 @@
         "wb": 1,
         "dm": "lataqueria.eu",
         "tp": "Restaurante mexicano",
-        "ct": 1
+        "ct": 2
       },
       {
         "id": "9921867250",
@@ -38984,7 +38999,7 @@
         "wb": 0,
         "dm": "",
         "tp": "",
-        "ct": 0
+        "ct": 1
       },
       {
         "id": "9919754482",
@@ -39199,11 +39214,11 @@
     ]
   },
   "domain_coverage": {
-    "total": 75100,
+    "total": 76481,
     "with_domain": 37976,
     "with_website": 37994,
-    "no_domain": 37124,
-    "no_domain_with_contacts": 13761,
+    "no_domain": 38505,
+    "no_domain_with_contacts": 15154,
     "ws_scraped": 35415,
     "ws_emails": 10056,
     "ws_instagram": 10926,
@@ -40921,7 +40936,7 @@
       "wb": 1,
       "ph": "",
       "s": 68,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -41142,7 +41157,7 @@
       "wb": 1,
       "ph": "",
       "s": 68,
-      "ct": 3,
+      "ct": 4,
       "tp": "",
       "la": null,
       "ln": null,
@@ -81959,7 +81974,7 @@
       "wb": 1,
       "ph": "",
       "s": 68,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -87552,7 +87567,7 @@
       "wb": 1,
       "ph": "33558734290",
       "s": 80,
-      "ct": 1,
+      "ct": 2,
       "tp": "",
       "la": null,
       "ln": null,
@@ -105694,7 +105709,7 @@
       "mv_catch_all": 2886,
       "ghost_invalid": 7935,
       "no_email": 21411,
-      "no_email_with_company": 15431,
+      "no_email_with_company": 15380,
       "companies_with_scraped_emails": 10056
     }
   },
@@ -105810,7 +105825,7 @@
       {
         "nucleus": "Golden",
         "desc": "Mobile + Email OK + Company",
-        "count": 11151,
+        "count": 11149,
         "color": "#FFD700"
       },
       {
@@ -105822,25 +105837,25 @@
       {
         "nucleus": "Silver",
         "desc": "Email OK + Company (no mobile)",
-        "count": 12252,
+        "count": 12017,
         "color": "#C0C0C0"
       },
       {
         "nucleus": "Bronze",
         "desc": "Company but weak contact",
-        "count": 15511,
+        "count": 15429,
         "color": "#CD7F32"
       },
       {
         "nucleus": "Orphan",
         "desc": "Has email, no company",
-        "count": 10285,
+        "count": 10554,
         "color": "#f97316"
       },
       {
         "nucleus": "Ghost",
         "desc": "No email, no mobile, no phone, no company",
-        "count": 3634,
+        "count": 3681,
         "color": "#6b7280"
       }
     ],
